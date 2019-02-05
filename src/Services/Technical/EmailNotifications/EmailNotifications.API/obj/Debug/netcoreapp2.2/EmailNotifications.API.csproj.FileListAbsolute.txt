@@ -1,0 +1,14 @@
+C:\Users\rseng\Desktop\JobObserver\src\Services\Technical\EmailNotifications\EmailNotifications.API\bin\Debug\netcoreapp2.2\EmailNotifications.API.deps.json
+C:\Users\rseng\Desktop\JobObserver\src\Services\Technical\EmailNotifications\EmailNotifications.API\bin\Debug\netcoreapp2.2\EmailNotifications.API.runtimeconfig.json
+C:\Users\rseng\Desktop\JobObserver\src\Services\Technical\EmailNotifications\EmailNotifications.API\bin\Debug\netcoreapp2.2\EmailNotifications.API.runtimeconfig.dev.json
+C:\Users\rseng\Desktop\JobObserver\src\Services\Technical\EmailNotifications\EmailNotifications.API\bin\Debug\netcoreapp2.2\EmailNotifications.API.dll
+C:\Users\rseng\Desktop\JobObserver\src\Services\Technical\EmailNotifications\EmailNotifications.API\bin\Debug\netcoreapp2.2\EmailNotifications.API.pdb
+C:\Users\rseng\Desktop\JobObserver\src\Services\Technical\EmailNotifications\EmailNotifications.API\obj\Debug\netcoreapp2.2\EmailNotifications.API.csprojAssemblyReference.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Technical\EmailNotifications\EmailNotifications.API\obj\Debug\netcoreapp2.2\EmailNotifications.API.csproj.CoreCompileInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Technical\EmailNotifications\EmailNotifications.API\obj\Debug\netcoreapp2.2\EmailNotifications.API.RazorAssemblyInfo.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Technical\EmailNotifications\EmailNotifications.API\obj\Debug\netcoreapp2.2\EmailNotifications.API.RazorAssemblyInfo.cs
+C:\Users\rseng\Desktop\JobObserver\src\Services\Technical\EmailNotifications\EmailNotifications.API\obj\Debug\netcoreapp2.2\EmailNotifications.API.AssemblyInfoInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Technical\EmailNotifications\EmailNotifications.API\obj\Debug\netcoreapp2.2\EmailNotifications.API.AssemblyInfo.cs
+C:\Users\rseng\Desktop\JobObserver\src\Services\Technical\EmailNotifications\EmailNotifications.API\obj\Debug\netcoreapp2.2\EmailNotifications.API.RazorTargetAssemblyInfo.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Technical\EmailNotifications\EmailNotifications.API\obj\Debug\netcoreapp2.2\EmailNotifications.API.dll
+C:\Users\rseng\Desktop\JobObserver\src\Services\Technical\EmailNotifications\EmailNotifications.API\obj\Debug\netcoreapp2.2\EmailNotifications.API.pdb

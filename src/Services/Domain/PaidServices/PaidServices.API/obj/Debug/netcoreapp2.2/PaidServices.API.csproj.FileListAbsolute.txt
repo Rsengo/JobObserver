@@ -1,0 +1,14 @@
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\PaidServices.API.deps.json
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\PaidServices.API.runtimeconfig.json
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\PaidServices.API.runtimeconfig.dev.json
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\PaidServices.API.dll
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\PaidServices.API.pdb
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\obj\Debug\netcoreapp2.2\PaidServices.API.csprojAssemblyReference.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\obj\Debug\netcoreapp2.2\PaidServices.API.csproj.CoreCompileInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\obj\Debug\netcoreapp2.2\PaidServices.API.RazorAssemblyInfo.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\obj\Debug\netcoreapp2.2\PaidServices.API.RazorAssemblyInfo.cs
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\obj\Debug\netcoreapp2.2\PaidServices.API.AssemblyInfoInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\obj\Debug\netcoreapp2.2\PaidServices.API.AssemblyInfo.cs
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\obj\Debug\netcoreapp2.2\PaidServices.API.RazorTargetAssemblyInfo.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\obj\Debug\netcoreapp2.2\PaidServices.API.dll
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\obj\Debug\netcoreapp2.2\PaidServices.API.pdb

@@ -1,0 +1,4 @@
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Login\Login.Db\obj\Debug\netcoreapp2.1\Login.Db.csprojAssemblyReference.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Login\Login.Db\obj\Debug\netcoreapp2.1\Login.Db.csproj.CoreCompileInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Login\Login.Db\obj\Debug\netcoreapp2.1\Login.Db.AssemblyInfoInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Login\Login.Db\obj\Debug\netcoreapp2.1\Login.Db.AssemblyInfo.cs

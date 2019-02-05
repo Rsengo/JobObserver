@@ -1,0 +1,4 @@
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\Resumes.Db.csprojAssemblyReference.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\Resumes.Db.csproj.CoreCompileInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\Resumes.Db.AssemblyInfoInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\Resumes.Db.AssemblyInfo.cs

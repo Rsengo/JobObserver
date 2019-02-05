@@ -1,0 +1,9 @@
+C:\Users\rseng\Desktop\JobObserver\src\BuildingBlocks\Assemblies\JobObserver.Extensions.Assembly\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assembly.deps.json
+C:\Users\rseng\Desktop\JobObserver\src\BuildingBlocks\Assemblies\JobObserver.Extensions.Assembly\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assembly.dll
+C:\Users\rseng\Desktop\JobObserver\src\BuildingBlocks\Assemblies\JobObserver.Extensions.Assembly\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assembly.pdb
+C:\Users\rseng\Desktop\JobObserver\src\BuildingBlocks\Assemblies\JobObserver.Extensions.Assembly\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assembly.csprojAssemblyReference.cache
+C:\Users\rseng\Desktop\JobObserver\src\BuildingBlocks\Assemblies\JobObserver.Extensions.Assembly\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assembly.csproj.CoreCompileInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\BuildingBlocks\Assemblies\JobObserver.Extensions.Assembly\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assembly.AssemblyInfoInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\BuildingBlocks\Assemblies\JobObserver.Extensions.Assembly\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assembly.AssemblyInfo.cs
+C:\Users\rseng\Desktop\JobObserver\src\BuildingBlocks\Assemblies\JobObserver.Extensions.Assembly\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assembly.dll
+C:\Users\rseng\Desktop\JobObserver\src\BuildingBlocks\Assemblies\JobObserver.Extensions.Assembly\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assembly.pdb

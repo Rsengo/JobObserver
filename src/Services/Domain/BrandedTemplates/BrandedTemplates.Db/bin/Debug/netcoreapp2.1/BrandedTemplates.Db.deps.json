@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.1",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "BrandedTemplates.Db/1.0.0": {
+        "dependencies": {
+          "BuildingBlocks.Database.Common": "1.0.0"
+        },
+        "runtime": {
+          "BrandedTemplates.Db.dll": {}
+        }
+      },
+      "BuildingBlocks.Database.Common/1.0.0": {
+        "runtime": {
+          "BuildingBlocks.Database.Common.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BrandedTemplates.Db/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BuildingBlocks.Database.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

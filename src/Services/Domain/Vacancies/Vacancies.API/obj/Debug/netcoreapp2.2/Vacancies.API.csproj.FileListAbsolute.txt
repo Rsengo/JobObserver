@@ -1,0 +1,14 @@
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\Vacancies.API.deps.json
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\Vacancies.API.runtimeconfig.json
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\Vacancies.API.runtimeconfig.dev.json
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\Vacancies.API.dll
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\Vacancies.API.pdb
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Vacancies\Vacancies.API\obj\Debug\netcoreapp2.2\Vacancies.API.csprojAssemblyReference.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Vacancies\Vacancies.API\obj\Debug\netcoreapp2.2\Vacancies.API.csproj.CoreCompileInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Vacancies\Vacancies.API\obj\Debug\netcoreapp2.2\Vacancies.API.RazorAssemblyInfo.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Vacancies\Vacancies.API\obj\Debug\netcoreapp2.2\Vacancies.API.RazorAssemblyInfo.cs
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Vacancies\Vacancies.API\obj\Debug\netcoreapp2.2\Vacancies.API.AssemblyInfoInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Vacancies\Vacancies.API\obj\Debug\netcoreapp2.2\Vacancies.API.AssemblyInfo.cs
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Vacancies\Vacancies.API\obj\Debug\netcoreapp2.2\Vacancies.API.RazorTargetAssemblyInfo.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Vacancies\Vacancies.API\obj\Debug\netcoreapp2.2\Vacancies.API.dll
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Vacancies\Vacancies.API\obj\Debug\netcoreapp2.2\Vacancies.API.pdb

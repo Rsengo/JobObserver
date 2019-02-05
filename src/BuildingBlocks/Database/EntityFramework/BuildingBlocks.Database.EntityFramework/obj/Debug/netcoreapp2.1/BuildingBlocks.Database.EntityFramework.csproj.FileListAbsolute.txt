@@ -1,0 +1,5 @@
+C:\Users\rseng\Desktop\JobObserver\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Database.EntityFramework\bin\Debug\netcoreapp2.1\BuildingBlocks.Database.Entity.dll
+C:\Users\rseng\Desktop\JobObserver\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Database.EntityFramework\obj\Debug\netcoreapp2.1\BuildingBlocks.Database.EntityFramework.csprojAssemblyReference.cache
+C:\Users\rseng\Desktop\JobObserver\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Database.EntityFramework\obj\Debug\netcoreapp2.1\BuildingBlocks.Database.EntityFramework.csproj.CoreCompileInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Database.EntityFramework\obj\Debug\netcoreapp2.1\BuildingBlocks.Database.EntityFramework.AssemblyInfoInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Database.EntityFramework\obj\Debug\netcoreapp2.1\BuildingBlocks.Database.EntityFramework.AssemblyInfo.cs

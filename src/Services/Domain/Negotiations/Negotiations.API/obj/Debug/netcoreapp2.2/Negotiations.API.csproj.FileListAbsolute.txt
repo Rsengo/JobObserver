@@ -1,0 +1,14 @@
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Negotiations\Negotiations.API\bin\Debug\netcoreapp2.2\Negotiations.API.deps.json
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Negotiations\Negotiations.API\bin\Debug\netcoreapp2.2\Negotiations.API.runtimeconfig.json
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Negotiations\Negotiations.API\bin\Debug\netcoreapp2.2\Negotiations.API.runtimeconfig.dev.json
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Negotiations\Negotiations.API\bin\Debug\netcoreapp2.2\Negotiations.API.dll
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Negotiations\Negotiations.API\bin\Debug\netcoreapp2.2\Negotiations.API.pdb
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Negotiations\Negotiations.API\obj\Debug\netcoreapp2.2\Negotiations.API.csprojAssemblyReference.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Negotiations\Negotiations.API\obj\Debug\netcoreapp2.2\Negotiations.API.csproj.CoreCompileInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Negotiations\Negotiations.API\obj\Debug\netcoreapp2.2\Negotiations.API.RazorAssemblyInfo.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Negotiations\Negotiations.API\obj\Debug\netcoreapp2.2\Negotiations.API.RazorAssemblyInfo.cs
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Negotiations\Negotiations.API\obj\Debug\netcoreapp2.2\Negotiations.API.AssemblyInfoInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Negotiations\Negotiations.API\obj\Debug\netcoreapp2.2\Negotiations.API.AssemblyInfo.cs
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Negotiations\Negotiations.API\obj\Debug\netcoreapp2.2\Negotiations.API.RazorTargetAssemblyInfo.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Negotiations\Negotiations.API\obj\Debug\netcoreapp2.2\Negotiations.API.dll
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Negotiations\Negotiations.API\obj\Debug\netcoreapp2.2\Negotiations.API.pdb

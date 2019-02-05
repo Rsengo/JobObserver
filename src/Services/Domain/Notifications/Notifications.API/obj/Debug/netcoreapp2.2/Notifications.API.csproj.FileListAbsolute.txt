@@ -1,0 +1,14 @@
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Notifications\Notifications.API\bin\Debug\netcoreapp2.2\Notifications.API.deps.json
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Notifications\Notifications.API\bin\Debug\netcoreapp2.2\Notifications.API.runtimeconfig.json
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Notifications\Notifications.API\bin\Debug\netcoreapp2.2\Notifications.API.runtimeconfig.dev.json
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Notifications\Notifications.API\bin\Debug\netcoreapp2.2\Notifications.API.dll
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Notifications\Notifications.API\bin\Debug\netcoreapp2.2\Notifications.API.pdb
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Notifications\Notifications.API\obj\Debug\netcoreapp2.2\Notifications.API.csprojAssemblyReference.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Notifications\Notifications.API\obj\Debug\netcoreapp2.2\Notifications.API.csproj.CoreCompileInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Notifications\Notifications.API\obj\Debug\netcoreapp2.2\Notifications.API.RazorAssemblyInfo.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Notifications\Notifications.API\obj\Debug\netcoreapp2.2\Notifications.API.RazorAssemblyInfo.cs
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Notifications\Notifications.API\obj\Debug\netcoreapp2.2\Notifications.API.AssemblyInfoInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Notifications\Notifications.API\obj\Debug\netcoreapp2.2\Notifications.API.AssemblyInfo.cs
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Notifications\Notifications.API\obj\Debug\netcoreapp2.2\Notifications.API.RazorTargetAssemblyInfo.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Notifications\Notifications.API\obj\Debug\netcoreapp2.2\Notifications.API.dll
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Notifications\Notifications.API\obj\Debug\netcoreapp2.2\Notifications.API.pdb

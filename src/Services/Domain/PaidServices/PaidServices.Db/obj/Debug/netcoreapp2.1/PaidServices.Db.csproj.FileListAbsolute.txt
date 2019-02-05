@@ -1,0 +1,12 @@
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\PaidServices\PaidServices.Db\bin\Debug\netcoreapp2.1\PaidServices.Db.deps.json
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\PaidServices\PaidServices.Db\bin\Debug\netcoreapp2.1\PaidServices.Db.dll
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\PaidServices\PaidServices.Db\bin\Debug\netcoreapp2.1\PaidServices.Db.pdb
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\PaidServices\PaidServices.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.Database.Common.dll
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\PaidServices\PaidServices.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.Database.Common.pdb
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\PaidServices\PaidServices.Db\obj\Debug\netcoreapp2.1\PaidServices.Db.csprojAssemblyReference.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\PaidServices\PaidServices.Db\obj\Debug\netcoreapp2.1\PaidServices.Db.csproj.CoreCompileInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\PaidServices\PaidServices.Db\obj\Debug\netcoreapp2.1\PaidServices.Db.AssemblyInfoInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\PaidServices\PaidServices.Db\obj\Debug\netcoreapp2.1\PaidServices.Db.AssemblyInfo.cs
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\PaidServices\PaidServices.Db\obj\Debug\netcoreapp2.1\PaidServices.Db.csproj.CopyComplete
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\PaidServices\PaidServices.Db\obj\Debug\netcoreapp2.1\PaidServices.Db.dll
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\PaidServices\PaidServices.Db\obj\Debug\netcoreapp2.1\PaidServices.Db.pdb

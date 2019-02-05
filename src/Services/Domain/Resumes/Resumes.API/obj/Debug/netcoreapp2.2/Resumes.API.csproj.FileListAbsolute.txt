@@ -1,0 +1,14 @@
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\Resumes.API.deps.json
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\Resumes.API.runtimeconfig.json
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\Resumes.API.runtimeconfig.dev.json
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\Resumes.API.dll
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\Resumes.API.pdb
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.csprojAssemblyReference.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.csproj.CoreCompileInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.RazorAssemblyInfo.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.RazorAssemblyInfo.cs
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.AssemblyInfoInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.AssemblyInfo.cs
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.RazorTargetAssemblyInfo.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.dll
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.pdb

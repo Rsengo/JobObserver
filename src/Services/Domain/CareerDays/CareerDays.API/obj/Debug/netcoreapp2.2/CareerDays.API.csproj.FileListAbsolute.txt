@@ -1,0 +1,13 @@
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\CareerDays.API.deps.json
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\CareerDays.API.runtimeconfig.json
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\CareerDays.API.runtimeconfig.dev.json
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\CareerDays.API.dll
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\CareerDays.API.pdb
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\obj\Debug\netcoreapp2.2\CareerDays.API.csproj.CoreCompileInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\obj\Debug\netcoreapp2.2\CareerDays.API.RazorAssemblyInfo.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\obj\Debug\netcoreapp2.2\CareerDays.API.RazorAssemblyInfo.cs
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\obj\Debug\netcoreapp2.2\CareerDays.API.AssemblyInfoInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\obj\Debug\netcoreapp2.2\CareerDays.API.AssemblyInfo.cs
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\obj\Debug\netcoreapp2.2\CareerDays.API.RazorTargetAssemblyInfo.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\obj\Debug\netcoreapp2.2\CareerDays.API.dll
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\obj\Debug\netcoreapp2.2\CareerDays.API.pdb

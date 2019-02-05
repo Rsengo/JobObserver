@@ -1,0 +1,5 @@
+C:\Users\rseng\Desktop\JobObserver\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.Extensions.MongoDB\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.MongoDB.deps.json
+C:\Users\rseng\Desktop\JobObserver\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.Extensions.MongoDB\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.MongoDB.dll
+C:\Users\rseng\Desktop\JobObserver\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.Extensions.MongoDB\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.MongoDB.csproj.CoreCompileInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.Extensions.MongoDB\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.MongoDB.AssemblyInfoInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.Extensions.MongoDB\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.MongoDB.AssemblyInfo.cs

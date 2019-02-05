@@ -1,0 +1,14 @@
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\Login.API.deps.json
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\Login.API.runtimeconfig.json
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\Login.API.runtimeconfig.dev.json
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\Login.API.dll
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\Login.API.pdb
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.csprojAssemblyReference.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.csproj.CoreCompileInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.RazorAssemblyInfo.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.RazorAssemblyInfo.cs
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.AssemblyInfoInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.AssemblyInfo.cs
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.RazorTargetAssemblyInfo.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.dll
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.pdb

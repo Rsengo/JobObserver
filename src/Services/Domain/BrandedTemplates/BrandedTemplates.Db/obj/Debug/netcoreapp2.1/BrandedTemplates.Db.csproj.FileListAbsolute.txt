@@ -1,0 +1,12 @@
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BrandedTemplates.Db.deps.json
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BrandedTemplates.Db.dll
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BrandedTemplates.Db.pdb
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.Database.Common.dll
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.Database.Common.pdb
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\obj\Debug\netcoreapp2.1\BrandedTemplates.Db.csprojAssemblyReference.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\obj\Debug\netcoreapp2.1\BrandedTemplates.Db.csproj.CoreCompileInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\obj\Debug\netcoreapp2.1\BrandedTemplates.Db.AssemblyInfoInputs.cache
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\obj\Debug\netcoreapp2.1\BrandedTemplates.Db.AssemblyInfo.cs
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\obj\Debug\netcoreapp2.1\BrandedTemplates.Db.csproj.CopyComplete
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\obj\Debug\netcoreapp2.1\BrandedTemplates.Db.dll
+C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\obj\Debug\netcoreapp2.1\BrandedTemplates.Db.pdb
