@@ -1,9 +1,12 @@
 ﻿using BuildingBlocks.Database.Entity;
-using MongoDB.Bson;
 
 namespace BuildingBlocks.Database.MongoDB.Models
 {
-    public abstract class MongoEntity: BaseEntity<ObjectId>
+    using global::MongoDB.Bson.Serialization.Attributes;
+
+    public abstract class MongoEntity: BaseEntity<long>
     {
+        [BsonId]
+        public override long Id { get; set; }
     }
 }

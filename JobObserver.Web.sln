@@ -109,6 +109,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.Database.Mon
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.Extensions.MongoDB", "src\BuildingBlocks\Database\MongoDB\BuildingBlocks.Extensions.MongoDB\BuildingBlocks.Extensions.MongoDB.csproj", "{EB24DADA-7C85-4BCA-A467-9D0D34B7E35E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.Migrations.MongoDB", "src\BuildingBlocks\Database\MongoDB\BuildingBlocks.Migrations.MongoDB\BuildingBlocks.Migrations.MongoDB.csproj", "{77021ACF-BB71-425C-A849-D149F3FFAF20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -231,6 +233,10 @@ Global
 		{EB24DADA-7C85-4BCA-A467-9D0D34B7E35E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB24DADA-7C85-4BCA-A467-9D0D34B7E35E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB24DADA-7C85-4BCA-A467-9D0D34B7E35E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77021ACF-BB71-425C-A849-D149F3FFAF20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77021ACF-BB71-425C-A849-D149F3FFAF20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77021ACF-BB71-425C-A849-D149F3FFAF20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77021ACF-BB71-425C-A849-D149F3FFAF20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -288,6 +294,7 @@ Global
 		{8DF7E6D3-7D48-4298-BA71-52414913FE38} = {7095A286-1846-4051-B9E6-98D5CB16B9F3}
 		{A2DA16CC-4796-4DC8-A51B-05D346C30061} = {1C1B2B60-997F-448C-A990-1B35E3ABA55C}
 		{EB24DADA-7C85-4BCA-A467-9D0D34B7E35E} = {1C1B2B60-997F-448C-A990-1B35E3ABA55C}
+		{77021ACF-BB71-425C-A849-D149F3FFAF20} = {1C1B2B60-997F-448C-A990-1B35E3ABA55C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EFC2B589-7633-4F4E-A0D8-0509C36A83A5}

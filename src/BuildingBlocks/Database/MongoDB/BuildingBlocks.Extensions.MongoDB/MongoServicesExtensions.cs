@@ -31,7 +31,7 @@ namespace BuildingBlocks.Extensions.MongoDB
                 var maps = assemblyInfo.GetTypes()
                     .Where(x => x.IsSubclassOf(classMapType));
 
-                var instances = maps.Select(x => Activator.CreateInstance<>())
+                var instances = maps.Select(x => Activator.CreateInstance<>());
             }
 
             return services;
