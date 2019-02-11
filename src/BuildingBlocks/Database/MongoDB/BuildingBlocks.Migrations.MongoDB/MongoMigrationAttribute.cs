@@ -4,11 +4,17 @@ using System.Text;
 
 namespace BuildingBlocks.Migrations.MongoDB
 {
-    public class MongoMigrationAttribute: Attribute
+    [AttributeUsage(AttributeTargets.Class)]
+    public sealed class MongoMigrationAttribute: Attribute
     {
-        internal long Version { get; set; }
+        public string Version { get; }
 
-        public MongoMigrationAttribute(int day, int month, int year, int hours, int minutes, int seconds)
+        public string Description { get; }
+
+        public MongoMigrationAttribute(
+            int day, int month, int year, 
+            int hours, int minutes, int seconds,
+            string description)
         {
             if (day > 31 ||
                 month > 12 ||
@@ -19,10 +25,15 @@ namespace BuildingBlocks.Migrations.MongoDB
                 throw new ArgumentException("Переданы невалидные аргументы для миграции");
             }
 
-            var versionString = string.Concat(day, month, year, hours, minutes, seconds);
-            var version = long.Parse(versionString);
+            var dayStr = day.ToString().PadLeft(2);
+            var monthStr = month.ToString().PadLeft(2);
+            var yearStr = year.ToString();
+            var hourStr = hours.ToString().PadLeft(2);
+            var minuteStr = minutes.ToString().PadLeft(2);
+            var secondStr = seconds.ToString().PadLeft(2);
 
-            Version = version;
+            Version = string.Concat(yearStr, monthStr, dayStr, hourStr, minuteStr, secondStr);
+            Description = description;
         }
     }
 }
