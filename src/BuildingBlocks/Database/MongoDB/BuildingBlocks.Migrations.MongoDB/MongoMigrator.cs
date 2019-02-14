@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
+using BuildingBlocks.Database.MongoDB.Filters;
+using MongoDB.Bson;
 using MongoDB.Driver;
 
 namespace BuildingBlocks.Migrations.MongoDB
 {
     public sealed class MongoMigrator
     {
+        private const string VERSION_INFO_COLLECTION = "VersionInfo";
         /// <summary>
         /// Инстанс
         /// </summary>
@@ -44,38 +46,71 @@ namespace BuildingBlocks.Migrations.MongoDB
         }
 
         public void MigrateUp(
-            IMongoDatabase database, 
+            IMongoDatabase database,
             Assembly migrationAssembly)
         {
-            var migrationVersionDictionary = GetMigrationDictionary(database, migrationAssembly);
+            var migrationData = GetMigrationsInfo(database, migrationAssembly);
+            var sortedMigrationData = migrationData.OrderBy(x => long.Parse(x.Version));
 
-            var sortedMigrationVersionDictionary = migrationVersionDictionary.OrderBy(x => long.Parse(x.Key));
+            var collectionExists = GetVersionCollectionExists(database);
 
-            foreach (var pair in sortedMigrationVersionDictionary)
+            if (!collectionExists)
             {
-                var migration = pair.Value;
-                migration.Up();
+                database.CreateCollection(VERSION_INFO_COLLECTION);
             }
 
-            var versionCollection = database.GetCollection<MongoVersionInfo>(nameof(MongoVersionInfo));
-            if (versionCollection.)
+            var tempVersion = GetTempVersion(database, out var collection);
+
+            foreach (var migrationInfo in sortedMigrationData)
+            {
+                var migration = migrationInfo.Migration;
+                migration.Up();
+                var versionInfo = new MongoVersionInfo
+                {
+                    Date = DateTime.UtcNow,
+                    Description = migrationInfo.Description,
+                    ToVersion = migrationInfo.Version,
+                    FromVersion = tempVersion
+                };
+
+                collection.InsertOneAsync(versionInfo);
+            }
         }
 
         public void MigrateDown(
-            IMongoDatabase database, 
-            Assembly migrationAssembly, 
+            IMongoDatabase database,
+            Assembly migrationAssembly,
             string downVersion)
         {
-            var migrationVersionDictionary = GetMigrationDictionary(database, migrationAssembly);
+            var migrationVersions = GetMigrationsInfo(database, migrationAssembly);
 
-            var sortedMigrationVersionDictionary = migrationVersionDictionary
-                .OrderBy(x => long.Parse(x.Key))
-                .Where(x => long.Parse(x.Key) > long.Parse(downVersion));
+            var sortedMigrationVersions = migrationVersions
+                .OrderBy(x => long.Parse(x.Version))
+                .Where(x => long.Parse(x.Version) > long.Parse(downVersion));
 
-            foreach (var pair in sortedMigrationVersionDictionary)
+            var collectionExists = GetVersionCollectionExists(database);
+
+            if (!collectionExists)
             {
-                var migration = pair.Value;
+                database.CreateCollection(VERSION_INFO_COLLECTION);
+            }
+
+            var tempVersion = GetTempVersion(database, out var collection);
+
+            foreach (var migrationInfo in sortedMigrationVersions)
+            {
+                var migration = migrationInfo.Migration;
                 migration.Down();
+
+                var versionInfo = new MongoVersionInfo
+                {
+                    Date = DateTime.UtcNow,
+                    Description = migrationInfo.Description,
+                    ToVersion = migrationInfo.Version,
+                    FromVersion = tempVersion
+                };
+
+                collection.InsertOneAsync(versionInfo);
             }
         }
 
@@ -96,14 +131,14 @@ namespace BuildingBlocks.Migrations.MongoDB
             MigrateDown(database, migrationAssembly, version);
         }
 
-        private static IDictionary<string, MongoMigration> GetMigrationDictionary(
+        private static IEnumerable<MongoMigrationInfo> GetMigrationsInfo(
             IMongoDatabase database, 
             Assembly migrationAssembly)
         {
             var migrationType = typeof(MongoMigration);
             var migrations = migrationAssembly.GetTypes().Where(x => x.IsSubclassOf(migrationType));
 
-            var migrationVersionDictionary = new Dictionary<string, MongoMigration>();
+            var result = new List<MongoMigrationInfo>();
 
             foreach (var migration in migrations)
             {
@@ -113,13 +148,48 @@ namespace BuildingBlocks.Migrations.MongoDB
                 if (versionAttribute == null)
                     throw new CustomAttributeFormatException($"Не задана версия миграции для { migration.Name }");
 
-                var version = ((MongoMigrationAttribute)versionAttribute).Version;
+                var versionAttr = (MongoMigrationAttribute) versionAttribute;
                 var typedMigration = (MongoMigration)Activator.CreateInstance(migration, database);
 
-                migrationVersionDictionary.Add(version, typedMigration);
+                var info = new MongoMigrationInfo
+                {
+                    MigrationAttribute = versionAttr,
+                    Migration = typedMigration
+                };
+
+                result.Add(info);
             }
 
-            return migrationVersionDictionary;
+            return result;
+        }
+
+        private static string GetTempVersion(
+            IMongoDatabase database, 
+            out IMongoCollection<MongoVersionInfo> versionCollection)
+        {
+            var collection = database.GetCollection<MongoVersionInfo>(VERSION_INFO_COLLECTION);
+            var versionsCursor = collection.FindSync(Builders<MongoVersionInfo>.Filter.Empty);
+            var versions = versionsCursor.ToList();
+
+            var lastVersionInfo = versions.OrderBy(x => x.Date).LastOrDefault();
+            var tempVersion = lastVersionInfo?.ToVersion;
+
+            versionCollection = collection;
+            return tempVersion;
+        }
+
+        private static bool GetVersionCollectionExists(IMongoDatabase database)
+        {
+            var filter = new MongoCollectionFilter
+            {
+                Name = VERSION_INFO_COLLECTION
+            }.ToBsonDocument();
+            var options = new ListCollectionsOptions { Filter = filter };
+
+            var collections = database.ListCollections(options);
+            var collectionExists = collections.Any();
+
+            return collectionExists;
         }
     }
 }

@@ -5,12 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Database.EntityFramework\BuildingBlocks.Database.EntityFramework.csproj" />
-    <ProjectReference Include="..\..\..\..\BuildingBlocks\Database\MongoDB\BuildingBlocks.Database.MongoDB\BuildingBlocks.Database.MongoDB.csproj" />
+    <Compile Remove="Maps\**" />
+    <EmbeddedResource Remove="Maps\**" />
+    <None Remove="Maps\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Maps\" />
+    <ProjectReference Include="..\..\..\..\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Database.EntityFramework\BuildingBlocks.Database.EntityFramework.csproj" />
+    <ProjectReference Include="..\..\..\..\BuildingBlocks\Database\MongoDB\BuildingBlocks.Database.MongoDB\BuildingBlocks.Database.MongoDB.csproj" />
   </ItemGroup>
 
 </Project>
