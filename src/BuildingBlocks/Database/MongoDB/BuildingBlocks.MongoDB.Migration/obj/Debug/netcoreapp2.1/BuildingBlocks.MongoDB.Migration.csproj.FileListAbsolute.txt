@@ -1,0 +1,3 @@
+C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB.Migration\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.Migration.csproj.CoreCompileInputs.cache
+C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB.Migration\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.Migration.AssemblyInfoInputs.cache
+C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB.Migration\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.Migration.AssemblyInfo.cs

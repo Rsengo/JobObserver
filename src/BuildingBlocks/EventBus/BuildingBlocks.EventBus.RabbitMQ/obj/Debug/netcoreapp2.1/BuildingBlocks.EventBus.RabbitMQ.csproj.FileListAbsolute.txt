@@ -1,0 +1,5 @@
+C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus.RabbitMQ\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.dll
+C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus.RabbitMQ\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.RabbitMQ.csproj.CoreCompileInputs.cache
+C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus.RabbitMQ\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.RabbitMQ.AssemblyInfoInputs.cache
+C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus.RabbitMQ\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.RabbitMQ.AssemblyInfo.cs
+C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus.RabbitMQ\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.RabbitMQ.csprojAssemblyReference.cache

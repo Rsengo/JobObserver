@@ -1,0 +1,3 @@
+C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.csproj.CoreCompileInputs.cache
+C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.AssemblyInfoInputs.cache
+C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.AssemblyInfo.cs

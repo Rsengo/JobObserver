@@ -4892,30 +4892,6 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
-      "BuildingBlocks.Database.Entity/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.1",
-        "compile": {
-          "bin/placeholder/BuildingBlocks.Database.Entity.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BuildingBlocks.Database.Entity.dll": {}
-        }
-      },
-      "BuildingBlocks.Database.MongoDB/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.1",
-        "dependencies": {
-          "BuildingBlocks.Database.Entity": "1.0.0",
-          "MongoDB.Driver": "2.7.3"
-        },
-        "compile": {
-          "bin/placeholder/BuildingBlocks.Database.MongoDB.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BuildingBlocks.Database.MongoDB.dll": {}
-        }
-      },
       "BuildingBlocks.Extensions.Assemblies/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
@@ -4930,8 +4906,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
-          "BuildingBlocks.Database.MongoDB": "1.0.0",
           "BuildingBlocks.Extensions.Assemblies": "1.0.0",
+          "BuildingBlocks.MongoDB": "1.0.0",
           "MongoDB.Driver": "2.7.3"
         },
         "compile": {
@@ -4939,6 +4915,47 @@
         },
         "runtime": {
           "bin/placeholder/BuildingBlocks.Extensions.MongoDB.dll": {}
+        }
+      },
+      "BuildingBlocks.MongoDB/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "BuildingBlocks.MongoDB.Migration": "1.0.0",
+          "MongoDB.Driver": "2.7.3"
+        },
+        "compile": {
+          "bin/placeholder/BuildingBlocks.MongoDB.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BuildingBlocks.MongoDB.dll": {}
+        }
+      },
+      "BuildingBlocks.MongoDB.Filters/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "MongoDB.Driver": "2.7.3"
+        },
+        "compile": {
+          "bin/placeholder/BuildingBlocks.MongoDB.Filters.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BuildingBlocks.MongoDB.Filters.dll": {}
+        }
+      },
+      "BuildingBlocks.MongoDB.Migration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "BuildingBlocks.MongoDB.Filters": "1.0.0",
+          "MongoDB.Driver": "2.7.3"
+        },
+        "compile": {
+          "bin/placeholder/BuildingBlocks.MongoDB.Migration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BuildingBlocks.MongoDB.Migration.dll": {}
         }
       }
     }
@@ -13310,16 +13327,6 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
-    "BuildingBlocks.Database.Entity/1.0.0": {
-      "type": "project",
-      "path": "../../../../BuildingBlocks/Database/BuildingBlocks.Database.Entity/BuildingBlocks.Database.Entity.csproj",
-      "msbuildProject": "../../../../BuildingBlocks/Database/BuildingBlocks.Database.Entity/BuildingBlocks.Database.Entity.csproj"
-    },
-    "BuildingBlocks.Database.MongoDB/1.0.0": {
-      "type": "project",
-      "path": "../../../../BuildingBlocks/Database/MongoDB/BuildingBlocks.Database.MongoDB/BuildingBlocks.Database.MongoDB.csproj",
-      "msbuildProject": "../../../../BuildingBlocks/Database/MongoDB/BuildingBlocks.Database.MongoDB/BuildingBlocks.Database.MongoDB.csproj"
-    },
     "BuildingBlocks.Extensions.Assemblies/1.0.0": {
       "type": "project",
       "path": "../../../../BuildingBlocks/Assemblies/JobObserver.Extensions.Assembly/BuildingBlocks.Extensions.Assemblies.csproj",
@@ -13329,6 +13336,21 @@
       "type": "project",
       "path": "../../../../BuildingBlocks/Database/MongoDB/BuildingBlocks.Extensions.MongoDB/BuildingBlocks.Extensions.MongoDB.csproj",
       "msbuildProject": "../../../../BuildingBlocks/Database/MongoDB/BuildingBlocks.Extensions.MongoDB/BuildingBlocks.Extensions.MongoDB.csproj"
+    },
+    "BuildingBlocks.MongoDB/1.0.0": {
+      "type": "project",
+      "path": "../../../../BuildingBlocks/Database/MongoDB/BuildingBlocks.MongoDB/BuildingBlocks.MongoDB.csproj",
+      "msbuildProject": "../../../../BuildingBlocks/Database/MongoDB/BuildingBlocks.MongoDB/BuildingBlocks.MongoDB.csproj"
+    },
+    "BuildingBlocks.MongoDB.Filters/1.0.0": {
+      "type": "project",
+      "path": "../../../../BuildingBlocks/Database/MongoDB/BuildingBlocks.MongoDB.Filters/BuildingBlocks.MongoDB.Filters.csproj",
+      "msbuildProject": "../../../../BuildingBlocks/Database/MongoDB/BuildingBlocks.MongoDB.Filters/BuildingBlocks.MongoDB.Filters.csproj"
+    },
+    "BuildingBlocks.MongoDB.Migration/1.0.0": {
+      "type": "project",
+      "path": "../../../../BuildingBlocks/Database/MongoDB/BuildingBlocks.MongoDB.Migration/BuildingBlocks.MongoDB.Migration.csproj",
+      "msbuildProject": "../../../../BuildingBlocks/Database/MongoDB/BuildingBlocks.MongoDB.Migration/BuildingBlocks.MongoDB.Migration.csproj"
     }
   },
   "projectFileDependencyGroups": {

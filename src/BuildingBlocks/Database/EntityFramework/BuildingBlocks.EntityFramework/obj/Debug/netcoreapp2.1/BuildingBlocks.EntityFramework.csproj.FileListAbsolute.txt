@@ -1,0 +1,12 @@
+C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.EntityFramework\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.deps.json
+C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.EntityFramework\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.dll
+C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.EntityFramework\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.pdb
+C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.EntityFramework\bin\Debug\netcoreapp2.1\BuildingBlocks.Database.Entity.dll
+C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.EntityFramework\bin\Debug\netcoreapp2.1\BuildingBlocks.Database.Entity.pdb
+C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.EntityFramework\obj\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.csprojAssemblyReference.cache
+C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.EntityFramework\obj\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.csproj.CoreCompileInputs.cache
+C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.EntityFramework\obj\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.AssemblyInfoInputs.cache
+C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.EntityFramework\obj\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.AssemblyInfo.cs
+C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.EntityFramework\obj\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.csproj.CopyComplete
+C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.EntityFramework\obj\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.dll
+C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.EntityFramework\obj\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.pdb
