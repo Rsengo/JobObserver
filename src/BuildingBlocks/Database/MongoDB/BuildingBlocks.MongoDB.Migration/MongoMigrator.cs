@@ -8,9 +8,11 @@ using MongoDB.Driver;
 
 namespace BuildingBlocks.MongoDB.Migration
 {
-    public sealed class MongoMigrator
+    internal sealed class MongoMigrator
     {
         private const string VERSION_INFO_COLLECTION = "VersionInfo";
+        private const string MIGRATIONS_DOMAIN = "mongo migrations domain";
+
         /// <summary>
         /// Инстанс
         /// </summary>
@@ -45,78 +47,138 @@ namespace BuildingBlocks.MongoDB.Migration
             }
         }
 
-        public void MigrateUp(
-            IMongoDatabase database,
-            Assembly migrationAssembly)
+        public void MigrateUp(MongoDbContext context)
         {
-            var migrationData = GetMigrationsInfo(database, migrationAssembly);
-            var sortedMigrationData = migrationData.OrderBy(x => long.Parse(x.Version));
+            AppDomain domain = null;
 
-            var collectionExists = GetVersionCollectionExists(database);
-
-            if (!collectionExists)
+            try
             {
-                database.CreateCollection(VERSION_INFO_COLLECTION);
-            }
-
-            var tempVersion = GetTempVersion(database, out var collection);
-
-            foreach (var migrationInfo in sortedMigrationData)
-            {
-                var migration = migrationInfo.Migration;
-                migration.Up();
-                var versionInfo = new MongoVersionInfo
+                if (context.MigrationsAssembly == null)
                 {
-                    Date = DateTime.UtcNow,
-                    Description = migrationInfo.Description,
-                    ToVersion = migrationInfo.Version,
-                    FromVersion = tempVersion
-                };
+                    throw new NullReferenceException("Не указана сборка с миграциями");
+                }
 
-                collection.InsertOneAsync(versionInfo);
+                domain = AppDomain.CreateDomain(MIGRATIONS_DOMAIN);
+                var migrationsAssembly = domain.Load(context.MigrationsAssembly);
+
+                context.ExecuteTransaction(database =>
+                {
+                    var migrationData = GetMigrationsInfo(database, migrationsAssembly);
+                    var sortedMigrationData = migrationData.OrderBy(x => long.Parse(x.Version));
+
+                    var collectionExists = GetVersionCollectionExists(database);
+
+                    if (!collectionExists)
+                    {
+                        database.CreateCollection(VERSION_INFO_COLLECTION);
+                    }
+
+                    var tempVersion = GetTempVersion(database, out var collection);
+
+                    foreach (var migrationInfo in sortedMigrationData)
+                    {
+                        var migration = migrationInfo.Migration;
+                        migration.Up();
+                        var versionInfo = new MongoVersionInfo
+                        {
+                            Date = DateTime.UtcNow,
+                            Description = migrationInfo.Description,
+                            ToVersion = migrationInfo.Version,
+                            FromVersion = tempVersion
+                        };
+
+                        collection.InsertOneAsync(versionInfo);
+                    }
+                });
+            }
+            catch (Exception e)
+            {
+                var message = $"Ошибка во время накатывания " +
+                              $"миграций из сборки {context.MigrationsAssembly}";
+                throw new MongoException(message, e);
+            }
+            finally
+            {
+                if (domain != null)
+                {
+                    AppDomain.Unload(domain);
+                }
             }
         }
 
         public void MigrateDown(
-            IMongoDatabase database,
-            Assembly migrationAssembly,
+            MongoDbContext context, 
             string downVersion)
         {
-            var migrationVersions = GetMigrationsInfo(database, migrationAssembly);
+            AppDomain domain = null;
 
-            var sortedMigrationVersions = migrationVersions
-                .OrderBy(x => long.Parse(x.Version))
-                .Where(x => long.Parse(x.Version) > long.Parse(downVersion));
-
-            var collectionExists = GetVersionCollectionExists(database);
-
-            if (!collectionExists)
+            try
             {
-                database.CreateCollection(VERSION_INFO_COLLECTION);
-            }
-
-            var tempVersion = GetTempVersion(database, out var collection);
-
-            foreach (var migrationInfo in sortedMigrationVersions)
-            {
-                var migration = migrationInfo.Migration;
-                migration.Down();
-
-                var versionInfo = new MongoVersionInfo
+                if (context.MigrationsAssembly == null)
                 {
-                    Date = DateTime.UtcNow,
-                    Description = migrationInfo.Description,
-                    ToVersion = migrationInfo.Version,
-                    FromVersion = tempVersion
-                };
+                    throw new NullReferenceException("Не указана сборка с миграциями");
+                }
 
-                collection.InsertOneAsync(versionInfo);
+                if (downVersion.Length != 14 ||
+                    !long.TryParse(downVersion, out _))
+                {
+                    throw new InvalidOperationException("Указана невалидная версия");
+                }
+
+                domain = AppDomain.CreateDomain(MIGRATIONS_DOMAIN);
+                var migrationsAssembly = domain.Load(context.MigrationsAssembly);
+
+                context.ExecuteTransaction(database =>
+                {
+                    var migrationVersions = GetMigrationsInfo(database, migrationsAssembly);
+                    var sortedMigrationVersions = migrationVersions
+                        .OrderBy(x => long.Parse(x.Version))
+                        .Where(x => long.Parse(x.Version) > long.Parse(downVersion));
+
+                    var collectionExists = GetVersionCollectionExists(database);
+
+                    if (!collectionExists)
+                    {
+                        database.CreateCollection(VERSION_INFO_COLLECTION);
+                    }
+
+                    var tempVersion = GetTempVersion(database, out var collection);
+
+                    foreach (var migrationInfo in sortedMigrationVersions)
+                    {
+                        var migration = migrationInfo.Migration;
+                        migration.Down();
+
+                        var versionInfo = new MongoVersionInfo
+                        {
+                            Date = DateTime.UtcNow,
+                            Description = migrationInfo.Description,
+                            ToVersion = migrationInfo.Version,
+                            FromVersion = tempVersion
+                        };
+
+                        collection.InsertOneAsync(versionInfo);
+                    }
+                });
+            }
+            catch (Exception e)
+            {
+                var message = $"Ошибка во время откатывания " +
+                              $"миграций из сборки {context.MigrationsAssembly} " +
+                              $"до версии {downVersion}";
+                throw new MongoException(message, e);
+            }
+            finally
+            {
+                if (domain != null)
+                {
+                    AppDomain.Unload(domain);
+                }
             }
         }
 
         public void MigrateDown(
-            IMongoDatabase database,
-            Assembly migrationAssembly,
+            MongoDbContext context,
             DateTime versionTime)
         {
             var day = versionTime.Day.ToString().PadLeft(2);
@@ -128,7 +190,7 @@ namespace BuildingBlocks.MongoDB.Migration
 
             var version = string.Concat(year, month, day, hour, minute, second);
 
-            MigrateDown(database, migrationAssembly, version);
+            MigrateDown(context, version);
         }
 
         private static IEnumerable<MongoMigrationInfo> GetMigrationsInfo(

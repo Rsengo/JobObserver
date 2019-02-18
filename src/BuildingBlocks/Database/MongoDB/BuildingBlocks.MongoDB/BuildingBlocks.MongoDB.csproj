@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BuildingBlocks.MongoDB.Migration\BuildingBlocks.MongoDB.Migration.csproj" />
+    <ProjectReference Include="..\..\BuildingBlocks.Database.Entity\BuildingBlocks.Database.Entity.csproj" />
   </ItemGroup>
 
 </Project>

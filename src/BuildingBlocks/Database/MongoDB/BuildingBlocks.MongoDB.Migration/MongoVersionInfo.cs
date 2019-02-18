@@ -1,12 +1,11 @@
-﻿using BuildingBlocks.Database.MongoDB.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
+using BuildingBlocks.MongoDB.Models;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace BuildingBlocks.MongoDB.Migration
 {
+
     public class MongoVersionInfo: MongoEntity
     {
         public string FromVersion { get; set; }

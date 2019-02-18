@@ -105,19 +105,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.Extensions.M
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventBus", "EventBus", "{7853826B-9DBC-4C82-9FC0-3550DDF70EE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.MongoDB", "src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB\BuildingBlocks.MongoDB.csproj", "{235D292A-E060-439F-87B9-AF685885D63C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.MongoDB", "src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB\BuildingBlocks.MongoDB.csproj", "{235D292A-E060-439F-87B9-AF685885D63C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.MongoDB.Migration", "src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB.Migration\BuildingBlocks.MongoDB.Migration.csproj", "{F35B92D4-C455-47CB-B3BB-A75EF26EEC88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.MongoDB.Migration", "src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB.Migration\BuildingBlocks.MongoDB.Migration.csproj", "{F35B92D4-C455-47CB-B3BB-A75EF26EEC88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.MongoDB.Filters", "src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB.Filters\BuildingBlocks.MongoDB.Filters.csproj", "{53DA73C1-E6E6-4CE6-BD06-68ADD845D0D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.EntityFramework", "src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.EntityFramework\BuildingBlocks.EntityFramework.csproj", "{F4175CEC-143A-4245-B7C1-F47CCDDAD854}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.EntityFramework", "src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.EntityFramework\BuildingBlocks.EntityFramework.csproj", "{F4175CEC-143A-4245-B7C1-F47CCDDAD854}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.AutoMapper", "src\BuildingBlocks\AutoMapper\BuildingBlocks.AutoMapper\BuildingBlocks.AutoMapper.csproj", "{65D113AD-9271-460B-A048-C5738BAEDFFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.AutoMapper", "src\BuildingBlocks\AutoMapper\BuildingBlocks.AutoMapper\BuildingBlocks.AutoMapper.csproj", "{65D113AD-9271-460B-A048-C5738BAEDFFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.EventBus", "src\BuildingBlocks\EventBus\BuildingBlocks.EventBus\BuildingBlocks.EventBus.csproj", "{B4E817CF-AEB6-416E-BF87-B2C7765259EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.EventBus", "src\BuildingBlocks\EventBus\BuildingBlocks.EventBus\BuildingBlocks.EventBus.csproj", "{B4E817CF-AEB6-416E-BF87-B2C7765259EB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.EventBus.RabbitMQ", "src\BuildingBlocks\EventBus\BuildingBlocks.EventBus.RabbitMQ\BuildingBlocks.EventBus.RabbitMQ.csproj", "{D06785DE-764D-4A27-BC22-4B177604FD22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.EventBus.RabbitMQ", "src\BuildingBlocks\EventBus\BuildingBlocks.EventBus.RabbitMQ\BuildingBlocks.EventBus.RabbitMQ.csproj", "{D06785DE-764D-4A27-BC22-4B177604FD22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -237,10 +235,6 @@ Global
 		{F35B92D4-C455-47CB-B3BB-A75EF26EEC88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F35B92D4-C455-47CB-B3BB-A75EF26EEC88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F35B92D4-C455-47CB-B3BB-A75EF26EEC88}.Release|Any CPU.Build.0 = Release|Any CPU
-		{53DA73C1-E6E6-4CE6-BD06-68ADD845D0D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{53DA73C1-E6E6-4CE6-BD06-68ADD845D0D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{53DA73C1-E6E6-4CE6-BD06-68ADD845D0D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{53DA73C1-E6E6-4CE6-BD06-68ADD845D0D9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F4175CEC-143A-4245-B7C1-F47CCDDAD854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F4175CEC-143A-4245-B7C1-F47CCDDAD854}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4175CEC-143A-4245-B7C1-F47CCDDAD854}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -314,7 +308,6 @@ Global
 		{7853826B-9DBC-4C82-9FC0-3550DDF70EE8} = {5A4D0324-09EE-4104-814B-9FA4D11E321B}
 		{235D292A-E060-439F-87B9-AF685885D63C} = {1C1B2B60-997F-448C-A990-1B35E3ABA55C}
 		{F35B92D4-C455-47CB-B3BB-A75EF26EEC88} = {1C1B2B60-997F-448C-A990-1B35E3ABA55C}
-		{53DA73C1-E6E6-4CE6-BD06-68ADD845D0D9} = {1C1B2B60-997F-448C-A990-1B35E3ABA55C}
 		{F4175CEC-143A-4245-B7C1-F47CCDDAD854} = {7095A286-1846-4051-B9E6-98D5CB16B9F3}
 		{65D113AD-9271-460B-A048-C5738BAEDFFB} = {56D0A64F-0DE3-4BFF-AC82-C6C45CA66E23}
 		{B4E817CF-AEB6-416E-BF87-B2C7765259EB} = {7853826B-9DBC-4C82-9FC0-3550DDF70EE8}

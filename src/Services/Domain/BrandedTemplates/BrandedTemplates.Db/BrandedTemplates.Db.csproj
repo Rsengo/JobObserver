@@ -10,4 +10,8 @@
     <None Remove="Maps\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB\BuildingBlocks.MongoDB.csproj" />
+  </ItemGroup>
+
 </Project>

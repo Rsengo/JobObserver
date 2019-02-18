@@ -1,3 +1,0 @@
-C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB.Filters\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.Filters.csproj.CoreCompileInputs.cache
-C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB.Filters\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.Filters.AssemblyInfoInputs.cache
-C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB.Filters\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.Filters.AssemblyInfo.cs

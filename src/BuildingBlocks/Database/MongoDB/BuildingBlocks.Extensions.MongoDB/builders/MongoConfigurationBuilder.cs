@@ -6,17 +6,13 @@ using MongoDB.Driver;
 
 namespace BuildingBlocks.Extensions.MongoDB.builders
 {
-    public sealed class MongoConfigurationBuilder: IDisposable
+    public sealed class MongoConfigurationBuilder
     {
-        private const string MIGRATION_DOMAIN_NAME = "Mongo Migrations Domain";
-
-        private AppDomain _migrationsDomain;
-
         internal Action<MongoClientSettings> ConfigureClientSettings { get; private set; }
 
         internal Action<MongoDatabaseSettings> ConfigureDatabaseSettings { get; private set; }
 
-        internal Assembly MigrationsAssembly { get; private set; }
+        internal string MigrationsAssembly { get; set; }
 
         public string DatabaseName { get; set; }
 
@@ -30,25 +26,6 @@ namespace BuildingBlocks.Extensions.MongoDB.builders
         public void ConfigureDatabase(Action<MongoDatabaseSettings> settings)
         {
             ConfigureDatabaseSettings = settings;
-        }
-
-        public void UseMigrationsAssembly(string friendlyAssemblyName)
-        {
-            _migrationsDomain = AppDomain.CreateDomain(MIGRATION_DOMAIN_NAME);
-            MigrationsAssembly = _migrationsDomain.Load(friendlyAssemblyName);
-        }
-
-        public void UseMigrationsAssembly(Assembly assembly)
-        {
-            MigrationsAssembly = assembly;
-        }
-
-        public void Dispose()
-        {
-            if (_migrationsDomain == null) 
-                return;
-
-            AppDomain.Unload(_migrationsDomain);
         }
     }
 }
