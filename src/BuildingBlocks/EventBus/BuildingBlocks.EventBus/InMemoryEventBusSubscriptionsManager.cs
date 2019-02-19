@@ -57,14 +57,10 @@ namespace BuildingBlocks.EventBus
                     $"Handler Type {handlerType.Name} already registered for '{eventName}'", nameof(handlerType));
             }
 
-            if (isDynamic)
-            {
-                _handlers[eventName].Add(SubscriptionInfo.Dynamic(handlerType));
-            }
-            else
-            {
-                _handlers[eventName].Add(SubscriptionInfo.Typed(handlerType));
-            }
+            _handlers[eventName]
+                .Add(isDynamic
+                    ? SubscriptionInfo.Dynamic(handlerType)
+                    : SubscriptionInfo.Typed(handlerType));
         }
 
 

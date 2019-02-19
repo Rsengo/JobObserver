@@ -22,6 +22,7 @@ namespace BuildingBlocks.MongoDB
             _database = database;
             _client = database.Client;
             _session = _client.StartSession();
+            MigrationsAssembly = GetType().Assembly.FullName;
         }
 
         public async Task ExecuteTransactionAsync(Func<IMongoDatabase, Task> action)

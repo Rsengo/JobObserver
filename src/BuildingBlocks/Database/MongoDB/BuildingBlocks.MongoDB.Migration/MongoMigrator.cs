@@ -53,7 +53,7 @@ namespace BuildingBlocks.MongoDB.Migration
 
             try
             {
-                if (context.MigrationsAssembly == null)
+                if (string.IsNullOrWhiteSpace(context.MigrationsAssembly))
                 {
                     throw new NullReferenceException("Не указана сборка с миграциями");
                 }
@@ -114,7 +114,7 @@ namespace BuildingBlocks.MongoDB.Migration
 
             try
             {
-                if (context.MigrationsAssembly == null)
+                if (string.IsNullOrWhiteSpace(context.MigrationsAssembly))
                 {
                     throw new NullReferenceException("Не указана сборка с миграциями");
                 }
