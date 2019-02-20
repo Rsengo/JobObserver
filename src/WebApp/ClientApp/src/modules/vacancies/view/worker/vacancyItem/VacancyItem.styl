@@ -1,0 +1,65 @@
+.vacancy-item
+    width 100%
+    display flex
+    flex-direction column
+    justify-content flex-start
+    align-items center   
+
+    &_open
+        background-color lighten(#6fa53b, 80%)      
+        .vacancy-item__container
+            border-bottom darken(#1a1a1a, 10%) solid 2px
+
+    &_close   
+        &:hover
+            background-color lighten(#1a1a1a, 92%)
+            .vacancy-item__container
+                border-bottom darken(#6fa53b, 15%) solid 2px      
+
+    &__container
+        display flex
+        flex-direction column
+        justify-content flex-start
+        align-items center
+        width 100%
+        border-bottom #6fa53b solid 1px
+        padding-top 1rem
+
+    &_position
+        &_top
+            width 100%
+            height 4.5rem    
+            display flex
+            flex-direction row
+            justify-content space-between
+            align-items center  
+        &_left
+            width 48% 
+            display flex
+            flex-direction column
+            justify-content flex-start
+            align-items flex-start   
+            height 100%
+            margin-left 2%
+        &_right
+            width 48%     
+            display flex
+            flex-direction column
+            justify-content space-between
+            align-items flex-end
+            height 100% 
+            margin-right 2%
+
+    &__name
+        font-weight bold  
+        font-size 1.05rem
+
+    &__salary
+        font-size 0.85rem 
+
+    &__date
+        font-style italic
+        font-size 0.85rem 
+        margin-bottom 0.5rem    
+    &__discription
+        padding 0.5rem 0 0.5rem 0.5rem                 

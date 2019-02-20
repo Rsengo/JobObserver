@@ -1,5 +1,4 @@
-﻿using BuildingBlocks.Database.EntityFramework.Models;
-using BuildingBlocks.Database.MongoDB.Models;
+﻿using BuildingBlocks.MongoDB.Models;
 
 namespace BrandedTemplates.Db.Models
 {

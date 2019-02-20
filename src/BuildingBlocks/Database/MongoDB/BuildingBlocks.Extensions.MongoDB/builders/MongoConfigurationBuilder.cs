@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Text;
 using MongoDB.Driver;
 
@@ -8,7 +9,11 @@ namespace BuildingBlocks.Extensions.MongoDB.builders
     public sealed class MongoConfigurationBuilder
     {
         internal Action<MongoClientSettings> ConfigureClientSettings { get; private set; }
+
         internal Action<MongoDatabaseSettings> ConfigureDatabaseSettings { get; private set; }
+
+        internal string MigrationsAssembly { get; set; }
+
         public string DatabaseName { get; set; }
 
         public string ConnectionString { get; set; }

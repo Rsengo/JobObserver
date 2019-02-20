@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Database.EntityFramework\BuildingBlocks.Database.EntityFramework.csproj" />
-    <ProjectReference Include="..\..\..\..\BuildingBlocks\Database\MongoDB\BuildingBlocks.Database.MongoDB\BuildingBlocks.Database.MongoDB.csproj" />
+    <ProjectReference Include="..\..\..\..\BuildingBlocks\Database\MongoDB\BuildingBlocks.Extensions.MongoDB\BuildingBlocks.Extensions.MongoDB.csproj" />
+    <ProjectReference Include="..\..\..\..\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB\BuildingBlocks.MongoDB.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,0 @@
-C:\Users\rseng\Desktop\JobObserver\src\BuildingBlocks\AutoMapper\src\AutoMapper.Extensions.Configuration\bin\Debug\netcoreapp2.1\AutoMapper.Extensions.Configuration.deps.json
-C:\Users\rseng\Desktop\JobObserver\src\BuildingBlocks\AutoMapper\src\AutoMapper.Extensions.Configuration\bin\Debug\netcoreapp2.1\AutoMapper.Extensions.Configuration.dll
-C:\Users\rseng\Desktop\JobObserver\src\BuildingBlocks\AutoMapper\src\AutoMapper.Extensions.Configuration\obj\Debug\netcoreapp2.1\AutoMapper.Extensions.Configuration.csprojAssemblyReference.cache
-C:\Users\rseng\Desktop\JobObserver\src\BuildingBlocks\AutoMapper\src\AutoMapper.Extensions.Configuration\obj\Debug\netcoreapp2.1\AutoMapper.Extensions.Configuration.csproj.CoreCompileInputs.cache
-C:\Users\rseng\Desktop\JobObserver\src\BuildingBlocks\AutoMapper\src\AutoMapper.Extensions.Configuration\obj\Debug\netcoreapp2.1\AutoMapper.Extensions.Configuration.AssemblyInfoInputs.cache
-C:\Users\rseng\Desktop\JobObserver\src\BuildingBlocks\AutoMapper\src\AutoMapper.Extensions.Configuration\obj\Debug\netcoreapp2.1\AutoMapper.Extensions.Configuration.AssemblyInfo.cs

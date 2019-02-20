@@ -1,0 +1,4 @@
+C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\AutoMapper\BuildingBlocks.AutoMapper\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.dll
+C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\AutoMapper\BuildingBlocks.AutoMapper\obj\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.csproj.CoreCompileInputs.cache
+C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\AutoMapper\BuildingBlocks.AutoMapper\obj\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.AssemblyInfoInputs.cache
+C:\Users\rseng\Documents\Repos\JobObserverGithub\JobObserver\src\BuildingBlocks\AutoMapper\BuildingBlocks.AutoMapper\obj\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.AssemblyInfo.cs
