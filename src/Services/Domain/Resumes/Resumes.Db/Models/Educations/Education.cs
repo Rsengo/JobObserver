@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using BuildingBlocks.Database.EntityFramework.Models;
+using BuildingBlocks.EntityFramework.Models;
 using Resumes.Db.Models.Specializations;
 
 namespace Resumes.Db.Models.Educations

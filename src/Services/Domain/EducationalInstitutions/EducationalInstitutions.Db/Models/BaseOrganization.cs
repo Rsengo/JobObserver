@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using BuildingBlocks.Database.EntityFramework.Models;
+using BuildingBlocks.EntityFramework.Models;
 
 namespace EducationalInstitutions.Db.Models
 {

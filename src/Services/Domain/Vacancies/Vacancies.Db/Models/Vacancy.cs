@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using BuildingBlocks.Database.EntityFramework.Models;
+using BuildingBlocks.EntityFramework.Models;
 using Vacancies.Db.Models.Driving;
 using Vacancies.Db.Models.Employments;
 using Vacancies.Db.Models.Languages;
@@ -102,7 +102,7 @@ namespace Vacancies.Db.Models
         /// <summary>
         ///     Тесты
         /// </summary>
-        public virtual ICollection<Test> Tests { get; set; }
+        public virtual ICollection<VacancyTest> Tests { get; set; }
 
         /// <summary>
         ///     Включена ли возможность соискателю писать сообщения работодателю, после приглашения/отклика на вакансию

@@ -1,4 +1,4 @@
-﻿using BuildingBlocks.Database.EntityFramework.Models;
+﻿using BuildingBlocks.EntityFramework.Models;
 using Geographic.Db.Models.Metro;
 
 namespace Geographic.Db.Models

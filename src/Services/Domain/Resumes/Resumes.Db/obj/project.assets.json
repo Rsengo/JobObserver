@@ -207,6 +207,29 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "BuildingBlocks.Database.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/BuildingBlocks.Database.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BuildingBlocks.Database.Entity.dll": {}
+        }
+      },
+      "BuildingBlocks.EntityFramework/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "BuildingBlocks.Database.Entity": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BuildingBlocks.EntityFramework.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BuildingBlocks.EntityFramework.dll": {}
+        }
       }
     }
   },
@@ -674,31 +697,42 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "BuildingBlocks.Database.Entity/1.0.0": {
+      "type": "project",
+      "path": "../../../../BuildingBlocks/Database/BuildingBlocks.Database.Entity/BuildingBlocks.Database.Entity.csproj",
+      "msbuildProject": "../../../../BuildingBlocks/Database/BuildingBlocks.Database.Entity/BuildingBlocks.Database.Entity.csproj"
+    },
+    "BuildingBlocks.EntityFramework/1.0.0": {
+      "type": "project",
+      "path": "../../../../BuildingBlocks/Database/EntityFramework/BuildingBlocks.EntityFramework/BuildingBlocks.EntityFramework.csproj",
+      "msbuildProject": "../../../../BuildingBlocks/Database/EntityFramework/BuildingBlocks.EntityFramework/BuildingBlocks.EntityFramework.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "BuildingBlocks.EntityFramework >= 1.0.0",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\RudencovDP\\.nuget\\packages\\": {},
+    "C:\\Users\\rseng\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repos\\JobObserver\\src\\Services\\Domain\\Resumes\\Resumes.Db\\Resumes.Db.csproj",
+      "projectUniqueName": "C:\\JobObserver\\src\\Services\\Domain\\Resumes\\Resumes.Db\\Resumes.Db.csproj",
       "projectName": "Resumes.Db",
-      "projectPath": "D:\\Repos\\JobObserver\\src\\Services\\Domain\\Resumes\\Resumes.Db\\Resumes.Db.csproj",
-      "packagesPath": "C:\\Users\\RudencovDP\\.nuget\\packages\\",
-      "outputPath": "D:\\Repos\\JobObserver\\src\\Services\\Domain\\Resumes\\Resumes.Db\\obj\\",
+      "projectPath": "C:\\JobObserver\\src\\Services\\Domain\\Resumes\\Resumes.Db\\Resumes.Db.csproj",
+      "packagesPath": "C:\\Users\\rseng\\.nuget\\packages\\",
+      "outputPath": "C:\\JobObserver\\src\\Services\\Domain\\Resumes\\Resumes.Db\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\RudencovDP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rseng\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -710,7 +744,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\JobObserver\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.EntityFramework\\BuildingBlocks.EntityFramework.csproj": {
+              "projectPath": "C:\\JobObserver\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.EntityFramework\\BuildingBlocks.EntityFramework.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

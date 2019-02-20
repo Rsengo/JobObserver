@@ -682,23 +682,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\RudencovDP\\.nuget\\packages\\": {},
+    "C:\\Users\\rseng\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repos\\JobObserver\\src\\Services\\Domain\\Login\\Login.Db\\Login.Db.csproj",
+      "projectUniqueName": "C:\\JobObserver\\src\\Services\\Domain\\Login\\Login.Db\\Login.Db.csproj",
       "projectName": "Login.Db",
-      "projectPath": "D:\\Repos\\JobObserver\\src\\Services\\Domain\\Login\\Login.Db\\Login.Db.csproj",
-      "packagesPath": "C:\\Users\\RudencovDP\\.nuget\\packages\\",
-      "outputPath": "D:\\Repos\\JobObserver\\src\\Services\\Domain\\Login\\Login.Db\\obj\\",
+      "projectPath": "C:\\JobObserver\\src\\Services\\Domain\\Login\\Login.Db\\Login.Db.csproj",
+      "packagesPath": "C:\\Users\\rseng\\.nuget\\packages\\",
+      "outputPath": "C:\\JobObserver\\src\\Services\\Domain\\Login\\Login.Db\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\RudencovDP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rseng\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

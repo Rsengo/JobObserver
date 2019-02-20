@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\BuildingBlocks\Database\EntityFramework\BuildingBlocks.EntityFramework\BuildingBlocks.EntityFramework.csproj" />
+  </ItemGroup>
+
 </Project>

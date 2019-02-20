@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using BuildingBlocks.Database.EntityFramework.Models;
+using BuildingBlocks.EntityFramework.Models;
 using Resumes.Db.Models.Driving;
 using Resumes.Db.Models.Educations;
 using Resumes.Db.Models.Employments;
@@ -122,18 +122,12 @@ namespace Resumes.Db.Models
         /// <summary>
         ///     Гражданства
         /// </summary>
-        public virtual ICollection<Area> Citizenship =>
-            CitizenshipLinks
-                .Select(x => x.Citizenship)
-                .ToList();
+        public virtual ICollection<Area> Citizenship { get; set; }
 
         /// <summary>
         ///     Разрешение на работу
         /// </summary>
-        public virtual ICollection<Area> WorkTicket =>
-            WorkTicketLinks
-                .Select(x => x.WorkTicket)
-                .ToList();
+        public virtual ICollection<Area> WorkTicket { get; set; }
 
         /// <summary>
         ///     Время поездки до работы

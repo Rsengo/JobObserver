@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using BuildingBlocks.Database.EntityFramework.Models;
+using BuildingBlocks.EntityFramework.Models;
 
 namespace Employers.Db.Models
 {

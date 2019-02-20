@@ -1,5 +1,5 @@
 ﻿using System;
-using BuildingBlocks.Database.EntityFramework.Models;
+using BuildingBlocks.EntityFramework.Models;
 using Resumes.Db.Models.Industries;
 using Resumes.Db.Models.Specializations;
 

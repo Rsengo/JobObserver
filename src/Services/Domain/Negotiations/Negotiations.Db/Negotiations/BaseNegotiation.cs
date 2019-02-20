@@ -1,5 +1,5 @@
 ﻿using System;
-using BuildingBlocks.Database.EntityFramework.Models;
+using BuildingBlocks.EntityFramework.Models;
 
 namespace Negotiations.Db.Negotiations
 {
