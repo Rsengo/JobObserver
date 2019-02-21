@@ -15,6 +15,7 @@ using Resumes.Db.Models.Specializations;
 using Resumes.Db.Models.Statuses;
 using Resumes.Db.Models.Travel;
 using Resumes.Db.Models.Travel.Relocation;
+using Resumes.Db.Models.Geographic;
 
 namespace Resumes.Db.Models
 {
@@ -27,6 +28,11 @@ namespace Resumes.Db.Models
         ///     Id Соискателя
         /// </summary>
         public virtual long ApplicantId { get; set; }
+
+        /// <summary>
+        /// Город.
+        /// </summary>
+        public virtual Area Area { get; set; }
 
         /// <summary>
         ///     Id Города
@@ -67,11 +73,6 @@ namespace Resumes.Db.Models
         ///     Id Фото
         /// </summary>
         public virtual long? PhotoId { get; set; }
-
-        /// <summary>
-        ///     Портфолио
-        /// </summary>
-        public virtual ICollection<Portfolio> Portfolio { get; set; }
 
         /// <summary>
         ///     Образование
@@ -122,12 +123,12 @@ namespace Resumes.Db.Models
         /// <summary>
         ///     Гражданства
         /// </summary>
-        public virtual ICollection<Area> Citizenship { get; set; }
+        ////////////////////////////////////////////////////////////////public virtual ICollection<Area> Citizenship { get; set; }
 
         /// <summary>
         ///     Разрешение на работу
         /// </summary>
-        public virtual ICollection<Area> WorkTicket { get; set; }
+        //////////////////////////////////////////////////////////////////public virtual ICollection<Area> WorkTicket { get; set; }
 
         /// <summary>
         ///     Время поездки до работы
@@ -179,7 +180,7 @@ namespace Resumes.Db.Models
         public virtual DateTime UpdatedAt { get; set; }
 
         /// <summary>
-        ///     Имеется транспортное ссредство
+        ///     Имеется транспортное средство
         /// </summary>
         public virtual bool HasVehicle { get; set; }
 

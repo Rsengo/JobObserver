@@ -87,7 +87,7 @@ namespace BuildingBlocks.MongoDB.Migration
                             FromVersion = tempVersion
                         };
 
-                        collection.InsertOneAsync(versionInfo);
+                        collection.InsertOne(versionInfo);
                     }
                 });
             }
@@ -157,7 +157,7 @@ namespace BuildingBlocks.MongoDB.Migration
                             FromVersion = tempVersion
                         };
 
-                        collection.InsertOneAsync(versionInfo);
+                        collection.InsertOne(versionInfo);
                     }
                 });
             }

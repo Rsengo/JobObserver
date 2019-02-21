@@ -6,12 +6,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="5.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\BuildingBlocks\Database\MongoDB\BuildingBlocks.Extensions.MongoDB\BuildingBlocks.Extensions.MongoDB.csproj" />
+    <ProjectReference Include="..\BrandedTemplates.Db\BrandedTemplates.Db.csproj" />
+    <ProjectReference Include="..\BrandedTemplates.Dto\BrandedTemplates.Dto.csproj" />
   </ItemGroup>
 
 </Project>

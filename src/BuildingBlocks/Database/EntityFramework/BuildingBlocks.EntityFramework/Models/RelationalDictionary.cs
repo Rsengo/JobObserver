@@ -6,12 +6,7 @@ namespace BuildingBlocks.EntityFramework.Models
     /// <summary>
     ///     Базовый словарь
     /// </summary>
-    public abstract class RelationalDictionary : RelationalEntity, IDictionaryEntity
+    public abstract class RelationalDictionary : DictionaryEntity<long>
     {
-        /// <inheritdoc />
-        public virtual string Name { get; set; }
-
-        /// <inheritdoc />
-        public virtual Guid GlobalId { get; set; }
     }
 }

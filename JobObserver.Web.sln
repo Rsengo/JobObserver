@@ -117,15 +117,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.EventBus", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.EventBus.RabbitMQ", "src\BuildingBlocks\EventBus\BuildingBlocks.EventBus.RabbitMQ\BuildingBlocks.EventBus.RabbitMQ.csproj", "{D06785DE-764D-4A27-BC22-4B177604FD22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.Extensions.EntityFramework", "src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Extensions.EntityFramework\BuildingBlocks.Extensions.EntityFramework.csproj", "{A2EB9D31-7119-4DA7-9A50-2667058108A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.Extensions.EntityFramework", "src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Extensions.EntityFramework\BuildingBlocks.Extensions.EntityFramework.csproj", "{A2EB9D31-7119-4DA7-9A50-2667058108A1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dictionaries", "Dictionaries", "{3E9DC612-FDFD-46B7-A882-9A4973873F32}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{662A1535-7ACA-4EA0-9AEC-C0F3D731A841}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.API", "src\Services\Domain\Tests\Tests.API\Tests.API.csproj", "{C7E1E371-C81C-45D0-A601-23CC598A4686}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests.API", "src\Services\Domain\Tests\Tests.API\Tests.API.csproj", "{C7E1E371-C81C-45D0-A601-23CC598A4686}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dictionaries.API", "src\Services\Integration\Dictionaries\Dictionaries.API\Dictionaries.API.csproj", "{3477C6A2-73AF-4F43-9594-FC653EE0BBDA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dictionaries.API", "src\Services\Integration\Dictionaries\Dictionaries.API\Dictionaries.API.csproj", "{3477C6A2-73AF-4F43-9594-FC653EE0BBDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dictionaries.Db", "src\Services\Integration\Dictionaries\Dictionaries.Db\Dictionaries.Db.csproj", "{FCE4508B-5C4B-4BDB-8D45-8C70EC279FD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrandedTemplates.Dto", "src\Services\Domain\BrandedTemplates\BrandedTemplates.Dto\BrandedTemplates.Dto.csproj", "{A952D1F3-E77A-4978-84FF-7559251F338D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -273,6 +277,14 @@ Global
 		{3477C6A2-73AF-4F43-9594-FC653EE0BBDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3477C6A2-73AF-4F43-9594-FC653EE0BBDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3477C6A2-73AF-4F43-9594-FC653EE0BBDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCE4508B-5C4B-4BDB-8D45-8C70EC279FD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCE4508B-5C4B-4BDB-8D45-8C70EC279FD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCE4508B-5C4B-4BDB-8D45-8C70EC279FD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCE4508B-5C4B-4BDB-8D45-8C70EC279FD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A952D1F3-E77A-4978-84FF-7559251F338D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A952D1F3-E77A-4978-84FF-7559251F338D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A952D1F3-E77A-4978-84FF-7559251F338D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A952D1F3-E77A-4978-84FF-7559251F338D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -339,6 +351,8 @@ Global
 		{662A1535-7ACA-4EA0-9AEC-C0F3D731A841} = {B8ED6D97-95AD-466E-ABD7-5A61C18771BF}
 		{C7E1E371-C81C-45D0-A601-23CC598A4686} = {662A1535-7ACA-4EA0-9AEC-C0F3D731A841}
 		{3477C6A2-73AF-4F43-9594-FC653EE0BBDA} = {3E9DC612-FDFD-46B7-A882-9A4973873F32}
+		{FCE4508B-5C4B-4BDB-8D45-8C70EC279FD6} = {3E9DC612-FDFD-46B7-A882-9A4973873F32}
+		{A952D1F3-E77A-4978-84FF-7559251F338D} = {F7204CEE-905A-4472-898E-A12E489E374F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EFC2B589-7633-4F4E-A0D8-0509C36A83A5}

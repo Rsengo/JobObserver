@@ -716,23 +716,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rseng\\.nuget\\packages\\": {},
+    "C:\\Users\\RudencovDP\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\JobObserver\\src\\Services\\Domain\\Resumes\\Resumes.Db\\Resumes.Db.csproj",
+      "projectUniqueName": "D:\\Repos\\JobObserver\\src\\Services\\Domain\\Resumes\\Resumes.Db\\Resumes.Db.csproj",
       "projectName": "Resumes.Db",
-      "projectPath": "C:\\JobObserver\\src\\Services\\Domain\\Resumes\\Resumes.Db\\Resumes.Db.csproj",
-      "packagesPath": "C:\\Users\\rseng\\.nuget\\packages\\",
-      "outputPath": "C:\\JobObserver\\src\\Services\\Domain\\Resumes\\Resumes.Db\\obj\\",
+      "projectPath": "D:\\Repos\\JobObserver\\src\\Services\\Domain\\Resumes\\Resumes.Db\\Resumes.Db.csproj",
+      "packagesPath": "C:\\Users\\RudencovDP\\.nuget\\packages\\",
+      "outputPath": "D:\\Repos\\JobObserver\\src\\Services\\Domain\\Resumes\\Resumes.Db\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\rseng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\RudencovDP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -745,8 +745,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\JobObserver\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.EntityFramework\\BuildingBlocks.EntityFramework.csproj": {
-              "projectPath": "C:\\JobObserver\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.EntityFramework\\BuildingBlocks.EntityFramework.csproj"
+            "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.EntityFramework\\BuildingBlocks.EntityFramework.csproj": {
+              "projectPath": "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.EntityFramework\\BuildingBlocks.EntityFramework.csproj"
             }
           }
         }

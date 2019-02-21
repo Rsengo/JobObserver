@@ -12,3 +12,8 @@ C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Resumes\Resumes.API\obj\D
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.RazorTargetAssemblyInfo.cache
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.dll
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.pdb
+D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.csproj.CoreCompileInputs.cache
+D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.AssemblyInfoInputs.cache
+D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.AssemblyInfo.cs
+D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.dll
+D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.pdb

@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using BuildingBlocks.Extensions.MongoDB;
+using BrandedTemplates.Db;
 
 namespace BrandedTemplates.API
 {
@@ -27,6 +28,13 @@ namespace BrandedTemplates.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddMongoContext<BrandedTemplatesDbContext>(builder =>
+            {
+                builder.ConnectionString = "";
+                builder.DatabaseName = "";
+                builder.MigrationsAssembly = typeof(BrandedTemplatesDbContext).Assembly.GetName().Name;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

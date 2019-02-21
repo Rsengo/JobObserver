@@ -1,0 +1,17 @@
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Dto\bin\Debug\netcoreapp2.1\BrandedTemplates.Db.dll
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Dto\bin\Debug\netcoreapp2.1\BuildingBlocks.Database.Entity.dll
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Dto\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.dll
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Dto\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.MongoDB.dll
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Dto\bin\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.dll
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Dto\bin\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.Migration.dll
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Dto\bin\Debug\netcoreapp2.1\BuildingBlocks.Database.Common.dll
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Dto\bin\Debug\netcoreapp2.1\BrandedTemplates.Db.pdb
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Dto\bin\Debug\netcoreapp2.1\BuildingBlocks.Database.Entity.pdb
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Dto\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.pdb
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Dto\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.MongoDB.pdb
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Dto\bin\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.pdb
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Dto\bin\Debug\netcoreapp2.1\BuildingBlocks.Database.Common.pdb
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Dto\obj\Debug\netcoreapp2.1\BrandedTemplates.Dto.csprojAssemblyReference.cache
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Dto\obj\Debug\netcoreapp2.1\BrandedTemplates.Dto.csproj.CoreCompileInputs.cache
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Dto\obj\Debug\netcoreapp2.1\BrandedTemplates.Dto.AssemblyInfoInputs.cache
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Dto\obj\Debug\netcoreapp2.1\BrandedTemplates.Dto.AssemblyInfo.cs

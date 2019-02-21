@@ -12,7 +12,7 @@ namespace BuildingBlocks.Extensions.MongoDB.builders
 
         internal Action<MongoDatabaseSettings> ConfigureDatabaseSettings { get; private set; }
 
-        internal string MigrationsAssembly { get; set; }
+        public string MigrationsAssembly { get; set; }
 
         public string DatabaseName { get; set; }
 
