@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using BuildingBlocks.Extensions.MongoDB;
 using BrandedTemplates.Db;
+using BuildingBlocks.Extensions.EntityFramework;;
 
 namespace BrandedTemplates.API
 {
@@ -17,26 +18,13 @@ namespace BrandedTemplates.API
         public static void Main(string[] args)
         {
             BuildWebHost(args)
-                .MigrateMongoDbContext<BrandedTemplatesDbContext>((_, __) => { })
+                .MigrateDbContext<BrandedTemplatesDbContext>((_, __) => { })
                 .Run();
         }
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
-                .ConfigureAppConfiguration((builderContext, config) =>
-                {
-                    config.AddEnvironmentVariables();
-                })
-                .ConfigureServices((ctx, services) =>
-                {
-                    services.AddMongoContext<BrandedTemplatesDbContext>(builder =>
-                    {
-                        builder.ConnectionString = ctx.Configuration.GetSection("MongoDB")["ConnectionString"];
-                        builder.DatabaseName = ctx.Configuration.GetSection("MongoDB")["Database"];
-                        builder.MigrationsAssembly = typeof(BrandedTemplatesDbContext).Assembly;
-                    });
-                })
                 .Build();
     }
 }

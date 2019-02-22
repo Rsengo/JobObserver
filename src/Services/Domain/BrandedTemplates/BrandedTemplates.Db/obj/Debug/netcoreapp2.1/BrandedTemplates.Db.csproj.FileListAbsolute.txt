@@ -13,14 +13,6 @@ C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\BrandedTemplates\BrandedT
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BrandedTemplates.Db.deps.json
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BrandedTemplates.Db.dll
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BrandedTemplates.Db.pdb
-D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.dll
-D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.MongoDB.dll
-D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.dll
-D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.Migration.dll
-D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.MongoDB.pdb
-D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.pdb
-D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.pdb
-D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.Migration.pdb
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\obj\Debug\netcoreapp2.1\BrandedTemplates.Db.csprojAssemblyReference.cache
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\obj\Debug\netcoreapp2.1\BrandedTemplates.Db.csproj.CoreCompileInputs.cache
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\obj\Debug\netcoreapp2.1\BrandedTemplates.Db.AssemblyInfoInputs.cache
@@ -28,3 +20,7 @@ D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\ob
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\obj\Debug\netcoreapp2.1\BrandedTemplates.Db.csproj.CopyComplete
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\obj\Debug\netcoreapp2.1\BrandedTemplates.Db.dll
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\obj\Debug\netcoreapp2.1\BrandedTemplates.Db.pdb
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.dll
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.Database.Entity.dll
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.pdb
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.Database.Entity.pdb

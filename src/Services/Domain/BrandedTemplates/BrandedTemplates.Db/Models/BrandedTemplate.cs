@@ -1,11 +1,11 @@
-﻿using BuildingBlocks.MongoDB.Models;
+﻿using BuildingBlocks.EntityFramework.Models;
 
 namespace BrandedTemplates.Db.Models
 {
     /// <summary>
     ///     Брендированный шаблон
     /// </summary>
-    public class BrandedTemplate : MongoEntity
+    public class BrandedTemplate : RelationalEntity
     {
         /// <summary>
         ///     Название.

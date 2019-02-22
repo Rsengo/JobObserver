@@ -5,14 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Maps\**" />
-    <EmbeddedResource Remove="Maps\**" />
-    <None Remove="Maps\**" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\BuildingBlocks\Database\MongoDB\BuildingBlocks.Extensions.MongoDB\BuildingBlocks.Extensions.MongoDB.csproj" />
-    <ProjectReference Include="..\..\..\..\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB\BuildingBlocks.MongoDB.csproj" />
+    <ProjectReference Include="..\..\..\..\BuildingBlocks\Database\EntityFramework\BuildingBlocks.EntityFramework\BuildingBlocks.EntityFramework.csproj" />
   </ItemGroup>
 
 </Project>

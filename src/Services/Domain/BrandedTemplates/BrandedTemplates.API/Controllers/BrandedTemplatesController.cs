@@ -12,10 +12,12 @@ namespace BrandedTemplates.API.Controllers
 
     using BrandedTemplates.Dto.Models;
 
+    using Microsoft.EntityFrameworkCore;
+
     [Route("api/[controller]")]
     public sealed class BrandedTemplatesController: ControllerBase
     {
-        private readonly MongoDbContext _context;
+        private readonly BrandedTemplatesDbContext _context;
 
         public BrandedTemplatesController(BrandedTemplatesDbContext context)
         {
@@ -25,19 +27,10 @@ namespace BrandedTemplates.API.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get([FromQuery] long id)
         {
-            BrandedTemplate template = null;
-
-            await _context.ExecuteTransactionAsync(async db =>
-            {
-                var collection = db.GetCollection<BrandedTemplate>();
-                var filter = Builders<BrandedTemplate>.Filter.Eq(x => x.Id, id);
-                var query = await collection.FindAsync(filter)
-                    .ConfigureAwait(false);
-                template = await query.SingleOrDefaultAsync()
-                    .ConfigureAwait(false);
-            }).ConfigureAwait(false);
-
-            var dto = Mapper.Map<DtoBrandedTemplate>(template);
+            var result = await _context.BrandedTemplates
+                .SingleOrDefaultAsync(x => x.Id == id)
+                .ConfigureAwait(false);
+            var dto = Mapper.Map<DtoBrandedTemplate>(result);
 
             return Ok(dto);
         }
@@ -45,46 +38,19 @@ namespace BrandedTemplates.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Save(DtoBrandedTemplate dto)
         {
-            var template = Mapper.Map<BrandedTemplate>(dto);
-
-            await _context.ExecuteTransactionAsync(db =>
-            {
-                var collection = db.GetCollection<BrandedTemplate>();
-                return collection.InsertOneAsync(template);
-            }).ConfigureAwait(false);
-
-            return Ok(template.Id);
+           
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(DtoBrandedTemplate dto, long id)
         {
-            var template = Mapper.Map<BrandedTemplate>(dto);
-            template.Id = id;
-
-            await _context.ExecuteTransactionAsync( async db =>
-            {
-                var collection = db.GetCollection<BrandedTemplate>();
-                var filter = Builders<BrandedTemplate>.Filter.Eq(x => x.Id, id);
-                await collection.ReplaceOneAsync(filter, template)
-                    .ConfigureAwait(false);
-            }).ConfigureAwait(false);
-
-            return Ok();
+            
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(long id)
         {
-            await _context.ExecuteTransactionAsync(async db =>
-            {
-                var collection = db.GetCollection<BrandedTemplate>();
-                var filter = Builders<BrandedTemplate>.Filter.Eq(x => x.Id, id);
-                await collection.DeleteOneAsync(filter)
-                    .ConfigureAwait(false);
-            }).ConfigureAwait(false);
-
-            return Ok();
+            
         }
     }
 }

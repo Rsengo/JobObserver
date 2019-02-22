@@ -5,5 +5,6 @@
     /// </summary>
     public abstract class RelationalEntity
     {
+        public virtual long Id { get; set; }
     }
 }

@@ -15,7 +15,11 @@ using BrandedTemplates.Db;
 
 namespace BrandedTemplates.API
 {
+    using System.Reflection;
+
     using BuildingBlocks.AutoMapper;
+
+    using Microsoft.EntityFrameworkCore;
 
     public class Startup
     {
@@ -29,12 +33,23 @@ namespace BrandedTemplates.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddMongoContext<BrandedTemplatesDbContext>(builder =>
-            //{
-            //    builder.ConnectionString = Configuration.GetSection("MongoDB")["ConnectionString"];
-            //    builder.DatabaseName = Configuration.GetSection("MongoDB")["Database"];
-            //    builder.MigrationsAssembly = typeof(BrandedTemplatesDbContext).Assembly.GetName().Name;
-            //});
+            services.AddDbContext<BrandedTemplatesDbContext>(opt =>
+            {
+                opt.UseSqlServer(
+                    Configuration.GetConnectionString("BrandedTemplateConnstring"),
+                    sqlOptions =>
+                    {
+                        sqlOptions.MigrationsAssembly(typeof(BrandedTemplatesDbContext)
+                            .GetTypeInfo()
+                            .Assembly
+                            .GetName()
+                            .Name);
+                        sqlOptions.EnableRetryOnFailure(
+                            15, 
+                            TimeSpan.FromSeconds(30), 
+                            null);
+                    });
+            });
 
             AutoMapperConfigurator.Instance.Initialize();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
