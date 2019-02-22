@@ -1,12 +1,16 @@
-﻿using BuildingBlocks.Database.Entity;
-
-namespace BrandedTemplates.Dto.Models
+﻿namespace BrandedTemplates.Dto.Models
 {
     /// <summary>
     ///     Брендированный шаблон
     /// </summary>
-    public class DtoBrandedTemplate : BaseEntity<long>
+    public class DtoBrandedTemplate
     {
+
+        /// <summary>
+        ///     Id сущности.
+        /// </summary>
+        public virtual long Id { get; set; }
+
         /// <summary>
         ///     Название.
         /// </summary>

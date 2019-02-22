@@ -208,22 +208,9 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "BuildingBlocks.Database.Entity/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.1",
-        "compile": {
-          "bin/placeholder/BuildingBlocks.Database.Entity.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BuildingBlocks.Database.Entity.dll": {}
-        }
-      },
       "BuildingBlocks.EntityFramework/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
-        "dependencies": {
-          "BuildingBlocks.Database.Entity": "1.0.0"
-        },
         "compile": {
           "bin/placeholder/BuildingBlocks.EntityFramework.dll": {}
         },
@@ -697,11 +684,6 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
-    },
-    "BuildingBlocks.Database.Entity/1.0.0": {
-      "type": "project",
-      "path": "../../../../BuildingBlocks/Database/BuildingBlocks.Database.Entity/BuildingBlocks.Database.Entity.csproj",
-      "msbuildProject": "../../../../BuildingBlocks/Database/BuildingBlocks.Database.Entity/BuildingBlocks.Database.Entity.csproj"
     },
     "BuildingBlocks.EntityFramework/1.0.0": {
       "type": "project",

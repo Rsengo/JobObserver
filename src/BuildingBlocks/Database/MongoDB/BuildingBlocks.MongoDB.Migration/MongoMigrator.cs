@@ -8,6 +8,8 @@ using MongoDB.Driver;
 
 namespace BuildingBlocks.MongoDB.Migration
 {
+    using System.Runtime.Loader;
+
     internal sealed class MongoMigrator
     {
         private const string VERSION_INFO_COLLECTION = "VersionInfo";
@@ -49,22 +51,22 @@ namespace BuildingBlocks.MongoDB.Migration
 
         public void MigrateUp(MongoDbContext context)
         {
-            AppDomain domain = null;
-
             try
             {
-                if (string.IsNullOrWhiteSpace(context.MigrationsAssembly))
+                if (context.MigrationsAssembly == null)
                 {
                     throw new NullReferenceException("Не указана сборка с миграциями");
                 }
 
-                domain = AppDomain.CreateDomain(MIGRATIONS_DOMAIN);
-                var migrationsAssembly = domain.Load(context.MigrationsAssembly);
-
                 context.ExecuteTransaction(database =>
                 {
-                    var migrationData = GetMigrationsInfo(database, migrationsAssembly);
-                    var sortedMigrationData = migrationData.OrderBy(x => long.Parse(x.Version));
+                    var migrationData = GetMigrationsInfo(database, context.MigrationsAssembly);
+                    var tempVersion = GetTempVersion(database, out var collection);
+
+                    var sortedMigrationData = migrationData
+                        .OrderBy(x => long.Parse(x.Version))
+                        .Where(x => long.Parse(x.Version) > long.Parse(tempVersion))
+                        .ToArray();
 
                     var collectionExists = GetVersionCollectionExists(database);
 
@@ -72,8 +74,6 @@ namespace BuildingBlocks.MongoDB.Migration
                     {
                         database.CreateCollection(VERSION_INFO_COLLECTION);
                     }
-
-                    var tempVersion = GetTempVersion(database, out var collection);
 
                     foreach (var migrationInfo in sortedMigrationData)
                     {
@@ -97,24 +97,15 @@ namespace BuildingBlocks.MongoDB.Migration
                               $"миграций из сборки {context.MigrationsAssembly}";
                 throw new MongoException(message, e);
             }
-            finally
-            {
-                if (domain != null)
-                {
-                    AppDomain.Unload(domain);
-                }
-            }
         }
 
         public void MigrateDown(
             MongoDbContext context, 
             string downVersion)
         {
-            AppDomain domain = null;
-
             try
             {
-                if (string.IsNullOrWhiteSpace(context.MigrationsAssembly))
+                if (context.MigrationsAssembly == null)
                 {
                     throw new NullReferenceException("Не указана сборка с миграциями");
                 }
@@ -125,15 +116,15 @@ namespace BuildingBlocks.MongoDB.Migration
                     throw new InvalidOperationException("Указана невалидная версия");
                 }
 
-                domain = AppDomain.CreateDomain(MIGRATIONS_DOMAIN);
-                var migrationsAssembly = domain.Load(context.MigrationsAssembly);
-
                 context.ExecuteTransaction(database =>
                 {
-                    var migrationVersions = GetMigrationsInfo(database, migrationsAssembly);
+                    var migrationVersions = GetMigrationsInfo(database, context.MigrationsAssembly);
+                    var tempVersion = GetTempVersion(database, out var collection);
+
                     var sortedMigrationVersions = migrationVersions
                         .OrderBy(x => long.Parse(x.Version))
-                        .Where(x => long.Parse(x.Version) > long.Parse(downVersion));
+                        .Where(x => long.Parse(x.Version) > long.Parse(downVersion))
+                        .Where(x => long.Parse(x.Version) <= long.Parse(tempVersion));
 
                     var collectionExists = GetVersionCollectionExists(database);
 
@@ -141,8 +132,6 @@ namespace BuildingBlocks.MongoDB.Migration
                     {
                         database.CreateCollection(VERSION_INFO_COLLECTION);
                     }
-
-                    var tempVersion = GetTempVersion(database, out var collection);
 
                     foreach (var migrationInfo in sortedMigrationVersions)
                     {
@@ -168,25 +157,18 @@ namespace BuildingBlocks.MongoDB.Migration
                               $"до версии {downVersion}";
                 throw new MongoException(message, e);
             }
-            finally
-            {
-                if (domain != null)
-                {
-                    AppDomain.Unload(domain);
-                }
-            }
         }
 
         public void MigrateDown(
             MongoDbContext context,
             DateTime versionTime)
         {
-            var day = versionTime.Day.ToString().PadLeft(2);
-            var month = versionTime.Month.ToString().PadLeft(2);
+            var day = versionTime.Day.ToString().PadLeft(2, '0');
+            var month = versionTime.Month.ToString().PadLeft(2, '0');
             var year = versionTime.Year.ToString();
-            var hour = versionTime.Hour.ToString().PadLeft(2);
-            var minute = versionTime.Minute.ToString().PadLeft(2);
-            var second = versionTime.Second.ToString().PadLeft(2);
+            var hour = versionTime.Hour.ToString().PadLeft(2, '0');
+            var minute = versionTime.Minute.ToString().PadLeft(2, '0');
+            var second = versionTime.Second.ToString().PadLeft(2, '0');
 
             var version = string.Concat(year, month, day, hour, minute, second);
 

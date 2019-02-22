@@ -6,6 +6,8 @@ using MongoDB.Driver;
 
 namespace BuildingBlocks.Extensions.MongoDB
 {
+    using global::MongoDB.Bson.Serialization.Conventions;
+
     public static class MongoServicesExtensions
     {
         public static IServiceCollection AddMongoContext<TContext>(
@@ -30,11 +32,23 @@ namespace BuildingBlocks.Extensions.MongoDB
             var databaseSettings = new MongoDatabaseSettings();
             configuration.ConfigureDatabaseSettings?.Invoke(databaseSettings);
 
+            if (configuration.CamelCase)
+            {
+                var conventionPack = new ConventionPack();
+                var camelCaseConvention = new CamelCaseElementNameConvention();
+                conventionPack.Add(camelCaseConvention);
+                ConventionRegistry.Register("camelCase", conventionPack, t => true);
+            }
+
             services.AddScoped(provider =>
             {
                 var client = new MongoClient(clientSettings);
                 var database = client.GetDatabase(configuration.DatabaseName, databaseSettings);
                 var context = (TContext) Activator.CreateInstance(typeof(TContext), database);
+
+                if (configuration.MigrationsAssembly != null)
+                    context.MigrationsAssembly = configuration.MigrationsAssembly;
+
                 return context;
             });
 

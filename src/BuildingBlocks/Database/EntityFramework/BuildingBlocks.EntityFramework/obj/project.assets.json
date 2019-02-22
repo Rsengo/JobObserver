@@ -207,16 +207,6 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
-      },
-      "BuildingBlocks.Database.Entity/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.1",
-        "compile": {
-          "bin/placeholder/BuildingBlocks.Database.Entity.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BuildingBlocks.Database.Entity.dll": {}
-        }
       }
     }
   },
@@ -684,16 +674,10 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
-    },
-    "BuildingBlocks.Database.Entity/1.0.0": {
-      "type": "project",
-      "path": "../../BuildingBlocks.Database.Entity/BuildingBlocks.Database.Entity.csproj",
-      "msbuildProject": "../../BuildingBlocks.Database.Entity/BuildingBlocks.Database.Entity.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "BuildingBlocks.Database.Entity >= 1.0.0",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
@@ -726,11 +710,7 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {
-            "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\Database\\BuildingBlocks.Database.Entity\\BuildingBlocks.Database.Entity.csproj": {
-              "projectPath": "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\Database\\BuildingBlocks.Database.Entity\\BuildingBlocks.Database.Entity.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

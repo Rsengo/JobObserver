@@ -1,12 +1,12 @@
 ﻿using System;
-using BuildingBlocks.Database.Entity;
 
 namespace BuildingBlocks.EntityFramework.Models
 {
     /// <summary>
     ///     Базовый словарь
     /// </summary>
-    public abstract class RelationalDictionary : DictionaryEntity<long>
+    public abstract class RelationalDictionary : RelationalEntity
     {
+        public virtual string Name { get; set; }
     }
 }

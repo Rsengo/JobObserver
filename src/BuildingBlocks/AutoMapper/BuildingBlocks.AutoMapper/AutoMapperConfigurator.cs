@@ -54,11 +54,11 @@ namespace BuildingBlocks.AutoMapper
         /// <summary>
         /// Создание конфигурации
         /// </summary>
+        /// <param name="rootAssembly"> Корневая сборка. </param>
         /// <returns></returns>
-        private MapperConfigurationExpression CreateConfig()
+        private MapperConfigurationExpression CreateConfig(Assembly rootAssembly)
         {
             var config = new MapperConfigurationExpression();
-            var rootAssembly = Assembly.GetCallingAssembly();
             var assemblyTree = rootAssembly.LoadAssembliesTree();
 
             AssemblySet.UnionWith(assemblyTree);
@@ -76,7 +76,8 @@ namespace BuildingBlocks.AutoMapper
         /// </summary>
         public void Initialize()
         {
-            var config = CreateConfig();
+            var callingAssembly = Assembly.GetCallingAssembly();
+            var config = CreateConfig(callingAssembly);
             Mapper.Initialize(config);
         }
     }

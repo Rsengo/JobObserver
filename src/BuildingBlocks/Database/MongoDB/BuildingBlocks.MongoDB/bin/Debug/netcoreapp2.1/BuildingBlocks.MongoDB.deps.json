@@ -8,7 +8,6 @@
     ".NETCoreApp,Version=v2.1": {
       "BuildingBlocks.MongoDB/1.0.0": {
         "dependencies": {
-          "BuildingBlocks.Database.Entity": "1.0.0",
           "MongoDB.Driver": "2.7.3"
         },
         "runtime": {
@@ -909,11 +908,6 @@
           "System.Runtime": "4.3.0",
           "System.Runtime.Handles": "4.3.0"
         }
-      },
-      "BuildingBlocks.Database.Entity/1.0.0": {
-        "runtime": {
-          "BuildingBlocks.Database.Entity.dll": {}
-        }
       }
     }
   },
@@ -1206,7 +1200,7 @@
     "System.Reflection.Emit/4.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-P2wqAj72fFjpP6wb9nSfDqNBMab+2ovzSDzUZK7MVIm54tBJEPr9jWfSjjoTpPwj1LeKcmX3vr0ttyjSSFM47g==",
+      "sha512": "sha512-/3dmiGuUUUjqZaSeTdxkgzY0De8sLpS4J3tYRETskSbZaRjwvL62IBalMGI6iczZ6udJ1iBlsBBYOHtdCfx90Q==",
       "path": "system.reflection.emit/4.0.1",
       "hashPath": "system.reflection.emit.4.0.1.nupkg.sha512"
     },
@@ -1419,11 +1413,6 @@
       "sha512": "sha512-k/+g4b7vjdd4aix83sTgC9VG6oXYKAktSfNIJUNGxPEj7ryEOfzHHhfnmsZvjxawwcD9HyWXKCXmPjX8U4zeSw==",
       "path": "system.threading.threadpool/4.3.0",
       "hashPath": "system.threading.threadpool.4.3.0.nupkg.sha512"
-    },
-    "BuildingBlocks.Database.Entity/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

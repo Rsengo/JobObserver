@@ -9,7 +9,7 @@ namespace BuildingBlocks.Extensions.MongoDB
         public static IMongoCollection<TEntity> GetCollection<TEntity>(this IMongoDatabase database) 
             where TEntity: MongoEntity
         {
-            return database.GetCollection<TEntity>(nameof(TEntity));
+            return database.GetCollection<TEntity>(typeof(TEntity).Name);
         }
     }
 }

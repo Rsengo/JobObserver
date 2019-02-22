@@ -24,6 +24,19 @@ namespace BrandedTemplates.API
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
+                .ConfigureAppConfiguration((builderContext, config) =>
+                {
+                    config.AddEnvironmentVariables();
+                })
+                .ConfigureServices((ctx, services) =>
+                {
+                    services.AddMongoContext<BrandedTemplatesDbContext>(builder =>
+                    {
+                        builder.ConnectionString = ctx.Configuration.GetSection("MongoDB")["ConnectionString"];
+                        builder.DatabaseName = ctx.Configuration.GetSection("MongoDB")["Database"];
+                        builder.MigrationsAssembly = typeof(BrandedTemplatesDbContext).Assembly;
+                    });
+                })
                 .Build();
     }
 }

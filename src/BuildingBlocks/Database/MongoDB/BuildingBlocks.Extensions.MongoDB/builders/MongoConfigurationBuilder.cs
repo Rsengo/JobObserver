@@ -12,11 +12,18 @@ namespace BuildingBlocks.Extensions.MongoDB.builders
 
         internal Action<MongoDatabaseSettings> ConfigureDatabaseSettings { get; private set; }
 
-        public string MigrationsAssembly { get; set; }
+        internal bool CamelCase { get; private set; }
+
+        public Assembly MigrationsAssembly { get; set; }
 
         public string DatabaseName { get; set; }
 
         public string ConnectionString { get; set; }
+
+        public MongoConfigurationBuilder()
+        {
+            CamelCase = false;
+        }
 
         public void ConfigureClient(Action<MongoClientSettings> settings)
         {
@@ -26,6 +33,11 @@ namespace BuildingBlocks.Extensions.MongoDB.builders
         public void ConfigureDatabase(Action<MongoDatabaseSettings> settings)
         {
             ConfigureDatabaseSettings = settings;
+        }
+
+        public void UseCamelCase()
+        {
+            CamelCase = true;
         }
     }
 }

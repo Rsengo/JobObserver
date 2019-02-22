@@ -99,8 +99,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EntityFramework", "EntityFr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MongoDB", "MongoDB", "{1C1B2B60-997F-448C-A990-1B35E3ABA55C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.Database.Entity", "src\BuildingBlocks\Database\BuildingBlocks.Database.Entity\BuildingBlocks.Database.Entity.csproj", "{096D1CC8-2016-4476-81F0-97C8C28AAAD3}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.Extensions.MongoDB", "src\BuildingBlocks\Database\MongoDB\BuildingBlocks.Extensions.MongoDB\BuildingBlocks.Extensions.MongoDB.csproj", "{EB24DADA-7C85-4BCA-A467-9D0D34B7E35E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventBus", "EventBus", "{7853826B-9DBC-4C82-9FC0-3550DDF70EE8}"
@@ -127,9 +125,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests.API", "src\Services\D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dictionaries.API", "src\Services\Integration\Dictionaries\Dictionaries.API\Dictionaries.API.csproj", "{3477C6A2-73AF-4F43-9594-FC653EE0BBDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dictionaries.Db", "src\Services\Integration\Dictionaries\Dictionaries.Db\Dictionaries.Db.csproj", "{FCE4508B-5C4B-4BDB-8D45-8C70EC279FD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dictionaries.Db", "src\Services\Integration\Dictionaries\Dictionaries.Db\Dictionaries.Db.csproj", "{FCE4508B-5C4B-4BDB-8D45-8C70EC279FD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrandedTemplates.Dto", "src\Services\Domain\BrandedTemplates\BrandedTemplates.Dto\BrandedTemplates.Dto.csproj", "{A952D1F3-E77A-4978-84FF-7559251F338D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrandedTemplates.Dto", "src\Services\Domain\BrandedTemplates\BrandedTemplates.Dto\BrandedTemplates.Dto.csproj", "{A952D1F3-E77A-4978-84FF-7559251F338D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -233,10 +231,6 @@ Global
 		{86E37B3A-7C5F-49F3-B086-F05D6E673389}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86E37B3A-7C5F-49F3-B086-F05D6E673389}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86E37B3A-7C5F-49F3-B086-F05D6E673389}.Release|Any CPU.Build.0 = Release|Any CPU
-		{096D1CC8-2016-4476-81F0-97C8C28AAAD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{096D1CC8-2016-4476-81F0-97C8C28AAAD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{096D1CC8-2016-4476-81F0-97C8C28AAAD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{096D1CC8-2016-4476-81F0-97C8C28AAAD3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EB24DADA-7C85-4BCA-A467-9D0D34B7E35E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EB24DADA-7C85-4BCA-A467-9D0D34B7E35E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB24DADA-7C85-4BCA-A467-9D0D34B7E35E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -337,7 +331,6 @@ Global
 		{93B639E9-D4F6-43AE-913C-45459BCF1EDD} = {CEEADB69-6A22-46C6-AD40-E7CCDCBED5EC}
 		{7095A286-1846-4051-B9E6-98D5CB16B9F3} = {5D0ABCEB-DF92-4B33-AC14-DE4CD6F96201}
 		{1C1B2B60-997F-448C-A990-1B35E3ABA55C} = {5D0ABCEB-DF92-4B33-AC14-DE4CD6F96201}
-		{096D1CC8-2016-4476-81F0-97C8C28AAAD3} = {5D0ABCEB-DF92-4B33-AC14-DE4CD6F96201}
 		{EB24DADA-7C85-4BCA-A467-9D0D34B7E35E} = {1C1B2B60-997F-448C-A990-1B35E3ABA55C}
 		{7853826B-9DBC-4C82-9FC0-3550DDF70EE8} = {5A4D0324-09EE-4104-814B-9FA4D11E321B}
 		{235D292A-E060-439F-87B9-AF685885D63C} = {1C1B2B60-997F-448C-A990-1B35E3ABA55C}

@@ -1552,21 +1552,10 @@
           "lib/netstandard1.3/System.Threading.ThreadPool.dll": {}
         }
       },
-      "BuildingBlocks.Database.Entity/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.1",
-        "compile": {
-          "bin/placeholder/BuildingBlocks.Database.Entity.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BuildingBlocks.Database.Entity.dll": {}
-        }
-      },
       "BuildingBlocks.MongoDB/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
-          "BuildingBlocks.Database.Entity": "1.0.0",
           "MongoDB.Driver": "2.7.3"
         },
         "compile": {
@@ -5332,11 +5321,6 @@
         "system.threading.threadpool.4.3.0.nupkg.sha512",
         "system.threading.threadpool.nuspec"
       ]
-    },
-    "BuildingBlocks.Database.Entity/1.0.0": {
-      "type": "project",
-      "path": "../../BuildingBlocks.Database.Entity/BuildingBlocks.Database.Entity.csproj",
-      "msbuildProject": "../../BuildingBlocks.Database.Entity/BuildingBlocks.Database.Entity.csproj"
     },
     "BuildingBlocks.MongoDB/1.0.0": {
       "type": "project",

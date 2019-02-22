@@ -15,6 +15,8 @@ using BrandedTemplates.Db;
 
 namespace BrandedTemplates.API
 {
+    using BuildingBlocks.AutoMapper;
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -27,14 +29,15 @@ namespace BrandedTemplates.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            //services.AddMongoContext<BrandedTemplatesDbContext>(builder =>
+            //{
+            //    builder.ConnectionString = Configuration.GetSection("MongoDB")["ConnectionString"];
+            //    builder.DatabaseName = Configuration.GetSection("MongoDB")["Database"];
+            //    builder.MigrationsAssembly = typeof(BrandedTemplatesDbContext).Assembly.GetName().Name;
+            //});
 
-            services.AddMongoContext<BrandedTemplatesDbContext>(builder =>
-            {
-                builder.ConnectionString = "";
-                builder.DatabaseName = "";
-                builder.MigrationsAssembly = typeof(BrandedTemplatesDbContext).Assembly.GetName().Name;
-            });
+            AutoMapperConfigurator.Instance.Initialize();
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

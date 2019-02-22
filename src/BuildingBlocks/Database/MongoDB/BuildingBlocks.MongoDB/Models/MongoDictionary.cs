@@ -1,9 +1,7 @@
-﻿using System;
-using BuildingBlocks.Database.Entity;
-
-namespace BuildingBlocks.MongoDB.Models
+﻿namespace BuildingBlocks.MongoDB.Models
 {
-    public class MongoDictionary: DictionaryEntity<long>
+    public class MongoDictionary: MongoEntity
     { 
+        public virtual string Name { get; set; }
     }
 }

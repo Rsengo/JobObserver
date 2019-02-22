@@ -1,6 +1,7 @@
 ﻿using System;
 using MongoDB.Driver;
 using System.Threading.Tasks;
+using System.Reflection;
 
 namespace BuildingBlocks.MongoDB
 {
@@ -14,7 +15,7 @@ namespace BuildingBlocks.MongoDB
 
         public MongoDatabaseSettings DatabaseSettings => _database.Settings;
 
-        public string MigrationsAssembly { get; set; }
+        public Assembly MigrationsAssembly { get; set; }
 
 
         public MongoDbContext(IMongoDatabase database)
@@ -22,7 +23,7 @@ namespace BuildingBlocks.MongoDB
             _database = database;
             _client = database.Client;
             _session = _client.StartSession();
-            MigrationsAssembly = GetType().Assembly.FullName;
+            MigrationsAssembly = GetType().Assembly;
         }
 
         public async Task ExecuteTransactionAsync(Func<IMongoDatabase, Task> action)
