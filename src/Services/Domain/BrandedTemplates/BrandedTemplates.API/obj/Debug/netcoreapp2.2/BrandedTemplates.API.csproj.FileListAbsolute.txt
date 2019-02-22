@@ -41,3 +41,6 @@ D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\o
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\obj\Debug\netcoreapp2.2\BrandedTemplates.API.csproj.CopyComplete
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\obj\Debug\netcoreapp2.2\BrandedTemplates.API.dll
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\obj\Debug\netcoreapp2.2\BrandedTemplates.API.pdb
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EntityFramework.dll
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EntityFramework.dll
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EntityFramework.pdb

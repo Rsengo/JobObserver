@@ -2,12 +2,11 @@
 using Microsoft.AspNetCore.Mvc;
 using BrandedTemplates.Db;
 using BrandedTemplates.Db.Models;
-using BuildingBlocks.MongoDB;
-using BuildingBlocks.Extensions.MongoDB;
-using MongoDB.Driver;
 
 namespace BrandedTemplates.API.Controllers
 {
+    using System.Linq;
+
     using AutoMapper;
 
     using BrandedTemplates.Dto.Models;
@@ -38,19 +37,39 @@ namespace BrandedTemplates.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Save(DtoBrandedTemplate dto)
         {
-           
+            var template = Mapper.Map<BrandedTemplate>(dto);
+            _context.BrandedTemplates.Add(template);
+            await _context.SaveChangesAsync()
+                .ConfigureAwait(false);
+
+            return Ok(template.Id);
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(DtoBrandedTemplate dto, long id)
         {
-            
+            var template = Mapper.Map<BrandedTemplate>(dto);
+            template.Id = id;
+
+            await _context.BrandedTemplates
+                .Where(x => x.Id == id)
+                .UpdateFromQueryAsync(x => template)
+                .ConfigureAwait(false);
+
+            return Ok();
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(long id)
         {
-            
+            await _context.BrandedTemplates
+                .Where(x => x.Id == id)
+                .DeleteFromQueryAsync()
+                .ConfigureAwait(false);
+            await _context.SaveChangesAsync()
+                .ConfigureAwait(false);
+
+            return Ok();
         }
     }
 }
