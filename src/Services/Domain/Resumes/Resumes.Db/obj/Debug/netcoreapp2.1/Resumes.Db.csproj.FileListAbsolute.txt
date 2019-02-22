@@ -2,3 +2,12 @@ C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Resumes\Resumes.Db\obj\De
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\Resumes.Db.csproj.CoreCompileInputs.cache
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\Resumes.Db.AssemblyInfoInputs.cache
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\Resumes.Db.AssemblyInfo.cs
+C:\JobObserver1\src\Services\Domain\Resumes\Resumes.Db\bin\Debug\netcoreapp2.1\Resumes.Db.deps.json
+C:\JobObserver1\src\Services\Domain\Resumes\Resumes.Db\bin\Debug\netcoreapp2.1\Resumes.Db.dll
+C:\JobObserver1\src\Services\Domain\Resumes\Resumes.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.dll
+C:\JobObserver1\src\Services\Domain\Resumes\Resumes.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.pdb
+C:\JobObserver1\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\Resumes.Db.csprojAssemblyReference.cache
+C:\JobObserver1\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\Resumes.Db.csproj.CoreCompileInputs.cache
+C:\JobObserver1\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\Resumes.Db.AssemblyInfoInputs.cache
+C:\JobObserver1\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\Resumes.Db.AssemblyInfo.cs
+C:\JobObserver1\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\Resumes.Db.csproj.CopyComplete

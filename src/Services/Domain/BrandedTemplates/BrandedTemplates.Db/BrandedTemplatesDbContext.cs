@@ -6,7 +6,8 @@ namespace BrandedTemplates.Db
 {
     public class BrandedTemplatesDbContext: DbContext
     {
-        public BrandedTemplatesDbContext(DbContextOptions<BrandedTemplatesDbContext> options) : base(options)
+        public BrandedTemplatesDbContext(DbContextOptions<BrandedTemplatesDbContext> options) : 
+            base(options)
         {
         }
 

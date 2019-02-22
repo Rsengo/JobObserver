@@ -1,0 +1,9 @@
+C:\JobObserver1\src\Services\Integration\Dictionaries\Dictionaries.Db\bin\Debug\netcoreapp2.1\Dictionaries.Db.deps.json
+C:\JobObserver1\src\Services\Integration\Dictionaries\Dictionaries.Db\bin\Debug\netcoreapp2.1\Dictionaries.Db.dll
+C:\JobObserver1\src\Services\Integration\Dictionaries\Dictionaries.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.dll
+C:\JobObserver1\src\Services\Integration\Dictionaries\Dictionaries.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.pdb
+C:\JobObserver1\src\Services\Integration\Dictionaries\Dictionaries.Db\obj\Debug\netcoreapp2.1\Dictionaries.Db.csprojAssemblyReference.cache
+C:\JobObserver1\src\Services\Integration\Dictionaries\Dictionaries.Db\obj\Debug\netcoreapp2.1\Dictionaries.Db.csproj.CoreCompileInputs.cache
+C:\JobObserver1\src\Services\Integration\Dictionaries\Dictionaries.Db\obj\Debug\netcoreapp2.1\Dictionaries.Db.AssemblyInfoInputs.cache
+C:\JobObserver1\src\Services\Integration\Dictionaries\Dictionaries.Db\obj\Debug\netcoreapp2.1\Dictionaries.Db.AssemblyInfo.cs
+C:\JobObserver1\src\Services\Integration\Dictionaries\Dictionaries.Db\obj\Debug\netcoreapp2.1\Dictionaries.Db.csproj.CopyComplete

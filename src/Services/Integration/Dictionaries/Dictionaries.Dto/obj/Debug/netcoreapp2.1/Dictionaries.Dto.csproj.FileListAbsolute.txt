@@ -1,0 +1,5 @@
+C:\JobObserver1\src\Services\Integration\Dictionaries\Dictionaries.Dto\bin\Debug\netcoreapp2.1\BuildingBlocks.DataTransfer.dll
+C:\JobObserver1\src\Services\Integration\Dictionaries\Dictionaries.Dto\obj\Debug\netcoreapp2.1\Dictionaries.Dto.csprojAssemblyReference.cache
+C:\JobObserver1\src\Services\Integration\Dictionaries\Dictionaries.Dto\obj\Debug\netcoreapp2.1\Dictionaries.Dto.csproj.CoreCompileInputs.cache
+C:\JobObserver1\src\Services\Integration\Dictionaries\Dictionaries.Dto\obj\Debug\netcoreapp2.1\Dictionaries.Dto.AssemblyInfoInputs.cache
+C:\JobObserver1\src\Services\Integration\Dictionaries\Dictionaries.Dto\obj\Debug\netcoreapp2.1\Dictionaries.Dto.AssemblyInfo.cs

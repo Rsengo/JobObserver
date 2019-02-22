@@ -13,6 +13,7 @@ namespace BrandedTemplates.Db.Maps
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
             builder.Property(x => x.Name).IsRequired();
             builder.Property(x => x.Text).IsRequired();
+
             builder.ToTable("BRANDED_TEMPLATES");
         }
     }

@@ -5,7 +5,7 @@ namespace Dictionaries.Db.Models.Driving
     /// <summary>
     ///     Типы водительских прав
     /// </summary>
-    public class DriverLicenseType : RelationalDictionary
+    public class DrivingLicenseType : RelationalDictionary
     {
     }
 }

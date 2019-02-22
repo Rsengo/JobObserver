@@ -1,0 +1,7 @@
+C:\JobObserver1\src\Services\Integration\Dictionaries\Dictionaries.EventBus\bin\Debug\netcoreapp2.1\BuildingBlocks.DataTransfer.dll
+C:\JobObserver1\src\Services\Integration\Dictionaries\Dictionaries.EventBus\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.dll
+C:\JobObserver1\src\Services\Integration\Dictionaries\Dictionaries.EventBus\bin\Debug\netcoreapp2.1\Dictionaries.Dto.dll
+C:\JobObserver1\src\Services\Integration\Dictionaries\Dictionaries.EventBus\obj\Debug\netcoreapp2.1\Dictionaries.EventBus.csprojAssemblyReference.cache
+C:\JobObserver1\src\Services\Integration\Dictionaries\Dictionaries.EventBus\obj\Debug\netcoreapp2.1\Dictionaries.EventBus.csproj.CoreCompileInputs.cache
+C:\JobObserver1\src\Services\Integration\Dictionaries\Dictionaries.EventBus\obj\Debug\netcoreapp2.1\Dictionaries.EventBus.AssemblyInfoInputs.cache
+C:\JobObserver1\src\Services\Integration\Dictionaries\Dictionaries.EventBus\obj\Debug\netcoreapp2.1\Dictionaries.EventBus.AssemblyInfo.cs

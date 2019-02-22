@@ -10,3 +10,12 @@ C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Negotiations\Negotiations
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Negotiations\Negotiations.Db\obj\Debug\netcoreapp2.1\Negotiations.Db.csproj.CopyComplete
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Negotiations\Negotiations.Db\obj\Debug\netcoreapp2.1\Negotiations.Db.dll
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Negotiations\Negotiations.Db\obj\Debug\netcoreapp2.1\Negotiations.Db.pdb
+C:\JobObserver1\src\Services\Domain\Negotiations\Negotiations.Db\bin\Debug\netcoreapp2.1\Negotiations.Db.deps.json
+C:\JobObserver1\src\Services\Domain\Negotiations\Negotiations.Db\bin\Debug\netcoreapp2.1\Negotiations.Db.dll
+C:\JobObserver1\src\Services\Domain\Negotiations\Negotiations.Db\bin\Debug\netcoreapp2.1\Negotiations.Db.pdb
+C:\JobObserver1\src\Services\Domain\Negotiations\Negotiations.Db\obj\Debug\netcoreapp2.1\Negotiations.Db.csprojAssemblyReference.cache
+C:\JobObserver1\src\Services\Domain\Negotiations\Negotiations.Db\obj\Debug\netcoreapp2.1\Negotiations.Db.csproj.CoreCompileInputs.cache
+C:\JobObserver1\src\Services\Domain\Negotiations\Negotiations.Db\obj\Debug\netcoreapp2.1\Negotiations.Db.AssemblyInfoInputs.cache
+C:\JobObserver1\src\Services\Domain\Negotiations\Negotiations.Db\obj\Debug\netcoreapp2.1\Negotiations.Db.AssemblyInfo.cs
+C:\JobObserver1\src\Services\Domain\Negotiations\Negotiations.Db\obj\Debug\netcoreapp2.1\Negotiations.Db.dll
+C:\JobObserver1\src\Services\Domain\Negotiations\Negotiations.Db\obj\Debug\netcoreapp2.1\Negotiations.Db.pdb

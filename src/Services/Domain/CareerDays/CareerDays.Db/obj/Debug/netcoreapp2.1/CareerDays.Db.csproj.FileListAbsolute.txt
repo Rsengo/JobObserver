@@ -10,3 +10,12 @@ C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\CareerDays\CareerDays.Db\
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\CareerDays\CareerDays.Db\obj\Debug\netcoreapp2.1\CareerDays.Db.csproj.CopyComplete
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\CareerDays\CareerDays.Db\obj\Debug\netcoreapp2.1\CareerDays.Db.dll
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\CareerDays\CareerDays.Db\obj\Debug\netcoreapp2.1\CareerDays.Db.pdb
+C:\JobObserver1\src\Services\Domain\CareerDays\CareerDays.Db\bin\Debug\netcoreapp2.1\CareerDays.Db.deps.json
+C:\JobObserver1\src\Services\Domain\CareerDays\CareerDays.Db\bin\Debug\netcoreapp2.1\CareerDays.Db.dll
+C:\JobObserver1\src\Services\Domain\CareerDays\CareerDays.Db\bin\Debug\netcoreapp2.1\CareerDays.Db.pdb
+C:\JobObserver1\src\Services\Domain\CareerDays\CareerDays.Db\obj\Debug\netcoreapp2.1\CareerDays.Db.csprojAssemblyReference.cache
+C:\JobObserver1\src\Services\Domain\CareerDays\CareerDays.Db\obj\Debug\netcoreapp2.1\CareerDays.Db.csproj.CoreCompileInputs.cache
+C:\JobObserver1\src\Services\Domain\CareerDays\CareerDays.Db\obj\Debug\netcoreapp2.1\CareerDays.Db.AssemblyInfoInputs.cache
+C:\JobObserver1\src\Services\Domain\CareerDays\CareerDays.Db\obj\Debug\netcoreapp2.1\CareerDays.Db.AssemblyInfo.cs
+C:\JobObserver1\src\Services\Domain\CareerDays\CareerDays.Db\obj\Debug\netcoreapp2.1\CareerDays.Db.dll
+C:\JobObserver1\src\Services\Domain\CareerDays\CareerDays.Db\obj\Debug\netcoreapp2.1\CareerDays.Db.pdb

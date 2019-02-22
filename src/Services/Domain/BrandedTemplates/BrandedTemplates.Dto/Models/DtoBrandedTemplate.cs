@@ -1,19 +1,13 @@
-﻿using Newtonsoft.Json;
+﻿using BuildingBlocks.DataTransfer.Models;
+using Newtonsoft.Json;
 
 namespace BrandedTemplates.Dto.Models
 { 
     /// <summary>
     ///     Брендированный шаблон
     /// </summary>
-    public class DtoBrandedTemplate
+    public class DtoBrandedTemplate : DtoEntity
     {
-
-        /// <summary>
-        ///     Id сущности.
-        /// </summary>
-        [JsonProperty("id")]
-        public virtual long Id { get; set; }
-
         /// <summary>
         ///     Название.
         /// </summary>

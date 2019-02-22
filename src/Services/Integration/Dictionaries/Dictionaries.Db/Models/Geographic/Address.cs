@@ -1,4 +1,5 @@
 ﻿using BuildingBlocks.EntityFramework.Models;
+using Dictionaries.Db.Models.Geographic.Metro;
 
 namespace Dictionaries.Db.Models.Geographic
 {

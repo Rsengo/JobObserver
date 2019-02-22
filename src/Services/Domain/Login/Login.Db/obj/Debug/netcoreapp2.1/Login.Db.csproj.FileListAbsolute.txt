@@ -2,3 +2,9 @@ C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Login\Login.Db\obj\Debug\
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Login\Login.Db\obj\Debug\netcoreapp2.1\Login.Db.csproj.CoreCompileInputs.cache
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Login\Login.Db\obj\Debug\netcoreapp2.1\Login.Db.AssemblyInfoInputs.cache
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Login\Login.Db\obj\Debug\netcoreapp2.1\Login.Db.AssemblyInfo.cs
+C:\JobObserver1\src\Services\Domain\Login\Login.Db\bin\Debug\netcoreapp2.1\Login.Db.deps.json
+C:\JobObserver1\src\Services\Domain\Login\Login.Db\bin\Debug\netcoreapp2.1\Login.Db.dll
+C:\JobObserver1\src\Services\Domain\Login\Login.Db\obj\Debug\netcoreapp2.1\Login.Db.csprojAssemblyReference.cache
+C:\JobObserver1\src\Services\Domain\Login\Login.Db\obj\Debug\netcoreapp2.1\Login.Db.csproj.CoreCompileInputs.cache
+C:\JobObserver1\src\Services\Domain\Login\Login.Db\obj\Debug\netcoreapp2.1\Login.Db.AssemblyInfoInputs.cache
+C:\JobObserver1\src\Services\Domain\Login\Login.Db\obj\Debug\netcoreapp2.1\Login.Db.AssemblyInfo.cs

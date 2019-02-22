@@ -129,6 +129,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dictionaries.Db", "src\Serv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrandedTemplates.Dto", "src\Services\Domain\BrandedTemplates\BrandedTemplates.Dto\BrandedTemplates.Dto.csproj", "{A952D1F3-E77A-4978-84FF-7559251F338D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dictionaries.EventBus", "src\Services\Integration\Dictionaries\Dictionaries.EventBus\Dictionaries.EventBus.csproj", "{86A9D849-DC57-4E89-8FAA-8CD7E1C71F5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dictionaries.Dto", "src\Services\Integration\Dictionaries\Dictionaries.Dto\Dictionaries.Dto.csproj", "{A9CE38F9-268C-4EFB-AAB3-EA539A98F8FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataTransfer", "DataTransfer", "{64BD18B2-B89D-4C0D-B6AA-58C04E079066}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.DataTransfer", "src\BuildingBlocks\DataTransfer\BuildingBlocks.DataTransfer\BuildingBlocks.DataTransfer.csproj", "{F0B1F164-2F02-41E7-9AC1-4DF0E41BCB6E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -279,6 +287,18 @@ Global
 		{A952D1F3-E77A-4978-84FF-7559251F338D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A952D1F3-E77A-4978-84FF-7559251F338D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A952D1F3-E77A-4978-84FF-7559251F338D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86A9D849-DC57-4E89-8FAA-8CD7E1C71F5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86A9D849-DC57-4E89-8FAA-8CD7E1C71F5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86A9D849-DC57-4E89-8FAA-8CD7E1C71F5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86A9D849-DC57-4E89-8FAA-8CD7E1C71F5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9CE38F9-268C-4EFB-AAB3-EA539A98F8FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9CE38F9-268C-4EFB-AAB3-EA539A98F8FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9CE38F9-268C-4EFB-AAB3-EA539A98F8FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9CE38F9-268C-4EFB-AAB3-EA539A98F8FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0B1F164-2F02-41E7-9AC1-4DF0E41BCB6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0B1F164-2F02-41E7-9AC1-4DF0E41BCB6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0B1F164-2F02-41E7-9AC1-4DF0E41BCB6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0B1F164-2F02-41E7-9AC1-4DF0E41BCB6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -346,6 +366,10 @@ Global
 		{3477C6A2-73AF-4F43-9594-FC653EE0BBDA} = {3E9DC612-FDFD-46B7-A882-9A4973873F32}
 		{FCE4508B-5C4B-4BDB-8D45-8C70EC279FD6} = {3E9DC612-FDFD-46B7-A882-9A4973873F32}
 		{A952D1F3-E77A-4978-84FF-7559251F338D} = {F7204CEE-905A-4472-898E-A12E489E374F}
+		{86A9D849-DC57-4E89-8FAA-8CD7E1C71F5A} = {3E9DC612-FDFD-46B7-A882-9A4973873F32}
+		{A9CE38F9-268C-4EFB-AAB3-EA539A98F8FA} = {3E9DC612-FDFD-46B7-A882-9A4973873F32}
+		{64BD18B2-B89D-4C0D-B6AA-58C04E079066} = {5A4D0324-09EE-4104-814B-9FA4D11E321B}
+		{F0B1F164-2F02-41E7-9AC1-4DF0E41BCB6E} = {64BD18B2-B89D-4C0D-B6AA-58C04E079066}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EFC2B589-7633-4F4E-A0D8-0509C36A83A5}

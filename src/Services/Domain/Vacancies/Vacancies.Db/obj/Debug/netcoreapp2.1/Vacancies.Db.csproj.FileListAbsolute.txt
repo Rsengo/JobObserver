@@ -10,3 +10,15 @@ C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Vacancies\Vacancies.Db\ob
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Vacancies\Vacancies.Db\obj\Debug\netcoreapp2.1\Vacancies.Db.csproj.CopyComplete
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Vacancies\Vacancies.Db\obj\Debug\netcoreapp2.1\Vacancies.Db.dll
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Vacancies\Vacancies.Db\obj\Debug\netcoreapp2.1\Vacancies.Db.pdb
+C:\JobObserver1\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\Vacancies.Db.deps.json
+C:\JobObserver1\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\Vacancies.Db.dll
+C:\JobObserver1\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\Vacancies.Db.pdb
+C:\JobObserver1\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.dll
+C:\JobObserver1\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.pdb
+C:\JobObserver1\src\Services\Domain\Vacancies\Vacancies.Db\obj\Debug\netcoreapp2.1\Vacancies.Db.csprojAssemblyReference.cache
+C:\JobObserver1\src\Services\Domain\Vacancies\Vacancies.Db\obj\Debug\netcoreapp2.1\Vacancies.Db.csproj.CoreCompileInputs.cache
+C:\JobObserver1\src\Services\Domain\Vacancies\Vacancies.Db\obj\Debug\netcoreapp2.1\Vacancies.Db.AssemblyInfoInputs.cache
+C:\JobObserver1\src\Services\Domain\Vacancies\Vacancies.Db\obj\Debug\netcoreapp2.1\Vacancies.Db.AssemblyInfo.cs
+C:\JobObserver1\src\Services\Domain\Vacancies\Vacancies.Db\obj\Debug\netcoreapp2.1\Vacancies.Db.csproj.CopyComplete
+C:\JobObserver1\src\Services\Domain\Vacancies\Vacancies.Db\obj\Debug\netcoreapp2.1\Vacancies.Db.dll
+C:\JobObserver1\src\Services\Domain\Vacancies\Vacancies.Db\obj\Debug\netcoreapp2.1\Vacancies.Db.pdb

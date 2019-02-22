@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\BuildingBlocks\AutoMapper\BuildingBlocks.AutoMapper\BuildingBlocks.AutoMapper.csproj" />
+    <ProjectReference Include="..\..\..\..\BuildingBlocks\DataTransfer\BuildingBlocks.DataTransfer\BuildingBlocks.DataTransfer.csproj" />
     <ProjectReference Include="..\BrandedTemplates.Db\BrandedTemplates.Db.csproj" />
   </ItemGroup>
 
