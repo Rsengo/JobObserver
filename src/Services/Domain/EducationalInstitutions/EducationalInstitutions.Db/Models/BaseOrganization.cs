@@ -19,19 +19,14 @@ namespace EducationalInstitutions.Db.Models
         public virtual string Description { get; set; }
 
         /// <summary>
-        /// Снинонимичные названия
-        /// </summary>
-        public virtual ICollection<string> Synonyms { get; set; }
-
-        /// <summary>
         ///     Id Брендированного описания
         /// </summary>
         public virtual long? BrandedDescriptionId { get; set; }
 
         /// <summary>
-        ///     Id Логотипов
+        ///     Логотип
         /// </summary>
-        public virtual long? LogoId { get; set; }
+        public virtual string LogoUrl { get; set; }
 
         /// <summary>
         ///     Сайт компании

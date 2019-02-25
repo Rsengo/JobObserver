@@ -30,9 +30,9 @@ namespace Employers.Db.Models
         public virtual long? BrandedDescriptionId { get; set; }
 
         /// <summary>
-        ///     Id Логотипов
+        ///     Логотип
         /// </summary>
-        public virtual long? LogoId { get; set; }
+        public virtual string LogoUrl { get; set; }
 
         /// <summary>
         ///     Сайт компании

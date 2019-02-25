@@ -1,5 +1,6 @@
 ﻿using System;
 using BuildingBlocks.EntityFramework.Models;
+using CareerDays.Db.Models.Geographic;
 
 namespace CareerDays.Db.Models
 {
@@ -26,11 +27,21 @@ namespace CareerDays.Db.Models
         /// <summary>
         ///     Id Организации
         /// </summary>
-        public virtual long? EmployerId { get; set; }
+        public virtual long EmployerId { get; set; }
 
         /// <summary>
         ///     Образовательное учреждение
         /// </summary>
-        public virtual long EducationalInstitutionId { get; set; }
+        public virtual long? EducationalInstitutionId { get; set; }
+
+        /// <summary>
+        ///     Адрес.
+        /// </summary>
+        public virtual Address Address { get; set; }
+
+        /// <summary>
+        ///     Id адреса.
+        /// </summary>
+        public virtual long AddressId { get; set; }
     }
 }

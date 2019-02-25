@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using BuildingBlocks.EntityFramework.Models;
 using Vacancies.Db.Models.Driving;
 using Vacancies.Db.Models.Employments;
+using Vacancies.Db.Models.Geographic;
 using Vacancies.Db.Models.Languages;
 using Vacancies.Db.Models.Salaries;
 using Vacancies.Db.Models.Schedules;
@@ -50,9 +51,14 @@ namespace Vacancies.Db.Models
         public virtual bool AcceptHandicapped { get; set; }
 
         /// <summary>
-        ///     Id Адресса
+        ///     Id Адреса
         /// </summary>
         public virtual long? AddressId { get; set; }
+
+        /// <summary>
+        ///     Адрес.
+        /// </summary>
+        public virtual Address Address { get; set; }
 
         /// <summary>
         ///     Id Отделения

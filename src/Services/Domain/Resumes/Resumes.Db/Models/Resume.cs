@@ -67,7 +67,7 @@ namespace Resumes.Db.Models
         /// <summary>
         ///     Фото
         /// </summary>
-        public virtual Photo Photo { get; set; }
+        public virtual string PhotoUrl { get; set; }
 
         /// <summary>
         ///     Id Фото

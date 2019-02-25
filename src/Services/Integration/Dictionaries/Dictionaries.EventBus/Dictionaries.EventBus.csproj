@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\BuildingBlocks\EventBus\BuildingBlocks.EventBus.Synchronization\BuildingBlocks.EventBus.Synchronization.csproj" />
     <ProjectReference Include="..\..\..\..\BuildingBlocks\EventBus\BuildingBlocks.EventBus\BuildingBlocks.EventBus.csproj" />
     <ProjectReference Include="..\Dictionaries.Dto\Dictionaries.Dto.csproj" />
   </ItemGroup>

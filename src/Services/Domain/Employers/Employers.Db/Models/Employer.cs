@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Employers.Db.Models.Geographic;
 
 namespace Employers.Db.Models
 {
@@ -8,14 +9,11 @@ namespace Employers.Db.Models
     public class Employer : BaseOrganization
     {
         /// <summary>
-        ///     Подтвержден администратором
-        /// </summary>
-        public virtual bool Trusted { get; set; }
-
-        /// <summary>
         ///     Id Города
         /// </summary>
         public virtual long? AreaId { get; set; }
+
+        public virtual Area Area { get; set; }
 
         /// <summary>
         ///     Тип работодателя (Кадровое агентство, рекрутер, прямой работодатель и т.д.)

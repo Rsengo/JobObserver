@@ -45,8 +45,6 @@ namespace Dictionaries.Db
             builder.ApplyConfiguration(new EmploymentMap());
             builder.ApplyConfiguration(new LineMap());
             builder.ApplyConfiguration(new MetroMap());
-            builder.ApplyConfiguration(new StationMap());
-            builder.ApplyConfiguration(new AddressMap());
             builder.ApplyConfiguration(new AreaMap());
             builder.ApplyConfiguration(new IndustryMap());
             builder.ApplyConfiguration(new LanguageLevelMap());
@@ -76,8 +74,6 @@ namespace Dictionaries.Db
         public DbSet<Metro> Metro { get; set; }
 
         public DbSet<Station> Stations { get; set; }
-
-        public DbSet<Address> Addresses { get; set; }
 
         public DbSet<Area> Areas { get; set; }
 
