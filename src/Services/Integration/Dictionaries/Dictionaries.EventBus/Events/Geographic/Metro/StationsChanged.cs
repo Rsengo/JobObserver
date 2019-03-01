@@ -7,7 +7,7 @@ using Dictionaries.Dto.Models.Geographic.Metro;
 namespace Dictionaries.EventBus.Events.Geographic.Metro
 {
     public class StationsChanged : 
-        DictionaryChangedIntegrationEvent<DtoStation>
+        EntityChangedIntegrationEvent<DtoStation>
     {
     }
 }

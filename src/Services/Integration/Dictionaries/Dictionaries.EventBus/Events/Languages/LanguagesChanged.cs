@@ -7,7 +7,7 @@ using Dictionaries.Dto.Models.Languages;
 namespace Dictionaries.EventBus.Events.Languages
 {
     public class LanguagesChanged : 
-        DictionaryChangedIntegrationEvent<DtoLanguage>
+        EntityChangedIntegrationEvent<DtoLanguage>
     {
     }
 }

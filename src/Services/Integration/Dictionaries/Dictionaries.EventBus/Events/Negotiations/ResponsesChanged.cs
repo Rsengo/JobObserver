@@ -8,7 +8,7 @@ using Dictionaries.Dto.Models.Negotiations;
 namespace Dictionaries.EventBus.Events.Negotiations
 {
     public class ResponsesChanged : 
-        DictionaryChangedIntegrationEvent<DtoResponse>
+        EntityChangedIntegrationEvent<DtoResponse>
     {
     }
 }

@@ -737,11 +737,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\JobObserver1\\src\\BuildingBlocks\\EventBus\\BuildingBlocks.EventBus\\BuildingBlocks.EventBus.csproj",
+      "projectUniqueName": "C:\\JobObserver2\\src\\BuildingBlocks\\EventBus\\BuildingBlocks.EventBus\\BuildingBlocks.EventBus.csproj",
       "projectName": "BuildingBlocks.EventBus",
-      "projectPath": "C:\\JobObserver1\\src\\BuildingBlocks\\EventBus\\BuildingBlocks.EventBus\\BuildingBlocks.EventBus.csproj",
+      "projectPath": "C:\\JobObserver2\\src\\BuildingBlocks\\EventBus\\BuildingBlocks.EventBus\\BuildingBlocks.EventBus.csproj",
       "packagesPath": "C:\\Users\\rseng\\.nuget\\packages\\",
-      "outputPath": "C:\\JobObserver1\\src\\BuildingBlocks\\EventBus\\BuildingBlocks.EventBus\\obj\\",
+      "outputPath": "C:\\JobObserver2\\src\\BuildingBlocks\\EventBus\\BuildingBlocks.EventBus\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

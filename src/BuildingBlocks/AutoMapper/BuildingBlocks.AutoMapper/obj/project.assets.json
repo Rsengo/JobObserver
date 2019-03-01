@@ -1437,11 +1437,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\JobObserver1\\src\\BuildingBlocks\\AutoMapper\\BuildingBlocks.AutoMapper\\BuildingBlocks.AutoMapper.csproj",
+      "projectUniqueName": "C:\\JobObserver2\\src\\BuildingBlocks\\AutoMapper\\BuildingBlocks.AutoMapper\\BuildingBlocks.AutoMapper.csproj",
       "projectName": "BuildingBlocks.AutoMapper",
-      "projectPath": "C:\\JobObserver1\\src\\BuildingBlocks\\AutoMapper\\BuildingBlocks.AutoMapper\\BuildingBlocks.AutoMapper.csproj",
+      "projectPath": "C:\\JobObserver2\\src\\BuildingBlocks\\AutoMapper\\BuildingBlocks.AutoMapper\\BuildingBlocks.AutoMapper.csproj",
       "packagesPath": "C:\\Users\\rseng\\.nuget\\packages\\",
-      "outputPath": "C:\\JobObserver1\\src\\BuildingBlocks\\AutoMapper\\BuildingBlocks.AutoMapper\\obj\\",
+      "outputPath": "C:\\JobObserver2\\src\\BuildingBlocks\\AutoMapper\\BuildingBlocks.AutoMapper\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1460,8 +1460,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\JobObserver1\\src\\BuildingBlocks\\Assemblies\\JobObserver.Extensions.Assembly\\BuildingBlocks.Extensions.Assemblies.csproj": {
-              "projectPath": "C:\\JobObserver1\\src\\BuildingBlocks\\Assemblies\\JobObserver.Extensions.Assembly\\BuildingBlocks.Extensions.Assemblies.csproj"
+            "C:\\JobObserver2\\src\\BuildingBlocks\\Assemblies\\JobObserver.Extensions.Assembly\\BuildingBlocks.Extensions.Assemblies.csproj": {
+              "projectPath": "C:\\JobObserver2\\src\\BuildingBlocks\\Assemblies\\JobObserver.Extensions.Assembly\\BuildingBlocks.Extensions.Assemblies.csproj"
             }
           }
         }

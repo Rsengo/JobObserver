@@ -21,6 +21,8 @@ namespace CareerDays.Db
             builder.ApplyConfiguration(new StationMap());
             builder.ApplyConfiguration(new AreaMap());
             builder.ApplyConfiguration(new AddressMap());
+            builder.ApplyConfiguration(new EmployerMap());
+            builder.ApplyConfiguration(new EducationalInstitutionMap());
 
             base.OnModelCreating(builder);
         }
@@ -36,5 +38,9 @@ namespace CareerDays.Db
         public DbSet<Area> Areas { get; set; }
 
         public DbSet<Address> Addresses { get; set; }
+
+        public DbSet<Employer> Employers { get; set; }
+
+        public DbSet<EducationalInstitution> EducationalInstitutions { get; set; }
     }
 }

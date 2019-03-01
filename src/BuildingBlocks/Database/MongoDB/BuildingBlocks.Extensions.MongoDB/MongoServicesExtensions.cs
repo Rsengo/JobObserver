@@ -1,5 +1,5 @@
 ﻿using System;
-using BuildingBlocks.Extensions.MongoDB.builders;
+using BuildingBlocks.Extensions.MongoDB.Builders;
 using BuildingBlocks.MongoDB;
 using Microsoft.Extensions.DependencyInjection;
 using MongoDB.Driver;

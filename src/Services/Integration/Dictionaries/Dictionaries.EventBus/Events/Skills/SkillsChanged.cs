@@ -9,7 +9,7 @@ using Dictionaries.Dto.Models.Skills;
 namespace Dictionaries.EventBus.Events.Skills
 {
     public class SkillsChanged : 
-        DictionaryChangedIntegrationEvent<DtoSkill>
+        EntityChangedIntegrationEvent<DtoSkill>
     {
     }
 }

@@ -30,9 +30,19 @@ namespace CareerDays.Db.Models
         public virtual long EmployerId { get; set; }
 
         /// <summary>
-        ///     Образовательное учреждение
+        ///     Организация.   
+        /// </summary>
+        public virtual Employer Employer { get; set; }
+
+        /// <summary>
+        ///     Образовательное учреждение Id
         /// </summary>
         public virtual long? EducationalInstitutionId { get; set; }
+
+        /// <summary>
+        ///     Образовательное учреждение.
+        /// </summary>
+        public virtual EducationalInstitution EducationalInstitution { get; set; }
 
         /// <summary>
         ///     Адрес.

@@ -1,7 +1,7 @@
 ﻿using System;
 using BuildingBlocks.MongoDB;
 using BuildingBlocks.MongoDB.Migration;
-using global::MongoDB.Driver;
+using MongoDB.Driver;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Polly;

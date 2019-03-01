@@ -5390,11 +5390,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\JobObserver1\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.MongoDB.Migration\\BuildingBlocks.MongoDB.Migration.csproj",
+      "projectUniqueName": "C:\\JobObserver2\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.MongoDB.Migration\\BuildingBlocks.MongoDB.Migration.csproj",
       "projectName": "BuildingBlocks.MongoDB.Migration",
-      "projectPath": "C:\\JobObserver1\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.MongoDB.Migration\\BuildingBlocks.MongoDB.Migration.csproj",
+      "projectPath": "C:\\JobObserver2\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.MongoDB.Migration\\BuildingBlocks.MongoDB.Migration.csproj",
       "packagesPath": "C:\\Users\\rseng\\.nuget\\packages\\",
-      "outputPath": "C:\\JobObserver1\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.MongoDB.Migration\\obj\\",
+      "outputPath": "C:\\JobObserver2\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.MongoDB.Migration\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5413,8 +5413,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\JobObserver1\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.MongoDB\\BuildingBlocks.MongoDB.csproj": {
-              "projectPath": "C:\\JobObserver1\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.MongoDB\\BuildingBlocks.MongoDB.csproj"
+            "C:\\JobObserver2\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.MongoDB\\BuildingBlocks.MongoDB.csproj": {
+              "projectPath": "C:\\JobObserver2\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.MongoDB\\BuildingBlocks.MongoDB.csproj"
             }
           }
         }

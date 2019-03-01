@@ -12,3 +12,17 @@ C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Employers\Employers.API\o
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Employers\Employers.API\obj\Debug\netcoreapp2.2\Employers.API.RazorTargetAssemblyInfo.cache
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Employers\Employers.API\obj\Debug\netcoreapp2.2\Employers.API.dll
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Employers\Employers.API\obj\Debug\netcoreapp2.2\Employers.API.pdb
+C:\JobObserver2\src\Services\Domain\Employers\Employers.API\bin\Debug\netcoreapp2.2\Employers.API.deps.json
+C:\JobObserver2\src\Services\Domain\Employers\Employers.API\bin\Debug\netcoreapp2.2\Employers.API.runtimeconfig.json
+C:\JobObserver2\src\Services\Domain\Employers\Employers.API\bin\Debug\netcoreapp2.2\Employers.API.runtimeconfig.dev.json
+C:\JobObserver2\src\Services\Domain\Employers\Employers.API\bin\Debug\netcoreapp2.2\Employers.API.dll
+C:\JobObserver2\src\Services\Domain\Employers\Employers.API\bin\Debug\netcoreapp2.2\Employers.API.pdb
+C:\JobObserver2\src\Services\Domain\Employers\Employers.API\obj\Debug\netcoreapp2.2\Employers.API.csprojAssemblyReference.cache
+C:\JobObserver2\src\Services\Domain\Employers\Employers.API\obj\Debug\netcoreapp2.2\Employers.API.csproj.CoreCompileInputs.cache
+C:\JobObserver2\src\Services\Domain\Employers\Employers.API\obj\Debug\netcoreapp2.2\Employers.API.RazorAssemblyInfo.cache
+C:\JobObserver2\src\Services\Domain\Employers\Employers.API\obj\Debug\netcoreapp2.2\Employers.API.RazorAssemblyInfo.cs
+C:\JobObserver2\src\Services\Domain\Employers\Employers.API\obj\Debug\netcoreapp2.2\Employers.API.AssemblyInfoInputs.cache
+C:\JobObserver2\src\Services\Domain\Employers\Employers.API\obj\Debug\netcoreapp2.2\Employers.API.AssemblyInfo.cs
+C:\JobObserver2\src\Services\Domain\Employers\Employers.API\obj\Debug\netcoreapp2.2\Employers.API.RazorTargetAssemblyInfo.cache
+C:\JobObserver2\src\Services\Domain\Employers\Employers.API\obj\Debug\netcoreapp2.2\Employers.API.dll
+C:\JobObserver2\src\Services\Domain\Employers\Employers.API\obj\Debug\netcoreapp2.2\Employers.API.pdb

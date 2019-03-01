@@ -4742,11 +4742,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\JobObserver1\\src\\BuildingBlocks\\EventBus\\BuildingBlocks.EventBus.RabbitMQ\\BuildingBlocks.EventBus.RabbitMQ.csproj",
+      "projectUniqueName": "C:\\JobObserver2\\src\\BuildingBlocks\\EventBus\\BuildingBlocks.EventBus.RabbitMQ\\BuildingBlocks.EventBus.RabbitMQ.csproj",
       "projectName": "BuildingBlocks.EventBus.RabbitMQ",
-      "projectPath": "C:\\JobObserver1\\src\\BuildingBlocks\\EventBus\\BuildingBlocks.EventBus.RabbitMQ\\BuildingBlocks.EventBus.RabbitMQ.csproj",
+      "projectPath": "C:\\JobObserver2\\src\\BuildingBlocks\\EventBus\\BuildingBlocks.EventBus.RabbitMQ\\BuildingBlocks.EventBus.RabbitMQ.csproj",
       "packagesPath": "C:\\Users\\rseng\\.nuget\\packages\\",
-      "outputPath": "C:\\JobObserver1\\src\\BuildingBlocks\\EventBus\\BuildingBlocks.EventBus.RabbitMQ\\obj\\",
+      "outputPath": "C:\\JobObserver2\\src\\BuildingBlocks\\EventBus\\BuildingBlocks.EventBus.RabbitMQ\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4765,8 +4765,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\JobObserver1\\src\\BuildingBlocks\\EventBus\\BuildingBlocks.EventBus\\BuildingBlocks.EventBus.csproj": {
-              "projectPath": "C:\\JobObserver1\\src\\BuildingBlocks\\EventBus\\BuildingBlocks.EventBus\\BuildingBlocks.EventBus.csproj"
+            "C:\\JobObserver2\\src\\BuildingBlocks\\EventBus\\BuildingBlocks.EventBus\\BuildingBlocks.EventBus.csproj": {
+              "projectPath": "C:\\JobObserver2\\src\\BuildingBlocks\\EventBus\\BuildingBlocks.EventBus\\BuildingBlocks.EventBus.csproj"
             }
           }
         }

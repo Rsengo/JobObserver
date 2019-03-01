@@ -1,26 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using BuildingBlocks.Extensions.MongoDB;
+using System.Reflection;
+using Microsoft.EntityFrameworkCore;
+using BuildingBlocks.Extensions.AutoMapper;
 using BrandedTemplates.Db;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace BrandedTemplates.API
 {
-    using System.Reflection;
-
-    using BuildingBlocks.AutoMapper;
-
-    using Microsoft.EntityFrameworkCore;
-
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -36,7 +27,7 @@ namespace BrandedTemplates.API
             services.AddDbContext<BrandedTemplatesDbContext>(opt =>
             {
                 opt.UseSqlServer(
-                    Configuration.GetConnectionString("BrandedTemplateConnstring"),
+                    Configuration["ConnectionString"],
                     sqlOptions =>
                     {
                         sqlOptions.MigrationsAssembly(typeof(BrandedTemplatesDbContext)
@@ -51,7 +42,21 @@ namespace BrandedTemplates.API
                     });
             });
 
-            AutoMapperConfigurator.Instance.Initialize();
+            services.AddAutoMapper(builder =>
+            {
+                builder.RootAssembly = GetType().Assembly;
+            });
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc(Configuration["SwaggerDocName"], 
+                    new Info
+                    {
+                        Title = Configuration["SwaggerDocTitle"],
+                        Version = Configuration["SwaggerDocVersion"]
+                    });
+            });
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -70,6 +75,14 @@ namespace BrandedTemplates.API
 
             app.UseHttpsRedirection();
             app.UseMvc();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint(
+                    Configuration["SwaggerEndpointUrl"], 
+                    Configuration["SwaggerEndpointName"]);
+            });
         }
     }
 }

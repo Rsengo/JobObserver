@@ -74,9 +74,11 @@ namespace BuildingBlocks.AutoMapper
         /// <summary>
         /// Инициализация маппингов
         /// </summary>
-        public void Initialize()
+        public void Initialize(Assembly rootAssembly = null)
         {
-            var callingAssembly = Assembly.GetCallingAssembly();
+            var callingAssembly = rootAssembly == null 
+                ? Assembly.GetCallingAssembly() 
+                : rootAssembly;
             var config = CreateConfig(callingAssembly);
             Mapper.Initialize(config);
         }

@@ -12,3 +12,17 @@ C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.RazorTargetAssemblyInfo.cache
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.dll
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.pdb
+C:\JobObserver2\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\Login.API.deps.json
+C:\JobObserver2\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\Login.API.runtimeconfig.json
+C:\JobObserver2\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\Login.API.runtimeconfig.dev.json
+C:\JobObserver2\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\Login.API.dll
+C:\JobObserver2\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\Login.API.pdb
+C:\JobObserver2\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.csprojAssemblyReference.cache
+C:\JobObserver2\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.csproj.CoreCompileInputs.cache
+C:\JobObserver2\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.RazorAssemblyInfo.cache
+C:\JobObserver2\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.RazorAssemblyInfo.cs
+C:\JobObserver2\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.AssemblyInfoInputs.cache
+C:\JobObserver2\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.AssemblyInfo.cs
+C:\JobObserver2\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.RazorTargetAssemblyInfo.cache
+C:\JobObserver2\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.dll
+C:\JobObserver2\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.pdb

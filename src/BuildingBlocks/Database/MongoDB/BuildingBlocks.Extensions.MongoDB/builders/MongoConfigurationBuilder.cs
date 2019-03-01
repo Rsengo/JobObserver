@@ -4,7 +4,7 @@ using System.Reflection;
 using System.Text;
 using MongoDB.Driver;
 
-namespace BuildingBlocks.Extensions.MongoDB.builders
+namespace BuildingBlocks.Extensions.MongoDB.Builders
 {
     public sealed class MongoConfigurationBuilder
     {

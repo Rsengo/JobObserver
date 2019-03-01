@@ -3677,11 +3677,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\JobObserver1\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.Extensions.EntityFramework\\BuildingBlocks.Extensions.EntityFramework.csproj",
+      "projectUniqueName": "C:\\JobObserver2\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.Extensions.EntityFramework\\BuildingBlocks.Extensions.EntityFramework.csproj",
       "projectName": "BuildingBlocks.Extensions.EntityFramework",
-      "projectPath": "C:\\JobObserver1\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.Extensions.EntityFramework\\BuildingBlocks.Extensions.EntityFramework.csproj",
+      "projectPath": "C:\\JobObserver2\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.Extensions.EntityFramework\\BuildingBlocks.Extensions.EntityFramework.csproj",
       "packagesPath": "C:\\Users\\rseng\\.nuget\\packages\\",
-      "outputPath": "C:\\JobObserver1\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.Extensions.EntityFramework\\obj\\",
+      "outputPath": "C:\\JobObserver2\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.Extensions.EntityFramework\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

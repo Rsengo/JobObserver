@@ -688,11 +688,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\JobObserver1\\src\\BuildingBlocks\\Assemblies\\JobObserver.Extensions.Assembly\\BuildingBlocks.Extensions.Assemblies.csproj",
+      "projectUniqueName": "C:\\JobObserver2\\src\\BuildingBlocks\\Assemblies\\JobObserver.Extensions.Assembly\\BuildingBlocks.Extensions.Assemblies.csproj",
       "projectName": "BuildingBlocks.Extensions.Assemblies",
-      "projectPath": "C:\\JobObserver1\\src\\BuildingBlocks\\Assemblies\\JobObserver.Extensions.Assembly\\BuildingBlocks.Extensions.Assemblies.csproj",
+      "projectPath": "C:\\JobObserver2\\src\\BuildingBlocks\\Assemblies\\JobObserver.Extensions.Assembly\\BuildingBlocks.Extensions.Assemblies.csproj",
       "packagesPath": "C:\\Users\\rseng\\.nuget\\packages\\",
-      "outputPath": "C:\\JobObserver1\\src\\BuildingBlocks\\Assemblies\\JobObserver.Extensions.Assembly\\obj\\",
+      "outputPath": "C:\\JobObserver2\\src\\BuildingBlocks\\Assemblies\\JobObserver.Extensions.Assembly\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -12,3 +12,17 @@ C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Notifications\Notificatio
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Notifications\Notifications.API\obj\Debug\netcoreapp2.2\Notifications.API.RazorTargetAssemblyInfo.cache
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Notifications\Notifications.API\obj\Debug\netcoreapp2.2\Notifications.API.dll
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\Notifications\Notifications.API\obj\Debug\netcoreapp2.2\Notifications.API.pdb
+C:\JobObserver2\src\Services\Domain\Notifications\Notifications.API\bin\Debug\netcoreapp2.2\Notifications.API.deps.json
+C:\JobObserver2\src\Services\Domain\Notifications\Notifications.API\bin\Debug\netcoreapp2.2\Notifications.API.runtimeconfig.json
+C:\JobObserver2\src\Services\Domain\Notifications\Notifications.API\bin\Debug\netcoreapp2.2\Notifications.API.runtimeconfig.dev.json
+C:\JobObserver2\src\Services\Domain\Notifications\Notifications.API\bin\Debug\netcoreapp2.2\Notifications.API.dll
+C:\JobObserver2\src\Services\Domain\Notifications\Notifications.API\bin\Debug\netcoreapp2.2\Notifications.API.pdb
+C:\JobObserver2\src\Services\Domain\Notifications\Notifications.API\obj\Debug\netcoreapp2.2\Notifications.API.csprojAssemblyReference.cache
+C:\JobObserver2\src\Services\Domain\Notifications\Notifications.API\obj\Debug\netcoreapp2.2\Notifications.API.csproj.CoreCompileInputs.cache
+C:\JobObserver2\src\Services\Domain\Notifications\Notifications.API\obj\Debug\netcoreapp2.2\Notifications.API.RazorAssemblyInfo.cache
+C:\JobObserver2\src\Services\Domain\Notifications\Notifications.API\obj\Debug\netcoreapp2.2\Notifications.API.RazorAssemblyInfo.cs
+C:\JobObserver2\src\Services\Domain\Notifications\Notifications.API\obj\Debug\netcoreapp2.2\Notifications.API.AssemblyInfoInputs.cache
+C:\JobObserver2\src\Services\Domain\Notifications\Notifications.API\obj\Debug\netcoreapp2.2\Notifications.API.AssemblyInfo.cs
+C:\JobObserver2\src\Services\Domain\Notifications\Notifications.API\obj\Debug\netcoreapp2.2\Notifications.API.RazorTargetAssemblyInfo.cache
+C:\JobObserver2\src\Services\Domain\Notifications\Notifications.API\obj\Debug\netcoreapp2.2\Notifications.API.dll
+C:\JobObserver2\src\Services\Domain\Notifications\Notifications.API\obj\Debug\netcoreapp2.2\Notifications.API.pdb

@@ -3479,11 +3479,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\JobObserver1\\src\\Services\\Domain\\Vacancies\\Vacancies.Db\\Vacancies.Db.csproj",
+      "projectUniqueName": "C:\\JobObserver2\\src\\Services\\Domain\\Vacancies\\Vacancies.Db\\Vacancies.Db.csproj",
       "projectName": "Vacancies.Db",
-      "projectPath": "C:\\JobObserver1\\src\\Services\\Domain\\Vacancies\\Vacancies.Db\\Vacancies.Db.csproj",
+      "projectPath": "C:\\JobObserver2\\src\\Services\\Domain\\Vacancies\\Vacancies.Db\\Vacancies.Db.csproj",
       "packagesPath": "C:\\Users\\rseng\\.nuget\\packages\\",
-      "outputPath": "C:\\JobObserver1\\src\\Services\\Domain\\Vacancies\\Vacancies.Db\\obj\\",
+      "outputPath": "C:\\JobObserver2\\src\\Services\\Domain\\Vacancies\\Vacancies.Db\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3502,8 +3502,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\JobObserver1\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.EntityFramework\\BuildingBlocks.EntityFramework.csproj": {
-              "projectPath": "C:\\JobObserver1\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.EntityFramework\\BuildingBlocks.EntityFramework.csproj"
+            "C:\\JobObserver2\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.EntityFramework\\BuildingBlocks.EntityFramework.csproj": {
+              "projectPath": "C:\\JobObserver2\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.EntityFramework\\BuildingBlocks.EntityFramework.csproj"
             }
           }
         }

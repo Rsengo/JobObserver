@@ -32,21 +32,21 @@ namespace CareerDays.Dto.Models
         public long EmployerId { get; set; }
 
         /// <summary>
-        /// Название организации
+        ///     Организация.
         /// </summary>
-        [JsonProperty("employer_name")]
-        public string EmployerName { get; set; }
+        [JsonProperty("employer")]
+        public DtoEmployer Employer { get; set; }
 
         /// <summary>
         /// Id Образовательное учреждение 
         /// </summary>
-        [JsonProperty("educationa_linstitution_id")]
+        [JsonProperty("educational_institution_id")]
         public long? EducationalInstitutionId { get; set; }
 
         /// <summary>
         /// Название образовательного учреждения
         /// </summary>
-        [JsonProperty("educationa_linstitution_name")]
-        public string EducationalInstitutionName { get; set; }
+        [JsonProperty("educational_institution")]
+        public DtoEducationalInstitution EducationalInstitution { get; set; }
     }
 }

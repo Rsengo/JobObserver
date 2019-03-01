@@ -756,11 +756,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\JobObserver1\\src\\Services\\Integration\\Dictionaries\\Dictionaries.Dto\\Dictionaries.Dto.csproj",
+      "projectUniqueName": "C:\\JobObserver2\\src\\Services\\Integration\\Dictionaries\\Dictionaries.Dto\\Dictionaries.Dto.csproj",
       "projectName": "Dictionaries.Dto",
-      "projectPath": "C:\\JobObserver1\\src\\Services\\Integration\\Dictionaries\\Dictionaries.Dto\\Dictionaries.Dto.csproj",
+      "projectPath": "C:\\JobObserver2\\src\\Services\\Integration\\Dictionaries\\Dictionaries.Dto\\Dictionaries.Dto.csproj",
       "packagesPath": "C:\\Users\\rseng\\.nuget\\packages\\",
-      "outputPath": "C:\\JobObserver1\\src\\Services\\Integration\\Dictionaries\\Dictionaries.Dto\\obj\\",
+      "outputPath": "C:\\JobObserver2\\src\\Services\\Integration\\Dictionaries\\Dictionaries.Dto\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -779,8 +779,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\JobObserver1\\src\\BuildingBlocks\\DataTransfer\\BuildingBlocks.DataTransfer\\BuildingBlocks.DataTransfer.csproj": {
-              "projectPath": "C:\\JobObserver1\\src\\BuildingBlocks\\DataTransfer\\BuildingBlocks.DataTransfer\\BuildingBlocks.DataTransfer.csproj"
+            "C:\\JobObserver2\\src\\BuildingBlocks\\DataTransfer\\BuildingBlocks.DataTransfer\\BuildingBlocks.DataTransfer.csproj": {
+              "projectPath": "C:\\JobObserver2\\src\\BuildingBlocks\\DataTransfer\\BuildingBlocks.DataTransfer\\BuildingBlocks.DataTransfer.csproj"
             }
           }
         }

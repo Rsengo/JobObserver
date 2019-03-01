@@ -7,7 +7,7 @@ using Dictionaries.Dto.Models.Driving;
 namespace Dictionaries.EventBus.Events.Driving
 {
     public class DrivingLicenseTypesChanged :
-        DictionaryChangedIntegrationEvent<DtoDrivingLicenseType>
+        EntityChangedIntegrationEvent<DtoDrivingLicenseType>
     {
     }
 }

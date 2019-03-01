@@ -12,3 +12,17 @@ C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\EducationalInstitutions\E
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\obj\Debug\netcoreapp2.2\EducationalInstitutions.API.RazorTargetAssemblyInfo.cache
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\obj\Debug\netcoreapp2.2\EducationalInstitutions.API.dll
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\obj\Debug\netcoreapp2.2\EducationalInstitutions.API.pdb
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\bin\Debug\netcoreapp2.2\EducationalInstitutions.API.deps.json
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\bin\Debug\netcoreapp2.2\EducationalInstitutions.API.runtimeconfig.json
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\bin\Debug\netcoreapp2.2\EducationalInstitutions.API.runtimeconfig.dev.json
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\bin\Debug\netcoreapp2.2\EducationalInstitutions.API.dll
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\bin\Debug\netcoreapp2.2\EducationalInstitutions.API.pdb
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\obj\Debug\netcoreapp2.2\EducationalInstitutions.API.csprojAssemblyReference.cache
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\obj\Debug\netcoreapp2.2\EducationalInstitutions.API.csproj.CoreCompileInputs.cache
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\obj\Debug\netcoreapp2.2\EducationalInstitutions.API.RazorAssemblyInfo.cache
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\obj\Debug\netcoreapp2.2\EducationalInstitutions.API.RazorAssemblyInfo.cs
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\obj\Debug\netcoreapp2.2\EducationalInstitutions.API.AssemblyInfoInputs.cache
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\obj\Debug\netcoreapp2.2\EducationalInstitutions.API.AssemblyInfo.cs
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\obj\Debug\netcoreapp2.2\EducationalInstitutions.API.RazorTargetAssemblyInfo.cache
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\obj\Debug\netcoreapp2.2\EducationalInstitutions.API.dll
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\obj\Debug\netcoreapp2.2\EducationalInstitutions.API.pdb

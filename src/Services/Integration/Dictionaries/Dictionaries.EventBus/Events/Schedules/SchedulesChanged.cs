@@ -9,7 +9,7 @@ using Dictionaries.Dto.Models.Schedules;
 namespace Dictionaries.EventBus.Events.Schedules
 {
     public class SchedulesChanged : 
-        DictionaryChangedIntegrationEvent<DtoSchedule>
+        EntityChangedIntegrationEvent<DtoSchedule>
     {
     }
 }

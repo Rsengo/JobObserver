@@ -11,3 +11,17 @@ C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\CareerDays\CareerDays.API
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\obj\Debug\netcoreapp2.2\CareerDays.API.RazorTargetAssemblyInfo.cache
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\obj\Debug\netcoreapp2.2\CareerDays.API.dll
 C:\Users\rseng\Desktop\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\obj\Debug\netcoreapp2.2\CareerDays.API.pdb
+C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\CareerDays.API.deps.json
+C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\CareerDays.API.runtimeconfig.json
+C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\CareerDays.API.runtimeconfig.dev.json
+C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\CareerDays.API.dll
+C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\CareerDays.API.pdb
+C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\obj\Debug\netcoreapp2.2\CareerDays.API.csprojAssemblyReference.cache
+C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\obj\Debug\netcoreapp2.2\CareerDays.API.csproj.CoreCompileInputs.cache
+C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\obj\Debug\netcoreapp2.2\CareerDays.API.RazorAssemblyInfo.cache
+C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\obj\Debug\netcoreapp2.2\CareerDays.API.RazorAssemblyInfo.cs
+C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\obj\Debug\netcoreapp2.2\CareerDays.API.AssemblyInfoInputs.cache
+C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\obj\Debug\netcoreapp2.2\CareerDays.API.AssemblyInfo.cs
+C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\obj\Debug\netcoreapp2.2\CareerDays.API.RazorTargetAssemblyInfo.cache
+C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\obj\Debug\netcoreapp2.2\CareerDays.API.dll
+C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\obj\Debug\netcoreapp2.2\CareerDays.API.pdb

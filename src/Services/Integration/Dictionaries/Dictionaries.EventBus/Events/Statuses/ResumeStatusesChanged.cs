@@ -10,7 +10,7 @@ using Dictionaries.Dto.Models.Statuses;
 namespace Dictionaries.EventBus.Events.Statuses
 {
     public class ResumeStatusesChanged : 
-        DictionaryChangedIntegrationEvent<DtoResumeStatus>
+        EntityChangedIntegrationEvent<DtoResumeStatus>
     {
     }
 }

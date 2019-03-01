@@ -3463,11 +3463,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\JobObserver1\\src\\Services\\Domain\\Login\\Login.Db\\Login.Db.csproj",
+      "projectUniqueName": "C:\\JobObserver2\\src\\Services\\Domain\\Login\\Login.Db\\Login.Db.csproj",
       "projectName": "Login.Db",
-      "projectPath": "C:\\JobObserver1\\src\\Services\\Domain\\Login\\Login.Db\\Login.Db.csproj",
+      "projectPath": "C:\\JobObserver2\\src\\Services\\Domain\\Login\\Login.Db\\Login.Db.csproj",
       "packagesPath": "C:\\Users\\rseng\\.nuget\\packages\\",
-      "outputPath": "C:\\JobObserver1\\src\\Services\\Domain\\Login\\Login.Db\\obj\\",
+      "outputPath": "C:\\JobObserver2\\src\\Services\\Domain\\Login\\Login.Db\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

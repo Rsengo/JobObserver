@@ -1,12 +1,14 @@
 ﻿using System.Collections.Generic;
+using BuildingBlocks.EntityFramework.Models;
 using Employers.Db.Models.Geographic;
+using Employers.Db.Models.Synonyms;
 
 namespace Employers.Db.Models
 {
     /// <summary>
     ///     Работодатель
     /// </summary>
-    public class Employer : BaseOrganization
+    public class Employer : RelationalDictionary
     {
         /// <summary>
         ///     Id Города
@@ -14,6 +16,36 @@ namespace Employers.Db.Models
         public virtual long? AreaId { get; set; }
 
         public virtual Area Area { get; set; }
+
+        /// <summary>
+        ///     Сокращение от названия
+        /// </summary>
+        public virtual string Acronym { get; set; }
+
+        /// <summary>
+        ///     Описание
+        /// </summary>
+        public virtual string Description { get; set; }
+
+        /// <summary>
+        /// Снинонимичные названия
+        /// </summary>
+        public virtual ICollection<EmployerSynonyms> Synonyms { get; set; }
+
+        /// <summary>
+        ///     Id Брендированного описания
+        /// </summary>
+        public virtual long? BrandedDescriptionId { get; set; }
+
+        /// <summary>
+        ///     Логотип
+        /// </summary>
+        public virtual string LogoUrl { get; set; }
+
+        /// <summary>
+        ///     Сайт компании
+        /// </summary>
+        public virtual string SiteUrl { get; set; }
 
         /// <summary>
         ///     Тип работодателя (Кадровое агентство, рекрутер, прямой работодатель и т.д.)

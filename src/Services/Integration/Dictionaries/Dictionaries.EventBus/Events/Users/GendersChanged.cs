@@ -10,7 +10,7 @@ using Dictionaries.Dto.Models.Users;
 namespace Dictionaries.EventBus.Events.Users
 {
     public class GendersChanged : 
-        DictionaryChangedIntegrationEvent<DtoGender>
+        EntityChangedIntegrationEvent<DtoGender>
     {
     }
 }

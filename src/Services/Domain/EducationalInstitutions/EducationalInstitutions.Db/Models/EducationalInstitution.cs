@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using BuildingBlocks.EntityFramework.Models;
 using EducationalInstitutions.Db.Models.Geographic;
 using EducationalInstitutions.Db.Models.Synonyms;
 

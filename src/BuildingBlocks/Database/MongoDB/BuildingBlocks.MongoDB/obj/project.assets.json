@@ -5371,11 +5371,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\JobObserver1\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.MongoDB\\BuildingBlocks.MongoDB.csproj",
+      "projectUniqueName": "C:\\JobObserver2\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.MongoDB\\BuildingBlocks.MongoDB.csproj",
       "projectName": "BuildingBlocks.MongoDB",
-      "projectPath": "C:\\JobObserver1\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.MongoDB\\BuildingBlocks.MongoDB.csproj",
+      "projectPath": "C:\\JobObserver2\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.MongoDB\\BuildingBlocks.MongoDB.csproj",
       "packagesPath": "C:\\Users\\rseng\\.nuget\\packages\\",
-      "outputPath": "C:\\JobObserver1\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.MongoDB\\obj\\",
+      "outputPath": "C:\\JobObserver2\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.MongoDB\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

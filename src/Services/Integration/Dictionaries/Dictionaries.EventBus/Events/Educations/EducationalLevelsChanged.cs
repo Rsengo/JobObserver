@@ -7,7 +7,7 @@ using Dictionaries.Dto.Models.Educations;
 namespace Dictionaries.EventBus.Events.Educations
 {
     public class EducationalLevelsChanged : 
-        DictionaryChangedIntegrationEvent<DtoEducationalLevel>
+        EntityChangedIntegrationEvent<DtoEducationalLevel>
     {
     }
 }

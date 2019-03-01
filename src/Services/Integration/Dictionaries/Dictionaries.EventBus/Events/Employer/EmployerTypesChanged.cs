@@ -7,7 +7,7 @@ using Dictionaries.Dto.Models.Employer;
 namespace Dictionaries.EventBus.Events.Employer
 {
     public class EmployerTypesChanged : 
-        DictionaryChangedIntegrationEvent<DtoEmployerType>
+        EntityChangedIntegrationEvent<DtoEmployerType>
     {
     }
 }

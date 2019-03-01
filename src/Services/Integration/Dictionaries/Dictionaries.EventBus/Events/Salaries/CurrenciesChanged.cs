@@ -9,7 +9,7 @@ using Dictionaries.Dto.Models.Salaries;
 namespace Dictionaries.EventBus.Events.Salaries
 {
     public class CurrenciesChanged : 
-        DictionaryChangedIntegrationEvent<DtoCurrency>
+        EntityChangedIntegrationEvent<DtoCurrency>
     {
     }
 }

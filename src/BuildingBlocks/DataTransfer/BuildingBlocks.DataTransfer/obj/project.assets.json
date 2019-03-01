@@ -737,11 +737,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\JobObserver1\\src\\BuildingBlocks\\DataTransfer\\BuildingBlocks.DataTransfer\\BuildingBlocks.DataTransfer.csproj",
+      "projectUniqueName": "C:\\JobObserver2\\src\\BuildingBlocks\\DataTransfer\\BuildingBlocks.DataTransfer\\BuildingBlocks.DataTransfer.csproj",
       "projectName": "BuildingBlocks.DataTransfer",
-      "projectPath": "C:\\JobObserver1\\src\\BuildingBlocks\\DataTransfer\\BuildingBlocks.DataTransfer\\BuildingBlocks.DataTransfer.csproj",
+      "projectPath": "C:\\JobObserver2\\src\\BuildingBlocks\\DataTransfer\\BuildingBlocks.DataTransfer\\BuildingBlocks.DataTransfer.csproj",
       "packagesPath": "C:\\Users\\rseng\\.nuget\\packages\\",
-      "outputPath": "C:\\JobObserver1\\src\\BuildingBlocks\\DataTransfer\\BuildingBlocks.DataTransfer\\obj\\",
+      "outputPath": "C:\\JobObserver2\\src\\BuildingBlocks\\DataTransfer\\BuildingBlocks.DataTransfer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
