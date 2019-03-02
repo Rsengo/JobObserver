@@ -4,7 +4,11 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using BuildingBlocks.Extensions.AutoMapper;
+using BuildingBlocks.Extensions.EventBus.RabbitMQ;
 using CareerDays.Db;
+using CareerDays.Synchronization.EventHandlers;
+using CareerDays.Synchronization.EventHandlers.Geographic;
+using CareerDays.Synchronization.EventHandlers.Geographic.Metro;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -51,6 +55,28 @@ namespace CareerDays.API
             services.AddAutoMapper(builder =>
             {
                 builder.RootAssembly = GetType().Assembly;
+            });
+
+            services.AddEventBusRabbitMQ(builder =>
+            {
+                var retryCount = int.Parse(Configuration["EventBusRetryCount"]);
+
+                builder.ConfigureConnection(con =>
+                {
+                    con.HostName = Configuration["EventBusConnection"];
+                    con.UserName = Configuration["EventBusUserName"];
+                    con.Password = Configuration["EventBusPassword"];
+                });
+
+                builder.SubscriptionClientName = Configuration["SubscriptionClientName"];
+                builder.RetryCount = retryCount;
+
+                builder.RegisterEventHandler<LinesChangedHandler>();
+                builder.RegisterEventHandler<MetroChangedHandler>();
+                builder.RegisterEventHandler<StationsChangedHandler>();
+                builder.RegisterEventHandler<AreasChangedHandler>();
+                builder.RegisterEventHandler<EducationalInstitutionsChangedHandler>();
+                builder.RegisterEventHandler<EmployersChangedHandler>();
             });
 
             services.AddSwaggerGen(c =>

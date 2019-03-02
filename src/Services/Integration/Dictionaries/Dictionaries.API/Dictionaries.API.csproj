@@ -11,4 +11,12 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\BuildingBlocks\AutoMapper\BuildingBlocks.Extensions.AutoMapper\BuildingBlocks.Extensions.AutoMapper.csproj" />
+    <ProjectReference Include="..\..\..\..\BuildingBlocks\EventBus\BuildingBlocks.Extensions.EventBus.RabbitMQ\BuildingBlocks.Extensions.EventBus.RabbitMQ.csproj" />
+    <ProjectReference Include="..\Dictionaries.Db\Dictionaries.Db.csproj" />
+    <ProjectReference Include="..\Dictionaries.Dto\Dictionaries.Dto.csproj" />
+    <ProjectReference Include="..\Dictionaries.EventBus\Dictionaries.EventBus.csproj" />
+  </ItemGroup>
+
 </Project>

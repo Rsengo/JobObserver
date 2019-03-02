@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using CareerDays.Dto.Models.Geographic;
 using Newtonsoft.Json;
 
 namespace CareerDays.Dto.Models
@@ -48,5 +49,17 @@ namespace CareerDays.Dto.Models
         /// </summary>
         [JsonProperty("educational_institution")]
         public DtoEducationalInstitution EducationalInstitution { get; set; }
+
+        /// <summary>
+        ///     Адрес.
+        /// </summary>
+        [JsonProperty("address")]
+        public DtoAddress Address { get; set; }
+
+        /// <summary>
+        ///     Id адреса.
+        /// </summary>
+        [JsonProperty("address_id")]
+        public long AddressId { get; set; }
     }
 }

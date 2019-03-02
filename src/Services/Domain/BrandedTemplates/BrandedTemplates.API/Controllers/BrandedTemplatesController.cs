@@ -24,7 +24,7 @@ namespace BrandedTemplates.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get([FromQuery] long id)
+        public async Task<IActionResult> Get(long id)
         {
             var result = await _context.BrandedTemplates
                 .SingleOrDefaultAsync(x => x.Id == id)

@@ -135,13 +135,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EducationalInstitutions.Dto
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EducationalInstitutions.Synchronization", "src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Synchronization\EducationalInstitutions.Synchronization.csproj", "{DDB46FE9-AF59-4A5E-A6F6-301815C9895D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employers.Dto", "src\Services\Domain\Employers\Employers.Dto\Employers.Dto.csproj", "{D72F5DBB-908A-4F3E-BE10-1715199F5EB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Employers.Dto", "src\Services\Domain\Employers\Employers.Dto\Employers.Dto.csproj", "{D72F5DBB-908A-4F3E-BE10-1715199F5EB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employers.Synchronization", "src\Services\Domain\Employers\Employers.Synchronization\Employers.Synchronization.csproj", "{D0FBACF9-E26D-4A7E-AFFA-58C4F0491A77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Employers.Synchronization", "src\Services\Domain\Employers\Employers.Synchronization\Employers.Synchronization.csproj", "{D0FBACF9-E26D-4A7E-AFFA-58C4F0491A77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaidServices.Dto", "src\Services\Domain\PaidServices\PaidServices.Dto\PaidServices.Dto.csproj", "{0FC7CA64-FE41-4FD5-8FE2-E8F910FC156C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaidServices.Dto", "src\Services\Domain\PaidServices\PaidServices.Dto\PaidServices.Dto.csproj", "{0FC7CA64-FE41-4FD5-8FE2-E8F910FC156C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.Extensions.AutoMapper", "src\BuildingBlocks\AutoMapper\BuildingBlocks.Extensions.AutoMapper\BuildingBlocks.Extensions.AutoMapper.csproj", "{B27E74CA-A36F-4659-8504-F05D5EB1DD64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.Extensions.AutoMapper", "src\BuildingBlocks\AutoMapper\BuildingBlocks.Extensions.AutoMapper\BuildingBlocks.Extensions.AutoMapper.csproj", "{B27E74CA-A36F-4659-8504-F05D5EB1DD64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.Extensions.EventBus.RabbitMQ", "src\BuildingBlocks\EventBus\BuildingBlocks.Extensions.EventBus.RabbitMQ\BuildingBlocks.Extensions.EventBus.RabbitMQ.csproj", "{4562DC83-2AC2-44C4-A8E3-D2DE549BFC0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -325,6 +327,10 @@ Global
 		{B27E74CA-A36F-4659-8504-F05D5EB1DD64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B27E74CA-A36F-4659-8504-F05D5EB1DD64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B27E74CA-A36F-4659-8504-F05D5EB1DD64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4562DC83-2AC2-44C4-A8E3-D2DE549BFC0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4562DC83-2AC2-44C4-A8E3-D2DE549BFC0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4562DC83-2AC2-44C4-A8E3-D2DE549BFC0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4562DC83-2AC2-44C4-A8E3-D2DE549BFC0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -399,6 +405,7 @@ Global
 		{D0FBACF9-E26D-4A7E-AFFA-58C4F0491A77} = {4A607B19-C3EA-4922-A7D6-44B67DE74B23}
 		{0FC7CA64-FE41-4FD5-8FE2-E8F910FC156C} = {42F07A9B-B6CC-4634-92BF-5EB1305A0662}
 		{B27E74CA-A36F-4659-8504-F05D5EB1DD64} = {56D0A64F-0DE3-4BFF-AC82-C6C45CA66E23}
+		{4562DC83-2AC2-44C4-A8E3-D2DE549BFC0E} = {7853826B-9DBC-4C82-9FC0-3550DDF70EE8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EFC2B589-7633-4F4E-A0D8-0509C36A83A5}
