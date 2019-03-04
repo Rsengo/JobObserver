@@ -1,5 +1,4 @@
 ﻿using BuildingBlocks.EntityFramework.Models;
-using BuildingBlocks.EntityFramework.Models;
 
 namespace Login.Db.Models.Manager.Types
 {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using BuildingBlocks.EntityFramework.Models;
+using Resumes.Db.Models.Certificates;
 using Resumes.Db.Models.Driving;
 using Resumes.Db.Models.Educations;
 using Resumes.Db.Models.Employments;
@@ -16,6 +16,7 @@ using Resumes.Db.Models.Statuses;
 using Resumes.Db.Models.Travel;
 using Resumes.Db.Models.Travel.Relocation;
 using Resumes.Db.Models.Geographic;
+using Resumes.Db.Models.ResumeAreas;
 
 namespace Resumes.Db.Models
 {
@@ -70,11 +71,6 @@ namespace Resumes.Db.Models
         public virtual string PhotoUrl { get; set; }
 
         /// <summary>
-        ///     Id Фото
-        /// </summary>
-        public virtual long? PhotoId { get; set; }
-
-        /// <summary>
         ///     Образование
         /// </summary>
         public virtual ICollection<Education> Education { get; set; }
@@ -123,12 +119,12 @@ namespace Resumes.Db.Models
         /// <summary>
         ///     Гражданства
         /// </summary>
-        ////////////////////////////////////////////////////////////////public virtual ICollection<Area> Citizenship { get; set; }
+        public virtual ICollection<Citizenship> Citizenship { get; set; }
 
         /// <summary>
         ///     Разрешение на работу
         /// </summary>
-        //////////////////////////////////////////////////////////////////public virtual ICollection<Area> WorkTicket { get; set; }
+        public virtual ICollection<WorkTicket> WorkTicket { get; set; }
 
         /// <summary>
         ///     Время поездки до работы

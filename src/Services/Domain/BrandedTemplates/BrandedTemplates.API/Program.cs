@@ -7,9 +7,8 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using BuildingBlocks.Extensions.MongoDB;
 using BrandedTemplates.Db;
-using BuildingBlocks.Extensions.EntityFramework;;
+using BuildingBlocks.Extensions.EntityFramework;
 
 namespace BrandedTemplates.API
 {

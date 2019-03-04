@@ -1,5 +1,7 @@
 ﻿using System;
 using BuildingBlocks.EntityFramework.Models;
+using Login.Db.Models.Contacts;
+using Login.Db.Models.Geographic;
 
 namespace Login.Db.Models
 {
@@ -54,8 +56,13 @@ namespace Login.Db.Models
         public virtual long? AreaId { get; set; }
 
         /// <summary>
+        ///     Город
+        /// </summary>
+        public virtual Area Area { get; set; }
+
+        /// <summary>
         ///     Полное имя
         /// </summary>
-        public virtual string FullName => $"{FirstName}{MiddleName}{LastName}";
+        public virtual string FullName => $"{FirstName} {MiddleName} {LastName}";
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Vacancies.Db.Models.Tests
 {
-    public class VacancyTest: RelationalEntity
+    public class VacancyTest: RelationalDictionary
     {
         public virtual Vacancy Vacancy { get; set; }
 

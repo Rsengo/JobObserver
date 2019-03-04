@@ -3,7 +3,7 @@ using Login.Db.Models.Manager;
 using Login.Db.Models.Manager.Permissions;
 using Login.Db.Models.Manager.Types;
 
-namespace JobObserver.Db.Models.Users.Manager
+namespace Login.Db.Models.Manager
 {
     /// <summary>
     ///     Менеджер ОУ
