@@ -10,6 +10,7 @@ namespace Vacancies.Db
         public VacanciesDbContext(DbContextOptions<VacanciesDbContext> options) :
             base(options)
         {
+            this.EnsureAutoHistory();
         }
     }
 }

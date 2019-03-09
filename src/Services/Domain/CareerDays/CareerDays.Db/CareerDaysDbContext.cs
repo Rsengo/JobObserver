@@ -7,6 +7,7 @@ namespace CareerDays.Db
         public CareerDaysDbContext(DbContextOptions<CareerDaysDbContext> options) : 
             base(options)
         {
+            this.EnsureAutoHistory();
         }
     }
 }

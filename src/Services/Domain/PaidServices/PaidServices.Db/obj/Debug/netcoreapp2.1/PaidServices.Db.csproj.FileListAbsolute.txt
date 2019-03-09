@@ -19,3 +19,15 @@ C:\JobObserver1\src\Services\Domain\PaidServices\PaidServices.Db\obj\Debug\netco
 C:\JobObserver1\src\Services\Domain\PaidServices\PaidServices.Db\obj\Debug\netcoreapp2.1\PaidServices.Db.AssemblyInfo.cs
 C:\JobObserver1\src\Services\Domain\PaidServices\PaidServices.Db\obj\Debug\netcoreapp2.1\PaidServices.Db.dll
 C:\JobObserver1\src\Services\Domain\PaidServices\PaidServices.Db\obj\Debug\netcoreapp2.1\PaidServices.Db.pdb
+C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.Db\bin\Debug\netcoreapp2.1\PaidServices.Db.deps.json
+C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.Db\bin\Debug\netcoreapp2.1\PaidServices.Db.dll
+C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.Db\bin\Debug\netcoreapp2.1\PaidServices.Db.pdb
+C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.dll
+C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.pdb
+C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.Db\obj\Debug\netcoreapp2.1\PaidServices.Db.csprojAssemblyReference.cache
+C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.Db\obj\Debug\netcoreapp2.1\PaidServices.Db.csproj.CoreCompileInputs.cache
+C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.Db\obj\Debug\netcoreapp2.1\PaidServices.Db.AssemblyInfoInputs.cache
+C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.Db\obj\Debug\netcoreapp2.1\PaidServices.Db.AssemblyInfo.cs
+C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.Db\obj\Debug\netcoreapp2.1\PaidServices.Db.csproj.CopyComplete
+C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.Db\obj\Debug\netcoreapp2.1\PaidServices.Db.dll
+C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.Db\obj\Debug\netcoreapp2.1\PaidServices.Db.pdb

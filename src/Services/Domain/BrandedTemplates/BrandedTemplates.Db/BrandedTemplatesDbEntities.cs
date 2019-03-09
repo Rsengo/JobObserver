@@ -14,6 +14,8 @@ namespace BrandedTemplates.Db
             var tempAssembly = GetType().Assembly;
             builder.ApplyConfigurationsFromAssembly(tempAssembly);
 
+            builder.EnableAutoHistory(null);
+
             base.OnModelCreating(builder);
         }
 

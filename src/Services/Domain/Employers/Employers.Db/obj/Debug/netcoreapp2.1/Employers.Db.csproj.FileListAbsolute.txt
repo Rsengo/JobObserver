@@ -19,3 +19,15 @@ C:\JobObserver1\src\Services\Domain\Employers\Employers.Db\obj\Debug\netcoreapp2
 C:\JobObserver1\src\Services\Domain\Employers\Employers.Db\obj\Debug\netcoreapp2.1\Employers.Db.AssemblyInfo.cs
 C:\JobObserver1\src\Services\Domain\Employers\Employers.Db\obj\Debug\netcoreapp2.1\Employers.Db.dll
 C:\JobObserver1\src\Services\Domain\Employers\Employers.Db\obj\Debug\netcoreapp2.1\Employers.Db.pdb
+C:\JobObserver2\src\Services\Domain\Employers\Employers.Db\bin\Debug\netcoreapp2.1\Employers.Db.deps.json
+C:\JobObserver2\src\Services\Domain\Employers\Employers.Db\bin\Debug\netcoreapp2.1\Employers.Db.dll
+C:\JobObserver2\src\Services\Domain\Employers\Employers.Db\bin\Debug\netcoreapp2.1\Employers.Db.pdb
+C:\JobObserver2\src\Services\Domain\Employers\Employers.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.dll
+C:\JobObserver2\src\Services\Domain\Employers\Employers.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.pdb
+C:\JobObserver2\src\Services\Domain\Employers\Employers.Db\obj\Debug\netcoreapp2.1\Employers.Db.csprojAssemblyReference.cache
+C:\JobObserver2\src\Services\Domain\Employers\Employers.Db\obj\Debug\netcoreapp2.1\Employers.Db.csproj.CoreCompileInputs.cache
+C:\JobObserver2\src\Services\Domain\Employers\Employers.Db\obj\Debug\netcoreapp2.1\Employers.Db.AssemblyInfoInputs.cache
+C:\JobObserver2\src\Services\Domain\Employers\Employers.Db\obj\Debug\netcoreapp2.1\Employers.Db.AssemblyInfo.cs
+C:\JobObserver2\src\Services\Domain\Employers\Employers.Db\obj\Debug\netcoreapp2.1\Employers.Db.csproj.CopyComplete
+C:\JobObserver2\src\Services\Domain\Employers\Employers.Db\obj\Debug\netcoreapp2.1\Employers.Db.dll
+C:\JobObserver2\src\Services\Domain\Employers\Employers.Db\obj\Debug\netcoreapp2.1\Employers.Db.pdb

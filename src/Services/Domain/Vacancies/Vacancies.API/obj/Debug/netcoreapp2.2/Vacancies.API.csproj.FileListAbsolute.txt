@@ -26,3 +26,10 @@ C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\obj\Debug\netcoreapp
 C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\obj\Debug\netcoreapp2.2\Vacancies.API.RazorTargetAssemblyInfo.cache
 C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\obj\Debug\netcoreapp2.2\Vacancies.API.dll
 C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\obj\Debug\netcoreapp2.2\Vacancies.API.pdb
+C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EntityFramework.dll
+C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EntityFramework.dll
+C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\Vacancies.Db.dll
+C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Database.Common.dll
+C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\Vacancies.Db.pdb
+C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EntityFramework.pdb
+C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Database.Common.pdb

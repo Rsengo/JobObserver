@@ -10,6 +10,7 @@ namespace PaidServices.Db
         public PaidServicesDbContext(DbContextOptions<PaidServicesDbContext> options) :
             base(options)
         {
+            this.EnsureAutoHistory();
         }
     }
 }

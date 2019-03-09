@@ -24,6 +24,11 @@ namespace Dictionaries.API
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
+                .ConfigureAppConfiguration((_, configBuilder) =>
+                {
+                    configBuilder.AddEnvironmentVariables();
+                    configBuilder.Build();
+                })
                 .Build();
     }
 }

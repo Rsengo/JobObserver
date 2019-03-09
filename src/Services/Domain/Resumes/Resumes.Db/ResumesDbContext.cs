@@ -10,6 +10,7 @@ namespace Resumes.Db
         public ResumesDbContext(DbContextOptions<ResumesDbContext> options) :
             base(options)
         {
+            this.EnsureAutoHistory();
         }
     }
 }

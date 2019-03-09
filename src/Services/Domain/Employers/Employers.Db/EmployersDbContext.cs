@@ -10,6 +10,7 @@ namespace Employers.Db
         public EmployersDbContext(DbContextOptions<EmployersDbContext> options) :
             base(options)
         {
+            this.EnsureAutoHistory();
         }
     }
 }

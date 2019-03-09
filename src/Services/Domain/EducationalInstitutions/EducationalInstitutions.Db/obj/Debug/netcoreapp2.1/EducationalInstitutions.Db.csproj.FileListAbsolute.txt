@@ -19,3 +19,15 @@ C:\JobObserver1\src\Services\Domain\EducationalInstitutions\EducationalInstituti
 C:\JobObserver1\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\obj\Debug\netcoreapp2.1\EducationalInstitutions.Db.AssemblyInfo.cs
 C:\JobObserver1\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\obj\Debug\netcoreapp2.1\EducationalInstitutions.Db.dll
 C:\JobObserver1\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\obj\Debug\netcoreapp2.1\EducationalInstitutions.Db.pdb
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\bin\Debug\netcoreapp2.1\EducationalInstitutions.Db.deps.json
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\bin\Debug\netcoreapp2.1\EducationalInstitutions.Db.dll
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\bin\Debug\netcoreapp2.1\EducationalInstitutions.Db.pdb
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.dll
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.pdb
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\obj\Debug\netcoreapp2.1\EducationalInstitutions.Db.csprojAssemblyReference.cache
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\obj\Debug\netcoreapp2.1\EducationalInstitutions.Db.csproj.CoreCompileInputs.cache
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\obj\Debug\netcoreapp2.1\EducationalInstitutions.Db.AssemblyInfoInputs.cache
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\obj\Debug\netcoreapp2.1\EducationalInstitutions.Db.AssemblyInfo.cs
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\obj\Debug\netcoreapp2.1\EducationalInstitutions.Db.csproj.CopyComplete
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\obj\Debug\netcoreapp2.1\EducationalInstitutions.Db.dll
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\obj\Debug\netcoreapp2.1\EducationalInstitutions.Db.pdb

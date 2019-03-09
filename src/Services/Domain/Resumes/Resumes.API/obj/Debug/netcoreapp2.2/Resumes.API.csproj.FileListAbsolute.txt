@@ -31,3 +31,7 @@ C:\JobObserver2\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\
 C:\JobObserver2\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.RazorTargetAssemblyInfo.cache
 C:\JobObserver2\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.dll
 C:\JobObserver2\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.pdb
+C:\JobObserver2\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EntityFramework.dll
+C:\JobObserver2\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EntityFramework.dll
+C:\JobObserver2\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\Resumes.Db.dll
+C:\JobObserver2\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EntityFramework.pdb

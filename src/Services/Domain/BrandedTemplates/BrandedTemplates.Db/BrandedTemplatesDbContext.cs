@@ -9,6 +9,7 @@ namespace BrandedTemplates.Db
         public BrandedTemplatesDbContext(DbContextOptions<BrandedTemplatesDbContext> options) : 
             base(options)
         {
+            this.EnsureAutoHistory();
         }
     }
 }

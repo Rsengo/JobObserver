@@ -14,11 +14,19 @@ namespace Login.API
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            BuildWebHost(args)
+                //.MigrateDbContext<EmployersDbContext>()
+                .Run();
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+        public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+                .UseStartup<Startup>()
+                .ConfigureAppConfiguration((_, configBuilder) =>
+                {
+                    configBuilder.AddEnvironmentVariables();
+                    configBuilder.Build();
+                })
+                .Build();
     }
 }

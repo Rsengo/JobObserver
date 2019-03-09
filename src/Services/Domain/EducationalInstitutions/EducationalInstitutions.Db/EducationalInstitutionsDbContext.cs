@@ -10,6 +10,7 @@ namespace EducationalInstitutions.Db
         public EducationalInstitutionsDbContext(DbContextOptions<EducationalInstitutionsDbContext> options) :
             base(options)
         {
+            this.EnsureAutoHistory();
         }
     }
 }
