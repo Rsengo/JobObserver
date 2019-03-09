@@ -7,7 +7,6 @@ using BuildingBlocks.Extensions.AutoMapper;
 using BuildingBlocks.Extensions.EventBus.RabbitMQ;
 using EducationalInstitutions.Db;
 using EducationalInstitutions.Synchronization.EventHandlers;
-using EducationalInstitutions.Synchronization.EventHandlers.Employers;
 using EducationalInstitutions.Synchronization.EventHandlers.Geographic;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -71,7 +70,6 @@ namespace EducationalInstitutions.API
                 builder.SubscriptionClientName = Configuration["SubscriptionClientName"];
                 builder.RetryCount = retryCount;
 
-                builder.RegisterEventHandler<EmployersChangedHandler>();
                 builder.RegisterEventHandler<AreasChangedHandler>();
                 builder.RegisterEventHandler<EducationalInstitutionsChangedHandler>();
             });

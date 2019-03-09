@@ -29,5 +29,7 @@ namespace EducationalInstitutions.Db.Models
         /// Снинонимичные названия
         /// </summary>
         public virtual ICollection<EducationalInstitutionSynonyms> Synonyms { get; set; }
+
+        public virtual ICollection<Partners> Partners { get; set; }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using BuildingBlocks.EntityFramework.Models;
-using BuildingBlocks.EntityFramework.Models;
 
 namespace Employers.Db.Models
 {
@@ -17,5 +16,7 @@ namespace Employers.Db.Models
         ///     Id Организации
         /// </summary>
         public virtual long OrganizationId { get; set; }
+
+        public virtual string Description { get; set; }
     }
 }

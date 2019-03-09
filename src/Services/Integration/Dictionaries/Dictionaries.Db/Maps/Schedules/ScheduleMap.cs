@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Dictionaries.Db.Constants;
 using Dictionaries.Db.Models.Schedules;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -18,7 +19,7 @@ namespace Dictionaries.Db.Maps.Schedules
 
             builder.HasAlternateKey(x => x.Name);
 
-            builder.ToTable("SCHEDULES");
+            builder.ToTable(TableNames.SCHEDULES);
         }
     }
 }

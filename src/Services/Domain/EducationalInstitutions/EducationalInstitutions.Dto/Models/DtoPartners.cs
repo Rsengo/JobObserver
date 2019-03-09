@@ -2,16 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 using BuildingBlocks.DataTransfer.Models;
-using EducationalInstitutions.Dto.Models.Employers;
 using Newtonsoft.Json;
 
 namespace EducationalInstitutions.Dto.Models
 {
     public class DtoPartners: DtoEntity
     {
-        [JsonProperty("employer")]
-        public virtual DtoEmployer Employer { get; set; }
-
         [JsonProperty("employer_id")]
         public virtual long EmployerId { get; set; }
 

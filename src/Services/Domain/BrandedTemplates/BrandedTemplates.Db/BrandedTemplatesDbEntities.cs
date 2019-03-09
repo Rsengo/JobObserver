@@ -11,7 +11,9 @@ namespace BrandedTemplates.Db
     {
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.ApplyConfiguration(new BrandedTemplateMap());
+            var tempAssembly = GetType().Assembly;
+            builder.ApplyConfigurationsFromAssembly(tempAssembly);
+
             base.OnModelCreating(builder);
         }
 

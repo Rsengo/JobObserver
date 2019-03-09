@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Dictionaries.Db.Constants;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -19,7 +20,7 @@ namespace Dictionaries.Db.Maps.Geographic.Metro
                 .HasForeignKey<Models.Geographic.Metro.Metro>(x => x.AreaId).OnDelete(DeleteBehavior.Restrict).IsRequired();
             builder.HasMany(x => x.Lines).WithOne(x => x.Metro).OnDelete(DeleteBehavior.Cascade);
 
-            builder.ToTable("METRO");
+            builder.ToTable(TableNames.METRO);
         }
     }
 }

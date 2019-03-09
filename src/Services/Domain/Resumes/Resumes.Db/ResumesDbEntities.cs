@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Resumes.Db.Models;
+using Resumes.Db.Models.Applicants;
 using Resumes.Db.Models.Certificates;
 using Resumes.Db.Models.Driving;
 using Resumes.Db.Models.Educations;
@@ -10,7 +11,6 @@ using Resumes.Db.Models.Geographic.Metro;
 using Resumes.Db.Models.Industries;
 using Resumes.Db.Models.Languages;
 using Resumes.Db.Models.Negotiations;
-using Resumes.Db.Models.Recommendations;
 using Resumes.Db.Models.ResumeAreas;
 using Resumes.Db.Models.Salaries;
 using Resumes.Db.Models.Schedules;
@@ -26,12 +26,15 @@ namespace Resumes.Db
     {
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            var tempAssembly = GetType().Assembly;
+            builder.ApplyConfigurationsFromAssembly(tempAssembly);
+
             base.OnModelCreating(builder);
         }
 
         public DbSet<Certificate> Certificates { get; set; }
 
-        public DbSet<DriverLicenseType> DriverLicenseTypes { get; set; }
+        public DbSet<DrivingLicenseType> DrivingLicenseTypes { get; set; }
 
         public DbSet<Education> Educations { get; set; }
 
@@ -63,10 +66,6 @@ namespace Resumes.Db
 
         public DbSet<ResumeNegotiation> ResumeNegotiations { get; set; }
 
-        public DbSet<EducationalInstitutionRecommendation> EducationalInstitutionRecommendations { get; set; }
-
-        public DbSet<EmployerRecommendation> EmployerRecommendations { get; set; }
-
         public DbSet<Citizenship> Citizenship { get; set; }
 
         public DbSet<WorkTicket> WorkTickets { get; set; }
@@ -92,5 +91,9 @@ namespace Resumes.Db
         public DbSet<TravelTime> TravelTimes { get; set; }
 
         public DbSet<Resume> Resumes { get; set; }
+
+        public DbSet<Applicant> Applicants { get; set; }
+
+        public DbSet<EducationSpecialization> EducationSpecializations { get; set; }
     }
 }

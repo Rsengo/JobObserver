@@ -43,6 +43,6 @@ namespace Resumes.Db.Models.Educations
         /// <summary>
         ///     Список специализаций
         /// </summary>
-        public virtual ICollection<Specialization> Specializations { get; set; }
+        public virtual ICollection<EducationSpecialization> Specializations { get; set; }
     }
 }

@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using BuildingBlocks.EntityFramework.Models;
+using Resumes.Db.Models.Applicants;
 using Resumes.Db.Models.Certificates;
 using Resumes.Db.Models.Driving;
 using Resumes.Db.Models.Educations;
 using Resumes.Db.Models.Employments;
 using Resumes.Db.Models.Experiences;
 using Resumes.Db.Models.Languages;
-using Resumes.Db.Models.Recommendations;
 using Resumes.Db.Models.Salaries;
 using Resumes.Db.Models.Schedules;
 using Resumes.Db.Models.Skills;
@@ -16,6 +16,8 @@ using Resumes.Db.Models.Statuses;
 using Resumes.Db.Models.Travel;
 using Resumes.Db.Models.Travel.Relocation;
 using Resumes.Db.Models.Geographic;
+using Resumes.Db.Models.Geographic.Metro;
+using Resumes.Db.Models.Negotiations;
 using Resumes.Db.Models.ResumeAreas;
 
 namespace Resumes.Db.Models
@@ -29,6 +31,8 @@ namespace Resumes.Db.Models
         ///     Id Соискателя
         /// </summary>
         public virtual long ApplicantId { get; set; }
+
+        public virtual Applicant Applicant { get; set; }
 
         /// <summary>
         /// Город.
@@ -44,6 +48,8 @@ namespace Resumes.Db.Models
         ///     Id Метро
         /// </summary>
         public virtual long? MetroStationId { get; set; }
+
+        public virtual Station MetroStation { get; set; }
 
         /// <summary>
         ///     Возможность переезда
@@ -137,20 +143,6 @@ namespace Resumes.Db.Models
         public virtual long? TravelTimeId { get; set; }
 
         /// <summary>
-        ///     Рекомендации работодателей
-        /// </summary>
-        public virtual ICollection<EmployerRecommendation> EmployerRecommendations { get; set; }
-
-        /// <summary>
-        ///     Рекомендации ОУ
-        /// </summary>
-        public virtual ICollection<EducationalInstitutionRecommendation> EducationalInstitutionRecommendations
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
         ///     Язык резюме
         /// </summary>
         public virtual Language ResumeLocale { get; set; }
@@ -183,7 +175,7 @@ namespace Resumes.Db.Models
         /// <summary>
         ///     Категории прав
         /// </summary>
-        public virtual ICollection<DriverLicenseType> DriverLicenseTypes { get; set; }
+        public virtual ICollection<DrivingLicenseType> DriverLicenseTypes { get; set; }
 
         /// <summary>
         ///     Дополнительная информаци
@@ -204,5 +196,7 @@ namespace Resumes.Db.Models
         ///     Id Статуса резюме
         /// </summary>
         public virtual long? ResumeStatusId { get; set; }
+
+        public virtual ICollection<ResumeNegotiation> Negotiations { get; set; }
     }
 }

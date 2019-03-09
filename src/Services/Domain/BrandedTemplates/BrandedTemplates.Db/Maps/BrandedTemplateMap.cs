@@ -1,4 +1,5 @@
-﻿using BrandedTemplates.Db.Models;
+﻿using BrandedTemplates.Db.Constants;
+using BrandedTemplates.Db.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -14,7 +15,7 @@ namespace BrandedTemplates.Db.Maps
             builder.Property(x => x.Name).IsRequired();
             builder.Property(x => x.Text).IsRequired();
 
-            builder.ToTable("BRANDED_TEMPLATES");
+            builder.ToTable(TableNames.BRANDED_TEMPLATES);
         }
     }
 }

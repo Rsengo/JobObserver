@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Dictionaries.Db.Constants;
 using Dictionaries.Db.Models.Geographic.Metro;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -19,7 +20,7 @@ namespace Dictionaries.Db.Maps.Geographic.Metro
                 .OnDelete(DeleteBehavior.Restrict).IsRequired();
             builder.HasMany(x => x.Stations).WithOne(x => x.Line).OnDelete(DeleteBehavior.Cascade).IsRequired();
 
-            builder.ToTable("LINES");
+            builder.ToTable(TableNames.LINES);
         }
     }
 }

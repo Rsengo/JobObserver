@@ -17,7 +17,7 @@ namespace BrandedTemplates.API
         public static void Main(string[] args)
         {
             BuildWebHost(args)
-                .MigrateDbContext<BrandedTemplatesDbContext>((_, __) => { })
+                .MigrateDbContext<BrandedTemplatesDbContext>()
                 .Run();
         }
 

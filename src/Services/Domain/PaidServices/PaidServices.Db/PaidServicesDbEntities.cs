@@ -10,6 +10,9 @@ namespace PaidServices.Db
     {
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            var tempAssembly = GetType().Assembly;
+            builder.ApplyConfigurationsFromAssembly(tempAssembly);
+
             base.OnModelCreating(builder);
         }
 

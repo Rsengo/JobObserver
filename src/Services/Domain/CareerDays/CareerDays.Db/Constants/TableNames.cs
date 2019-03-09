@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CareerDays.Db.Constants
 {
-    public static class TableNames
+    internal static class TableNames
     {
         public const string LINES = "LINES";
 
@@ -17,5 +17,9 @@ namespace CareerDays.Db.Constants
         public const string AREAS = "AREAS";
 
         public const string CAREER_DAYS = "CAREER_DAYS";
+
+        public const string EMPLOYERS = "EMPLOYERS";
+
+        public const string EDUCATIONAL_INSTITUTIONS = "EDUCATIONAL_INSTITUTIONS";
     }
 }

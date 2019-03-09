@@ -14,15 +14,17 @@ namespace Dictionaries.Dto.Models.Geographic.Metro
         /// </summary>
         [JsonProperty("hex_color")]
         public int HexColor { get; set; }
+
         /// <summary>
         /// Метро id
         /// </summary>
         [JsonProperty("metro_id")]
         public long MetroId { get; set; }
+
         /// <summary>
-        /// Станции
+        /// Метро.
         /// </summary>
-        [JsonProperty("stations")]
-        public ICollection<DtoStation> Stations { get; set; }
+        [JsonProperty("metro")]
+        public DtoMetro Metro { get; set; }
     }
 }

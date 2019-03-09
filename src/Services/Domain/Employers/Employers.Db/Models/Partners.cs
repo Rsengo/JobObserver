@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using BuildingBlocks.EntityFramework.Models;
-using Employers.Db.Models.EducationalInstitutions;
 
 namespace Employers.Db.Models
 {
@@ -13,7 +12,5 @@ namespace Employers.Db.Models
         public virtual long EmployerId { get; set; }
 
         public virtual long EducationalInstitutionId { get; set; }
-
-        public virtual EducationalInstitution EducationalInstitution { get; set; }
     }
 }

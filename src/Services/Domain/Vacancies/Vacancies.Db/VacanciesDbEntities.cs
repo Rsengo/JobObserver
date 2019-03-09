@@ -4,6 +4,7 @@ using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Vacancies.Db.Models;
 using Vacancies.Db.Models.Driving;
+using Vacancies.Db.Models.Employers;
 using Vacancies.Db.Models.Employments;
 using Vacancies.Db.Models.Geographic;
 using Vacancies.Db.Models.Geographic.Metro;
@@ -22,10 +23,13 @@ namespace Vacancies.Db
     {
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            var tempAssembly = GetType().Assembly;
+            builder.ApplyConfigurationsFromAssembly(tempAssembly);
+
             base.OnModelCreating(builder);
         }
 
-        public DbSet<DriverLicenseType> DriverLicenseTypes { get; set; }
+        public DbSet<DrivingLicenseType> DrivingLicenseTypes { get; set; }
 
         public DbSet<Employment> Employments { get; set; }
 
@@ -64,5 +68,7 @@ namespace Vacancies.Db
         public DbSet<VacancyTest> VacancyTests { get; set; }
 
         public DbSet<Vacancy> Vacancies { get; set; }
+
+        public DbSet<Employer> Employers { get; set; }
     }
 }

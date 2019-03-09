@@ -18,9 +18,6 @@ namespace Vacancies.Db.Models.Negotiations
         /// </summary>
         public virtual long VacancyId { get; set; }
 
-        /// <summary>
-        ///     Вакансия.
-        /// </summary>
         public virtual Vacancy Vacancy { get; set; }
 
         /// <summary>

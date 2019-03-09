@@ -19,10 +19,5 @@ namespace CareerDays.Dto.Models.Geographic.Metro
         /// </summary>
         [JsonProperty("area_id")]
         public long AreaId { get; set; }
-        /// <summary>
-        /// Ветки
-        /// </summary>
-        [JsonProperty("lines")]
-        public ICollection<DtoLine> Lines { get; set; }
     }
 }

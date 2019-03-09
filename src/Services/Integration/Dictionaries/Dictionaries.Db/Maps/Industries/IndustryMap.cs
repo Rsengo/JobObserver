@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Dictionaries.Db.Constants;
 using Dictionaries.Db.Models.Industries;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -18,7 +19,7 @@ namespace Dictionaries.Db.Maps.Industries
 
             builder.HasAlternateKey(x => x.Name);
 
-            builder.ToTable("INDUSTRIES");
+            builder.ToTable(TableNames.INDUSTRIES);
         }
     }
 }

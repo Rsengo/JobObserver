@@ -13,9 +13,14 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\BuildingBlocks\AutoMapper\BuildingBlocks.Extensions.AutoMapper\BuildingBlocks.Extensions.AutoMapper.csproj" />
+    <ProjectReference Include="..\..\..\..\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Extensions.EntityFramework\BuildingBlocks.Extensions.EntityFramework.csproj" />
     <ProjectReference Include="..\..\..\..\BuildingBlocks\EventBus\BuildingBlocks.Extensions.EventBus.RabbitMQ\BuildingBlocks.Extensions.EventBus.RabbitMQ.csproj" />
     <ProjectReference Include="..\EducationalInstitutions.Db\EducationalInstitutions.Db.csproj" />
     <ProjectReference Include="..\EducationalInstitutions.Synchronization\EducationalInstitutions.Synchronization.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>

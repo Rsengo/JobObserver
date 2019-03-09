@@ -1,4 +1,5 @@
 ﻿using BuildingBlocks.EntityFramework.Models;
+using Resumes.Db.Models.Geographic;
 
 namespace Resumes.Db.Models.Travel.Relocation
 {
@@ -15,11 +16,13 @@ namespace Resumes.Db.Models.Travel.Relocation
         /// <summary>
         ///     Id Типа переезда
         /// </summary>
-        public virtual long? RelocationTypeId { get; set; }
+        public virtual long RelocationTypeId { get; set; }
 
         /// <summary>
         ///     Id Города/страны
         /// </summary>
-        public virtual long? AreaId { get; set; }
+        public virtual long AreaId { get; set; }
+
+        public virtual Area Area { get; set; }
     }
 }

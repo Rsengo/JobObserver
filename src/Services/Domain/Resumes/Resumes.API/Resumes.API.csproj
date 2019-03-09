@@ -11,4 +11,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Extensions.EntityFramework\BuildingBlocks.Extensions.EntityFramework.csproj" />
+    <ProjectReference Include="..\Resumes.Db\Resumes.Db.csproj" />
+  </ItemGroup>
+
 </Project>

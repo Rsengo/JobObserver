@@ -7,7 +7,6 @@ using BuildingBlocks.Extensions.AutoMapper;
 using BuildingBlocks.Extensions.EventBus.RabbitMQ;
 using Employers.Db;
 using Employers.Synchronization.EventHandlers;
-using Employers.Synchronization.EventHandlers.EducationalInstitutions;
 using Employers.Synchronization.EventHandlers.Geographic;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -74,7 +73,6 @@ namespace Employers.API
                 builder.RegisterEventHandler<EmployersChangedHandler>();
                 builder.RegisterEventHandler<EmployerTypesChangedHandler>();
                 builder.RegisterEventHandler<AreasChangedHandler>();
-                builder.RegisterEventHandler<EducationalInstitutionsChangedHandler>();
             });
 
             services.AddSwaggerGen(c =>

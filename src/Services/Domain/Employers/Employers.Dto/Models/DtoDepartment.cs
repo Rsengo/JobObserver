@@ -9,15 +9,12 @@ namespace Employers.Dto.Models
     public class DtoDepartment : DtoDictionary
     {
         /// <summary>
-        ///     Организация
-        /// </summary>
-        [JsonProperty("organization")]
-        public virtual DtoEmployer Organization { get; set; }
-
-        /// <summary>
         ///     Id Организации
         /// </summary>
         [JsonProperty("organization_id")]
         public virtual long OrganizationId { get; set; }
+
+        [JsonProperty("description")]
+        public virtual string Description { get; set; }
     }
 }

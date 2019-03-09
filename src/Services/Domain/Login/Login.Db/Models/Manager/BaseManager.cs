@@ -3,7 +3,6 @@
     /// <summary>
     ///     Менеджер (базовый)
     /// </summary>
-    /// <typeparam name="TOrganization">Тип организации</typeparam>
     public abstract class BaseManager : BaseUser
     {
         /// <summary>

@@ -9,14 +9,16 @@ namespace Resumes.Db.Models.Negotiations
     public class ResumeNegotiation : RelationalEntity
     {
         /// <summary>
-        ///     Id Менеджера, оставившего отклик
+        ///     Id Компании
         /// </summary>
-        public virtual long ManagerId { get; set; }
+        public virtual long CompanyId { get; set; }
 
         /// <summary>
         ///     Id Резюме
         /// </summary>
         public virtual long ResumeId { get; set; }
+
+        public virtual Resume Resume { get; set; }
 
         /// <summary>
         ///     Сообщение

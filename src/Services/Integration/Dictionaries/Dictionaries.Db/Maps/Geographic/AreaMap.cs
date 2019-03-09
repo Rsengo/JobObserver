@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Dictionaries.Db.Constants;
 using Dictionaries.Db.Models.Geographic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -31,7 +32,7 @@ namespace Dictionaries.Db.Maps.Geographic
                 .OnDelete(DeleteBehavior.Cascade)
                 .IsRequired(false);
 
-            builder.ToTable("AREAS");
+            builder.ToTable(TableNames.AREAS);
         }
     }
 }

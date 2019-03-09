@@ -13,25 +13,29 @@ namespace CareerDays.Dto.Models.Geographic.Metro
         /// </summary>
         [JsonProperty("latitude")]
         public double Latitude { get; set; }
+
         /// <summary>
         /// Долгота (географически)
         /// </summary>
         [JsonProperty("longitude")]
         public double Longitude { get; set; }
+
         /// <summary>
         /// Номер
         /// </summary>
         [JsonProperty("order")]
         public int Order { get; set; }
+
         /// <summary>
         /// Ветка id
         /// </summary>
         [JsonProperty("line_id")]
         public long LineId { get; set; }
+
         /// <summary>
-        /// Цвет ветки
+        /// Ветка.
         /// </summary>
-        [JsonProperty("line_hex_color")]
-        public int LineHexColor { get; set; }
+        [JsonProperty("line")]
+        public DtoLine Line { get; set; }
     }
 }

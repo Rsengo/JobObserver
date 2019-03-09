@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Dictionaries.Db.Constants;
 using Dictionaries.Db.Models.Employments;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -18,7 +19,7 @@ namespace Dictionaries.Db.Maps.Employments
 
             builder.HasAlternateKey(x => x.Name);
 
-            builder.ToTable("EMPLOYMENTS");
+            builder.ToTable(TableNames.EMPLOYMENTS);
         }
     }
 }

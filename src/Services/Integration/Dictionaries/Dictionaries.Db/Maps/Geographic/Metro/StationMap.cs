@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Dictionaries.Db.Constants;
 using Dictionaries.Db.Models.Geographic.Metro;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -24,7 +25,7 @@ namespace Dictionaries.Db.Maps.Geographic.Metro
             builder.HasOne(x => x.Line).WithMany(x => x.Stations).HasForeignKey(x => x.LineId)
                 .OnDelete(DeleteBehavior.Restrict).IsRequired();
 
-            builder.ToTable("STATIONS");
+            builder.ToTable(TableNames.STATIONS);
         }
     }
 }

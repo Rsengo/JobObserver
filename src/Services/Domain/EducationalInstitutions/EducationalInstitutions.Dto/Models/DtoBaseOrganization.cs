@@ -22,12 +22,6 @@ namespace EducationalInstitutions.Dto.Models
         public virtual string Description { get; set; }
 
         /// <summary>
-        /// Снинонимичные названия
-        /// </summary>
-        [JsonProperty("synonyms")]
-        public virtual ICollection<string> Synonyms { get; set; }
-
-        /// <summary>
         ///     Id Брендированного описания
         /// </summary>
         [JsonProperty("branded_description_id")]

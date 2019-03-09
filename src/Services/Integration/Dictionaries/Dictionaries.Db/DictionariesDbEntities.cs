@@ -1,22 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Dictionaries.Db.Maps.Driving;
-using Dictionaries.Db.Maps.Educations;
-using Dictionaries.Db.Maps.Employer;
-using Dictionaries.Db.Maps.Employments;
-using Dictionaries.Db.Maps.Geographic;
-using Dictionaries.Db.Maps.Geographic.Metro;
-using Dictionaries.Db.Maps.Industries;
-using Dictionaries.Db.Maps.Languages;
-using Dictionaries.Db.Maps.Negotiations;
-using Dictionaries.Db.Maps.Salaries;
-using Dictionaries.Db.Maps.Schedules;
-using Dictionaries.Db.Maps.Skills;
-using Dictionaries.Db.Maps.Specializations;
-using Dictionaries.Db.Maps.Statuses;
-using Dictionaries.Db.Maps.Users;
-using Dictionaries.Db.Models.Driving;
+﻿using Dictionaries.Db.Models.Driving;
 using Dictionaries.Db.Models.Educations;
 using Dictionaries.Db.Models.Employer;
 using Dictionaries.Db.Models.Employments;
@@ -39,24 +21,8 @@ namespace Dictionaries.Db
     {
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.ApplyConfiguration(new DriverLicenseTypeMap());
-            builder.ApplyConfiguration(new EducationalLevelMap());
-            builder.ApplyConfiguration(new EmployerTypeMap());
-            builder.ApplyConfiguration(new EmploymentMap());
-            builder.ApplyConfiguration(new LineMap());
-            builder.ApplyConfiguration(new MetroMap());
-            builder.ApplyConfiguration(new AreaMap());
-            builder.ApplyConfiguration(new IndustryMap());
-            builder.ApplyConfiguration(new LanguageLevelMap());
-            builder.ApplyConfiguration(new LanguageMap());
-            builder.ApplyConfiguration(new ResponseMap());
-            builder.ApplyConfiguration(new CurrencyMap());
-            builder.ApplyConfiguration(new ScheduleMap());
-            builder.ApplyConfiguration(new SkillMap());
-            builder.ApplyConfiguration(new SpecializationMap());
-            builder.ApplyConfiguration(new ResumeStatusMap());
-            builder.ApplyConfiguration(new VacancyStatusMap());
-            builder.ApplyConfiguration(new GenderMap());
+            var tempAssembly = GetType().Assembly;
+            builder.ApplyConfigurationsFromAssembly(tempAssembly);
 
             base.OnModelCreating(builder);
         }

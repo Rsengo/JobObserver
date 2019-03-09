@@ -15,14 +15,8 @@ namespace CareerDays.Db
     {
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.ApplyConfiguration(new CareerDayMap());
-            builder.ApplyConfiguration(new LineMap());
-            builder.ApplyConfiguration(new MetroMap());
-            builder.ApplyConfiguration(new StationMap());
-            builder.ApplyConfiguration(new AreaMap());
-            builder.ApplyConfiguration(new AddressMap());
-            builder.ApplyConfiguration(new EmployerMap());
-            builder.ApplyConfiguration(new EducationalInstitutionMap());
+            var tempAssembly = GetType().Assembly;
+            builder.ApplyConfigurationsFromAssembly(tempAssembly);
 
             base.OnModelCreating(builder);
         }

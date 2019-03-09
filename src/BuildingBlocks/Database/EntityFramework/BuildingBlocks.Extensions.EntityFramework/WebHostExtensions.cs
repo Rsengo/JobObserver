@@ -12,7 +12,7 @@ namespace BuildingBlocks.Extensions.EntityFramework
     {
         public static IWebHost MigrateDbContext<TContext>(
             this IWebHost webHost,
-            Action<TContext,IServiceProvider> seeder)
+            Action<TContext,IServiceProvider> seeder = null)
             where TContext : DbContext
         {
             using (var scope = webHost.Services.CreateScope())
@@ -40,7 +40,7 @@ namespace BuildingBlocks.Extensions.EntityFramework
                         context.Database
                             .Migrate();
 
-                        seeder(context, services);
+                        seeder?.Invoke(context, services);
                     });
 
 

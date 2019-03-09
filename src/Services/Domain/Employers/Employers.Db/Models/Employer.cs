@@ -61,5 +61,7 @@ namespace Employers.Db.Models
         ///     Отделения
         /// </summary>
         public virtual ICollection<Department> Departments { get; set; }
+
+        public virtual ICollection<Partners> Partners { get; set; }
     }
 }

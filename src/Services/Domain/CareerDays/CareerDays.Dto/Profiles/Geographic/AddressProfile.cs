@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using AutoMapper;
 using BuildingBlocks.AutoMapper;
+using CareerDays.Db.Models.Geographic;
+using CareerDays.Dto.Models.Geographic;
+using CareerDays.Dto.Models.Geographic.Metro;
 
 namespace CareerDays.Dto.Profiles.Geographic
 {
@@ -9,12 +13,26 @@ namespace CareerDays.Dto.Profiles.Geographic
     {
         public override void Entity2Dto()
         {
-            throw new NotImplementedException();
+            CreateMap<Address, DtoAddress>()
+                .ForMember(
+                    dest => dest.Area, 
+                    opt => opt.MapFrom(
+                        src => Mapper.Map<DtoArea>(src.Area)))
+                .ForMember(
+                    dest => dest.Station, 
+                    opt => opt.MapFrom(
+                        src => Mapper.Map<DtoStation>(src.Station)));
         }
 
         public override void Dto2Entity()
         {
-            throw new NotImplementedException();
+            CreateMap<DtoAddress, Address>()
+                .ForMember(
+                    dest => dest.Area,
+                    opt => opt.Ignore())
+                .ForMember(
+                    dest => dest.Station,
+                    opt => opt.Ignore());
         }
     }
 }

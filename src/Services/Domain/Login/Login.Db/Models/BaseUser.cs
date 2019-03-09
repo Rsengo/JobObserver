@@ -2,13 +2,14 @@
 using BuildingBlocks.EntityFramework.Models;
 using Login.Db.Models.Contacts;
 using Login.Db.Models.Geographic;
+using Microsoft.AspNetCore.Identity;
 
 namespace Login.Db.Models
 {
     /// <summary>
     ///     Абстрактный пользователь
     /// </summary>
-    public abstract class BaseUser : RelationalEntity
+    public abstract class BaseUser : IdentityUser<long>
     {
         /// <summary>
         ///     Фамилия

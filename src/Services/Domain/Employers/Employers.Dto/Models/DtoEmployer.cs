@@ -11,6 +11,13 @@ namespace Employers.Dto.Models
     public class DtoEmployer : DtoDictionary
     {
         /// <summary>
+        ///     Id Города
+        /// </summary>
+        public virtual long? AreaId { get; set; }
+
+        public virtual DtoArea Area { get; set; }
+
+        /// <summary>
         ///     Сокращение от названия
         /// </summary>
         [JsonProperty("acronym")]
@@ -21,12 +28,6 @@ namespace Employers.Dto.Models
         /// </summary>
         [JsonProperty("description")]
         public virtual string Description { get; set; }
-
-        /// <summary>
-        /// Снинонимичные названия
-        /// </summary>
-        [JsonProperty("synonyms")]
-        public virtual ICollection<string> Synonyms { get; set; }
 
         /// <summary>
         ///     Id Брендированного описания
@@ -57,11 +58,5 @@ namespace Employers.Dto.Models
         /// </summary>
         [JsonProperty("type_id")]
         public virtual long? TypeId { get; set; }
-
-        /// <summary>
-        ///     Отделения
-        /// </summary>
-        [JsonProperty("departments")]
-        public virtual ICollection<DtoDepartment> Departments { get; set; }
     }
 }

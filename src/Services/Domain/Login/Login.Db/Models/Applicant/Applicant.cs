@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using Login.Db.Models;
-
-namespace JobObserver.Db.Models.Users.Applicant
+﻿namespace Login.Db.Models.Applicant
 {
     /// <summary>
     ///     Соискатель

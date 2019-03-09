@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using AutoMapper;
 using BuildingBlocks.AutoMapper;
+using CareerDays.Db.Models.Geographic.Metro;
+using CareerDays.Dto.Models.Geographic.Metro;
 
 namespace CareerDays.Dto.Profiles.Geographic.Metro
 {
@@ -9,12 +12,19 @@ namespace CareerDays.Dto.Profiles.Geographic.Metro
     {
         public override void Entity2Dto()
         {
-            throw new NotImplementedException();
+            CreateMap<Station, DtoStation>()
+                .ForMember(
+                    dest => dest.Line, 
+                    opt => opt.MapFrom(
+                        src => Mapper.Map<DtoLine>(src.Line)));
         }
 
         public override void Dto2Entity()
         {
-            throw new NotImplementedException();
+            CreateMap<DtoStation, Station>()
+                .ForMember(
+                    dest => dest.Line, 
+                    opt => opt.Ignore());
         }
     }
 }

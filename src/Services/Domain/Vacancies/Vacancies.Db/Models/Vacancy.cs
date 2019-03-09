@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using BuildingBlocks.EntityFramework.Models;
 using Vacancies.Db.Models.Driving;
+using Vacancies.Db.Models.Employers;
 using Vacancies.Db.Models.Employments;
 using Vacancies.Db.Models.Geographic;
 using Vacancies.Db.Models.Languages;
+using Vacancies.Db.Models.Negotiations;
 using Vacancies.Db.Models.Salaries;
 using Vacancies.Db.Models.Schedules;
 using Vacancies.Db.Models.Skills;
@@ -65,6 +67,8 @@ namespace Vacancies.Db.Models
         /// </summary>
         public virtual long? DepartmentId { get; set; }
 
+        public virtual Department Department { get; set; }
+
         /// <summary>
         ///     Тип занятости
         /// </summary>
@@ -100,6 +104,8 @@ namespace Vacancies.Db.Models
         /// </summary>
         public virtual long EmployerId { get; set; }
 
+        public virtual Employer Employer { get; set; }
+
         /// <summary>
         ///     Обязательно ли заполнять письмо при отклике на вакансию
         /// </summary>
@@ -118,17 +124,12 @@ namespace Vacancies.Db.Models
         /// <summary>
         ///     Водительские права
         /// </summary>
-        public virtual ICollection<DriverLicenseType> DriverLicenseTypes { get; set; }
+        public virtual ICollection<DrivingLicenseType> DriverLicenseTypes { get; set; }
 
         /// <summary>
         ///     Требуетс ли автомобиль
         /// </summary>
         public virtual bool RequiredVehicle { get; set; }
-
-        /// <summary>
-        ///     Разрешен ли отклик на вакансию неполным резюме
-        /// </summary>
-        public virtual bool AcceptIncompleteResumes { get; set; }
 
         /// <summary>
         ///     Премиум
@@ -159,5 +160,7 @@ namespace Vacancies.Db.Models
         ///     Id Статуса вакансии
         /// </summary>
         public virtual long? VacancyStatusId { get; set; }
+
+        public virtual ICollection<VacancyNegotiation> Negotiations { get; set; }
     }
 }

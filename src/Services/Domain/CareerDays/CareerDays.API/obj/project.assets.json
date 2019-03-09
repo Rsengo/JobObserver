@@ -4844,6 +4844,22 @@
           "bin/placeholder/BuildingBlocks.Extensions.AutoMapper.dll": {}
         }
       },
+      "BuildingBlocks.Extensions.EntityFramework/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
+          "Microsoft.EntityFrameworkCore": "2.2.2",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2",
+          "Polly": "7.0.2"
+        },
+        "compile": {
+          "bin/placeholder/BuildingBlocks.Extensions.EntityFramework.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BuildingBlocks.Extensions.EntityFramework.dll": {}
+        }
+      },
       "BuildingBlocks.Extensions.EventBus.RabbitMQ/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
@@ -13057,6 +13073,11 @@
       "path": "../../../../BuildingBlocks/AutoMapper/BuildingBlocks.Extensions.AutoMapper/BuildingBlocks.Extensions.AutoMapper.csproj",
       "msbuildProject": "../../../../BuildingBlocks/AutoMapper/BuildingBlocks.Extensions.AutoMapper/BuildingBlocks.Extensions.AutoMapper.csproj"
     },
+    "BuildingBlocks.Extensions.EntityFramework/1.0.0": {
+      "type": "project",
+      "path": "../../../../BuildingBlocks/Database/EntityFramework/BuildingBlocks.Extensions.EntityFramework/BuildingBlocks.Extensions.EntityFramework.csproj",
+      "msbuildProject": "../../../../BuildingBlocks/Database/EntityFramework/BuildingBlocks.Extensions.EntityFramework/BuildingBlocks.Extensions.EntityFramework.csproj"
+    },
     "BuildingBlocks.Extensions.EventBus.RabbitMQ/1.0.0": {
       "type": "project",
       "path": "../../../../BuildingBlocks/EventBus/BuildingBlocks.Extensions.EventBus.RabbitMQ/BuildingBlocks.Extensions.EventBus.RabbitMQ.csproj",
@@ -13081,6 +13102,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "BuildingBlocks.Extensions.AutoMapper >= 1.0.0",
+      "BuildingBlocks.Extensions.EntityFramework >= 1.0.0",
       "BuildingBlocks.Extensions.EventBus.RabbitMQ >= 1.0.0",
       "CareerDays.Db >= 1.0.0",
       "CareerDays.Synchronization >= 1.0.0",
@@ -13122,6 +13144,9 @@
           "projectReferences": {
             "C:\\JobObserver2\\src\\BuildingBlocks\\AutoMapper\\BuildingBlocks.Extensions.AutoMapper\\BuildingBlocks.Extensions.AutoMapper.csproj": {
               "projectPath": "C:\\JobObserver2\\src\\BuildingBlocks\\AutoMapper\\BuildingBlocks.Extensions.AutoMapper\\BuildingBlocks.Extensions.AutoMapper.csproj"
+            },
+            "C:\\JobObserver2\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.Extensions.EntityFramework\\BuildingBlocks.Extensions.EntityFramework.csproj": {
+              "projectPath": "C:\\JobObserver2\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.Extensions.EntityFramework\\BuildingBlocks.Extensions.EntityFramework.csproj"
             },
             "C:\\JobObserver2\\src\\BuildingBlocks\\EventBus\\BuildingBlocks.Extensions.EventBus.RabbitMQ\\BuildingBlocks.Extensions.EventBus.RabbitMQ.csproj": {
               "projectPath": "C:\\JobObserver2\\src\\BuildingBlocks\\EventBus\\BuildingBlocks.Extensions.EventBus.RabbitMQ\\BuildingBlocks.Extensions.EventBus.RabbitMQ.csproj"

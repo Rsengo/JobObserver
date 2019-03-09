@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using EducationalInstitutions.Db.Models;
-using EducationalInstitutions.Db.Models.Employers;
 using EducationalInstitutions.Db.Models.Geographic;
 using EducationalInstitutions.Db.Models.Synonyms;
 using Microsoft.EntityFrameworkCore;
@@ -13,10 +12,11 @@ namespace EducationalInstitutions.Db
     {
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            var tempAssembly = GetType().Assembly;
+            builder.ApplyConfigurationsFromAssembly(tempAssembly);
+
             base.OnModelCreating(builder);
         }
-
-        public DbSet<Employer> Employers { get; set; }
 
         public DbSet<Area> Areas { get; set; }
 
