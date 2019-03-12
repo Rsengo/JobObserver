@@ -24,5 +24,9 @@ namespace Resumes.Db.Models.Travel.Relocation
         public virtual long AreaId { get; set; }
 
         public virtual Area Area { get; set; }
+
+        public virtual Resume Resume { get; set; }
+
+        public virtual long ResumeId { get; set; }
     }
 }

@@ -72,5 +72,9 @@ namespace Vacancies.Db
         public DbSet<Vacancy> Vacancies { get; set; }
 
         public DbSet<Employer> Employers { get; set; }
+
+        public DbSet<VacancyDrivingLicenseType> VacancyDrivingLicenseTypes { get; set; }
+
+        public DbSet<VacancySkill> VacancySkills { get; set; }
     }
 }

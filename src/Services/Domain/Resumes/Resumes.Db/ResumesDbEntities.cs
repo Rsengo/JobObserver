@@ -97,5 +97,15 @@ namespace Resumes.Db
         public DbSet<Applicant> Applicants { get; set; }
 
         public DbSet<EducationSpecialization> EducationSpecializations { get; set; }
+
+        public DbSet<ResumeDrivingLicenseType> ResumeDrivingLicenseTypes { get; set; }
+
+        public DbSet<ResumeEmployment> ResumeEmployments { get; set; }
+
+        public DbSet<ResumeSchedule> ResumeSchedules { get; set; }
+
+        public DbSet<ResumeSkill> ResumeSkills { get; set; }
+
+        public DbSet<ResumeSpecialization> ResumeSpecializations { get; set; }
     }
 }

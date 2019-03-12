@@ -90,7 +90,7 @@ namespace Resumes.Db.Models
         /// <summary>
         ///     Специализации
         /// </summary>
-        public virtual ICollection<Specialization> Specializations { get; set; }
+        public virtual ICollection<ResumeSpecialization> Specializations { get; set; }
 
         /// <summary>
         ///     Желаемая заработная плата
@@ -105,12 +105,12 @@ namespace Resumes.Db.Models
         /// <summary>
         ///     Тип занятости
         /// </summary>
-        public virtual ICollection<Employment> Employments { get; set; }
+        public virtual ICollection<ResumeEmployment> Employments { get; set; }
 
         /// <summary>
         ///     Тип расписания
         /// </summary>
-        public virtual ICollection<Schedule> Schedules { get; set; }
+        public virtual ICollection<ResumeSchedule> Schedules { get; set; }
 
         /// <summary>
         ///     Опыт
@@ -120,7 +120,7 @@ namespace Resumes.Db.Models
         /// <summary>
         ///     Навыки
         /// </summary>
-        public virtual ICollection<Skill> Skills { get; set; }
+        public virtual ICollection<ResumeSkill> Skills { get; set; }
 
         /// <summary>
         ///     Гражданства
@@ -175,7 +175,7 @@ namespace Resumes.Db.Models
         /// <summary>
         ///     Категории прав
         /// </summary>
-        public virtual ICollection<DrivingLicenseType> DriverLicenseTypes { get; set; }
+        public virtual ICollection<ResumeDrivingLicenseType> DriverLicenseTypes { get; set; }
 
         /// <summary>
         ///     Дополнительная информаци

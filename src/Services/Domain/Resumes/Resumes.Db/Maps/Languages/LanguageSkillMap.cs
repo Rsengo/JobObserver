@@ -29,6 +29,13 @@ namespace Resumes.Db.Maps.Languages
                 .OnDelete(DeleteBehavior.Restrict)
                 .IsRequired();
 
+            builder
+                .HasOne(x => x.Resume)
+                .WithMany(x => x.Languages)
+                .HasForeignKey(x => x.ResumeId)
+                .OnDelete(DeleteBehavior.Restrict)
+                .IsRequired();
+
             builder.ToTable(TableNames.LANGUAGE_SKILLS);
         }
     }

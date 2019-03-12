@@ -32,6 +32,13 @@ namespace Resumes.Db.Maps.Educations
                 .OnDelete(DeleteBehavior.Restrict)
                 .IsRequired();
 
+            builder
+                .HasOne(x => x.Resume)
+                .WithMany(x => x.Education)
+                .HasForeignKey(x => x.ResumeId)
+                .OnDelete(DeleteBehavior.Restrict)
+                .IsRequired();
+
             builder.ToTable(TableNames.EDUCATIONS);
         }
     }

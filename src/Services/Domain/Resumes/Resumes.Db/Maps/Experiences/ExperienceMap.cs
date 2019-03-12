@@ -33,6 +33,13 @@ namespace Resumes.Db.Maps.Experiences
                 .HasForeignKey(x => x.IndustryId)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            builder
+                .HasOne(x => x.Resume)
+                .WithMany(x => x.Experience)
+                .HasForeignKey(x => x.ResumeId)
+                .OnDelete(DeleteBehavior.Restrict)
+                .IsRequired();
+
             builder.ToTable(TableNames.EXPERIENCES);
         }
     }

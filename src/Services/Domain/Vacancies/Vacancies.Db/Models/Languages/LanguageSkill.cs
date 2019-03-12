@@ -1,4 +1,5 @@
-﻿using BuildingBlocks.EntityFramework.Models;
+﻿using BuildingBlocks.DataTransfer.Models;
+using BuildingBlocks.EntityFramework.Models;
 
 namespace Vacancies.Db.Models.Languages
 {
@@ -26,5 +27,9 @@ namespace Vacancies.Db.Models.Languages
         ///     Id Уровня
         /// </summary>
         public virtual long? LevelId { get; set; }
+
+        public virtual Vacancy Vacancy { get; set; }
+
+        public virtual long VacancyId { get; set; }
     }
 }

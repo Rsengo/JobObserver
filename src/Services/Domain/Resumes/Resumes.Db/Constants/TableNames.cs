@@ -14,6 +14,8 @@ namespace Resumes.Db.Constants
 
         public const string DRIVING_LICENSE_TYPES = "DRIVING_LICENSE_TYPES";
 
+        public const string RESUME_DRIVING_LICENSE_TYPES = "RESUME_DRIVING_LICENSE_TYPES";
+
         public const string EDUCATIONS = "EDUCATIONS";
 
         public const string EDUCATIONAL_LEVELS = "EDUCATIONAL_LEVELS";
@@ -21,6 +23,8 @@ namespace Resumes.Db.Constants
         public const string EDUCATION_SPECIALIZATIONS = "EDUCATION_SPECIALIZATIONS";
 
         public const string EMPLOYMENTS = "EMPLOYMENTS";
+
+        public const string RESUME_EMPLOYMENTS = "RESUME_EMPLOYMENTS";
 
         public const string EXPERIENCES = "EXPERIENCES";
 
@@ -38,9 +42,15 @@ namespace Resumes.Db.Constants
 
         public const string SPECIALIZATIONS = "SPECIALIZATIONS";
 
+        public const string RESUME_SPECIALIZATIONS = "RESUME_SPECIALIZATIONS";
+
         public const string SKILLS = "SKILLS";
 
+        public const string RESUME_SKILLS = "RESUME_SKILLS";
+
         public const string SCHEDULES = "SCHEDULES";
+
+        public const string RESUME_SCHEDULES = "RESUME_SCHEDULES";
 
         public const string RESUME_STATUSES = "RESUME_STATUSES";
 

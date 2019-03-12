@@ -54,5 +54,9 @@ namespace Resumes.Db.Models.Experiences
         ///     Описание
         /// </summary>
         public virtual string Description { get; set; }
+
+        public virtual Resume Resume { get; set; }
+
+        public virtual long ResumeId { get; set; }
     }
 }

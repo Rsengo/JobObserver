@@ -84,13 +84,7 @@ namespace CareerDays.API.Controllers
         public async Task<IActionResult> Save(DtoCareerDay dto)
         {
             var template = Mapper.Map<CareerDay>(dto);
-            var address = Mapper.Map<Address>(dto.Address);
 
-            _context.Addresses.Add(address);
-            await _context.SaveChangesAsync()
-                .ConfigureAwait(false);
-
-            template.AddressId = address.Id;
             _context.CareerDays.Add(template);
             await _context.SaveChangesAsync()
                 .ConfigureAwait(false);
@@ -103,16 +97,6 @@ namespace CareerDays.API.Controllers
         {
             var template = Mapper.Map<CareerDay>(dto);
 
-            if (dto.Address != null)
-            {
-                var address = Mapper.Map<Address>(dto.Address);
-                address.Id = dto.AddressId;
-                await _context.Addresses
-                    .Where(x => x.Id == dto.AddressId)
-                    .UpdateFromQueryAsync(_ => address)
-                    .ConfigureAwait(false);
-            }
-
             template.Id = id;
 
             await _context.CareerDays
@@ -120,7 +104,7 @@ namespace CareerDays.API.Controllers
                 .UpdateFromQueryAsync(_ => template)
                 .ConfigureAwait(false);
 
-            return Ok();
+            return Ok(id);
         }
 
         [HttpDelete("{id}")]

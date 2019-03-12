@@ -29,6 +29,13 @@ namespace Vacancies.Db.Maps.Languages
                 .OnDelete(DeleteBehavior.Restrict)
                 .IsRequired();
 
+            builder
+                .HasOne(x => x.Vacancy)
+                .WithMany(x => x.Languages)
+                .HasForeignKey(x => x.VacancyId)
+                .OnDelete(DeleteBehavior.Restrict)
+                .IsRequired();
+
             builder.ToTable(TableNames.LANGUAGE_SKILLS);
         }
     }

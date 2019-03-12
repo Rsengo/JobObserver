@@ -10,6 +10,8 @@ namespace Vacancies.Db.Constants
 
         public const string DRIVING_LICENSE_TYPES = "DRIVING_LICENSE_TYPES";
 
+        public const string VACANCY_DRIVING_LICENSE_TYPES = "VACANCY_DRIVING_LICENSE_TYPES";
+
         public const string EMPLOYERS = "EMPLOYERS";
 
         public const string LINES = "LINES";
@@ -33,6 +35,8 @@ namespace Vacancies.Db.Constants
         public const string LANGUAGE_SKILLS = "LANGUAGE_SKILLS";
 
         public const string SKILLS = "SKILLS";
+
+        public const string VACANCY_SKILLS = "VACANCY_SKILLS";
 
         public const string SCHEDULES = "SCHEDULES";
 

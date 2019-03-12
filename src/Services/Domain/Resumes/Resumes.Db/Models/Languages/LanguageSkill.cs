@@ -26,5 +26,9 @@ namespace Resumes.Db.Models.Languages
         ///     Id Уровня
         /// </summary>
         public virtual long? LevelId { get; set; }
+
+        public virtual Resume Resume { get; set; }
+
+        public virtual long ResumeId { get; set; }
     }
 }

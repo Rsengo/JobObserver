@@ -1,0 +1,2092 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\JobObserver2" t="IncludeFlat">
+      <e p="JobObserver.Web.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="src" t="Include">
+        <e p="BuildingBlocks" t="Include">
+          <e p="Assemblies" t="Include">
+            <e p="JobObserver.Extensions.Assembly" t="IncludeRecursive">
+              <e p="AssemblyExtensions.cs" t="Include" />
+              <e p="bin" t="ExcludeRecursive" />
+              <e p="BuildingBlocks.Extensions.Assemblies.csproj" t="IncludeRecursive" />
+              <e p="obj" t="ExcludeRecursive">
+                <e p="Debug" t="Include">
+                  <e p="netcoreapp2.1" t="Include">
+                    <e p="BuildingBlocks.Extensions.Assemblies.AssemblyInfo.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+          </e>
+          <e p="AutoMapper" t="Include">
+            <e p="BuildingBlocks.AutoMapper" t="IncludeRecursive">
+              <e p="AutoMapperConfigurator.cs" t="Include" />
+              <e p="bin" t="ExcludeRecursive" />
+              <e p="BuildingBlocks.AutoMapper.csproj" t="IncludeRecursive" />
+              <e p="EntityDtoProfile.cs" t="Include" />
+              <e p="obj" t="ExcludeRecursive">
+                <e p="Debug" t="Include">
+                  <e p="netcoreapp2.1" t="Include">
+                    <e p="BuildingBlocks.AutoMapper.AssemblyInfo.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+            <e p="BuildingBlocks.Extensions.AutoMapper" t="IncludeRecursive">
+              <e p="AutoMapperServicesExtensions.cs" t="Include" />
+              <e p="bin" t="ExcludeRecursive" />
+              <e p="Builders" t="Include">
+                <e p="AutoMapperConfigurationBuilder.cs" t="Include" />
+              </e>
+              <e p="BuildingBlocks.Extensions.AutoMapper.csproj" t="IncludeRecursive" />
+              <e p="obj" t="ExcludeRecursive">
+                <e p="Debug" t="Include">
+                  <e p="netcoreapp2.1" t="Include">
+                    <e p="BuildingBlocks.Extensions.AutoMapper.AssemblyInfo.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+          </e>
+          <e p="Database" t="Include">
+            <e p="EntityFramework" t="Include">
+              <e p="BuildingBlocks.EntityFramework" t="IncludeRecursive">
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="BuildingBlocks.EntityFramework.csproj" t="IncludeRecursive" />
+                <e p="Models" t="Include">
+                  <e p="RelationalDictionary.cs" t="Include" />
+                  <e p="RelationalEntity.cs" t="Include" />
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.1" t="Include">
+                      <e p="BuildingBlocks.EntityFramework.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+              <e p="BuildingBlocks.Extensions.EntityFramework" t="IncludeRecursive">
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="BuildingBlocks.Extensions.EntityFramework.csproj" t="IncludeRecursive" />
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.1" t="Include">
+                      <e p="BuildingBlocks.Extensions.EntityFramework.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="WebHostExtensions.cs" t="Include" />
+              </e>
+            </e>
+            <e p="MongoDB" t="Include">
+              <e p="BuildingBlocks.Extensions.MongoDB" t="IncludeRecursive">
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="Builders" t="Include">
+                  <e p="MongoConfigurationBuilder.cs" t="Include" />
+                </e>
+                <e p="BuildingBlocks.Extensions.MongoDB.csproj" t="IncludeRecursive" />
+                <e p="MongoDatabaseExtensions.cs" t="Include" />
+                <e p="MongoServicesExtensions.cs" t="Include" />
+                <e p="MongoWebHostExtensions.cs" t="Include" />
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.1" t="Include">
+                      <e p="BuildingBlocks.Extensions.MongoDB.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+              <e p="BuildingBlocks.MongoDB" t="IncludeRecursive">
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="BuildingBlocks.MongoDB.csproj" t="IncludeRecursive" />
+                <e p="Filters" t="Include">
+                  <e p="MongoCollectionFilter.cs" t="Include" />
+                </e>
+                <e p="Models" t="Include">
+                  <e p="MongoDictionary.cs" t="Include" />
+                  <e p="MongoEntity.cs" t="Include" />
+                </e>
+                <e p="MongoDbContext.cs" t="Include" />
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.1" t="Include">
+                      <e p="BuildingBlocks.MongoDB.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+              <e p="BuildingBlocks.MongoDB.Migration" t="IncludeRecursive">
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="BuildingBlocks.MongoDB.Migration.csproj" t="IncludeRecursive" />
+                <e p="MongoDbContextExtensions.cs" t="Include" />
+                <e p="MongoMigration.cs" t="Include" />
+                <e p="MongoMigrationAttribute.cs" t="Include" />
+                <e p="MongoMigrationInfo.cs" t="Include" />
+                <e p="MongoMigrator.cs" t="Include" />
+                <e p="MongoVersionInfo.cs" t="Include" />
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.1" t="Include">
+                      <e p="BuildingBlocks.MongoDB.Migration.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+            </e>
+          </e>
+          <e p="DataTransfer" t="Include">
+            <e p="BuildingBlocks.DataTransfer" t="IncludeRecursive">
+              <e p="bin" t="ExcludeRecursive" />
+              <e p="BuildingBlocks.DataTransfer.csproj" t="IncludeRecursive" />
+              <e p="Models" t="Include">
+                <e p="DtoDictionary.cs" t="Include" />
+                <e p="DtoEntity.cs" t="Include" />
+              </e>
+              <e p="obj" t="ExcludeRecursive">
+                <e p="Debug" t="Include">
+                  <e p="netcoreapp2.1" t="Include">
+                    <e p="BuildingBlocks.DataTransfer.AssemblyInfo.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+          </e>
+          <e p="EventBus" t="Include">
+            <e p="BuildingBlocks.EventBus" t="IncludeRecursive">
+              <e p="Abstractions" t="Include">
+                <e p="IDynamicIntegrationEventHandler.cs" t="Include" />
+                <e p="IEventBus.cs" t="Include" />
+                <e p="IIntegrationEventHandler.cs" t="Include" />
+              </e>
+              <e p="bin" t="ExcludeRecursive" />
+              <e p="BuildingBlocks.EventBus.csproj" t="IncludeRecursive" />
+              <e p="Events" t="Include">
+                <e p="IntegrationEvent.cs" t="Include" />
+              </e>
+              <e p="IEventBusSubscriptionsManager.cs" t="Include" />
+              <e p="InMemoryEventBusSubscriptionsManager.cs" t="Include" />
+              <e p="obj" t="ExcludeRecursive">
+                <e p="Debug" t="Include">
+                  <e p="netcoreapp2.1" t="Include">
+                    <e p="BuildingBlocks.EventBus.AssemblyInfo.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="SubscriptionInfo.cs" t="Include" />
+            </e>
+            <e p="BuildingBlocks.EventBus.RabbitMQ" t="IncludeRecursive">
+              <e p="bin" t="ExcludeRecursive" />
+              <e p="BuildingBlocks.EventBus.RabbitMQ.csproj" t="IncludeRecursive" />
+              <e p="DefaultRabbitMQPersisterConnection.cs" t="Include" />
+              <e p="EventBusRabbitMQ.cs" t="Include" />
+              <e p="IRabbitMQPersisterConnection.cs" t="Include" />
+              <e p="obj" t="ExcludeRecursive">
+                <e p="Debug" t="Include">
+                  <e p="netcoreapp2.1" t="Include">
+                    <e p="BuildingBlocks.EventBus.RabbitMQ.AssemblyInfo.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+            <e p="BuildingBlocks.EventBus.Synchronization" t="IncludeRecursive">
+              <e p="bin" t="ExcludeRecursive" />
+              <e p="BuildingBlocks.EventBus.Synchronization.csproj" t="IncludeRecursive" />
+              <e p="Events" t="Include">
+                <e p="EntityChangedIntegrationEvent.cs" t="Include" />
+              </e>
+              <e p="obj" t="ExcludeRecursive">
+                <e p="Debug" t="Include">
+                  <e p="netcoreapp2.1" t="Include">
+                    <e p="BuildingBlocks.EventBus.Synchronization.AssemblyInfo.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+            <e p="BuildingBlocks.Extensions.EventBus.RabbitMQ" t="IncludeRecursive">
+              <e p="bin" t="ExcludeRecursive" />
+              <e p="Builders" t="Include">
+                <e p="EventBusRabbitMQConfigurationBuilder.cs" t="Include" />
+              </e>
+              <e p="BuildingBlocks.Extensions.EventBus.RabbitMQ.csproj" t="IncludeRecursive" />
+              <e p="EventBusRabbitMQServicesExtensions.cs" t="Include" />
+              <e p="obj" t="ExcludeRecursive">
+                <e p="Debug" t="Include">
+                  <e p="netcoreapp2.1" t="Include">
+                    <e p="BuildingBlocks.Extensions.EventBus.RabbitMQ.AssemblyInfo.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Services" t="Include">
+          <e p="Domain" t="Include">
+            <e p="BrandedTemplates" t="Include">
+              <e p="BrandedTemplates.API" t="IncludeRecursive">
+                <e p="appsettings.Development.json" t="Include" />
+                <e p="appsettings.json" t="Include" />
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="BrandedTemplates.API.csproj" t="IncludeRecursive" />
+                <e p="Controllers" t="Include">
+                  <e p="BrandedTemplatesController.cs" t="Include" />
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.2" t="Include">
+                      <e p="BrandedTemplates.API.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Program.cs" t="Include" />
+                <e p="Properties" t="Include">
+                  <e p="launchSettings.json" t="Include" />
+                </e>
+                <e p="Startup.cs" t="Include" />
+              </e>
+              <e p="BrandedTemplates.Db" t="IncludeRecursive">
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="BrandedTemplates.Db.csproj" t="IncludeRecursive" />
+                <e p="BrandedTemplatesDbContext.cs" t="Include" />
+                <e p="BrandedTemplatesDbEntities.cs" t="Include" />
+                <e p="Constants" t="Include">
+                  <e p="TableNames.cs" t="Include" />
+                </e>
+                <e p="Maps" t="Include">
+                  <e p="BrandedTemplateMap.cs" t="Include" />
+                </e>
+                <e p="Models" t="Include">
+                  <e p="BrandedTemplate.cs" t="Include" />
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.1" t="Include">
+                      <e p="BrandedTemplates.Db.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+              <e p="BrandedTemplates.Dto" t="IncludeRecursive">
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="BrandedTemplates.Dto.csproj" t="IncludeRecursive" />
+                <e p="Models" t="Include">
+                  <e p="DtoBrandedTemplate.cs" t="Include" />
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.1" t="Include">
+                      <e p="BrandedTemplates.Dto.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Profiles" t="Include">
+                  <e p="BrandedTemplateProfile.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="CareerDays" t="Include">
+              <e p="CareerDays.API" t="IncludeRecursive">
+                <e p="appsettings.Development.json" t="Include" />
+                <e p="appsettings.json" t="Include" />
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="CareerDays.API.csproj" t="IncludeRecursive" />
+                <e p="Controllers" t="Include">
+                  <e p="AddressesController.cs" t="Include" />
+                  <e p="CareerDaysController.cs" t="Include" />
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.2" t="Include">
+                      <e p="CareerDays.API.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Program.cs" t="Include" />
+                <e p="Properties" t="Include">
+                  <e p="launchSettings.json" t="Include" />
+                </e>
+                <e p="Startup.cs" t="Include" />
+              </e>
+              <e p="CareerDays.Db" t="IncludeRecursive">
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="CareerDays.Db.csproj" t="IncludeRecursive" />
+                <e p="CareerDaysDbContext.cs" t="Include" />
+                <e p="CareerDaysDbEntities.cs" t="Include" />
+                <e p="Constants" t="Include">
+                  <e p="TableNames.cs" t="Include" />
+                </e>
+                <e p="Maps" t="Include">
+                  <e p="CareerDayMap.cs" t="Include" />
+                  <e p="EducationalInstitutionMap.cs" t="Include" />
+                  <e p="EmployerMap.cs" t="Include" />
+                  <e p="Geographic" t="Include">
+                    <e p="AddressMap.cs" t="Include" />
+                    <e p="AreaMap.cs" t="Include" />
+                    <e p="Metro" t="Include">
+                      <e p="LineMap.cs" t="Include" />
+                      <e p="MetroMap.cs" t="Include" />
+                      <e p="StationMap.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Models" t="Include">
+                  <e p="CareerDay.cs" t="Include" />
+                  <e p="EducationalInstitution.cs" t="Include" />
+                  <e p="Employer.cs" t="Include" />
+                  <e p="Geographic" t="Include">
+                    <e p="Address.cs" t="Include" />
+                    <e p="Area.cs" t="Include" />
+                    <e p="Metro" t="Include">
+                      <e p="Line.cs" t="Include" />
+                      <e p="Metro.cs" t="Include" />
+                      <e p="Station.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.1" t="Include">
+                      <e p="CareerDays.Db.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+              <e p="CareerDays.Dto" t="IncludeRecursive">
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="CareerDays.Dto.csproj" t="IncludeRecursive" />
+                <e p="Models" t="Include">
+                  <e p="DtoCareerDay.cs" t="Include" />
+                  <e p="DtoEducationalInstitution.cs" t="Include" />
+                  <e p="DtoEmployer.cs" t="Include" />
+                  <e p="Geographic" t="Include">
+                    <e p="DtoAddress.cs" t="Include" />
+                    <e p="DtoArea.cs" t="Include" />
+                    <e p="Metro" t="Include">
+                      <e p="DtoLine.cs" t="Include" />
+                      <e p="DtoMetro.cs" t="Include" />
+                      <e p="DtoStation.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.1" t="Include">
+                      <e p="CareerDays.Dto.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Profiles" t="Include">
+                  <e p="CareerDayProfile.cs" t="Include" />
+                  <e p="EducationalInstitutionProfile.cs" t="Include" />
+                  <e p="EmployerProfile.cs" t="Include" />
+                  <e p="Geographic" t="Include">
+                    <e p="AddressProfile.cs" t="Include" />
+                    <e p="AreasProfile.cs" t="Include" />
+                    <e p="Metro" t="Include">
+                      <e p="LineProfile.cs" t="Include" />
+                      <e p="MetroProfile.cs" t="Include" />
+                      <e p="StationProfile.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+              <e p="CareerDays.EventBus" t="IncludeRecursive">
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="CareerDays.Synchronization.csproj" t="IncludeRecursive" />
+                <e p="EventHandlers" t="Include">
+                  <e p="EducationalInstitutionsChangedHandler.cs" t="Include" />
+                  <e p="EmployersChangedHandler.cs" t="Include" />
+                  <e p="Geographic" t="Include">
+                    <e p="AreasChangedHandler.cs" t="Include" />
+                    <e p="Metro" t="Include">
+                      <e p="LinesChangedHandler.cs" t="Include" />
+                      <e p="MetroChangedHandler.cs" t="Include" />
+                      <e p="StationsChangedHandler.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Events" t="Include">
+                  <e p="EducationalInstitutionsChanged.cs" t="Include" />
+                  <e p="EmployersChanged.cs" t="Include" />
+                  <e p="Geographic" t="Include">
+                    <e p="AreasChanged.cs" t="Include" />
+                    <e p="Metro" t="Include">
+                      <e p="LinesChanged.cs" t="Include" />
+                      <e p="MetroChanged.cs" t="Include" />
+                      <e p="StationsChanged.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.1" t="Include">
+                      <e p="CareerDays.Synchronization.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+            </e>
+            <e p="EducationalInstitutions" t="Include">
+              <e p="EducationalInstitutions.API" t="IncludeRecursive">
+                <e p="appsettings.Development.json" t="Include" />
+                <e p="appsettings.json" t="Include" />
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="Controllers" t="Include" />
+                <e p="EducationalInstitutions.API.csproj" t="IncludeRecursive" />
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.2" t="Include">
+                      <e p="EducationalInstitutions.API.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Program.cs" t="Include" />
+                <e p="Properties" t="Include">
+                  <e p="launchSettings.json" t="Include" />
+                </e>
+                <e p="Startup.cs" t="Include" />
+              </e>
+              <e p="EducationalInstitutions.Db" t="IncludeRecursive">
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="Constants" t="Include">
+                  <e p="TableNames.cs" t="Include" />
+                </e>
+                <e p="EducationalInstitutions.Db.csproj" t="IncludeRecursive" />
+                <e p="EducationalInstitutionsDbContext.cs" t="Include" />
+                <e p="EducationalInstitutionsDbEntities.cs" t="Include" />
+                <e p="Maps" t="Include">
+                  <e p="EducationalInstitutionMap.cs" t="Include" />
+                  <e p="FacultyMap.cs" t="Include" />
+                  <e p="Geographic" t="Include">
+                    <e p="AreaMap.cs" t="Include" />
+                  </e>
+                  <e p="PartnersMap.cs" t="Include" />
+                  <e p="Synonyms" t="Include">
+                    <e p="EducationalInstitutionSynonymsMap.cs" t="Include" />
+                    <e p="FacultySynonymsMap.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Models" t="Include">
+                  <e p="BaseOrganization.cs" t="Include" />
+                  <e p="EducationalInstitution.cs" t="Include" />
+                  <e p="Faculty.cs" t="Include" />
+                  <e p="Geographic" t="Include">
+                    <e p="Area.cs" t="Include" />
+                  </e>
+                  <e p="Partners.cs" t="Include" />
+                  <e p="Synonyms" t="Include">
+                    <e p="EducationalInstitutionSynonyms.cs" t="Include" />
+                    <e p="FacultySynonyms.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.1" t="Include">
+                      <e p="EducationalInstitutions.Db.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+              <e p="EducationalInstitutions.Dto" t="IncludeRecursive">
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="EducationalInstitutions.Dto.csproj" t="IncludeRecursive" />
+                <e p="Models" t="Include">
+                  <e p="DtoBaseOrganization.cs" t="Include" />
+                  <e p="DtoEducationalInstitution.cs" t="Include" />
+                  <e p="DtoFaculty.cs" t="Include" />
+                  <e p="DtoPartners.cs" t="Include" />
+                  <e p="Geographic" t="Include">
+                    <e p="DtoArea.cs" t="Include" />
+                  </e>
+                  <e p="Synonyms" t="Include">
+                    <e p="DtoEducationalInstitutionSynonyms.cs" t="Include" />
+                    <e p="DtoFacultySynonyms.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.1" t="Include">
+                      <e p="EducationalInstitutions.Dto.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Profiles" t="Include">
+                  <e p="EducationalInstitutionProfile.cs" t="Include" />
+                  <e p="FacultyProfile.cs" t="Include" />
+                  <e p="Geographic" t="Include">
+                    <e p="AreaProfile.cs" t="Include" />
+                  </e>
+                  <e p="PartnersProfile.cs" t="Include" />
+                  <e p="Synonyms" t="Include">
+                    <e p="EducationalInstitutionSynonymsProfile.cs" t="Include" />
+                    <e p="FacultySynonymsProfile.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="EducationalInstitutions.Synchronization" t="IncludeRecursive">
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="EducationalInstitutions.Synchronization.csproj" t="IncludeRecursive" />
+                <e p="EventHandlers" t="Include">
+                  <e p="EducationalInstitutionsChangedHandler.cs" t="Include" />
+                  <e p="Geographic" t="Include">
+                    <e p="AreasChangedHandler.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Events" t="Include">
+                  <e p="EducationalInstitutionsChanged.cs" t="Include" />
+                  <e p="Geographic" t="Include">
+                    <e p="AreasChanged.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.1" t="Include">
+                      <e p="EducationalInstitutions.Synchronization.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+            </e>
+            <e p="Employers" t="Include">
+              <e p="Employers.API" t="IncludeRecursive">
+                <e p="appsettings.Development.json" t="Include" />
+                <e p="appsettings.json" t="Include" />
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="Controllers" t="Include">
+                  <e p="ValuesController.cs" t="Include" />
+                </e>
+                <e p="Employers.API.csproj" t="IncludeRecursive" />
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.2" t="Include">
+                      <e p="Employers.API.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Program.cs" t="Include" />
+                <e p="Properties" t="Include">
+                  <e p="launchSettings.json" t="Include" />
+                </e>
+                <e p="Startup.cs" t="Include" />
+              </e>
+              <e p="Employers.Db" t="IncludeRecursive">
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="Constants" t="Include">
+                  <e p="TableNames.cs" t="Include" />
+                </e>
+                <e p="Employers.Db.csproj" t="IncludeRecursive" />
+                <e p="EmployersDbContext.cs" t="Include" />
+                <e p="EmployersDbEntities.cs" t="Include" />
+                <e p="Maps" t="Include">
+                  <e p="DepartmentMap.cs" t="Include" />
+                  <e p="EmployerMap.cs" t="Include" />
+                  <e p="EmployerTypeMap.cs" t="Include" />
+                  <e p="Geographic" t="Include">
+                    <e p="AreaMap.cs" t="Include" />
+                  </e>
+                  <e p="PartnersMap.cs" t="Include" />
+                  <e p="Synonyms" t="Include">
+                    <e p="EmployerSynonymsMap.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Models" t="Include">
+                  <e p="Department.cs" t="Include" />
+                  <e p="Employer.cs" t="Include" />
+                  <e p="EmployerType.cs" t="Include" />
+                  <e p="Geographic" t="Include">
+                    <e p="Area.cs" t="Include" />
+                  </e>
+                  <e p="Partners.cs" t="Include" />
+                  <e p="Synonyms" t="Include">
+                    <e p="EmployerSynonyms.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.1" t="Include">
+                      <e p="Employers.Db.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+              <e p="Employers.Dto" t="IncludeRecursive">
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="Employers.Dto.csproj" t="IncludeRecursive" />
+                <e p="Models" t="Include">
+                  <e p="DtoDepartment.cs" t="Include" />
+                  <e p="DtoEmployer.cs" t="Include" />
+                  <e p="DtoEmployerType.cs" t="Include" />
+                  <e p="DtoPartners.cs" t="Include" />
+                  <e p="Geographic" t="Include">
+                    <e p="DtoArea.cs" t="Include" />
+                  </e>
+                  <e p="Synonyms" t="Include">
+                    <e p="DtoEmployerSynonyms.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.1" t="Include">
+                      <e p="Employers.Dto.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Profiles" t="Include">
+                  <e p="DepartmentProfile.cs" t="Include" />
+                  <e p="EmployerProfile.cs" t="Include" />
+                  <e p="EmployerTypeProfile.cs" t="Include" />
+                  <e p="Geographic" t="Include">
+                    <e p="AreaProfile.cs" t="Include" />
+                  </e>
+                  <e p="PartnersProfile.cs" t="Include" />
+                  <e p="Synonyms" t="Include">
+                    <e p="EmployerSynonymsProfile.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="Employers.Synchronization" t="IncludeRecursive">
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="Employers.Synchronization.csproj" t="IncludeRecursive" />
+                <e p="EventHandlers" t="Include">
+                  <e p="EmployersChangedHandler.cs" t="Include" />
+                  <e p="EmployerTypesChangedHandler.cs" t="Include" />
+                  <e p="Geographic" t="Include">
+                    <e p="AreasChangedHandler.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Events" t="Include">
+                  <e p="EmployersChanged.cs" t="Include" />
+                  <e p="EmployerTypesChanged.cs" t="Include" />
+                  <e p="Geographic" t="Include">
+                    <e p="AreasChanged.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.1" t="Include">
+                      <e p="Employers.Synchronization.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+            </e>
+            <e p="Login" t="Include">
+              <e p="Login.API" t="IncludeRecursive">
+                <e p="appsettings.Development.json" t="Include" />
+                <e p="appsettings.json" t="Include" />
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="Controllers" t="Include">
+                  <e p="ValuesController.cs" t="Include" />
+                </e>
+                <e p="Login.API.csproj" t="IncludeRecursive" />
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.2" t="Include">
+                      <e p="Login.API.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Program.cs" t="Include" />
+                <e p="Properties" t="Include">
+                  <e p="launchSettings.json" t="Include" />
+                </e>
+                <e p="Startup.cs" t="Include" />
+              </e>
+              <e p="Login.Db" t="IncludeRecursive">
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="Login.Db.csproj" t="IncludeRecursive" />
+                <e p="Models" t="Include">
+                  <e p="Applicant" t="Include">
+                    <e p="Applicant.cs" t="Include" />
+                  </e>
+                  <e p="BaseUser.cs" t="Include" />
+                  <e p="Claims" t="Include">
+                    <e p="BaseClaim.cs" t="Include" />
+                    <e p="EducationalInstitutionManagerClaim.cs" t="Include" />
+                    <e p="EmployerManagerClaim.cs" t="Include" />
+                  </e>
+                  <e p="Contacts" t="Include">
+                    <e p="Contact.cs" t="Include" />
+                    <e p="Phone.cs" t="Include" />
+                    <e p="Site.cs" t="Include" />
+                    <e p="SiteType.cs" t="Include" />
+                  </e>
+                  <e p="Gender.cs" t="Include" />
+                  <e p="Geographic" t="Include">
+                    <e p="Area.cs" t="Include" />
+                  </e>
+                  <e p="manager" t="Include">
+                    <e p="BaseManager.cs" t="Include" />
+                    <e p="EducationalInstitutionManager.cs" t="Include" />
+                    <e p="EmployerManager.cs" t="Include" />
+                  </e>
+                  <e p="Roles" t="Include" />
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.1" t="Include">
+                      <e p="Login.Db.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+            </e>
+            <e p="Notifications" t="Include">
+              <e p="Notifications.API" t="IncludeRecursive">
+                <e p="appsettings.Development.json" t="Include" />
+                <e p="appsettings.json" t="Include" />
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="Controllers" t="Include">
+                  <e p="ValuesController.cs" t="Include" />
+                </e>
+                <e p="Notifications.API.csproj" t="IncludeRecursive" />
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.2" t="Include">
+                      <e p="Notifications.API.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Program.cs" t="Include" />
+                <e p="Properties" t="Include">
+                  <e p="launchSettings.json" t="Include" />
+                </e>
+                <e p="Startup.cs" t="Include" />
+              </e>
+            </e>
+            <e p="PaidServices" t="Include">
+              <e p="PaidServices.API" t="IncludeRecursive">
+                <e p="appsettings.Development.json" t="Include" />
+                <e p="appsettings.json" t="Include" />
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="Controllers" t="Include">
+                  <e p="ValuesController.cs" t="Include" />
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.2" t="Include">
+                      <e p="PaidServices.API.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="PaidServices.API.csproj" t="IncludeRecursive" />
+                <e p="Program.cs" t="Include" />
+                <e p="Properties" t="Include">
+                  <e p="launchSettings.json" t="Include" />
+                </e>
+                <e p="Startup.cs" t="Include" />
+              </e>
+              <e p="PaidServices.Db" t="IncludeRecursive">
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="Constants" t="Include">
+                  <e p="TableNames.cs" t="Include" />
+                </e>
+                <e p="Maps" t="Include">
+                  <e p="ApplicantPaidServiceMap.cs" t="Include" />
+                  <e p="EducationalInstitutionPaidServiceMap.cs" t="Include" />
+                  <e p="EmployerPaidServiceMap.cs" t="Include" />
+                </e>
+                <e p="Models" t="Include">
+                  <e p="ApplicantPaidService.cs" t="Include" />
+                  <e p="BasePaidService.cs" t="Include" />
+                  <e p="EducationalInstitutionPaidService.cs" t="Include" />
+                  <e p="EmployerPaidService.cs" t="Include" />
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.1" t="Include">
+                      <e p="PaidServices.Db.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="PaidServices.Db.csproj" t="IncludeRecursive" />
+                <e p="PaidServicesDbContext.cs" t="Include" />
+                <e p="PaidServicesDbEntities.cs" t="Include" />
+              </e>
+              <e p="PaidServices.Dto" t="IncludeRecursive">
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="Models" t="Include">
+                  <e p="DtoApplicantPaidService.cs" t="Include" />
+                  <e p="DtoBasePaidService.cs" t="Include" />
+                  <e p="DtoEducationalInstitutionPaidService.cs" t="Include" />
+                  <e p="DtoEmployerPaidService.cs" t="Include" />
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.1" t="Include">
+                      <e p="PaidServices.Dto.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="PaidServices.Dto.csproj" t="IncludeRecursive" />
+                <e p="Profiles" t="Include">
+                  <e p="ApplicantPaidServiceProfile.cs" t="Include" />
+                  <e p="EducationalInstitutionPaidServiceProfile.cs" t="Include" />
+                  <e p="EmployerPaidServiceProfile.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Resumes" t="Include">
+              <e p="Resumes.API" t="IncludeRecursive">
+                <e p="appsettings.Development.json" t="Include" />
+                <e p="appsettings.json" t="Include" />
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="Controllers" t="Include">
+                  <e p="ValuesController.cs" t="Include" />
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.2" t="Include">
+                      <e p="Resumes.API.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Program.cs" t="Include" />
+                <e p="Properties" t="Include">
+                  <e p="launchSettings.json" t="Include" />
+                </e>
+                <e p="Resumes.API.csproj" t="IncludeRecursive" />
+                <e p="Startup.cs" t="Include" />
+              </e>
+              <e p="Resumes.Db" t="IncludeRecursive">
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="Constants" t="Include">
+                  <e p="TableNames.cs" t="Include" />
+                </e>
+                <e p="Maps" t="Include">
+                  <e p="Applicants" t="Include">
+                    <e p="ApplicantMap.cs" t="Include" />
+                    <e p="GenderMap.cs" t="Include" />
+                  </e>
+                  <e p="Certificates" t="Include">
+                    <e p="CertificatesMap.cs" t="Include" />
+                  </e>
+                  <e p="Driving" t="Include">
+                    <e p="DrivingLicenseTypeMap.cs" t="Include" />
+                    <e p="ResumeDrivingLicenseTypeMap.cs" t="Include" />
+                  </e>
+                  <e p="Educations" t="Include">
+                    <e p="EducationLevelMap.cs" t="Include" />
+                    <e p="EducationMap.cs" t="Include" />
+                    <e p="EducationSpecializationMap.cs" t="Include" />
+                  </e>
+                  <e p="Employments" t="Include">
+                    <e p="EmploymentMap.cs" t="Include" />
+                    <e p="ResumeEmploymentMap.cs" t="Include" />
+                  </e>
+                  <e p="Experiences" t="Include">
+                    <e p="ExperienceMap.cs" t="Include" />
+                  </e>
+                  <e p="Geographic" t="Include">
+                    <e p="AddressMap.cs" t="Include" />
+                    <e p="AreaMap.cs" t="Include" />
+                    <e p="Metro" t="Include">
+                      <e p="LineMap.cs" t="Include" />
+                      <e p="MetroMap.cs" t="Include" />
+                      <e p="StationMap.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="Industries" t="Include">
+                    <e p="IndustryMap.cs" t="Include" />
+                  </e>
+                  <e p="Languages" t="Include">
+                    <e p="LanguageLevelMap.cs" t="Include" />
+                    <e p="LanguageMap.cs" t="Include" />
+                    <e p="LanguageSkillMap.cs" t="Include" />
+                  </e>
+                  <e p="Negotiations" t="Include">
+                    <e p="ResponseMap.cs" t="Include" />
+                    <e p="ResumeNegotiationMap.cs" t="Include" />
+                  </e>
+                  <e p="ResumeAreas" t="Include">
+                    <e p="CitizenshipMap.cs" t="Include" />
+                    <e p="WorkTicketMap.cs" t="Include" />
+                  </e>
+                  <e p="ResumeMap.cs" t="Include" />
+                  <e p="Salaries" t="Include">
+                    <e p="CurrencyMap.cs" t="Include" />
+                    <e p="SalaryMap.cs" t="Include" />
+                  </e>
+                  <e p="Schedules" t="Include">
+                    <e p="ResumeScheduleMap.cs" t="Include" />
+                    <e p="ScheduleMap.cs" t="Include" />
+                  </e>
+                  <e p="Skills" t="Include">
+                    <e p="ResumeSkillMap.cs" t="Include" />
+                    <e p="SkillMap.cs" t="Include" />
+                  </e>
+                  <e p="Specializations" t="Include">
+                    <e p="ResumeSpecializationMap.cs" t="Include" />
+                    <e p="SpecializationMap.cs" t="Include" />
+                  </e>
+                  <e p="Statuses" t="Include">
+                    <e p="ResumeStatusMap.cs" t="Include" />
+                  </e>
+                  <e p="Travel" t="Include">
+                    <e p="BusinessTripReadinessMap.cs" t="Include" />
+                    <e p="Relocation" t="Include">
+                      <e p="RelocationPossibilityMap.cs" t="Include" />
+                      <e p="RelocationTypeMap.cs" t="Include" />
+                    </e>
+                    <e p="TravelTimeMap.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Models" t="Include">
+                  <e p="Applicants" t="Include">
+                    <e p="Applicant.cs" t="Include" />
+                    <e p="Gender.cs" t="Include" />
+                  </e>
+                  <e p="Certificates" t="Include">
+                    <e p="Certificate.cs" t="Include" />
+                  </e>
+                  <e p="Driving" t="Include">
+                    <e p="DrivingLicenseType.cs" t="Include" />
+                    <e p="ResumeDrivingLicenseType.cs" t="Include" />
+                  </e>
+                  <e p="Educations" t="Include">
+                    <e p="Education.cs" t="Include" />
+                    <e p="EducationalLevel.cs" t="Include" />
+                    <e p="EducationSpecialization.cs" t="Include" />
+                  </e>
+                  <e p="Employments" t="Include">
+                    <e p="Employment.cs" t="Include" />
+                    <e p="ResumeEmployment.cs" t="Include" />
+                  </e>
+                  <e p="Experiences" t="Include">
+                    <e p="Experience.cs" t="Include" />
+                  </e>
+                  <e p="Geographic" t="Include">
+                    <e p="Address.cs" t="Include" />
+                    <e p="Area.cs" t="Include" />
+                    <e p="Metro" t="Include">
+                      <e p="Line.cs" t="Include" />
+                      <e p="Metro.cs" t="Include" />
+                      <e p="Station.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="Industries" t="Include">
+                    <e p="Industry.cs" t="Include" />
+                  </e>
+                  <e p="Languages" t="Include">
+                    <e p="Language.cs" t="Include" />
+                    <e p="LanguageLevel.cs" t="Include" />
+                    <e p="LanguageSkill.cs" t="Include" />
+                  </e>
+                  <e p="Negotiations" t="Include">
+                    <e p="Response.cs" t="Include" />
+                    <e p="ResumeNegotiation.cs" t="Include" />
+                  </e>
+                  <e p="Resume.cs" t="Include" />
+                  <e p="ResumeAreas" t="Include">
+                    <e p="BaseResumeArea.cs" t="Include" />
+                    <e p="Citizenship.cs" t="Include" />
+                    <e p="WorkTicket.cs" t="Include" />
+                  </e>
+                  <e p="Salaries" t="Include">
+                    <e p="Currency.cs" t="Include" />
+                    <e p="Salary.cs" t="Include" />
+                  </e>
+                  <e p="Schedules" t="Include">
+                    <e p="ResumeSchedule.cs" t="Include" />
+                    <e p="Schedule.cs" t="Include" />
+                  </e>
+                  <e p="Skills" t="Include">
+                    <e p="ResumeSkill.cs" t="Include" />
+                    <e p="Skill.cs" t="Include" />
+                  </e>
+                  <e p="Specializations" t="Include">
+                    <e p="ResumeSpecialization.cs" t="Include" />
+                    <e p="Specialization.cs" t="Include" />
+                  </e>
+                  <e p="Statuses" t="Include">
+                    <e p="ResumeStatus.cs" t="Include" />
+                  </e>
+                  <e p="Travel" t="Include">
+                    <e p="BusinessTripReadness.cs" t="Include" />
+                    <e p="Relocation" t="Include">
+                      <e p="RelocationPossibility.cs" t="Include" />
+                      <e p="RelocationType.cs" t="Include" />
+                    </e>
+                    <e p="TravelTime.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.1" t="Include">
+                      <e p="Resumes.Db.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Resumes.Db.csproj" t="IncludeRecursive" />
+                <e p="ResumesDbContext.cs" t="Include" />
+                <e p="ResumesDbEntities.cs" t="Include" />
+              </e>
+              <e p="Resumes.Dto" t="IncludeRecursive">
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="Models" t="Include">
+                  <e p="Applicants" t="Include">
+                    <e p="DtoApplicant.cs" t="Include" />
+                    <e p="DtoGender.cs" t="Include" />
+                  </e>
+                  <e p="Certificates" t="Include">
+                    <e p="DtoCertificate.cs" t="Include" />
+                  </e>
+                  <e p="Driving" t="Include">
+                    <e p="DtoDrivingLicenseType.cs" t="Include" />
+                    <e p="DtoResumeDrivingLicenseType.cs" t="Include" />
+                  </e>
+                  <e p="DtoResume.cs" t="Include" />
+                  <e p="Educations" t="Include">
+                    <e p="DtoEducation.cs" t="Include" />
+                    <e p="DtoEducationalLevel.cs" t="Include" />
+                    <e p="DtoEducationSpecialization.cs" t="Include" />
+                  </e>
+                  <e p="Employments" t="Include">
+                    <e p="DtoEmployment.cs" t="Include" />
+                    <e p="DtoResumeEmployment.cs" t="Include" />
+                  </e>
+                  <e p="Experiences" t="Include">
+                    <e p="DtoExperience.cs" t="Include" />
+                  </e>
+                  <e p="Geographic" t="Include">
+                    <e p="DtoAddress.cs" t="Include" />
+                    <e p="DtoArea.cs" t="Include" />
+                    <e p="Metro" t="Include">
+                      <e p="DtoLine.cs" t="Include" />
+                      <e p="DtoMetro.cs" t="Include" />
+                      <e p="DtoStation.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="Industries" t="Include">
+                    <e p="DtoIndustry.cs" t="Include" />
+                  </e>
+                  <e p="Languages" t="Include">
+                    <e p="DtoLanguage.cs" t="Include" />
+                    <e p="DtoLanguageLevel.cs" t="Include" />
+                    <e p="DtoLanguageSkill.cs" t="Include" />
+                  </e>
+                  <e p="Negotiations" t="Include">
+                    <e p="DtoResponse.cs" t="Include" />
+                    <e p="DtoResumeNegotiation.cs" t="Include" />
+                  </e>
+                  <e p="ResumeAreas" t="Include">
+                    <e p="DtoBaseResumeArea.cs" t="Include" />
+                    <e p="DtoCitizenship.cs" t="Include" />
+                    <e p="DtoWorkTicket.cs" t="Include" />
+                  </e>
+                  <e p="Salaries" t="Include">
+                    <e p="DtoCurrency.cs" t="Include" />
+                    <e p="DtoSalary.cs" t="Include" />
+                  </e>
+                  <e p="Schedules" t="Include">
+                    <e p="DtoResumeSchedule.cs" t="Include" />
+                    <e p="DtoSchedule.cs" t="Include" />
+                  </e>
+                  <e p="Skills" t="Include">
+                    <e p="DtoResumeSkill.cs" t="Include" />
+                    <e p="DtoSkill.cs" t="Include" />
+                  </e>
+                  <e p="Specializations" t="Include">
+                    <e p="DtoResumeSpecialization.cs" t="Include" />
+                    <e p="DtoSpecialization.cs" t="Include" />
+                  </e>
+                  <e p="Statuses" t="Include">
+                    <e p="DtoResumeStatus.cs" t="Include" />
+                  </e>
+                  <e p="Travel" t="Include">
+                    <e p="DtoBusinessTripReadness.cs" t="Include" />
+                    <e p="DtoTravelTime.cs" t="Include" />
+                    <e p="Relocation" t="Include">
+                      <e p="DtoRelocationPossibility.cs" t="Include" />
+                      <e p="DtoRelocationType.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.1" t="Include">
+                      <e p="Resumes.Dto.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Resumes.Dto.csproj" t="IncludeRecursive" />
+              </e>
+              <e p="Resumes.Synchronization" t="IncludeRecursive">
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="EventHandlers" t="Include">
+                  <e p="Applicants" t="Include">
+                    <e p="ApplicantsChangedHandler.cs" t="Include" />
+                  </e>
+                  <e p="Driving" t="Include">
+                    <e p="DrivingLicenseTypesChangedHandler.cs" t="Include" />
+                  </e>
+                  <e p="Educations" t="Include">
+                    <e p="EducationalLevelsChangedHandler.cs" t="Include" />
+                  </e>
+                  <e p="Geographic" t="Include">
+                    <e p="AreasChangedHandler.cs" t="Include" />
+                    <e p="Metro" t="Include">
+                      <e p="LinesChangedHandler.cs" t="Include" />
+                      <e p="MetroChangedHandler.cs" t="Include" />
+                      <e p="StationsChangedHandler.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Events" t="Include">
+                  <e p="Applicants" t="Include">
+                    <e p="ApplicantsChanged.cs" t="Include" />
+                  </e>
+                  <e p="Driving" t="Include">
+                    <e p="DrivingLicenseTypesChanged.cs" t="Include" />
+                  </e>
+                  <e p="Educations" t="Include">
+                    <e p="EducationalLevelsChanged.cs" t="Include" />
+                  </e>
+                  <e p="Employments" t="Include">
+                    <e p="EmploymentsChanged.cs" t="Include" />
+                  </e>
+                  <e p="Geographic" t="Include">
+                    <e p="AreasChanged.cs" t="Include" />
+                    <e p="Metro" t="Include">
+                      <e p="LinesChanged.cs" t="Include" />
+                      <e p="MetroChanged.cs" t="Include" />
+                      <e p="StationsChanged.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="Industries" t="Include">
+                    <e p="IndustriesChanged.cs" t="Include" />
+                  </e>
+                  <e p="Languages" t="Include">
+                    <e p="LanguageLevelsChanged.cs" t="Include" />
+                    <e p="LanguagesChanged.cs" t="Include" />
+                  </e>
+                  <e p="Negotiations" t="Include">
+                    <e p="ResponsesChanged.cs" t="Include" />
+                  </e>
+                  <e p="Salaries" t="Include">
+                    <e p="CurrenciesChanged.cs" t="Include" />
+                  </e>
+                  <e p="Schedules" t="Include">
+                    <e p="SchedulesChanged.cs" t="Include" />
+                  </e>
+                  <e p="Skills" t="Include">
+                    <e p="SkillsChanged.cs" t="Include" />
+                  </e>
+                  <e p="Specializations" t="Include">
+                    <e p="SpecializationsChanged.cs" t="Include" />
+                  </e>
+                  <e p="Statuses" t="Include">
+                    <e p="ResumeStatusesChanged.cs" t="Include" />
+                    <e p="VacancyStatusesChanged.cs" t="Include" />
+                  </e>
+                  <e p="Users" t="Include">
+                    <e p="GendersChanged.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.2" t="Include">
+                      <e p="Resumes.Synchronization.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Resumes.Synchronization.csproj" t="IncludeRecursive" />
+              </e>
+            </e>
+            <e p="Tests" t="Include">
+              <e p="Tests.API" t="IncludeRecursive">
+                <e p="appsettings.Development.json" t="Include" />
+                <e p="appsettings.json" t="Include" />
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="Controllers" t="Include">
+                  <e p="ValuesController.cs" t="Include" />
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.2" t="Include">
+                      <e p="Tests.API.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Program.cs" t="Include" />
+                <e p="Properties" t="Include">
+                  <e p="launchSettings.json" t="Include" />
+                </e>
+                <e p="Startup.cs" t="Include" />
+                <e p="Tests.API.csproj" t="IncludeRecursive" />
+              </e>
+            </e>
+            <e p="Vacancies" t="Include">
+              <e p="Vacancies.API" t="IncludeRecursive">
+                <e p="appsettings.Development.json" t="Include" />
+                <e p="appsettings.json" t="Include" />
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="Controllers" t="Include">
+                  <e p="ValuesController.cs" t="Include" />
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.2" t="Include">
+                      <e p="Vacancies.API.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Program.cs" t="Include" />
+                <e p="Properties" t="Include">
+                  <e p="launchSettings.json" t="Include" />
+                </e>
+                <e p="Startup.cs" t="Include" />
+                <e p="Vacancies.API.csproj" t="IncludeRecursive" />
+              </e>
+              <e p="Vacancies.Db" t="IncludeRecursive">
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="Constants" t="Include">
+                  <e p="TableNames.cs" t="Include" />
+                </e>
+                <e p="Maps" t="Include">
+                  <e p="Driving" t="Include">
+                    <e p="DrivingLicenseTypeMap.cs" t="Include" />
+                    <e p="VacancyDrivingLicenseTypeMap.cs" t="Include" />
+                  </e>
+                  <e p="Employers" t="Include">
+                    <e p="EmployerMap.cs" t="Include" />
+                  </e>
+                  <e p="Employments" t="Include">
+                    <e p="EmploymentMap.cs" t="Include" />
+                  </e>
+                  <e p="Geographic" t="Include">
+                    <e p="AddressMap.cs" t="Include" />
+                    <e p="AreaMap.cs" t="Include" />
+                    <e p="Metro" t="Include">
+                      <e p="LineMap.cs" t="Include" />
+                      <e p="MetroMap.cs" t="Include" />
+                      <e p="StationMap.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="Industries" t="Include">
+                    <e p="IndustryMap.cs" t="Include" />
+                  </e>
+                  <e p="Languages" t="Include">
+                    <e p="LanguageLevelMap.cs" t="Include" />
+                    <e p="LanguageMap.cs" t="Include" />
+                    <e p="LanguageSkillMap.cs" t="Include" />
+                  </e>
+                  <e p="Negotiations" t="Include">
+                    <e p="ResponseMap.cs" t="Include" />
+                    <e p="VacancyNegotiationMap.cs" t="Include" />
+                  </e>
+                  <e p="Salaries" t="Include">
+                    <e p="CurrencyMap.cs" t="Include" />
+                    <e p="SalaryMap.cs" t="Include" />
+                  </e>
+                  <e p="Schedules" t="Include">
+                    <e p="ScheduleMap.cs" t="Include" />
+                  </e>
+                  <e p="Skills" t="Include">
+                    <e p="SkillMap.cs" t="Include" />
+                    <e p="VacancySkillMap.cs" t="Include" />
+                  </e>
+                  <e p="Statuses" t="Include">
+                    <e p="VacancyStatusMap.cs" t="Include" />
+                  </e>
+                  <e p="Tests" t="Include">
+                    <e p="VacancyTestMap.cs" t="Include" />
+                  </e>
+                  <e p="VacancyMap.cs" t="Include" />
+                </e>
+                <e p="Models" t="Include">
+                  <e p="Driving" t="Include">
+                    <e p="DrivingLicenseType.cs" t="Include" />
+                    <e p="VacancyDrivingLicenseType.cs" t="Include" />
+                  </e>
+                  <e p="Employers" t="Include">
+                    <e p="Department.cs" t="Include" />
+                    <e p="Employer.cs" t="Include" />
+                  </e>
+                  <e p="Employments" t="Include">
+                    <e p="Employment.cs" t="Include" />
+                  </e>
+                  <e p="Geographic" t="Include">
+                    <e p="Address.cs" t="Include" />
+                    <e p="Area.cs" t="Include" />
+                    <e p="Metro" t="Include">
+                      <e p="Line.cs" t="Include" />
+                      <e p="Metro.cs" t="Include" />
+                      <e p="Station.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="Industries" t="Include">
+                    <e p="Industry.cs" t="Include" />
+                  </e>
+                  <e p="Languages" t="Include">
+                    <e p="Language.cs" t="Include" />
+                    <e p="LanguageLevel.cs" t="Include" />
+                    <e p="LanguageSkill.cs" t="Include" />
+                  </e>
+                  <e p="Negotiations" t="Include">
+                    <e p="Response.cs" t="Include" />
+                    <e p="VacancyNegotiation.cs" t="Include" />
+                  </e>
+                  <e p="Salaries" t="Include">
+                    <e p="Currency.cs" t="Include" />
+                    <e p="Salary.cs" t="Include" />
+                  </e>
+                  <e p="Schedules" t="Include">
+                    <e p="Schedule.cs" t="Include" />
+                  </e>
+                  <e p="Skills" t="Include">
+                    <e p="Skill.cs" t="Include" />
+                    <e p="VacancySkill.cs" t="Include" />
+                  </e>
+                  <e p="Statuses" t="Include">
+                    <e p="VacancyStatus.cs" t="Include" />
+                  </e>
+                  <e p="Tests" t="Include">
+                    <e p="VacancyTest.cs" t="Include" />
+                  </e>
+                  <e p="Vacancy.cs" t="Include" />
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.1" t="Include">
+                      <e p="Vacancies.Db.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Vacancies.Db.csproj" t="IncludeRecursive" />
+                <e p="VacanciesDbContext.cs" t="Include" />
+                <e p="VacanciesDbEntities.cs" t="Include" />
+              </e>
+              <e p="Vacancies.Dto" t="IncludeRecursive">
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="Models" t="Include">
+                  <e p="Driving" t="Include">
+                    <e p="DtoDrivingLicenseType.cs" t="Include" />
+                    <e p="DtoVacancyDrivingLicenseType.cs" t="Include" />
+                  </e>
+                  <e p="DtoVacancy.cs" t="Include" />
+                  <e p="Employers" t="Include">
+                    <e p="DtoDepartment.cs" t="Include" />
+                    <e p="DtoEmployer.cs" t="Include" />
+                  </e>
+                  <e p="Employments" t="Include">
+                    <e p="DtoEmployment.cs" t="Include" />
+                  </e>
+                  <e p="Geographic" t="Include">
+                    <e p="DtoAddress.cs" t="Include" />
+                    <e p="DtoArea.cs" t="Include" />
+                    <e p="Metro" t="Include">
+                      <e p="DtoLine.cs" t="Include" />
+                      <e p="DtoMetro.cs" t="Include" />
+                      <e p="DtoStation.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="Industries" t="Include">
+                    <e p="DtoIndustry.cs" t="Include" />
+                  </e>
+                  <e p="Languages" t="Include">
+                    <e p="DtoLanguage.cs" t="Include" />
+                    <e p="DtoLanguageLevel.cs" t="Include" />
+                    <e p="DtoLanguageSkill.cs" t="Include" />
+                  </e>
+                  <e p="Negotiations" t="Include">
+                    <e p="DtoResponse.cs" t="Include" />
+                    <e p="DtoVacancyNegotiation.cs" t="Include" />
+                  </e>
+                  <e p="Salaries" t="Include">
+                    <e p="DtoCurrency.cs" t="Include" />
+                    <e p="DtoSalary.cs" t="Include" />
+                  </e>
+                  <e p="Schedules" t="Include">
+                    <e p="DtoSchedule.cs" t="Include" />
+                  </e>
+                  <e p="Skills" t="Include">
+                    <e p="DtoSkill.cs" t="Include" />
+                    <e p="DtoVacancySkill.cs" t="Include" />
+                  </e>
+                  <e p="Statuses" t="Include">
+                    <e p="DtoVacancyStatus.cs" t="Include" />
+                  </e>
+                  <e p="Tests" t="Include">
+                    <e p="DtoVacancyTest.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.1" t="Include">
+                      <e p="Vacancies.Dto.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Vacancies.Dto.csproj" t="IncludeRecursive" />
+              </e>
+            </e>
+          </e>
+          <e p="Integration" t="Include">
+            <e p="Dictionaries" t="Include">
+              <e p="Dictionaries.API" t="IncludeRecursive">
+                <e p="appsettings.Development.json" t="Include" />
+                <e p="appsettings.json" t="Include" />
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="Controllers" t="Include">
+                  <e p="ValuesController.cs" t="Include" />
+                </e>
+                <e p="Dictionaries.API.csproj" t="IncludeRecursive" />
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.2" t="Include">
+                      <e p="Dictionaries.API.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Program.cs" t="Include" />
+                <e p="Properties" t="Include">
+                  <e p="launchSettings.json" t="Include" />
+                </e>
+                <e p="Startup.cs" t="Include" />
+              </e>
+              <e p="Dictionaries.Db" t="IncludeRecursive">
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="Constants" t="Include">
+                  <e p="TableNames.cs" t="Include" />
+                </e>
+                <e p="Dictionaries.Db.csproj" t="IncludeRecursive" />
+                <e p="DictionariesDbContext.cs" t="Include" />
+                <e p="DictionariesDbEntities.cs" t="Include" />
+                <e p="Maps" t="Include">
+                  <e p="Driving" t="Include">
+                    <e p="DriverLicenseTypeMap.cs" t="Include" />
+                  </e>
+                  <e p="Educations" t="Include">
+                    <e p="EducationalLevelMap.cs" t="Include" />
+                  </e>
+                  <e p="Employer" t="Include">
+                    <e p="EmployerTypeMap.cs" t="Include" />
+                  </e>
+                  <e p="Employments" t="Include">
+                    <e p="EmploymentMap.cs" t="Include" />
+                  </e>
+                  <e p="Geographic" t="Include">
+                    <e p="AreaMap.cs" t="Include" />
+                    <e p="Metro" t="Include">
+                      <e p="LineMap.cs" t="Include" />
+                      <e p="MetroMap.cs" t="Include" />
+                      <e p="StationMap.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="Industries" t="Include">
+                    <e p="IndustryMap.cs" t="Include" />
+                  </e>
+                  <e p="Languages" t="Include">
+                    <e p="LanguageLevelMap.cs" t="Include" />
+                    <e p="LanguageMap.cs" t="Include" />
+                  </e>
+                  <e p="Negotiations" t="Include">
+                    <e p="ResponseMap.cs" t="Include" />
+                  </e>
+                  <e p="Salaries" t="Include">
+                    <e p="CurrencyMap.cs" t="Include" />
+                  </e>
+                  <e p="Schedules" t="Include">
+                    <e p="ScheduleMap.cs" t="Include" />
+                  </e>
+                  <e p="Skills" t="Include">
+                    <e p="SkillMap.cs" t="Include" />
+                  </e>
+                  <e p="Specializations" t="Include">
+                    <e p="SpecializationMap.cs" t="Include" />
+                  </e>
+                  <e p="Statuses" t="Include">
+                    <e p="ResumeStatusMap.cs" t="Include" />
+                    <e p="VacancyStatusMap.cs" t="Include" />
+                  </e>
+                  <e p="Users" t="Include">
+                    <e p="GenderMap.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Models" t="Include">
+                  <e p="Driving" t="Include">
+                    <e p="DrivingLicenseType.cs" t="Include" />
+                  </e>
+                  <e p="Educations" t="Include">
+                    <e p="EducationalLevel.cs" t="Include" />
+                  </e>
+                  <e p="Employer" t="Include">
+                    <e p="EmployerType.cs" t="Include" />
+                  </e>
+                  <e p="Employments" t="Include">
+                    <e p="Employment.cs" t="Include" />
+                  </e>
+                  <e p="Geographic" t="Include">
+                    <e p="Area.cs" t="Include" />
+                    <e p="Metro" t="Include">
+                      <e p="Line.cs" t="Include" />
+                      <e p="Metro.cs" t="Include" />
+                      <e p="Station.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="Industries" t="Include">
+                    <e p="Industry.cs" t="Include" />
+                  </e>
+                  <e p="Languages" t="Include">
+                    <e p="Language.cs" t="Include" />
+                    <e p="LanguageLevel.cs" t="Include" />
+                  </e>
+                  <e p="Negotiations" t="Include">
+                    <e p="Response.cs" t="Include" />
+                  </e>
+                  <e p="Salaries" t="Include">
+                    <e p="Currency.cs" t="Include" />
+                  </e>
+                  <e p="Schedules" t="Include">
+                    <e p="Schedule.cs" t="Include" />
+                  </e>
+                  <e p="Skills" t="Include">
+                    <e p="Skill.cs" t="Include" />
+                  </e>
+                  <e p="Specializations" t="Include">
+                    <e p="Specialization.cs" t="Include" />
+                  </e>
+                  <e p="Statuses" t="Include">
+                    <e p="ResumeStatus.cs" t="Include" />
+                    <e p="VacancyStatus.cs" t="Include" />
+                  </e>
+                  <e p="Users" t="Include">
+                    <e p="Gender.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.1" t="Include">
+                      <e p="Dictionaries.Db.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+              <e p="Dictionaries.Dto" t="IncludeRecursive">
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="Dictionaries.Dto.csproj" t="IncludeRecursive" />
+                <e p="Models" t="Include">
+                  <e p="Driving" t="Include">
+                    <e p="DtoDrivingLicenseType.cs" t="Include" />
+                  </e>
+                  <e p="Educations" t="Include">
+                    <e p="DtoEducationalLevel.cs" t="Include" />
+                  </e>
+                  <e p="Employer" t="Include">
+                    <e p="DtoEmployerType.cs" t="Include" />
+                  </e>
+                  <e p="Employments" t="Include">
+                    <e p="DtoEmployment.cs" t="Include" />
+                  </e>
+                  <e p="Geographic" t="Include">
+                    <e p="DtoArea.cs" t="Include" />
+                    <e p="Metro" t="Include">
+                      <e p="DtoLine.cs" t="Include" />
+                      <e p="DtoMetro.cs" t="Include" />
+                      <e p="DtoStation.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="Industries" t="Include">
+                    <e p="DtoIndustry.cs" t="Include" />
+                  </e>
+                  <e p="Languages" t="Include">
+                    <e p="DtoLanguage.cs" t="Include" />
+                    <e p="DtoLanguageLevel.cs" t="Include" />
+                  </e>
+                  <e p="Negotiations" t="Include">
+                    <e p="DtoResponse.cs" t="Include" />
+                  </e>
+                  <e p="Salaries" t="Include">
+                    <e p="DtoCurrency.cs" t="Include" />
+                  </e>
+                  <e p="Schedules" t="Include">
+                    <e p="DtoSchedule.cs" t="Include" />
+                  </e>
+                  <e p="Skills" t="Include">
+                    <e p="DtoSkill.cs" t="Include" />
+                  </e>
+                  <e p="Specializations" t="Include">
+                    <e p="DtoSpecialization.cs" t="Include" />
+                  </e>
+                  <e p="Statuses" t="Include">
+                    <e p="DtoResumeStatus.cs" t="Include" />
+                    <e p="DtoVacancyStatus.cs" t="Include" />
+                  </e>
+                  <e p="Users" t="Include">
+                    <e p="DtoGender.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.1" t="Include">
+                      <e p="Dictionaries.Dto.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+              <e p="Dictionaries.EventBus" t="IncludeRecursive">
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="Dictionaries.EventBus.csproj" t="IncludeRecursive" />
+                <e p="Events" t="Include">
+                  <e p="Driving" t="Include">
+                    <e p="DrivingLicenseTypesChanged.cs" t="Include" />
+                  </e>
+                  <e p="Educations" t="Include">
+                    <e p="EducationalLevelsChanged.cs" t="Include" />
+                  </e>
+                  <e p="Employer" t="Include">
+                    <e p="EmployerTypesChanged.cs" t="Include" />
+                  </e>
+                  <e p="Employments" t="Include">
+                    <e p="EmploymentsChanged.cs" t="Include" />
+                  </e>
+                  <e p="Geographic" t="Include">
+                    <e p="AreasChanged.cs" t="Include" />
+                    <e p="Metro" t="Include">
+                      <e p="LinesChanged.cs" t="Include" />
+                      <e p="MetroChanged.cs" t="Include" />
+                      <e p="StationsChanged.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="Industries" t="Include">
+                    <e p="IndustriesChanged.cs" t="Include" />
+                  </e>
+                  <e p="Languages" t="Include">
+                    <e p="LanguageLevelsChanged.cs" t="Include" />
+                    <e p="LanguagesChanged.cs" t="Include" />
+                  </e>
+                  <e p="Negotiations" t="Include">
+                    <e p="ResponsesChanged.cs" t="Include" />
+                  </e>
+                  <e p="Salaries" t="Include">
+                    <e p="CurrenciesChanged.cs" t="Include" />
+                  </e>
+                  <e p="Schedules" t="Include">
+                    <e p="SchedulesChanged.cs" t="Include" />
+                  </e>
+                  <e p="Skills" t="Include">
+                    <e p="SkillsChanged.cs" t="Include" />
+                  </e>
+                  <e p="Specializations" t="Include">
+                    <e p="SpecializationsChanged.cs" t="Include" />
+                  </e>
+                  <e p="Statuses" t="Include">
+                    <e p="ResumeStatusesChanged.cs" t="Include" />
+                    <e p="VacancyStatusesChanged.cs" t="Include" />
+                  </e>
+                  <e p="Users" t="Include">
+                    <e p="GendersChanged.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.1" t="Include">
+                      <e p="Dictionaries.EventBus.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+            </e>
+          </e>
+          <e p="Technical" t="Include">
+            <e p="EmailNotifications" t="Include">
+              <e p="EmailNotifications.API" t="IncludeRecursive">
+                <e p="appsettings.Development.json" t="Include" />
+                <e p="appsettings.json" t="Include" />
+                <e p="bin" t="ExcludeRecursive" />
+                <e p="EmailNotifications.API.csproj" t="IncludeRecursive" />
+                <e p="obj" t="ExcludeRecursive">
+                  <e p="Debug" t="Include">
+                    <e p="netcoreapp2.2" t="Include">
+                      <e p="EmailNotifications.API.AssemblyInfo.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Program.cs" t="Include" />
+                <e p="Properties" t="Include">
+                  <e p="launchSettings.json" t="Include" />
+                </e>
+                <e p="Startup.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="WebApp" t="IncludeRecursive">
+          <e p=".gitignore" t="Include" />
+          <e p="appsettings.Development.json" t="Include" />
+          <e p="appsettings.json" t="Include" />
+          <e p="bin" t="ExcludeRecursive" />
+          <e p="ClientApp" t="Include">
+            <e p=".gitignore" t="Include" />
+            <e p="config" t="Include">
+              <e p="env.js" t="Include" />
+              <e p="jest" t="Include">
+                <e p="cssTransform.js" t="Include" />
+                <e p="fileTransform.js" t="Include" />
+              </e>
+              <e p="paths.js" t="Include" />
+              <e p="polyfills.js" t="Include" />
+              <e p="webpack.config.dev.js" t="Include" />
+              <e p="webpack.config.prod.js" t="Include" />
+              <e p="webpackDevServer.config.js" t="Include" />
+            </e>
+            <e p="node_modules" t="ExcludeRecursive">
+              <e p="autoprefixer" t="IncludeRecursive" />
+              <e p="babel-core" t="IncludeRecursive" />
+              <e p="babel-eslint" t="IncludeRecursive" />
+              <e p="babel-jest" t="IncludeRecursive" />
+              <e p="babel-loader" t="IncludeRecursive" />
+              <e p="babel-preset-react-app" t="IncludeRecursive" />
+              <e p="babel-runtime" t="IncludeRecursive" />
+              <e p="bootstrap" t="IncludeRecursive" />
+              <e p="case-sensitive-paths-webpack-plugin" t="IncludeRecursive" />
+              <e p="chalk" t="IncludeRecursive" />
+              <e p="css-loader" t="IncludeRecursive" />
+              <e p="dotenv" t="IncludeRecursive" />
+              <e p="eslint" t="IncludeRecursive" />
+              <e p="eslint-config-react-app" t="IncludeRecursive" />
+              <e p="eslint-loader" t="IncludeRecursive" />
+              <e p="eslint-plugin-flowtype" t="IncludeRecursive" />
+              <e p="eslint-plugin-import" t="IncludeRecursive" />
+              <e p="eslint-plugin-jsx-a11y" t="IncludeRecursive" />
+              <e p="eslint-plugin-react" t="IncludeRecursive" />
+              <e p="extract-text-webpack-plugin" t="IncludeRecursive" />
+              <e p="file-loader" t="IncludeRecursive" />
+              <e p="fs-extra" t="IncludeRecursive" />
+              <e p="html-webpack-plugin" t="IncludeRecursive" />
+              <e p="jest" t="IncludeRecursive" />
+              <e p="object-assign" t="IncludeRecursive" />
+              <e p="postcss-flexbugs-fixes" t="IncludeRecursive" />
+              <e p="postcss-loader" t="IncludeRecursive" />
+              <e p="promise" t="IncludeRecursive" />
+              <e p="prop-types" t="IncludeRecursive" />
+              <e p="raf" t="IncludeRecursive" />
+              <e p="react" t="IncludeRecursive" />
+              <e p="react-dev-utils" t="IncludeRecursive" />
+              <e p="react-dom" t="IncludeRecursive" />
+              <e p="react-redux" t="IncludeRecursive" />
+              <e p="react-router-bootstrap" t="IncludeRecursive" />
+              <e p="react-router-dom" t="IncludeRecursive" />
+              <e p="react-router-redux" t="IncludeRecursive" />
+              <e p="redux" t="IncludeRecursive" />
+              <e p="redux-thunk" t="IncludeRecursive" />
+              <e p="rimraf" t="IncludeRecursive" />
+              <e p="style-loader" t="IncludeRecursive" />
+              <e p="sw-precache-webpack-plugin" t="IncludeRecursive" />
+              <e p="url-loader" t="IncludeRecursive" />
+              <e p="webpack" t="IncludeRecursive" />
+              <e p="webpack-dev-server" t="IncludeRecursive" />
+              <e p="webpack-manifest-plugin" t="IncludeRecursive" />
+              <e p="whatwg-fetch" t="IncludeRecursive" />
+            </e>
+            <e p="package.json" t="Include" />
+            <e p="public" t="Include">
+              <e p="index.html" t="Include" />
+            </e>
+            <e p="README.md" t="Include" />
+            <e p="scripts" t="Include">
+              <e p="build.js" t="Include" />
+              <e p="start.js" t="Include" />
+              <e p="test.js" t="Include" />
+            </e>
+            <e p="src" t="Include">
+              <e p="elements" t="Include">
+                <e p="button" t="Include">
+                  <e p="Button.jsx" t="Include" />
+                  <e p="Button.styl" t="Include" />
+                  <e p="index.js" t="Include" />
+                </e>
+                <e p="input" t="Include">
+                  <e p="index.js" t="Include" />
+                  <e p="Input.jsx" t="Include" />
+                  <e p="Input.styl" t="Include" />
+                </e>
+              </e>
+              <e p="features" t="Include">
+                <e p="auth" t="Include">
+                  <e p="index.js" t="Include" />
+                  <e p="redux" t="Include">
+                    <e p="actions" t="Include">
+                      <e p="index.js" t="Include" />
+                    </e>
+                    <e p="data" t="Include">
+                      <e p="dictionary.js" t="Include" />
+                      <e p="types.js" t="Include" />
+                    </e>
+                    <e p="reducers" t="Include">
+                      <e p="index.js" t="Include" />
+                    </e>
+                  </e>
+                  <e p="view" t="Include">
+                    <e p="authModal" t="Include">
+                      <e p="AuthModal.jsx" t="Include" />
+                      <e p="AuthModal.styl" t="Include" />
+                    </e>
+                    <e p="authWrapper" t="Include">
+                      <e p="AuthWrapper.jsx" t="Include" />
+                      <e p="AuthWrapper.styl" t="Include" />
+                    </e>
+                    <e p="regModal" t="Include">
+                      <e p="RegModal.jsx" t="Include" />
+                      <e p="RegModal.styl" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+              <e p="index.js" t="Include" />
+              <e p="modules" t="Include">
+                <e p="app" t="Include">
+                  <e p="index.js" t="Include" />
+                  <e p="view" t="Include">
+                    <e p="App.jsx" t="Include" />
+                    <e p="App.styl" t="Include" />
+                  </e>
+                </e>
+                <e p="content" t="Include">
+                  <e p="index.js" t="Include" />
+                  <e p="manager.js" t="Include" />
+                  <e p="view" t="Include">
+                    <e p="manager" t="Include">
+                      <e p="Content.jsx" t="Include" />
+                      <e p="Content.styl" t="Include" />
+                    </e>
+                    <e p="worker" t="Include">
+                      <e p="Content.jsx" t="Include" />
+                      <e p="Content.styl" t="Include" />
+                    </e>
+                  </e>
+                  <e p="worker.js" t="Include" />
+                </e>
+                <e p="footer" t="Include">
+                  <e p="index.js" t="Include" />
+                  <e p="redux" t="Include">
+                    <e p="data" t="Include">
+                      <e p="dictionary.js" t="Include" />
+                    </e>
+                  </e>
+                  <e p="view" t="Include">
+                    <e p="Footer.jsx" t="Include" />
+                    <e p="Footer.styl" t="Include" />
+                  </e>
+                </e>
+                <e p="header" t="Include">
+                  <e p="img" t="Include">
+                    <e p="logo.png" t="Include" />
+                  </e>
+                  <e p="index.js" t="Include" />
+                  <e p="view" t="Include">
+                    <e p="Header.jsx" t="Include" />
+                    <e p="Header.styl" t="Include" />
+                  </e>
+                </e>
+                <e p="info" t="Include">
+                  <e p="index.js" t="Include" />
+                  <e p="redux" t="Include">
+                    <e p="data" t="Include">
+                      <e p="dictionary.js" t="Include" />
+                    </e>
+                  </e>
+                  <e p="view" t="Include">
+                    <e p="info" t="Include">
+                      <e p="Info.jsx" t="Include" />
+                      <e p="Info.styl" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="nav" t="Include">
+                  <e p="data" t="Include">
+                    <e p="dictionary.js" t="Include" />
+                  </e>
+                  <e p="index.js" t="Include" />
+                  <e p="manager.js" t="Include" />
+                  <e p="view" t="Include">
+                    <e p="manager" t="Include">
+                      <e p="nav" t="Include">
+                        <e p="Nav.jsx" t="Include" />
+                        <e p="Nav.styl" t="Include" />
+                      </e>
+                      <e p="navItem" t="Include">
+                        <e p="NavItem.jsx" t="Include" />
+                        <e p="NavItem.styl" t="Include" />
+                      </e>
+                    </e>
+                    <e p="worker" t="Include">
+                      <e p="nav" t="Include">
+                        <e p="Nav.jsx" t="Include" />
+                        <e p="Nav.styl" t="Include" />
+                      </e>
+                      <e p="navItem" t="Include">
+                        <e p="NavItem.jsx" t="Include" />
+                        <e p="NavItem.styl" t="Include" />
+                      </e>
+                    </e>
+                  </e>
+                  <e p="worker.js" t="Include" />
+                </e>
+                <e p="profile" t="Include">
+                  <e p="index.js" t="Include" />
+                  <e p="manager.js" t="Include" />
+                  <e p="view" t="Include">
+                    <e p="worker" t="Include">
+                      <e p="profile" t="Include">
+                        <e p="Profile.jsx" t="Include" />
+                        <e p="Profile.styl" t="Include" />
+                      </e>
+                    </e>
+                  </e>
+                  <e p="worker.js" t="Include" />
+                </e>
+                <e p="Resumes" t="Include">
+                  <e p="index.js" t="Include" />
+                  <e p="manager.js" t="Include" />
+                  <e p="redux" t="Include">
+                    <e p="actions" t="Include">
+                      <e p="index.js" t="Include" />
+                    </e>
+                    <e p="api" t="Include">
+                      <e p="index.js" t="Include" />
+                    </e>
+                    <e p="data" t="Include">
+                      <e p="dictionary.js" t="Include" />
+                    </e>
+                    <e p="reducers" t="Include">
+                      <e p="index.js" t="Include" />
+                    </e>
+                  </e>
+                  <e p="view" t="Include">
+                    <e p="manager" t="Include">
+                      <e p="itemResume" t="Include">
+                        <e p="ItemResume.jsx" t="Include" />
+                        <e p="ItemResume.styl" t="Include" />
+                      </e>
+                      <e p="listResume" t="Include">
+                        <e p="ListResume.jsx" t="Include" />
+                        <e p="ListResume.styl" t="Include" />
+                      </e>
+                      <e p="Resumes" t="Include">
+                        <e p="Resumes.jsx" t="Include" />
+                        <e p="Resumes.styl" t="Include" />
+                      </e>
+                    </e>
+                    <e p="worker" t="Include">
+                      <e p="formResume" t="Include">
+                        <e p="FormResume.jsx" t="Include" />
+                        <e p="FormResume.styl" t="Include" />
+                      </e>
+                      <e p="itemResume" t="Include">
+                        <e p="ItemResume.jsx" t="Include" />
+                        <e p="ItemResume.styl" t="Include" />
+                      </e>
+                      <e p="listResume" t="Include">
+                        <e p="ListResume.jsx" t="Include" />
+                        <e p="ListResume.styl" t="Include" />
+                      </e>
+                      <e p="Resumes" t="Include">
+                        <e p="Resumes.jsx" t="Include" />
+                        <e p="Resumes.styl" t="Include" />
+                      </e>
+                    </e>
+                  </e>
+                  <e p="worker.js" t="Include" />
+                </e>
+                <e p="Vacancies" t="Include">
+                  <e p="index.js" t="Include" />
+                  <e p="manager.js" t="Include" />
+                  <e p="redux" t="Include">
+                    <e p="actions" t="Include">
+                      <e p="index.js" t="Include" />
+                    </e>
+                    <e p="api" t="Include">
+                      <e p="index.js" t="Include" />
+                    </e>
+                    <e p="data" t="Include">
+                      <e p="dictionary.js" t="Include" />
+                    </e>
+                    <e p="reducers" t="Include">
+                      <e p="index.js" t="Include" />
+                    </e>
+                  </e>
+                  <e p="view" t="Include">
+                    <e p="manager" t="Include">
+                      <e p="Vacancies" t="Include">
+                        <e p="Vacancies.jsx" t="Include" />
+                        <e p="Vacancies.styl" t="Include" />
+                      </e>
+                      <e p="vacancyForm" t="Include">
+                        <e p="VacancyForm.jsx" t="Include" />
+                        <e p="VacancyForm.styl" t="Include" />
+                      </e>
+                      <e p="vacancyItem" t="Include">
+                        <e p="VacancyItem.jsx" t="Include" />
+                        <e p="VacancyItem.styl" t="Include" />
+                      </e>
+                      <e p="vacancyList" t="Include">
+                        <e p="VacancyList.jsx" t="Include" />
+                        <e p="VacancyList.styl" t="Include" />
+                      </e>
+                    </e>
+                    <e p="worker" t="Include">
+                      <e p="Vacancies" t="Include">
+                        <e p="Vacancies.jsx" t="Include" />
+                        <e p="Vacancies.styl" t="Include" />
+                      </e>
+                      <e p="vacancyItem" t="Include">
+                        <e p="VacancyItem.jsx" t="Include" />
+                        <e p="VacancyItem.styl" t="Include" />
+                      </e>
+                      <e p="vacancyList" t="Include">
+                        <e p="VacancyList.jsx" t="Include" />
+                        <e p="VacancyList.styl" t="Include" />
+                      </e>
+                    </e>
+                  </e>
+                  <e p="worker.js" t="Include" />
+                </e>
+              </e>
+              <e p="reducers" t="Include">
+                <e p="index.js" t="Include" />
+              </e>
+              <e p="registerServiceWorker.js" t="Include" />
+              <e p="Services" t="Include">
+                <e p="baseApiModel.js" t="Include" />
+                <e p="baseDictionaryApiModel.js" t="Include" />
+                <e p="industryApiModel.js" t="Include" />
+              </e>
+              <e p="settings" t="Include">
+                <e p="controllers.js" t="Include" />
+              </e>
+              <e p="store" t="Include">
+                <e p="configureStore.js" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Controllers" t="Include">
+            <e p="SampleDataController.cs" t="Include" />
+          </e>
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netcoreapp2.2" t="Include">
+                <e p="WebApp.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Pages" t="Include">
+            <e p="_ViewImports.cshtml" t="Include" />
+            <e p="Error.cshtml" t="Include" />
+            <e p="Error.cshtml.cs" t="Include" />
+          </e>
+          <e p="Program.cs" t="Include" />
+          <e p="Properties" t="Include">
+            <e p="launchSettings.json" t="Include" />
+          </e>
+          <e p="Startup.cs" t="Include" />
+          <e p="WebApp.csproj" t="IncludeRecursive" />
+        </e>
+      </e>
+    </e>
+    <e p="C:\Users\rseng\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\rseng\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_JobObserver.Web.505582069.00" t="ExcludeRecursive" />
+  </component>
+</project>

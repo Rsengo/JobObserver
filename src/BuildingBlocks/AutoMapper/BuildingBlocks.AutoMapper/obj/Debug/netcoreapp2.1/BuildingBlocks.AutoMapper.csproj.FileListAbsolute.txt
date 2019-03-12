@@ -14,3 +14,15 @@ D:\Repos\JobObserver\src\BuildingBlocks\AutoMapper\BuildingBlocks.AutoMapper\obj
 D:\Repos\JobObserver\src\BuildingBlocks\AutoMapper\BuildingBlocks.AutoMapper\obj\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.csproj.CopyComplete
 D:\Repos\JobObserver\src\BuildingBlocks\AutoMapper\BuildingBlocks.AutoMapper\obj\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.dll
 D:\Repos\JobObserver\src\BuildingBlocks\AutoMapper\BuildingBlocks.AutoMapper\obj\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.pdb
+C:\JobObserver2\src\BuildingBlocks\AutoMapper\BuildingBlocks.AutoMapper\bin\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.deps.json
+C:\JobObserver2\src\BuildingBlocks\AutoMapper\BuildingBlocks.AutoMapper\bin\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.dll
+C:\JobObserver2\src\BuildingBlocks\AutoMapper\BuildingBlocks.AutoMapper\bin\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.pdb
+C:\JobObserver2\src\BuildingBlocks\AutoMapper\BuildingBlocks.AutoMapper\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.dll
+C:\JobObserver2\src\BuildingBlocks\AutoMapper\BuildingBlocks.AutoMapper\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.pdb
+C:\JobObserver2\src\BuildingBlocks\AutoMapper\BuildingBlocks.AutoMapper\obj\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.csprojAssemblyReference.cache
+C:\JobObserver2\src\BuildingBlocks\AutoMapper\BuildingBlocks.AutoMapper\obj\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.csproj.CoreCompileInputs.cache
+C:\JobObserver2\src\BuildingBlocks\AutoMapper\BuildingBlocks.AutoMapper\obj\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.AssemblyInfoInputs.cache
+C:\JobObserver2\src\BuildingBlocks\AutoMapper\BuildingBlocks.AutoMapper\obj\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.AssemblyInfo.cs
+C:\JobObserver2\src\BuildingBlocks\AutoMapper\BuildingBlocks.AutoMapper\obj\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.csproj.CopyComplete
+C:\JobObserver2\src\BuildingBlocks\AutoMapper\BuildingBlocks.AutoMapper\obj\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.dll
+C:\JobObserver2\src\BuildingBlocks\AutoMapper\BuildingBlocks.AutoMapper\obj\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.pdb

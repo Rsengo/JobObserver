@@ -44,5 +44,9 @@ namespace Resumes.Db.Models.Educations
         ///     Список специализаций
         /// </summary>
         public virtual ICollection<EducationSpecialization> Specializations { get; set; }
+
+        public virtual Resume Resume { get; set; }
+
+        public virtual long ResumeId { get; set; }
     }
 }

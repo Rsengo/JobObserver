@@ -30,7 +30,7 @@ namespace Vacancies.Db.Models
         /// <summary>
         ///     Навыки
         /// </summary>
-        public virtual ICollection<Skill> KeySkills { get; set; }
+        public virtual ICollection<VacancySkill> KeySkills { get; set; }
 
         /// <summary>
         ///     Языки
@@ -124,7 +124,7 @@ namespace Vacancies.Db.Models
         /// <summary>
         ///     Водительские права
         /// </summary>
-        public virtual ICollection<DrivingLicenseType> DriverLicenseTypes { get; set; }
+        public virtual ICollection<VacancyDrivingLicenseType> DriverLicenseTypes { get; set; }
 
         /// <summary>
         ///     Требуетс ли автомобиль

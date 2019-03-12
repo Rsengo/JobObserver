@@ -1,4 +1,5 @@
 ﻿using BuildingBlocks.DataTransfer.Models;
+using Newtonsoft.Json;
 
 namespace Dictionaries.Dto.Models.Salaries
 {
@@ -10,11 +11,13 @@ namespace Dictionaries.Dto.Models.Salaries
         /// <summary>
         ///     Аббревиатура
         /// </summary>
+        [JsonProperty("abbr")]
         public virtual string Abbr { get; set; }
 
         /// <summary>
         ///     Кодовое название
         /// </summary>
+        [JsonProperty("code")]
         public virtual string Code { get; set; }
     }
 }

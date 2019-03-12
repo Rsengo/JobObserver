@@ -26,5 +26,9 @@ namespace Resumes.Db.Models.Salaries
         ///     Верхняя граница
         /// </summary>
         public virtual decimal To { get; set; }
+
+        public virtual Resume Resume { get; set; }
+
+        public virtual long ResumeId { get; set; }
     }
 }

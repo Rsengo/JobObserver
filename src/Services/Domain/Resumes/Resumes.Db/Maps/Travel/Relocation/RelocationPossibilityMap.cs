@@ -30,6 +30,13 @@ namespace Resumes.Db.Maps.Travel.Relocation
                 .OnDelete(DeleteBehavior.Restrict)
                 .IsRequired();
 
+            builder
+                .HasOne(x => x.Resume)
+                .WithMany(x => x.RelocationPossibility)
+                .HasForeignKey(x => x.ResumeId)
+                .OnDelete(DeleteBehavior.Restrict)
+                .IsRequired();
+
             builder.ToTable(TableNames.RELOCATION_POSSIBILITIES);
         }
     }

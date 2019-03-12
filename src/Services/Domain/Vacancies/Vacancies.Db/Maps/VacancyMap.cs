@@ -70,7 +70,7 @@ namespace Vacancies.Db.Maps
 
             builder
                 .HasMany(x => x.DriverLicenseTypes)
-                .WithOne()
+                .WithOne(x => x.Vacancy)
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder
@@ -85,12 +85,12 @@ namespace Vacancies.Db.Maps
 
             builder
                 .HasMany(x => x.KeySkills)
-                .WithOne()
+                .WithOne(x => x.Vacancy)
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder
                 .HasMany(x => x.Languages)
-                .WithOne()
+                .WithOne(x => x.Vacancy)
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder.ToTable(TableNames.VACANCIES);

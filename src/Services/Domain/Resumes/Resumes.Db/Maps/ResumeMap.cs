@@ -72,7 +72,7 @@ namespace Resumes.Db.Maps
 
             builder
                 .HasMany(x => x.Languages)
-                .WithOne()
+                .WithOne(x => x.Resume)
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder
@@ -87,22 +87,22 @@ namespace Resumes.Db.Maps
 
             builder
                 .HasMany(x => x.DriverLicenseTypes)
-                .WithOne()
+                .WithOne(x => x.Resume)
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder
                 .HasMany(x => x.Education)
-                .WithOne()
+                .WithOne(x => x.Resume)
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder
                 .HasMany(x => x.Employments)
-                .WithOne()
+                .WithOne(x => x.Resume)
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder
                 .HasMany(x => x.Experience)
-                .WithOne()
+                .WithOne(x => x.Resume)
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder
@@ -112,17 +112,17 @@ namespace Resumes.Db.Maps
 
             builder
                 .HasMany(x => x.RelocationPossibility)
-                .WithOne()
+                .WithOne(x => x.Resume)
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder
                 .HasMany(x => x.Schedules)
-                .WithOne()
+                .WithOne(x => x.Resume)
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder
                 .HasMany(x => x.Skills)
-                .WithOne()
+                .WithOne(x => x.Resume)
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder
@@ -132,7 +132,7 @@ namespace Resumes.Db.Maps
 
             builder
                 .HasMany(x => x.Specializations)
-                .WithOne()
+                .WithOne(x => x.Resume)
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder.ToTable(TableNames.RESUMES);
