@@ -7,6 +7,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\BuildingBlocks\AutoMapper\BuildingBlocks.AutoMapper\BuildingBlocks.AutoMapper.csproj" />
     <ProjectReference Include="..\..\..\..\BuildingBlocks\DataTransfer\BuildingBlocks.DataTransfer\BuildingBlocks.DataTransfer.csproj" />
+    <ProjectReference Include="..\Resumes.Db\Resumes.Db.csproj" />
   </ItemGroup>
 
 </Project>

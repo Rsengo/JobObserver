@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using BuildingBlocks.EventBus.Abstractions;
 using Resumes.Db;
+using Resumes.Db.Models.Educations;
 using Resumes.Db.Models.Geographic;
 using Resumes.Synchronization.Events.Educations;
 
@@ -31,7 +32,7 @@ namespace Resumes.Synchronization.EventHandlers.Educations
 
             var toMergeDto = @event.Created.Concat(@event.Updated);
             var toMerge = toMergeDto
-                .Select(Mapper.Map<Area>)
+                .Select(Mapper.Map<EducationalLevel>)
                 .ToList();
 
             await _context.BulkMergeAsync(

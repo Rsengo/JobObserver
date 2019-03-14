@@ -61,6 +61,6 @@ namespace Resumes.Dto.Models.Applicants
         ///     Полное имя
         /// </summary>
         [JsonProperty("full_name")]
-        public virtual string FullName => $"{FirstName} {MiddleName} {LastName}";
+        public virtual string FullName { get; set; }
     }
 }

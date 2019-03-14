@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Z.EntityFramework.Extensions.EFCore" Version="2.1.56" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\BuildingBlocks\EventBus\BuildingBlocks.EventBus.Synchronization\BuildingBlocks.EventBus.Synchronization.csproj" />
+    <ProjectReference Include="..\..\..\..\BuildingBlocks\EventBus\BuildingBlocks.EventBus\BuildingBlocks.EventBus.csproj" />
+    <ProjectReference Include="..\Vacancies.Dto\Vacancies.Dto.csproj" />
+  </ItemGroup>
+
+</Project>
