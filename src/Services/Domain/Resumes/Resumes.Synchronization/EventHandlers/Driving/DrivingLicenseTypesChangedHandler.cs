@@ -26,7 +26,7 @@ namespace Resumes.Synchronization.EventHandlers.Driving
         {
             var deleted = @event.Deleted;
 
-            await _context.Areas
+            await _context.DrivingLicenseTypes
                 .Where(x => deleted.Contains(x.Id))
                 .DeleteFromQueryAsync();
 

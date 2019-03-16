@@ -14,6 +14,7 @@ using Vacancies.Db.Models.Negotiations;
 using Vacancies.Db.Models.Salaries;
 using Vacancies.Db.Models.Schedules;
 using Vacancies.Db.Models.Skills;
+using Vacancies.Db.Models.Specializations;
 using Vacancies.Db.Models.Statuses;
 using Vacancies.Db.Models.Tests;
 
@@ -76,5 +77,7 @@ namespace Vacancies.Db
         public DbSet<VacancyDrivingLicenseType> VacancyDrivingLicenseTypes { get; set; }
 
         public DbSet<VacancySkill> VacancySkills { get; set; }
+
+        public DbSet<VacancySpecialization> VacancySpecializations { get; set; }
     }
 }

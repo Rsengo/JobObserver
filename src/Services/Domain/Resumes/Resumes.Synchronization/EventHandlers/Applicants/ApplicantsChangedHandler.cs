@@ -27,7 +27,7 @@ namespace Resumes.Synchronization.EventHandlers.Applicants
         {
             var deleted = @event.Deleted;
 
-            await _context.Areas
+            await _context.Applicants
                 .Where(x => deleted.Contains(x.Id))
                 .DeleteFromQueryAsync();
 

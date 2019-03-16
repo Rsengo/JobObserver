@@ -6,6 +6,12 @@ namespace Dictionaries.Db.Constants
 {
     internal static class TableNames
     {
+        public const string RELOCATION_TYPES = "RELOCATION_TYPES";
+
+        public const string BUSINESS_TRIP_READINESS = "BUSINESS_TRIP_READINESS";
+
+        public const string TRAVEL_TIMES = "TRAVEL_TIMES";
+
         public const string DRIVING_LICENSE_TYPES = "DRIVING_LICENSE_TYPES";
 
         public const string EDUCATIONAL_LEVELS = "EDUCATIONAL_LEVELS";

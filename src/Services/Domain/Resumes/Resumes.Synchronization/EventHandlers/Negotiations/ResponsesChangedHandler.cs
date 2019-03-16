@@ -27,7 +27,7 @@ namespace Resumes.Synchronization.EventHandlers.Negotiations
         {
             var deleted = @event.Deleted;
 
-            await _context.Areas
+            await _context.Responses
                 .Where(x => deleted.Contains(x.Id))
                 .DeleteFromQueryAsync();
 

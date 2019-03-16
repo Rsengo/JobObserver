@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using AutoMapper;
 using BuildingBlocks.AutoMapper;
 using Resumes.Db.Models.Applicants;
 using Resumes.Dto.Models.Applicants;
+using Resumes.Dto.Models.Geographic;
 
 namespace Resumes.Dto.Profiles.Applicants
 {
@@ -15,11 +17,11 @@ namespace Resumes.Dto.Profiles.Applicants
                 .ForMember(
                     d => d.Area, 
                     o => o.MapFrom(
-                        s => s.Area))
+                        s => Mapper.Map<DtoArea>(s.Area)))
                 .ForMember(
                     d => d.Gender, 
                     o => o.MapFrom(
-                        s => s.Gender));
+                        s => Mapper.Map<DtoGender>(s.Gender)));
         }
 
         public override void Dto2Entity()

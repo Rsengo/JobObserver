@@ -8,7 +8,6 @@ using BuildingBlocks.EventBus.Abstractions;
 using Vacancies.Db;
 using Vacancies.Db.Models.Geographic;
 using Vacancies.Db.Models.Industries;
-using Vacancies.Synchronization.Events.Applicants;
 using Vacancies.Synchronization.Events.Industries;
 
 namespace Vacancies.Synchronization.EventHandlers.Industries
@@ -27,7 +26,7 @@ namespace Vacancies.Synchronization.EventHandlers.Industries
         {
             var deleted = @event.Deleted;
 
-            await _context.Areas
+            await _context.Industries
                 .Where(x => deleted.Contains(x.Id))
                 .DeleteFromQueryAsync();
 

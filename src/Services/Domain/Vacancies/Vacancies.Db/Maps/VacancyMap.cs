@@ -60,7 +60,8 @@ namespace Vacancies.Db.Maps
                 .HasOne(x => x.VacancyStatus)
                 .WithMany()
                 .HasForeignKey(x => x.VacancyStatusId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Restrict)
+                .IsRequired();
 
             builder
                 .HasOne(x => x.Schedule)
@@ -69,9 +70,16 @@ namespace Vacancies.Db.Maps
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder
-                .HasMany(x => x.DriverLicenseTypes)
+                .HasOne(x => x.Industry)
+                .WithMany()
+                .HasForeignKey(x => x.IndustryId)
+                .OnDelete(DeleteBehavior.Restrict)
+                .IsRequired();
+
+            builder
+                .HasMany(x => x.DrivingLicenseTypes)
                 .WithOne(x => x.Vacancy)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder
                 .HasMany(x => x.Negotiations)
@@ -86,12 +94,17 @@ namespace Vacancies.Db.Maps
             builder
                 .HasMany(x => x.KeySkills)
                 .WithOne(x => x.Vacancy)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder
                 .HasMany(x => x.Languages)
                 .WithOne(x => x.Vacancy)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder
+                .HasMany(x => x.Specializations)
+                .WithOne(x => x.Vacancy)
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder.ToTable(TableNames.VACANCIES);
         }

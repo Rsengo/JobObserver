@@ -29,6 +29,23 @@ using Resumes.Synchronization.EventHandlers.Schedules;
 using Resumes.Synchronization.EventHandlers.Skills;
 using Resumes.Synchronization.EventHandlers.Specializations;
 using Resumes.Synchronization.EventHandlers.Statuses;
+using Resumes.Synchronization.EventHandlers.Travel;
+using Resumes.Synchronization.EventHandlers.Travel.Relocation;
+using Resumes.Synchronization.Events.Applicants;
+using Resumes.Synchronization.Events.Driving;
+using Resumes.Synchronization.Events.Educations;
+using Resumes.Synchronization.Events.Employments;
+using Resumes.Synchronization.Events.Geographic;
+using Resumes.Synchronization.Events.Geographic.Metro;
+using Resumes.Synchronization.Events.Industries;
+using Resumes.Synchronization.Events.Languages;
+using Resumes.Synchronization.Events.Negotiations;
+using Resumes.Synchronization.Events.Salaries;
+using Resumes.Synchronization.Events.Skills;
+using Resumes.Synchronization.Events.Specializations;
+using Resumes.Synchronization.Events.Statuses;
+using Resumes.Synchronization.Events.Travel;
+using Resumes.Synchronization.Events.Travel.Relocation;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace Resumes.API
@@ -97,6 +114,9 @@ namespace Resumes.API
                 builder.RegisterEventHandler<SkillsChangedHandler>();
                 builder.RegisterEventHandler<SpecializationsChangedHandler>();
                 builder.RegisterEventHandler<ResumeStatusesChangedHandler>();
+                builder.RegisterEventHandler<RelocationTypesChangedHandler>();
+                builder.RegisterEventHandler<BusinessTripReadinessChangedHandler>();
+                builder.RegisterEventHandler<TravelTimesChangedHandler>();
             });
 
             services.AddSwaggerGen(c =>
@@ -145,6 +165,30 @@ namespace Resumes.API
                 c.SwaggerEndpoint(
                     Configuration["SwaggerEndpointUrl"],
                     Configuration["SwaggerEndpointName"]);
+            });
+
+            app.UseEventBusRabbitMQ(eventBus =>
+            {
+                 eventBus.Subscribe<ApplicantsChanged, ApplicantsChangedHandler>();
+                 eventBus.Subscribe<GendersChanged, GendersChangedHandler>();
+                 eventBus.Subscribe<DrivingLicenseTypesChanged, DrivingLicenseTypesChangedHandler>();
+                 eventBus.Subscribe<EducationalLevelsChanged, EducationalLevelsChangedHandler>();
+                 eventBus.Subscribe<EmploymentsChanged, EmploymentsChangedHandler>();
+                 eventBus.Subscribe<LinesChanged, LinesChangedHandler>();
+                 eventBus.Subscribe<MetroChanged, MetroChangedHandler>();
+                 eventBus.Subscribe<StationsChanged, StationsChangedHandler>();
+                 eventBus.Subscribe<AreasChanged, AreasChangedHandler>();
+                 eventBus.Subscribe<IndustriesChanged, IndustriesChangedHandler>();
+                 eventBus.Subscribe<LanguageLevelsChanged, LanguageLevelsChangedHandler>();
+                 eventBus.Subscribe<LanguagesChanged, LanguagesChangedHandler>();
+                 eventBus.Subscribe<ResponsesChanged, ResponsesChangedHandler>();
+                 eventBus.Subscribe<CurrenciesChanged, CurrenciesChangedHandler>();
+                 eventBus.Subscribe<SkillsChanged, SkillsChangedHandler>();
+                 eventBus.Subscribe<SpecializationsChanged, SpecializationsChangedHandler>();
+                 eventBus.Subscribe<ResumeStatusesChanged, ResumeStatusesChangedHandler>();
+                 eventBus.Subscribe<RelocationTypesChanged, RelocationTypesChangedHandler>();
+                 eventBus.Subscribe<BusinessTripReadinessChanged, BusinessTripReadinessChangedHandler>();
+                 eventBus.Subscribe<TravelTimesChanged, TravelTimesChangedHandler>();
             });
         }
     }

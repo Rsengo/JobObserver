@@ -7,7 +7,6 @@ using AutoMapper;
 using BuildingBlocks.EventBus.Abstractions;
 using Vacancies.Db;
 using Vacancies.Db.Models.Languages;
-using Vacancies.Synchronization.Events.Applicants;
 using Vacancies.Synchronization.Events.Languages;
 
 namespace Vacancies.Synchronization.EventHandlers.Languages
@@ -26,7 +25,7 @@ namespace Vacancies.Synchronization.EventHandlers.Languages
         {
             var deleted = @event.Deleted;
 
-            await _context.Areas
+            await _context.Languages
                 .Where(x => deleted.Contains(x.Id))
                 .DeleteFromQueryAsync();
 

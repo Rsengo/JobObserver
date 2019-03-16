@@ -27,7 +27,7 @@ namespace Resumes.Synchronization.EventHandlers.Languages
         {
             var deleted = @event.Deleted;
 
-            await _context.Areas
+            await _context.LanguageLevels
                 .Where(x => deleted.Contains(x.Id))
                 .DeleteFromQueryAsync();
 

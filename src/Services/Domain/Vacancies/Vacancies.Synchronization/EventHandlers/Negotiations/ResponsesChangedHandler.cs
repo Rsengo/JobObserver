@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using BuildingBlocks.EventBus.Abstractions;
 using Vacancies.Db;
-using Vacancies.Db.Models.Applicants;
 using Vacancies.Db.Models.Negotiations;
-using Vacancies.Synchronization.Events.Applicants;
 using Vacancies.Synchronization.Events.Negotiations;
 
 namespace Vacancies.Synchronization.EventHandlers.Negotiations
@@ -27,7 +25,7 @@ namespace Vacancies.Synchronization.EventHandlers.Negotiations
         {
             var deleted = @event.Deleted;
 
-            await _context.Areas
+            await _context.Responses
                 .Where(x => deleted.Contains(x.Id))
                 .DeleteFromQueryAsync();
 

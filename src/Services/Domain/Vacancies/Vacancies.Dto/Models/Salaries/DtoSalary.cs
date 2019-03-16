@@ -32,5 +32,8 @@ namespace Vacancies.Dto.Models.Salaries
         /// </summary>
         [JsonProperty("to")]
         public virtual decimal To { get; set; }
+
+        [JsonProperty("vacancy_id")]
+        public virtual long VacancyId { get; set; }
     }
 }

@@ -12,6 +12,8 @@ using Dictionaries.Db.Models.Schedules;
 using Dictionaries.Db.Models.Skills;
 using Dictionaries.Db.Models.Specializations;
 using Dictionaries.Db.Models.Statuses;
+using Dictionaries.Db.Models.Travel;
+using Dictionaries.Db.Models.Travel.Relocation;
 using Dictionaries.Db.Models.Users;
 using Microsoft.EntityFrameworkCore;
 
@@ -64,5 +66,11 @@ namespace Dictionaries.Db
         public DbSet<VacancyStatus> VacancyStatuses { get; set; }
 
         public DbSet<Gender> Genders { get; set; }
+
+        public DbSet<RelocationType> RelocationTypes { get; set; }
+
+        public DbSet<BusinessTripReadiness> BusinessTripReadiness { get; set; }
+
+        public DbSet<TravelTime> TravelTimes { get; set; }
     }
 }

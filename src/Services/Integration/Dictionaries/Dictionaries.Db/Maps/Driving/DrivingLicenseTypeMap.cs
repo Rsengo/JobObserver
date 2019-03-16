@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Dictionaries.Db.Maps.Driving
 {
-    internal class DriverLicenseTypeMap : IEntityTypeConfiguration<DrivingLicenseType>
+    internal class DrivingLicenseTypeMap : IEntityTypeConfiguration<DrivingLicenseType>
     {
         public void Configure(EntityTypeBuilder<DrivingLicenseType> builder)
         {

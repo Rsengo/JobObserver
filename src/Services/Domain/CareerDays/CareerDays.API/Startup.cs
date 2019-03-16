@@ -9,6 +9,9 @@ using CareerDays.Db;
 using CareerDays.Synchronization.EventHandlers;
 using CareerDays.Synchronization.EventHandlers.Geographic;
 using CareerDays.Synchronization.EventHandlers.Geographic.Metro;
+using CareerDays.Synchronization.Events;
+using CareerDays.Synchronization.Events.Geographic;
+using CareerDays.Synchronization.Events.Geographic.Metro;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -134,6 +137,16 @@ namespace CareerDays.API
                 c.SwaggerEndpoint(
                     Configuration["SwaggerEndpointUrl"],
                     Configuration["SwaggerEndpointName"]);
+            });
+
+            app.UseEventBusRabbitMQ(eventBus =>
+            {
+                eventBus.Subscribe<LinesChanged, LinesChangedHandler>();
+                eventBus.Subscribe<MetroChanged, MetroChangedHandler>();
+                eventBus.Subscribe<StationsChanged, StationsChangedHandler>();
+                eventBus.Subscribe<AreasChanged, AreasChangedHandler>();
+                eventBus.Subscribe<EducationalInstitutionsChanged, EducationalInstitutionsChangedHandler>();
+                eventBus.Subscribe<EmployersChanged, EmployersChangedHandler>();
             });
         }
     }

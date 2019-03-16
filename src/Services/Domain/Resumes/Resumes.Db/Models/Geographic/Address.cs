@@ -1,4 +1,5 @@
 ﻿using BuildingBlocks.EntityFramework.Models;
+using Resumes.Db.Models.Geographic.Metro;
 
 namespace Resumes.Db.Models.Geographic
 {

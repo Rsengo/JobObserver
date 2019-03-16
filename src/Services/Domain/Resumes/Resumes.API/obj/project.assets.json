@@ -4895,6 +4895,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
+          "AutoMapper": "8.0.0",
           "BuildingBlocks.AutoMapper": "1.0.0",
           "BuildingBlocks.DataTransfer": "1.0.0",
           "Resumes.Db": "1.0.0"

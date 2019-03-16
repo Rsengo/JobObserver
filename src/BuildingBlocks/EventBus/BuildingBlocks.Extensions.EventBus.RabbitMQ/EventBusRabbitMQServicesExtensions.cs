@@ -23,6 +23,15 @@ namespace BuildingBlocks.Extensions.EventBus.RabbitMQ
 
             var retryCount = configuration.RetryCount;
 
+            if (configuration.SubscriptionManager == null)
+            {
+                services.AddSingleton<IEventBusSubscriptionsManager, InMemoryEventBusSubscriptionsManager>();
+            }
+            else
+            {
+                services.AddSingleton(configuration.SubscriptionManager);
+            }
+
             services.AddSingleton<IRabbitMQPersistentConnection>(sp =>
             {
                 var logger = sp.GetRequiredService<ILogger<DefaultRabbitMQPersistentConnection>>();
@@ -41,8 +50,6 @@ namespace BuildingBlocks.Extensions.EventBus.RabbitMQ
 
                 return new EventBusRabbitMQ(rabbitMQPersistentConnection, logger, sp, eventBusSubscriptionsManager, subscriptionClientName, retryCount);
             });
-
-            services.AddSingleton<IEventBusSubscriptionsManager, InMemoryEventBusSubscriptionsManager>();
 
             foreach (var handler in configuration.EventHandlers)
             {

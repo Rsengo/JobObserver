@@ -175,7 +175,7 @@ namespace Resumes.Db.Models
         /// <summary>
         ///     Категории прав
         /// </summary>
-        public virtual ICollection<ResumeDrivingLicenseType> DriverLicenseTypes { get; set; }
+        public virtual ICollection<ResumeDrivingLicenseType> DrivingLicenseTypes { get; set; }
 
         /// <summary>
         ///     Дополнительная информаци

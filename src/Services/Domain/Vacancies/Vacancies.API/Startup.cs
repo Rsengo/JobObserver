@@ -1,19 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 using BuildingBlocks.Extensions.AutoMapper;
 using BuildingBlocks.Extensions.EventBus.RabbitMQ;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.Swagger;
 using Vacancies.Db;
 using Vacancies.Synchronization.EventHandlers.Driving;
@@ -28,6 +22,18 @@ using Vacancies.Synchronization.EventHandlers.Salaries;
 using Vacancies.Synchronization.EventHandlers.Schedules;
 using Vacancies.Synchronization.EventHandlers.Skills;
 using Vacancies.Synchronization.EventHandlers.Statuses;
+using Vacancies.Synchronization.Events.Driving;
+using Vacancies.Synchronization.Events.Employers;
+using Vacancies.Synchronization.Events.Employments;
+using Vacancies.Synchronization.Events.Geographic;
+using Vacancies.Synchronization.Events.Geographic.Metro;
+using Vacancies.Synchronization.Events.Industries;
+using Vacancies.Synchronization.Events.Languages;
+using Vacancies.Synchronization.Events.Negotiations;
+using Vacancies.Synchronization.Events.Salaries;
+using Vacancies.Synchronization.Events.Schedules;
+using Vacancies.Synchronization.Events.Skills;
+using Vacancies.Synchronization.Events.Statuses;
 
 namespace Vacancies.API
 {
@@ -133,6 +139,33 @@ namespace Vacancies.API
 
             app.UseHttpsRedirection();
             app.UseMvc();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint(
+                    Configuration["SwaggerEndpointUrl"],
+                    Configuration["SwaggerEndpointName"]);
+            });
+
+            app.UseEventBusRabbitMQ(eventBus =>
+            {
+                eventBus.Subscribe<DrivingLicenseTypesChanged, DrivingLicenseTypesChangedHandler>();
+                eventBus.Subscribe<EmployersChanged, EmployersChangedHandler>();
+                eventBus.Subscribe<EmploymentsChanged, EmploymentsChangedHandler>();
+                eventBus.Subscribe<LinesChanged, LinesChangedHandler>();
+                eventBus.Subscribe<MetroChanged, MetroChangedHandler>();
+                eventBus.Subscribe<StationsChanged, StationsChangedHandler>();
+                eventBus.Subscribe<AreasChanged, AreasChangedHandler>();
+                eventBus.Subscribe<IndustriesChanged, IndustriesChangedHandler>();
+                eventBus.Subscribe<LanguageLevelsChanged, LanguageLevelsChangedHandler>();
+                eventBus.Subscribe<LanguagesChanged, LanguagesChangedHandler>();
+                eventBus.Subscribe<ResponsesChanged, ResponsesChangedHandler>();
+                eventBus.Subscribe<CurrenciesChanged, CurrenciesChangedHandler>();
+                eventBus.Subscribe<SchedulesChanged, SchedulesChangedHandler>();
+                eventBus.Subscribe<SkillsChanged, SkillsChangedHandler>();
+                eventBus.Subscribe<VacancyStatusesChanged, VacancyStatusesChangedHandler>();
+            });
         }
     }
 }

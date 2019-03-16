@@ -26,5 +26,9 @@ namespace Vacancies.Db.Models.Salaries
         ///     Верхняя граница
         /// </summary>
         public virtual decimal To { get; set; }
+
+        public virtual Vacancy Vacancy { get; set; }
+
+        public virtual long VacancyId { get; set; }
     }
 }

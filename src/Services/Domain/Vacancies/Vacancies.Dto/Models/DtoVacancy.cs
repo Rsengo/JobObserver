@@ -8,11 +8,13 @@ using Vacancies.Dto.Models.Driving;
 using Vacancies.Dto.Models.Employers;
 using Vacancies.Dto.Models.Employments;
 using Vacancies.Dto.Models.Geographic;
+using Vacancies.Dto.Models.Industries;
 using Vacancies.Dto.Models.Languages;
 using Vacancies.Dto.Models.Negotiations;
 using Vacancies.Dto.Models.Salaries;
 using Vacancies.Dto.Models.Schedules;
 using Vacancies.Dto.Models.Skills;
+using Vacancies.Dto.Models.Specializations;
 using Vacancies.Dto.Models.Statuses;
 using Vacancies.Dto.Models.Tests;
 
@@ -150,7 +152,7 @@ namespace Vacancies.Dto.Models
         ///     Водительские права
         /// </summary>
         [JsonProperty("driver_license_types")]
-        public virtual ICollection<DtoDrivingLicenseType> DriverLicenseTypes { get; set; }
+        public virtual ICollection<DtoDrivingLicenseType> DrivingLicenseTypes { get; set; }
 
         /// <summary>
         ///     Требуетс ли автомобиль
@@ -193,5 +195,14 @@ namespace Vacancies.Dto.Models
         /// </summary>
         [JsonProperty("vacancy_status_id")]
         public virtual long? VacancyStatusId { get; set; }
+
+        [JsonProperty("industry")]
+        public virtual DtoIndustry Industry { get; set; }
+
+        [JsonProperty("industry_id")]
+        public virtual long IndustryId { get; set; }
+
+        [JsonProperty("specializations")]
+        public virtual ICollection<DtoSpecialization> Specializations { get; set; }
     }
 }

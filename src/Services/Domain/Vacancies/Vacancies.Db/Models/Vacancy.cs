@@ -5,11 +5,13 @@ using Vacancies.Db.Models.Driving;
 using Vacancies.Db.Models.Employers;
 using Vacancies.Db.Models.Employments;
 using Vacancies.Db.Models.Geographic;
+using Vacancies.Db.Models.Industries;
 using Vacancies.Db.Models.Languages;
 using Vacancies.Db.Models.Negotiations;
 using Vacancies.Db.Models.Salaries;
 using Vacancies.Db.Models.Schedules;
 using Vacancies.Db.Models.Skills;
+using Vacancies.Db.Models.Specializations;
 using Vacancies.Db.Models.Statuses;
 using Vacancies.Db.Models.Tests;
 
@@ -124,7 +126,7 @@ namespace Vacancies.Db.Models
         /// <summary>
         ///     Водительские права
         /// </summary>
-        public virtual ICollection<VacancyDrivingLicenseType> DriverLicenseTypes { get; set; }
+        public virtual ICollection<VacancyDrivingLicenseType> DrivingLicenseTypes { get; set; }
 
         /// <summary>
         ///     Требуетс ли автомобиль
@@ -159,8 +161,14 @@ namespace Vacancies.Db.Models
         /// <summary>
         ///     Id Статуса вакансии
         /// </summary>
-        public virtual long? VacancyStatusId { get; set; }
+        public virtual long VacancyStatusId { get; set; }
 
         public virtual ICollection<VacancyNegotiation> Negotiations { get; set; }
+
+        public virtual Industry Industry { get; set; }
+
+        public virtual long IndustryId { get; set; }
+
+        public virtual ICollection<VacancySpecialization> Specializations { get; set; }
     }
 }

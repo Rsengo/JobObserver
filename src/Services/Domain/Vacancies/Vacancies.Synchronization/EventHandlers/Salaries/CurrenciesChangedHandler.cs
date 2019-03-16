@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using BuildingBlocks.EventBus.Abstractions;
 using Vacancies.Db;
-using Vacancies.Db.Models.Applicants;
 using Vacancies.Db.Models.Salaries;
-using Vacancies.Synchronization.Events.Applicants;
 using Vacancies.Synchronization.Events.Salaries;
 
 namespace Vacancies.Synchronization.EventHandlers.Salaries
@@ -27,7 +25,7 @@ namespace Vacancies.Synchronization.EventHandlers.Salaries
         {
             var deleted = @event.Deleted;
 
-            await _context.Areas
+            await _context.Currencies
                 .Where(x => deleted.Contains(x.Id))
                 .DeleteFromQueryAsync();
 

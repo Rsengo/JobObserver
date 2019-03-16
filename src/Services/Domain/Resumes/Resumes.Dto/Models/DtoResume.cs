@@ -66,7 +66,7 @@ namespace Resumes.Dto.Models
         ///     Готовность к командировкам
         /// </summary>
         [JsonProperty("business_trip_readiness")]
-        public virtual BusinessTripReadiness BusinessTripReadiness { get; set; }
+        public virtual DtoBusinessTripReadiness BusinessTripReadiness { get; set; }
 
         /// <summary>
         ///     Id Готовности к командировкам
@@ -204,7 +204,7 @@ namespace Resumes.Dto.Models
         ///     Категории прав
         /// </summary>
         [JsonProperty("driver_license_types")]
-        public virtual ICollection<DtoDrivingLicenseType> DriverLicenseTypes { get; set; }
+        public virtual ICollection<DtoDrivingLicenseType> DrivingLicenseTypes { get; set; }
 
         /// <summary>
         ///     Дополнительная информаци

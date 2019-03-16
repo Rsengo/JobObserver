@@ -8,6 +8,8 @@ using BuildingBlocks.Extensions.EventBus.RabbitMQ;
 using Employers.Db;
 using Employers.Synchronization.EventHandlers;
 using Employers.Synchronization.EventHandlers.Geographic;
+using Employers.Synchronization.Events;
+using Employers.Synchronization.Events.Geographic;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -73,6 +75,7 @@ namespace Employers.API
                 builder.RegisterEventHandler<EmployersChangedHandler>();
                 builder.RegisterEventHandler<EmployerTypesChangedHandler>();
                 builder.RegisterEventHandler<AreasChangedHandler>();
+                builder.RegisterEventHandler<PartnersChangedHandler>();
             });
 
             services.AddSwaggerGen(c =>
@@ -121,6 +124,14 @@ namespace Employers.API
                 c.SwaggerEndpoint(
                     Configuration["SwaggerEndpointUrl"],
                     Configuration["SwaggerEndpointName"]);
+            });
+
+            app.UseEventBusRabbitMQ(eventBus =>
+            {
+                eventBus.Subscribe<EmployersChanged, EmployersChangedHandler>();
+                eventBus.Subscribe<EmployerTypesChanged, EmployerTypesChangedHandler>();
+                eventBus.Subscribe<AreasChanged, AreasChangedHandler>();
+                eventBus.Subscribe<PartnersChanged, PartnersChangedHandler>();
             });
         }
     }

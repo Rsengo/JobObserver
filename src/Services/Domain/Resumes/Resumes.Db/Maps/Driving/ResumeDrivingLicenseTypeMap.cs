@@ -25,7 +25,7 @@ namespace Resumes.Db.Maps.Driving
 
             builder
                 .HasOne(x => x.Resume)
-                .WithMany(x => x.DriverLicenseTypes)
+                .WithMany(x => x.DrivingLicenseTypes)
                 .HasForeignKey(x => x.ResumeId)
                 .OnDelete(DeleteBehavior.Restrict)
                 .IsRequired();

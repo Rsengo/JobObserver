@@ -26,7 +26,7 @@ namespace Resumes.Synchronization.EventHandlers.Educations
         {
             var deleted = @event.Deleted;
 
-            await _context.Areas
+            await _context.EducationalLevels
                 .Where(x => deleted.Contains(x.Id))
                 .DeleteFromQueryAsync();
 

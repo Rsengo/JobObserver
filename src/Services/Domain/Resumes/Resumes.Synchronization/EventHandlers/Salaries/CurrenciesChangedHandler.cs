@@ -27,7 +27,7 @@ namespace Resumes.Synchronization.EventHandlers.Salaries
         {
             var deleted = @event.Deleted;
 
-            await _context.Areas
+            await _context.Currencies
                 .Where(x => deleted.Contains(x.Id))
                 .DeleteFromQueryAsync();
 

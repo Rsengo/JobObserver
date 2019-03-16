@@ -8,6 +8,8 @@ using BuildingBlocks.Extensions.EventBus.RabbitMQ;
 using EducationalInstitutions.Db;
 using EducationalInstitutions.Synchronization.EventHandlers;
 using EducationalInstitutions.Synchronization.EventHandlers.Geographic;
+using EducationalInstitutions.Synchronization.Events;
+using EducationalInstitutions.Synchronization.Events.Geographic;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -72,6 +74,7 @@ namespace EducationalInstitutions.API
 
                 builder.RegisterEventHandler<AreasChangedHandler>();
                 builder.RegisterEventHandler<EducationalInstitutionsChangedHandler>();
+                builder.RegisterEventHandler<PartnersChangedHandler>();
             });
 
             services.AddSwaggerGen(c =>
@@ -120,6 +123,13 @@ namespace EducationalInstitutions.API
                 c.SwaggerEndpoint(
                     Configuration["SwaggerEndpointUrl"],
                     Configuration["SwaggerEndpointName"]);
+            });
+
+            app.UseEventBusRabbitMQ(eventBus =>
+            {
+                eventBus.Subscribe<AreasChanged, AreasChangedHandler>();
+                eventBus.Subscribe<EducationalInstitutionsChanged, EducationalInstitutionsChangedHandler>();
+                eventBus.Subscribe<PartnersChanged, PartnersChangedHandler>();
             });
         }
     }

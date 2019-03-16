@@ -25,7 +25,7 @@ namespace Vacancies.Synchronization.EventHandlers.Skills
         {
             var deleted = @event.Deleted;
 
-            await _context.Areas
+            await _context.Skills
                 .Where(x => deleted.Contains(x.Id))
                 .DeleteFromQueryAsync();
 

@@ -107,5 +107,7 @@ namespace Resumes.Db
         public DbSet<ResumeSkill> ResumeSkills { get; set; }
 
         public DbSet<ResumeSpecialization> ResumeSpecializations { get; set; }
+
+        public DbSet<Gender> Genders { get; set; }
     }
 }

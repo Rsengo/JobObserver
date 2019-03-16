@@ -73,7 +73,7 @@ namespace Resumes.Db.Maps
             builder
                 .HasMany(x => x.Languages)
                 .WithOne(x => x.Resume)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder
                 .HasMany(x => x.Citizenship)
@@ -86,9 +86,9 @@ namespace Resumes.Db.Maps
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder
-                .HasMany(x => x.DriverLicenseTypes)
+                .HasMany(x => x.DrivingLicenseTypes)
                 .WithOne(x => x.Resume)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder
                 .HasMany(x => x.Education)
@@ -98,7 +98,7 @@ namespace Resumes.Db.Maps
             builder
                 .HasMany(x => x.Employments)
                 .WithOne(x => x.Resume)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder
                 .HasMany(x => x.Experience)
@@ -113,17 +113,17 @@ namespace Resumes.Db.Maps
             builder
                 .HasMany(x => x.RelocationPossibility)
                 .WithOne(x => x.Resume)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder
                 .HasMany(x => x.Schedules)
                 .WithOne(x => x.Resume)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder
                 .HasMany(x => x.Skills)
                 .WithOne(x => x.Resume)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder
                 .HasMany(x => x.WorkTicket)
@@ -133,7 +133,7 @@ namespace Resumes.Db.Maps
             builder
                 .HasMany(x => x.Specializations)
                 .WithOne(x => x.Resume)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder.ToTable(TableNames.RESUMES);
         }

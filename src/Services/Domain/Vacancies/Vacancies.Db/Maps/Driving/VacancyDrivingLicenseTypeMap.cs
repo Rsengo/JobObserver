@@ -25,7 +25,7 @@ namespace Vacancies.Db.Maps.Driving
 
             builder
                 .HasOne(x => x.Vacancy)
-                .WithMany(x => x.DriverLicenseTypes)
+                .WithMany(x => x.DrivingLicenseTypes)
                 .HasForeignKey(x => x.VacancyId)
                 .OnDelete(DeleteBehavior.Restrict)
                 .IsRequired();
