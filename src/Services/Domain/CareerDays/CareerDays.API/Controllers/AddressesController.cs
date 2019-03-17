@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Threading.Tasks;
 using System.Linq;
-using System.Threading.Tasks;
 using AutoMapper;
 using CareerDays.Db;
 using CareerDays.Db.Models;
+using CareerDays.Db.Models.Geographic;
 using CareerDays.Dto.Models;
+using CareerDays.Dto.Models.Geographic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -25,8 +25,11 @@ namespace CareerDays.API.Controllers
         public async Task<IActionResult> Get(long id)
         {
             var result = await _context.Addresses
+                .AsDbQuery()
                 .Include(x => x.Area)
                 .Include(x => x.Station)
+                    .ThenInclude(x => x.Line)
+                        .ThenInclude(x => x.Metro)
                 .SingleOrDefaultAsync(x => x.Id == id)
                 .ConfigureAwait(false);
             var dto = Mapper.Map<DtoCareerDay>(result);
@@ -34,27 +37,12 @@ namespace CareerDays.API.Controllers
             return Ok(dto);
         }
 
-        [HttpGet("byCareerDay/{id}")]
-        public async Task<IActionResult> GetByArea(long id)
-        {
-            var result = await _context.CareerDays
-                .Include(x => x.EducationalInstitution)
-                .Include(x => x.Employer)
-                .Include(x => x.Address)
-                    .ThenInclude(x => x.Area)
-                .SingleOrDefaultAsync(x => x.Address.AreaId == id)
-                .ConfigureAwait(false);
-            var dto = Mapper.Map<DtoCareerDay>(result);
-
-            return Ok(dto);
-        }
-
         [HttpPost]
-        public async Task<IActionResult> Save(DtoCareerDay dto)
+        public async Task<IActionResult> Save(DtoAddress dto)
         {
-            var template = Mapper.Map<CareerDay>(dto);
+            var template = Mapper.Map<Address>(dto);
 
-            _context.CareerDays.Add(template);
+            _context.Addresses.Add(template);
             await _context.SaveChangesAsync()
                 .ConfigureAwait(false);
 
@@ -62,13 +50,13 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(DtoCareerDay dto, long id)
+        public async Task<IActionResult> Update(DtoAddress dto, long id)
         {
-            var template = Mapper.Map<CareerDay>(dto);
+            var template = Mapper.Map<Address>(dto);
 
             template.Id = id;
 
-            await _context.CareerDays
+            await _context.Addresses
                 .Where(x => x.Id == id)
                 .UpdateFromQueryAsync(_ => template)
                 .ConfigureAwait(false);

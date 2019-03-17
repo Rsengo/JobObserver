@@ -10,11 +10,6 @@ namespace Resumes.Dto.Models.Geographic.Metro
     public class DtoMetro : DtoEntity
     {
         /// <summary>
-        /// Город (избыточно)
-        /// </summary>
-        [JsonProperty("area")]
-        public DtoArea Area { get; set; }
-        /// <summary>
         /// Id города
         /// </summary>
         [JsonProperty("area_id")]

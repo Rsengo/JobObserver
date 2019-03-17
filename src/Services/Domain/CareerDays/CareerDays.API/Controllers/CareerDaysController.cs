@@ -24,13 +24,18 @@ namespace CareerDays.API.Controllers
         public async Task<IActionResult> Get(long id)
         {
             var result = await _context.CareerDays
-                .Include(x => x.EducationalInstitution)
-                .Include(x => x.Employer)
+                .AsDbQuery()
                 .Include(x => x.Address)
-                    .ThenInclude(x => x.Area)
+                    .AlsoInclude(x => x.Area)
+                    .ThenInclude(x => x.Station)
+                        .ThenInclude(x => x.Line)
+                            .ThenInclude(x => x.Metro)
+                .Include(x => x.Employer)
+                .Include(x => x.EducationalInstitution)
                 .SingleOrDefaultAsync(x => x.Id == id)
                 .ConfigureAwait(false);
-            var dto = Mapper.Map<DtoCareerDay>(result);
+            var dto = Mapper.Map<DtoCareerDay>(result); ;
+                
 
             return Ok(dto);
         }
@@ -39,10 +44,14 @@ namespace CareerDays.API.Controllers
         public async Task<IActionResult> GetByEmployer(long employerId)
         {
             var result = await _context.CareerDays
-                .Include(x => x.EducationalInstitution)
-                .Include(x => x.Employer)
+                .AsDbQuery()
                 .Include(x => x.Address)
-                    .ThenInclude(x => x.Area)
+                    .AlsoInclude(x => x.Area)
+                    .ThenInclude(x => x.Station)
+                        .ThenInclude(x => x.Line)
+                            .ThenInclude(x => x.Metro)
+                .Include(x => x.Employer)
+                .Include(x => x.EducationalInstitution)
                 .SingleOrDefaultAsync(x => x.EmployerId == employerId)
                 .ConfigureAwait(false);
             var dto = Mapper.Map<DtoCareerDay>(result);
@@ -54,10 +63,14 @@ namespace CareerDays.API.Controllers
         public async Task<IActionResult> GetByEducationalInstitution(long educationalInstitutionId)
         {
             var result = await _context.CareerDays
-                .Include(x => x.EducationalInstitution)
-                .Include(x => x.Employer)
+                .AsDbQuery()
                 .Include(x => x.Address)
-                    .ThenInclude(x => x.Area)
+                    .AlsoInclude(x => x.Area)
+                    .ThenInclude(x => x.Station)
+                        .ThenInclude(x => x.Line)
+                            .ThenInclude(x => x.Metro)
+                .Include(x => x.Employer)
+                .Include(x => x.EducationalInstitution)
                 .SingleOrDefaultAsync(x => x.EducationalInstitutionId == educationalInstitutionId)
                 .ConfigureAwait(false);
             var dto = Mapper.Map<DtoCareerDay>(result);
@@ -69,10 +82,14 @@ namespace CareerDays.API.Controllers
         public async Task<IActionResult> GetByArea(long areaId)
         {
             var result = await _context.CareerDays
-                .Include(x => x.EducationalInstitution)
-                .Include(x => x.Employer)
+                .AsDbQuery()
                 .Include(x => x.Address)
-                    .ThenInclude(x => x.Area)
+                    .AlsoInclude(x => x.Area)
+                    .ThenInclude(x => x.Station)
+                        .ThenInclude(x => x.Line)
+                            .ThenInclude(x => x.Metro)
+                .Include(x => x.Employer)
+                .Include(x => x.EducationalInstitution)
                 .SingleOrDefaultAsync(x => x.Address.AreaId == areaId)
                 .ConfigureAwait(false);
             var dto = Mapper.Map<DtoCareerDay>(result);

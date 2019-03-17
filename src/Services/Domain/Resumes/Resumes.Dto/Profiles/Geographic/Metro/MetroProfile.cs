@@ -12,11 +12,7 @@ namespace Resumes.Dto.Profiles.Geographic.Metro
     {
         public override void Entity2Dto()
         {
-            CreateMap<Db.Models.Geographic.Metro.Metro, DtoMetro>()
-                .ForMember(
-                    dest => dest.Area, 
-                    opt => opt.MapFrom(
-                        src => Mapper.Map<DtoArea>(src.Area)));
+            CreateMap<Db.Models.Geographic.Metro.Metro, DtoMetro>();
         }
 
         public override void Dto2Entity()

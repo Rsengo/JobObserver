@@ -42,3 +42,4 @@ C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netc
 C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EntityFramework.pdb
 C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.Assemblies.pdb
 C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Database.Common.pdb
+C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\BuildingBlocks.DataTransfer.pdb

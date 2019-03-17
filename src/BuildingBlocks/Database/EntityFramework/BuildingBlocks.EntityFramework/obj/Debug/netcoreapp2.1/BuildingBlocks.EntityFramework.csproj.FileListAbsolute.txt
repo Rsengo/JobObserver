@@ -27,3 +27,4 @@ C:\JobObserver2\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Entit
 C:\JobObserver2\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.EntityFramework\obj\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.AssemblyInfo.cs
 C:\JobObserver2\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.EntityFramework\obj\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.dll
 C:\JobObserver2\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.EntityFramework\obj\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.pdb
+C:\JobObserver2\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.EntityFramework\obj\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.csprojAssemblyReference.cache

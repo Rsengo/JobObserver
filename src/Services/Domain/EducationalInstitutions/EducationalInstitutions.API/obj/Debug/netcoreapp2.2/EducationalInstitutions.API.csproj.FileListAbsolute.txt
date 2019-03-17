@@ -45,3 +45,7 @@ C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstituti
 C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EntityFramework.pdb
 C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.Assemblies.pdb
 C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Database.Common.pdb
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\bin\Debug\netcoreapp2.2\BuildingBlocks.DataTransfer.pdb
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.pdb
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.RabbitMQ.pdb
+C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.Synchronization.pdb
