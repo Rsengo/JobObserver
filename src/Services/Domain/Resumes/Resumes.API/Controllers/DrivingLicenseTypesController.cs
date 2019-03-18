@@ -11,7 +11,7 @@ using Resumes.Dto.Models.Driving;
 
 namespace Resumes.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/resumes")]
     public class DrivingLicenseTypesController : ControllerBase
     {
         private readonly ResumesDbContext _context;
@@ -21,7 +21,7 @@ namespace Resumes.API.Controllers
             _context = context;
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("drivingLicenseTypes/{id}")]
         public async Task<IActionResult> Get(long id)
         {
             var result = await _context.ResumeDrivingLicenseTypes
@@ -33,10 +33,23 @@ namespace Resumes.API.Controllers
             return Ok(dto);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Post(DtoDrivingLicenseType dto)
+        [HttpGet("{id}/drivingLicenseTypes")]
+        public async Task<IActionResult> GetByResume(long id)
         {
-            var entity = Mapper.Map<DrivingLicenseType>(dto);
+            var result = await _context.ResumeDrivingLicenseTypes
+                .Where(x => x.ResumeId == id)
+                .Include(x => x.DrivingLicenseType)
+                .ToListAsync()
+                .ConfigureAwait(false);
+            var dto = Mapper.Map<DtoDrivingLicenseType>(result);
+
+            return Ok(dto);
+        }
+
+        [HttpPost("drivingLicenseTypes")]
+        public async Task<IActionResult> Post(DtoResumeDrivingLicenseType dto)
+        {
+            var entity = Mapper.Map<ResumeDrivingLicenseType>(dto);
             _context.ResumeDrivingLicenseTypes.Add(entity);
 
             await _context
@@ -46,10 +59,10 @@ namespace Resumes.API.Controllers
             return Ok(entity.Id);
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Update(DtoDrivingLicenseType dto, long id)
+        [HttpPut("drivingLicenseTypes/{id}")]
+        public async Task<IActionResult> Update(DtoResumeDrivingLicenseType dto, long id)
         {
-            var template = Mapper.Map<DrivingLicenseType>(dto);
+            var template = Mapper.Map<ResumeDrivingLicenseType>(dto);
 
             template.Id = id;
 
@@ -61,7 +74,7 @@ namespace Resumes.API.Controllers
             return Ok(id);
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("drivingLicenseTypes/{id}")]
         public async Task<IActionResult> Delete(long id)
         {
             await _context.ResumeDrivingLicenseTypes

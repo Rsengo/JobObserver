@@ -32,6 +32,18 @@ namespace Resumes.API.Controllers
             return Ok(dto);
         }
 
+        [HttpGet("byResume/{id}")]
+        public async Task<IActionResult> GetByResume(long id)
+        {
+            var result = await _context.Certificates
+                .Where(x => x.ResumeId == id)
+                .ToListAsync()
+                .ConfigureAwait(false);
+            var dto = Mapper.Map<DtoCertificate>(result);
+
+            return Ok(dto);
+        }
+
         [HttpPost]
         public async Task<IActionResult> Post(DtoCertificate dto)
         {

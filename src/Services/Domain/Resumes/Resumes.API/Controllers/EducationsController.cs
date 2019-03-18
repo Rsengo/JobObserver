@@ -35,6 +35,21 @@ namespace Resumes.API.Controllers
             return Ok(dto);
         }
 
+        [HttpGet("byResume/{id}")]
+        public async Task<IActionResult> GetByResume(long id)
+        {
+            var result = await _context.Educations
+                .Where(x => x.ResumeId == id)
+                .Include(x => x.EducationalLevel)
+                .Include(x => x.Specializations)
+                .ThenInclude(x => x.Specialization)
+                .ToListAsync()
+                .ConfigureAwait(false);
+            var dto = Mapper.Map<DtoEducation>(result);
+
+            return Ok(dto);
+        }
+
         [HttpPost]
         public async Task<IActionResult> Post(DtoEducation dto)
         {
