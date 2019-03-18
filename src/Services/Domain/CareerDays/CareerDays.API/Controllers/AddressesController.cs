@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CareerDays.API.Controllers
 {
-    [Route("api/careerdays/addresses")]
+    [Route("api/[controller]")]
     public class AddressesController : ControllerBase
     {
         private readonly CareerDaysDbContext _context;
@@ -32,7 +32,7 @@ namespace CareerDays.API.Controllers
                         .ThenInclude(x => x.Metro)
                 .SingleOrDefaultAsync(x => x.Id == id)
                 .ConfigureAwait(false);
-            var dto = Mapper.Map<DtoCareerDay>(result);
+            var dto = Mapper.Map<DtoAddress>(result);
 
             return Ok(dto);
         }
@@ -67,7 +67,7 @@ namespace CareerDays.API.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(long id)
         {
-            await _context.CareerDays
+            await _context.Addresses
                 .Where(x => x.Id == id)
                 .DeleteFromQueryAsync()
                 .ConfigureAwait(false);

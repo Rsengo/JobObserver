@@ -29,10 +29,8 @@ C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\obj\Debug\netcoreapp
 C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EntityFramework.dll
 C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EntityFramework.dll
 C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\Vacancies.Db.dll
-C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Database.Common.dll
 C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\Vacancies.Db.pdb
 C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EntityFramework.pdb
-C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Database.Common.pdb
 C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\BuildingBlocks.AutoMapper.dll
 C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\BuildingBlocks.DataTransfer.dll
 C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.dll
@@ -49,3 +47,9 @@ C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp
 C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.RabbitMQ.pdb
 C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.Synchronization.pdb
 C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.Assemblies.pdb
+C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.AutoMapper.pdb
+C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EntityFramework.pdb
+C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EventBus.RabbitMQ.pdb
+C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\Vacancies.Synchronization.pdb
+C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\Vacancies.Dto.pdb
+C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.API\obj\Debug\netcoreapp2.2\Vacancies.API.csproj.CopyComplete

@@ -52,3 +52,9 @@ C:\JobObserver2\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\
 C:\JobObserver2\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.Synchronization.pdb
 C:\JobObserver2\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.Assemblies.pdb
 C:\JobObserver2\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\Resumes.Dto.pdb
+C:\JobObserver2\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.AutoMapper.pdb
+C:\JobObserver2\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EntityFramework.pdb
+C:\JobObserver2\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EventBus.RabbitMQ.pdb
+C:\JobObserver2\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\Resumes.Db.pdb
+C:\JobObserver2\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\Resumes.Synchronization.pdb
+C:\JobObserver2\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.csproj.CopyComplete

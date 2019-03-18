@@ -28,7 +28,7 @@ namespace Resumes.API.Controllers
                 .Include(x => x.DrivingLicenseType)
                 .SingleOrDefaultAsync(x => x.Id == id)
                 .ConfigureAwait(false);
-            var dto = Mapper.Map<DtoDrivingLicenseType>(result);
+            var dto = Mapper.Map<DtoResumeDrivingLicenseType>(result);
 
             return Ok(dto);
         }
@@ -41,7 +41,7 @@ namespace Resumes.API.Controllers
                 .Include(x => x.DrivingLicenseType)
                 .ToListAsync()
                 .ConfigureAwait(false);
-            var dto = Mapper.Map<DtoDrivingLicenseType>(result);
+            var dto = Mapper.Map<DtoResumeDrivingLicenseType>(result);
 
             return Ok(dto);
         }

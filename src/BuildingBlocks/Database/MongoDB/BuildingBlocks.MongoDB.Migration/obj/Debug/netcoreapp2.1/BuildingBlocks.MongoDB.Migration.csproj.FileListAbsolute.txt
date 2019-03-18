@@ -13,3 +13,15 @@ D:\Repos\JobObserver\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB.
 D:\Repos\JobObserver\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB.Migration\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.Migration.csproj.CopyComplete
 D:\Repos\JobObserver\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB.Migration\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.Migration.dll
 D:\Repos\JobObserver\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB.Migration\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.Migration.pdb
+C:\JobObserver2\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB.Migration\bin\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.Migration.deps.json
+C:\JobObserver2\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB.Migration\bin\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.Migration.dll
+C:\JobObserver2\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB.Migration\bin\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.Migration.pdb
+C:\JobObserver2\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB.Migration\bin\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.dll
+C:\JobObserver2\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB.Migration\bin\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.pdb
+C:\JobObserver2\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB.Migration\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.Migration.csprojAssemblyReference.cache
+C:\JobObserver2\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB.Migration\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.Migration.csproj.CoreCompileInputs.cache
+C:\JobObserver2\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB.Migration\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.Migration.AssemblyInfoInputs.cache
+C:\JobObserver2\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB.Migration\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.Migration.AssemblyInfo.cs
+C:\JobObserver2\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB.Migration\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.Migration.csproj.CopyComplete
+C:\JobObserver2\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB.Migration\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.Migration.dll
+C:\JobObserver2\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB.Migration\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.Migration.pdb

@@ -1,15 +1,17 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "24841853bc159a8279f86395a77010ab74be8320"
+    "signature": "7e863064d068bb5131602134ab4b7fda64c8252c"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.1": {
       "Vacancies.Db/1.0.0": {
         "dependencies": {
+          "BuildingBlocks.DataTransfer": "1.0.0",
           "BuildingBlocks.EntityFramework": "1.0.0",
           "Microsoft.EntityFrameworkCore": "2.2.2",
+          "Microsoft.EntityFrameworkCore.AutoHistory": "2.1.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2"
         },
         "runtime": {
@@ -45,6 +47,18 @@
         }
       },
       "Microsoft.EntityFrameworkCore.Analyzers/2.2.2": {},
+      "Microsoft.EntityFrameworkCore.AutoHistory/2.1.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "2.2.2",
+          "Newtonsoft.Json": "12.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.AutoHistory.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/2.2.2": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "2.2.2"
@@ -204,6 +218,14 @@
           "runtime/win/lib/_._": {
             "rid": "win",
             "assetType": "runtime"
+          }
+        }
+      },
+      "Newtonsoft.Json/12.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.1.22727"
           }
         }
       },
@@ -502,6 +524,14 @@
           "System.Runtime": "4.1.0"
         }
       },
+      "BuildingBlocks.DataTransfer/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.1"
+        },
+        "runtime": {
+          "BuildingBlocks.DataTransfer.dll": {}
+        }
+      },
       "BuildingBlocks.EntityFramework/1.0.0": {
         "runtime": {
           "BuildingBlocks.EntityFramework.dll": {}
@@ -535,6 +565,13 @@
       "sha512": "sha512-t+9kW6MwDDrGPPx15c2AIE2f6DM9nbGcHThagg9rcUZz6shmC8LS1Qhd5TSocKHmJafa+hHhBfDNGPyDDeNfHQ==",
       "path": "microsoft.entityframeworkcore.analyzers/2.2.2",
       "hashPath": "microsoft.entityframeworkcore.analyzers.2.2.2.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.AutoHistory/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EuRYWDRUxlNsPmqd3wIvtX7xeA6eQqWTn/sKsvzzwSyMaeUc2bkeD1KhxdzpLN7DH/rAl1+6L5P+j6WSGb5PMA==",
+      "path": "microsoft.entityframeworkcore.autohistory/2.1.0",
+      "hashPath": "microsoft.entityframeworkcore.autohistory.2.1.0.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Relational/2.2.2": {
       "type": "package",
@@ -633,6 +670,13 @@
       "sha512": "sha512-vduxuHEqRgRrTE8wYG8Wxj/+6wwzddOmZzjKZx6rFMc/91aUBxI5etAFYxesoNaIja5NpgSTcnk6cN8BeYXf9A==",
       "path": "microsoft.win32.registry/4.5.0",
       "hashPath": "microsoft.win32.registry.4.5.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jmVyoEyk0In8r+AObYQyFKVFm7uSRzE0XSHSbEtBJcZDMV6DqJoyB4FLcHwprPVhAh826so0db3DIKXVnpGoPA==",
+      "path": "newtonsoft.json/12.0.1",
+      "hashPath": "newtonsoft.json.12.0.1.nupkg.sha512"
     },
     "Remotion.Linq/2.2.0": {
       "type": "package",
@@ -885,6 +929,11 @@
       "sha512": "sha512-k1S4Gc6IGwtHGT8188RSeGaX86Qw/wnrgNLshJvsdNUOPP9etMmo8S07c+UlOAx4K/xLuN9ivA1bD0LVurtIxQ==",
       "path": "system.threading.tasks/4.0.11",
       "hashPath": "system.threading.tasks.4.0.11.nupkg.sha512"
+    },
+    "BuildingBlocks.DataTransfer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "BuildingBlocks.EntityFramework/1.0.0": {
       "type": "project",

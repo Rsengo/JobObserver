@@ -33,3 +33,6 @@ C:\JobObserver2\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\obj\Deb
 C:\JobObserver2\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\obj\Debug\netcoreapp2.1\BrandedTemplates.Db.AssemblyInfoInputs.cache
 C:\JobObserver2\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\obj\Debug\netcoreapp2.1\BrandedTemplates.Db.AssemblyInfo.cs
 C:\JobObserver2\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\obj\Debug\netcoreapp2.1\BrandedTemplates.Db.csproj.CopyComplete
+C:\JobObserver2\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BrandedTemplates.Db.pdb
+C:\JobObserver2\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\obj\Debug\netcoreapp2.1\BrandedTemplates.Db.dll
+C:\JobObserver2\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\obj\Debug\netcoreapp2.1\BrandedTemplates.Db.pdb

@@ -3,3 +3,15 @@ C:\JobObserver1\src\Services\Integration\Dictionaries\Dictionaries.Dto\obj\Debug
 C:\JobObserver1\src\Services\Integration\Dictionaries\Dictionaries.Dto\obj\Debug\netcoreapp2.1\Dictionaries.Dto.csproj.CoreCompileInputs.cache
 C:\JobObserver1\src\Services\Integration\Dictionaries\Dictionaries.Dto\obj\Debug\netcoreapp2.1\Dictionaries.Dto.AssemblyInfoInputs.cache
 C:\JobObserver1\src\Services\Integration\Dictionaries\Dictionaries.Dto\obj\Debug\netcoreapp2.1\Dictionaries.Dto.AssemblyInfo.cs
+C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.Dto\bin\Debug\netcoreapp2.1\Dictionaries.Dto.deps.json
+C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.Dto\bin\Debug\netcoreapp2.1\Dictionaries.Dto.dll
+C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.Dto\bin\Debug\netcoreapp2.1\Dictionaries.Dto.pdb
+C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.Dto\bin\Debug\netcoreapp2.1\BuildingBlocks.DataTransfer.dll
+C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.Dto\bin\Debug\netcoreapp2.1\BuildingBlocks.DataTransfer.pdb
+C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.Dto\obj\Debug\netcoreapp2.1\Dictionaries.Dto.csprojAssemblyReference.cache
+C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.Dto\obj\Debug\netcoreapp2.1\Dictionaries.Dto.csproj.CoreCompileInputs.cache
+C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.Dto\obj\Debug\netcoreapp2.1\Dictionaries.Dto.AssemblyInfoInputs.cache
+C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.Dto\obj\Debug\netcoreapp2.1\Dictionaries.Dto.AssemblyInfo.cs
+C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.Dto\obj\Debug\netcoreapp2.1\Dictionaries.Dto.csproj.CopyComplete
+C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.Dto\obj\Debug\netcoreapp2.1\Dictionaries.Dto.dll
+C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.Dto\obj\Debug\netcoreapp2.1\Dictionaries.Dto.pdb

@@ -12,3 +12,4 @@ C:\JobObserver2\src\BuildingBlocks\DataTransfer\BuildingBlocks.DataTransfer\obj\
 C:\JobObserver2\src\BuildingBlocks\DataTransfer\BuildingBlocks.DataTransfer\obj\Debug\netcoreapp2.1\BuildingBlocks.DataTransfer.AssemblyInfo.cs
 C:\JobObserver2\src\BuildingBlocks\DataTransfer\BuildingBlocks.DataTransfer\obj\Debug\netcoreapp2.1\BuildingBlocks.DataTransfer.dll
 C:\JobObserver2\src\BuildingBlocks\DataTransfer\BuildingBlocks.DataTransfer\obj\Debug\netcoreapp2.1\BuildingBlocks.DataTransfer.pdb
+C:\JobObserver2\src\BuildingBlocks\DataTransfer\BuildingBlocks.DataTransfer\obj\Debug\netcoreapp2.1\BuildingBlocks.DataTransfer.csprojAssemblyReference.cache

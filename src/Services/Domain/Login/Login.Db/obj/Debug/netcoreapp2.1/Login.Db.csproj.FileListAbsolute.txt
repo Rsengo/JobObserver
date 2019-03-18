@@ -17,3 +17,6 @@ C:\JobObserver2\src\Services\Domain\Login\Login.Db\obj\Debug\netcoreapp2.1\Login
 C:\JobObserver2\src\Services\Domain\Login\Login.Db\obj\Debug\netcoreapp2.1\Login.Db.AssemblyInfoInputs.cache
 C:\JobObserver2\src\Services\Domain\Login\Login.Db\obj\Debug\netcoreapp2.1\Login.Db.AssemblyInfo.cs
 C:\JobObserver2\src\Services\Domain\Login\Login.Db\obj\Debug\netcoreapp2.1\Login.Db.csproj.CopyComplete
+C:\JobObserver2\src\Services\Domain\Login\Login.Db\bin\Debug\netcoreapp2.1\Login.Db.pdb
+C:\JobObserver2\src\Services\Domain\Login\Login.Db\obj\Debug\netcoreapp2.1\Login.Db.dll
+C:\JobObserver2\src\Services\Domain\Login\Login.Db\obj\Debug\netcoreapp2.1\Login.Db.pdb

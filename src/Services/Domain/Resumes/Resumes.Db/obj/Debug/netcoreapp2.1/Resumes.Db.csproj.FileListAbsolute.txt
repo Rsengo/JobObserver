@@ -20,3 +20,6 @@ C:\JobObserver2\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\R
 C:\JobObserver2\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\Resumes.Db.AssemblyInfoInputs.cache
 C:\JobObserver2\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\Resumes.Db.AssemblyInfo.cs
 C:\JobObserver2\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\Resumes.Db.csproj.CopyComplete
+C:\JobObserver2\src\Services\Domain\Resumes\Resumes.Db\bin\Debug\netcoreapp2.1\Resumes.Db.pdb
+C:\JobObserver2\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\Resumes.Db.dll
+C:\JobObserver2\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\Resumes.Db.pdb
