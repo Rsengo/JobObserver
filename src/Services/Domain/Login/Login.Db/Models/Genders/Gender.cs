@@ -1,6 +1,6 @@
 ﻿using BuildingBlocks.EntityFramework.Models;
 
-namespace Login.Db.Models
+namespace Login.Db.Models.Genders
 {
     /// <summary>
     ///     Пол

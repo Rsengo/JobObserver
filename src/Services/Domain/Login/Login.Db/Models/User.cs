@@ -2,14 +2,17 @@
 using BuildingBlocks.EntityFramework.Models;
 using Login.Db.Models.Contacts;
 using Login.Db.Models.Geographic;
+using Login.Db.Models.Genders;
 using Microsoft.AspNetCore.Identity;
 
 namespace Login.Db.Models
 {
+    using Login.Db.Models.Attributes;
+
     /// <summary>
     ///     Абстрактный пользователь
     /// </summary>
-    public abstract class BaseUser : IdentityUser<long>
+    public class User : IdentityUser<long>
     {
         /// <summary>
         ///     Фамилия
@@ -65,5 +68,13 @@ namespace Login.Db.Models
         ///     Полное имя
         /// </summary>
         public virtual string FullName => $"{FirstName} {MiddleName} {LastName}";
+
+        public virtual EducationalInstitutionManagerAttributes EducationalInstitutionManagerAttributes { get; set; }
+
+        public virtual long? EducationalInstitutionManagerAttributesId { get; set; }
+
+        public virtual EmployerManagerAttributes EmployerManagerAttributes { get; set; }
+
+        public virtual long? EmployerManagerAttributesId { get; set; }
     }
 }
