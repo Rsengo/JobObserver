@@ -29,6 +29,10 @@ namespace BrandedTemplates.API
                     configBuilder.AddEnvironmentVariables();
                     configBuilder.Build();
                 })
+                .UseKestrel(opt =>
+                {
+                    opt.ListenLocalhost(5101);
+                })
                 .Build();
     }
 }

@@ -6,8 +6,10 @@ using Resumes.Db.Models.Geographic;
 
 namespace Resumes.Db.Models.Applicants
 {
-    public class Applicant : RelationalEntity
+    public class Applicant
     {
+        public virtual Guid Id { get; set; }
+
         /// <summary>
         ///     Фамилия
         /// </summary>

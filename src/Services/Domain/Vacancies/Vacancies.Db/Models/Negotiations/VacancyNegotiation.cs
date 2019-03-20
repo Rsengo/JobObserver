@@ -11,7 +11,7 @@ namespace Vacancies.Db.Models.Negotiations
         /// <summary>
         ///     Id Соискателя, оставившего отзыв
         /// </summary>
-        public virtual long ApplicantId { get; set; }
+        public virtual Guid ApplicantId { get; set; }
 
         /// <summary>
         ///     Id Вакансии

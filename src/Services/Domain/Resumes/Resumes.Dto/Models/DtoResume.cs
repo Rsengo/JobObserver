@@ -30,7 +30,7 @@ namespace Resumes.Dto.Models
         ///     Id Соискателя
         /// </summary>
         [JsonProperty("applicant_id")]
-        public virtual long ApplicantId { get; set; }
+        public virtual Guid ApplicantId { get; set; }
 
         [JsonProperty("applicant")]
         public virtual DtoApplicant Applicant { get; set; }

@@ -9,16 +9,6 @@ namespace Login.Db.Models.Contacts
     public class Phone : RelationalEntity
     {
         /// <summary>
-        ///     Номер страны
-        /// </summary>
-        public virtual string Country { get; set; }
-
-        /// <summary>
-        ///     Номер города
-        /// </summary>
-        public virtual string City { get; set; }
-
-        /// <summary>
         ///     Номер
         /// </summary>
         public virtual string Number { get; set; }
@@ -27,11 +17,5 @@ namespace Login.Db.Models.Contacts
         ///     Комметарий
         /// </summary>
         public virtual string Comment { get; set; }
-
-        /// <summary>
-        ///     Полный номер
-        /// </summary>
-        [NotMapped]
-        public virtual string Raw => $"{Country}{City}{Number}";
     }
 }

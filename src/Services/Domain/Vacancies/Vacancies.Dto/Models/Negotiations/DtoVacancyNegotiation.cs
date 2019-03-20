@@ -14,7 +14,7 @@ namespace Vacancies.Dto.Models.Negotiations
         ///     Id Соискателя, оставившего отзыв
         /// </summary>
         [JsonProperty("applicant_id")]
-        public virtual long ApplicantId { get; set; }
+        public virtual Guid ApplicantId { get; set; }
 
         /// <summary>
         ///     Id Вакансии

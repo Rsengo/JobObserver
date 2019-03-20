@@ -7,8 +7,11 @@ using Resumes.Dto.Models.Geographic;
 
 namespace Resumes.Dto.Models.Applicants
 {
-    public class DtoApplicant : DtoEntity
+    public class DtoApplicant
     {
+        [JsonProperty("id")]
+        public virtual Guid Id { get; set; }
+
         /// <summary>
         ///     Фамилия
         /// </summary>

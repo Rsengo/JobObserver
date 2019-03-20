@@ -151,7 +151,7 @@ namespace Vacancies.Db.Models
         /// <summary>
         ///     Id Ответственного менеджера
         /// </summary>
-        public virtual long? ManagerId { get; set; }
+        public virtual Guid? ManagerId { get; set; }
 
         /// <summary>
         ///     Статус вакансии

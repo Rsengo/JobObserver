@@ -1,5 +1,4 @@
 ﻿using System;
-using BuildingBlocks.EntityFramework.Models;
 using Login.Db.Models.Contacts;
 using Login.Db.Models.Geographic;
 using Login.Db.Models.Genders;
@@ -12,7 +11,7 @@ namespace Login.Db.Models
     /// <summary>
     ///     Абстрактный пользователь
     /// </summary>
-    public class User : IdentityUser<long>
+    public class User : IdentityUser
     {
         /// <summary>
         ///     Фамилия

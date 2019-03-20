@@ -30,7 +30,7 @@ namespace Resumes.Db.Models
         /// <summary>
         ///     Id Соискателя
         /// </summary>
-        public virtual long ApplicantId { get; set; }
+        public virtual Guid ApplicantId { get; set; }
 
         public virtual Applicant Applicant { get; set; }
 

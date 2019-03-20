@@ -978,11 +978,10 @@
       ]
     },
     "Microsoft.EntityFrameworkCore.AutoHistory/2.1.0": {
-      "sha512": "Rp03UckZGSvfFX9PaOiGZQf/QRYU34FCodBGeDHRUIDSrE6R1kbXVbxLTrza+7TgfMW/Krd28MUSskVO7Z6oQA==",
+      "sha512": "EuRYWDRUxlNsPmqd3wIvtX7xeA6eQqWTn/sKsvzzwSyMaeUc2bkeD1KhxdzpLN7DH/rAl1+6L5P+j6WSGb5PMA==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.autohistory/2.1.0",
       "files": [
-        ".signature.p7s",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.AutoHistory.dll",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.AutoHistory.xml",
         "microsoft.entityframeworkcore.autohistory.2.1.0.nupkg.sha512",
@@ -1654,12 +1653,11 @@
       ]
     },
     "Newtonsoft.Json/11.0.2": {
-      "sha512": "znZGbws7E4BA9jxNZ7FuiIRI3C9hrgatVQSTKhIYZYNOud4M5VfGlTYi6RdYO5sQrebFuF/g9UEV3hOxDMXF6Q==",
+      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
       "type": "package",
       "path": "newtonsoft.json/11.0.2",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "LICENSE.md",
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
@@ -1684,12 +1682,11 @@
       ]
     },
     "Remotion.Linq/2.2.0": {
-      "sha512": "twDAH8dAXXCAf3sRv1Tf94u66eEHvgU75hfn1nn2v4fSWXD50XoDOAk8WpSrbViNuMkB4kN1ElnOGm1c519IHg==",
+      "sha512": "fK/76UmpC0FXBlGDFVPLJHQlDLYnGC+XY3eoDgCgbtrhi0vzbXDQ3n/IYHhqSKqXQfGw/u04A1drWs7rFVkRjw==",
       "type": "package",
       "path": "remotion.linq/2.2.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "lib/net35/Remotion.Linq.XML",
         "lib/net35/Remotion.Linq.dll",
         "lib/net40/Remotion.Linq.XML",
@@ -1831,7 +1828,7 @@
       ]
     },
     "System.Collections.Immutable/1.5.0": {
-      "sha512": "T5XGQlcHhEO75Qx38GGCUDPdk4n/7yrRmTgy4yczzJV8alPHaxPU55TBC2UFrkQ42bu34sZPfK0dU+nWZUOEJA==",
+      "sha512": "RGxi2aQoXgZ5ge0zxrKqI4PU9LrYYoLC+cnEnWXKsSduCOUhE1GEAAoTexUVT8RZOILQyy1B27HC8Xw/XLGzdQ==",
       "type": "package",
       "path": "system.collections.immutable/1.5.0",
       "files": [
@@ -2175,10 +2172,11 @@
       ]
     },
     "System.Interactive.Async/3.2.0": {
-      "sha512": "T3nigy9yShklMyVu7I2TvlVMRy2vUn9oQeBaRy0KZcOptyy+rUbekYaXxoa3s0h2tWT3UVtzrGkQC89CBbCtlg==",
+      "sha512": "oaK7GqF8/ORnipYZck5ec+eKgvfZFShH64CWFlYB8Mpnr8/e99klLSk9SsmnaDzr9n2X672sUU8ZCLLrq8leDw==",
       "type": "package",
       "path": "system.interactive.async/3.2.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/net45/System.Interactive.Async.dll",
         "lib/net45/System.Interactive.Async.xml",
@@ -2661,12 +2659,11 @@
       ]
     },
     "System.Reflection.Emit/4.0.1": {
-      "sha512": "/3dmiGuUUUjqZaSeTdxkgzY0De8sLpS4J3tYRETskSbZaRjwvL62IBalMGI6iczZ6udJ1iBlsBBYOHtdCfx90Q==",
+      "sha512": "P2wqAj72fFjpP6wb9nSfDqNBMab+2ovzSDzUZK7MVIm54tBJEPr9jWfSjjoTpPwj1LeKcmX3vr0ttyjSSFM47g==",
       "type": "package",
       "path": "system.reflection.emit/4.0.1",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3174,7 +3171,7 @@
       ]
     },
     "System.Security.AccessControl/4.5.0": {
-      "sha512": "6RQtcT+TyDgLUFsAnmmdfRRGdLYKxSZGkSPOd052tvYFxOTMaQb6ANlwhGqZtNO52PosaCoXu7uatFneujAxmA==",
+      "sha512": "aVjTe36YkO8FzfNhMLoPEzv3gF9rphoW9ngFhG/MH4zzEPLx07sNrgCLwMP4Wx2leI6qarMrGv21OwQXYUKLmw==",
       "type": "package",
       "path": "system.security.accesscontrol/4.5.0",
       "files": [
@@ -3216,7 +3213,7 @@
       ]
     },
     "System.Security.Principal.Windows/4.5.0": {
-      "sha512": "hs2zF4tOQ3V4iQttVnLrnR/i8AOrrAgu2Gmp4/jNaE/+5hiZWDj20FK/m/OW3Itdi9XDvqf55WzHkiWYtOSUNg==",
+      "sha512": "WA9ETb/pY3BjnxKjBUHEgO59B7d/nnmjHFsqjJ2eDT780nD769CT1/bw2ia0Z6W7NqlcqokE6sKGKa6uw88XGA==",
       "type": "package",
       "path": "system.security.principal.windows/4.5.0",
       "files": [
@@ -3526,23 +3523,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\RudencovDP\\.nuget\\packages\\": {},
+    "C:\\Users\\rseng\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repos\\JobObserver\\src\\Services\\Domain\\BrandedTemplates\\BrandedTemplates.Db\\BrandedTemplates.Db.csproj",
+      "projectUniqueName": "C:\\JobObserver2\\src\\Services\\Domain\\BrandedTemplates\\BrandedTemplates.Db\\BrandedTemplates.Db.csproj",
       "projectName": "BrandedTemplates.Db",
-      "projectPath": "D:\\Repos\\JobObserver\\src\\Services\\Domain\\BrandedTemplates\\BrandedTemplates.Db\\BrandedTemplates.Db.csproj",
-      "packagesPath": "C:\\Users\\RudencovDP\\.nuget\\packages\\",
-      "outputPath": "D:\\Repos\\JobObserver\\src\\Services\\Domain\\BrandedTemplates\\BrandedTemplates.Db\\obj\\",
+      "projectPath": "C:\\JobObserver2\\src\\Services\\Domain\\BrandedTemplates\\BrandedTemplates.Db\\BrandedTemplates.Db.csproj",
+      "packagesPath": "C:\\Users\\rseng\\.nuget\\packages\\",
+      "outputPath": "C:\\JobObserver2\\src\\Services\\Domain\\BrandedTemplates\\BrandedTemplates.Db\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\RudencovDP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rseng\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3555,8 +3552,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.EntityFramework\\BuildingBlocks.EntityFramework.csproj": {
-              "projectPath": "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.EntityFramework\\BuildingBlocks.EntityFramework.csproj"
+            "C:\\JobObserver2\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.EntityFramework\\BuildingBlocks.EntityFramework.csproj": {
+              "projectPath": "C:\\JobObserver2\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.EntityFramework\\BuildingBlocks.EntityFramework.csproj"
             }
           }
         }

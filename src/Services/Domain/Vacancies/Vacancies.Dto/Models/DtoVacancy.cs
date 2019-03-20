@@ -182,7 +182,7 @@ namespace Vacancies.Dto.Models
         ///     Id Ответственного менеджера
         /// </summary>
         [JsonProperty("manager_id")]
-        public virtual long? ManagerId { get; set; }
+        public virtual Guid? ManagerId { get; set; }
 
         /// <summary>
         ///     Статус вакансии

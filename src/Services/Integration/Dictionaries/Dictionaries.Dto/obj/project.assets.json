@@ -750,23 +750,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\RudencovDP\\.nuget\\packages\\": {},
+    "C:\\Users\\rseng\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repos\\JobObserver\\src\\Services\\Integration\\Dictionaries\\Dictionaries.Dto\\Dictionaries.Dto.csproj",
+      "projectUniqueName": "C:\\JobObserver2\\src\\Services\\Integration\\Dictionaries\\Dictionaries.Dto\\Dictionaries.Dto.csproj",
       "projectName": "Dictionaries.Dto",
-      "projectPath": "D:\\Repos\\JobObserver\\src\\Services\\Integration\\Dictionaries\\Dictionaries.Dto\\Dictionaries.Dto.csproj",
-      "packagesPath": "C:\\Users\\RudencovDP\\.nuget\\packages\\",
-      "outputPath": "D:\\Repos\\JobObserver\\src\\Services\\Integration\\Dictionaries\\Dictionaries.Dto\\obj\\",
+      "projectPath": "C:\\JobObserver2\\src\\Services\\Integration\\Dictionaries\\Dictionaries.Dto\\Dictionaries.Dto.csproj",
+      "packagesPath": "C:\\Users\\rseng\\.nuget\\packages\\",
+      "outputPath": "C:\\JobObserver2\\src\\Services\\Integration\\Dictionaries\\Dictionaries.Dto\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\RudencovDP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rseng\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -779,8 +779,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\DataTransfer\\BuildingBlocks.DataTransfer\\BuildingBlocks.DataTransfer.csproj": {
-              "projectPath": "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\DataTransfer\\BuildingBlocks.DataTransfer\\BuildingBlocks.DataTransfer.csproj"
+            "C:\\JobObserver2\\src\\BuildingBlocks\\DataTransfer\\BuildingBlocks.DataTransfer\\BuildingBlocks.DataTransfer.csproj": {
+              "projectPath": "C:\\JobObserver2\\src\\BuildingBlocks\\DataTransfer\\BuildingBlocks.DataTransfer\\BuildingBlocks.DataTransfer.csproj"
             }
           }
         }
