@@ -24,8 +24,22 @@ namespace PaidServices.API.Controllers
         public async Task<IActionResult> GetAll()
         {
             var result = await _context.ApplicantPaidServices
-                .ToListAsync();
-            var dto = result.Select(Mapper.Map<DtoApplicantPaidService>).ToList();
+                .ToListAsync()
+                .ConfigureAwait(false);
+            var dto = result
+                .Select(Mapper.Map<DtoApplicantPaidService>)
+                .ToList();
+
+            return Ok(dto);
+        }
+
+        [HttpGet("applicant/{id}")]
+        public async Task<IActionResult> Get(long id)
+        {
+            var result = await _context.ApplicantPaidServices
+                .SingleOrDefaultAsync(x => x.Id == id)
+                .ConfigureAwait(false);
+            var dto = Mapper.Map<DtoApplicantPaidService>(result);
 
             return Ok(dto);
         }

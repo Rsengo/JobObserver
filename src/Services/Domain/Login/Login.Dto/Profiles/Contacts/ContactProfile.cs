@@ -36,6 +36,9 @@ namespace Login.Dto.Profiles.Contacts
                     o => o.Ignore())
                 .ForMember(
                     d => d.Sites,
+                    o => o.Ignore())
+                .ForMember(
+                    d => d.User,
                     o => o.Ignore());
         }
     }

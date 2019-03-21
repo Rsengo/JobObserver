@@ -155,6 +155,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vacancies.Synchronization",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login.Dto", "src\Services\Domain\Login\Login.Dto\Login.Dto.csproj", "{1258652A-94A2-4610-AC5F-B17D17C945BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login.Synchronization", "src\Services\Domain\Login\Login.Synchronization\Login.Synchronization.csproj", "{2E2D4976-F7E0-4455-BE2A-282B9A37F3C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -361,6 +363,10 @@ Global
 		{1258652A-94A2-4610-AC5F-B17D17C945BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1258652A-94A2-4610-AC5F-B17D17C945BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1258652A-94A2-4610-AC5F-B17D17C945BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E2D4976-F7E0-4455-BE2A-282B9A37F3C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E2D4976-F7E0-4455-BE2A-282B9A37F3C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E2D4976-F7E0-4455-BE2A-282B9A37F3C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E2D4976-F7E0-4455-BE2A-282B9A37F3C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -441,6 +447,7 @@ Global
 		{1A354BC8-F993-42F6-B179-D87945A57C6F} = {B6E5CA26-AF0A-49E4-BF08-830AF87D9D91}
 		{346619E0-2EE2-4C58-BACF-1BF905F01BBC} = {2A69D80D-B0E4-472C-8B30-83CE5D1D8778}
 		{1258652A-94A2-4610-AC5F-B17D17C945BC} = {568A2B3F-992C-48A1-AD3A-A43872F1BAC9}
+		{2E2D4976-F7E0-4455-BE2A-282B9A37F3C4} = {568A2B3F-992C-48A1-AD3A-A43872F1BAC9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EFC2B589-7633-4F4E-A0D8-0509C36A83A5}

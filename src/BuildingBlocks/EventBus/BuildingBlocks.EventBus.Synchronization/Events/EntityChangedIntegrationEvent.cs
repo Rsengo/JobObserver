@@ -4,7 +4,12 @@ using Newtonsoft.Json;
 
 namespace BuildingBlocks.EventBus.Synchronization.Events
 {
-    public class EntityChangedIntegrationEvent<TEntity> : IntegrationEvent
+    public class EntityChangedIntegrationEvent<TEntity> : EntityChangedIntegrationEvent<TEntity, long>
+        where TEntity : class, new()
+    {
+    }
+
+    public class EntityChangedIntegrationEvent<TEntity, TKey> : IntegrationEvent
         where TEntity : class, new()
     {
         [JsonProperty("created")]
@@ -14,12 +19,12 @@ namespace BuildingBlocks.EventBus.Synchronization.Events
         public IEnumerable<TEntity> Updated { get; set; }
 
         [JsonProperty("deleted")]
-        public IEnumerable<long> Deleted { get; set; }
+        public IEnumerable<TKey> Deleted { get; set; }
 
         public EntityChangedIntegrationEvent(
             IEnumerable<TEntity> created,
             IEnumerable<TEntity> updated,
-            IEnumerable<long> deleted)
+            IEnumerable<TKey> deleted)
         {
             Created = created;
             Updated = updated;

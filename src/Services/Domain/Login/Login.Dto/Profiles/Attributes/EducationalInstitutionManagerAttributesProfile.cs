@@ -13,7 +13,10 @@ namespace Login.Dto.Profiles.Attributes
 
         public override void Dto2Entity()
         {
-            CreateMap<DtoEducationalInstitutionManagerAttributes, EducationalInstitutionManagerAttributes>();
+            CreateMap<DtoEducationalInstitutionManagerAttributes, EducationalInstitutionManagerAttributes>()
+                .ForMember(
+                    d => d.User, 
+                    o => o.Ignore());
         }
     }
 }

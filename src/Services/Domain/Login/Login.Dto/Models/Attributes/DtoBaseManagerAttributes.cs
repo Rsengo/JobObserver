@@ -19,5 +19,8 @@ namespace Login.Dto.Models.Attributes
         /// </summary>
         [JsonProperty("organization_id")]
         public virtual long OrganizationId { get; set; }
+
+        [JsonProperty("user_id")]
+        public virtual string UserId { get; set; }
     }
 }

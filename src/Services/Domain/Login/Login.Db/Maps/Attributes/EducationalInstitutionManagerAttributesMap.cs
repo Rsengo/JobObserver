@@ -21,6 +21,13 @@ namespace Login.Db.Maps.Attributes
                 .Property(x => x.Position)
                 .IsRequired();
 
+            builder
+                .HasOne(x => x.User)
+                .WithOne(x => x.EducationalInstitutionManagerAttributes)
+                .HasForeignKey<EducationalInstitutionManagerAttributes>(x => x.UserId)
+                .OnDelete(DeleteBehavior.Restrict)
+                .IsRequired();
+
             builder.ToTable(TableNames.EDUCATIONAL_INSTITUTION_MANAGER_ATTRIBUTES);
         }
     }

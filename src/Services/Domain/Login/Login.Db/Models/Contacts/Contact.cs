@@ -32,5 +32,9 @@ namespace Login.Db.Models.Contacts
         ///     Другие контакты
         /// </summary>
         public virtual ICollection<Site> Sites { get; set; }
+
+        public virtual User User { get; set; }
+
+        public virtual string UserId { get; set; }
     }
 }

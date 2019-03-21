@@ -29,8 +29,6 @@ namespace Login.Db
 
         public virtual DbSet<Contact> Contacts { get; set; }
 
-        public virtual DbSet<ContactSite> ContactSites { get; set; }
-
         public virtual DbSet<Phone> Phones { get; set; }
 
         public virtual DbSet<Site> Sites { get; set; }
