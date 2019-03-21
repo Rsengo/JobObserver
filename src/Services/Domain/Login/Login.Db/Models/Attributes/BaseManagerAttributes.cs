@@ -5,7 +5,7 @@ using BuildingBlocks.EntityFramework.Models;
 
 namespace Login.Db.Models.Attributes
 {
-    public class BaseManagerAttributes : RelationalEntity
+    public abstract class BaseManagerAttributes : RelationalEntity
     {
         /// <summary>
         ///     Должность

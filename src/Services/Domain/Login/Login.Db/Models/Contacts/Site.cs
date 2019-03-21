@@ -26,5 +26,9 @@ namespace Login.Db.Models.Contacts
         ///     Является ли предпочтительным
         /// </summary>
         public virtual bool IsPreferred { get; set; }
+
+        public virtual Contact Contact { get; set; }
+
+        public virtual long ContactId { get; set; }
     }
 }

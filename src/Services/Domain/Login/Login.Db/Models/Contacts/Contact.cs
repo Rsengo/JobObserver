@@ -32,10 +32,5 @@ namespace Login.Db.Models.Contacts
         ///     Другие контакты
         /// </summary>
         public virtual ICollection<Site> Sites { get; set; }
-
-        /// <summary>
-        ///     Id Предпочитаемого типа связи
-        /// </summary>
-        public virtual long PreferredTypeId { get; set; }
     }
 }

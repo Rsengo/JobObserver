@@ -16,4 +16,8 @@
     <PackageReference Include="Z.EntityFramework.Classic" Version="7.0.39" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
 </Project>
