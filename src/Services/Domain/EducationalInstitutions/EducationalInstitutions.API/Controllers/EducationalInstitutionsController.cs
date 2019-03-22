@@ -13,7 +13,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EducationalInstitutions.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class EducationalInstitutionsController : ControllerBase
     {
         private readonly EducationalInstitutionsDbContext _context;

@@ -46,9 +46,9 @@ namespace BuildingBlocks.Extensions.EventBus.RabbitMQ
                 var rabbitMQPersistentConnection = sp.GetRequiredService<IRabbitMQPersistentConnection>();
                 var logger = sp.GetRequiredService<ILogger<EventBusRabbitMQ>>();
                 var eventBusSubscriptionsManager = sp.GetRequiredService<IEventBusSubscriptionsManager>();
-                var subscriptionClientName = configuration.SubscriptionClientName;
+                var EventBusSubscriptionClientName = configuration.SubscriptionClientName;
 
-                return new EventBusRabbitMQ(rabbitMQPersistentConnection, logger, sp, eventBusSubscriptionsManager, subscriptionClientName, retryCount);
+                return new EventBusRabbitMQ(rabbitMQPersistentConnection, logger, sp, eventBusSubscriptionsManager, EventBusSubscriptionClientName, retryCount);
             });
 
             foreach (var handler in configuration.EventHandlers)

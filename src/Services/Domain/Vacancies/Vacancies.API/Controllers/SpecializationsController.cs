@@ -11,7 +11,7 @@ using Vacancies.Dto.Models.Specializations;
 
 namespace Vacancies.API.Controllers
 {
-    [Route("api/vacancies")]
+    [Route("api/v1/vacancies")]
     public class SpecializationsController : ControllerBase
     {
         private readonly VacanciesDbContext _context;

@@ -11,7 +11,7 @@ using Resumes.Dto.Models.Specializations;
 
 namespace Resumes.API.Controllers
 {
-    [Route("api/resumes")]
+    [Route("api/v1/resumes")]
     public class SpecializationsController : ControllerBase
     {
         private readonly ResumesDbContext _context;

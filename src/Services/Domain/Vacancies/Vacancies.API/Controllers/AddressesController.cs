@@ -12,7 +12,7 @@ using Vacancies.Dto.Models.Geographic;
 
 namespace Vacancies.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class AddressesController : ControllerBase
     {
         private readonly VacanciesDbContext _context;

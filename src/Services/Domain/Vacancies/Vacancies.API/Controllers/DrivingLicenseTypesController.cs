@@ -11,7 +11,7 @@ using Vacancies.Dto.Models.Driving;
 
 namespace Vacancies.API.Controllers
 {
-    [Route("api/vacancies")]
+    [Route("api/v1/vacancies")]
     public class DrivingLicenseTypesController : ControllerBase
     {
         private readonly VacanciesDbContext _context;

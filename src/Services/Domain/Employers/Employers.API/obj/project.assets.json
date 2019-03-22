@@ -4985,6 +4985,7 @@
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "BuildingBlocks.EventBus.RabbitMQ": "1.0.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "RabbitMQ.Client": "5.1.0"
         },
         "compile": {
@@ -13554,13 +13555,5 @@
         "warn": true
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Ошибка чтения файла кэша C:\\JobObserver2\\src\\Services\\Domain\\Employers\\Employers.API\\obj\\Employers.API.csproj.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

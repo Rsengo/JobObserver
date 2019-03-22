@@ -12,7 +12,7 @@ using Vacancies.Dto.Models.Languages;
 
 namespace Vacancies.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class LanguageSkillsController : ControllerBase
     {
                 private readonly VacanciesDbContext _context;

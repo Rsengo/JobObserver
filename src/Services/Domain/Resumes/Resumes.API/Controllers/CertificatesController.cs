@@ -11,7 +11,7 @@ using Resumes.Dto.Models.Certificates;
 
 namespace Resumes.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class CertificatesController : ControllerBase
     {
         private readonly ResumesDbContext _context;

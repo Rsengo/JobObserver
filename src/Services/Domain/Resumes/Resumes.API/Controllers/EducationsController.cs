@@ -11,7 +11,7 @@ using Resumes.Dto.Models.Educations;
 
 namespace Resumes.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class EducationsController : ControllerBase
     {
         private readonly ResumesDbContext _context;

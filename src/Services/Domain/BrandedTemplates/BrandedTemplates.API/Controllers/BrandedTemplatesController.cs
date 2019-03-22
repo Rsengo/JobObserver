@@ -13,7 +13,7 @@ namespace BrandedTemplates.API.Controllers
 
     using Microsoft.EntityFrameworkCore;
 
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public sealed class BrandedTemplatesController: ControllerBase
     {
         private readonly BrandedTemplatesDbContext _context;

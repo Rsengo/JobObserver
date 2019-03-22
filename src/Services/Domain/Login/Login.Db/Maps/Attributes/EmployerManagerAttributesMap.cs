@@ -24,7 +24,7 @@ namespace Login.Db.Maps.Attributes
             builder
                 .HasOne(x => x.User)
                 .WithOne(x => x.EmployerManagerAttributes)
-                .HasForeignKey<EducationalInstitutionManagerAttributes>(x => x.UserId)
+                .HasForeignKey<EmployerManagerAttributes>(x => x.UserId)
                 .OnDelete(DeleteBehavior.Restrict)
                 .IsRequired();
 

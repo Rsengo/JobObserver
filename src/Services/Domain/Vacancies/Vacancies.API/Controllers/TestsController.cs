@@ -11,7 +11,7 @@ using Vacancies.Dto.Models.Tests;
 
 namespace Vacancies.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class TestsController : ControllerBase
     {
         private readonly VacanciesDbContext _context;

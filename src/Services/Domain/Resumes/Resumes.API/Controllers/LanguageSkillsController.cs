@@ -12,7 +12,7 @@ using Resumes.Dto.Models.Languages;
 
 namespace Resumes.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class LanguageSkillsController : ControllerBase
     {
                 private readonly ResumesDbContext _context;

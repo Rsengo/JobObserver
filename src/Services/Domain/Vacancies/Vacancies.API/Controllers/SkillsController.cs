@@ -11,7 +11,7 @@ using Vacancies.Dto.Models.Skills;
 
 namespace Vacancies.API.Controllers
 {
-    [Route("api/vacancies")]
+    [Route("api/v1/vacancies")]
     public class SkillsController : ControllerBase
     {
         private readonly VacanciesDbContext _context;

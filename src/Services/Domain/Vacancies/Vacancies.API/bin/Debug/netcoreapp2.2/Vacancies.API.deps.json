@@ -849,6 +849,7 @@
       "BuildingBlocks.Extensions.EventBus.RabbitMQ/1.0.0": {
         "dependencies": {
           "BuildingBlocks.EventBus.RabbitMQ": "1.0.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "RabbitMQ.Client": "5.1.0"
         },
         "runtime": {

@@ -11,7 +11,7 @@ using Resumes.Dto.Models.Driving;
 
 namespace Resumes.API.Controllers
 {
-    [Route("api/resumes")]
+    [Route("api/v1/resumes")]
     public class DrivingLicenseTypesController : ControllerBase
     {
         private readonly ResumesDbContext _context;

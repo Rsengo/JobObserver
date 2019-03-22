@@ -12,7 +12,7 @@ using Resumes.Dto.Models.Geographic;
 
 namespace Resumes.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class AddressesController : ControllerBase
     {
         private readonly ResumesDbContext _context;

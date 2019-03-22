@@ -69,7 +69,7 @@ namespace EducationalInstitutions.API
                     con.Password = Configuration["EventBusPassword"];
                 });
 
-                builder.SubscriptionClientName = Configuration["SubscriptionClientName"];
+                builder.SubscriptionClientName = Configuration["EventBusSubscriptionClientName"];
                 builder.RetryCount = retryCount;
 
                 builder.RegisterEventHandler<AreasChangedHandler>();

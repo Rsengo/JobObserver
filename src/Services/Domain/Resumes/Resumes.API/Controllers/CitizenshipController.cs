@@ -11,7 +11,7 @@ using Resumes.Dto.Models.ResumeAreas;
 
 namespace Resumes.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class CitizenshipController : ControllerBase
     {
         private readonly ResumesDbContext _context;

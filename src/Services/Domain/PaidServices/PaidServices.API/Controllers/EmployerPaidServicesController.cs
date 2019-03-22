@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PaidServices.API.Controllers
 {
-    [Route("api/paidservices")]
+    [Route("api/v1/paidservices")]
     public class EmployerPaidServicesController : ControllerBase
     {
         private readonly PaidServicesDbContext _context;

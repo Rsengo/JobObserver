@@ -11,7 +11,7 @@ using Vacancies.Dto.Models.Negotiations;
 
 namespace Vacancies.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class NegotiationsController : ControllerBase
     {
         private readonly VacanciesDbContext _context;

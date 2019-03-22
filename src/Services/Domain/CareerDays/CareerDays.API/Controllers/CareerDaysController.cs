@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CareerDays.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class CareerDaysController : ControllerBase
     {
         private readonly CareerDaysDbContext _context;

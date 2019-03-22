@@ -10,7 +10,7 @@ using PaidServices.Dto.Models;
 
 namespace PaidServices.API.Controllers
 {
-    [Route("api/paidservices")]
+    [Route("api/v1/paidservices")]
     public class ApplicantPaidServicesController : ControllerBase
     {
         private readonly PaidServicesDbContext _context;

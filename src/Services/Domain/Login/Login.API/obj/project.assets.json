@@ -4906,6 +4906,23 @@
           "lib/netstandard2.0/Z.EntityFramework.Extensions.Classic.dll": {}
         }
       },
+      "Z.EntityFramework.Extensions.EFCore/2.1.56": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.4.0",
+          "Microsoft.EntityFrameworkCore.Relational": "2.0.0",
+          "System.Configuration.ConfigurationManager": "4.4.0",
+          "System.Data.SqlClient": "4.4.0",
+          "System.Reflection.Emit": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.4.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.dll": {}
+        }
+      },
       "Z.Expressions.Eval/2.9.12": {
         "type": "package",
         "dependencies": {
@@ -4941,6 +4958,19 @@
         },
         "runtime": {
           "bin/placeholder/BuildingBlocks.AutoMapper.dll": {}
+        }
+      },
+      "BuildingBlocks.DataTransfer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.1"
+        },
+        "compile": {
+          "bin/placeholder/BuildingBlocks.DataTransfer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BuildingBlocks.DataTransfer.dll": {}
         }
       },
       "BuildingBlocks.EntityFramework/1.0.0": {
@@ -4981,6 +5011,21 @@
         },
         "runtime": {
           "bin/placeholder/BuildingBlocks.EventBus.RabbitMQ.dll": {}
+        }
+      },
+      "BuildingBlocks.EventBus.Synchronization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "BuildingBlocks.EventBus": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.2.2",
+          "Newtonsoft.Json": "12.0.1"
+        },
+        "compile": {
+          "bin/placeholder/BuildingBlocks.EventBus.Synchronization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BuildingBlocks.EventBus.Synchronization.dll": {}
         }
       },
       "BuildingBlocks.Extensions.Assemblies/1.0.0": {
@@ -5028,6 +5073,7 @@
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "BuildingBlocks.EventBus.RabbitMQ": "1.0.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "RabbitMQ.Client": "5.1.0"
         },
         "compile": {
@@ -5053,6 +5099,37 @@
         },
         "runtime": {
           "bin/placeholder/Login.Db.dll": {}
+        }
+      },
+      "Login.Dto/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "AutoMapper": "8.0.0",
+          "BuildingBlocks.AutoMapper": "1.0.0",
+          "BuildingBlocks.DataTransfer": "1.0.0",
+          "Login.Db": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Login.Dto.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Login.Dto.dll": {}
+        }
+      },
+      "Login.Synchronization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "BuildingBlocks.EventBus.Synchronization": "1.0.0",
+          "Login.Dto": "1.0.0",
+          "Z.EntityFramework.Extensions.EFCore": "2.1.56"
+        },
+        "compile": {
+          "bin/placeholder/Login.Synchronization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Login.Synchronization.dll": {}
         }
       }
     }
@@ -13439,6 +13516,18 @@
         "z.entityframework.extensions.classic.nuspec"
       ]
     },
+    "Z.EntityFramework.Extensions.EFCore/2.1.56": {
+      "sha512": "xaWKDREp4BSGcDRO6zVQEK00hneECzwJiWcAsT6kT5nmSWuWGomBuidHF0ELM8MWyU2QG4LG/wJRKVmCqa7qQg==",
+      "type": "package",
+      "path": "z.entityframework.extensions.efcore/2.1.56",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.dll",
+        "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.xml",
+        "z.entityframework.extensions.efcore.2.1.56.nupkg.sha512",
+        "z.entityframework.extensions.efcore.nuspec"
+      ]
+    },
     "Z.Expressions.Eval/2.9.12": {
       "sha512": "JwCNV619Qcjq0O10LPmiC7GntXsBU5XTbsDcjuDOoY5xCQOQW3MLY2Ct/tRb0kBL4rbkP/LCCFZXcDN88yndrQ==",
       "type": "package",
@@ -13462,6 +13551,11 @@
       "path": "../../../../BuildingBlocks/AutoMapper/BuildingBlocks.AutoMapper/BuildingBlocks.AutoMapper.csproj",
       "msbuildProject": "../../../../BuildingBlocks/AutoMapper/BuildingBlocks.AutoMapper/BuildingBlocks.AutoMapper.csproj"
     },
+    "BuildingBlocks.DataTransfer/1.0.0": {
+      "type": "project",
+      "path": "../../../../BuildingBlocks/DataTransfer/BuildingBlocks.DataTransfer/BuildingBlocks.DataTransfer.csproj",
+      "msbuildProject": "../../../../BuildingBlocks/DataTransfer/BuildingBlocks.DataTransfer/BuildingBlocks.DataTransfer.csproj"
+    },
     "BuildingBlocks.EntityFramework/1.0.0": {
       "type": "project",
       "path": "../../../../BuildingBlocks/Database/EntityFramework/BuildingBlocks.EntityFramework/BuildingBlocks.EntityFramework.csproj",
@@ -13476,6 +13570,11 @@
       "type": "project",
       "path": "../../../../BuildingBlocks/EventBus/BuildingBlocks.EventBus.RabbitMQ/BuildingBlocks.EventBus.RabbitMQ.csproj",
       "msbuildProject": "../../../../BuildingBlocks/EventBus/BuildingBlocks.EventBus.RabbitMQ/BuildingBlocks.EventBus.RabbitMQ.csproj"
+    },
+    "BuildingBlocks.EventBus.Synchronization/1.0.0": {
+      "type": "project",
+      "path": "../../../../BuildingBlocks/EventBus/BuildingBlocks.EventBus.Synchronization/BuildingBlocks.EventBus.Synchronization.csproj",
+      "msbuildProject": "../../../../BuildingBlocks/EventBus/BuildingBlocks.EventBus.Synchronization/BuildingBlocks.EventBus.Synchronization.csproj"
     },
     "BuildingBlocks.Extensions.Assemblies/1.0.0": {
       "type": "project",
@@ -13501,6 +13600,16 @@
       "type": "project",
       "path": "../Login.Db/Login.Db.csproj",
       "msbuildProject": "../Login.Db/Login.Db.csproj"
+    },
+    "Login.Dto/1.0.0": {
+      "type": "project",
+      "path": "../Login.Dto/Login.Dto.csproj",
+      "msbuildProject": "../Login.Dto/Login.Dto.csproj"
+    },
+    "Login.Synchronization/1.0.0": {
+      "type": "project",
+      "path": "../Login.Synchronization/Login.Synchronization.csproj",
+      "msbuildProject": "../Login.Synchronization/Login.Synchronization.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -13508,11 +13617,11 @@
       "BuildingBlocks.Extensions.AutoMapper >= 1.0.0",
       "BuildingBlocks.Extensions.EntityFramework >= 1.0.0",
       "BuildingBlocks.Extensions.EventBus.RabbitMQ >= 1.0.0",
-      "C:\\JobObserver2\\src\\Services\\Domain\\Login\\Login.Synchronization\\Login.Synchronization.csproj",
       "IdentityServer4 >= 2.3.2",
       "IdentityServer4.AspNetIdentity >= 2.3.0",
       "IdentityServer4.EntityFramework >= 2.3.2",
       "Login.Db >= 1.0.0",
+      "Login.Synchronization >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Identity >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
@@ -13632,16 +13741,5 @@
         "warn": true
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "Unable to find project information for 'C:\\JobObserver2\\src\\Services\\Domain\\Login\\Login.Synchronization\\Login.Synchronization.csproj'. The project file may be invalid or missing targets required for restore.",
-      "libraryId": "C:\\JobObserver2\\src\\Services\\Domain\\Login\\Login.Synchronization\\Login.Synchronization.csproj",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.2"
-      ]
-    }
-  ]
+  }
 }

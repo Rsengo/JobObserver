@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Employers.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class EmployersController : ControllerBase
     {
         private readonly EmployersDbContext _context;

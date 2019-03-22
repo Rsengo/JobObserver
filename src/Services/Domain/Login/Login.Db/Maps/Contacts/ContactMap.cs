@@ -21,7 +21,7 @@ namespace Login.Db.Maps.Contacts
             builder
                 .HasOne(x => x.AdditionalPhone)
                 .WithOne()
-                .HasForeignKey<Contact>(x => x.AdditionalPhone)
+                .HasForeignKey<Contact>(x => x.AdditionalPhoneId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder

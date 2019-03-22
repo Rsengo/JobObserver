@@ -9,13 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-<<<<<<< HEAD
     <ProjectReference Include="..\BuildingBlocks.AutoMapper\BuildingBlocks.AutoMapper.csproj" />
-=======
-    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
-      <HintPath>C:\Users\RudencovDP\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\2.2.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
-    </Reference>
->>>>>>> master
   </ItemGroup>
 
 </Project>
