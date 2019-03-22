@@ -96,7 +96,7 @@ namespace Resumes.API
                 builder.SubscriptionClientName = Configuration["SubscriptionClientName"];
                 builder.RetryCount = retryCount;
 
-                builder.RegisterEventHandler<ApplicantsChangedHandler>();
+                builder.RegisterEventHandler<UsersChangedHandler>();
                 builder.RegisterEventHandler<GendersChangedHandler>();
                 builder.RegisterEventHandler<DrivingLicenseTypesChangedHandler>();
                 builder.RegisterEventHandler<EducationalLevelsChangedHandler>();
@@ -169,7 +169,7 @@ namespace Resumes.API
 
             app.UseEventBusRabbitMQ(eventBus =>
             {
-                 eventBus.Subscribe<ApplicantsChanged, ApplicantsChangedHandler>();
+                 eventBus.Subscribe<UsersChanged, UsersChangedHandler>();
                  eventBus.Subscribe<GendersChanged, GendersChangedHandler>();
                  eventBus.Subscribe<DrivingLicenseTypesChanged, DrivingLicenseTypesChangedHandler>();
                  eventBus.Subscribe<EducationalLevelsChanged, EducationalLevelsChangedHandler>();

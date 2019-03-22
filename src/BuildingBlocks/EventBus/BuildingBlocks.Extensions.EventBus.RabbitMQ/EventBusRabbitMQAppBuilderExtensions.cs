@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using BuildingBlocks.EventBus.Abstractions;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Builder;
 
 namespace BuildingBlocks.Extensions.EventBus.RabbitMQ
 {

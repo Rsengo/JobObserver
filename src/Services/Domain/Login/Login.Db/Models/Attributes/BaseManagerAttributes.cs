@@ -5,7 +5,7 @@ using BuildingBlocks.EntityFramework.Models;
 
 namespace Login.Db.Models.Attributes
 {
-    public class BaseManagerAttributes : RelationalEntity
+    public abstract class BaseManagerAttributes : RelationalEntity
     {
         /// <summary>
         ///     Должность
@@ -16,5 +16,9 @@ namespace Login.Db.Models.Attributes
         ///     Id Организации
         /// </summary>
         public virtual long OrganizationId { get; set; }
+
+        public virtual User User { get; set; }
+
+        public virtual string UserId { get; set; }
     }
 }

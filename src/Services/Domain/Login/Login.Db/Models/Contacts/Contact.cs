@@ -33,9 +33,8 @@ namespace Login.Db.Models.Contacts
         /// </summary>
         public virtual ICollection<Site> Sites { get; set; }
 
-        /// <summary>
-        ///     Id Предпочитаемого типа связи
-        /// </summary>
-        public virtual long PreferredTypeId { get; set; }
+        public virtual User User { get; set; }
+
+        public virtual string UserId { get; set; }
     }
 }
