@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "107f0f9c687ee6b6d785af114879cac5c665abfe"
+    "signature": "2d428189209e0a35466cfad3a2bbc782fcb8415c"
   },
   "compilationOptions": {
     "defines": [
@@ -32,6 +32,7 @@
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.0.1916590",
           "Swashbuckle.AspNetCore": "4.0.1",
           "Z.EntityFramework.Extensions.EFCore": "2.1.49",
           "Z.EntityFramework.Plus.EFCore": "1.8.18"
@@ -303,6 +304,7 @@
       },
       "Microsoft.NETCore.Platforms/2.2.0": {},
       "Microsoft.NETCore.Targets/2.0.0": {},
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.0.1916590": {},
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.2.0"
@@ -577,7 +579,8 @@
       },
       "BuildingBlocks.Extensions.AutoMapper/1.0.0": {
         "dependencies": {
-          "BuildingBlocks.AutoMapper": "1.0.0"
+          "BuildingBlocks.AutoMapper": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0"
         },
         "runtime": {
           "BuildingBlocks.Extensions.AutoMapper.dll": {}
@@ -3611,6 +3614,13 @@
       "sha512": "sha512-rJJD/NPatfDry7SuNM7YvjqbJD9u1fs8h0hGI0nft0lnCFfEtPuX5N29Akja0ATbjQxzWn4P0s5gUSeOxEqROQ==",
       "path": "microsoft.netcore.targets/2.0.0",
       "hashPath": "microsoft.netcore.targets.2.0.0.nupkg.sha512"
+    },
+    "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.0.1916590": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bIEPJ4V0spW0aLb5/XQvs8ziv85wrR62IDowAItnfXCXHOUelEEOW59lq95IfXMFf/tWUDyrcLQh8rnFVfWWyw==",
+      "path": "microsoft.visualstudio.azure.containers.tools.targets/1.0.1916590",
+      "hashPath": "microsoft.visualstudio.azure.containers.tools.targets.1.0.1916590.nupkg.sha512"
     },
     "NETStandard.Library/2.0.3": {
       "type": "package",

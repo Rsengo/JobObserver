@@ -23,7 +23,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
-      - ConnectionString=Server=sql.data;Database=BRANDED_TEMPLATES;User Id=sa;Password=Pass@word
+      - ConnectionString=${Server=sql.data;Database=BRANDED_TEMPLATES;User Id=sa;Password=Pass@word}
       - CorsPolicy=${CORS_POLICY}
     ports:
       - "5105:80"   

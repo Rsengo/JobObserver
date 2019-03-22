@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "c69496ea8a4e388bdc37446b271d330da6b9036d"
+    "signature": "aabd7d89f12d92a26edb1d4aeb41db0ebe2d782f"
   },
   "compilationOptions": {
     "defines": [
@@ -32,6 +32,7 @@
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.0.1916590",
           "Swashbuckle.AspNetCore": "4.0.1",
           "Z.EntityFramework.Classic": "7.0.39"
         },
@@ -302,6 +303,7 @@
       },
       "Microsoft.NETCore.Platforms/2.2.0": {},
       "Microsoft.NETCore.Targets/2.0.0": {},
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.0.1916590": {},
       "Microsoft.Win32.Primitives/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.2.0",
@@ -820,7 +822,8 @@
       },
       "BuildingBlocks.Extensions.AutoMapper/1.0.0": {
         "dependencies": {
-          "BuildingBlocks.AutoMapper": "1.0.0"
+          "BuildingBlocks.AutoMapper": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0"
         },
         "runtime": {
           "BuildingBlocks.Extensions.AutoMapper.dll": {}
@@ -3910,6 +3913,13 @@
       "sha512": "sha512-rJJD/NPatfDry7SuNM7YvjqbJD9u1fs8h0hGI0nft0lnCFfEtPuX5N29Akja0ATbjQxzWn4P0s5gUSeOxEqROQ==",
       "path": "microsoft.netcore.targets/2.0.0",
       "hashPath": "microsoft.netcore.targets.2.0.0.nupkg.sha512"
+    },
+    "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.0.1916590": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bIEPJ4V0spW0aLb5/XQvs8ziv85wrR62IDowAItnfXCXHOUelEEOW59lq95IfXMFf/tWUDyrcLQh8rnFVfWWyw==",
+      "path": "microsoft.visualstudio.azure.containers.tools.targets/1.0.1916590",
+      "hashPath": "microsoft.visualstudio.azure.containers.tools.targets.1.0.1916590.nupkg.sha512"
     },
     "Microsoft.Win32.Primitives/4.3.0": {
       "type": "package",

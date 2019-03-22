@@ -4674,7 +4674,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
-          "BuildingBlocks.AutoMapper": "1.0.0"
+          "BuildingBlocks.AutoMapper": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.Extensions.AutoMapper.dll": {}

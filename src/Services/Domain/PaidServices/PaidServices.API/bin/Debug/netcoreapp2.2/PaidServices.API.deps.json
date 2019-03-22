@@ -625,7 +625,8 @@
       },
       "BuildingBlocks.Extensions.AutoMapper/1.0.0": {
         "dependencies": {
-          "BuildingBlocks.AutoMapper": "1.0.0"
+          "BuildingBlocks.AutoMapper": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0"
         },
         "runtime": {
           "BuildingBlocks.Extensions.AutoMapper.dll": {}
