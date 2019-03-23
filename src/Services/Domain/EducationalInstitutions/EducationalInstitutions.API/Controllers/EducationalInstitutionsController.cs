@@ -27,10 +27,12 @@ namespace EducationalInstitutions.API.Controllers
         public async Task<IActionResult> Get(long id)
         {
             var result = await _context.EducationalInstitutions
-                .Include(x => x.Area)
                 .Include(x => x.Synonyms)
                 .SingleOrDefaultAsync(x => x.Id == id)
                 .ConfigureAwait(false);
+
+            await _context.Areas.LoadAsync();
+
             var dto = Mapper.Map<DtoEducationalInstitution>(result);
 
             return Ok(dto);

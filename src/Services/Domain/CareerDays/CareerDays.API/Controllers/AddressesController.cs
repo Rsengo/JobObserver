@@ -25,13 +25,14 @@ namespace CareerDays.API.Controllers
         public async Task<IActionResult> Get(long id)
         {
             var result = await _context.Addresses
-                .AsDbQuery()
-                .Include(x => x.Area)
                 .Include(x => x.Station)
                     .ThenInclude(x => x.Line)
                         .ThenInclude(x => x.Metro)
                 .SingleOrDefaultAsync(x => x.Id == id)
                 .ConfigureAwait(false);
+
+            await _context.Areas.LoadAsync();
+
             var dto = Mapper.Map<DtoAddress>(result);
 
             return Ok(dto);

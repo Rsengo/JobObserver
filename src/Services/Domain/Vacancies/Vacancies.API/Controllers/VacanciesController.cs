@@ -25,9 +25,8 @@ namespace Vacancies.API.Controllers
         public async Task<IActionResult> Get(long id)
         {
             var result = await _context.Vacancies
-                .AsDbQuery()
                 .Include(x => x.Address)
-                    .AlsoInclude(x => x.Area)
+                    //.AlsoInclude(x => x.Area)
                     .ThenInclude(x => x.Station)
                         .ThenInclude(x => x.Line)
                             .ThenInclude(x => x.Metro)
@@ -39,12 +38,11 @@ namespace Vacancies.API.Controllers
                 .Include(x => x.Industry)
                 .Include(x => x.KeySkills)
                     .ThenInclude(x => x.Skill)
-                .AsDbQuery()
                 .Include(x => x.Languages)
-                    .AlsoInclude(x => x.Language)
-                    .AlsoInclude(x => x.Level)
+                    //.AlsoInclude(x => x.Language)
+                    //.AlsoInclude(x => x.Level)
                 .Include(x => x.Specializations)
-                    .ThenInclude(x => x.Specialization)
+                    //.ThenInclude(x => x.Specialization)
                 .Include(x => x.Salary)
                     .ThenInclude(x => x.Currency)
                 .Include(x => x.Schedule)
@@ -52,6 +50,12 @@ namespace Vacancies.API.Controllers
                 .Include(x => x.VacancyStatus)
                 .SingleOrDefaultAsync(x => x.Id == id)
                 .ConfigureAwait(false);
+
+            await _context.Areas.LoadAsync();
+            await _context.Languages.LoadAsync();
+            await _context.LanguageLevels.LoadAsync();
+            await _context.Specializations.LoadAsync();
+
             var dto = Mapper.Map<DtoVacancy>(result);
 
             return Ok(dto);

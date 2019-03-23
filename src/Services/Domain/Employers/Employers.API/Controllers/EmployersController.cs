@@ -28,10 +28,12 @@ namespace Employers.API.Controllers
         {
             var result = await _context.Employers
                 .Include(x => x.Type)
-                .Include(x => x.Area)
                 .Include(x => x.Synonyms)
                 .SingleOrDefaultAsync(x => x.Id == id)
                 .ConfigureAwait(false);
+
+            await _context.Areas.LoadAsync();
+
             var dto = Mapper.Map<DtoEmployer>(result);
 
             return Ok(dto);

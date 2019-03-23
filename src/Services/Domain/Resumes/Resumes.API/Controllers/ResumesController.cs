@@ -25,7 +25,7 @@ namespace Resumes.API.Controllers
         public async Task<IActionResult> Get(long id)
         {
             var result = await _context.Resumes
-                .Include(x => x.Area)
+                //.Include(x => x.Area)
                 .Include(x => x.Applicant)
                     .ThenInclude(x => x.Gender)
                 .Include(x => x.BusinessTripReadiness)
@@ -34,19 +34,17 @@ namespace Resumes.API.Controllers
                     .ThenInclude(x => x.Area)
                 .Include(x => x.DrivingLicenseTypes)
                     .ThenInclude(x => x.DrivingLicenseType)
-                .AsDbQuery()
                 .Include(x => x.Education)
-                    .AlsoInclude(x => x.EducationalLevel)
+                    //.AlsoInclude(x => x.EducationalLevel)
                     .ThenInclude(x => x.Specializations)
                         .ThenInclude(x => x.Specialization)
                 .Include(x => x.Employments)
                     .ThenInclude(x => x.Employment)
                 .Include(x => x.Experience)
                     .ThenInclude(x => x.Specialization)
-                .AsDbQuery()
                 .Include(x => x.Languages)
-                    .AlsoInclude(x => x.Level)
-                    .AlsoInclude(x => x.Language)
+                    //.AlsoInclude(x => x.Level)
+                    //.AlsoInclude(x => x.Language)
                 .Include(x => x.MetroStation)
                     .ThenInclude(x => x.Line)
                         .ThenInclude(x => x.Metro)
@@ -55,7 +53,7 @@ namespace Resumes.API.Controllers
                 .Include(x => x.ResumeLocale)
                 .Include(x => x.ResumeStatus)
                 .Include(x => x.Specializations)
-                    .ThenInclude(x => x.Specialization)
+                    //.ThenInclude(x => x.Specialization)
                 .Include(x => x.Salary)
                     .ThenInclude(x => x.Currency)
                 .Include(x => x.Schedules)
@@ -67,6 +65,13 @@ namespace Resumes.API.Controllers
                     .ThenInclude(x => x.Area)
                 .SingleOrDefaultAsync(x => x.Id == id)
                 .ConfigureAwait(false);
+
+            await _context.Areas.LoadAsync();
+            await _context.Languages.LoadAsync();
+            await _context.LanguageLevels.LoadAsync();
+            await _context.EducationalLevels.LoadAsync();
+            await _context.Specializations.LoadAsync();
+
             var dto = Mapper.Map<DtoResume>(result);
 
             return Ok(dto);
