@@ -17,5 +17,9 @@ namespace Login.Db.Models.Contacts
         ///     Комметарий
         /// </summary>
         public virtual string Comment { get; set; }
+
+        public virtual Contact Contact { get; set; }
+
+        public virtual long ContactId { get; set; }
     }
 }

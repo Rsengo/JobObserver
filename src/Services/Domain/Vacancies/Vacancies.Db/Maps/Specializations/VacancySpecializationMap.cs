@@ -4,32 +4,33 @@ using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Vacancies.Db.Constants;
-using Vacancies.Db.Models.Salaries;
+using Vacancies.Db.Models.Specializations;
 
-namespace Vacancies.Db.Maps.Salaries
+namespace Vacancies.Db.Maps.Specializations
 {
-    internal class SalaryMap : IEntityTypeConfiguration<Salary>
+    internal class VacancySpecializationMap : 
+        IEntityTypeConfiguration<VacancySpecialization>
     {
-        public void Configure(EntityTypeBuilder<Salary> builder)
+        public void Configure(EntityTypeBuilder<VacancySpecialization> builder)
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
 
             builder
-                .HasOne(x => x.Currency)
+                .HasOne(x => x.Specialization)
                 .WithMany()
-                .HasForeignKey(x => x.CurrencyId)
+                .HasForeignKey(x => x.SpecializationId)
                 .OnDelete(DeleteBehavior.Restrict)
                 .IsRequired();
 
             builder
                 .HasOne(x => x.Vacancy)
-                .WithOne(x => x.Salary)
-                .HasForeignKey<Salary>(x => x.VacancyId)
+                .WithMany(x => x.Specializations)
+                .HasForeignKey(x => x.VacancyId)
                 .OnDelete(DeleteBehavior.Restrict)
                 .IsRequired();
 
-            builder.ToTable(TableNames.SALARIES);
+            builder.ToTable(TableNames.VACANCY_SPECIALIZATIONS);
         }
     }
 }

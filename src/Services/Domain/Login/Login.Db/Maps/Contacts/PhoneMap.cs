@@ -16,6 +16,13 @@ namespace Login.Db.Maps.Contacts
                 .Property(x => x.Number)
                 .IsRequired();
 
+            builder
+                .HasOne(x => x.Contact)
+                .WithMany(x => x.Phones)
+                .HasForeignKey(x => x.ContactId)
+                .OnDelete(DeleteBehavior.Restrict)
+                .IsRequired();
+
             builder.ToTable(TableNames.PHONES);
         }
     }

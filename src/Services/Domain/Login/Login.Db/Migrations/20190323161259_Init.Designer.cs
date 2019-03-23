@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Login.Db.Migrations
 {
     [DbContext(typeof(LoginDbContext))]
-    [Migration("20190322143127_Init")]
+    [Migration("20190323161259_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -71,21 +71,10 @@ namespace Login.Db.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<long?>("AdditionalPhoneId");
-
-                    b.Property<long>("PhoneId");
-
                     b.Property<string>("UserId")
                         .IsRequired();
 
                     b.HasKey("Id");
-
-                    b.HasIndex("AdditionalPhoneId")
-                        .IsUnique()
-                        .HasFilter("[AdditionalPhoneId] IS NOT NULL");
-
-                    b.HasIndex("PhoneId")
-                        .IsUnique();
 
                     b.HasIndex("UserId")
                         .IsUnique();
@@ -101,10 +90,14 @@ namespace Login.Db.Migrations
 
                     b.Property<string>("Comment");
 
+                    b.Property<long>("ContactId");
+
                     b.Property<string>("Number")
                         .IsRequired();
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ContactId");
 
                     b.ToTable("PHONES");
                 });
@@ -416,19 +409,17 @@ namespace Login.Db.Migrations
 
             modelBuilder.Entity("Login.Db.Models.Contacts.Contact", b =>
                 {
-                    b.HasOne("Login.Db.Models.Contacts.Phone", "AdditionalPhone")
-                        .WithOne()
-                        .HasForeignKey("Login.Db.Models.Contacts.Contact", "AdditionalPhoneId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Login.Db.Models.Contacts.Phone", "Phone")
-                        .WithOne()
-                        .HasForeignKey("Login.Db.Models.Contacts.Contact", "PhoneId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
                     b.HasOne("Login.Db.Models.User", "User")
                         .WithOne("Contacts")
                         .HasForeignKey("Login.Db.Models.Contacts.Contact", "UserId")
+                        .OnDelete(DeleteBehavior.Restrict);
+                });
+
+            modelBuilder.Entity("Login.Db.Models.Contacts.Phone", b =>
+                {
+                    b.HasOne("Login.Db.Models.Contacts.Contact", "Contact")
+                        .WithMany("Phones")
+                        .HasForeignKey("ContactId")
                         .OnDelete(DeleteBehavior.Restrict);
                 });
 

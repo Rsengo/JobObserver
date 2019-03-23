@@ -14,11 +14,7 @@ namespace Login.Dto.Profiles.Contacts
                 .ForMember(
                     d => d.Phone,
                     o => o.MapFrom(
-                        s => Mapper.Map<DtoPhone>(s.Phone)))
-                .ForMember(
-                    d => d.AdditionalPhone,
-                    o => o.MapFrom(
-                        s => Mapper.Map<DtoPhone>(s.AdditionalPhone)))
+                        s => s.Phones.Select(Mapper.Map<DtoPhone>)))
                 .ForMember(
                     d => d.Sites,
                     o => o.MapFrom(
@@ -29,10 +25,7 @@ namespace Login.Dto.Profiles.Contacts
         {
             CreateMap<DtoContact, Contact>()
                 .ForMember(
-                    d => d.Phone,
-                    o => o.Ignore())
-                .ForMember(
-                    d => d.AdditionalPhone,
+                    d => d.Phones,
                     o => o.Ignore())
                 .ForMember(
                     d => d.Sites,

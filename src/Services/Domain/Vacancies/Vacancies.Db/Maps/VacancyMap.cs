@@ -40,8 +40,8 @@ namespace Vacancies.Db.Maps
 
             builder
                 .HasOne(x => x.Salary)
-                .WithMany()
-                .HasForeignKey(x => x.SalaryId)
+                .WithOne(x => x.Vacancy)
+                .HasForeignKey<Vacancy>(x => x.SalaryId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder

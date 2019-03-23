@@ -10,7 +10,7 @@ using Vacancies.Db;
 namespace Vacancies.Db.Migrations
 {
     [DbContext(typeof(VacanciesDbContext))]
-    [Migration("20190322143446_Init")]
+    [Migration("20190323153451_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -87,7 +87,8 @@ namespace Vacancies.Db.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
                     b.Property<long>("OrganizationId");
 
@@ -95,7 +96,7 @@ namespace Vacancies.Db.Migrations
 
                     b.HasIndex("OrganizationId");
 
-                    b.ToTable("Department");
+                    b.ToTable("DEPARTMENTS");
                 });
 
             modelBuilder.Entity("Vacancies.Db.Models.Employers.Employer", b =>
@@ -412,7 +413,8 @@ namespace Vacancies.Db.Migrations
 
                     b.HasIndex("CurrencyId");
 
-                    b.HasIndex("VacancyId");
+                    b.HasIndex("VacancyId")
+                        .IsUnique();
 
                     b.ToTable("SALARIES");
                 });
@@ -474,15 +476,18 @@ namespace Vacancies.Db.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
                     b.Property<long?>("ParentId");
 
                     b.HasKey("Id");
 
+                    b.HasAlternateKey("Name");
+
                     b.HasIndex("ParentId");
 
-                    b.ToTable("Specialization");
+                    b.ToTable("SPECIALIZATIONS");
                 });
 
             modelBuilder.Entity("Vacancies.Db.Models.Specializations.VacancySpecialization", b =>
@@ -501,7 +506,7 @@ namespace Vacancies.Db.Migrations
 
                     b.HasIndex("VacancyId");
 
-                    b.ToTable("VacancySpecializations");
+                    b.ToTable("VACANCY_SPECIALIZATIONS");
                 });
 
             modelBuilder.Entity("Vacancies.Db.Models.Statuses.VacancyStatus", b =>
@@ -600,8 +605,6 @@ namespace Vacancies.Db.Migrations
 
                     b.HasIndex("IndustryId");
 
-                    b.HasIndex("SalaryId");
-
                     b.HasIndex("ScheduleId");
 
                     b.HasIndex("VacancyStatusId");
@@ -627,7 +630,7 @@ namespace Vacancies.Db.Migrations
                     b.HasOne("Vacancies.Db.Models.Employers.Employer", "Organization")
                         .WithMany("Departments")
                         .HasForeignKey("OrganizationId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("Vacancies.Db.Models.Employers.Employer", b =>
@@ -729,9 +732,9 @@ namespace Vacancies.Db.Migrations
                         .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("Vacancies.Db.Models.Vacancy", "Vacancy")
-                        .WithMany()
-                        .HasForeignKey("VacancyId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .WithOne("Salary")
+                        .HasForeignKey("Vacancies.Db.Models.Salaries.Salary", "VacancyId")
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("Vacancies.Db.Models.Skills.VacancySkill", b =>
@@ -751,7 +754,8 @@ namespace Vacancies.Db.Migrations
                 {
                     b.HasOne("Vacancies.Db.Models.Specializations.Specialization", "Parent")
                         .WithMany("Specializations")
-                        .HasForeignKey("ParentId");
+                        .HasForeignKey("ParentId")
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("Vacancies.Db.Models.Specializations.VacancySpecialization", b =>
@@ -759,12 +763,12 @@ namespace Vacancies.Db.Migrations
                     b.HasOne("Vacancies.Db.Models.Specializations.Specialization", "Specialization")
                         .WithMany()
                         .HasForeignKey("SpecializationId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("Vacancies.Db.Models.Vacancy", "Vacancy")
                         .WithMany("Specializations")
                         .HasForeignKey("VacancyId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("Vacancies.Db.Models.Tests.VacancyTest", b =>
@@ -801,11 +805,6 @@ namespace Vacancies.Db.Migrations
                         .WithMany()
                         .HasForeignKey("IndustryId")
                         .OnDelete(DeleteBehavior.Restrict);
-
-                    b.HasOne("Vacancies.Db.Models.Salaries.Salary", "Salary")
-                        .WithMany()
-                        .HasForeignKey("SalaryId")
-                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Vacancies.Db.Models.Schedules.Schedule", "Schedule")
                         .WithMany()

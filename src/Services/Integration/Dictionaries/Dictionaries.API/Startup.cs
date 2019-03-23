@@ -65,7 +65,7 @@ namespace Dictionaries.API
                     con.Password = Configuration["EventBusPassword"];
                 });
 
-                builder.EventBusSubscriptionClientName = Configuration["EventBusSubscriptionClientName"];
+                builder.SubscriptionClientName = Configuration["EventBusSubscriptionClientName"];
                 builder.RetryCount = retryCount;
             });
 

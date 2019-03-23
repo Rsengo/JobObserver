@@ -20,5 +20,8 @@ namespace Login.Dto.Models.Contacts
         /// </summary>
         [JsonProperty("comment")]
         public virtual string Comment { get; set; }
+
+        [JsonProperty("contact_id")]
+        public virtual long ContactId { get; set; }
     }
 }

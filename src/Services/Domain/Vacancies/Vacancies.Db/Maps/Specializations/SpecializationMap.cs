@@ -4,39 +4,32 @@ using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Vacancies.Db.Constants;
-using Vacancies.Db.Models.Geographic;
+using Vacancies.Db.Models.Specializations;
 
-namespace Vacancies.Db.Maps.Geographic
+namespace Vacancies.Db.Maps.Specializations
 {
-    internal class AreaMap : IEntityTypeConfiguration<Area>
+    internal class SpecializationMap : IEntityTypeConfiguration<Specialization>
     {
-        public void Configure(EntityTypeBuilder<Area> builder)
+        public void Configure(EntityTypeBuilder<Specialization> builder)
         {
-            //Установка первичного ключа
             builder.HasKey(x => x.Id);
             builder.HasAlternateKey(x => x.Name);
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
             builder.Property(x => x.Name).IsRequired();
 
             builder
-                .HasMany(x => x.Areas)
+                .HasMany(x => x.Specializations)
                 .WithOne(x => x.Parent)
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder
                 .HasOne(x => x.Parent)
-                .WithMany(x => x.Areas)
+                .WithMany(x => x.Specializations)
                 .HasForeignKey(x => x.ParentId)
                 .OnDelete(DeleteBehavior.Restrict)
                 .IsRequired(false);
 
-            builder.HasOne(x => x.Metro)
-                .WithOne(x => x.Area)
-                .HasForeignKey<Area>(x => x.MetroId)
-                .OnDelete(DeleteBehavior.Cascade)
-                .IsRequired(false);
-
-            builder.ToTable(TableNames.AREAS);
+            builder.ToTable(TableNames.SPECIALIZATIONS);
         }
     }
 }

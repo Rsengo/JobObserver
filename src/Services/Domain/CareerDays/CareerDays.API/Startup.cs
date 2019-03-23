@@ -62,6 +62,18 @@ namespace CareerDays.API
 
             services.AddEventBusRabbitMQ(builder =>
             {
+                var a = Configuration["EventBusRetryCount"];
+                Console.WriteLine($"EventBusRetryCount is: {a}");
+
+                var b = Configuration["EventBusConnection"];
+                Console.WriteLine($"EventBusConnection is: {b}");
+
+                var c = Configuration["EventBusUserName"];
+                Console.WriteLine($"EventBusUserName is: {c}");
+
+                var d = Configuration["EventBusPassword"];
+                Console.WriteLine($"EventBusPassword is: {d}");
+
                 var retryCount = int.Parse(Configuration["EventBusRetryCount"]);
 
                 builder.ConfigureConnection(con =>

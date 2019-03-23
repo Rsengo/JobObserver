@@ -852,7 +852,7 @@ namespace Resumes.Db.Migrations
                         column: x => x.ResumeId,
                         principalTable: "RESUMES",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -1131,11 +1131,6 @@ namespace Resumes.Db.Migrations
                 column: "ResumeStatusId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_RESUMES_SalaryId",
-                table: "RESUMES",
-                column: "SalaryId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_RESUMES_TravelTimeId",
                 table: "RESUMES",
                 column: "TravelTimeId");
@@ -1148,7 +1143,8 @@ namespace Resumes.Db.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_SALARIES_ResumeId",
                 table: "SALARIES",
-                column: "ResumeId");
+                column: "ResumeId",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_SPECIALIZATIONS_ParentId",
@@ -1174,42 +1170,10 @@ namespace Resumes.Db.Migrations
                 name: "IX_WORK_TICKETS_ResumeId1",
                 table: "WORK_TICKETS",
                 column: "ResumeId1");
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_RESUMES_SALARIES_SalaryId",
-                table: "RESUMES",
-                column: "SalaryId",
-                principalTable: "SALARIES",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_APPLICANTS_AREAS_AreaId",
-                table: "APPLICANTS");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_METRO_AREAS_AreaId",
-                table: "METRO");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_RESUMES_AREAS_AreaId",
-                table: "RESUMES");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_RESUMES_STATIONS_MetroStationId",
-                table: "RESUMES");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_APPLICANTS_GENDERS_GenderId",
-                table: "APPLICANTS");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_SALARIES_RESUMES_ResumeId",
-                table: "SALARIES");
-
             migrationBuilder.DropTable(
                 name: "ADDRESSES");
 
@@ -1253,6 +1217,9 @@ namespace Resumes.Db.Migrations
                 name: "RESUME_SPECIALIZATIONS");
 
             migrationBuilder.DropTable(
+                name: "SALARIES");
+
+            migrationBuilder.DropTable(
                 name: "WORK_TICKETS");
 
             migrationBuilder.DropTable(
@@ -1286,22 +1253,10 @@ namespace Resumes.Db.Migrations
                 name: "SPECIALIZATIONS");
 
             migrationBuilder.DropTable(
+                name: "CURRENCIES");
+
+            migrationBuilder.DropTable(
                 name: "EDUCATIONAL_LEVELS");
-
-            migrationBuilder.DropTable(
-                name: "AREAS");
-
-            migrationBuilder.DropTable(
-                name: "STATIONS");
-
-            migrationBuilder.DropTable(
-                name: "LINES");
-
-            migrationBuilder.DropTable(
-                name: "METRO");
-
-            migrationBuilder.DropTable(
-                name: "GENDERS");
 
             migrationBuilder.DropTable(
                 name: "RESUMES");
@@ -1313,19 +1268,28 @@ namespace Resumes.Db.Migrations
                 name: "BUSINESS_TRIP_READINESS");
 
             migrationBuilder.DropTable(
+                name: "STATIONS");
+
+            migrationBuilder.DropTable(
                 name: "LANGUAGES");
 
             migrationBuilder.DropTable(
                 name: "RESUME_STATUSES");
 
             migrationBuilder.DropTable(
-                name: "SALARIES");
-
-            migrationBuilder.DropTable(
                 name: "TRAVEL_TIMES");
 
             migrationBuilder.DropTable(
-                name: "CURRENCIES");
+                name: "GENDERS");
+
+            migrationBuilder.DropTable(
+                name: "LINES");
+
+            migrationBuilder.DropTable(
+                name: "METRO");
+
+            migrationBuilder.DropTable(
+                name: "AREAS");
         }
     }
 }

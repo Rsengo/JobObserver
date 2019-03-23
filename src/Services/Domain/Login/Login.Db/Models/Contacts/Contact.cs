@@ -8,25 +8,7 @@ namespace Login.Db.Models.Contacts
     /// </summary>
     public class Contact : RelationalEntity
     {
-        /// <summary>
-        ///     Телефон
-        /// </summary>
-        public virtual Phone Phone { get; set; }
-
-        /// <summary>
-        ///     Id Телефона
-        /// </summary>
-        public virtual long PhoneId { get; set; }
-
-        /// <summary>
-        ///     Доп. телефон
-        /// </summary>
-        public virtual Phone AdditionalPhone { get; set; }
-
-        /// <summary>
-        ///     Id Доп. телефона
-        /// </summary>
-        public virtual long? AdditionalPhoneId { get; set; }
+        public virtual ICollection<Phone> Phones { get; set; }
 
         /// <summary>
         ///     Другие контакты

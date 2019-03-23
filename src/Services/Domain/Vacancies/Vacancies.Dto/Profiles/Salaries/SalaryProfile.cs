@@ -23,9 +23,6 @@ namespace Vacancies.Dto.Profiles.Salaries
         {
             CreateMap<DtoSalary, Salary>()
                 .ForMember(
-                    d => d.Vacancy,
-                    o => o.Ignore())
-                .ForMember(
                     d => d.Currency,
                     o => o.Ignore());
         }

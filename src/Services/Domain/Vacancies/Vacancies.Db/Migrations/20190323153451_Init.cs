@@ -183,21 +183,22 @@ namespace Vacancies.Db.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Specialization",
+                name: "SPECIALIZATIONS",
                 columns: table => new
                 {
                     Id = table.Column<long>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(nullable: true),
+                    Name = table.Column<string>(nullable: false),
                     ParentId = table.Column<long>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Specialization", x => x.Id);
+                    table.PrimaryKey("PK_SPECIALIZATIONS", x => x.Id);
+                    table.UniqueConstraint("AK_SPECIALIZATIONS_Name", x => x.Name);
                     table.ForeignKey(
-                        name: "FK_Specialization_Specialization_ParentId",
+                        name: "FK_SPECIALIZATIONS_SPECIALIZATIONS_ParentId",
                         column: x => x.ParentId,
-                        principalTable: "Specialization",
+                        principalTable: "SPECIALIZATIONS",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -260,23 +261,23 @@ namespace Vacancies.Db.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Department",
+                name: "DEPARTMENTS",
                 columns: table => new
                 {
                     Id = table.Column<long>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(nullable: true),
+                    Name = table.Column<string>(nullable: false),
                     OrganizationId = table.Column<long>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Department", x => x.Id);
+                    table.PrimaryKey("PK_DEPARTMENTS", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Department_EMPLOYERS_OrganizationId",
+                        name: "FK_DEPARTMENTS_EMPLOYERS_OrganizationId",
                         column: x => x.OrganizationId,
                         principalTable: "EMPLOYERS",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -391,9 +392,9 @@ namespace Vacancies.Db.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_VACANCIES_Department_DepartmentId",
+                        name: "FK_VACANCIES_DEPARTMENTS_DepartmentId",
                         column: x => x.DepartmentId,
-                        principalTable: "Department",
+                        principalTable: "DEPARTMENTS",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
@@ -486,7 +487,7 @@ namespace Vacancies.Db.Migrations
                         column: x => x.VacancyId,
                         principalTable: "VACANCIES",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -571,6 +572,32 @@ namespace Vacancies.Db.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "VACANCY_SPECIALIZATIONS",
+                columns: table => new
+                {
+                    Id = table.Column<long>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    VacancyId = table.Column<long>(nullable: false),
+                    SpecializationId = table.Column<long>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_VACANCY_SPECIALIZATIONS", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_VACANCY_SPECIALIZATIONS_SPECIALIZATIONS_SpecializationId",
+                        column: x => x.SpecializationId,
+                        principalTable: "SPECIALIZATIONS",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_VACANCY_SPECIALIZATIONS_VACANCIES_VacancyId",
+                        column: x => x.VacancyId,
+                        principalTable: "VACANCIES",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "VACANCY_TESTS",
                 columns: table => new
                 {
@@ -591,32 +618,6 @@ namespace Vacancies.Db.Migrations
                         onDelete: ReferentialAction.Restrict);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "VacancySpecializations",
-                columns: table => new
-                {
-                    Id = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    VacancyId = table.Column<long>(nullable: false),
-                    SpecializationId = table.Column<long>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_VacancySpecializations", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_VacancySpecializations_Specialization_SpecializationId",
-                        column: x => x.SpecializationId,
-                        principalTable: "Specialization",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_VacancySpecializations_VACANCIES_VacancyId",
-                        column: x => x.VacancyId,
-                        principalTable: "VACANCIES",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
             migrationBuilder.CreateIndex(
                 name: "IX_ADDRESSES_AreaId",
                 table: "ADDRESSES",
@@ -633,8 +634,8 @@ namespace Vacancies.Db.Migrations
                 column: "ParentId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Department_OrganizationId",
-                table: "Department",
+                name: "IX_DEPARTMENTS_OrganizationId",
+                table: "DEPARTMENTS",
                 column: "OrganizationId");
 
             migrationBuilder.CreateIndex(
@@ -681,11 +682,12 @@ namespace Vacancies.Db.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_SALARIES_VacancyId",
                 table: "SALARIES",
-                column: "VacancyId");
+                column: "VacancyId",
+                unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Specialization_ParentId",
-                table: "Specialization",
+                name: "IX_SPECIALIZATIONS_ParentId",
+                table: "SPECIALIZATIONS",
                 column: "ParentId");
 
             migrationBuilder.CreateIndex(
@@ -717,11 +719,6 @@ namespace Vacancies.Db.Migrations
                 name: "IX_VACANCIES_IndustryId",
                 table: "VACANCIES",
                 column: "IndustryId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_VACANCIES_SalaryId",
-                table: "VACANCIES",
-                column: "SalaryId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_VACANCIES_ScheduleId",
@@ -764,64 +761,31 @@ namespace Vacancies.Db.Migrations
                 column: "VacancyId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_VACANCY_TESTS_VacancyId",
-                table: "VACANCY_TESTS",
-                column: "VacancyId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_VacancySpecializations_SpecializationId",
-                table: "VacancySpecializations",
+                name: "IX_VACANCY_SPECIALIZATIONS_SpecializationId",
+                table: "VACANCY_SPECIALIZATIONS",
                 column: "SpecializationId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_VacancySpecializations_VacancyId",
-                table: "VacancySpecializations",
+                name: "IX_VACANCY_SPECIALIZATIONS_VacancyId",
+                table: "VACANCY_SPECIALIZATIONS",
                 column: "VacancyId");
 
-            migrationBuilder.AddForeignKey(
-                name: "FK_VACANCIES_SALARIES_SalaryId",
-                table: "VACANCIES",
-                column: "SalaryId",
-                principalTable: "SALARIES",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
+            migrationBuilder.CreateIndex(
+                name: "IX_VACANCY_TESTS_VacancyId",
+                table: "VACANCY_TESTS",
+                column: "VacancyId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_ADDRESSES_AREAS_AreaId",
-                table: "ADDRESSES");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_EMPLOYERS_AREAS_AreaId",
-                table: "EMPLOYERS");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_METRO_AREAS_AreaId",
-                table: "METRO");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_ADDRESSES_STATIONS_StationId",
-                table: "ADDRESSES");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_Department_EMPLOYERS_OrganizationId",
-                table: "Department");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_VACANCIES_EMPLOYERS_EmployerId",
-                table: "VACANCIES");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_SALARIES_VACANCIES_VacancyId",
-                table: "SALARIES");
-
             migrationBuilder.DropTable(
                 name: "AutoHistory");
 
             migrationBuilder.DropTable(
                 name: "LANGUAGE_SKILLS");
+
+            migrationBuilder.DropTable(
+                name: "SALARIES");
 
             migrationBuilder.DropTable(
                 name: "VACANCY_DRIVING_LICENSE_TYPES");
@@ -833,16 +797,19 @@ namespace Vacancies.Db.Migrations
                 name: "VACANCY_SKILLS");
 
             migrationBuilder.DropTable(
-                name: "VACANCY_TESTS");
+                name: "VACANCY_SPECIALIZATIONS");
 
             migrationBuilder.DropTable(
-                name: "VacancySpecializations");
+                name: "VACANCY_TESTS");
 
             migrationBuilder.DropTable(
                 name: "LANGUAGES");
 
             migrationBuilder.DropTable(
                 name: "LANGUAGE_LEVELS");
+
+            migrationBuilder.DropTable(
+                name: "CURRENCIES");
 
             migrationBuilder.DropTable(
                 name: "DRIVING_LICENSE_TYPES");
@@ -854,22 +821,7 @@ namespace Vacancies.Db.Migrations
                 name: "SKILLS");
 
             migrationBuilder.DropTable(
-                name: "Specialization");
-
-            migrationBuilder.DropTable(
-                name: "AREAS");
-
-            migrationBuilder.DropTable(
-                name: "STATIONS");
-
-            migrationBuilder.DropTable(
-                name: "LINES");
-
-            migrationBuilder.DropTable(
-                name: "METRO");
-
-            migrationBuilder.DropTable(
-                name: "EMPLOYERS");
+                name: "SPECIALIZATIONS");
 
             migrationBuilder.DropTable(
                 name: "VACANCIES");
@@ -878,7 +830,7 @@ namespace Vacancies.Db.Migrations
                 name: "ADDRESSES");
 
             migrationBuilder.DropTable(
-                name: "Department");
+                name: "DEPARTMENTS");
 
             migrationBuilder.DropTable(
                 name: "EMPLOYMENTS");
@@ -887,16 +839,25 @@ namespace Vacancies.Db.Migrations
                 name: "INDUSTRIES");
 
             migrationBuilder.DropTable(
-                name: "SALARIES");
-
-            migrationBuilder.DropTable(
                 name: "SCHEDULES");
 
             migrationBuilder.DropTable(
                 name: "VACANCY_STATUSES");
 
             migrationBuilder.DropTable(
-                name: "CURRENCIES");
+                name: "STATIONS");
+
+            migrationBuilder.DropTable(
+                name: "EMPLOYERS");
+
+            migrationBuilder.DropTable(
+                name: "LINES");
+
+            migrationBuilder.DropTable(
+                name: "METRO");
+
+            migrationBuilder.DropTable(
+                name: "AREAS");
         }
     }
 }

@@ -13,15 +13,8 @@ namespace Login.Db.Maps.Contacts
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
 
             builder
-                .HasOne(x => x.Phone)
-                .WithOne()
-                .HasForeignKey<Contact>(x => x.PhoneId)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            builder
-                .HasOne(x => x.AdditionalPhone)
-                .WithOne()
-                .HasForeignKey<Contact>(x => x.AdditionalPhoneId)
+                .HasMany(x => x.Phones)
+                .WithOne(x => x.Contact)
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder
@@ -34,7 +27,6 @@ namespace Login.Db.Maps.Contacts
             builder
                 .HasMany(x => x.Sites)
                 .WithOne(x => x.Contact)
-                .HasForeignKey(x => x.ContactId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder.ToTable(TableNames.CONTACTS);

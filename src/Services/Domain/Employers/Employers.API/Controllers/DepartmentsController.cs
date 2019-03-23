@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Employers.API.Controllers
 {
+    [Route("api/v1/[controller]")]
     public class DepartmentsController : ControllerBase
     {
         private readonly EmployersDbContext _context;

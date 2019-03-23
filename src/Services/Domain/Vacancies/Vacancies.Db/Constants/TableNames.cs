@@ -51,5 +51,11 @@ namespace Vacancies.Db.Constants
         public const string VACANCY_STATUSES = "VACANCY_STATUSES";
 
         public const string VACANCY_TESTS = "VACANCY_TESTS";
+
+        public const string DEPARTMENTS = "DEPARTMENTS";
+
+        public const string SPECIALIZATIONS = "SPECIALIZATIONS";
+
+        public const string VACANCY_SPECIALIZATIONS = "VACANCY_SPECIALIZATIONS";
     }
 }

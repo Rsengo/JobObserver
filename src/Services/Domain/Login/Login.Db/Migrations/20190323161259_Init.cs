@@ -75,20 +75,6 @@ namespace Login.Db.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "PHONES",
-                columns: table => new
-                {
-                    Id = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Number = table.Column<string>(nullable: false),
-                    Comment = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_PHONES", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "SITE_TYPES",
                 columns: table => new
                 {
@@ -260,25 +246,11 @@ namespace Login.Db.Migrations
                 {
                     Id = table.Column<long>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    PhoneId = table.Column<long>(nullable: false),
-                    AdditionalPhoneId = table.Column<long>(nullable: true),
                     UserId = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_CONTACTS", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_CONTACTS_PHONES_AdditionalPhoneId",
-                        column: x => x.AdditionalPhoneId,
-                        principalTable: "PHONES",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_CONTACTS_PHONES_PhoneId",
-                        column: x => x.PhoneId,
-                        principalTable: "PHONES",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_CONTACTS_AspNetUsers_UserId",
                         column: x => x.UserId,
@@ -325,6 +297,27 @@ namespace Login.Db.Migrations
                         name: "FK_EMPLOYER_MANAGER_ATTRIBUTES_AspNetUsers_UserId",
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "PHONES",
+                columns: table => new
+                {
+                    Id = table.Column<long>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Number = table.Column<string>(nullable: false),
+                    Comment = table.Column<string>(nullable: true),
+                    ContactId = table.Column<long>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PHONES", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_PHONES_CONTACTS_ContactId",
+                        column: x => x.ContactId,
+                        principalTable: "CONTACTS",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -412,19 +405,6 @@ namespace Login.Db.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_CONTACTS_AdditionalPhoneId",
-                table: "CONTACTS",
-                column: "AdditionalPhoneId",
-                unique: true,
-                filter: "[AdditionalPhoneId] IS NOT NULL");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_CONTACTS_PhoneId",
-                table: "CONTACTS",
-                column: "PhoneId",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
                 name: "IX_CONTACTS_UserId",
                 table: "CONTACTS",
                 column: "UserId",
@@ -441,6 +421,11 @@ namespace Login.Db.Migrations
                 table: "EMPLOYER_MANAGER_ATTRIBUTES",
                 column: "UserId",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_PHONES_ContactId",
+                table: "PHONES",
+                column: "ContactId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_SITES_ContactId",
@@ -480,6 +465,9 @@ namespace Login.Db.Migrations
                 name: "EMPLOYER_MANAGER_ATTRIBUTES");
 
             migrationBuilder.DropTable(
+                name: "PHONES");
+
+            migrationBuilder.DropTable(
                 name: "SITES");
 
             migrationBuilder.DropTable(
@@ -490,9 +478,6 @@ namespace Login.Db.Migrations
 
             migrationBuilder.DropTable(
                 name: "SITE_TYPES");
-
-            migrationBuilder.DropTable(
-                name: "PHONES");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");

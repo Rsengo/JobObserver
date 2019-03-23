@@ -561,8 +561,6 @@ namespace Resumes.Db.Migrations
 
                     b.HasIndex("ResumeStatusId");
 
-                    b.HasIndex("SalaryId");
-
                     b.HasIndex("TravelTimeId");
 
                     b.ToTable("RESUMES");
@@ -655,7 +653,8 @@ namespace Resumes.Db.Migrations
 
                     b.HasIndex("CurrencyId");
 
-                    b.HasIndex("ResumeId");
+                    b.HasIndex("ResumeId")
+                        .IsUnique();
 
                     b.ToTable("SALARIES");
                 });
@@ -1063,11 +1062,6 @@ namespace Resumes.Db.Migrations
                         .HasForeignKey("ResumeStatusId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("Resumes.Db.Models.Salaries.Salary", "Salary")
-                        .WithMany()
-                        .HasForeignKey("SalaryId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
                     b.HasOne("Resumes.Db.Models.Travel.TravelTime", "TravelTime")
                         .WithMany()
                         .HasForeignKey("TravelTimeId")
@@ -1116,9 +1110,9 @@ namespace Resumes.Db.Migrations
                         .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("Resumes.Db.Models.Resume", "Resume")
-                        .WithMany()
-                        .HasForeignKey("ResumeId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .WithOne("Salary")
+                        .HasForeignKey("Resumes.Db.Models.Salaries.Salary", "ResumeId")
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("Resumes.Db.Models.Schedules.ResumeSchedule", b =>

@@ -42,8 +42,8 @@ namespace Resumes.Db.Maps
 
             builder
                 .HasOne(x => x.Salary)
-                .WithMany()
-                .HasForeignKey(x => x.SalaryId)
+                .WithOne()
+                .HasForeignKey<Resume>(x => x.SalaryId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder

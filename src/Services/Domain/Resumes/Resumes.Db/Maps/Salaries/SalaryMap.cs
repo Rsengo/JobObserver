@@ -22,6 +22,13 @@ namespace Resumes.Db.Maps.Salaries
                 .OnDelete(DeleteBehavior.Restrict)
                 .IsRequired();
 
+            builder
+                .HasOne(x => x.Resume)
+                .WithOne(x => x.Salary)
+                .HasForeignKey<Salary>(x => x.ResumeId)
+                .OnDelete(DeleteBehavior.Restrict)
+                .IsRequired();
+
             builder.ToTable(TableNames.SALARIES);
         }
     }
