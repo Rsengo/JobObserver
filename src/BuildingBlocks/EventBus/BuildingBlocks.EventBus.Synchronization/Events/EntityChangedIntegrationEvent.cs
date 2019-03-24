@@ -31,6 +31,11 @@ namespace BuildingBlocks.EventBus.Synchronization.Events
             Deleted = deleted;
         }
 
-        public EntityChangedIntegrationEvent() { }
+        public EntityChangedIntegrationEvent()
+        {
+            Created = new List<TEntity>();
+            Updated = new List<TEntity>();
+            Deleted = new List<TKey>();
+        }
     }
 }

@@ -11,6 +11,7 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.0.1916590" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
   </ItemGroup>
 
@@ -21,6 +22,17 @@
     <ProjectReference Include="..\Dictionaries.Db\Dictionaries.Db.csproj" />
     <ProjectReference Include="..\Dictionaries.Dto\Dictionaries.Dto.csproj" />
     <ProjectReference Include="..\Dictionaries.EventBus\Dictionaries.EventBus.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Sources\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Z.EntityFramework.Extensions.EFCore">
+      <HintPath>..\..\..\..\..\..\Users\rseng\.nuget\packages\z.entityframework.extensions.efcore\2.1.56\lib\netstandard2.0\Z.EntityFramework.Extensions.EFCore.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

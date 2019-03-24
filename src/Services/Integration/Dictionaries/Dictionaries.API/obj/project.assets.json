@@ -13027,6 +13027,7 @@
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.0.1916590",
+      "Newtonsoft.Json >= 12.0.1",
       "Swashbuckle.AspNetCore >= 4.0.1"
     ]
   },
@@ -13110,6 +13111,10 @@
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
             "target": "Package",
             "version": "[1.0.1916590, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[12.0.1, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
