@@ -8,9 +8,11 @@ using Dictionaries.Db;
 using Dictionaries.Db.Models.Languages;
 using Dictionaries.Dto.Models.Languages;
 using Dictionaries.EventBus.Events.Languages;
+using Dictionaries.API.Infrastructure.Initialization.Attributes;
 
 namespace Dictionaries.API.Infrastructure.Initialization.Initializers
 {
+    [JsonFileName("languages.json")]
     public class LanguagesInitializer :
         BaseDictionaryInitializer<DtoLanguage, Language>
     {

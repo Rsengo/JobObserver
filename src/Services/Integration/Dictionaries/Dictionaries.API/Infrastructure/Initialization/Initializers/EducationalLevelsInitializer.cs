@@ -8,9 +8,11 @@ using Dictionaries.Db;
 using Dictionaries.Db.Models.Educations;
 using Dictionaries.Dto.Models.Educations;
 using Dictionaries.EventBus.Events.Educations;
+using Dictionaries.API.Infrastructure.Initialization.Attributes;
 
 namespace Dictionaries.API.Infrastructure.Initialization.Initializers
 {
+    [JsonFileName("educational_levels.json")]
     public class EducationalLevelsInitializer :
         BaseDictionaryInitializer<DtoEducationalLevel, EducationalLevel>
     {

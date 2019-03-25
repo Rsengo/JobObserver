@@ -7,7 +7,7 @@ using Dictionaries.Dto.Models.Geographic;
 namespace Dictionaries.EventBus.Events.Geographic
 {
     public class AreasChanged : 
-        EntityChangedIntegrationEvent<DtoArea>
+        EntityChangedIntegrationEvent<DtoAreaSync>
     {
     }
 }

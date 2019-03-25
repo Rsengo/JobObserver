@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using Dictionaries.API.Infrastructure.Initialization.Attributes;
 using AutoMapper;
 using BuildingBlocks.EventBus.Abstractions;
 using Dictionaries.Db;
@@ -11,6 +11,7 @@ using Dictionaries.EventBus.Events.Languages;
 
 namespace Dictionaries.API.Infrastructure.Initialization.Initializers
 {
+    [JsonFileName("language_levels.json")]
     public class LanguageLevelsInitializer :
         BaseDictionaryInitializer<DtoLanguageLevel, LanguageLevel>
     {

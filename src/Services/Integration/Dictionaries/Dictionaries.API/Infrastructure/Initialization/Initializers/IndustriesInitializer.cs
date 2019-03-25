@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using Dictionaries.API.Infrastructure.Initialization.Attributes;
 using AutoMapper;
 using BuildingBlocks.EventBus.Abstractions;
 using Dictionaries.Db;
@@ -11,6 +11,7 @@ using Dictionaries.EventBus.Events.Industries;
 
 namespace Dictionaries.API.Infrastructure.Initialization.Initializers
 {
+    [JsonFileName("industries.json")]
     public class IndustriesInitializer :
         BaseDictionaryInitializer<DtoIndustry, Industry>
     {

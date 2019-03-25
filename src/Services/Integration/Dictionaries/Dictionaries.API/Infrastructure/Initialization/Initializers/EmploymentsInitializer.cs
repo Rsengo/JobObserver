@@ -8,9 +8,11 @@ using Dictionaries.Db;
 using Dictionaries.Db.Models.Employments;
 using Dictionaries.Dto.Models.Employments;
 using Dictionaries.EventBus.Events.Employments;
+using Dictionaries.API.Infrastructure.Initialization.Attributes;
 
 namespace Dictionaries.API.Infrastructure.Initialization.Initializers
 {
+    [JsonFileName("employments.json")]
     public class EmploymentsInitializer :
         BaseDictionaryInitializer<DtoEmployment, Employment>
     {

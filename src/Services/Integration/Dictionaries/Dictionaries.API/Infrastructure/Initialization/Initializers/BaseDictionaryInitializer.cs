@@ -15,13 +15,15 @@ using Newtonsoft.Json;
 
 namespace Dictionaries.API.Infrastructure.Initialization.Initializers
 {
-    public abstract class BaseDictionaryInitializer<TDtoEntity, TEntity>
+    public abstract class BaseDictionaryInitializer<TDtoEntity, TEntity> : IInitializer
         where TEntity: RelationalDictionary
         where TDtoEntity: DtoDictionary
     {
         protected readonly string _jsonPath;
         protected readonly DictionariesDbContext _context;
         protected readonly IEventBus _eventBus;
+
+        public Type EntityType => typeof(TEntity);
 
         protected BaseDictionaryInitializer(
             string jsonPath, 
@@ -33,7 +35,7 @@ namespace Dictionaries.API.Infrastructure.Initialization.Initializers
             _eventBus = eventBus;
         }
 
-        public async Task Initialize(Type eventType)
+        public async Task Initialize()
         {
             var data = await ReadDataAsync();
             var savedData = await SaveDataAsync(data);
@@ -43,7 +45,9 @@ namespace Dictionaries.API.Infrastructure.Initialization.Initializers
         protected virtual async Task<IEnumerable<TEntity>> SaveDataAsync(
             IEnumerable<TEntity> dataFromJson)
         {
-            await _context.BulkInsertAsync(dataFromJson);
+            await _context.BulkInsertAsync(
+                dataFromJson, 
+                opt => opt.IncludeGraph = true);
             return dataFromJson;
         }
 

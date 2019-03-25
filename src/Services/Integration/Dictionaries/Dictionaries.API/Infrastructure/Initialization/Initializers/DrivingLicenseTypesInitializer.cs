@@ -8,10 +8,11 @@ using Dictionaries.Db;
 using Dictionaries.Db.Models.Driving;
 using Dictionaries.Dto.Models.Driving;
 using Dictionaries.EventBus.Events.Driving;
-using Newtonsoft.Json;
+using Dictionaries.API.Infrastructure.Initialization.Attributes;
 
 namespace Dictionaries.API.Infrastructure.Initialization.Initializers
 {
+    [JsonFileName("driving_license_types.json")]
     public class DrivingLicenseTypesInitializer : 
         BaseDictionaryInitializer<DtoDrivingLicenseType, DrivingLicenseType>
     {

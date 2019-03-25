@@ -6,13 +6,8 @@ namespace Dictionaries.Db.Models.Geographic
     /// <summary>
     ///     Город/страна
     /// </summary>
-    public class Area : RelationalEntity
+    public class Area : RelationalDictionary
     {
-        /// <summary>
-        ///     Название
-        /// </summary>
-        public virtual string Name { get; set; }
-
         /// <summary>
         ///     Родитель
         /// </summary>

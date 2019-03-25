@@ -15,3 +15,15 @@ C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.Dto\obj\Debug
 C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.Dto\obj\Debug\netcoreapp2.1\Dictionaries.Dto.csproj.CopyComplete
 C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.Dto\obj\Debug\netcoreapp2.1\Dictionaries.Dto.dll
 C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.Dto\obj\Debug\netcoreapp2.1\Dictionaries.Dto.pdb
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Dto\bin\Debug\netcoreapp2.1\Dictionaries.Dto.deps.json
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Dto\bin\Debug\netcoreapp2.1\Dictionaries.Dto.dll
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Dto\bin\Debug\netcoreapp2.1\Dictionaries.Dto.pdb
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Dto\bin\Debug\netcoreapp2.1\BuildingBlocks.DataTransfer.dll
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Dto\bin\Debug\netcoreapp2.1\BuildingBlocks.DataTransfer.pdb
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Dto\obj\Debug\netcoreapp2.1\Dictionaries.Dto.csprojAssemblyReference.cache
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Dto\obj\Debug\netcoreapp2.1\Dictionaries.Dto.csproj.CoreCompileInputs.cache
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Dto\obj\Debug\netcoreapp2.1\Dictionaries.Dto.AssemblyInfoInputs.cache
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Dto\obj\Debug\netcoreapp2.1\Dictionaries.Dto.AssemblyInfo.cs
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Dto\obj\Debug\netcoreapp2.1\Dictionaries.Dto.csproj.CopyComplete
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Dto\obj\Debug\netcoreapp2.1\Dictionaries.Dto.dll
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Dto\obj\Debug\netcoreapp2.1\Dictionaries.Dto.pdb
