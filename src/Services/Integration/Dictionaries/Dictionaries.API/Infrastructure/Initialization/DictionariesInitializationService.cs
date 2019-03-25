@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using System.IO.Compression;
 using BuildingBlocks.EventBus.Abstractions;
 using Dictionaries.Db;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using Dictionaries.API.Infrastructure.Initialization.Attributes;
+using Dictionaries.API.Infrastructure.Initialization.Initializers;
 
 namespace Dictionaries.API.Infrastructure.Initialization
 {
-    using System.IO;
-    using System.Linq;
-    using System.Reflection;
+    using System.Threading.Tasks;
 
-    using Dictionaries.API.Infrastructure.Initialization.Attributes;
-    using Dictionaries.API.Infrastructure.Initialization.Initializers;
+    using BuildingBlocks.EntityFramework.Models;
 
     public class DictionariesInitializationService
     {
@@ -32,11 +34,26 @@ namespace Dictionaries.API.Infrastructure.Initialization
             _eventBus = eventBus;
         }
 
-        public void Initialize()
+        public Task InitializeAsync()
         {
-            ZipFile.ExtractToDirectory(_zip, _folder);
+            var initializers = GetInitializers();
+            return InitializeAsync(initializers);
         }
 
+        public Task InitializeAsync(params Type[] entityTypes)
+        {
+            var initializers = GetInitializers();
+            var filtered = initializers.Where(x => entityTypes.Contains(x.EntityType));
+            return InitializeAsync(filtered);
+        }
+
+        public Task InitializeAsync<TEntity>() where TEntity: RelationalEntity
+        {
+            var types = new Type[1] { typeof(TEntity) };
+            return InitializeAsync(types);
+        }
+
+        //TODO
         public IEnumerable<IInitializer> GetInitializers()
         {
             var jsonPath = GetJsonPath(typeof(BusinessTripReadinessInitializer));
@@ -52,6 +69,24 @@ namespace Dictionaries.API.Infrastructure.Initialization
             var jsonPath = Path.Combine(_folder, jsonName);
 
             return jsonPath;
+        }
+
+        private async Task InitializeAsync(IEnumerable<IInitializer> initializers)
+        {
+            ZipFile.ExtractToDirectory(_zip, _folder);
+
+            foreach (var initializer in initializers)
+            {
+                await initializer.Initialize();
+            }
+
+            var directory = new DirectoryInfo(_folder);
+            var files = directory.GetFiles().Where(x => x.Name != _zip);
+
+            foreach (var file in files)
+            {
+                file.Delete();;
+            }
         }
     }
 }

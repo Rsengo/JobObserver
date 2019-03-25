@@ -7,6 +7,7 @@ namespace Dictionaries.API.Infrastructure.Initialization.Initializers
 {
     public interface IInitializer
     {
+        Type EntityType { get; }
         Task Initialize();
     }
 }
