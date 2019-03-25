@@ -41,3 +41,11 @@ D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.EventBus
 D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.EventBus\obj\Debug\netcoreapp2.1\Dictionaries.EventBus.csproj.CopyComplete
 D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.EventBus\obj\Debug\netcoreapp2.1\Dictionaries.EventBus.dll
 D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.EventBus\obj\Debug\netcoreapp2.1\Dictionaries.EventBus.pdb
+C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.EventBus\bin\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.dll
+C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.EventBus\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.dll
+C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.EventBus\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.dll
+C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.EventBus\bin\Debug\netcoreapp2.1\Dictionaries.Db.dll
+C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.EventBus\bin\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.pdb
+C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.EventBus\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.pdb
+C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.EventBus\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.pdb
+C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.EventBus\bin\Debug\netcoreapp2.1\Dictionaries.Db.pdb

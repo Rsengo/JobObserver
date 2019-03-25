@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO.Compression;
-using BuildingBlocks.EventBus.Abstractions;
-using Dictionaries.Db;
 using System.IO;
 using System.Linq;
-using System.Reflection;
-using Dictionaries.API.Infrastructure.Initialization.Attributes;
+using Dictionaries.API.Infrastructure.Initialization.Factories;
 using Dictionaries.API.Infrastructure.Initialization.Initializers;
 
 namespace Dictionaries.API.Infrastructure.Initialization
@@ -19,19 +16,16 @@ namespace Dictionaries.API.Infrastructure.Initialization
     {
         private readonly string _zip;
         private readonly string _folder;
-        private readonly DictionariesDbContext _context;
-        private readonly IEventBus _eventBus;
+        private readonly IInitializersFactory _factory;
 
         public DictionariesInitializationService(
             string folder, 
             string zip, 
-            DictionariesDbContext context,
-            IEventBus eventBus)
+            IInitializersFactory factory)
         {
             _zip = zip;
             _folder = folder;
-            _context = context;
-            _eventBus = eventBus;
+            _factory = factory;
         }
 
         public Task InitializeAsync()
@@ -53,22 +47,9 @@ namespace Dictionaries.API.Infrastructure.Initialization
             return InitializeAsync(types);
         }
 
-        //TODO
         public IEnumerable<IInitializer> GetInitializers()
         {
-            var jsonPath = GetJsonPath(typeof(BusinessTripReadinessInitializer));
-            var initializer2 = new BusinessTripReadinessInitializer(jsonPath, _context, _eventBus);
-            yield return initializer2;
-        }
-
-        private string GetJsonPath(Type initializerType)
-        {
-            var jsonFileNameAttr = (JsonFileNameAttribute) initializerType.GetCustomAttributes()
-                .SingleOrDefault(x => x is JsonFileNameAttribute);
-            var jsonName = jsonFileNameAttr.Name;
-            var jsonPath = Path.Combine(_folder, jsonName);
-
-            return jsonPath;
+            return _factory.Create();
         }
 
         private async Task InitializeAsync(IEnumerable<IInitializer> initializers)

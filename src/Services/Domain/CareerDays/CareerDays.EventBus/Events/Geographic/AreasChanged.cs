@@ -8,7 +8,7 @@ using CareerDays.Dto.Models.Geographic;
 namespace CareerDays.Synchronization.Events.Geographic
 {
     public class AreasChanged : 
-        EntityChangedIntegrationEvent<DtoArea>
+        EntityChangedIntegrationEvent<DtoAreaSync>
     {
     }
 }

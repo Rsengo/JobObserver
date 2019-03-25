@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using AutoMapper;
 using BuildingBlocks.AutoMapper;
@@ -14,9 +15,15 @@ namespace Employers.Dto.Profiles.Geographic
         {
             CreateMap<Area, DtoArea>()
                 .ForMember(
-                    dest => dest.Parent, 
+                    dest => dest.Parent,
                     opt => opt.MapFrom(
                         src => Mapper.Map<DtoArea>(src.Parent)));
+
+            CreateMap<Area, DtoAreaSync>()
+                .ForMember(
+                    dest => dest.Areas,
+                    opt => opt.MapFrom(
+                        src => src.Areas.Select(Mapper.Map<DtoAreaSync>)));
         }
 
         public override void Dto2Entity()
@@ -27,8 +34,17 @@ namespace Employers.Dto.Profiles.Geographic
                     opt => opt.MapFrom(
                         src => Mapper.Map<Area>(src.Parent)))
                 .ForMember(
-                    dest => dest.Areas, 
+                    dest => dest.Areas,
                     opt => opt.Ignore());
+
+            CreateMap<DtoAreaSync, Area>()
+                .ForMember(
+                    dest => dest.Parent,
+                    opt => opt.Ignore())
+                .ForMember(
+                    dest => dest.Areas,
+                    opt => opt.MapFrom(
+                        s => s.Areas.Select(Mapper.Map<Area>)));
         }
     }
 }

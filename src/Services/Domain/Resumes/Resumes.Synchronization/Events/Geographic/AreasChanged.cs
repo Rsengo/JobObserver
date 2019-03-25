@@ -7,7 +7,7 @@ using Resumes.Dto.Models.Geographic;
 namespace Resumes.Synchronization.Events.Geographic
 {
     public class AreasChanged : 
-        EntityChangedIntegrationEvent<DtoArea>
+        EntityChangedIntegrationEvent<DtoAreaSync>
     {
     }
 }

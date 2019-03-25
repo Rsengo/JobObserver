@@ -7,7 +7,7 @@ using System.Text;
 namespace Login.Synchronization.Events.Geographic
 {
     public class AreasChanged : 
-        EntityChangedIntegrationEvent<DtoArea>
+        EntityChangedIntegrationEvent<DtoAreaSync>
     {
     }
 }

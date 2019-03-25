@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using BuildingBlocks.EventBus.Abstractions;
 using BuildingBlocks.Extensions.AutoMapper;
 using BuildingBlocks.Extensions.EventBus.RabbitMQ;
+using Dictionaries.API.Infrastructure.Initialization;
+using Dictionaries.API.Infrastructure.Initialization.Factories;
 using Dictionaries.Db;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -86,6 +90,27 @@ namespace Dictionaries.API
                         .AllowAnyMethod()
                         .AllowAnyHeader()
                         .AllowCredentials());
+            });
+
+            services.AddTransient<IInitializersFactory, InitializersFactory>(sp =>
+            {
+                var env = sp.GetRequiredService<IHostingEnvironment>();
+                var folder = Path.Combine(env.ContentRootPath, "Sources");
+                var ctx = sp.GetRequiredService<DictionariesDbContext>();
+                var eventBus = sp.GetRequiredService<IEventBus>();
+
+                return new InitializersFactory(folder, ctx, eventBus);
+            });
+
+
+            services.AddTransient<DictionariesInitializationService>(sp =>
+            {
+                var factory = sp.GetRequiredService<IInitializersFactory>();
+                var env = sp.GetRequiredService<IHostingEnvironment>();
+                var folder = Path.Combine(env.ContentRootPath, "Sources");
+                var zip = Path.Combine(folder, Configuration["zipFile"]);
+
+                return new DictionariesInitializationService(folder, zip, factory);
             });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);

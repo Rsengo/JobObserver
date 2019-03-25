@@ -25,13 +25,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Sources\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="Z.EntityFramework.Extensions.EFCore">
       <HintPath>..\..\..\..\..\..\Users\rseng\.nuget\packages\z.entityframework.extensions.efcore\2.1.56\lib\netstandard2.0\Z.EntityFramework.Extensions.EFCore.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Sources\startup.zip">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

@@ -37,7 +37,11 @@ namespace Vacancies.Synchronization.EventHandlers.Geographic
 
             await _context.BulkMergeAsync(
                 toMerge,
-                opt => opt.MergeKeepIdentity = true);
+                opt =>
+                {
+                    opt.MergeKeepIdentity = true;
+                    opt.IncludeGraph = true;
+                });
         }
     }
 }

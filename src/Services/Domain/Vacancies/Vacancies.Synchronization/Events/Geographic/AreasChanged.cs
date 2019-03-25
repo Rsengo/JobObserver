@@ -7,7 +7,7 @@ using Vacancies.Dto.Models.Geographic;
 namespace Vacancies.Synchronization.Events.Geographic
 {
     public class AreasChanged : 
-        EntityChangedIntegrationEvent<DtoArea>
+        EntityChangedIntegrationEvent<DtoAreaSync>
     {
     }
 }
