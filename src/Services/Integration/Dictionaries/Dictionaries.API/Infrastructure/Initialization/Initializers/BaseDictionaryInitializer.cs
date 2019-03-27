@@ -51,6 +51,7 @@ namespace Dictionaries.API.Infrastructure.Initialization.Initializers
                 dataFromJson,
                 opt =>
                 {
+                    opt.InsertKeepIdentity = true;
                     opt.InsertIfNotExists = true;
                     opt.ColumnPrimaryKeyExpression = x => x.Name;
                 });
