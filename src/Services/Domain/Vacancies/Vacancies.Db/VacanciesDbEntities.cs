@@ -32,6 +32,8 @@ namespace Vacancies.Db
             base.OnModelCreating(builder);
         }
 
+        public DbSet<Department> Departments { get; set; }
+
         public DbSet<DrivingLicenseType> DrivingLicenseTypes { get; set; }
 
         public DbSet<Employment> Employments { get; set; }

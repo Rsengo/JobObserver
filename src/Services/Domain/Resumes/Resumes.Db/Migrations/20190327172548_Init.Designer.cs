@@ -10,7 +10,7 @@ using Resumes.Db;
 namespace Resumes.Db.Migrations
 {
     [DbContext(typeof(ResumesDbContext))]
-    [Migration("20190323153641_Init")]
+    [Migration("20190327172548_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -55,6 +55,9 @@ namespace Resumes.Db.Migrations
                         .IsRequired();
 
                     b.Property<DateTime>("BirthDate");
+
+                    b.Property<string>("Email")
+                        .IsRequired();
 
                     b.Property<string>("FirstName")
                         .IsRequired();

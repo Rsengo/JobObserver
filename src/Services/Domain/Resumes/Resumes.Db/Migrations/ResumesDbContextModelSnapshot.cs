@@ -54,6 +54,9 @@ namespace Resumes.Db.Migrations
 
                     b.Property<DateTime>("BirthDate");
 
+                    b.Property<string>("Email")
+                        .IsRequired();
+
                     b.Property<string>("FirstName")
                         .IsRequired();
 

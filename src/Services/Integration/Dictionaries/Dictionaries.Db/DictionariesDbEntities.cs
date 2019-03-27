@@ -1,4 +1,5 @@
-﻿using Dictionaries.Db.Models.Driving;
+﻿using Dictionaries.Db.Models.Contacts;
+using Dictionaries.Db.Models.Driving;
 using Dictionaries.Db.Models.Educations;
 using Dictionaries.Db.Models.Employer;
 using Dictionaries.Db.Models.Employments;
@@ -31,6 +32,8 @@ namespace Dictionaries.Db
 
         public DbSet<DrivingLicenseType> DrivingLicenseTypes { get; set; }
 
+        public DbSet<SiteType> SiteTypes { get; set; }
+
         public DbSet<EducationalLevel> EducationalLevels { get; set; }
 
         public DbSet<EmployerType> EmployerTypes { get; set; }
@@ -57,8 +60,6 @@ namespace Dictionaries.Db
 
         public DbSet<Schedule> Schedules { get; set; }
 
-        public DbSet<Skill> Skills { get; set; }
-
         public DbSet<Specialization> Specializations { get; set; }
 
         public DbSet<ResumeStatus> ResumeStatuses { get; set; }
@@ -72,5 +73,7 @@ namespace Dictionaries.Db
         public DbSet<BusinessTripReadiness> BusinessTripReadiness { get; set; }
 
         public DbSet<TravelTime> TravelTimes { get; set; }
+
+        public DbSet<Skill> Skills { get; set; }
     }
 }

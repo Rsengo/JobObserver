@@ -961,7 +961,7 @@
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       },
-      "Z.EntityFramework.Extensions.EFCore/2.1.58": {
+      "Z.EntityFramework.Extensions.EFCore/2.1.59": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.4.0",
@@ -3723,15 +3723,15 @@
         "system.threading.tasks.nuspec"
       ]
     },
-    "Z.EntityFramework.Extensions.EFCore/2.1.58": {
-      "sha512": "TkcT5zQSHeI3MixeyR94tEb6295VO/gVDLbDaXrYrZkS9oZEakX3nDttgs0JFTH2CaWSuj8M/f0LEtj/+GjtrQ==",
+    "Z.EntityFramework.Extensions.EFCore/2.1.59": {
+      "sha512": "O2USvkj2+t6Rp1WequHvaj9KYIJMmnVZ1lw5GNAaubNxCPrmNstu8idCb9cg6gvumgxM85cB309L6kiRFt65qQ==",
       "type": "package",
-      "path": "z.entityframework.extensions.efcore/2.1.58",
+      "path": "z.entityframework.extensions.efcore/2.1.59",
       "files": [
         ".signature.p7s",
         "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.dll",
         "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.xml",
-        "z.entityframework.extensions.efcore.2.1.58.nupkg.sha512",
+        "z.entityframework.extensions.efcore.2.1.59.nupkg.sha512",
         "z.entityframework.extensions.efcore.nuspec"
       ]
     },
@@ -3748,7 +3748,7 @@
       "Microsoft.EntityFrameworkCore.AutoHistory >= 2.1.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.2.2",
       "Microsoft.NETCore.App >= 2.1.0",
-      "Z.EntityFramework.Extensions.EFCore >= 2.1.58"
+      "Z.EntityFramework.Extensions.EFCore >= 2.1.59"
     ]
   },
   "packageFolders": {
@@ -3816,7 +3816,7 @@
           },
           "Z.EntityFramework.Extensions.EFCore": {
             "target": "Package",
-            "version": "[2.1.58, )"
+            "version": "[2.1.59, )"
           }
         },
         "imports": [

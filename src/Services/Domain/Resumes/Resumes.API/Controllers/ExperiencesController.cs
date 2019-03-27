@@ -25,10 +25,13 @@ namespace Resumes.API.Controllers
         public async Task<IActionResult> Get(long id)
         {
             var result = await _context.Experiences
-                .Include(x => x.Industry)
+                //.Include(x => x.Industry)
                 .Include(x => x.Specialization)
                 .SingleOrDefaultAsync(x => x.Id == id)
                 .ConfigureAwait(false);
+
+            await _context.Industries.LoadAsync();
+
             var dto = Mapper.Map<DtoExperience>(result);
 
             return Ok(dto);
@@ -39,10 +42,13 @@ namespace Resumes.API.Controllers
         {
             var result = await _context.Experiences
                 .Where(x => x.ResumeId == id)
-                .Include(x => x.Industry)
+                //.Include(x => x.Industry)
                 .Include(x => x.Specialization)
                 .ToListAsync()
                 .ConfigureAwait(false);
+
+            await _context.Industries.LoadAsync();
+
             var dto = Mapper.Map<DtoExperience>(result);
 
             return Ok(dto);

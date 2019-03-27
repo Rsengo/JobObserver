@@ -62,7 +62,7 @@ namespace Dictionaries.API.Infrastructure.Initialization
             }
 
             var directory = new DirectoryInfo(_folder);
-            var files = directory.GetFiles().Where(x => x.Name != _zip);
+            var files = directory.GetFiles().Where(x => x.FullName != _zip);
 
             foreach (var file in files)
             {

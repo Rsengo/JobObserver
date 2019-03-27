@@ -4818,7 +4818,7 @@
           "lib/netstandard2.0/Z.EntityFramework.Extensions.Classic.dll": {}
         }
       },
-      "Z.EntityFramework.Extensions.EFCore/2.1.49": {
+      "Z.EntityFramework.Extensions.EFCore/2.1.59": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.4.0",
@@ -5015,7 +5015,7 @@
           "Microsoft.EntityFrameworkCore": "2.2.2",
           "Microsoft.EntityFrameworkCore.AutoHistory": "2.1.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2",
-          "Z.EntityFramework.Classic": "7.0.39"
+          "Z.EntityFramework.Extensions.EFCore": "2.1.59"
         },
         "compile": {
           "bin/placeholder/CareerDays.Db.dll": {}
@@ -5047,7 +5047,7 @@
           "BuildingBlocks.EventBus.Synchronization": "1.0.0",
           "CareerDays.Db": "1.0.0",
           "CareerDays.Dto": "1.0.0",
-          "Z.EntityFramework.Extensions.EFCore": "2.1.49",
+          "Z.EntityFramework.Extensions.EFCore": "2.1.59",
           "Z.EntityFramework.Plus.EFCore": "1.8.18"
         },
         "compile": {
@@ -13363,15 +13363,15 @@
         "z.entityframework.extensions.classic.nuspec"
       ]
     },
-    "Z.EntityFramework.Extensions.EFCore/2.1.49": {
-      "sha512": "vO8V5SkN3JbDqDZddgnB0HWYe+ExuU5X12U8vd1PYo8rFwkiwMrNmDXkQDof6K0LselKm65pTN3M7UrjGY0N8w==",
+    "Z.EntityFramework.Extensions.EFCore/2.1.59": {
+      "sha512": "O2USvkj2+t6Rp1WequHvaj9KYIJMmnVZ1lw5GNAaubNxCPrmNstu8idCb9cg6gvumgxM85cB309L6kiRFt65qQ==",
       "type": "package",
-      "path": "z.entityframework.extensions.efcore/2.1.49",
+      "path": "z.entityframework.extensions.efcore/2.1.59",
       "files": [
         ".signature.p7s",
         "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.dll",
         "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.xml",
-        "z.entityframework.extensions.efcore.2.1.49.nupkg.sha512",
+        "z.entityframework.extensions.efcore.2.1.59.nupkg.sha512",
         "z.entityframework.extensions.efcore.nuspec"
       ]
     },

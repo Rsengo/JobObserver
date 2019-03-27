@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Dictionaries.API.Infrastructure.Initialization.Attributes;
 using AutoMapper;
 using BuildingBlocks.EventBus.Abstractions;
@@ -25,7 +26,7 @@ namespace Dictionaries.API.Infrastructure.Initialization.Initializers
 
         protected override void ProduceEvent(IEnumerable<Industry> eventData)
         {
-            var dtoData = eventData.Select(Mapper.Map<DtoIndustry>);
+            var dtoData = eventData.Select(Mapper.Map<DtoIndustrySync>);
 
             var @event = new IndustriesChanged
             {
@@ -33,6 +34,32 @@ namespace Dictionaries.API.Infrastructure.Initialization.Initializers
             };
 
             _eventBus.Publish(@event);
+        }
+        protected override Task<IEnumerable<Industry>> SaveDataAsync(
+            IEnumerable<Industry> dataFromJson)
+        {
+            var flatData = GetFlatData(dataFromJson);
+            return base.SaveDataAsync(flatData);
+        }
+
+        private IEnumerable<Industry> GetFlatData(IEnumerable<Industry> data)
+        {
+            var result = new List<Industry>();
+            result.AddRange(data);
+
+            foreach (var datum in data)
+            {
+                var children = datum.Industries;
+                datum.Industries = null;
+
+                if (children == null || !children.Any())
+                    continue;
+
+                var childrenFlat = GetFlatData(children);
+                result.AddRange(childrenFlat);
+            }
+
+            return result;
         }
     }
 }

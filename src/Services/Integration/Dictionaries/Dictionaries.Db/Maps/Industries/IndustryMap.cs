@@ -12,12 +12,20 @@ namespace Dictionaries.Db.Maps.Industries
     {
         public void Configure(EntityTypeBuilder<Industry> builder)
         {
-            //Установка первичного ключа
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
+            builder.HasAlternateKey(x => x.Name);
             builder.Property(x => x.Name).IsRequired();
 
-            builder.HasAlternateKey(x => x.Name);
+            builder
+                .HasMany(x => x.Industries)
+                .WithOne(x => x.Parent)
+                .OnDelete(DeleteBehavior.Cascade);
+            builder
+                .HasOne(x => x.Parent)
+                .WithMany(x => x.Industries)
+                .HasForeignKey(x => x.ParentId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             builder.ToTable(TableNames.INDUSTRIES);
         }

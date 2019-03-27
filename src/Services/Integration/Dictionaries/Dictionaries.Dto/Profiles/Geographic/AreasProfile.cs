@@ -46,6 +46,9 @@ namespace Dictionaries.Dto.Profiles.Geographic
                     opt => opt.Ignore())
                 .ForMember(
                     dest => dest.Metro,
+                    opt => opt.Ignore())                
+                .ForMember(
+                    dest => dest.MetroId,
                     opt => opt.Ignore())
                 .ForMember(
                     dest => dest.Areas,

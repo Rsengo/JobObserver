@@ -4,11 +4,13 @@ using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using BuildingBlocks.EventBus.Abstractions;
 using Employers.Db;
 using Employers.Db.Models;
 using Employers.Db.Models.Synonyms;
 using Employers.Dto.Models;
 using Employers.Dto.Models.Synonyms;
+using Employers.Synchronization.Events;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Employers.API.Controllers
@@ -18,9 +20,14 @@ namespace Employers.API.Controllers
     {
         private readonly EmployersDbContext _context;
 
-        public EmployersController(EmployersDbContext context)
+        private readonly IEventBus _eventBus;
+
+        public EmployersController(
+            EmployersDbContext context, 
+            IEventBus eventBus)
         {
             _context = context;
+            _eventBus = eventBus;
         }
 
         [HttpGet("{id}")]
@@ -49,6 +56,13 @@ namespace Employers.API.Controllers
                 .SaveChangesAsync()
                 .ConfigureAwait(false);
 
+            dto.Id = entity.Id;
+            var @event = new EmployersChanged
+            {
+                Created = new List<DtoEmployer> { dto }
+            };
+            _eventBus.Publish(@event);
+
             return Ok(entity.Id);
         }
 
@@ -64,6 +78,13 @@ namespace Employers.API.Controllers
                 .UpdateFromQueryAsync(_ => template)
                 .ConfigureAwait(false);
 
+            dto.Id = id;
+            var @event = new EmployersChanged
+            {
+                Updated = new List<DtoEmployer> { dto }
+            };
+            _eventBus.Publish(@event);
+
             return Ok(id);
         }
 
@@ -76,6 +97,12 @@ namespace Employers.API.Controllers
                 .ConfigureAwait(false);
             await _context.SaveChangesAsync()
                 .ConfigureAwait(false);
+
+            var @event = new EmployersChanged
+            {
+                Deleted = new List<long> { id }
+            };
+            _eventBus.Publish(@event);
 
             return Ok();
         }
@@ -155,6 +182,13 @@ namespace Employers.API.Controllers
                 .SaveChangesAsync()
                 .ConfigureAwait(false);
 
+            dto.Id = entity.Id;
+            var @event = new PartnersChanged
+            {
+                Created = new List<DtoPartners> { dto }
+            };
+            _eventBus.Publish(@event);
+
             return Ok(entity.Id);
         }
 
@@ -170,6 +204,13 @@ namespace Employers.API.Controllers
                 .UpdateFromQueryAsync(_ => template)
                 .ConfigureAwait(false);
 
+            dto.Id = id;
+            var @event = new PartnersChanged
+            {
+                Updated = new List<DtoPartners> { dto }
+            };
+            _eventBus.Publish(@event);
+
             return Ok(id);
         }
 
@@ -182,6 +223,12 @@ namespace Employers.API.Controllers
                 .ConfigureAwait(false);
             await _context.SaveChangesAsync()
                 .ConfigureAwait(false);
+
+            var @event = new PartnersChanged
+            {
+                Deleted = new List<long> { id }
+            };
+            _eventBus.Publish(@event);
 
             return Ok();
         }

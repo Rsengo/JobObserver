@@ -10,6 +10,8 @@ using BuildingBlocks.EventBus.Abstractions;
 using BuildingBlocks.EventBus.Events;
 using BuildingBlocks.EventBus.Synchronization.Events;
 using Dictionaries.Db;
+using Dictionaries.Db.Models.Geographic;
+using Dictionaries.Dto.Models.Geographic;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
@@ -46,8 +48,13 @@ namespace Dictionaries.API.Infrastructure.Initialization.Initializers
             IEnumerable<TEntity> dataFromJson)
         {
             await _context.BulkInsertAsync(
-                dataFromJson, 
-                opt => opt.IncludeGraph = true);
+                dataFromJson,
+                opt =>
+                {
+                    opt.InsertIfNotExists = true;
+                    opt.ColumnPrimaryKeyExpression = x => x.Name;
+                });
+
             return dataFromJson;
         }
 

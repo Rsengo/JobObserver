@@ -47,5 +47,7 @@ namespace Dictionaries.Db.Constants
         public const string CURRENCIES = "CURRENCIES";
 
         public const string VACANCY_STATUSES = "VACANCY_STATUSES";
+
+        public const string SITE_TYPES = "SITE_TYPES";
     }
 }

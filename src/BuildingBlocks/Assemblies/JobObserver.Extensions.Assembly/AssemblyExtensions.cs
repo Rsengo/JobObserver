@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using System.Reflection;
 
 namespace BuildingBlocks.Extensions.Assemblies
@@ -12,7 +13,7 @@ namespace BuildingBlocks.Extensions.Assemblies
         /// <returns></returns>
         public static ISet<Assembly> LoadAssembliesTree(this Assembly rootAssembly)
         {
-            var path = rootAssembly.CodeBase;
+            var path = Path.GetDirectoryName(rootAssembly.CodeBase);
 
             var tree = new HashSet<Assembly> { rootAssembly };
 
@@ -20,12 +21,12 @@ namespace BuildingBlocks.Extensions.Assemblies
 
             foreach (var assemblyName in refAssemblies)
             {
-                if (assemblyName.CodeBase !=  path)
+                var assembly = Assembly.Load(assemblyName);
+                var assemblyDirPath = Path.GetDirectoryName(assembly.CodeBase);
+                if (assemblyDirPath !=  path)
                     continue;
 
-                var assembly = Assembly.Load(assemblyName);
                 var subTree = assembly.LoadAssembliesTree();
-
                 tree.UnionWith(subTree);
             }
 

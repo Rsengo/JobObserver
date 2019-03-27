@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
+using Z.EntityFramework.Extensions;
 
 namespace Dictionaries.Db
 {
@@ -10,6 +11,8 @@ namespace Dictionaries.Db
         public DictionariesDbContext(DbContextOptions<DictionariesDbContext> options) :
             base(options)
         {
+            EntityFrameworkManager.ContextFactory = _ => new DictionariesDbContext(options);
+            this.EnsureAutoHistory();
         }
     }
 }

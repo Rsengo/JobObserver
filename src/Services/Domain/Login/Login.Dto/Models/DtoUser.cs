@@ -81,6 +81,12 @@ namespace Login.Dto.Models
         [JsonProperty("full_name")]
         public virtual string FullName { get; set; }
 
+        /// <summary>
+        ///     Email.
+        /// </summary>
+        [JsonProperty("email")]
+        public virtual string Email { get; set; }
+
         [JsonProperty("educational_institution_manager_attributes")]
         public virtual DtoEducationalInstitutionManagerAttributes EducationalInstitutionManagerAttributes { get; set; }
 

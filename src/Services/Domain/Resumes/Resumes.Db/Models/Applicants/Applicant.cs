@@ -55,6 +55,11 @@ namespace Resumes.Db.Models.Applicants
         /// </summary>
         public virtual string FullName => $"{FirstName} {MiddleName} {LastName}";
 
+        /// <summary>
+        ///     Email.
+        /// </summary>
+        public virtual string Email { get; set; }
+
         public virtual ICollection<Resume> Resumes { get; set; }
     }
 }

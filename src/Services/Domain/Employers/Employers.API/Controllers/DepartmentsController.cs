@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using BuildingBlocks.EventBus.Abstractions;
 using Employers.Db;
 using Employers.Db.Models;
 using Employers.Dto.Models;
+using Employers.Synchronization.Events;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,9 +18,14 @@ namespace Employers.API.Controllers
     {
         private readonly EmployersDbContext _context;
 
-        public DepartmentsController(EmployersDbContext context)
+        private readonly IEventBus _eventBus;
+
+        public DepartmentsController(
+            EmployersDbContext context, 
+            IEventBus eventBus)
         {
             _context = context;
+            _eventBus = eventBus;
         }
 
         [HttpGet("{id}")]
@@ -53,6 +60,13 @@ namespace Employers.API.Controllers
                 .SaveChangesAsync()
                 .ConfigureAwait(false);
 
+            dto.Id = entity.Id;
+            var @event = new DepartmentsChanged
+            {
+                Created = new List<DtoDepartment> { dto }
+            };
+            _eventBus.Publish(@event);
+
             return Ok(entity.Id);
         }
 
@@ -68,6 +82,13 @@ namespace Employers.API.Controllers
                 .UpdateFromQueryAsync(_ => template)
                 .ConfigureAwait(false);
 
+            dto.Id = id;
+            var @event = new DepartmentsChanged
+            {
+                Updated = new List<DtoDepartment> { dto }
+            };
+            _eventBus.Publish(@event);
+
             return Ok(id);
         }
 
@@ -80,6 +101,12 @@ namespace Employers.API.Controllers
                 .ConfigureAwait(false);
             await _context.SaveChangesAsync()
                 .ConfigureAwait(false);
+
+            var @event = new DepartmentsChanged
+            {
+                Deleted = new List<long> { id }
+            };
+            _eventBus.Publish(@event);
 
             return Ok();
         }

@@ -5,6 +5,7 @@ using Login.Db.Models.Geographic;
 using Microsoft.EntityFrameworkCore;
 using Login.Db.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Z.EntityFramework.Extensions;
 
 namespace Login.Db
 {
@@ -13,6 +14,7 @@ namespace Login.Db
         public LoginDbContext(DbContextOptions<LoginDbContext> options) :
             base(options)
         {
+            EntityFrameworkManager.ContextFactory = _ => new LoginDbContext(options);
             this.EnsureAutoHistory();
         }
     }

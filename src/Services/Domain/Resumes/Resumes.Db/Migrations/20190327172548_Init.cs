@@ -316,7 +316,8 @@ namespace Resumes.Db.Migrations
                     MiddleName = table.Column<string>(nullable: true),
                     BirthDate = table.Column<DateTime>(nullable: false),
                     GenderId = table.Column<long>(nullable: false),
-                    AreaId = table.Column<long>(nullable: false)
+                    AreaId = table.Column<long>(nullable: false),
+                    Email = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {

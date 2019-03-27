@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using BuildingBlocks.EventBus.Abstractions;
 using EducationalInstitutions.Db;
 using EducationalInstitutions.Db.Models;
 using EducationalInstitutions.Db.Models.Synonyms;
 using EducationalInstitutions.Dto.Models;
 using EducationalInstitutions.Dto.Models.Synonyms;
+using EducationalInstitutions.Synchronization.Events;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,9 +20,14 @@ namespace EducationalInstitutions.API.Controllers
     {
         private readonly EducationalInstitutionsDbContext _context;
 
-        public EducationalInstitutionsController(EducationalInstitutionsDbContext context)
+        private readonly IEventBus _eventBus;
+
+        public EducationalInstitutionsController(
+            EducationalInstitutionsDbContext context, 
+            IEventBus eventBus)
         {
             _context = context;
+            _eventBus = eventBus;
         }
 
         [HttpGet("{id}")]
@@ -48,6 +55,13 @@ namespace EducationalInstitutions.API.Controllers
                 .SaveChangesAsync()
                 .ConfigureAwait(false);
 
+            dto.Id = entity.Id;
+            var @event = new EducationalInstitutionsChanged
+            {
+                Created = new List<DtoEducationalInstitution> { dto }
+            };
+            _eventBus.Publish(@event);
+
             return Ok(entity.Id);
         }
 
@@ -63,6 +77,13 @@ namespace EducationalInstitutions.API.Controllers
                 .UpdateFromQueryAsync(_ => template)
                 .ConfigureAwait(false);
 
+            dto.Id = id;
+            var @event = new EducationalInstitutionsChanged
+            {
+                Updated = new List<DtoEducationalInstitution> { dto }
+            };
+            _eventBus.Publish(@event);
+
             return Ok(id);
         }
 
@@ -75,6 +96,12 @@ namespace EducationalInstitutions.API.Controllers
                 .ConfigureAwait(false);
             await _context.SaveChangesAsync()
                 .ConfigureAwait(false);
+
+            var @event = new EducationalInstitutionsChanged
+            {
+                Deleted = new List<long> { id }
+            };
+            _eventBus.Publish(@event);
 
             return Ok();
         }
@@ -154,6 +181,13 @@ namespace EducationalInstitutions.API.Controllers
                 .SaveChangesAsync()
                 .ConfigureAwait(false);
 
+            dto.Id = entity.Id;
+            var @event = new PartnersChanged()
+            {
+                Created = new List<DtoPartners> { dto }
+            };
+            _eventBus.Publish(@event);
+
             return Ok(entity.Id);
         }
 
@@ -169,6 +203,13 @@ namespace EducationalInstitutions.API.Controllers
                 .UpdateFromQueryAsync(_ => template)
                 .ConfigureAwait(false);
 
+            dto.Id = id;
+            var @event = new PartnersChanged()
+            {
+                Updated = new List<DtoPartners> { dto }
+            };
+            _eventBus.Publish(@event);
+
             return Ok(id);
         }
 
@@ -181,6 +222,12 @@ namespace EducationalInstitutions.API.Controllers
                 .ConfigureAwait(false);
             await _context.SaveChangesAsync()
                 .ConfigureAwait(false);
+
+            var @event = new PartnersChanged
+            {
+                Deleted = new List<long> { id }
+            };
+            _eventBus.Publish(@event);
 
             return Ok();
         }

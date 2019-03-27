@@ -35,7 +35,7 @@ namespace Vacancies.API.Controllers
                     .ThenInclude(x => x.DrivingLicenseType)
                 .Include(x => x.Employer)
                 .Include(x => x.Employment)
-                .Include(x => x.Industry)
+                //.Include(x => x.Industry)
                 .Include(x => x.KeySkills)
                     .ThenInclude(x => x.Skill)
                 .Include(x => x.Languages)
@@ -55,6 +55,7 @@ namespace Vacancies.API.Controllers
             await _context.Languages.LoadAsync();
             await _context.LanguageLevels.LoadAsync();
             await _context.Specializations.LoadAsync();
+            await _context.Industries.LoadAsync();
 
             var dto = Mapper.Map<DtoVacancy>(result);
 

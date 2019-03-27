@@ -4818,7 +4818,7 @@
           "lib/netstandard2.0/Z.EntityFramework.Extensions.Classic.dll": {}
         }
       },
-      "Z.EntityFramework.Extensions.EFCore/2.1.52": {
+      "Z.EntityFramework.Extensions.EFCore/2.1.59": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.4.0",
@@ -5002,7 +5002,8 @@
           "BuildingBlocks.EntityFramework": "1.0.0",
           "Microsoft.EntityFrameworkCore": "2.2.2",
           "Microsoft.EntityFrameworkCore.AutoHistory": "2.1.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2"
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2",
+          "Z.EntityFramework.Extensions.EFCore": "2.1.59"
         },
         "compile": {
           "bin/placeholder/Employers.Db.dll": {}
@@ -5035,7 +5036,7 @@
           "BuildingBlocks.EventBus.Synchronization": "1.0.0",
           "Employers.Db": "1.0.0",
           "Employers.Dto": "1.0.0",
-          "Z.EntityFramework.Extensions.EFCore": "2.1.52"
+          "Z.EntityFramework.Extensions.EFCore": "2.1.59"
         },
         "compile": {
           "bin/placeholder/Employers.Synchronization.dll": {}
@@ -13350,15 +13351,15 @@
         "z.entityframework.extensions.classic.nuspec"
       ]
     },
-    "Z.EntityFramework.Extensions.EFCore/2.1.52": {
-      "sha512": "lC00qhIp1JA2b8I0ksOWXKPNZo9SdLGEN1xglJwh76Yu7Gez83bhmhS7JjzEmbn2wS0GRftYFm0MgNA9vDppoQ==",
+    "Z.EntityFramework.Extensions.EFCore/2.1.59": {
+      "sha512": "O2USvkj2+t6Rp1WequHvaj9KYIJMmnVZ1lw5GNAaubNxCPrmNstu8idCb9cg6gvumgxM85cB309L6kiRFt65qQ==",
       "type": "package",
-      "path": "z.entityframework.extensions.efcore/2.1.52",
+      "path": "z.entityframework.extensions.efcore/2.1.59",
       "files": [
         ".signature.p7s",
         "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.dll",
         "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.xml",
-        "z.entityframework.extensions.efcore.2.1.52.nupkg.sha512",
+        "z.entityframework.extensions.efcore.2.1.59.nupkg.sha512",
         "z.entityframework.extensions.efcore.nuspec"
       ]
     },

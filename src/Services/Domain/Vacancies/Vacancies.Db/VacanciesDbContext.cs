@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
+using Z.EntityFramework.Extensions;
 
 namespace Vacancies.Db
 {
@@ -10,6 +11,7 @@ namespace Vacancies.Db
         public VacanciesDbContext(DbContextOptions<VacanciesDbContext> options) :
             base(options)
         {
+            EntityFrameworkManager.ContextFactory = _ => new VacanciesDbContext(options);
             this.EnsureAutoHistory();
         }
     }

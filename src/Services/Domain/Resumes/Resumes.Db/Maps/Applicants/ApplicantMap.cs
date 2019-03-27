@@ -17,6 +17,7 @@ namespace Resumes.Db.Maps.Applicants
 
             builder.Property(x => x.FirstName).IsRequired();
             builder.Property(x => x.BirthDate).IsRequired();
+            builder.Property(x => x.Email).IsRequired();
 
             builder
                 .HasOne(x => x.Area)
