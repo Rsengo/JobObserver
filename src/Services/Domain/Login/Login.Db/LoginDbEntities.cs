@@ -23,20 +23,22 @@ namespace Login.Db
             base.OnModelCreating(builder);
         }
 
-        public virtual DbSet<Area> Areas { get; set; }
+        public DbSet<Area> Areas { get; set; }
 
-        public virtual DbSet<Gender> Genders { get; set; }
+        public DbSet<Gender> Genders { get; set; }
 
-        public virtual DbSet<Contact> Contacts { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
 
-        public virtual DbSet<Phone> Phones { get; set; }
+        public DbSet<Phone> Phones { get; set; }
 
-        public virtual DbSet<Site> Sites { get; set; }
+        public DbSet<Site> Sites { get; set; }
 
-        public virtual DbSet<SiteType> SiteTypes { get; set; }
+        public DbSet<SiteType> SiteTypes { get; set; }
 
-        public virtual DbSet<EducationalInstitutionManagerAttributes> EducationalInstitutionManagerAttributes { get; set; }
+        public DbSet<EducationalInstitutionManagerAttributes> EducationalInstitutionManagerAttributes { get; set; }
 
-        public virtual DbSet<EmployerManagerAttributes> EmployerManagerAttributes { get; set; }
+        public DbSet<EmployerManagerAttributes> EmployerManagerAttributes { get; set; }
+
+        public DbSet<Permission> Permissions { get; set; }
     }
 }

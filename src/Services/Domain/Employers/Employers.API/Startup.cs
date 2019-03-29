@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using BuildingBlocks.Extensions.AutoMapper;
 using BuildingBlocks.Extensions.EventBus.RabbitMQ;
 using Employers.Db;
+using Employers.Dto;
 using Employers.Synchronization.EventHandlers;
 using Employers.Synchronization.EventHandlers.Geographic;
 using Employers.Synchronization.Events;
@@ -55,7 +56,7 @@ namespace Employers.API
 
             services.AddAutoMapper(builder =>
             {
-                builder.RootAssembly = GetType().Assembly;
+                builder.AddAssembly(typeof(AutoMapperBeacon).Assembly);
             });
 
             services.AddEventBusRabbitMQ(builder =>

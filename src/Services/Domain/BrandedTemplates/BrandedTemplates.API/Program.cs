@@ -9,6 +9,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using BrandedTemplates.Db;
 using BuildingBlocks.Extensions.EntityFramework;
+using Serilog;
+using Serilog.Configuration;
+using Serilog.Sinks.Elasticsearch;
 
 namespace BrandedTemplates.API
 {
@@ -28,6 +31,20 @@ namespace BrandedTemplates.API
                 {
                     configBuilder.AddEnvironmentVariables();
                     configBuilder.Build();
+                })
+                .ConfigureLogging((hostingContext, builder) =>
+                {
+                    builder.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
+                    builder.AddConsole();
+                    builder.AddDebug();
+                })
+                .UseSerilog((builderContext, config) =>
+                {
+                    var url = builderContext.Configuration["ElasticSearch"];
+                    config
+                        .MinimumLevel.Information()
+                        .Enrich.FromLogContext()
+                        .WriteTo.Elasticsearch(url);
                 })
                 .Build();
     }

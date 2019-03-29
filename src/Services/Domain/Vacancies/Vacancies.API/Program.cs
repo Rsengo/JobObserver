@@ -8,6 +8,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Serilog;
 using Vacancies.Db;
 
 namespace Vacancies.API
@@ -28,6 +29,20 @@ namespace Vacancies.API
                 {
                     configBuilder.AddEnvironmentVariables();
                     configBuilder.Build();
+                })
+                .ConfigureLogging((hostingContext, builder) =>
+                {
+                    builder.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
+                    builder.AddConsole();
+                    builder.AddDebug();
+                })
+                .UseSerilog((builderContext, config) =>
+                {
+                    var url = builderContext.Configuration["ElasticSearch"];
+                    config
+                        .MinimumLevel.Information()
+                        .Enrich.FromLogContext()
+                        .WriteTo.Elasticsearch(url);
                 })
                 .Build();
     }

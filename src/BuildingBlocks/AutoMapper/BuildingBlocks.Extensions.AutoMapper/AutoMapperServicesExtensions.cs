@@ -18,10 +18,10 @@ namespace BuildingBlocks.Extensions.AutoMapper
             var configuration = new AutoMapperConfigurationBuilder();
             builder(configuration);
 
-            var rootAssembly = configuration.RootAssembly;
-            configurator.Initialize(rootAssembly);
+            var assemblies = configuration.Assemblies;
+            configurator.Initialize(assemblies);
 
-            services.AddSingleton(_ => configurator);
+            services.AddSingleton(configurator);
 
             return services;
         }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using BuildingBlocks.Extensions.AutoMapper;
 using BuildingBlocks.Extensions.EventBus.RabbitMQ;
 using EducationalInstitutions.Db;
+using EducationalInstitutions.Dto;
 using EducationalInstitutions.Synchronization.EventHandlers;
 using EducationalInstitutions.Synchronization.EventHandlers.Geographic;
 using EducationalInstitutions.Synchronization.Events;
@@ -55,7 +56,7 @@ namespace EducationalInstitutions.API
 
             services.AddAutoMapper(builder =>
             {
-                builder.RootAssembly = GetType().Assembly;
+                builder.AddAssembly(typeof(AutoMapperBeacon).Assembly);
             });
 
             services.AddEventBusRabbitMQ(builder =>

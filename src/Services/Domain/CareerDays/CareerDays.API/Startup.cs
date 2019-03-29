@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using BuildingBlocks.Extensions.AutoMapper;
 using BuildingBlocks.Extensions.EventBus.RabbitMQ;
 using CareerDays.Db;
+using CareerDays.Dto;
 using CareerDays.Synchronization.EventHandlers;
 using CareerDays.Synchronization.EventHandlers.Geographic;
 using CareerDays.Synchronization.EventHandlers.Geographic.Metro;
@@ -57,7 +58,7 @@ namespace CareerDays.API
 
             services.AddAutoMapper(builder =>
             {
-                builder.RootAssembly = GetType().Assembly;
+                builder.AddAssembly(typeof(AutoMapperBeacon).Assembly);
             });
 
             services.AddEventBusRabbitMQ(builder =>

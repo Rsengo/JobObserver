@@ -15,6 +15,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Resumes.Db;
+using Resumes.Dto;
 using Resumes.Synchronization.EventHandlers.Applicants;
 using Resumes.Synchronization.EventHandlers.Driving;
 using Resumes.Synchronization.EventHandlers.Educations;
@@ -80,7 +81,10 @@ namespace Resumes.API
                     });
             });
 
-            services.AddAutoMapper(builder => { builder.RootAssembly = GetType().Assembly; });
+            services.AddAutoMapper(builder =>
+            {
+                builder.AddAssembly(typeof(AutoMapperBeacon).Assembly);
+            });
 
             services.AddEventBusRabbitMQ(builder =>
             {

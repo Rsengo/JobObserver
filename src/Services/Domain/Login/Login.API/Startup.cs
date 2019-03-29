@@ -19,6 +19,7 @@ using Swashbuckle.AspNetCore.Swagger;
 using IdentityServer4.AspNetIdentity;
 using IdentityServer4.Services;
 using Login.Db.Models;
+using Login.Dto;
 using Microsoft.AspNetCore.Identity;
 
 namespace Login.API
@@ -99,7 +100,10 @@ namespace Login.API
                 })
                 .Services.AddTransient<IProfileService, ProfileService<User>>();
 
-            services.AddAutoMapper(builder => builder.RootAssembly = GetType().Assembly);
+            services.AddAutoMapper(builder =>
+            {
+                builder.AddAssembly(typeof(AutoMapperBeacon).Assembly);
+            });
 
             services.AddEventBusRabbitMQ(builder =>
             {

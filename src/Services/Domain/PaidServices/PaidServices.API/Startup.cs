@@ -14,6 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using PaidServices.Db;
+using PaidServices.Dto;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace PaidServices.API
@@ -50,7 +51,7 @@ namespace PaidServices.API
 
             services.AddAutoMapper(builder =>
             {
-                builder.RootAssembly = GetType().Assembly;
+                builder.AddAssembly(typeof(AutoMapperBeacon).Assembly);
             });
 
             services.AddSwaggerGen(c =>

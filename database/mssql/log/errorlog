@@ -1,0 +1,78 @@
+2019-03-29 07:39:52.64 Server      Microsoft SQL Server 2017 (RTM-CU13) (KB4466404) - 14.0.3048.4 (X64) 
+	Nov 30 2018 12:57:58 
+	Copyright (C) 2017 Microsoft Corporation
+	Developer Edition (64-bit) on Linux (Ubuntu 16.04.5 LTS)
+2019-03-29 07:39:52.65 Server      UTC adjustment: 0:00
+2019-03-29 07:39:52.66 Server      (c) Microsoft Corporation.
+2019-03-29 07:39:52.66 Server      All rights reserved.
+2019-03-29 07:39:52.67 Server      Server process ID is 4120.
+2019-03-29 07:39:52.68 Server      Logging SQL Server messages in file '/var/opt/mssql/log/errorlog'.
+2019-03-29 07:39:52.68 Server      Registry startup parameters: 
+	 -d /var/opt/mssql/data/master.mdf
+	 -l /var/opt/mssql/data/mastlog.ldf
+	 -e /var/opt/mssql/log/errorlog
+2019-03-29 07:39:53.08 Server      SQL Server detected 1 sockets with 2 cores per socket and 2 logical processors per socket, 2 total logical processors; using 2 logical processors based on SQL Server licensing. This is an informational message; no user action is required.
+2019-03-29 07:39:53.11 Server      SQL Server is starting at normal priority base (=7). This is an informational message only. No user action is required.
+2019-03-29 07:39:53.12 Server      Detected 1584 MB of RAM. This is an informational message; no user action is required.
+2019-03-29 07:39:53.13 Server      Using conventional memory in the memory manager.
+2019-03-29 07:40:08.64 Server      Buffer pool extension is already disabled. No action is necessary. 
+2019-03-29 07:40:11.79 Server      InitializeExternalUserGroupSid failed. Implied authentication will be disabled.
+2019-03-29 07:40:11.79 Server      Implied authentication manager initialization failed. Implied authentication will be disabled.
+2019-03-29 07:40:11.79 Server      Successfully initialized the TLS configuration. Allowed TLS protocol versions are ['1.0 1.1 1.2']. Allowed TLS ciphers are ['ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA'].
+2019-03-29 07:40:12.19 Server      The maximum number of dedicated administrator connections for this instance is '1'
+2019-03-29 07:40:12.19 Server      Node configuration: node 0: CPU mask: 0x0000000000000003:0 Active CPU mask: 0x0000000000000003:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.
+2019-03-29 07:40:12.20 Server      Using dynamic lock allocation.  Initial allocation of 2500 Lock blocks and 5000 Lock Owner blocks per node.  This is an informational message only.  No user action is required.
+2019-03-29 07:40:12.22 Server      In-Memory OLTP initialized on lowend machine.
+2019-03-29 07:40:12.76 Server      Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
+2019-03-29 07:40:12.77 Server      Query Store settings initialized with enabled = 1, 
+2019-03-29 07:40:12.79 spid6s      Starting up database 'master'.
+2019-03-29 07:40:12.88 Server      Software Usage Metrics is disabled.
+2019-03-29 07:40:17.66 spid6s      The tail of the log for database master is being rewritten to match the new sector size of 4096 bytes.  3072 bytes at offset 418816 in file /var/opt/mssql/data/mastlog.ldf will be written.
+2019-03-29 07:40:21.12 spid6s      Converting database 'master' from version 862 to the current version 869.
+2019-03-29 07:40:21.13 spid6s      Database 'master' running the upgrade step from version 862 to version 863.
+2019-03-29 07:40:21.70 spid6s      Database 'master' running the upgrade step from version 863 to version 864.
+2019-03-29 07:40:22.79 spid6s      Database 'master' running the upgrade step from version 864 to version 865.
+2019-03-29 07:40:23.14 spid6s      Database 'master' running the upgrade step from version 865 to version 866.
+2019-03-29 07:40:23.42 spid6s      Database 'master' running the upgrade step from version 866 to version 867.
+2019-03-29 07:40:23.66 spid6s      Database 'master' running the upgrade step from version 867 to version 868.
+2019-03-29 07:40:24.04 spid6s      Database 'master' running the upgrade step from version 868 to version 869.
+2019-03-29 07:40:29.34 spid6s      Resource governor reconfiguration succeeded.
+2019-03-29 07:40:29.34 spid6s      SQL Server Audit is starting the audits. This is an informational message. No user action is required.
+2019-03-29 07:40:29.44 spid6s      SQL Server Audit has started the audits. This is an informational message. No user action is required.
+2019-03-29 07:40:30.48 spid6s      SQL Trace ID 1 was started by login "sa".
+2019-03-29 07:40:30.96 spid19s     Password policy update was successful.
+2019-03-29 07:40:31.20 spid6s      Server name is '671abff2e817'. This is an informational message only. No user action is required.
+2019-03-29 07:40:31.22 spid22s     Always On: The availability replica manager is starting. This is an informational message only. No user action is required.
+2019-03-29 07:40:31.24 spid22s     Always On: The availability replica manager is waiting for the instance of SQL Server to allow client connections. This is an informational message only. No user action is required.
+2019-03-29 07:40:31.27 spid6s      Starting up database 'msdb'.
+2019-03-29 07:40:31.29 spid9s      Starting up database 'mssqlsystemresource'.
+2019-03-29 07:40:31.31 spid9s      The resource database build version is 14.00.3048. This is an informational message only. No user action is required.
+2019-03-29 07:40:31.42 spid9s      Starting up database 'model'.
+2019-03-29 07:40:36.48 spid6s      The tail of the log for database msdb is being rewritten to match the new sector size of 4096 bytes.  512 bytes at offset 306688 in file /var/opt/mssql/data/MSDBLog.ldf will be written.
+2019-03-29 07:40:36.54 spid9s      The tail of the log for database model is being rewritten to match the new sector size of 4096 bytes.  2048 bytes at offset 75776 in file /var/opt/mssql/data/modellog.ldf will be written.
+2019-03-29 07:40:37.98 spid9s      Converting database 'model' from version 862 to the current version 869.
+2019-03-29 07:40:37.98 spid9s      Database 'model' running the upgrade step from version 862 to version 863.
+2019-03-29 07:40:38.21 spid6s      Converting database 'msdb' from version 862 to the current version 869.
+2019-03-29 07:40:38.21 spid6s      Database 'msdb' running the upgrade step from version 862 to version 863.
+2019-03-29 07:40:39.22 spid9s      Database 'model' running the upgrade step from version 863 to version 864.
+2019-03-29 07:40:40.00 spid6s      Database 'msdb' running the upgrade step from version 863 to version 864.
+2019-03-29 07:40:40.09 spid9s      Database 'model' running the upgrade step from version 864 to version 865.
+2019-03-29 07:40:40.82 spid9s      Database 'model' running the upgrade step from version 865 to version 866.
+2019-03-29 07:40:40.92 spid6s      Database 'msdb' running the upgrade step from version 864 to version 865.
+2019-03-29 07:40:41.33 spid9s      Database 'model' running the upgrade step from version 866 to version 867.
+2019-03-29 07:40:41.42 spid6s      Database 'msdb' running the upgrade step from version 865 to version 866.
+2019-03-29 07:40:41.86 spid9s      Database 'model' running the upgrade step from version 867 to version 868.
+2019-03-29 07:40:42.02 spid6s      Database 'msdb' running the upgrade step from version 866 to version 867.
+2019-03-29 07:40:42.72 spid6s      Database 'msdb' running the upgrade step from version 867 to version 868.
+2019-03-29 07:40:42.99 spid9s      Database 'model' running the upgrade step from version 868 to version 869.
+2019-03-29 07:40:43.31 spid6s      Database 'msdb' running the upgrade step from version 868 to version 869.
+2019-03-29 07:40:45.04 spid9s      Polybase feature disabled.
+2019-03-29 07:40:45.05 spid9s      Clearing tempdb database.
+2019-03-29 07:40:45.83 spid19s     A self-generated certificate was successfully loaded for encryption.
+2019-03-29 07:40:45.94 spid19s     Server is listening on [ 'any' <ipv4> 1433].
+2019-03-29 07:40:45.95 Server      Server is listening on [ 127.0.0.1 <ipv4> 1434].
+2019-03-29 07:40:45.96 Server      Dedicated admin connection support was established for listening locally on port 1434.
+2019-03-29 07:40:46.07 spid19s     SQL Server is now ready for client connections. This is an informational message; no user action is required.
+2019-03-29 07:41:06.39 spid9s      Error: 904, Severity: 16, State: 2.
+2019-03-29 07:41:06.39 spid9s      Database 2 cannot be autostarted during server shutdown or startup.
+2019-03-29 07:41:06.39 spid9s      SQL Trace was stopped due to server shutdown. Trace ID = '1'. This is an informational message only; no user action is required.

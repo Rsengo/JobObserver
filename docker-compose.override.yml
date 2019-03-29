@@ -13,11 +13,46 @@ services:
       - ACCEPT_EULA=Y
     ports:
       - "5433:1433"    # Important: In a production environment your should remove the external port
+    # volumes: 
+      # - ./database/mssql:/var/opt/mssql
 
   rabbitmq:
     ports:
       - "15672:15672"  # Important: In a production environment your should remove the external port
       - "5672:5672"    # Important: In a production environment your should remove the external port
+
+  # mariadb:
+  #   environment:
+  #     - MARIADB_USER=bn_moodle
+  #     - MARIADB_DATABASE=bitnami_moodle
+  #     - ALLOW_EMPTY_PASSWORD=yes
+  #   ports:
+  #    - '3306:3306'
+  #   volumes:
+  #     - ./database/mariadb_data:/bitnami
+
+  # moodle:
+  #   environment:
+  #     - MARIADB_HOST=mariadb
+  #     - MARIADB_PORT_NUMBER=3306
+  #     - MOODLE_DATABASE_USER=bn_moodle
+  #     - MOODLE_DATABASE_NAME=bitnami_moodle
+  #     - ALLOW_EMPTY_PASSWORD=yes
+  #   ports:
+  #     - '5150:80'
+  #     - '443:443'
+  #   volumes:
+  #     - ./database/moodle_data:/bitnami
+
+  elasticsearch:
+    ports:
+      - "9200:9200"
+    volumes:
+      - ./database/elasticsearch:/usr/share/elasticsearch/data
+
+  kibana:
+    ports:
+      - "5601:5601"
 
   brandedtemplates.api:
     environment:
@@ -25,120 +60,130 @@ services:
       - ASPNETCORE_URLS=http://0.0.0.0:80
       - ConnectionString=Server=sql.data;Database=BRANDED_TEMPLATES;User Id=sa;Password=Pass@word
       - CorsPolicy=${CORS_POLICY}
+      - ElasticSearch=elasticsearch:9200
     ports:
       - "5101:80"   
 
-  # careerdays.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=http://0.0.0.0:80
-  #     - ConnectionString=Server=sql.data;Database=CAREER_DAYS;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - EventBusSubscriptionClientName=${EVENT_BUS_SUBSCRIPTION_CLIENT_NAME} 
-  #   ports:
-  #     - "5102:80"  
+  careerdays.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=Server=sql.data;Database=CAREER_DAYS;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - EventBusSubscriptionClientName=${EVENT_BUS_SUBSCRIPTION_CLIENT_NAME} 
+      - ElasticSearch=elasticsearch:9200
+    ports:
+      - "5102:80"  
 
-  # educationalinstitutions.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=http://0.0.0.0:80
-  #     - ConnectionString=Server=sql.data;Database=EDUCATIONAL_INSTITUTIONS;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - EventBusSubscriptionClientName=${EVENT_BUS_SUBSCRIPTION_CLIENT_NAME}
-  #   ports:
-  #     - "5103:80"  
+  educationalinstitutions.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=Server=sql.data;Database=EDUCATIONAL_INSTITUTIONS;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - EventBusSubscriptionClientName=${EVENT_BUS_SUBSCRIPTION_CLIENT_NAME}
+      - ElasticSearch=elasticsearch:9200
+    ports:
+      - "5103:80"  
 
-  # employers.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=http://0.0.0.0:80
-  #     - ConnectionString=Server=sql.data;Database=EMPLOYERS;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - EventBusSubscriptionClientName=${EVENT_BUS_SUBSCRIPTION_CLIENT_NAME}
-  #   ports:
-  #     - "5104:80"  
+  employers.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=Server=sql.data;Database=EMPLOYERS;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - EventBusSubscriptionClientName=${EVENT_BUS_SUBSCRIPTION_CLIENT_NAME}
+      - ElasticSearch=elasticsearch:9200
+    ports:
+      - "5104:80"  
 
-  # login.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=http://0.0.0.0:80
-  #     - ConnectionString=Server=sql.data;Database=LOGIN;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - EventBusSubscriptionClientName=${EVENT_BUS_SUBSCRIPTION_CLIENT_NAME}
-  #   ports:
-  #     - "5105:80"  
+  login.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=Server=sql.data;Database=LOGIN;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - EventBusSubscriptionClientName=${EVENT_BUS_SUBSCRIPTION_CLIENT_NAME}
+      - ElasticSearch=elasticsearch:9200
+    ports:
+      - "5105:80"  
 
-  # paidservices.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=http://0.0.0.0:80
-  #     - ConnectionString=Server=sql.data;Database=PAID_SERVICES;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #   ports:
-  #     - "5106:80"  
+  paidservices.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=Server=sql.data;Database=PAID_SERVICES;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - ElasticSearch=elasticsearch:9200
+    ports:
+      - "5106:80"  
 
-  # resumes.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=http://0.0.0.0:80
-  #     - ConnectionString=Server=sql.data;Database=RESUMES;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - EventBusSubscriptionClientName=${EVENT_BUS_SUBSCRIPTION_CLIENT_NAME}
-  #   ports:
-  #     - "5107:80"  
+  resumes.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=Server=sql.data;Database=RESUMES;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - EventBusSubscriptionClientName=${EVENT_BUS_SUBSCRIPTION_CLIENT_NAME}
+      - ElasticSearch=elasticsearch:9200
+    ports:
+      - "5107:80"  
 
-  # vacancies.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=http://0.0.0.0:80
-  #     - ConnectionString=Server=sql.data;Database=VACANCIES;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - EventBusSubscriptionClientName=${EVENT_BUS_SUBSCRIPTION_CLIENT_NAME}
-  #   ports:
-  #     - "5108:80" 
+  vacancies.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=Server=sql.data;Database=VACANCIES;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - EventBusSubscriptionClientName=${EVENT_BUS_SUBSCRIPTION_CLIENT_NAME}
+      - ElasticSearch=elasticsearch:9200
+    ports:
+      - "5108:80" 
 
-    # dictionaries.api:
-    # environment:
-    #   - ASPNETCORE_ENVIRONMENT=Development
-    #   - ASPNETCORE_URLS=http://0.0.0.0:80
-    #   - ConnectionString=Server=sql.data;Database=DICTIONARIES;User Id=sa;Password=Pass@word
-    #   - CorsPolicy=${CORS_POLICY}
-    #   - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-    #   - EventBusConnection=rabbitmq
-    #   - EventBusUserName=${EVENT_BUS_USER_NAME}
-    #   - EventBusPassword=${EVENT_BUS_PASSWORD}
-    #   - EventBusSubscriptionClientName=${EVENT_BUS_SUBSCRIPTION_CLIENT_NAME}
-    # ports:
-    #   - "5109:80"  
+  dictionaries.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=Server=sql.data;Database=DICTIONARIES;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - EventBusSubscriptionClientName=${EVENT_BUS_SUBSCRIPTION_CLIENT_NAME}
+      - ElasticSearch=elasticsearch:9200
+    ports:
+      - "5109:80"  
 
   apigw:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development   
       - CorsPolicy=${CORS_POLICY}
+        - ElasticSearch=elasticsearch:9200
     ports:
       - "5200:80"   
     volumes:

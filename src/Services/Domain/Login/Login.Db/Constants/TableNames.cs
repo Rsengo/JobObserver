@@ -23,5 +23,7 @@ namespace Login.Db.Constants
         public const string SITE_TYPES = "SITE_TYPES";
 
         public const string USERS = "USERS";
+
+        public const string PERMISSIONS = "PERMISSIONS";
     }
 }

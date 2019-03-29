@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "c037f2a84e2d97c602c9f8791a3c0e4efd487e95"
+    "signature": "0395a7720f5763b83f6043e41e3d43e75e6ebae7"
   },
   "compilationOptions": {
     "defines": [
@@ -31,6 +31,10 @@
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.0.1916590",
+          "Serilog": "2.8.0",
+          "Serilog.AspNetCore": "2.1.1",
+          "Serilog.Extensions.Hosting": "2.0.0",
+          "Serilog.Extensions.Logging": "2.0.2",
           "Swashbuckle.AspNetCore": "4.0.1",
           "Vacancies.Db": "1.0.0",
           "Vacancies.Synchronization": "1.0.0",
@@ -399,6 +403,71 @@
           "Microsoft.NETCore.Targets": "2.0.0"
         }
       },
+      "Serilog/2.8.0": {
+        "dependencies": {
+          "System.Collections.NonGeneric": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Serilog.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.8.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Serilog.dll": {}
+        }
+      },
+      "Serilog.AspNetCore/2.1.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
+          "Microsoft.Extensions.DependencyInjection": "2.2.0",
+          "Microsoft.Extensions.Logging": "2.2.0",
+          "Serilog": "2.8.0",
+          "Serilog.Extensions.Logging": "2.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Serilog.AspNetCore.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.1.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Serilog.AspNetCore.dll": {}
+        }
+      },
+      "Serilog.Extensions.Hosting/2.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Hosting.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Logging.Abstractions": "2.2.0",
+          "Serilog": "2.8.0",
+          "Serilog.Extensions.Logging": "2.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Serilog.Extensions.Hosting.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Serilog.Extensions.Hosting.dll": {}
+        }
+      },
+      "Serilog.Extensions.Logging/2.0.2": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "2.2.0",
+          "Serilog": "2.8.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Serilog.Extensions.Logging.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.2.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Serilog.Extensions.Logging.dll": {}
+        }
+      },
       "Swashbuckle.AspNetCore/4.0.1": {
         "dependencies": {
           "Swashbuckle.AspNetCore.Swagger": "4.0.1",
@@ -698,7 +767,7 @@
           "lib/netstandard2.0/Z.EntityFramework.Extensions.Classic.dll": {}
         }
       },
-      "Z.EntityFramework.Extensions.EFCore/2.1.56": {
+      "Z.EntityFramework.Extensions.EFCore/2.1.59": {
         "dependencies": {
           "Microsoft.CSharp": "4.5.0",
           "Microsoft.EntityFrameworkCore.Relational": "2.2.2",
@@ -709,8 +778,8 @@
         },
         "runtime": {
           "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.dll": {
-            "assemblyVersion": "2.1.56.0",
-            "fileVersion": "2.1.56.0"
+            "assemblyVersion": "2.1.59.0",
+            "fileVersion": "2.1.59.0"
           }
         },
         "compile": {
@@ -865,7 +934,8 @@
           "BuildingBlocks.EntityFramework": "1.0.0",
           "Microsoft.EntityFrameworkCore": "2.2.2",
           "Microsoft.EntityFrameworkCore.AutoHistory": "2.1.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2"
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2",
+          "Z.EntityFramework.Extensions.EFCore": "2.1.59"
         },
         "runtime": {
           "Vacancies.Db.dll": {}
@@ -894,7 +964,7 @@
           "BuildingBlocks.EventBus": "1.0.0",
           "BuildingBlocks.EventBus.Synchronization": "1.0.0",
           "Vacancies.Dto": "1.0.0",
-          "Z.EntityFramework.Extensions.EFCore": "2.1.56"
+          "Z.EntityFramework.Extensions.EFCore": "2.1.59"
         },
         "runtime": {
           "Vacancies.Synchronization.dll": {}
@@ -3971,6 +4041,34 @@
       "path": "runtime.native.system.net.security/4.3.0",
       "hashPath": "runtime.native.system.net.security.4.3.0.nupkg.sha512"
     },
+    "Serilog/2.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3jtlNpLFGz16ZEYZ0lohfUlVLspg+DW6kRVNC2rOtie6Xy+fIibtqFSZ6lQRdRKV6ER9WLxg+Q3em6f6ZccJ3A==",
+      "path": "serilog/2.8.0",
+      "hashPath": "serilog.2.8.0.nupkg.sha512"
+    },
+    "Serilog.AspNetCore/2.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-avgte2cI/pkGgUX3rX7PAvenMK2XkEgzovu6H9d6zT6NxPruoemt1Bx71Xng2n3nAYVttjSyNmQxKmy3LCGk2Q==",
+      "path": "serilog.aspnetcore/2.1.1",
+      "hashPath": "serilog.aspnetcore.2.1.1.nupkg.sha512"
+    },
+    "Serilog.Extensions.Hosting/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IyfgbOgOyWxZzGvnjYeGy+VL61ED+EDQ6v3ngnY+mIF075ieZocIefAtc5Bjn7BP6ulxCp5gLuTkXdDBgICdng==",
+      "path": "serilog.extensions.hosting/2.0.0",
+      "hashPath": "serilog.extensions.hosting.2.0.0.nupkg.sha512"
+    },
+    "Serilog.Extensions.Logging/2.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PYAkzUn/VV16Es7U06BfEhNZEltnYWu0WFCM4d2lLY/dvlA7xMwFXBuGRxR0XvEBPoOxPorjhFLy9txwiMO6rg==",
+      "path": "serilog.extensions.logging/2.0.2",
+      "hashPath": "serilog.extensions.logging.2.0.2.nupkg.sha512"
+    },
     "Swashbuckle.AspNetCore/4.0.1": {
       "type": "package",
       "serviceable": true,
@@ -4111,12 +4209,12 @@
       "path": "z.entityframework.extensions.classic/3.16.28",
       "hashPath": "z.entityframework.extensions.classic.3.16.28.nupkg.sha512"
     },
-    "Z.EntityFramework.Extensions.EFCore/2.1.56": {
+    "Z.EntityFramework.Extensions.EFCore/2.1.59": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-xaWKDREp4BSGcDRO6zVQEK00hneECzwJiWcAsT6kT5nmSWuWGomBuidHF0ELM8MWyU2QG4LG/wJRKVmCqa7qQg==",
-      "path": "z.entityframework.extensions.efcore/2.1.56",
-      "hashPath": "z.entityframework.extensions.efcore.2.1.56.nupkg.sha512"
+      "sha512": "sha512-O2USvkj2+t6Rp1WequHvaj9KYIJMmnVZ1lw5GNAaubNxCPrmNstu8idCb9cg6gvumgxM85cB309L6kiRFt65qQ==",
+      "path": "z.entityframework.extensions.efcore/2.1.59",
+      "hashPath": "z.entityframework.extensions.efcore.2.1.59.nupkg.sha512"
     },
     "Z.Expressions.Eval/2.9.12": {
       "type": "package",

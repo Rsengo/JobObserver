@@ -4,7 +4,7 @@
 
     public abstract class EntityDtoProfile: Profile
     {
-        public EntityDtoProfile()
+        protected EntityDtoProfile()
         {
             Entity2Dto();
             Dto2Entity();

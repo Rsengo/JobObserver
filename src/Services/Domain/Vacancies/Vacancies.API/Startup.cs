@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
 using Vacancies.Db;
+using Vacancies.Dto;
 using Vacancies.Synchronization.EventHandlers.Driving;
 using Vacancies.Synchronization.EventHandlers.Employers;
 using Vacancies.Synchronization.EventHandlers.Employments;
@@ -67,7 +68,10 @@ namespace Vacancies.API
                     });
             });
 
-            services.AddAutoMapper(builder => { builder.RootAssembly = GetType().Assembly; });
+            services.AddAutoMapper(builder =>
+            {
+                builder.AddAssembly(typeof(AutoMapperBeacon).Assembly);
+            });
 
             services.AddEventBusRabbitMQ(builder =>
             {

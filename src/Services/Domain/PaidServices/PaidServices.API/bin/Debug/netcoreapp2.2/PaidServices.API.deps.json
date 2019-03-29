@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "f009b0995bf40e76704a52b6769fa1aeb062340d"
+    "signature": "4606b5855b1895d4a72a9a31270875b0d35292ec"
   },
   "compilationOptions": {
     "defines": [
@@ -33,6 +33,10 @@
           "Notifications.API": "1.0.0",
           "PaidServices.Db": "1.0.0",
           "PaidServices.Dto": "1.0.0",
+          "Serilog": "2.8.0",
+          "Serilog.AspNetCore": "2.1.1",
+          "Serilog.Extensions.Hosting": "2.0.0",
+          "Serilog.Extensions.Logging": "2.0.2",
           "Swashbuckle.AspNetCore": "4.0.1",
           "Z.EntityFramework.Classic": "7.0.39"
         },
@@ -355,6 +359,71 @@
           "lib/netstandard1.0/Remotion.Linq.dll": {}
         }
       },
+      "Serilog/2.8.0": {
+        "dependencies": {
+          "System.Collections.NonGeneric": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Serilog.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.8.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Serilog.dll": {}
+        }
+      },
+      "Serilog.AspNetCore/2.1.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
+          "Microsoft.Extensions.DependencyInjection": "2.2.0",
+          "Microsoft.Extensions.Logging": "2.2.0",
+          "Serilog": "2.8.0",
+          "Serilog.Extensions.Logging": "2.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Serilog.AspNetCore.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.1.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Serilog.AspNetCore.dll": {}
+        }
+      },
+      "Serilog.Extensions.Hosting/2.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Hosting.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Logging.Abstractions": "2.2.0",
+          "Serilog": "2.8.0",
+          "Serilog.Extensions.Logging": "2.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Serilog.Extensions.Hosting.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Serilog.Extensions.Hosting.dll": {}
+        }
+      },
+      "Serilog.Extensions.Logging/2.0.2": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "2.2.0",
+          "Serilog": "2.8.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Serilog.Extensions.Logging.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.2.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Serilog.Extensions.Logging.dll": {}
+        }
+      },
       "Swashbuckle.AspNetCore/4.0.1": {
         "dependencies": {
           "Swashbuckle.AspNetCore.Swagger": "4.0.1",
@@ -653,6 +722,10 @@
       },
       "Notifications.API/1.0.0": {
         "dependencies": {
+          "Serilog": "2.8.0",
+          "Serilog.AspNetCore": "2.1.1",
+          "Serilog.Extensions.Hosting": "2.0.0",
+          "Serilog.Extensions.Logging": "2.0.2",
           "Swashbuckle.AspNetCore": "4.0.1"
         },
         "runtime": {
@@ -3736,6 +3809,34 @@
       "sha512": "sha512-fK/76UmpC0FXBlGDFVPLJHQlDLYnGC+XY3eoDgCgbtrhi0vzbXDQ3n/IYHhqSKqXQfGw/u04A1drWs7rFVkRjw==",
       "path": "remotion.linq/2.2.0",
       "hashPath": "remotion.linq.2.2.0.nupkg.sha512"
+    },
+    "Serilog/2.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3jtlNpLFGz16ZEYZ0lohfUlVLspg+DW6kRVNC2rOtie6Xy+fIibtqFSZ6lQRdRKV6ER9WLxg+Q3em6f6ZccJ3A==",
+      "path": "serilog/2.8.0",
+      "hashPath": "serilog.2.8.0.nupkg.sha512"
+    },
+    "Serilog.AspNetCore/2.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-avgte2cI/pkGgUX3rX7PAvenMK2XkEgzovu6H9d6zT6NxPruoemt1Bx71Xng2n3nAYVttjSyNmQxKmy3LCGk2Q==",
+      "path": "serilog.aspnetcore/2.1.1",
+      "hashPath": "serilog.aspnetcore.2.1.1.nupkg.sha512"
+    },
+    "Serilog.Extensions.Hosting/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IyfgbOgOyWxZzGvnjYeGy+VL61ED+EDQ6v3ngnY+mIF075ieZocIefAtc5Bjn7BP6ulxCp5gLuTkXdDBgICdng==",
+      "path": "serilog.extensions.hosting/2.0.0",
+      "hashPath": "serilog.extensions.hosting.2.0.0.nupkg.sha512"
+    },
+    "Serilog.Extensions.Logging/2.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PYAkzUn/VV16Es7U06BfEhNZEltnYWu0WFCM4d2lLY/dvlA7xMwFXBuGRxR0XvEBPoOxPorjhFLy9txwiMO6rg==",
+      "path": "serilog.extensions.logging/2.0.2",
+      "hashPath": "serilog.extensions.logging.2.0.2.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/4.0.1": {
       "type": "package",

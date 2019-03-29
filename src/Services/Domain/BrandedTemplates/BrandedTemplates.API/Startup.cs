@@ -8,6 +8,7 @@ using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using BuildingBlocks.Extensions.AutoMapper;
 using BrandedTemplates.Db;
+using BrandedTemplates.Dto;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace BrandedTemplates.API
@@ -44,7 +45,7 @@ namespace BrandedTemplates.API
 
             services.AddAutoMapper(builder =>
             {
-                builder.RootAssembly = GetType().Assembly;
+                builder.AddAssembly(typeof(AutoMapperBeacon).Assembly);
             });
 
             services.AddSwaggerGen(c =>

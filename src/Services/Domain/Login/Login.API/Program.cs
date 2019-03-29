@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using BuildingBlocks.Extensions.EntityFramework;
 using Login.Db;
+using Microsoft.Extensions.Logging;
+using Serilog;
 
 namespace Login.API
 {
@@ -22,6 +24,20 @@ namespace Login.API
                 {
                     configBuilder.AddEnvironmentVariables();
                     configBuilder.Build();
+                })
+                .ConfigureLogging((hostingContext, builder) =>
+                {
+                    builder.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
+                    builder.AddConsole();
+                    builder.AddDebug();
+                })
+                .UseSerilog((builderContext, config) =>
+                {
+                    var url = builderContext.Configuration["ElasticSearch"];
+                    config
+                        .MinimumLevel.Information()
+                        .Enrich.FromLogContext()
+                        .WriteTo.Elasticsearch(url);
                 })
                 .Build();
     }

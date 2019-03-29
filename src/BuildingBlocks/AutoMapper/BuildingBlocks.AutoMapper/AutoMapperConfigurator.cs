@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Reflection;
 using AutoMapper;
 using AutoMapper.Configuration;
@@ -20,18 +21,11 @@ namespace BuildingBlocks.AutoMapper
         /// Локкер
         /// </summary>
         private static readonly object _syncRoot = new object();
-        
-        /// <summary>
-        /// Множество сборок
-        /// </summary>
-        public ISet<Assembly> AssemblySet { get; }
 
         /// <summary>
         /// Приватный конструктор
         /// </summary>
-        private AutoMapperConfigurator() {
-            AssemblySet = new HashSet<Assembly>();
-        }
+        private AutoMapperConfigurator() {}
 
         /// <summary>
         /// Получение инстанса
@@ -56,17 +50,14 @@ namespace BuildingBlocks.AutoMapper
         /// </summary>
         /// <param name="rootAssembly"> Корневая сборка. </param>
         /// <returns></returns>
-        private MapperConfigurationExpression CreateConfig(Assembly rootAssembly)
+        private MapperConfigurationExpression CreateConfig(IEnumerable<Assembly> assemblies)
         {
             var config = new MapperConfigurationExpression();
-            var assemblyTree = rootAssembly.LoadAssembliesTree();
 
-            AssemblySet.UnionWith(assemblyTree);
-            
-            foreach (var assembly in AssemblySet)
+            foreach (var assembly in assemblies)
             {
                 config.AddProfiles(assembly);
-            } 
+            }
 
             return config;
         }
@@ -74,12 +65,9 @@ namespace BuildingBlocks.AutoMapper
         /// <summary>
         /// Инициализация маппингов
         /// </summary>
-        public void Initialize(Assembly rootAssembly = null)
+        public void Initialize(IEnumerable<Assembly> assemblies)
         {
-            var callingAssembly = rootAssembly == null 
-                ? Assembly.GetCallingAssembly() 
-                : rootAssembly;
-            var config = CreateConfig(callingAssembly);
+            var config = CreateConfig(assemblies);
             Mapper.Initialize(config);
         }
     }
