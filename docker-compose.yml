@@ -111,6 +111,15 @@ services:
       - rabbitmq
       - elasticsearch
 
+    emailnotifications.api:
+    image: jobobserver/dictionaries.api:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: src/Services/Technical/EmailNotifications/EmailNotifications.API/Dockerfile    
+    depends_on:
+      - rabbitmq
+      - elasticsearch
+
   apigw:
     image: eshop/ocelotapigw:${TAG:-latest}
     build:

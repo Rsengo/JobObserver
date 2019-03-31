@@ -26,3 +26,16 @@ C:\JobObserver2\src\Services\Technical\EmailNotifications\EmailNotifications.API
 C:\JobObserver2\src\Services\Technical\EmailNotifications\EmailNotifications.API\obj\Debug\netcoreapp2.2\EmailNotifications.API.RazorTargetAssemblyInfo.cache
 C:\JobObserver2\src\Services\Technical\EmailNotifications\EmailNotifications.API\obj\Debug\netcoreapp2.2\EmailNotifications.API.dll
 C:\JobObserver2\src\Services\Technical\EmailNotifications\EmailNotifications.API\obj\Debug\netcoreapp2.2\EmailNotifications.API.pdb
+C:\JobObserver2\src\Services\Technical\EmailNotifications\EmailNotifications.API\bin\Debug\netcoreapp2.2\BuildingBlocks.AutoMapper.dll
+C:\JobObserver2\src\Services\Technical\EmailNotifications\EmailNotifications.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.dll
+C:\JobObserver2\src\Services\Technical\EmailNotifications\EmailNotifications.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.RabbitMQ.dll
+C:\JobObserver2\src\Services\Technical\EmailNotifications\EmailNotifications.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.Assemblies.dll
+C:\JobObserver2\src\Services\Technical\EmailNotifications\EmailNotifications.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.AutoMapper.dll
+C:\JobObserver2\src\Services\Technical\EmailNotifications\EmailNotifications.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EventBus.RabbitMQ.dll
+C:\JobObserver2\src\Services\Technical\EmailNotifications\EmailNotifications.API\bin\Debug\netcoreapp2.2\EmailNotifications.Mailer.dll
+C:\JobObserver2\src\Services\Technical\EmailNotifications\EmailNotifications.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.AutoMapper.pdb
+C:\JobObserver2\src\Services\Technical\EmailNotifications\EmailNotifications.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EventBus.RabbitMQ.pdb
+C:\JobObserver2\src\Services\Technical\EmailNotifications\EmailNotifications.API\bin\Debug\netcoreapp2.2\BuildingBlocks.AutoMapper.pdb
+C:\JobObserver2\src\Services\Technical\EmailNotifications\EmailNotifications.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.pdb
+C:\JobObserver2\src\Services\Technical\EmailNotifications\EmailNotifications.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.RabbitMQ.pdb
+C:\JobObserver2\src\Services\Technical\EmailNotifications\EmailNotifications.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.Assemblies.pdb
