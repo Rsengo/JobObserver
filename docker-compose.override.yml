@@ -188,7 +188,7 @@ services:
       - EventBusConnection=rabbitmq
       - EventBusUserName=${EVENT_BUS_USER_NAME}
       - EventBusPassword=${EVENT_BUS_PASSWORD}
-      - EventBusSubscriptionClientName=${NOTIFICATION_BUS_SUBSCRIPTION_CLIENT_NAME}
+      - EventBusSubscriptionClientName=${EVENT_BUS_SUBSCRIPTION_CLIENT_NAME}
       - ElasticSearch=elasticsearch:9200
     ports:
       - "5110:80" 

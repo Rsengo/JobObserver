@@ -163,11 +163,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Moodle.API", "src\Services\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailNotifications.Mailer", "src\Services\Technical\EmailNotifications\EmailNotifications.Mailer\EmailNotifications.Mailer.csproj", "{9F9D42F9-6865-4008-81C4-A156C86ABB1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notifications.EventBus", "src\Services\Domain\Notifications\Notifications.EventBus\Notifications.EventBus.csproj", "{4E212958-C988-40F8-811B-15CCAC9F9FD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notifications.EventBus", "src\Services\Domain\Notifications\Notifications.EventBus\Notifications.EventBus.csproj", "{4E212958-C988-40F8-811B-15CCAC9F9FD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notifications.NotificationBus", "src\Services\Domain\Notifications\Notifications.NotificationBus\Notifications.NotificationBus.csproj", "{36A2F4A3-DA43-4B47-B18A-B950202F2F5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notifications.Dto", "src\Services\Domain\Notifications\Notifications.Dto\Notifications.Dto.csproj", "{B6B9E140-85BC-41D9-9898-575FB9BA6F0E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notifications.Dto", "src\Services\Domain\Notifications\Notifications.Dto\Notifications.Dto.csproj", "{B6B9E140-85BC-41D9-9898-575FB9BA6F0E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moodle.Integration", "src\Services\Integration\Moodle\Moodle.Integration\Moodle.Integration.csproj", "{0D93925C-A4E4-4501-A955-C808F26125FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -391,14 +391,14 @@ Global
 		{4E212958-C988-40F8-811B-15CCAC9F9FD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E212958-C988-40F8-811B-15CCAC9F9FD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E212958-C988-40F8-811B-15CCAC9F9FD7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{36A2F4A3-DA43-4B47-B18A-B950202F2F5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{36A2F4A3-DA43-4B47-B18A-B950202F2F5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{36A2F4A3-DA43-4B47-B18A-B950202F2F5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{36A2F4A3-DA43-4B47-B18A-B950202F2F5D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B6B9E140-85BC-41D9-9898-575FB9BA6F0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B6B9E140-85BC-41D9-9898-575FB9BA6F0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6B9E140-85BC-41D9-9898-575FB9BA6F0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6B9E140-85BC-41D9-9898-575FB9BA6F0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D93925C-A4E4-4501-A955-C808F26125FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D93925C-A4E4-4501-A955-C808F26125FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D93925C-A4E4-4501-A955-C808F26125FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D93925C-A4E4-4501-A955-C808F26125FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -484,8 +484,8 @@ Global
 		{FA981C35-679B-46E6-A418-F09720E16877} = {36FF32DE-CDD6-4CB3-BEB5-835F118BF585}
 		{9F9D42F9-6865-4008-81C4-A156C86ABB1F} = {DBAA06D6-16F2-4AC8-83EE-A9FAED6DD79D}
 		{4E212958-C988-40F8-811B-15CCAC9F9FD7} = {478B1865-9AC0-4297-A325-400F1D5B68DC}
-		{36A2F4A3-DA43-4B47-B18A-B950202F2F5D} = {478B1865-9AC0-4297-A325-400F1D5B68DC}
 		{B6B9E140-85BC-41D9-9898-575FB9BA6F0E} = {478B1865-9AC0-4297-A325-400F1D5B68DC}
+		{0D93925C-A4E4-4501-A955-C808F26125FF} = {36FF32DE-CDD6-4CB3-BEB5-835F118BF585}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EFC2B589-7633-4F4E-A0D8-0509C36A83A5}
