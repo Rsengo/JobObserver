@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using BuildingBlocks.Extensions.EventBus.RabbitMQ;
 
 namespace Notifications.API
 {
@@ -25,35 +26,30 @@ namespace Notifications.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors(options =>
-            {
-                options.AddPolicy(Configuration["CorsPolicy"],
-                    builder => builder.AllowAnyOrigin()
-                        .AllowAnyMethod()
-                        .AllowAnyHeader()
-                        .AllowCredentials());
-            });
+            //services.AddAutoMapper(builder =>
+            //{
+            //    builder.AddAssembly(typeof(AutoMapperBeacon).Assembly);
+            //});
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddEventBusRabbitMQ(builder =>
+            {
+                var retryCount = int.Parse(Configuration["EventBusRetryCount"]);
+
+                builder.ConfigureConnection(con =>
+                {
+                    con.HostName = Configuration["EventBusConnection"];
+                    con.UserName = Configuration["EventBusUserName"];
+                    con.Password = Configuration["EventBusPassword"];
+                });
+
+                builder.SubscriptionClientName = Configuration["EventBusSubscriptionClientName"];
+                builder.RetryCount = retryCount;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
-
-            app.UseCors(Configuration["CorsPolicy"]);
-
-            app.UseHttpsRedirection();
-            app.UseMvc();
         }
     }
 }

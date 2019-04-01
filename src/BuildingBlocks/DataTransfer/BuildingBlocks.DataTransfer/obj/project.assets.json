@@ -731,23 +731,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rseng\\.nuget\\packages\\": {},
+    "C:\\Users\\RudencovDP\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\JobObserver2\\src\\BuildingBlocks\\DataTransfer\\BuildingBlocks.DataTransfer\\BuildingBlocks.DataTransfer.csproj",
+      "projectUniqueName": "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\DataTransfer\\BuildingBlocks.DataTransfer\\BuildingBlocks.DataTransfer.csproj",
       "projectName": "BuildingBlocks.DataTransfer",
-      "projectPath": "C:\\JobObserver2\\src\\BuildingBlocks\\DataTransfer\\BuildingBlocks.DataTransfer\\BuildingBlocks.DataTransfer.csproj",
-      "packagesPath": "C:\\Users\\rseng\\.nuget\\packages\\",
-      "outputPath": "C:\\JobObserver2\\src\\BuildingBlocks\\DataTransfer\\BuildingBlocks.DataTransfer\\obj\\",
+      "projectPath": "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\DataTransfer\\BuildingBlocks.DataTransfer\\BuildingBlocks.DataTransfer.csproj",
+      "packagesPath": "C:\\Users\\RudencovDP\\.nuget\\packages\\",
+      "outputPath": "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\DataTransfer\\BuildingBlocks.DataTransfer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\rseng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\RudencovDP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
