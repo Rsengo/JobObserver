@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BuildingBlocks.Extensions.EventBus.RabbitMQ;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,6 +11,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Moodle.Integration.Factories;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace Moodle.API
 {
@@ -25,6 +28,55 @@ namespace Moodle.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //services.AddAutoMapper(builder =>
+            //{
+            //    builder.AddAssembly(typeof(AutoMapperBeacon).Assembly);
+            //});
+
+            services.AddEventBusRabbitMQ(builder =>
+            {
+                var retryCount = int.Parse(Configuration["EventBusRetryCount"]);
+
+                builder.ConfigureConnection(con =>
+                {
+                    con.HostName = Configuration["EventBusConnection"];
+                    con.UserName = Configuration["EventBusUserName"];
+                    con.Password = Configuration["EventBusPassword"];
+                });
+
+                builder.SubscriptionClientName = Configuration["EventBusSubscriptionClientName"];
+                builder.RetryCount = retryCount;
+            });
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc(Configuration["SwaggerDocName"],
+                    new Info
+                    {
+                        Title = Configuration["SwaggerDocTitle"],
+                        Version = Configuration["SwaggerDocVersion"]
+                    });
+            });
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(Configuration["CorsPolicy"],
+                    builder => builder.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader()
+                        .AllowCredentials());
+            });
+
+            services.AddTransient<IMoodleRequestFactory>(_ =>
+            {
+                var token = Configuration["MoodleToken"];
+                var restFormat = Configuration["MoodleRestFormat"];
+
+                var factory = new MoodleRequestFactory(token, restFormat);
+
+                return factory;
+            });
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -41,8 +93,18 @@ namespace Moodle.API
                 app.UseHsts();
             }
 
+            app.UseCors(Configuration["CorsPolicy"]);
+
             app.UseHttpsRedirection();
             app.UseMvc();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint(
+                    Configuration["SwaggerEndpointUrl"],
+                    Configuration["SwaggerEndpointName"]);
+            });
         }
     }
 }
