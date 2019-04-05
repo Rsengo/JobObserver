@@ -16,7 +16,7 @@ namespace BuildingBlocks.EventBus.RabbitMQ
 {
     public class EventBusRabbitMQ : IEventBus, IDisposable
     {
-        const string BROKER_NAME = "eshop_event_bus";
+        const string BROKER_NAME = "event_bus";
 
         private readonly IRabbitMQPersistentConnection _persistentConnection;
         private readonly ILogger<EventBusRabbitMQ> _logger;
@@ -80,7 +80,8 @@ namespace BuildingBlocks.EventBus.RabbitMQ
                 var eventName = @event.GetType()
                     .Name;
 
-                channel.ExchangeDeclare(exchange: BROKER_NAME,
+                channel.ExchangeDeclare(
+                    exchange: BROKER_NAME,
                     type: "direct");
 
                 var message = JsonConvert.SerializeObject(@event);
@@ -91,7 +92,8 @@ namespace BuildingBlocks.EventBus.RabbitMQ
                     var properties = channel.CreateBasicProperties();
                     properties.DeliveryMode = 2; // persistent
 
-                    channel.BasicPublish(exchange: BROKER_NAME,
+                    channel.BasicPublish(
+                        exchange: BROKER_NAME,
                         routingKey: eventName,
                         mandatory: true,
                         basicProperties: properties,
@@ -130,7 +132,8 @@ namespace BuildingBlocks.EventBus.RabbitMQ
 
             using (var channel = _persistentConnection.CreateModel())
             {
-                channel.QueueBind(queue: _queueName,
+                channel.QueueBind(
+                    queue: _queueName,
                     exchange: BROKER_NAME,
                     routingKey: eventName);
             }
@@ -164,10 +167,12 @@ namespace BuildingBlocks.EventBus.RabbitMQ
 
             var channel = _persistentConnection.CreateModel();
 
-            channel.ExchangeDeclare(exchange: BROKER_NAME,
+            channel.ExchangeDeclare(
+                exchange: BROKER_NAME,
                 type: "direct");
 
-            channel.QueueDeclare(queue: _queueName,
+            channel.QueueDeclare(
+                queue: _queueName,
                 durable: true,
                 exclusive: false,
                 autoDelete: false,
@@ -185,7 +190,8 @@ namespace BuildingBlocks.EventBus.RabbitMQ
                 channel.BasicAck(ea.DeliveryTag, multiple: false);
             };
 
-            channel.BasicConsume(queue: _queueName,
+            channel.BasicConsume(
+                queue: _queueName,
                 autoAck: false,
                 consumer: consumer);
 
