@@ -11,6 +11,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Moodle.Extensions.Integration;
+using Moodle.Integration;
 using Moodle.Integration.Factories;
 using Swashbuckle.AspNetCore.Swagger;
 
@@ -67,14 +69,11 @@ namespace Moodle.API
                         .AllowCredentials());
             });
 
-            services.AddTransient<IMoodleRequestFactory>(_ =>
+            services.AddMoodleIntegration(builder =>
             {
-                var token = Configuration["MoodleToken"];
-                var restFormat = Configuration["MoodleRestFormat"];
-
-                var factory = new MoodleRequestFactory(token, restFormat);
-
-                return factory;
+                builder.RestFormat = Configuration["MoodleRestFormat"];
+                builder.RestUrl = Configuration["MoodleRestUrl"];
+                builder.Token = Configuration["MoodleToken"];
             });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
