@@ -2,7 +2,10 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using BuildingBlocks.Extensions.EntityFramework;
+using IdentityServer4.EntityFramework.DbContexts;
+using Login.API.Data;
 using Login.Db;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Serilog;
 
@@ -14,6 +17,14 @@ namespace Login.API
         {
             BuildWebHost(args)
                 .MigrateDbContext<LoginDbContext>()
+                .MigrateDbContext<ConfigurationDbContext>((context, services) =>
+                {
+                    var configuration = services.GetService<IConfiguration>();
+
+                    new ConfigurationDbContextSeed()
+                        .SeedAsync(context, configuration)
+                        .Wait();
+                })
                 .Run();
         }
 
