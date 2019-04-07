@@ -1464,10 +1464,11 @@
       ]
     },
     "Microsoft.NETCore.Platforms/2.1.0": {
-      "sha512": "TT+QCi9LcxGTjBssH7S7n5+8DVcwfG4DYgXX7Dk7+BfZ4oVHj8Q0CbYk9glzAlHLsSt3bYzol+fOdra2iu6GOw==",
+      "sha512": "aSTPL94NloSiQVL5Len8wbjFKOnoAX/vOh3s3DF6g3c7GUUMLCDvnBhmA72M2iN2AedyA8hpr7m89kzSAKUnJQ==",
       "type": "package",
       "path": "microsoft.netcore.platforms/2.1.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -1536,11 +1537,12 @@
       ]
     },
     "NETStandard.Library/2.0.3": {
-      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "sha512": "R73gEjqCkI2Nw/IlN8QvcgPNklqQiPowp47JwvW0Bnp/RZnjN4UrJwEvWVJWRK1MsQ+HIfGe9i4aQlfK+ei9jA==",
       "type": "package",
       "path": "netstandard.library/2.0.3",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/netstandard2.0/NETStandard.Library.targets",
@@ -1840,7 +1842,7 @@
       ]
     },
     "System.Collections.Immutable/1.5.0": {
-      "sha512": "RGxi2aQoXgZ5ge0zxrKqI4PU9LrYYoLC+cnEnWXKsSduCOUhE1GEAAoTexUVT8RZOILQyy1B27HC8Xw/XLGzdQ==",
+      "sha512": "erLSnZLBCA8EKIE2bKtXynjWBWSoMlmCFrOOYN+sPKCeYd3oGj9h8hqRPODtsRlPANkOW7L8tEQlEadHbUXC6A==",
       "type": "package",
       "path": "system.collections.immutable/1.5.0",
       "files": [
@@ -1863,7 +1865,7 @@
       ]
     },
     "System.ComponentModel.Annotations/4.5.0": {
-      "sha512": "IjDa643EO77A4CL9dhxfZ6zzGu+pM8Ar0NYPRMN3TvDiga4uGDzFHOj/ArpyNxxKyO5IFT2LZ0rK3kUog7g3jA==",
+      "sha512": "UxYQ3FGUOtzJ7LfSdnYSFd7+oEv6M8NgUatatIN2HxNtDdlcvFAf+VIq4Of9cDMJEJC0aSRv/x898RYhB4Yppg==",
       "type": "package",
       "path": "system.componentmodel.annotations/4.5.0",
       "files": [
@@ -2093,7 +2095,7 @@
       ]
     },
     "System.Diagnostics.DiagnosticSource/4.5.0": {
-      "sha512": "UumL3CJklk5WyEt0eImPmjeuyY1JgJ7Thmg2hAeZGKCv+9iuuAsoc2wcXjypdo3J8VNEmVCH2Bgn/kIw8NI2bA==",
+      "sha512": "eIHRELiYDQvsMToML81QFkXEEYXUSUT2F28t1SGrevWqP+epFdw80SyAXIKTXOHrIEXReFOEnEr7XlGiC2GgOg==",
       "type": "package",
       "path": "system.diagnostics.diagnosticsource/4.5.0",
       "files": [
@@ -2185,7 +2187,7 @@
       ]
     },
     "System.Interactive.Async/3.2.0": {
-      "sha512": "oaK7GqF8/ORnipYZck5ec+eKgvfZFShH64CWFlYB8Mpnr8/e99klLSk9SsmnaDzr9n2X672sUU8ZCLLrq8leDw==",
+      "sha512": "T3nigy9yShklMyVu7I2TvlVMRy2vUn9oQeBaRy0KZcOptyy+rUbekYaXxoa3s0h2tWT3UVtzrGkQC89CBbCtlg==",
       "type": "package",
       "path": "system.interactive.async/3.2.0",
       "files": [
@@ -2498,7 +2500,7 @@
       ]
     },
     "System.Memory/4.5.1": {
-      "sha512": "vcG3/MbfpxznMkkkaAblJi7RHOmuP7kawQMhDgLSuA1tRpRQYsFSCTxRSINDUgn2QNn2jWeLxv8er5BXbyACkw==",
+      "sha512": "sDJYJpGtTgx+23Ayu5euxG5mAXWdkDb4+b0rD0Cab0M1oQS9H0HXGPriKcqpXuiJDTV7fTp/d+fMDJmnr6sNvA==",
       "type": "package",
       "path": "system.memory/4.5.1",
       "files": [
@@ -3079,7 +3081,7 @@
       ]
     },
     "System.Runtime.CompilerServices.Unsafe/4.5.1": {
-      "sha512": "qUJMNWhbm9oZ3XaMFiEMiYmRPszbnXIkRIi7+4b2Md2xZ6JUOepf0/kY3S85qistRohl9OdMe4PsO+RdG2kTIQ==",
+      "sha512": "Zh8t8oqolRaFa9vmOZfdQm/qKejdqz0J9kr7o2Fu0vPeoH3BL1EOXipKWwkWtLT1JPzjByrF19fGuFlNbmPpiw==",
       "type": "package",
       "path": "system.runtime.compilerservices.unsafe/4.5.1",
       "files": [
@@ -3536,23 +3538,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rseng\\.nuget\\packages\\": {},
+    "C:\\Users\\Eugene\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\JobObserver2\\src\\Services\\Domain\\PaidServices\\PaidServices.Db\\PaidServices.Db.csproj",
+      "projectUniqueName": "E:\\Moodle\\src\\Services\\Domain\\PaidServices\\PaidServices.Db\\PaidServices.Db.csproj",
       "projectName": "PaidServices.Db",
-      "projectPath": "C:\\JobObserver2\\src\\Services\\Domain\\PaidServices\\PaidServices.Db\\PaidServices.Db.csproj",
-      "packagesPath": "C:\\Users\\rseng\\.nuget\\packages\\",
-      "outputPath": "C:\\JobObserver2\\src\\Services\\Domain\\PaidServices\\PaidServices.Db\\obj\\",
+      "projectPath": "E:\\Moodle\\src\\Services\\Domain\\PaidServices\\PaidServices.Db\\PaidServices.Db.csproj",
+      "packagesPath": "C:\\Users\\Eugene\\.nuget\\packages\\",
+      "outputPath": "E:\\Moodle\\src\\Services\\Domain\\PaidServices\\PaidServices.Db\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\rseng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Eugene\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3565,8 +3567,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\JobObserver2\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.EntityFramework\\BuildingBlocks.EntityFramework.csproj": {
-              "projectPath": "C:\\JobObserver2\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.EntityFramework\\BuildingBlocks.EntityFramework.csproj"
+            "E:\\Moodle\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.EntityFramework\\BuildingBlocks.EntityFramework.csproj": {
+              "projectPath": "E:\\Moodle\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.EntityFramework\\BuildingBlocks.EntityFramework.csproj"
             }
           }
         }

@@ -525,10 +525,11 @@
       ]
     },
     "Microsoft.NETCore.Platforms/2.1.0": {
-      "sha512": "TT+QCi9LcxGTjBssH7S7n5+8DVcwfG4DYgXX7Dk7+BfZ4oVHj8Q0CbYk9glzAlHLsSt3bYzol+fOdra2iu6GOw==",
+      "sha512": "aSTPL94NloSiQVL5Len8wbjFKOnoAX/vOh3s3DF6g3c7GUUMLCDvnBhmA72M2iN2AedyA8hpr7m89kzSAKUnJQ==",
       "type": "package",
       "path": "microsoft.netcore.platforms/2.1.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -557,11 +558,12 @@
       ]
     },
     "NETStandard.Library/2.0.3": {
-      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "sha512": "R73gEjqCkI2Nw/IlN8QvcgPNklqQiPowp47JwvW0Bnp/RZnjN4UrJwEvWVJWRK1MsQ+HIfGe9i4aQlfK+ei9jA==",
       "type": "package",
       "path": "netstandard.library/2.0.3",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/netstandard2.0/NETStandard.Library.targets",
@@ -731,23 +733,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rseng\\.nuget\\packages\\": {},
+    "C:\\Users\\Eugene\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\JobObserver2\\src\\BuildingBlocks\\EventBus\\BuildingBlocks.EventBus\\BuildingBlocks.EventBus.csproj",
+      "projectUniqueName": "E:\\Moodle\\src\\BuildingBlocks\\EventBus\\BuildingBlocks.EventBus\\BuildingBlocks.EventBus.csproj",
       "projectName": "BuildingBlocks.EventBus",
-      "projectPath": "C:\\JobObserver2\\src\\BuildingBlocks\\EventBus\\BuildingBlocks.EventBus\\BuildingBlocks.EventBus.csproj",
-      "packagesPath": "C:\\Users\\rseng\\.nuget\\packages\\",
-      "outputPath": "C:\\JobObserver2\\src\\BuildingBlocks\\EventBus\\BuildingBlocks.EventBus\\obj\\",
+      "projectPath": "E:\\Moodle\\src\\BuildingBlocks\\EventBus\\BuildingBlocks.EventBus\\BuildingBlocks.EventBus.csproj",
+      "packagesPath": "C:\\Users\\Eugene\\.nuget\\packages\\",
+      "outputPath": "E:\\Moodle\\src\\BuildingBlocks\\EventBus\\BuildingBlocks.EventBus\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\rseng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Eugene\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
