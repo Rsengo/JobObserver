@@ -32,8 +32,4 @@
     <ProjectReference Include="..\Login.Synchronization\Login.Synchronization.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Infrastructure\ViewModels\" />
-  </ItemGroup>
-
 </Project>

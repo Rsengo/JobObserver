@@ -13,7 +13,7 @@ namespace Login.API.Data
 {
     public class ConfigurationDbContextSeed
     {
-        public async Task SeedAsync(ConfigurationDbContext context,IConfiguration configuration)
+        public async Task SeedAsync(ConfigurationDbContext context, IConfiguration configuration)
         {
            
             //callbacks urls from config:
@@ -33,7 +33,7 @@ namespace Login.API.Data
             }
             else
             {
-                List<ClientRedirectUri> oldRedirects = (await context.Clients.Include(c => c.RedirectUris).ToListAsync())
+                var oldRedirects = (await context.Clients.Include(c => c.RedirectUris).ToListAsync())
                     .SelectMany(c => c.RedirectUris)
                     .Where(ru => ru.RedirectUri.EndsWith("/o2c.html"))
                     .ToList();
