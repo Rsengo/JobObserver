@@ -8,8 +8,8 @@ using IdentityServer4;
 using IdentityServer4.Services;
 using IdentityServer4.Stores;
 using Login.API.Configuration;
-using Login.API.Infrastructure.Services;
-using Login.API.Infrastructure.ViewModels;
+using Login.API.Services;
+using Login.API.ViewModels;
 using Login.Db;
 using Login.Db.Models;
 using Login.Db.Models.Attributes;
@@ -59,7 +59,7 @@ namespace Login.API.Controllers
             if (!ModelState.IsValid)
                 return BadRequest("Неверный формат данных");
 
-            await _registrationService.RegisterAsync(model, DefaultRole.APPLICANT);
+            await _registrationService.RegisterAsync(model, IdentityConfig.DefaultRoles.APPLICANT);
 
             if (ModelState.ErrorCount <= 0)
                 return Ok();
@@ -78,7 +78,7 @@ namespace Login.API.Controllers
             if (!ModelState.IsValid)
                 return BadRequest("Неверный формат данных");
 
-            await _registrationService.RegisterAsync(model, DefaultRole.EMPLOYER_MANAGER);
+            await _registrationService.RegisterAsync(model, IdentityConfig.DefaultRoles.EMPLOYER_MANAGER);
 
             if (ModelState.ErrorCount <= 0)
                 return Ok();
@@ -97,7 +97,7 @@ namespace Login.API.Controllers
             if (!ModelState.IsValid)
                 return BadRequest("Неверный формат данных");
 
-            await _registrationService.RegisterAsync(model, DefaultRole.EDUCATIONAL_INSTITUTION_MANAGER);
+            await _registrationService.RegisterAsync(model, IdentityConfig.DefaultRoles.EDUCATIONAL_INSTITUTION_MANAGER);
 
             if (ModelState.ErrorCount <= 0)
                 return Ok();

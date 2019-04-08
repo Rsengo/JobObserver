@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 using Login.Dto.Models.Attributes;
 using Login.Dto.Models.Contacts;
-using Login.Dto.Models.Genders;
-using Login.Dto.Models.Geographic;
 using Newtonsoft.Json;
 
-namespace Login.API.Infrastructure.ViewModels
+namespace Login.API.ViewModels
 {
     public class RegistrationViewModel
     {

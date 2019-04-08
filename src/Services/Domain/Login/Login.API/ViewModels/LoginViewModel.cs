@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
 
-namespace Login.API.Infrastructure.ViewModels
+namespace Login.API.ViewModels
 {
     public class LoginViewModel
     {

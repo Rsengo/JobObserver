@@ -7,33 +7,20 @@ namespace Login.API.Configuration
 {
     public static class IdentityConfig
     {
-        public static IDictionary<DefaultRole, string> GetRolesInfo()
-        {
-            var dict = new Dictionary<DefaultRole, string>
-            {
-                {DefaultRole.APPLICANT, "Applicant"},
-                {DefaultRole.EMPLOYER_MANAGER, "Employer Manager"},
-                {DefaultRole.EDUCATIONAL_INSTITUTION_MANAGER, "Educational Institution Manager"},
-                {DefaultRole.ADMIN, "Admin"},
-            };
-
-            return dict;
-        }
-
         public static IEnumerable<string> GetRoleNames()
         {
-            var dict = GetRolesInfo();
-            var roleNames = dict.Select(x => x.Value);
-
-            return roleNames;
+            yield return DefaultRoles.APPLICANT;
+            yield return DefaultRoles.EMPLOYER_MANAGER;
+            yield return DefaultRoles.EDUCATIONAL_INSTITUTION_MANAGER;
+            yield return DefaultRoles.ADMIN;
         }
-    }
 
-    public enum DefaultRole
-    {
-        APPLICANT,
-        EMPLOYER_MANAGER,
-        EDUCATIONAL_INSTITUTION_MANAGER,
-        ADMIN
+        public static class DefaultRoles
+        {
+            public static string APPLICANT = "Applicant";
+            public static string EMPLOYER_MANAGER = "Employer Manager";
+            public static string EDUCATIONAL_INSTITUTION_MANAGER = "Educational Institution Manager";
+            public static string ADMIN = "Admin";
+        }
     }
 }

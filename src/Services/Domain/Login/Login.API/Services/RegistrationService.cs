@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Login.API.Configuration;
-using Login.API.Infrastructure.ViewModels;
+using Login.API.ViewModels;
 using Login.Db;
 using Login.Db.Models;
 using Login.Db.Models.Attributes;
 using Login.Db.Models.Contacts;
 using Microsoft.AspNetCore.Identity;
 
-namespace Login.API.Infrastructure.Services
+namespace Login.API.Services
 {
     public class RegistrationService: IRegistrationService
     {
@@ -21,7 +20,7 @@ namespace Login.API.Infrastructure.Services
 
         public event Action<IdentityResult> OnErrorsOccured;
 
-        public async Task RegisterAsync(RegistrationViewModel model, DefaultRole role)
+        public async Task RegisterAsync(RegistrationViewModel model, string role)
         {
             Contact contacts = null;
             EducationalInstitutionManagerAttributes eduInstAttributes = null;
@@ -83,8 +82,7 @@ namespace Login.API.Infrastructure.Services
                         .DeleteFromQueryAsync();
             }
 
-            var rolesInfo = IdentityConfig.GetRolesInfo();
-            var roleResult = await _userManager.AddToRoleAsync(user, rolesInfo[role]);
+            var roleResult = await _userManager.AddToRoleAsync(user, role);
 
             if (roleResult.Errors.Any())
             {
