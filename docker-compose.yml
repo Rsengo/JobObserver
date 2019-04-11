@@ -111,8 +111,17 @@ services:
   #     - rabbitmq
   #     - elasticsearch
 
+  #   moodle.api:
+  #   image: jobobserver/moodle.api:${TAG:-latest}
+  #   build:
+  #     context: .
+  #     dockerfile: src/Services/Integration/Moodle/Moodle.API/Dockerfile    
+  #   depends_on:
+  #     - rabbitmq
+  #     - elasticsearch
+
   #   emailnotifications.api:
-  #   image: jobobserver/dictionaries.api:${TAG:-latest}
+  #   image: jobobserver/emailnotifications.api:${TAG:-latest}
   #   build:
   #     context: .
   #     dockerfile: src/Services/Technical/EmailNotifications/EmailNotifications.API/Dockerfile    

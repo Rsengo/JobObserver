@@ -3,11 +3,14 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <DockerTargetOS>Linux</DockerTargetOS>
+    <UserSecretsId>c56af8fc-451b-42f6-941f-2dbf7067415b</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.0.1916590" />
     <PackageReference Include="RabbitMQ.Client" Version="5.1.0" />
     <PackageReference Include="Serilog" Version="2.8.0" />
     <PackageReference Include="Serilog.AspNetCore" Version="2.1.1" />
@@ -19,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\BuildingBlocks\EventBus\BuildingBlocks.Extensions.EventBus.RabbitMQ\BuildingBlocks.Extensions.EventBus.RabbitMQ.csproj" />
+    <ProjectReference Include="..\Moodle.Extensions.Integration\Moodle.Extensions.Integration.csproj" />
     <ProjectReference Include="..\Moodle.Integration\Moodle.Integration.csproj" />
   </ItemGroup>
 

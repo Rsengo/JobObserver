@@ -179,6 +179,23 @@ services:
   #   ports:
   #     - "5109:80"  
 
+  # moodle.api:
+  #   environment:
+  #     - ASPNETCORE_ENVIRONMENT=Development
+  #     - ASPNETCORE_URLS=http://0.0.0.0:80
+  #     - CorsPolicy=${CORS_POLICY}
+  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+  #     - EventBusConnection=rabbitmq
+  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
+  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
+  #     - EventBusSubscriptionClientName=${NOTIFICATION_BUS_SUBSCRIPTION_CLIENT_NAME}
+  #     - ElasticSearch=elasticsearch:9200
+  #     - MoodleRestUrl=moodle/webservice/rest/server.php
+  #     - MoodleToken=f3f5be086fd0b9cf4ed3d09a3fdf1da0
+  #     - MoodleRestFormat=json
+  #   ports:
+  #     - "5111:80" 
+
   # emailnotifications.api:
   #   environment:
   #     - ASPNETCORE_ENVIRONMENT=Development
