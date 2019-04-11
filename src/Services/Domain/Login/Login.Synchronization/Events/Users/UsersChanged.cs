@@ -1,10 +1,10 @@
 ﻿using BuildingBlocks.EventBus.Synchronization.Events;
-using Login.Db.Models;
+using Login.Dto.Models;
 
 namespace Login.Synchronization.Events.Users
 {
     public class UsersChanged : 
-        EntityChangedIntegrationEvent<User>
+        EntityChangedIntegrationEvent<DtoUser>
     {
     }
 }

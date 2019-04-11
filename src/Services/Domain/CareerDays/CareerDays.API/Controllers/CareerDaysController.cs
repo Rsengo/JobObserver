@@ -28,8 +28,10 @@ namespace CareerDays.API.Controllers
                     .ThenInclude(x => x.Station)
                         .ThenInclude(x => x.Line)
                             .ThenInclude(x => x.Metro)
-                .Include(x => x.Employer)
-                .Include(x => x.EducationalInstitution)
+                .Include(x => x.Employers)
+                    .ThenInclude(x => x.Employer)
+                .Include(x => x.EducationalInstitutions)
+                    .ThenInclude(x => x.EducationalInstitution)
                 .SingleOrDefaultAsync(x => x.Id == id)
                 .ConfigureAwait(false);
 
@@ -49,8 +51,10 @@ namespace CareerDays.API.Controllers
                     .ThenInclude(x => x.Station)
                         .ThenInclude(x => x.Line)
                             .ThenInclude(x => x.Metro)
-                .Include(x => x.Employer)
-                .Include(x => x.EducationalInstitution)
+                .Include(x => x.Employers)
+                    .ThenInclude(x => x.Employer)
+                .Include(x => x.EducationalInstitutions)
+                    .ThenInclude(x => x.EducationalInstitution)
                 .SingleOrDefaultAsync(x => x.EmployerId == employerId)
                 .ConfigureAwait(false);
 
@@ -69,8 +73,10 @@ namespace CareerDays.API.Controllers
                     .ThenInclude(x => x.Station)
                         .ThenInclude(x => x.Line)
                             .ThenInclude(x => x.Metro)
-                .Include(x => x.Employer)
-                .Include(x => x.EducationalInstitution)
+                .Include(x => x.Employers)
+                    .ThenInclude(x => x.Employer)
+                .Include(x => x.EducationalInstitutions)
+                    .ThenInclude(x => x.EducationalInstitution)
                 .SingleOrDefaultAsync(x => x.EducationalInstitutionId == educationalInstitutionId)
                 .ConfigureAwait(false);
 
@@ -89,8 +95,10 @@ namespace CareerDays.API.Controllers
                     .ThenInclude(x => x.Station)
                         .ThenInclude(x => x.Line)
                             .ThenInclude(x => x.Metro)
-                .Include(x => x.Employer)
-                .Include(x => x.EducationalInstitution)
+                .Include(x => x.Employers)
+                    .ThenInclude(x => x.Employer)
+                .Include(x => x.EducationalInstitutions)
+                    .ThenInclude(x => x.EducationalInstitution)
                 .SingleOrDefaultAsync(x => x.Address.AreaId == areaId)
                 .ConfigureAwait(false);
 
@@ -137,6 +145,80 @@ namespace CareerDays.API.Controllers
                 .ConfigureAwait(false);
             await _context.SaveChangesAsync()
                 .ConfigureAwait(false);
+
+            return Ok();
+        }
+
+        [HttpPost("educationalInstitution")]
+        public async Task<IActionResult> AddEducationalInstitution(DtoCareerDayEducationalInstitution dto)
+        {
+            var model = Mapper.Map<CareerDayEducationalInstitution>(dto);
+            _context.CareerDayEducationalInstitutions.Add(model);
+            await _context.SaveChangesAsync();
+
+            var result = Mapper.Map<DtoCareerDayEducationalInstitution>(model);
+
+            return Ok(result);
+        }
+
+        [HttpPut("educationalInstitution/{id}")]
+        public async Task<IActionResult> EditEducationalInstitution(DtoCareerDayEducationalInstitution dto, long id)
+        {
+            var model = Mapper.Map<CareerDayEducationalInstitution>(dto);
+            model.Id = id;
+
+            await _context.CareerDayEducationalInstitutions
+                .Where(x => x.Id == id)
+                .UpdateFromQueryAsync(_ => model);
+
+            var result = Mapper.Map<DtoCareerDayEducationalInstitution>(model);
+
+            return Ok(result);
+        }
+
+        [HttpDelete("educationalInstitution/{id}")]
+        public async Task<IActionResult> RemoveEducationalInstitution(long id)
+        {
+            await _context.CareerDayEducationalInstitutions
+                .Where(x => x.Id == id)
+                .DeleteFromQueryAsync();
+
+            return Ok();
+        }
+
+        [HttpPost("employer")]
+        public async Task<IActionResult> AddEmployer(DtoCareerDayEmployer dto)
+        {
+            var model = Mapper.Map<CareerDayEmployer>(dto);
+            _context.CareerDayEmployers.Add(model);
+            await _context.SaveChangesAsync();
+
+            var result = Mapper.Map<DtoCareerDayEmployer>(model);
+
+            return Ok(result);
+        }
+
+        [HttpPut("employer/{id}")]
+        public async Task<IActionResult> EditEmployer(DtoCareerDayEmployer dto, long id)
+        {
+            var model = Mapper.Map<CareerDayEmployer>(dto);
+            model.Id = id;
+
+            await _context.CareerDayEmployers
+                .Where(x => x.Id == id)
+                .UpdateFromQueryAsync(_ => model);
+
+            var result = Mapper.Map<DtoCareerDayEmployer>(model);
+
+            return Ok(result);
+        }
+
+        [HttpDelete("employer/{id}")]
+        public async Task<IActionResult> RemoveEmployer(long id)
+        {
+            await _context.CareerDayEmployers
+                .Where(x => x.Id == id)
+                .DeleteFromQueryAsync();
 
             return Ok();
         }

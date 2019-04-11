@@ -66,6 +66,8 @@ namespace Vacancies.API.Controllers
         public async Task<IActionResult> Post(DtoVacancy dto)
         {
             var entity = Mapper.Map<Vacancy>(dto);
+            entity.PublishedAt = DateTime.UtcNow;
+
             _context.Vacancies.Add(entity);
 
             await _context

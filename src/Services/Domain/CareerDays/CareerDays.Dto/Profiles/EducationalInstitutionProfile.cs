@@ -16,7 +16,8 @@ namespace CareerDays.Dto.Profiles
 
         public override void Dto2Entity()
         {
-            CreateMap<DtoEducationalInstitution, EducationalInstitution>();
+            CreateMap<DtoEducationalInstitution, EducationalInstitution>()
+                .ForMember(d => d.CareerDays, o => o.Ignore());
         }
     }
 }

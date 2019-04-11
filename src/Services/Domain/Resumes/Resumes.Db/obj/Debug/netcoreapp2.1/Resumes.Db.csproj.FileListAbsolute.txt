@@ -23,3 +23,15 @@ C:\JobObserver2\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\R
 C:\JobObserver2\src\Services\Domain\Resumes\Resumes.Db\bin\Debug\netcoreapp2.1\Resumes.Db.pdb
 C:\JobObserver2\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\Resumes.Db.dll
 C:\JobObserver2\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\Resumes.Db.pdb
+D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.Db\bin\Debug\netcoreapp2.1\Resumes.Db.deps.json
+D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.Db\bin\Debug\netcoreapp2.1\Resumes.Db.dll
+D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.Db\bin\Debug\netcoreapp2.1\Resumes.Db.pdb
+D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.dll
+D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.pdb
+D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\Resumes.Db.csprojAssemblyReference.cache
+D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\Resumes.Db.csproj.CoreCompileInputs.cache
+D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\Resumes.Db.AssemblyInfoInputs.cache
+D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\Resumes.Db.AssemblyInfo.cs
+D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\Resumes.Db.csproj.CopyComplete
+D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\Resumes.Db.dll
+D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.Db\obj\Debug\netcoreapp2.1\Resumes.Db.pdb

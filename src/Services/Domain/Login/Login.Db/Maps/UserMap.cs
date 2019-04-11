@@ -13,21 +13,18 @@ namespace Login.Db.Maps
 
             builder.Property(x => x.BirthDate).IsRequired();
             builder.Property(x => x.FirstName).IsRequired();
-            builder.Property(x => x.LastName).IsRequired();
 
             builder
                 .HasOne(x => x.Area)
                 .WithMany()
                 .HasForeignKey(x => x.AreaId)
-                .OnDelete(DeleteBehavior.Restrict)
-                .IsRequired();
+                .OnDelete(DeleteBehavior.Restrict);
 
             builder
                 .HasOne(x => x.Gender)
                 .WithMany()
                 .HasForeignKey(x => x.GenderId)
-                .OnDelete(DeleteBehavior.Restrict)
-                .IsRequired();
+                .OnDelete(DeleteBehavior.Restrict);
 
             builder
                 .HasOne(x => x.EducationalInstitutionManagerAttributes)

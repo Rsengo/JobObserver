@@ -38,5 +38,9 @@ namespace CareerDays.Db
         public DbSet<Employer> Employers { get; set; }
 
         public DbSet<EducationalInstitution> EducationalInstitutions { get; set; }
+
+        public DbSet<CareerDayEmployer> CareerDayEmployers { get; set; }
+
+        public DbSet<CareerDayEducationalInstitution> CareerDayEducationalInstitutions { get; set; }
     }
 }

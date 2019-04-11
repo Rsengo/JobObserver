@@ -18,6 +18,7 @@ using Microsoft.EntityFrameworkCore;
 using Swashbuckle.AspNetCore.Swagger;
 using IdentityServer4.AspNetIdentity;
 using IdentityServer4.Services;
+using Login.API.Services;
 using Login.Db.Models;
 using Login.Dto;
 using Microsoft.AspNetCore.Identity;
@@ -98,7 +99,7 @@ namespace Login.API
                                 null);
                         });
                 })
-                .Services.AddTransient<IProfileService, ProfileService<User>>();
+                .AddProfileService<ProfileService>();
 
             services.AddAutoMapper(builder =>
             {
@@ -142,6 +143,8 @@ namespace Login.API
                         .AllowAnyHeader()
                         .AllowCredentials());
             });
+
+            services.AddScoped<IRegistrationService, RegistrationService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

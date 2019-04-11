@@ -38,3 +38,17 @@ C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2
 C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.DataTransfer.pdb
 C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\Z.EntityFramework.Extensions.EFCore.dll
 C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\Z.EntityFramework.Extensions.EFCore.xml
+D:\Repos\JobObserver\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\Vacancies.Db.deps.json
+D:\Repos\JobObserver\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\Vacancies.Db.dll
+D:\Repos\JobObserver\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\Vacancies.Db.pdb
+D:\Repos\JobObserver\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.DataTransfer.dll
+D:\Repos\JobObserver\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.dll
+D:\Repos\JobObserver\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.pdb
+D:\Repos\JobObserver\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.DataTransfer.pdb
+D:\Repos\JobObserver\src\Services\Domain\Vacancies\Vacancies.Db\obj\Debug\netcoreapp2.1\Vacancies.Db.csprojAssemblyReference.cache
+D:\Repos\JobObserver\src\Services\Domain\Vacancies\Vacancies.Db\obj\Debug\netcoreapp2.1\Vacancies.Db.csproj.CoreCompileInputs.cache
+D:\Repos\JobObserver\src\Services\Domain\Vacancies\Vacancies.Db\obj\Debug\netcoreapp2.1\Vacancies.Db.AssemblyInfoInputs.cache
+D:\Repos\JobObserver\src\Services\Domain\Vacancies\Vacancies.Db\obj\Debug\netcoreapp2.1\Vacancies.Db.AssemblyInfo.cs
+D:\Repos\JobObserver\src\Services\Domain\Vacancies\Vacancies.Db\obj\Debug\netcoreapp2.1\Vacancies.Db.csproj.CopyComplete
+D:\Repos\JobObserver\src\Services\Domain\Vacancies\Vacancies.Db\obj\Debug\netcoreapp2.1\Vacancies.Db.dll
+D:\Repos\JobObserver\src\Services\Domain\Vacancies\Vacancies.Db\obj\Debug\netcoreapp2.1\Vacancies.Db.pdb

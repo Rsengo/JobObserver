@@ -1,22 +1,22 @@
 version: '3.4'
 
 services:
-  # sql.data:
-  #   image: microsoft/mssql-server-linux:2017-latest
+  sql.data:
+    image: microsoft/mssql-server-linux:2017-latest
 
-  # rabbitmq:
-  #   image: rabbitmq:3-management-alpine
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
 
-  mariadb:
-    image: 'bitnami/mariadb:latest'
+  # mariadb:
+  #   image: 'bitnami/mariadb:latest'
 
-  moodle:
-    image: 'bitnami/moodle:latest'
-    depends_on:
-      - mariadb
+  # moodle:
+  #   image: 'bitnami/moodle:latest'
+  #   depends_on:
+  #     - mariadb
 
-  # elasticsearch:
-  #   image: docker.elastic.co/elasticsearch/elasticsearch:6.2.4
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.2.4
 
   # kibana:
   #   image: docker.elastic.co/kibana/kibana:6.2.4
@@ -91,15 +91,15 @@ services:
   #     - rabbitmq
   #     - elasticsearch
 
-  # vacancies.api:
-  #   image: jobobserver/vacancies.api:${TAG:-latest}
-  #   build:
-  #     context: .
-  #     dockerfile: src/Services/Domain/Vacancies/Vacancies.API/Dockerfile    
-  #   depends_on:
-  #     - sql.data
-  #     - rabbitmq
-  #     - elasticsearch
+  vacancies.api:
+    image: jobobserver/vacancies.api:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: src/Services/Domain/Vacancies/Vacancies.API/Dockerfile    
+    depends_on:
+      - sql.data
+      - rabbitmq
+      - elasticsearch
 
   # dictionaries.api:
   #   image: jobobserver/dictionaries.api:${TAG:-latest}

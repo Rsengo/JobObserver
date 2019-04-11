@@ -35,3 +35,11 @@ C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.Dto\bin\Debug
 C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.Dto\bin\Debug\netcoreapp2.1\Dictionaries.Db.pdb
 C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.Dto\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.pdb
 C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.Dto\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.pdb
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Dto\bin\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.dll
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Dto\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.dll
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Dto\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.dll
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Dto\bin\Debug\netcoreapp2.1\Dictionaries.Db.dll
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Dto\bin\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.pdb
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Dto\bin\Debug\netcoreapp2.1\Dictionaries.Db.pdb
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Dto\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.pdb
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Dto\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.pdb

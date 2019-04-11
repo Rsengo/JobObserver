@@ -108,10 +108,11 @@ namespace Dictionaries.API
             {
                 var factory = sp.GetRequiredService<IInitializersFactory>();
                 var env = sp.GetRequiredService<IHostingEnvironment>();
+                var logger = sp.GetRequiredService<ILogger<DictionariesInitializationService>>();
                 var folder = Path.Combine(env.ContentRootPath, "Sources");
                 var zip = Path.Combine(folder, Configuration["zipFile"]);
 
-                return new DictionariesInitializationService(folder, zip, factory);
+                return new DictionariesInitializationService(folder, zip, factory, logger);
             });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);

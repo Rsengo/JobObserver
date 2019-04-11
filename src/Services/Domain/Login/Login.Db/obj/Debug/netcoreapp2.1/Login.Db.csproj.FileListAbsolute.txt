@@ -20,3 +20,15 @@ C:\JobObserver2\src\Services\Domain\Login\Login.Db\obj\Debug\netcoreapp2.1\Login
 C:\JobObserver2\src\Services\Domain\Login\Login.Db\bin\Debug\netcoreapp2.1\Login.Db.pdb
 C:\JobObserver2\src\Services\Domain\Login\Login.Db\obj\Debug\netcoreapp2.1\Login.Db.dll
 C:\JobObserver2\src\Services\Domain\Login\Login.Db\obj\Debug\netcoreapp2.1\Login.Db.pdb
+D:\Repos\JobObserver\src\Services\Domain\Login\Login.Db\bin\Debug\netcoreapp2.1\Login.Db.deps.json
+D:\Repos\JobObserver\src\Services\Domain\Login\Login.Db\bin\Debug\netcoreapp2.1\Login.Db.dll
+D:\Repos\JobObserver\src\Services\Domain\Login\Login.Db\bin\Debug\netcoreapp2.1\Login.Db.pdb
+D:\Repos\JobObserver\src\Services\Domain\Login\Login.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.dll
+D:\Repos\JobObserver\src\Services\Domain\Login\Login.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.pdb
+D:\Repos\JobObserver\src\Services\Domain\Login\Login.Db\obj\Debug\netcoreapp2.1\Login.Db.csprojAssemblyReference.cache
+D:\Repos\JobObserver\src\Services\Domain\Login\Login.Db\obj\Debug\netcoreapp2.1\Login.Db.csproj.CoreCompileInputs.cache
+D:\Repos\JobObserver\src\Services\Domain\Login\Login.Db\obj\Debug\netcoreapp2.1\Login.Db.AssemblyInfoInputs.cache
+D:\Repos\JobObserver\src\Services\Domain\Login\Login.Db\obj\Debug\netcoreapp2.1\Login.Db.AssemblyInfo.cs
+D:\Repos\JobObserver\src\Services\Domain\Login\Login.Db\obj\Debug\netcoreapp2.1\Login.Db.csproj.CopyComplete
+D:\Repos\JobObserver\src\Services\Domain\Login\Login.Db\obj\Debug\netcoreapp2.1\Login.Db.dll
+D:\Repos\JobObserver\src\Services\Domain\Login\Login.Db\obj\Debug\netcoreapp2.1\Login.Db.pdb

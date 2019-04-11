@@ -9,6 +9,8 @@ using CareerDays.Dto.Models.Geographic;
 
 namespace CareerDays.Dto.Profiles
 {
+    using System.Linq;
+
     public class CareerDayProfile : EntityDtoProfile
     {
         public override void Entity2Dto()
@@ -17,7 +19,9 @@ namespace CareerDays.Dto.Profiles
                 .ForMember(
                     dest => dest.EducationalInstitution,
                     opt => opt.MapFrom(
-                        src => Mapper.Map<DtoEducationalInstitution>(src.EducationalInstitution)))
+                        src => src.EducationalInstitutions
+                            .Select(x => x.EducationalInstitution)
+                            .Select(Mapper.Map<DtoEducationalInstitution>)))
                 .ForMember(
                     dest => dest.Address, 
                     opt => opt.MapFrom(
@@ -25,20 +29,22 @@ namespace CareerDays.Dto.Profiles
                 .ForMember(
                     dest => dest.Employer, 
                     opt => opt.MapFrom(
-                        src => Mapper.Map<DtoEmployer>(src.Employer)));
+                        src => src.Employers
+                            .Select(x => x.Employer)
+                            .Select(Mapper.Map<DtoEmployer>)));
         }
 
         public override void Dto2Entity()
         {
             CreateMap<DtoCareerDay, CareerDay>()
                 .ForMember(
-                    dest => dest.EducationalInstitution,
+                    dest => dest.EducationalInstitutions,
                     opt => opt.Ignore())
                 .ForMember(
                     dest => dest.Address,
                     opt => opt.Ignore())
                 .ForMember(
-                    dest => dest.Employer,
+                    dest => dest.Employers,
                     opt => opt.Ignore());
         }
     }

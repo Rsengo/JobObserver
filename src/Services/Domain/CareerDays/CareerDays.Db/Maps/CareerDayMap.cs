@@ -19,16 +19,13 @@ namespace CareerDays.Db.Maps
             builder.Property(x => x.StartsAt).IsRequired();
             builder.Property(x => x.Description).IsRequired();
 
-            builder.HasOne(x => x.Employer)
-                .WithMany()
-                .HasForeignKey(x => x.EmployerId)
-                .OnDelete(DeleteBehavior.Restrict)
-                .IsRequired();
+            builder.HasMany(x => x.Employers)
+                .WithOne(x => x.CareerDay)
+                .OnDelete(DeleteBehavior.Cascade);
 
-            builder.HasOne(x => x.EducationalInstitution)
-                .WithMany()
-                .HasForeignKey(x => x.EducationalInstitutionId)
-                .OnDelete(DeleteBehavior.Restrict);
+            builder.HasMany(x => x.EducationalInstitutions)
+                .WithOne(x => x.CareerDay)
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasOne(x => x.Address)
                 .WithMany()

@@ -81,6 +81,8 @@ namespace Resumes.API.Controllers
         public async Task<IActionResult> Post(DtoResume dto)
         {
             var entity = Mapper.Map<Resume>(dto);
+            entity.CreatedAt = DateTime.UtcNow;
+
             _context.Resumes.Add(entity);
 
             await _context
@@ -94,6 +96,7 @@ namespace Resumes.API.Controllers
         public async Task<IActionResult> Update(DtoResume dto, long id)
         {
             var template = Mapper.Map<Resume>(dto);
+            template.UpdatedAt = DateTime.UtcNow;
 
             template.Id = id;
 

@@ -66,7 +66,7 @@ namespace Login.Db.Models
         /// <summary>
         ///     Полное имя
         /// </summary>
-        public virtual string FullName => $"{FirstName} {MiddleName} {LastName}";
+        public virtual string FullName => $"{FirstName} {MiddleName ?? string.Empty} {LastName ?? string.Empty}".TrimEnd();
 
         public virtual EducationalInstitutionManagerAttributes EducationalInstitutionManagerAttributes { get; set; }
 
