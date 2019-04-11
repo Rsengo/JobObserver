@@ -39,3 +39,11 @@ C:\JobObserver2\src\Services\Technical\EmailNotifications\EmailNotifications.API
 C:\JobObserver2\src\Services\Technical\EmailNotifications\EmailNotifications.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.pdb
 C:\JobObserver2\src\Services\Technical\EmailNotifications\EmailNotifications.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.RabbitMQ.pdb
 C:\JobObserver2\src\Services\Technical\EmailNotifications\EmailNotifications.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.Assemblies.pdb
+D:\Repos\JobObserver\src\Services\Technical\EmailNotifications\EmailNotifications.API\obj\Debug\netcoreapp2.2\EmailNotifications.API.csprojAssemblyReference.cache
+D:\Repos\JobObserver\src\Services\Technical\EmailNotifications\EmailNotifications.API\obj\Debug\netcoreapp2.2\EmailNotifications.API.csproj.CoreCompileInputs.cache
+D:\Repos\JobObserver\src\Services\Technical\EmailNotifications\EmailNotifications.API\obj\Debug\netcoreapp2.2\EmailNotifications.API.RazorAssemblyInfo.cache
+D:\Repos\JobObserver\src\Services\Technical\EmailNotifications\EmailNotifications.API\obj\Debug\netcoreapp2.2\EmailNotifications.API.RazorAssemblyInfo.cs
+D:\Repos\JobObserver\src\Services\Technical\EmailNotifications\EmailNotifications.API\obj\Debug\netcoreapp2.2\EmailNotifications.API.AssemblyInfoInputs.cache
+D:\Repos\JobObserver\src\Services\Technical\EmailNotifications\EmailNotifications.API\obj\Debug\netcoreapp2.2\EmailNotifications.API.AssemblyInfo.cs
+D:\Repos\JobObserver\src\Services\Technical\EmailNotifications\EmailNotifications.API\obj\Debug\netcoreapp2.2\EmailNotifications.API.dll
+D:\Repos\JobObserver\src\Services\Technical\EmailNotifications\EmailNotifications.API\obj\Debug\netcoreapp2.2\EmailNotifications.API.pdb

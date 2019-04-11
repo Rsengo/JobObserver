@@ -4,28 +4,30 @@ using System.IO.Compression;
 using System.IO;
 using System.Linq;
 using Dictionaries.API.Infrastructure.Initialization.Factories;
+using System.Threading.Tasks;
+using BuildingBlocks.EntityFramework.Models;
+using Microsoft.Extensions.Logging;
 using Dictionaries.API.Infrastructure.Initialization.Initializers;
 
 namespace Dictionaries.API.Infrastructure.Initialization
 {
-    using System.Threading.Tasks;
-
-    using BuildingBlocks.EntityFramework.Models;
-
     public class DictionariesInitializationService
     {
         private readonly string _zip;
         private readonly string _folder;
         private readonly IInitializersFactory _factory;
+        private readonly ILogger<DictionariesInitializationService> _logger;
 
         public DictionariesInitializationService(
             string folder, 
             string zip, 
-            IInitializersFactory factory)
+            IInitializersFactory factory,
+            ILogger<DictionariesInitializationService> logger)
         {
             _zip = zip;
             _folder = folder;
             _factory = factory;
+            _logger = logger;
         }
 
         public Task InitializeAsync()
@@ -58,7 +60,18 @@ namespace Dictionaries.API.Infrastructure.Initialization
 
             foreach (var initializer in initializers)
             {
-                await initializer.Initialize();
+                try
+                {
+                    await initializer.Initialize();
+                    _logger.LogInformation("Dictionary initialized for type: {type}",
+                        initializer.EntityType.ToString());
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogCritical("Failed to initialize dictionary for type {type}; Error: {error}",
+                        initializer.EntityType.ToString(),
+                        ex.Message);
+                }
             }
 
             var directory = new DirectoryInfo(_folder);

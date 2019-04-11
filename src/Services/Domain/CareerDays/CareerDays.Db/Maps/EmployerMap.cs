@@ -18,6 +18,11 @@ namespace CareerDays.Db.Maps
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
             builder.Property(x => x.Name).IsRequired();
 
+            builder
+                .HasMany(x => x.CareerDays)
+                .WithOne(x => x.Employer)
+                .OnDelete(DeleteBehavior.Restrict);
+
             builder.ToTable(TableNames.EMPLOYERS);
         }
     }

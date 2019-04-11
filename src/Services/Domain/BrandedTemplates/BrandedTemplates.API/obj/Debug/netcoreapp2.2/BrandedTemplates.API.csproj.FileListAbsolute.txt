@@ -21,16 +21,10 @@ D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\b
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BrandedTemplates.Dto.dll
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BuildingBlocks.AutoMapper.dll
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.Assemblies.dll
-D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.MongoDB.dll
-D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BuildingBlocks.MongoDB.dll
-D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BuildingBlocks.MongoDB.Migration.dll
-D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.MongoDB.pdb
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BrandedTemplates.Db.pdb
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BrandedTemplates.Dto.pdb
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BuildingBlocks.AutoMapper.pdb
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.Assemblies.pdb
-D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BuildingBlocks.MongoDB.pdb
-D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BuildingBlocks.MongoDB.Migration.pdb
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\obj\Debug\netcoreapp2.2\BrandedTemplates.API.csprojAssemblyReference.cache
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\obj\Debug\netcoreapp2.2\BrandedTemplates.API.csproj.CoreCompileInputs.cache
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\obj\Debug\netcoreapp2.2\BrandedTemplates.API.RazorAssemblyInfo.cache
@@ -75,3 +69,8 @@ C:\JobObserver2\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\De
 C:\JobObserver2\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BrandedTemplates.Db.pdb
 C:\JobObserver2\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BuildingBlocks.DataTransfer.pdb
 C:\JobObserver2\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\obj\Debug\netcoreapp2.2\BrandedTemplates.API.csproj.CopyComplete
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BuildingBlocks.DataTransfer.dll
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.AutoMapper.dll
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.AutoMapper.pdb
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EntityFramework.pdb
+D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BuildingBlocks.DataTransfer.pdb

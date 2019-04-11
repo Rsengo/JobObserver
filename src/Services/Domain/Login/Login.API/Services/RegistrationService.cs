@@ -9,16 +9,32 @@ using Login.Db.Models;
 using Login.Db.Models.Attributes;
 using Login.Db.Models.Contacts;
 using Microsoft.AspNetCore.Identity;
+using BuildingBlocks.EventBus.Abstractions;
+using Login.Synchronization.Events.Users;
 
 namespace Login.API.Services
 {
+    using Login.Dto.Models;
+
     public class RegistrationService: IRegistrationService
     {
         private readonly LoginDbContext _context;
 
         private readonly UserManager<User> _userManager;
 
+        private readonly IEventBus _eventBus;
+
         public event Action<IdentityResult> OnErrorsOccured;
+
+        public RegistrationService(
+            LoginDbContext context,
+            UserManager<User> userManager,
+            IEventBus eventBus)
+        {
+            _context = context;
+            _userManager = userManager;
+            _eventBus = eventBus;
+        }
 
         public async Task RegisterAsync(RegistrationViewModel model, string role)
         {
@@ -88,6 +104,13 @@ namespace Login.API.Services
             {
                 OnErrorsOccured?.Invoke(roleResult);
             }
+
+            var @event = new UsersChanged
+            {
+                Created = new[] { Mapper.Map<DtoUser>(user) }
+            };
+
+            _eventBus.Publish(@event);
         }
     }
 }

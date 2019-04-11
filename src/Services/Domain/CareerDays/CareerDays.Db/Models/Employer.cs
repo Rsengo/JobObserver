@@ -16,5 +16,7 @@ namespace CareerDays.Db.Models
         ///     Сайт компании
         /// </summary>
         public virtual string SiteUrl { get; set; }
+
+        public virtual ICollection<CareerDayEmployer> CareerDays { get; set; }
     }
 }

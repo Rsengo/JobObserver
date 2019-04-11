@@ -4,6 +4,8 @@ using CareerDays.Db.Models.Geographic;
 
 namespace CareerDays.Db.Models
 {
+    using System.Collections.Generic;
+
     /// <summary>
     ///     День карьеры
     /// </summary>
@@ -32,7 +34,7 @@ namespace CareerDays.Db.Models
         /// <summary>
         ///     Организация.   
         /// </summary>
-        public virtual Employer Employer { get; set; }
+        public virtual ICollection<CareerDayEmployer> Employers { get; set; }
 
         /// <summary>
         ///     Образовательное учреждение Id
@@ -42,7 +44,7 @@ namespace CareerDays.Db.Models
         /// <summary>
         ///     Образовательное учреждение.
         /// </summary>
-        public virtual EducationalInstitution EducationalInstitution { get; set; }
+        public virtual ICollection<CareerDayEducationalInstitution> EducationalInstitutions { get; set; }
 
         /// <summary>
         ///     Адрес.

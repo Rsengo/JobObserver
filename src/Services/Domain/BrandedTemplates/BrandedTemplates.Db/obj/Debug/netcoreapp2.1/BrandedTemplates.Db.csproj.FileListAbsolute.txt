@@ -21,9 +21,7 @@ D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\ob
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\obj\Debug\netcoreapp2.1\BrandedTemplates.Db.dll
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\obj\Debug\netcoreapp2.1\BrandedTemplates.Db.pdb
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.dll
-D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.Database.Entity.dll
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.pdb
-D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.Database.Entity.pdb
 C:\JobObserver2\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BrandedTemplates.Db.deps.json
 C:\JobObserver2\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BrandedTemplates.Db.dll
 C:\JobObserver2\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.dll

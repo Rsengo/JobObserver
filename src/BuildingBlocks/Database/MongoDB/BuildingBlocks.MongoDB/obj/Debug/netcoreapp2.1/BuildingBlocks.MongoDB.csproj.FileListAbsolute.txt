@@ -18,3 +18,4 @@ C:\JobObserver2\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB\obj\D
 C:\JobObserver2\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.AssemblyInfo.cs
 C:\JobObserver2\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.dll
 C:\JobObserver2\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.pdb
+D:\Repos\JobObserver\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.csprojAssemblyReference.cache
