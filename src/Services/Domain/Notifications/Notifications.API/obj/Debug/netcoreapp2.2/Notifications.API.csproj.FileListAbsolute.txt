@@ -47,3 +47,10 @@ D:\Repos\JobObserver\src\Services\Domain\Notifications\Notifications.API\obj\Deb
 D:\Repos\JobObserver\src\Services\Domain\Notifications\Notifications.API\obj\Debug\netcoreapp2.2\Notifications.API.csproj.CopyComplete
 D:\Repos\JobObserver\src\Services\Domain\Notifications\Notifications.API\obj\Debug\netcoreapp2.2\Notifications.API.dll
 D:\Repos\JobObserver\src\Services\Domain\Notifications\Notifications.API\obj\Debug\netcoreapp2.2\Notifications.API.pdb
+C:\JobObserver2\src\Services\Domain\Notifications\Notifications.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.dll
+C:\JobObserver2\src\Services\Domain\Notifications\Notifications.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.RabbitMQ.dll
+C:\JobObserver2\src\Services\Domain\Notifications\Notifications.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EventBus.RabbitMQ.dll
+C:\JobObserver2\src\Services\Domain\Notifications\Notifications.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EventBus.RabbitMQ.pdb
+C:\JobObserver2\src\Services\Domain\Notifications\Notifications.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.pdb
+C:\JobObserver2\src\Services\Domain\Notifications\Notifications.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.RabbitMQ.pdb
+C:\JobObserver2\src\Services\Domain\Notifications\Notifications.API\obj\Debug\netcoreapp2.2\Notifications.API.csproj.CopyComplete

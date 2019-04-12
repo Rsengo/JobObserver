@@ -84,3 +84,9 @@ D:\Repos\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug
 D:\Repos\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.RabbitMQ.pdb
 D:\Repos\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EventBus.RabbitMQ.pdb
 D:\Repos\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\obj\Debug\netcoreapp2.2\PaidServices.API.csproj.CopyComplete
+C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.dll
+C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.RabbitMQ.dll
+C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EventBus.RabbitMQ.dll
+C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.pdb
+C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.RabbitMQ.pdb
+C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EventBus.RabbitMQ.pdb

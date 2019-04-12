@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Login.Db.Migrations
 {
     [DbContext(typeof(LoginDbContext))]
-    [Migration("20190323161259_Init")]
+    [Migration("20190411163134_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -179,6 +179,25 @@ namespace Login.Db.Migrations
                     b.ToTable("AREAS");
                 });
 
+            modelBuilder.Entity("Login.Db.Models.Permission", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Type")
+                        .IsRequired();
+
+                    b.Property<string>("Value")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.HasAlternateKey("Type", "Value");
+
+                    b.ToTable("PERMISSIONS");
+                });
+
             modelBuilder.Entity("Login.Db.Models.User", b =>
                 {
                     b.Property<string>("Id")
@@ -186,8 +205,7 @@ namespace Login.Db.Migrations
 
                     b.Property<int>("AccessFailedCount");
 
-                    b.Property<long?>("AreaId")
-                        .IsRequired();
+                    b.Property<long?>("AreaId");
 
                     b.Property<DateTime>("BirthDate");
 
@@ -208,11 +226,9 @@ namespace Login.Db.Migrations
                     b.Property<string>("FirstName")
                         .IsRequired();
 
-                    b.Property<long?>("GenderId")
-                        .IsRequired();
+                    b.Property<long?>("GenderId");
 
-                    b.Property<string>("LastName")
-                        .IsRequired();
+                    b.Property<string>("LastName");
 
                     b.Property<bool>("LockoutEnabled");
 

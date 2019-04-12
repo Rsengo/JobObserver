@@ -50,9 +50,9 @@ services:
     volumes:
       - ./database/elasticsearch:/usr/share/elasticsearch/data
 
-  # kibana:
-  #   ports:
-  #     - "5601:5601"
+  kibana:
+    ports:
+      - "5601:5601"
 
   # brandedtemplates.api:
   #   environment:
@@ -134,20 +134,20 @@ services:
   #   ports:
   #     - "5106:80"  
 
-  # resumes.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=http://0.0.0.0:80
-  #     - ConnectionString=Server=sql.data;Database=RESUMES;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - EventBusSubscriptionClientName=${EVENT_BUS_SUBSCRIPTION_CLIENT_NAME}
-  #     - ElasticSearch=elasticsearch:9200
-  #   ports:
-  #     - "5107:80"  
+  resumes.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=Server=sql.data;Database=RESUMES;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - EventBusSubscriptionClientName=${EVENT_BUS_SUBSCRIPTION_CLIENT_NAME}
+      - ElasticSearch=elasticsearch:9200
+    ports:
+      - "5107:80"  
 
   vacancies.api:
     environment:
@@ -164,20 +164,20 @@ services:
     ports:
       - "5108:80" 
 
-  # dictionaries.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=http://0.0.0.0:80
-  #     - ConnectionString=Server=sql.data;Database=DICTIONARIES;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - EventBusSubscriptionClientName=${EVENT_BUS_SUBSCRIPTION_CLIENT_NAME}
-  #     - ElasticSearch=elasticsearch:9200
-  #   ports:
-  #     - "5109:80"  
+  dictionaries.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=Server=sql.data;Database=DICTIONARIES;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - EventBusSubscriptionClientName=${EVENT_BUS_SUBSCRIPTION_CLIENT_NAME}
+      - ElasticSearch=elasticsearch:9200
+    ports:
+      - "5109:80"  
 
   # moodle.api:
   #   environment:

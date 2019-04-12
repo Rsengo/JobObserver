@@ -36,8 +36,6 @@ C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.Db\obj\Debug\netcoreapp2
 C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.Db\obj\Debug\netcoreapp2.1\Vacancies.Db.pdb
 C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.DataTransfer.dll
 C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.DataTransfer.pdb
-C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\Z.EntityFramework.Extensions.EFCore.dll
-C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\Z.EntityFramework.Extensions.EFCore.xml
 D:\Repos\JobObserver\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\Vacancies.Db.deps.json
 D:\Repos\JobObserver\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\Vacancies.Db.dll
 D:\Repos\JobObserver\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\Vacancies.Db.pdb

@@ -8,7 +8,7 @@ namespace CareerDays.Db
         public CareerDaysDbContext(DbContextOptions<CareerDaysDbContext> options) : 
             base(options)
         {
-            EntityFrameworkManager.ContextFactory = _ => new CareerDaysDbContext(options);
+            //EntityFrameworkManager.ContextFactory = _ => new CareerDaysDbContext(options);
             this.EnsureAutoHistory();
         }
     }

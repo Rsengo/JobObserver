@@ -10,7 +10,7 @@ using Resumes.Db;
 namespace Resumes.Db.Migrations
 {
     [DbContext(typeof(ResumesDbContext))]
-    [Migration("20190327172548_Init")]
+    [Migration("20190411162457_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

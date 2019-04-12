@@ -18,3 +18,4 @@ D:\Repos\JobObserver\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus\obj\Deb
 D:\Repos\JobObserver\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.AssemblyInfo.cs
 D:\Repos\JobObserver\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.dll
 D:\Repos\JobObserver\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.pdb
+C:\JobObserver2\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.csprojAssemblyReference.cache

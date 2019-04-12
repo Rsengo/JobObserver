@@ -47,3 +47,5 @@ D:\Repos\JobObserver\src\Services\Technical\EmailNotifications\EmailNotification
 D:\Repos\JobObserver\src\Services\Technical\EmailNotifications\EmailNotifications.API\obj\Debug\netcoreapp2.2\EmailNotifications.API.AssemblyInfo.cs
 D:\Repos\JobObserver\src\Services\Technical\EmailNotifications\EmailNotifications.API\obj\Debug\netcoreapp2.2\EmailNotifications.API.dll
 D:\Repos\JobObserver\src\Services\Technical\EmailNotifications\EmailNotifications.API\obj\Debug\netcoreapp2.2\EmailNotifications.API.pdb
+C:\JobObserver2\src\Services\Technical\EmailNotifications\EmailNotifications.API\bin\Debug\netcoreapp2.2\EmailNotifications.Mailer.pdb
+C:\JobObserver2\src\Services\Technical\EmailNotifications\EmailNotifications.API\obj\Debug\netcoreapp2.2\EmailNotifications.API.csproj.CopyComplete

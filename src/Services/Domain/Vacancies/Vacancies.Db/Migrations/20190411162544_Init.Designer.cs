@@ -10,7 +10,7 @@ using Vacancies.Db;
 namespace Vacancies.Db.Migrations
 {
     [DbContext(typeof(VacanciesDbContext))]
-    [Migration("20190327161738_Init")]
+    [Migration("20190411162544_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
