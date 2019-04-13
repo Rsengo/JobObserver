@@ -97,7 +97,7 @@ namespace Resumes.API
                     con.Password = Configuration["EventBusPassword"];
                 });
 
-                builder.SubscriptionClientName = Configuration["EventBusSubscriptionClientName"];
+                builder.SubscriptionClientName = Configuration["SubscriptionClientName"];
                 builder.RetryCount = retryCount;
 
                 builder.RegisterEventHandler<UsersChangedHandler>();

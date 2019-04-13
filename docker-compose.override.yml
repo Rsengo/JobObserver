@@ -74,7 +74,6 @@ services:
   #     - EventBusConnection=rabbitmq
   #     - EventBusUserName=${EVENT_BUS_USER_NAME}
   #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - EventBusSubscriptionClientName=${EVENT_BUS_SUBSCRIPTION_CLIENT_NAME} 
   #     - ElasticSearch=elasticsearch:9200
   #   ports:
   #     - "5102:80"  
@@ -89,7 +88,6 @@ services:
   #     - EventBusConnection=rabbitmq
   #     - EventBusUserName=${EVENT_BUS_USER_NAME}
   #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - EventBusSubscriptionClientName=${EVENT_BUS_SUBSCRIPTION_CLIENT_NAME}
   #     - ElasticSearch=elasticsearch:9200
   #   ports:
   #     - "5103:80"  
@@ -104,7 +102,6 @@ services:
   #     - EventBusConnection=rabbitmq
   #     - EventBusUserName=${EVENT_BUS_USER_NAME}
   #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - EventBusSubscriptionClientName=${EVENT_BUS_SUBSCRIPTION_CLIENT_NAME}
   #     - ElasticSearch=elasticsearch:9200
   #   ports:
   #     - "5104:80"  
@@ -119,7 +116,6 @@ services:
   #     - EventBusConnection=rabbitmq
   #     - EventBusUserName=${EVENT_BUS_USER_NAME}
   #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - EventBusSubscriptionClientName=${EVENT_BUS_SUBSCRIPTION_CLIENT_NAME}
   #     - ElasticSearch=elasticsearch:9200
   #   ports:
   #     - "5105:80"  
@@ -144,7 +140,6 @@ services:
       - EventBusConnection=rabbitmq
       - EventBusUserName=${EVENT_BUS_USER_NAME}
       - EventBusPassword=${EVENT_BUS_PASSWORD}
-      - EventBusSubscriptionClientName=${EVENT_BUS_SUBSCRIPTION_CLIENT_NAME}
       - ElasticSearch=elasticsearch:9200
     ports:
       - "5107:80"  
@@ -159,7 +154,6 @@ services:
       - EventBusConnection=rabbitmq
       - EventBusUserName=${EVENT_BUS_USER_NAME}
       - EventBusPassword=${EVENT_BUS_PASSWORD}
-      - EventBusSubscriptionClientName=${EVENT_BUS_SUBSCRIPTION_CLIENT_NAME}
       - ElasticSearch=elasticsearch:9200
     ports:
       - "5108:80" 
@@ -174,7 +168,6 @@ services:
       - EventBusConnection=rabbitmq
       - EventBusUserName=${EVENT_BUS_USER_NAME}
       - EventBusPassword=${EVENT_BUS_PASSWORD}
-      - EventBusSubscriptionClientName=${EVENT_BUS_SUBSCRIPTION_CLIENT_NAME}
       - ElasticSearch=elasticsearch:9200
     ports:
       - "5109:80"  
@@ -188,7 +181,6 @@ services:
   #     - EventBusConnection=rabbitmq
   #     - EventBusUserName=${EVENT_BUS_USER_NAME}
   #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - EventBusSubscriptionClientName=${NOTIFICATION_BUS_SUBSCRIPTION_CLIENT_NAME}
   #     - ElasticSearch=elasticsearch:9200
   #     - MoodleRestUrl=moodle/webservice/rest/server.php
   #     - MoodleToken=f3f5be086fd0b9cf4ed3d09a3fdf1da0
@@ -205,7 +197,6 @@ services:
   #     - EventBusConnection=rabbitmq
   #     - EventBusUserName=${EVENT_BUS_USER_NAME}
   #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - EventBusSubscriptionClientName=${NOTIFICATION_BUS_SUBSCRIPTION_CLIENT_NAME}
   #     - ElasticSearch=elasticsearch:9200
   #   ports:
   #     - "5110:80" 
