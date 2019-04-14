@@ -26,7 +26,7 @@ namespace Dictionaries.API.Infrastructure.Initialization.Initializers
 
         protected override void ProduceEvent(IEnumerable<Industry> eventData)
         {
-            var dtoData = eventData.Select(Mapper.Map<DtoIndustrySync>);
+            var dtoData = eventData.Select(Mapper.Map<DtoIndustry>);
 
             var @event = new IndustriesChanged
             {
@@ -51,6 +51,7 @@ namespace Dictionaries.API.Infrastructure.Initialization.Initializers
             {
                 var children = datum.Industries;
                 datum.Industries = null;
+                datum.Parent = null;
 
                 if (children == null || !children.Any())
                     continue;

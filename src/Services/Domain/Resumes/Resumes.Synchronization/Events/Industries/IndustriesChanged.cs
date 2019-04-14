@@ -7,7 +7,7 @@ using Resumes.Dto.Models.Industries;
 namespace Resumes.Synchronization.Events.Industries
 {
     public class IndustriesChanged : 
-        EntityChangedIntegrationEvent<DtoIndustrySync>
+        EntityChangedIntegrationEvent<DtoIndustry>
     {
     }
 }

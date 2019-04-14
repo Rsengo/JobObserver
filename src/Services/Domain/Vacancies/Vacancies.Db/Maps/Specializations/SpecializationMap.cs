@@ -13,7 +13,6 @@ namespace Vacancies.Db.Maps.Specializations
         public void Configure(EntityTypeBuilder<Specialization> builder)
         {
             builder.HasKey(x => x.Id);
-            builder.HasAlternateKey(x => x.Name);
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
             builder.Property(x => x.Name).IsRequired();
 

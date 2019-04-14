@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BuildingBlocks.EventBus.Abstractions;
 using BuildingBlocks.EventBus.Events;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace BuildingBlocks.EventBus.RabbitMQ
 {
@@ -222,7 +223,10 @@ namespace BuildingBlocks.EventBus.RabbitMQ
                     }
                     else
                     {
-                        var handler = _serviceProvider.GetService(subscription.HandlerType);
+                        var handler = _serviceProvider
+                            .CreateScope()
+                            .ServiceProvider
+                            .GetService(subscription.HandlerType);
 
                         if (handler == null)
                             continue;

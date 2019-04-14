@@ -6,7 +6,7 @@ using Resumes.Dto.Models.Languages;
 using Resumes.Dto.Models.Negotiations;
 using Resumes.Dto.Models.Specializations;
 
-namespace Resumes.Synchronization.Events.Specializations
+namespace V.Synchronization.Events.Specializations
 {
     public class SpecializationsChanged : 
         EntityChangedIntegrationEvent<DtoSpecialization>

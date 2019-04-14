@@ -17,8 +17,6 @@ namespace Dictionaries.Db.Maps.Specializations
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
             builder.Property(x => x.Name).IsRequired();
 
-            builder.HasAlternateKey(x => x.Name);
-
             builder.ToTable(TableNames.SPECIALIZATIONS);
         }
     }

@@ -26,7 +26,6 @@ namespace Vacancies.API.Controllers
         public async Task<IActionResult> Get(long id)
         {
             var result = await _context.LanguageSkills
-                .AsDbQuery()
                 .Include(x => x.Level)
                 .Include(x => x.Language)
                 .SingleOrDefaultAsync(x => x.Id == id)

@@ -39,10 +39,14 @@ namespace Vacancies.API
                 .UseSerilog((builderContext, config) =>
                 {
                     var url = builderContext.Configuration["ElasticSearch"];
+                    var LogFolder = builderContext.Configuration["LogFolder"];
+                    var filePath = Path.Combine(builderContext.HostingEnvironment.ContentRootPath, LogFolder, "Vacancies.txt");
                     config
                         .MinimumLevel.Information()
                         .Enrich.FromLogContext()
-                        .WriteTo.Elasticsearch(url);
+                        .WriteTo.ColoredConsole()
+                        .WriteTo.File(filePath);
+                    // .WriteTo.Elasticsearch(url);
                 })
                 .Build();
     }

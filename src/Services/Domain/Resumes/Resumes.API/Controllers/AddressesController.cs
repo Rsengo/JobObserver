@@ -26,7 +26,6 @@ namespace Resumes.API.Controllers
         public async Task<IActionResult> Get(long id)
         {
             var result = await _context.Addresses
-                .AsDbQuery()
                 .Include(x => x.Area)
                 .Include(x => x.Station)
                     .ThenInclude(x => x.Line)

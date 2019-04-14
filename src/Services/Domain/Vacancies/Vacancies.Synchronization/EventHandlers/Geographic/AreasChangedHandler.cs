@@ -40,7 +40,7 @@ namespace Vacancies.Synchronization.EventHandlers.Geographic
                 opt =>
                 {
                     opt.MergeKeepIdentity = true;
-                    opt.IncludeGraph = true;
+                    opt.IncludeGraph = false;
                 });
         }
     }

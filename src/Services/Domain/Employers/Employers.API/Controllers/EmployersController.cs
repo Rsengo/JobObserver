@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -12,6 +11,7 @@ using Employers.Dto.Models;
 using Employers.Dto.Models.Synonyms;
 using Employers.Synchronization.Events;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Employers.API.Controllers
 {

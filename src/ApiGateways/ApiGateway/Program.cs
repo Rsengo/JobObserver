@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Serilog;
 
 namespace ApiGateway
 {
@@ -25,7 +26,19 @@ namespace ApiGateway
 
             builder.ConfigureServices(s => s.AddSingleton(builder))
                 .ConfigureAppConfiguration(ic => ic.AddJsonFile(configPath))
-                .UseStartup<Startup>();
+                .UseStartup<Startup>()
+                .UseSerilog((builderContext, config) =>
+                {
+                    var url = builderContext.Configuration["ElasticSearch"];
+                    var LogFolder = builderContext.Configuration["LogFolder"];
+                    var filePath = Path.Combine(builderContext.HostingEnvironment.ContentRootPath, LogFolder, "Api_Gateway.txt");
+                    config
+                        .MinimumLevel.Information()
+                        .Enrich.FromLogContext()
+                        .WriteTo.ColoredConsole()
+                        .WriteTo.File(filePath);
+                    // .WriteTo.Elasticsearch(url);
+                });
 
             var host = builder.Build();
             return host;

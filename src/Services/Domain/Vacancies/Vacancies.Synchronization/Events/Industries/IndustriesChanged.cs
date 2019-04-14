@@ -7,7 +7,7 @@ using Vacancies.Dto.Models.Industries;
 namespace Vacancies.Synchronization.Events.Industries
 {
     public class IndustriesChanged : 
-        EntityChangedIntegrationEvent<DtoIndustrySync>
+        EntityChangedIntegrationEvent<DtoIndustry>
     {
     }
 }

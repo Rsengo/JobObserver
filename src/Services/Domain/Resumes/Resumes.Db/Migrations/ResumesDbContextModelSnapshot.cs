@@ -328,8 +328,6 @@ namespace Resumes.Db.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasAlternateKey("Name");
-
                     b.HasIndex("ParentId");
 
                     b.ToTable("AREAS");
@@ -407,8 +405,6 @@ namespace Resumes.Db.Migrations
                     b.Property<long?>("ParentId");
 
                     b.HasKey("Id");
-
-                    b.HasAlternateKey("Name");
 
                     b.HasIndex("ParentId");
 
@@ -763,8 +759,6 @@ namespace Resumes.Db.Migrations
                     b.Property<long?>("ParentId");
 
                     b.HasKey("Id");
-
-                    b.HasAlternateKey("Name");
 
                     b.HasIndex("ParentId");
 

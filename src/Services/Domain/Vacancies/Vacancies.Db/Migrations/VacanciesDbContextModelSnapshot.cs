@@ -185,8 +185,6 @@ namespace Vacancies.Db.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasAlternateKey("Name");
-
                     b.HasIndex("ParentId");
 
                     b.ToTable("AREAS");
@@ -264,8 +262,6 @@ namespace Vacancies.Db.Migrations
                     b.Property<long?>("ParentId");
 
                     b.HasKey("Id");
-
-                    b.HasAlternateKey("Name");
 
                     b.HasIndex("ParentId");
 
@@ -480,8 +476,6 @@ namespace Vacancies.Db.Migrations
                     b.Property<long?>("ParentId");
 
                     b.HasKey("Id");
-
-                    b.HasAlternateKey("Name");
 
                     b.HasIndex("ParentId");
 

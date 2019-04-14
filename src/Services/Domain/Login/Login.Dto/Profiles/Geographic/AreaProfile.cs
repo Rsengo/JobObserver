@@ -15,12 +15,6 @@ namespace Login.Dto.Profiles.Geographic
                     dest => dest.Parent,
                     opt => opt.MapFrom(
                         src => Mapper.Map<DtoArea>(src.Parent)));
-
-            CreateMap<Area, DtoAreaSync>()
-                .ForMember(
-                    dest => dest.Areas,
-                    opt => opt.MapFrom(
-                        src => src.Areas.Select(Mapper.Map<DtoAreaSync>)));
         }
 
         public override void Dto2Entity()
@@ -33,15 +27,6 @@ namespace Login.Dto.Profiles.Geographic
                 .ForMember(
                     dest => dest.Areas,
                     opt => opt.Ignore());
-
-            CreateMap<DtoAreaSync, Area>()
-                .ForMember(
-                    dest => dest.Parent,
-                    opt => opt.Ignore())
-                .ForMember(
-                    dest => dest.Areas,
-                    opt => opt.MapFrom(
-                        s => s.Areas.Select(Mapper.Map<Area>)));
         }
     }
 }

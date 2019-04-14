@@ -192,8 +192,6 @@ namespace Dictionaries.Db.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasAlternateKey("Name");
-
                     b.HasIndex("ParentId");
 
                     b.ToTable("INDUSTRIES");
@@ -311,8 +309,6 @@ namespace Dictionaries.Db.Migrations
                     b.Property<long?>("ParentId");
 
                     b.HasKey("Id");
-
-                    b.HasAlternateKey("Name");
 
                     b.HasIndex("ParentId");
 

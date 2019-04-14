@@ -14,7 +14,6 @@ namespace Resumes.Db.Maps.Industries
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
-            builder.HasAlternateKey(x => x.Name);
             builder.Property(x => x.Name).IsRequired();
 
             builder

@@ -108,8 +108,6 @@ namespace Employers.Db.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasAlternateKey("Name");
-
                     b.HasIndex("ParentId");
 
                     b.ToTable("AREAS");

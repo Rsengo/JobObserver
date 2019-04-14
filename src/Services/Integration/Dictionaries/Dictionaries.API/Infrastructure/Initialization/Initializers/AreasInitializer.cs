@@ -14,7 +14,7 @@ namespace Dictionaries.API.Infrastructure.Initialization.Initializers
 {
     [JsonFileName("areas.json")]
     public class AreasInitializer :
-        BaseDictionaryInitializer<DtoAreaSync, Area>
+        BaseDictionaryInitializer<DtoArea, Area>
     {
         public AreasInitializer(
             string jsonPath,
@@ -26,7 +26,7 @@ namespace Dictionaries.API.Infrastructure.Initialization.Initializers
 
         protected override void ProduceEvent(IEnumerable<Area> eventData)
         {
-            var dtoData = eventData.Select(Mapper.Map<DtoAreaSync>);
+            var dtoData = eventData.Select(Mapper.Map<DtoArea>);
 
             var @event = new AreasChanged
             {
@@ -52,6 +52,7 @@ namespace Dictionaries.API.Infrastructure.Initialization.Initializers
             {
                 var children = datum.Areas;
                 datum.Areas = null;
+                datum.Parent = null;
 
                 if (children == null || !children.Any())
                     continue;

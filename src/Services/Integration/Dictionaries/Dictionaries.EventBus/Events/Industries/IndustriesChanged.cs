@@ -7,7 +7,7 @@ using Dictionaries.Dto.Models.Industries;
 namespace Dictionaries.EventBus.Events.Industries
 {
     public class IndustriesChanged : 
-        EntityChangedIntegrationEvent<DtoIndustrySync>
+        EntityChangedIntegrationEvent<DtoIndustry>
     {
     }
 }

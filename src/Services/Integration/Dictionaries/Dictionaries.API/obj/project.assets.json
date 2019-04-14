@@ -3436,10 +3436,11 @@
           "lib/netstandard1.5/System.ComponentModel.TypeConverter.dll": {}
         }
       },
-      "System.Configuration.ConfigurationManager/4.4.0": {
+      "System.Configuration.ConfigurationManager/4.5.0": {
         "type": "package",
         "dependencies": {
-          "System.Security.Cryptography.ProtectedData": "4.4.0"
+          "System.Security.Cryptography.ProtectedData": "4.5.0",
+          "System.Security.Permissions": "4.5.0"
         },
         "compile": {
           "ref/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
@@ -4140,7 +4141,7 @@
           "ref/netstandard1.0/System.Reflection.Primitives.dll": {}
         }
       },
-      "System.Reflection.TypeExtensions/4.4.0": {
+      "System.Reflection.TypeExtensions/4.5.0": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.0/_._": {}
@@ -4505,7 +4506,7 @@
           "lib/netstandard1.3/System.Security.Cryptography.Primitives.dll": {}
         }
       },
-      "System.Security.Cryptography.ProtectedData/4.4.0": {
+      "System.Security.Cryptography.ProtectedData/4.5.0": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/_._": {}
@@ -4934,15 +4935,16 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
-      "Z.EntityFramework.Extensions.EFCore/2.1.59": {
+      "Z.EntityFramework.Extensions.EFCore/2.2.3": {
         "type": "package",
         "dependencies": {
-          "Microsoft.CSharp": "4.4.0",
+          "Microsoft.CSharp": "4.5.0",
           "Microsoft.EntityFrameworkCore.Relational": "2.0.0",
-          "System.Configuration.ConfigurationManager": "4.4.0",
-          "System.Data.SqlClient": "4.4.0",
+          "Microsoft.Extensions.Configuration.Json": "2.2.0",
+          "System.Configuration.ConfigurationManager": "4.5.0",
+          "System.Data.SqlClient": "4.5.0",
           "System.Reflection.Emit": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.4.0"
+          "System.Reflection.TypeExtensions": "4.5.0"
         },
         "compile": {
           "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.dll": {}
@@ -4956,7 +4958,8 @@
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "AutoMapper": "8.0.0",
-          "BuildingBlocks.Extensions.Assemblies": "1.0.0"
+          "BuildingBlocks.Extensions.Assemblies": "1.0.0",
+          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.AutoMapper.dll": {}
@@ -4969,7 +4972,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
-          "Newtonsoft.Json": "12.0.1"
+          "Newtonsoft.Json": "12.0.1",
+          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.DataTransfer.dll": {}
@@ -4981,6 +4985,9 @@
       "BuildingBlocks.EntityFramework/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
+        },
         "compile": {
           "bin/placeholder/BuildingBlocks.EntityFramework.dll": {}
         },
@@ -4992,7 +4999,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
-          "Newtonsoft.Json": "12.0.1"
+          "Newtonsoft.Json": "12.0.1",
+          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.EventBus.dll": {}
@@ -5009,7 +5017,8 @@
           "Microsoft.Extensions.Logging": "2.2.0",
           "Newtonsoft.Json": "12.0.1",
           "Polly": "7.0.2",
-          "RabbitMQ.Client": "5.1.0"
+          "RabbitMQ.Client": "5.1.0",
+          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.EventBus.RabbitMQ.dll": {}
@@ -5024,7 +5033,8 @@
         "dependencies": {
           "BuildingBlocks.EventBus": "1.0.0",
           "Microsoft.EntityFrameworkCore": "2.2.2",
-          "Newtonsoft.Json": "12.0.1"
+          "Newtonsoft.Json": "12.0.1",
+          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.EventBus.Synchronization.dll": {}
@@ -5036,6 +5046,9 @@
       "BuildingBlocks.Extensions.Assemblies/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
+        },
         "compile": {
           "bin/placeholder/BuildingBlocks.Extensions.Assemblies.dll": {}
         },
@@ -5048,7 +5061,8 @@
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "BuildingBlocks.AutoMapper": "1.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0",
+          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.Extensions.AutoMapper.dll": {}
@@ -5064,7 +5078,8 @@
           "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
           "Microsoft.EntityFrameworkCore": "2.2.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2",
-          "Polly": "7.0.2"
+          "Polly": "7.0.2",
+          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.Extensions.EntityFramework.dll": {}
@@ -5079,7 +5094,8 @@
         "dependencies": {
           "BuildingBlocks.EventBus.RabbitMQ": "1.0.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
-          "RabbitMQ.Client": "5.1.0"
+          "RabbitMQ.Client": "5.1.0",
+          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.Extensions.EventBus.RabbitMQ.dll": {}
@@ -5096,7 +5112,7 @@
           "Microsoft.EntityFrameworkCore": "2.2.2",
           "Microsoft.EntityFrameworkCore.AutoHistory": "2.1.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2",
-          "Z.EntityFramework.Extensions.EFCore": "2.1.59"
+          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
         },
         "compile": {
           "bin/placeholder/Dictionaries.Db.dll": {}
@@ -5112,7 +5128,8 @@
           "BuildingBlocks.AutoMapper": "1.0.0",
           "BuildingBlocks.DataTransfer": "1.0.0",
           "Dictionaries.Db": "1.0.0",
-          "Newtonsoft.Json": "12.0.1"
+          "Newtonsoft.Json": "12.0.1",
+          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
         },
         "compile": {
           "bin/placeholder/Dictionaries.Dto.dll": {}
@@ -5128,7 +5145,8 @@
           "BuildingBlocks.EventBus": "1.0.0",
           "BuildingBlocks.EventBus.Synchronization": "1.0.0",
           "Dictionaries.Dto": "1.0.0",
-          "Newtonsoft.Json": "12.0.1"
+          "Newtonsoft.Json": "12.0.1",
+          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
         },
         "compile": {
           "bin/placeholder/Dictionaries.EventBus.dll": {}
@@ -9253,11 +9271,12 @@
         "system.componentmodel.typeconverter.nuspec"
       ]
     },
-    "System.Configuration.ConfigurationManager/4.4.0": {
-      "sha512": "gWwQv/Ug1qWJmHCmN17nAbxJYmQBM/E94QxKLksvUiiKB1Ld3Sc/eK1lgmbSjDFxkQhVuayI/cGFZhpBSodLrg==",
+    "System.Configuration.ConfigurationManager/4.5.0": {
+      "sha512": "+2SYYKwbN0n+9SrBanflZdaVleFkytEfTNzOu+f3SK0vROMMrorpw1UJyHJQ1ZooughRxPmLj8Fh5N2tSe7sdA==",
       "type": "package",
-      "path": "system.configuration.configurationmanager/4.4.0",
+      "path": "system.configuration.configurationmanager/4.5.0",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net461/System.Configuration.ConfigurationManager.dll",
@@ -9266,7 +9285,7 @@
         "ref/net461/System.Configuration.ConfigurationManager.xml",
         "ref/netstandard2.0/System.Configuration.ConfigurationManager.dll",
         "ref/netstandard2.0/System.Configuration.ConfigurationManager.xml",
-        "system.configuration.configurationmanager.4.4.0.nupkg.sha512",
+        "system.configuration.configurationmanager.4.5.0.nupkg.sha512",
         "system.configuration.configurationmanager.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -11290,12 +11309,12 @@
         "system.reflection.primitives.nuspec"
       ]
     },
-    "System.Reflection.TypeExtensions/4.4.0": {
-      "sha512": "dkmh/ySlwnXJp/1qYP9uyKkCK1CXR/REFzl7abHcArxBcV91mY2CgrrzSRA5Z/X4MevJWwXsklGRdR3A7K9zbg==",
+    "System.Reflection.TypeExtensions/4.5.0": {
+      "sha512": "Si8PkGGxxDKLm6ap31x4hoDBsL3yX+gwmGJWqVJUwHofyTubjj8MjC6ckhAmjGWszWLA1wGNC+QAQMQkWG8qbw==",
       "type": "package",
-      "path": "system.reflection.typeextensions/4.4.0",
+      "path": "system.reflection.typeextensions/4.5.0",
       "files": [
-        ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
@@ -11308,6 +11327,7 @@
         "lib/netstandard1.3/System.Reflection.TypeExtensions.dll",
         "lib/netstandard1.5/System.Reflection.TypeExtensions.dll",
         "lib/netstandard2.0/System.Reflection.TypeExtensions.dll",
+        "lib/uap10.0.16299/_._",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
@@ -11342,12 +11362,14 @@
         "ref/netstandard1.5/zh-hant/System.Reflection.TypeExtensions.xml",
         "ref/netstandard2.0/System.Reflection.TypeExtensions.dll",
         "ref/netstandard2.0/System.Reflection.TypeExtensions.xml",
+        "ref/uap10.0.16299/_._",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
         "runtimes/aot/lib/netcore50/System.Reflection.TypeExtensions.dll",
-        "system.reflection.typeextensions.4.4.0.nupkg.sha512",
+        "runtimes/aot/lib/uap10.0.16299/_._",
+        "system.reflection.typeextensions.4.5.0.nupkg.sha512",
         "system.reflection.typeextensions.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -12309,11 +12331,12 @@
         "system.security.cryptography.primitives.nuspec"
       ]
     },
-    "System.Security.Cryptography.ProtectedData/4.4.0": {
-      "sha512": "cJV7ScGW7EhatRsjehfvvYVBvtiSMKgN8bOVI0bQhnF5bU7vnHVIsH49Kva7i7GWaWYvmEzkYVk1TC+gZYBEog==",
+    "System.Security.Cryptography.ProtectedData/4.5.0": {
+      "sha512": "s/MFK8BvgtejZj5a8qAPDXEGBtWkpFX98qwQP/wqVa9CgIC7LrKHxDFdlN5x6afGAb0ZVBVGIZlCdBLnO2QjZw==",
       "type": "package",
-      "path": "system.security.cryptography.protecteddata/4.4.0",
+      "path": "system.security.cryptography.protecteddata/4.5.0",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
@@ -12342,7 +12365,7 @@
         "runtimes/win/lib/net461/System.Security.Cryptography.ProtectedData.dll",
         "runtimes/win/lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
         "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
-        "system.security.cryptography.protecteddata.4.4.0.nupkg.sha512",
+        "system.security.cryptography.protecteddata.4.5.0.nupkg.sha512",
         "system.security.cryptography.protecteddata.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -13566,15 +13589,15 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
-    "Z.EntityFramework.Extensions.EFCore/2.1.59": {
-      "sha512": "O2USvkj2+t6Rp1WequHvaj9KYIJMmnVZ1lw5GNAaubNxCPrmNstu8idCb9cg6gvumgxM85cB309L6kiRFt65qQ==",
+    "Z.EntityFramework.Extensions.EFCore/2.2.3": {
+      "sha512": "nxiOaCDIIMWkGweVlebCsUTy43P53uIipPSqipYloq9ffMsbOekB4FfDkC28yO65fGIQpTnluloglhrr3YG1VA==",
       "type": "package",
-      "path": "z.entityframework.extensions.efcore/2.1.59",
+      "path": "z.entityframework.extensions.efcore/2.2.3",
       "files": [
         ".signature.p7s",
         "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.dll",
         "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.xml",
-        "z.entityframework.extensions.efcore.2.1.59.nupkg.sha512",
+        "z.entityframework.extensions.efcore.2.2.3.nupkg.sha512",
         "z.entityframework.extensions.efcore.nuspec"
       ]
     },
@@ -13663,7 +13686,7 @@
       "Serilog.Extensions.Logging >= 2.0.2",
       "Serilog.Sinks.Elasticsearch >= 7.1.0",
       "Swashbuckle.AspNetCore >= 4.0.1",
-      "Z.EntityFramework.Extensions.EFCore >= 2.1.59"
+      "Z.EntityFramework.Extensions.EFCore >= 2.2.3"
     ]
   },
   "packageFolders": {
@@ -13777,7 +13800,7 @@
           },
           "Z.EntityFramework.Extensions.EFCore": {
             "target": "Package",
-            "version": "[2.1.59, )"
+            "version": "[2.2.3, )"
           }
         },
         "imports": [

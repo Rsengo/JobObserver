@@ -9,7 +9,7 @@ using Dictionaries.Dto.Models.Specializations;
 namespace Dictionaries.EventBus.Events.Specializations
 {
     public class SpecializationsChanged : 
-        EntityChangedIntegrationEvent<DtoSpecializationSync>
+        EntityChangedIntegrationEvent<DtoSpecialization>
     {
     }
 }

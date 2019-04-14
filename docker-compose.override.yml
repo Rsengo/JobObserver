@@ -44,67 +44,79 @@ services:
   #   # volumes:
   #   #   - ./database/moodle_data:/bitnami
 
-  elasticsearch:
+  # elasticsearch:
+  #   ports:
+  #     - "9200:9200"
+    # volumes:
+      # - ./database/elasticsearch:/usr/share/elasticsearch/data
+
+  # kibana:
+  #   ports:
+  #     - "5601:5601"
+
+  brandedtemplates.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=Server=sql.data;Database=BRANDED_TEMPLATES;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - ElasticSearch=elasticsearch:9200
+      - LogFolder=logs
     ports:
-      - "9200:9200"
-    volumes:
-      - ./database/elasticsearch:/usr/share/elasticsearch/data
+      - "5101:80"   
+    volumes
+      - ./${LOG_FOLDER}:/app/{LOG_FOLDER}
 
-  kibana:
+  careerdays.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=Server=sql.data;Database=CAREER_DAYS;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - ElasticSearch=elasticsearch:9200
+      - LogFolder=logs
     ports:
-      - "5601:5601"
+      - "5102:80" 
+    volumes
+      - ./${LOG_FOLDER}:/app/{LOG_FOLDER} 
 
-  # brandedtemplates.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=http://0.0.0.0:80
-  #     - ConnectionString=Server=sql.data;Database=BRANDED_TEMPLATES;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - ElasticSearch=elasticsearch:9200
-  #   ports:
-  #     - "5101:80"   
+  educationalinstitutions.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=Server=sql.data;Database=EDUCATIONAL_INSTITUTIONS;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - ElasticSearch=elasticsearch:9200
+      - LogFolder=logs
+    ports:
+      - "5103:80"  
+    volumes
+      - ./${LOG_FOLDER}:/app/{LOG_FOLDER} 
 
-  # careerdays.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=http://0.0.0.0:80
-  #     - ConnectionString=Server=sql.data;Database=CAREER_DAYS;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - ElasticSearch=elasticsearch:9200
-  #   ports:
-  #     - "5102:80"  
-
-  # educationalinstitutions.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=http://0.0.0.0:80
-  #     - ConnectionString=Server=sql.data;Database=EDUCATIONAL_INSTITUTIONS;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - ElasticSearch=elasticsearch:9200
-  #   ports:
-  #     - "5103:80"  
-
-  # employers.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=http://0.0.0.0:80
-  #     - ConnectionString=Server=sql.data;Database=EMPLOYERS;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - ElasticSearch=elasticsearch:9200
-  #   ports:
-  #     - "5104:80"  
+  employers.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=Server=sql.data;Database=EMPLOYERS;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - ElasticSearch=elasticsearch:9200
+      - LogFolder=logs
+    ports:
+      - "5104:80"  
+    volumes
+      - ./${LOG_FOLDER}:/app/{LOG_FOLDER} 
 
   # login.api:
   #   environment:
@@ -117,18 +129,24 @@ services:
   #     - EventBusUserName=${EVENT_BUS_USER_NAME}
   #     - EventBusPassword=${EVENT_BUS_PASSWORD}
   #     - ElasticSearch=elasticsearch:9200
+  #     - LogFolder=logs
   #   ports:
   #     - "5105:80"  
+  #   volumes
+  #     - ./${LOG_FOLDER}:/app/{LOG_FOLDER} 
 
-  # paidservices.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=http://0.0.0.0:80
-  #     - ConnectionString=Server=sql.data;Database=PAID_SERVICES;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - ElasticSearch=elasticsearch:9200
-  #   ports:
-  #     - "5106:80"  
+  paidservices.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=Server=sql.data;Database=PAID_SERVICES;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - ElasticSearch=elasticsearch:9200
+      - LogFolder=logs
+    ports:
+      - "5106:80"  
+    volumes
+      - ./${LOG_FOLDER}:/app/{LOG_FOLDER} 
 
   resumes.api:
     environment:
@@ -141,8 +159,11 @@ services:
       - EventBusUserName=${EVENT_BUS_USER_NAME}
       - EventBusPassword=${EVENT_BUS_PASSWORD}
       - ElasticSearch=elasticsearch:9200
+      - LogFolder=logs
     ports:
-      - "5107:80"  
+      - "5107:80" 
+    volumes
+      - ./${LOG_FOLDER}:/app/{LOG_FOLDER}  
 
   vacancies.api:
     environment:
@@ -155,8 +176,11 @@ services:
       - EventBusUserName=${EVENT_BUS_USER_NAME}
       - EventBusPassword=${EVENT_BUS_PASSWORD}
       - ElasticSearch=elasticsearch:9200
+      - LogFolder=logs
     ports:
       - "5108:80" 
+    volumes
+      - ./${LOG_FOLDER}:/app/{LOG_FOLDER} 
 
   dictionaries.api:
     environment:
@@ -169,8 +193,12 @@ services:
       - EventBusUserName=${EVENT_BUS_USER_NAME}
       - EventBusPassword=${EVENT_BUS_PASSWORD}
       - ElasticSearch=elasticsearch:9200
+      - LogFolder=logs
     ports:
-      - "5109:80"  
+      - "5109:80" 
+    volumes:
+      - ./src/Services/Integration/Dictionaries/Dictionaries.API/Sources:/app/Sources 
+      - ./${LOG_FOLDER}:/app/{LOG_FOLDER}
 
   # moodle.api:
   #   environment:
@@ -185,28 +213,36 @@ services:
   #     - MoodleRestUrl=moodle/webservice/rest/server.php
   #     - MoodleToken=f3f5be086fd0b9cf4ed3d09a3fdf1da0
   #     - MoodleRestFormat=json
+  #     - LogFolder=logs
   #   ports:
   #     - "5111:80" 
+  #   volumes
+  #     - ./${LOG_FOLDER}:/app/{LOG_FOLDER} 
 
-  # emailnotifications.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=http://0.0.0.0:80
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - ElasticSearch=elasticsearch:9200
-  #   ports:
-  #     - "5110:80" 
+  emailnotifications.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - CorsPolicy=${CORS_POLICY}
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - ElasticSearch=elasticsearch:9200
+      - LogFolder=logs
+    ports:
+      - "5110:80" 
+    volumes
+      - ./${LOG_FOLDER}:/app/{LOG_FOLDER} 
 
-  # apigw:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development   
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - ElasticSearch=elasticsearch:9200
-  #   ports:
-  #     - "5200:80"   
-  #   volumes:
-  #     - ./src/ApiGateways/WebApp.Bff/apigw:${OCELOT_VOLUME_SPEC:-/app/configuration}
+  apigw:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development   
+      - CorsPolicy=${CORS_POLICY}
+      - ElasticSearch=elasticsearch:9200
+      - LogFolder=logs
+    ports:
+      - "5200:80"   
+    volumes:
+      - ./src/ApiGateways/WebApp.Bff/apigw:${OCELOT_VOLUME_SPEC:-/app/configuration}
+      - ./${LOG_FOLDER}:/app/{LOG_FOLDER} 

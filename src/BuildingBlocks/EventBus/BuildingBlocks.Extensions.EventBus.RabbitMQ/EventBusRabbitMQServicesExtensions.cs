@@ -21,6 +21,11 @@ namespace BuildingBlocks.Extensions.EventBus.RabbitMQ
             var configuration = new EventBusRabbitMQConfigurationBuilder();
             builder(configuration);
 
+            foreach (var handler in configuration.EventHandlers)
+            {
+                services.AddScoped(handler);
+            }
+
             var retryCount = configuration.RetryCount;
 
             if (configuration.SubscriptionManager == null)
@@ -50,11 +55,6 @@ namespace BuildingBlocks.Extensions.EventBus.RabbitMQ
 
                 return new EventBusRabbitMQ(rabbitMQPersistentConnection, logger, sp, eventBusSubscriptionsManager, EventBusSubscriptionClientName, retryCount);
             });
-
-            foreach (var handler in configuration.EventHandlers)
-            {
-                services.AddTransient(handler);
-            }
 
             return services;
         }
