@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 // core_course_create_courses
@@ -41,25 +42,29 @@ namespace Moodle.Integration.Models.CreateCourse
         /// <summary>
         /// <param name="FullName">Full name of the course.</param> 
         /// </summary>
+        [Required]
         [JsonProperty("fullname")]
         public string FullName { get; set; }
 
         /// <summary>
         /// <param name="ShortName">Short name of the course.</param> 
         /// </summary>
+        [Required]
         [JsonProperty("shortname")]
         public string ShortName { get; set; }
 
         /// <summary>
         /// <param name="CategoryId">Category ID of the course.</param> 
         /// </summary>
+        [Required]
         [JsonProperty("categoryid")]
         public int CategoryId { get; set; }
 
         /// <summary>
         /// <param name="CategoryId">Id number of the course. Optional.</param> 
         /// </summary>
-        [JsonProperty("idnumber")]
+        
+[JsonProperty("idnumber")]
         public string IdNumber { get; set; }
 
         /// <summary>

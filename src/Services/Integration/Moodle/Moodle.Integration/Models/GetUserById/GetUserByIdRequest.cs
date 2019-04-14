@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace Moodle.Integration.Models.GetUserById
@@ -30,6 +31,7 @@ namespace Moodle.Integration.Models.GetUserById
         public string Value { get; set; }
     }
 
+    //core_user_get_users
     public class GetUserByIdRequest : MoodleRequest
     {
         public GetUserByIdRequest(int id)
@@ -43,6 +45,7 @@ namespace Moodle.Integration.Models.GetUserById
         /// <summary>
         /// <param name="Criterias"> Pairs of key\value to search </param>
         /// </summary>
+        [Required]
         [JsonProperty("criteria")]
         public ICollection<Criteria> Criterias;
     }
