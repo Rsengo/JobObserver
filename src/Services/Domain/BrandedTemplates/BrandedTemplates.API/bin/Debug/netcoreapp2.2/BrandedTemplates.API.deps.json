@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "dc4323ee81966e7b443a048aceb812acbb66a897"
+    "signature": "678a33d3a749b5b8f747f5b2cd047b85f92f2775"
   },
   "compilationOptions": {
     "defines": [
@@ -475,6 +475,38 @@
           "lib/netstandard1.3/Serilog.Formatting.Elasticsearch.dll": {}
         }
       },
+      "Serilog.Sinks.ColoredConsole/3.0.1": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "Serilog.Sinks.Console": "3.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Serilog.Sinks.ColoredConsole.dll": {
+            "assemblyVersion": "3.0.1.0",
+            "fileVersion": "3.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.3/Serilog.Sinks.ColoredConsole.dll": {}
+        }
+      },
+      "Serilog.Sinks.Console/3.0.1": {
+        "dependencies": {
+          "Serilog": "2.8.0",
+          "System.Console": "4.3.0",
+          "System.Runtime.InteropServices": "4.3.0",
+          "System.Runtime.InteropServices.RuntimeInformation": "4.3.0"
+        },
+        "runtime": {
+          "lib/netcoreapp1.1/Serilog.Sinks.Console.dll": {
+            "assemblyVersion": "3.0.1.0",
+            "fileVersion": "3.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp1.1/Serilog.Sinks.Console.dll": {}
+        }
+      },
       "Serilog.Sinks.Elasticsearch/7.1.0": {
         "dependencies": {
           "Elasticsearch.Net": "6.0.0",
@@ -717,6 +749,7 @@
           "Microsoft.EntityFrameworkCore": "2.2.2",
           "Microsoft.EntityFrameworkCore.AutoHistory": "2.1.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2",
+          "Serilog.Sinks.ColoredConsole": "3.0.1",
           "Z.EntityFramework.Extensions.EFCore": "2.2.3"
         },
         "runtime": {
@@ -3912,6 +3945,20 @@
       "sha512": "sha512-eOS7NoZXwUcTQCFHB9L2NN82GfIRRNPVMAuA02eN06uQrFFaHWknG21R3N2WX0RSQCEBeZZAejtdt4TGuaJRoQ==",
       "path": "serilog.formatting.elasticsearch/7.1.0",
       "hashPath": "serilog.formatting.elasticsearch.7.1.0.nupkg.sha512"
+    },
+    "Serilog.Sinks.ColoredConsole/3.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AFGouhnlwRgkj681OhydBziOaxlQQjW7dnPP31e29bpLmJy2sBp467Mb8uQPLvxfOq2yue5BG/d4uEeY1DpZFQ==",
+      "path": "serilog.sinks.coloredconsole/3.0.1",
+      "hashPath": "serilog.sinks.coloredconsole.3.0.1.nupkg.sha512"
+    },
+    "Serilog.Sinks.Console/3.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-41WpKGqLbkGBc1FP8coznEi2fDOoqB5JgmjKKzWbK6uUXHXZxozR20X1OxfU54xQcPBjcVMrWtIbHNXAYJU1bQ==",
+      "path": "serilog.sinks.console/3.0.1",
+      "hashPath": "serilog.sinks.console.3.0.1.nupkg.sha512"
     },
     "Serilog.Sinks.Elasticsearch/7.1.0": {
       "type": "package",
