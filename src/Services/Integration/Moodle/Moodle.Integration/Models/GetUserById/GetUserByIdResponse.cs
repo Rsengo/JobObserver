@@ -62,10 +62,10 @@ namespace Moodle.Integration.Models.GetUserById
         public int? ItemId { get; set; }
 
         /// <summary>
-        /// <param name="WarnindCode"> the warning code can be used by the client app to implement specific behaviour</param> 
+        /// <param name="WarningCode"> the warning code can be used by the client app to implement specific behaviour</param> 
         /// </summary>
         [JsonProperty("warningcode")]
-        public string WarnindCode { get; set; }
+        public string WarningCode { get; set; }
 
         /// <summary>
         /// <param name="Message"> Untranslated english message to explain the warning</param> 
@@ -302,7 +302,7 @@ namespace Moodle.Integration.Models.GetUserById
         // <summary>
         /// <param name="Warnings  "> List of warnings. Optional.</param> 
         /// </summary>
-        [JsonProperty("warnings  ")]
+        [JsonProperty("warnings")]
         public ICollection<Warning> Warnings { get; set; }
 
     }
