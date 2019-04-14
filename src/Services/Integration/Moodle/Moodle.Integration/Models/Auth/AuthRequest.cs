@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Moodle.Integration.Models.Auth
 {
-    class AuthRequest : MoodleRequest
+    public class AuthRequest : MoodleRequest
     {
     }
 }

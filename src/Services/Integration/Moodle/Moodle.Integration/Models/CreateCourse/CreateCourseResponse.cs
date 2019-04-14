@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Moodle.Integration.Models.CreateCourse
 {
-    class CreateCourseResponse
+    public class CreateCourseResponse
     {
         /// <summary>
         /// <param name="CourseId">Course id.</param> 

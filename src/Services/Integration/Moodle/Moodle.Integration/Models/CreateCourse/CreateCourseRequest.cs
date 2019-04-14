@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Moodle.Integration.Models.CreateCourse
 {
-    class CourseFormatOption
+    public class CourseFormatOption
     {
         /// <summary>
         /// <param name="Name"> Course format option name.</param> 
@@ -23,7 +23,7 @@ namespace Moodle.Integration.Models.CreateCourse
     }
 
 
-    class CreateCourseRequest : MoodleRequest
+    public class CreateCourseRequest : MoodleRequest
     {
         public CreateCourseRequest() // setting default values
         {

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Moodle.Integration.Models.CreateQuiz
 {
-    class CreateQuizRequest : MoodleRequest
+    public class CreateQuizRequest : MoodleRequest
     {
     }
 }

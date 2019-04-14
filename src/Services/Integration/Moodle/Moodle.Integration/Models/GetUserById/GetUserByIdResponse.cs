@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Moodle.Integration.Models.GetUserById
 {
-    class ProfileField
+    public class ProfileField
     {
         /// <summary>
         /// <param name="Type"> The type of the custom field - text field, checkbox...</param> 
@@ -32,7 +32,7 @@ namespace Moodle.Integration.Models.GetUserById
         public string ShortName { get; set; }
     }
 
-    class Preference
+    public class Preference
     {
         /// <summary>
         /// <param name="Name"> The name of the preferences</param> 
@@ -47,7 +47,7 @@ namespace Moodle.Integration.Models.GetUserById
         public string Value { get; set; }
     }
 
-    class Warning
+    public class Warning
     {
         /// <summary>
         /// <param name="Item"> Always set to 'key'. Optional</param> 

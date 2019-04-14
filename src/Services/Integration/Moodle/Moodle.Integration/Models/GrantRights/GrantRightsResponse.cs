@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Moodle.Integration.Models.GrantRights
 {
-    class GrantRightsResponse
+    public class GrantRightsResponse
     {
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Moodle.Integration.Models.GetUserById
 {
-    class Criteria
+    public class Criteria
     {
         public Criteria()
         {
@@ -30,7 +30,7 @@ namespace Moodle.Integration.Models.GetUserById
         public string Value { get; set; }
     }
 
-    class GetUserByIdRequest : MoodleRequest
+    public class GetUserByIdRequest : MoodleRequest
     {
         public GetUserByIdRequest(int id)
         {

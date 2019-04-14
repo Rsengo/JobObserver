@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Moodle.Integration.Models.Registration
 {
-    class RegistrationResponse
+    public class RegistrationResponse
     {
     }
 }

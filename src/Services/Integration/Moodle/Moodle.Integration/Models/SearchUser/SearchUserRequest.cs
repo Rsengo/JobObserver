@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Moodle.Integration.Models.SearchUser
 {
-    class SearchUserRequest : MoodleRequest
+    public class SearchUserRequest : MoodleRequest
     {
     }
 }

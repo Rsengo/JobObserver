@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Moodle.Integration.Models.GetCourseStats
 {
-    class GetCourseStatsRequest : MoodleRequest
+    public class GetCourseStatsRequest : MoodleRequest
     {
     }
 }
