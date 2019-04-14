@@ -3170,6 +3170,34 @@
           "lib/netstandard1.3/Serilog.Formatting.Elasticsearch.dll": {}
         }
       },
+      "Serilog.Sinks.ColoredConsole/3.0.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Serilog.Sinks.Console": "3.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Serilog.Sinks.ColoredConsole.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Serilog.Sinks.ColoredConsole.dll": {}
+        }
+      },
+      "Serilog.Sinks.Console/3.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Serilog": "2.5.0",
+          "System.Console": "4.3.0",
+          "System.Runtime.InteropServices": "4.3.0",
+          "System.Runtime.InteropServices.RuntimeInformation": "4.3.0"
+        },
+        "compile": {
+          "lib/netcoreapp1.1/Serilog.Sinks.Console.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp1.1/Serilog.Sinks.Console.dll": {}
+        }
+      },
       "Serilog.Sinks.Elasticsearch/7.1.0": {
         "type": "package",
         "dependencies": {
@@ -8622,6 +8650,34 @@
         "serilog.formatting.elasticsearch.nuspec"
       ]
     },
+    "Serilog.Sinks.ColoredConsole/3.0.1": {
+      "sha512": "AFGouhnlwRgkj681OhydBziOaxlQQjW7dnPP31e29bpLmJy2sBp467Mb8uQPLvxfOq2yue5BG/d4uEeY1DpZFQ==",
+      "type": "package",
+      "path": "serilog.sinks.coloredconsole/3.0.1",
+      "files": [
+        ".signature.p7s",
+        "lib/net45/Serilog.Sinks.ColoredConsole.dll",
+        "lib/netstandard1.3/Serilog.Sinks.ColoredConsole.dll",
+        "serilog.sinks.coloredconsole.3.0.1.nupkg.sha512",
+        "serilog.sinks.coloredconsole.nuspec"
+      ]
+    },
+    "Serilog.Sinks.Console/3.0.1": {
+      "sha512": "41WpKGqLbkGBc1FP8coznEi2fDOoqB5JgmjKKzWbK6uUXHXZxozR20X1OxfU54xQcPBjcVMrWtIbHNXAYJU1bQ==",
+      "type": "package",
+      "path": "serilog.sinks.console/3.0.1",
+      "files": [
+        ".signature.p7s",
+        "lib/net45/Serilog.Sinks.Console.dll",
+        "lib/net45/Serilog.Sinks.Console.xml",
+        "lib/netcoreapp1.1/Serilog.Sinks.Console.dll",
+        "lib/netcoreapp1.1/Serilog.Sinks.Console.xml",
+        "lib/netstandard1.3/Serilog.Sinks.Console.dll",
+        "lib/netstandard1.3/Serilog.Sinks.Console.xml",
+        "serilog.sinks.console.3.0.1.nupkg.sha512",
+        "serilog.sinks.console.nuspec"
+      ]
+    },
     "Serilog.Sinks.Elasticsearch/7.1.0": {
       "sha512": "j13hCDg8bmmZ96mSrTq6cRegXwxbGZX5xgoerAHSU1YAeox9l/DQG3ICQDVc/UW+SVAqdA8TD53Oqpjfh31k7Q==",
       "type": "package",
@@ -13681,6 +13737,7 @@
       "Serilog.AspNetCore >= 2.1.1",
       "Serilog.Extensions.Hosting >= 2.0.0",
       "Serilog.Extensions.Logging >= 2.0.2",
+      "Serilog.Sinks.ColoredConsole >= 3.0.1",
       "Serilog.Sinks.Elasticsearch >= 7.1.0",
       "Swashbuckle.AspNetCore >= 4.0.1",
       "Z.EntityFramework.Extensions.EFCore >= 2.2.3"
@@ -13779,6 +13836,10 @@
           "Serilog.Extensions.Logging": {
             "target": "Package",
             "version": "[2.0.2, )"
+          },
+          "Serilog.Sinks.ColoredConsole": {
+            "target": "Package",
+            "version": "[3.0.1, )"
           },
           "Serilog.Sinks.Elasticsearch": {
             "target": "Package",
