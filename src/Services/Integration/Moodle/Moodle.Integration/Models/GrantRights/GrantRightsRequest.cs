@@ -57,5 +57,12 @@ namespace Moodle.Integration.Models.GrantRights
                 Assignments = new List<Assignment>();
             Assignments.Add(assignment);
         }
+
+        // auto sets contextlevel to course
+        public void AddSingleAssignmentToCourse(Assignment assignment)
+        {
+            assignment.ContextLevel = "course";
+            AddSingleAssignment(assignment);
+        }
     }
 }
