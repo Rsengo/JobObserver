@@ -41,14 +41,13 @@ namespace BrandedTemplates.API
                 .UseSerilog((builderContext, config) =>
                 {
                     var url = builderContext.Configuration["ElasticSearch"];
-                    var LogFolder = builderContext.Configuration["LogFolder"];
-                    var filePath = Path.Combine(builderContext.HostingEnvironment.ContentRootPath, LogFolder, "Branded_Templates.txt");
+                    var seqUrl = builderContext.Configuration["Seq"];
                     config
                         .MinimumLevel.Information()
                         .Enrich.FromLogContext()
                         .WriteTo.ColoredConsole()
-                        .WriteTo.File(filePath);
-                        // .WriteTo.Elasticsearch(url);
+                        //.WriteTo.Elasticsearch(url)
+                        .WriteTo.Seq(seqUrl);
                 })
                 .Build();
     }

@@ -15,91 +15,97 @@ services:
   #   depends_on:
   #     - mariadb
 
-  # elasticsearch:
-  #   image: docker.elastic.co/elasticsearch/elasticsearch:6.2.4
+  # elk:
+  #   image: sebp/elk
 
-  # kibana:
-  #   image: docker.elastic.co/kibana/kibana:6.2.4
+  seq:
+    image: datalust/seq:latest
+
+  # brandedtemplates.api:
+  #   image: jobobserver/brandedtemplates.api:${TAG:-latest}
+  #   build:
+  #     context: .
+  #     dockerfile: src/Services/Domain/BrandedTemplates/BrandedTemplates.API/Dockerfile    
   #   depends_on:
-  #     - elasticsearch
+  #     - sql.data
+  #     - seq
+  # #     - elk
 
-  brandedtemplates.api:
-    image: jobobserver/brandedtemplates.api:${TAG:-latest}
-    build:
-      context: .
-      dockerfile: src/Services/Domain/BrandedTemplates/BrandedTemplates.API/Dockerfile    
-    depends_on:
-      - sql.data
-  #     - elasticsearch
+  # careerdays.api:
+  #   image: jobobserver/careerdays.api:${TAG:-latest}
+  #   build:
+  #     context: .
+  #     dockerfile: src/Services/Domain/CareerDays/CareerDays.API/Dockerfile    
+  #   depends_on:
+  #     - sql.data
+  #     - rabbitmq
+  #     - seq
+  # #     - elk
 
-  careerdays.api:
-    image: jobobserver/careerdays.api:${TAG:-latest}
-    build:
-      context: .
-      dockerfile: src/Services/Domain/CareerDays/CareerDays.API/Dockerfile    
-    depends_on:
-      - sql.data
-      - rabbitmq
-  #     - elasticsearch
+  # educationalinstitutions.api:
+  #   image: jobobserver/educationalinstitutions.api:${TAG:-latest}
+  #   build:
+  #     context: .
+  #     dockerfile: src/Services/Domain/EducationalInstitutions/EducationalInstitutions.API/Dockerfile    
+  #   depends_on:
+  #     - sql.data
+  #     - rabbitmq
+  #     - seq
+  # #     - elk
 
-  educationalinstitutions.api:
-    image: jobobserver/educationalinstitutions.api:${TAG:-latest}
-    build:
-      context: .
-      dockerfile: src/Services/Domain/EducationalInstitutions/EducationalInstitutions.API/Dockerfile    
-    depends_on:
-      - sql.data
-      - rabbitmq
-  #     - elasticsearch
+  # employers.api:
+  #   image: jobobserver/employers.api:${TAG:-latest}
+  #   build:
+  #     context: .
+  #     dockerfile: src/Services/Domain/Employers/Employers.API/Dockerfile    
+  #   depends_on:
+  #     - sql.data
+  #     - rabbitmq
+  #     - seq
+  # #     - elk
 
-  employers.api:
-    image: jobobserver/employers.api:${TAG:-latest}
-    build:
-      context: .
-      dockerfile: src/Services/Domain/Employers/Employers.API/Dockerfile    
-    depends_on:
-      - sql.data
-      - rabbitmq
-  #     - elasticsearch
+  # login.api:
+  #   image: jobobserver/login.api:${TAG:-latest}
+  #   build:
+  #     context: .
+  #     dockerfile: src/Services/Domain/Login/Login.API/Dockerfile    
+  #   depends_on:
+  #     - sql.data
+  #     - rabbitmq
+  #     - seq
+  # #     - elk
 
-  login.api:
-    image: jobobserver/login.api:${TAG:-latest}
-    build:
-      context: .
-      dockerfile: src/Services/Domain/Login/Login.API/Dockerfile    
-    depends_on:
-      - sql.data
-      - rabbitmq
-  #     - elasticsearch
+  # paidservices.api:
+  #   image: jobobserver/paidservices.api:${TAG:-latest}
+  #   build:
+  #     context: .
+  #     dockerfile: src/Services/Domain/PaidServices/PaidServices.API/Dockerfile    
+  #   depends_on:
+  #     - sql.data
+  #     - seq
+  # #     - elk
 
-  paidservices.api:
-    image: jobobserver/paidservices.api:${TAG:-latest}
-    build:
-      context: .
-      dockerfile: src/Services/Domain/PaidServices/PaidServices.API/Dockerfile    
-    depends_on:
-      - sql.data
-  #     - elasticsearch
+  # resumes.api:
+  #   image: jobobserver/resumes.api:${TAG:-latest}
+  #   build:
+  #     context: .
+  #     dockerfile: src/Services/Domain/Resumes/Resumes.API/Dockerfile    
+  #   depends_on:
+  #     - sql.data
+  #     - rabbitmq
+  #     - seq
+  # #     - elk
 
-  resumes.api:
-    image: jobobserver/resumes.api:${TAG:-latest}
-    build:
-      context: .
-      dockerfile: src/Services/Domain/Resumes/Resumes.API/Dockerfile    
-    depends_on:
-      - sql.data
-      - rabbitmq
-  #     - elasticsearch
-
-  vacancies.api:
-    image: jobobserver/vacancies.api:${TAG:-latest}
-    build:
-      context: .
-      dockerfile: src/Services/Domain/Vacancies/Vacancies.API/Dockerfile    
-    depends_on:
-      - sql.data
-      - rabbitmq
-  #     - elasticsearch
+  # vacancies.api:
+  #   image: jobobserver/vacancies.api:${TAG:-latest}
+  #   build:
+  #     context: .
+  #     dockerfile: src/Services/Domain/Vacancies/Vacancies.API/Dockerfile    
+  #   depends_on:
+  #     - sql.data
+  #     - rabbitmq
+  #     - seq
+  # #     - elk
 
   dictionaries.api:
     image: jobobserver/dictionaries.api:${TAG:-latest}
@@ -109,7 +115,8 @@ services:
     depends_on:
       - sql.data
       - rabbitmq
-      # - elasticsearch
+      - seq
+      # - elk
 
   #   moodle.api:
   #   image: jobobserver/moodle.api:${TAG:-latest}
@@ -118,32 +125,36 @@ services:
   #     dockerfile: src/Services/Integration/Moodle/Moodle.API/Dockerfile    
   #   depends_on:
   #     - rabbitmq
-  #     - elasticsearch
+  #     - seq
+  #     - elk
 
-    emailnotifications.api:
-    image: jobobserver/emailnotifications.api:${TAG:-latest}
-    build:
-      context: .
-      dockerfile: src/Services/Technical/EmailNotifications/EmailNotifications.API/Dockerfile    
-    depends_on:
-      - rabbitmq
-  #     - elasticsearch
+  #   emailnotifications.api:
+  #   image: jobobserver/emailnotifications.api:${TAG:-latest}
+  #   build:
+  #     context: .
+  #     dockerfile: src/Services/Technical/EmailNotifications/EmailNotifications.API/Dockerfile    
+  #   depends_on:
+  #     - rabbitmq
+  #     - seq
+  # #     - elk
 
-  apigw:
-    image: eshop/ocelotapigw:${TAG:-latest}
-    build:
-      context: .
-      dockerfile: src/ApiGateways/ApiGateway/Dockerfile
-    depends_on:
-      - sql.data
-      - rabbitmq
-      - brandedtemplates.api
-      - careerdays.api
-      - educationalinstitutions.api
-      - employers.api
-      - login.api
-      - paidservices.api
-      - resumes.api
-      - vacancies.api
-      - dictionaries.api
-  #     - elasticsearch
+  # apigw:
+  #   image: eshop/ocelotapigw:${TAG:-latest}
+  #   build:
+  #     context: .
+  #     dockerfile: src/ApiGateways/ApiGateway/Dockerfile
+  #   depends_on:
+  #     - sql.data
+  #     - rabbitmq
+  #     - brandedtemplates.api
+  #     - careerdays.api
+  #     - educationalinstitutions.api
+  #     - employers.api
+  #     - login.api
+  #     - paidservices.api
+  #     - resumes.api
+  #     - vacancies.api
+  #     - dictionaries.api
+  #     - moodle.api
+  #     - seq
+  # #     - elk
