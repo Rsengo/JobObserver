@@ -6,5 +6,6 @@ namespace Moodle.Integration.Models.GrantRights
 {
     public class GrantRightsResponse
     {
+        // It is empty in Moodle API.
     }
 }

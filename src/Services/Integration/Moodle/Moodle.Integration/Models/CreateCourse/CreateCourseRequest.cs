@@ -13,20 +13,21 @@ namespace Moodle.Integration.Models.CreateCourse
         /// <summary>
         /// <param name="Name"> Course format option name.</param> 
         /// </summary>
+        [Required]
         [JsonProperty("name")]
         public string Name { get; set; }
 
         /// <summary>
         /// <param name="Value"> Course format option value.</param> 
         /// </summary>
+        [Required]
         [JsonProperty("value")]
         public string Value { get; set; }
     }
 
-
-    public class CreateCourseRequest : MoodleRequest
+    public class Course
     {
-        public CreateCourseRequest() // setting default values
+        public Course() // setting default values
         {
             SummaryFormat = 1;
             Format = "topics";
@@ -63,8 +64,8 @@ namespace Moodle.Integration.Models.CreateCourse
         /// <summary>
         /// <param name="CategoryId">Id number of the course. Optional.</param> 
         /// </summary>
-        
-[JsonProperty("idnumber")]
+
+        [JsonProperty("idnumber")]
         public string IdNumber { get; set; }
 
         /// <summary>
@@ -188,5 +189,24 @@ namespace Moodle.Integration.Models.CreateCourse
         /// </summary>
         [JsonProperty("courseformatoptions")]
         ICollection<CourseFormatOption> CourseFormatOptions { get; set; }
+    }
+
+
+    //core_course_create_courses
+    public class CreateCourseRequest : MoodleRequest
+    {
+        /// <summary>
+        /// <param name="Courses"> List of courses to add.</param> 
+        /// </summary>
+        [Required]
+        [JsonProperty("courses")]
+        public ICollection<Course> Courses { get; set; }
+
+        public void AddSingleCourse(Course course)
+        {
+            if (Courses == null)
+                Courses = new List<Course>();
+            Courses.Add(course);
+        }
     }
 }

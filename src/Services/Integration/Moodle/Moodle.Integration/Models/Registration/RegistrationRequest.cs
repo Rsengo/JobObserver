@@ -56,10 +56,10 @@ namespace Moodle.Integration.Models.Registration
         public string City { get; set; }
 
         /// <summary>
-        /// <param name="County"> Home county code. Default is empty</param> 
+        /// <param name="Country"> Home county code. Default is empty</param> 
         /// </summary>
-        [JsonProperty("county")]
-        public string County { get; set; }
+        [JsonProperty("country")]
+        public string Country { get; set; }
 
         /// <summary>
         /// <param name="RecaptchaChallengeHash">  Recaptcha challenge hash. Default is empty</param> 

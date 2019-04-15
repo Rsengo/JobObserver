@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace Moodle.Integration.Models.GetUserById
@@ -10,18 +11,21 @@ namespace Moodle.Integration.Models.GetUserById
         /// <summary>
         /// <param name="Type"> The type of the custom field - text field, checkbox...</param> 
         /// </summary>
+        [Required]
         [JsonProperty("type")]
         public string Type { get; set; }
 
         /// <summary>
         /// <param name="Value"> The value of the custom field</param> 
         /// </summary>
+        [Required]
         [JsonProperty("value")]
         public string Value { get; set; }
 
         /// <summary>
         /// <param name="Name"> The name of the custom field</param> 
         /// </summary>
+        [Required]
         [JsonProperty("name")]
         public string Name { get; set; }
 

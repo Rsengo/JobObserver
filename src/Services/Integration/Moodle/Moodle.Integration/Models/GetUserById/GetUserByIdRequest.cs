@@ -21,12 +21,14 @@ namespace Moodle.Integration.Models.GetUserById
         /// <summary>
         /// <param name="Key"> id, lastname, firstname, idnumber, username, username, email, or auth </param>
         /// </summary>
+        [Required]
         [JsonProperty("key")]
         public string Key { get => "id"; }
 
         /// <summary>
-        /// <param name="Value"> Value </param>
+        /// <param name="Value"> Value of the key</param>
         /// </summary>
+        [Required]
         [JsonProperty("value")]
         public string Value { get; set; }
     }
