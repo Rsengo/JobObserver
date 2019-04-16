@@ -1,5 +1,9 @@
 {
   "version": 1,
+<<<<<<< HEAD
   "dgSpecHash": "8iKppRreutT18yCaHZBwzMZRDBehqox6BilOdKMZptWNQPNu3EnzMp2Nsf6ZgqcZ0K8UL3n3xetVQ7i0TscKuw==",
+=======
+  "dgSpecHash": "0tzZTgGh7XCGAdOwIW7C80gbk45mgph9LnDqCwd7YtlfqUo1UETgLPVG3Vrt2XiHsrQQBlLZ4qWfGolLJvUPHQ==",
+>>>>>>> moodle
   "success": true
 }

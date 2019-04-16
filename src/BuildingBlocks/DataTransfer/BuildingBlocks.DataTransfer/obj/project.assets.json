@@ -3399,11 +3399,17 @@
         "version.txt"
       ]
     },
+<<<<<<< HEAD
     "System.Security.Cryptography.ProtectedData/4.5.0": {
       "sha512": "s/MFK8BvgtejZj5a8qAPDXEGBtWkpFX98qwQP/wqVa9CgIC7LrKHxDFdlN5x6afGAb0ZVBVGIZlCdBLnO2QjZw==",
+=======
+    "Microsoft.NETCore.Platforms/2.1.0": {
+      "sha512": "aSTPL94NloSiQVL5Len8wbjFKOnoAX/vOh3s3DF6g3c7GUUMLCDvnBhmA72M2iN2AedyA8hpr7m89kzSAKUnJQ==",
+>>>>>>> moodle
       "type": "package",
       "path": "system.security.cryptography.protecteddata/4.5.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -3460,8 +3466,13 @@
         "version.txt"
       ]
     },
+<<<<<<< HEAD
     "System.Security.Principal.Windows/4.5.0": {
       "sha512": "WA9ETb/pY3BjnxKjBUHEgO59B7d/nnmjHFsqjJ2eDT780nD769CT1/bw2ia0Z6W7NqlcqokE6sKGKa6uw88XGA==",
+=======
+    "NETStandard.Library/2.0.3": {
+      "sha512": "R73gEjqCkI2Nw/IlN8QvcgPNklqQiPowp47JwvW0Bnp/RZnjN4UrJwEvWVJWRK1MsQ+HIfGe9i4aQlfK+ei9jA==",
+>>>>>>> moodle
       "type": "package",
       "path": "system.security.principal.windows/4.5.0",
       "files": [
@@ -3778,23 +3789,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rseng\\.nuget\\packages\\": {},
+    "C:\\Users\\Eugene\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\JobObserver2\\src\\BuildingBlocks\\DataTransfer\\BuildingBlocks.DataTransfer\\BuildingBlocks.DataTransfer.csproj",
+      "projectUniqueName": "E:\\Moodle\\src\\BuildingBlocks\\DataTransfer\\BuildingBlocks.DataTransfer\\BuildingBlocks.DataTransfer.csproj",
       "projectName": "BuildingBlocks.DataTransfer",
-      "projectPath": "C:\\JobObserver2\\src\\BuildingBlocks\\DataTransfer\\BuildingBlocks.DataTransfer\\BuildingBlocks.DataTransfer.csproj",
-      "packagesPath": "C:\\Users\\rseng\\.nuget\\packages\\",
-      "outputPath": "C:\\JobObserver2\\src\\BuildingBlocks\\DataTransfer\\BuildingBlocks.DataTransfer\\obj\\",
+      "projectPath": "E:\\Moodle\\src\\BuildingBlocks\\DataTransfer\\BuildingBlocks.DataTransfer\\BuildingBlocks.DataTransfer.csproj",
+      "packagesPath": "C:\\Users\\Eugene\\.nuget\\packages\\",
+      "outputPath": "E:\\Moodle\\src\\BuildingBlocks\\DataTransfer\\BuildingBlocks.DataTransfer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\rseng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Eugene\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
