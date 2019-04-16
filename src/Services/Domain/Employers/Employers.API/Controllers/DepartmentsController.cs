@@ -13,6 +13,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Employers.API.Controllers
 {
+    using Employers.API.Filters;
+
     [Route("api/v1/[controller]")]
     public class DepartmentsController : ControllerBase
     {
@@ -37,6 +39,28 @@ namespace Employers.API.Controllers
             var dto = Mapper.Map<DtoDepartment>(result);
 
             return Ok(dto);
+        }
+
+        [HttpPost("search")]
+        public async Task<IActionResult> Search(DepartmentSearchFilter filter)
+        {
+            var comprassionMethod = filter.CaseSensitive
+                ? StringComparison.InvariantCulture
+                : StringComparison.InvariantCultureIgnoreCase;
+
+            var filtered = await _context.Departments
+                .Where(x => x.Name.Contains(filter.Template, comprassionMethod))
+                .Where(x => x.OrganizationId == filter.EmployerId)
+                .ToListAsync();
+
+            if (filter.Offset != null)
+                filtered = filtered.Skip(filter.Offset.Value).ToList();
+
+            if (filter.Count != null)
+                filtered = filtered.Take(filter.Count.Value).ToList();
+
+            var result = filtered.Select(Mapper.Map<DtoDepartment>).ToList();
+            return Ok(result);
         }
 
         [HttpGet("byEmployer/{id}")]

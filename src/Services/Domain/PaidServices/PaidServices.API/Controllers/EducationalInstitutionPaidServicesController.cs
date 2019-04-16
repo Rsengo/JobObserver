@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace PaidServices.API.Controllers
 {
+    using System;
+
+    using PaidServices.API.Filters;
+
     public class EducationalInstitutionPaidServicesController : ControllerBase
     {
         private readonly PaidServicesDbContext _context;
@@ -39,6 +43,27 @@ namespace PaidServices.API.Controllers
             var dto = Mapper.Map<DtoEducationalInstitutionPaidService>(result);
 
             return Ok(dto);
+        }
+
+        [HttpPost("educationalInstitution/search")]
+        public async Task<IActionResult> Search(SearchFilter filter)
+        {
+            var comprassionMethod = filter.CaseSensitive
+                ? StringComparison.InvariantCulture
+                : StringComparison.InvariantCultureIgnoreCase;
+
+            var filtered = await _context.EducationalInstitutionPaidServices
+                .Where(x => x.Name.Contains(filter.Template, comprassionMethod))
+                .ToListAsync();
+
+            if (filter.Offset != null)
+                filtered = filtered.Skip(filter.Offset.Value).ToList();
+
+            if (filter.Count != null)
+                filtered = filtered.Take(filter.Count.Value).ToList();
+
+            var result = filtered.Select(Mapper.Map<DtoEducationalInstitutionPaidService>).ToList();
+            return Ok(result);
         }
     }
 }

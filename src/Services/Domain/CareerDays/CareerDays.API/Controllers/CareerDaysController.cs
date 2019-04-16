@@ -10,6 +10,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CareerDays.API.Controllers
 {
+    using System;
+
+    using CareerDays.API.Filters;
+
     [Route("api/v1/[controller]")]
     public class CareerDaysController : ControllerBase
     {
@@ -107,6 +111,27 @@ namespace CareerDays.API.Controllers
             var dto = Mapper.Map<DtoCareerDay>(result);
 
             return Ok(dto);
+        }
+
+        [HttpPost("search")]
+        public async Task<IActionResult> Search(SearchFilter filter)
+        {
+            var comprassionMethod = filter.CaseSensitive
+                ? StringComparison.InvariantCulture
+                : StringComparison.InvariantCultureIgnoreCase;
+
+            var filtered = await _context.CareerDays
+                .Where(x => x.Name.Contains(filter.Template, comprassionMethod))
+                .ToListAsync();
+
+            if (filter.Offset != null)
+                filtered = filtered.Skip(filter.Offset.Value).ToList();
+
+            if (filter.Count != null)
+                filtered = filtered.Take(filter.Count.Value).ToList();
+
+            var result = filtered.Select(Mapper.Map<DtoCareerDay>).ToList();
+            return Ok(result);
         }
 
         [HttpPost]

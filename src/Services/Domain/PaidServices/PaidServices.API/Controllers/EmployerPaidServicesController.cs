@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace PaidServices.API.Controllers
 {
+    using System;
+
+    using PaidServices.API.Filters;
+
     [Route("api/v1/paidservices")]
     public class EmployerPaidServicesController : ControllerBase
     {
@@ -40,6 +44,27 @@ namespace PaidServices.API.Controllers
             var dto = Mapper.Map<DtoEmployerPaidService>(result);
 
             return Ok(dto);
+        }
+
+        [HttpPost("employer/search")]
+        public async Task<IActionResult> Search(SearchFilter filter)
+        {
+            var comprassionMethod = filter.CaseSensitive
+                ? StringComparison.InvariantCulture
+                : StringComparison.InvariantCultureIgnoreCase;
+
+            var filtered = await _context.EmployerPaidServices
+                .Where(x => x.Name.Contains(filter.Template, comprassionMethod))
+                .ToListAsync();
+
+            if (filter.Offset != null)
+                filtered = filtered.Skip(filter.Offset.Value).ToList();
+
+            if (filter.Count != null)
+                filtered = filtered.Take(filter.Count.Value).ToList();
+
+            var result = filtered.Select(Mapper.Map<DtoEmployerPaidService>).ToList();
+            return Ok(result);
         }
     }
 }

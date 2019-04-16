@@ -13,6 +13,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EducationalInstitutions.API.Controllers
 {
+    using EducationalInstitutions.API.Filters;
+
     [Route("api/v1/[controller]")]
     public class FacultiesController : ControllerBase
     {
@@ -33,6 +35,33 @@ namespace EducationalInstitutions.API.Controllers
             var dto = Mapper.Map<DtoFaculty>(result);
 
             return Ok(dto);
+        }
+
+        [HttpPost("search")]
+        public async Task<IActionResult> Search(SearchFilter filter)
+        {
+            var comprassionMethod = filter.CaseSensitive
+                ? StringComparison.InvariantCulture
+                : StringComparison.InvariantCultureIgnoreCase;
+
+            var filteredIds = await _context.FacultySynonyms
+                .Where(x => x.Name.Contains(filter.Template, comprassionMethod))
+                .Select(x => x.FacultyId)
+                .Distinct()
+                .ToListAsync();
+
+            var filtered = await _context.Faculties
+                .Where(x => filteredIds.Contains(x.Id))
+                .ToListAsync();
+
+            if (filter.Offset != null)
+                filtered = filtered.Skip(filter.Offset.Value).ToList();
+
+            if (filter.Count != null)
+                filtered = filtered.Take(filter.Count.Value).ToList();
+
+            var result = filtered.Select(Mapper.Map<DtoFaculty>).ToList();
+            return Ok(result);
         }
 
         [HttpPost]

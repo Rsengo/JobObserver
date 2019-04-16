@@ -177,6 +177,19 @@ namespace Login.API.Controllers
             return Ok();
         }
 
+        [HttpPut("changeUserInformation/{id}")]
+        public async Task<IActionResult> ChangeUserInformation(DtoUser dto, string id)
+        {
+            var newUser = Mapper.Map<User>(dto);
+            newUser.Id = id;
+
+            await _userManager.UpdateAsync(newUser);
+
+            var response = Mapper.Map<DtoUser>(newUser);
+
+            return Ok(response);
+        }
+
         private void AddErrors(IdentityResult result)
         {
             foreach (var error in result.Errors)

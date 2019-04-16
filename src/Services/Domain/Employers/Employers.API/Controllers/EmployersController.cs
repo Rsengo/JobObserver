@@ -15,6 +15,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Employers.API.Controllers
 {
+    using Employers.API.Filters;
+
     [Route("api/v1/[controller]")]
     public class EmployersController : ControllerBase
     {
@@ -44,6 +46,33 @@ namespace Employers.API.Controllers
             var dto = Mapper.Map<DtoEmployer>(result);
 
             return Ok(dto);
+        }
+
+        [HttpPost("search")]
+        public async Task<IActionResult> Search(SearchFilter filter)
+        {
+            var comprassionMethod = filter.CaseSensitive
+                ? StringComparison.InvariantCulture
+                : StringComparison.InvariantCultureIgnoreCase;
+
+            var filteredIds = await _context.EmployerSynonyms
+                .Where(x => x.Name.Contains(filter.Template, comprassionMethod))
+                .Select(x => x.EmployerId)
+                .Distinct()
+                .ToListAsync();
+
+            var filtered = await _context.Employers
+                .Where(x => filteredIds.Contains(x.Id))
+                .ToListAsync();
+
+            if (filter.Offset != null)
+                filtered = filtered.Skip(filter.Offset.Value).ToList();
+
+            if (filter.Count != null)
+                filtered = filtered.Take(filter.Count.Value).ToList();
+
+            var result = filtered.Select(Mapper.Map<DtoEmployer>).ToList();
+            return Ok(result);
         }
 
         [HttpPost]

@@ -10,6 +10,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Dictionaries.API.Controllers
 {
+    using Dictionaries.API.Infrastructure.Filters;
+
     [Route("api/v1/[controller]")]
     public class SpecializationsController : ControllerBase
     {
@@ -37,6 +39,26 @@ namespace Dictionaries.API.Controllers
             var dto = Mapper.Map<DtoSpecializationSync>(result);
 
             return Ok(dto);
+        }
+
+        [HttpPost("search")]
+        public async Task<IActionResult> Search(SearchFilter filter)
+        {
+            var entities = await _context.Specializations.ToListAsync();
+
+            var comprassionMethod = filter.CaseSensitive
+                ? StringComparison.InvariantCulture
+                : StringComparison.InvariantCultureIgnoreCase;
+            var filtered = entities.Where(x => x.Name.Contains(filter.Template, comprassionMethod));
+
+            if (filter.Offset != null)
+                filtered = filtered.Skip(filter.Offset.Value);
+
+            if (filter.Count != null)
+                filtered = filtered.Take(filter.Count.Value);
+
+            var result = filtered.Select(Mapper.Map<DtoSpecialization>).ToList();
+            return Ok(result);
         }
     }
 }
