@@ -62,7 +62,10 @@ namespace Employers.API.Controllers
                 .ToListAsync();
 
             var filtered = await _context.Employers
-                .Where(x => filteredIds.Contains(x.Id))
+                .Where(x =>
+                    filteredIds.Contains(x.Id) ||
+                    x.Name.Contains(filter.Template, comprassionMethod) ||
+                    x.Acronym.Contains(filter.Template, comprassionMethod))
                 .ToListAsync();
 
             if (filter.Offset != null)

@@ -9,12 +9,11 @@ using EducationalInstitutions.Db.Models.Synonyms;
 using EducationalInstitutions.Dto.Models;
 using EducationalInstitutions.Dto.Models.Synonyms;
 using Microsoft.AspNetCore.Mvc;
+using EducationalInstitutions.API.Filters;
 using Microsoft.EntityFrameworkCore;
 
 namespace EducationalInstitutions.API.Controllers
 {
-    using EducationalInstitutions.API.Filters;
-
     [Route("api/v1/[controller]")]
     public class FacultiesController : ControllerBase
     {
@@ -38,7 +37,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpPost("search")]
-        public async Task<IActionResult> Search(SearchFilter filter)
+        public async Task<IActionResult> Search(FacultySearchFilter filter)
         {
             var comprassionMethod = filter.CaseSensitive
                 ? StringComparison.InvariantCulture
@@ -51,7 +50,11 @@ namespace EducationalInstitutions.API.Controllers
                 .ToListAsync();
 
             var filtered = await _context.Faculties
-                .Where(x => filteredIds.Contains(x.Id))
+                .Where(x =>
+                    filteredIds.Contains(x.Id) ||
+                    x.Name.Contains(filter.Template, comprassionMethod) ||
+                    x.Acronym.Contains(filter.Template, comprassionMethod))
+                .Where(x => x.EducationalInstitutionId == filter.EducationalInstitutionId)
                 .ToListAsync();
 
             if (filter.Offset != null)
