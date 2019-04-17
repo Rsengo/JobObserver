@@ -27,7 +27,6 @@
     <ProjectReference Include="..\..\..\..\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Extensions.EntityFramework\BuildingBlocks.Extensions.EntityFramework.csproj" />
     <ProjectReference Include="..\..\Notifications\Notifications.API\Notifications.API.csproj" />
     <ProjectReference Include="..\PaidServices.Db\PaidServices.Db.csproj" />
-    <ProjectReference Include="..\PaidServices.Dto\PaidServices.Dto.csproj" />
   </ItemGroup>
 
 </Project>

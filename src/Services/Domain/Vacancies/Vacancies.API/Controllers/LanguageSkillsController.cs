@@ -7,8 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Vacancies.Db;
 using Vacancies.Db.Models.Languages;
-using Vacancies.Dto.Models;
-using Vacancies.Dto.Models.Languages;
+using Vacancies.Db.Dto.Models;
+using Vacancies.Db.Dto.Models.Languages;
 
 namespace Vacancies.API.Controllers
 {

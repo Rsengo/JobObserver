@@ -2,8 +2,8 @@
 using BuildingBlocks.EventBus.Abstractions;
 using Dictionaries.Db;
 using Dictionaries.Db.Models.Schedules;
-using Dictionaries.Dto.Models.Schedules;
-using Dictionaries.EventBus.Events.Schedules;
+using Dictionaries.Db.Dto.Models.Schedules;
+using Dictionaries.Db.Synchronization.Events.Schedules;
 using System.Collections.Generic;
 using System.Linq;
 using Dictionaries.API.Infrastructure.Initialization.Attributes;

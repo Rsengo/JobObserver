@@ -14,7 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using PaidServices.Db;
-using PaidServices.Dto;
+using PaidServices.Db.Dto;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace PaidServices.API

@@ -2,8 +2,8 @@
 using BuildingBlocks.EventBus.Abstractions;
 using Dictionaries.Db;
 using Dictionaries.Db.Models.Salaries;
-using Dictionaries.Dto.Models.Salaries;
-using Dictionaries.EventBus.Events.Salaries;
+using Dictionaries.Db.Dto.Models.Salaries;
+using Dictionaries.Db.Synchronization.Events.Salaries;
 using System.Collections.Generic;
 using System.Linq;
 using Dictionaries.API.Infrastructure.Initialization.Attributes;

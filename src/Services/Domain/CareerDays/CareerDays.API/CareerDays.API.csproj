@@ -27,7 +27,6 @@
     <ProjectReference Include="..\..\..\..\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Extensions.EntityFramework\BuildingBlocks.Extensions.EntityFramework.csproj" />
     <ProjectReference Include="..\..\..\..\BuildingBlocks\EventBus\BuildingBlocks.Extensions.EventBus.RabbitMQ\BuildingBlocks.Extensions.EventBus.RabbitMQ.csproj" />
     <ProjectReference Include="..\CareerDays.Db\CareerDays.Db.csproj" />
-    <ProjectReference Include="..\CareerDays.EventBus\CareerDays.Synchronization.csproj" />
   </ItemGroup>
 
 </Project>

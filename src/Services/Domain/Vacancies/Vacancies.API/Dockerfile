@@ -15,9 +15,9 @@ COPY ["src/BuildingBlocks/Database/EntityFramework/BuildingBlocks.EntityFramewor
 COPY ["src/BuildingBlocks/EventBus/BuildingBlocks.Extensions.EventBus.RabbitMQ/BuildingBlocks.Extensions.EventBus.RabbitMQ.csproj", "src/BuildingBlocks/EventBus/BuildingBlocks.Extensions.EventBus.RabbitMQ/"]
 COPY ["src/BuildingBlocks/EventBus/BuildingBlocks.EventBus.RabbitMQ/BuildingBlocks.EventBus.RabbitMQ.csproj", "src/BuildingBlocks/EventBus/BuildingBlocks.EventBus.RabbitMQ/"]
 COPY ["src/BuildingBlocks/EventBus/BuildingBlocks.EventBus/BuildingBlocks.EventBus.csproj", "src/BuildingBlocks/EventBus/BuildingBlocks.EventBus/"]
-COPY ["src/Services/Domain/Vacancies/Vacancies.Synchronization/Vacancies.Synchronization.csproj", "src/Services/Domain/Vacancies/Vacancies.Synchronization/"]
+COPY ["src/Services/Domain/Vacancies/Vacancies.Db.Synchronization/Vacancies.Db.Synchronization.csproj", "src/Services/Domain/Vacancies/Vacancies.Db.Synchronization/"]
 COPY ["src/BuildingBlocks/EventBus/BuildingBlocks.EventBus.Synchronization/BuildingBlocks.EventBus.Synchronization.csproj", "src/BuildingBlocks/EventBus/BuildingBlocks.EventBus.Synchronization/"]
-COPY ["src/Services/Domain/Vacancies/Vacancies.Dto/Vacancies.Dto.csproj", "src/Services/Domain/Vacancies/Vacancies.Dto/"]
+COPY ["src/Services/Domain/Vacancies/Vacancies.Db.Dto/Vacancies.Db.Dto.csproj", "src/Services/Domain/Vacancies/Vacancies.Db.Dto/"]
 RUN dotnet restore "src/Services/Domain/Vacancies/Vacancies.API/Vacancies.API.csproj"
 COPY . .
 WORKDIR "/src/src/Services/Domain/Vacancies/Vacancies.API"

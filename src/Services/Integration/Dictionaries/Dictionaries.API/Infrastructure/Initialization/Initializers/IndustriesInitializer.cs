@@ -7,8 +7,8 @@ using AutoMapper;
 using BuildingBlocks.EventBus.Abstractions;
 using Dictionaries.Db;
 using Dictionaries.Db.Models.Industries;
-using Dictionaries.Dto.Models.Industries;
-using Dictionaries.EventBus.Events.Industries;
+using Dictionaries.Db.Dto.Models.Industries;
+using Dictionaries.Db.Synchronization.Events.Industries;
 
 namespace Dictionaries.API.Infrastructure.Initialization.Initializers
 {

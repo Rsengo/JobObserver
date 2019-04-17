@@ -43,3 +43,7 @@ D:\Repos\JobObserver\src\Services\Domain\Employers\Employers.Db\obj\Debug\netcor
 D:\Repos\JobObserver\src\Services\Domain\Employers\Employers.Db\obj\Debug\netcoreapp2.1\Employers.Db.csproj.CopyComplete
 D:\Repos\JobObserver\src\Services\Domain\Employers\Employers.Db\obj\Debug\netcoreapp2.1\Employers.Db.dll
 D:\Repos\JobObserver\src\Services\Domain\Employers\Employers.Db\obj\Debug\netcoreapp2.1\Employers.Db.pdb
+D:\Repos\JobObserver\src\Services\Domain\Employers\Employers.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.dll
+D:\Repos\JobObserver\src\Services\Domain\Employers\Employers.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.Synchronization.dll
+D:\Repos\JobObserver\src\Services\Domain\Employers\Employers.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.Synchronization.pdb
+D:\Repos\JobObserver\src\Services\Domain\Employers\Employers.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.pdb

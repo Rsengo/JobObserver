@@ -26,10 +26,9 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\BuildingBlocks\AutoMapper\BuildingBlocks.Extensions.AutoMapper\BuildingBlocks.Extensions.AutoMapper.csproj" />
     <ProjectReference Include="..\..\..\..\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Extensions.EntityFramework\BuildingBlocks.Extensions.EntityFramework.csproj" />
+    <ProjectReference Include="..\..\..\..\BuildingBlocks\DataTransfer\BuildingBlocks.DataTransfer\BuildingBlocks.DataTransfer.csproj" />
     <ProjectReference Include="..\..\..\..\BuildingBlocks\EventBus\BuildingBlocks.Extensions.EventBus.RabbitMQ\BuildingBlocks.Extensions.EventBus.RabbitMQ.csproj" />
     <ProjectReference Include="..\Dictionaries.Db\Dictionaries.Db.csproj" />
-    <ProjectReference Include="..\Dictionaries.Dto\Dictionaries.Dto.csproj" />
-    <ProjectReference Include="..\Dictionaries.EventBus\Dictionaries.EventBus.csproj" />
   </ItemGroup>
 
   <ItemGroup>

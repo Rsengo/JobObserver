@@ -14,8 +14,8 @@ COPY ["src/BuildingBlocks/Database/EntityFramework/BuildingBlocks.Extensions.Ent
 COPY ["src/BuildingBlocks/EventBus/BuildingBlocks.Extensions.EventBus.RabbitMQ/BuildingBlocks.Extensions.EventBus.RabbitMQ.csproj", "src/BuildingBlocks/EventBus/BuildingBlocks.Extensions.EventBus.RabbitMQ/"]
 COPY ["src/BuildingBlocks/EventBus/BuildingBlocks.EventBus.RabbitMQ/BuildingBlocks.EventBus.RabbitMQ.csproj", "src/BuildingBlocks/EventBus/BuildingBlocks.EventBus.RabbitMQ/"]
 COPY ["src/BuildingBlocks/EventBus/BuildingBlocks.EventBus/BuildingBlocks.EventBus.csproj", "src/BuildingBlocks/EventBus/BuildingBlocks.EventBus/"]
-COPY ["src/Services/Domain/Login/Login.Synchronization/Login.Synchronization.csproj", "src/Services/Domain/Login/Login.Synchronization/"]
-COPY ["src/Services/Domain/Login/Login.Dto/Login.Dto.csproj", "src/Services/Domain/Login/Login.Dto/"]
+COPY ["src/Services/Domain/Login/Login.Db.Synchronization/Login.Db.Synchronization.csproj", "src/Services/Domain/Login/Login.Db.Synchronization/"]
+COPY ["src/Services/Domain/Login/Login.Db.Dto/Login.Db.Dto.csproj", "src/Services/Domain/Login/Login.Db.Dto/"]
 COPY ["src/BuildingBlocks/DataTransfer/BuildingBlocks.DataTransfer/BuildingBlocks.DataTransfer.csproj", "src/BuildingBlocks/DataTransfer/BuildingBlocks.DataTransfer/"]
 COPY ["src/BuildingBlocks/EventBus/BuildingBlocks.EventBus.Synchronization/BuildingBlocks.EventBus.Synchronization.csproj", "src/BuildingBlocks/EventBus/BuildingBlocks.EventBus.Synchronization/"]
 RUN dotnet restore "src/Services/Domain/Login/Login.API/Login.API.csproj"

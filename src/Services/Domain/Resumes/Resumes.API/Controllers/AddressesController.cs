@@ -7,8 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Resumes.Db;
 using Resumes.Db.Models.Geographic;
-using Resumes.Dto.Models;
-using Resumes.Dto.Models.Geographic;
+using Resumes.Db.Dto.Models;
+using Resumes.Db.Dto.Models.Geographic;
 
 namespace Resumes.API.Controllers
 {

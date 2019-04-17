@@ -10,11 +10,11 @@ using Login.Db.Models.Attributes;
 using Login.Db.Models.Contacts;
 using Microsoft.AspNetCore.Identity;
 using BuildingBlocks.EventBus.Abstractions;
-using Login.Synchronization.Events.Users;
+using Login.Db.Synchronization.Events.Users;
 
 namespace Login.API.Services
 {
-    using Login.Dto.Models;
+    using Login.Db.Dto.Models;
 
     public class RegistrationService: IRegistrationService
     {

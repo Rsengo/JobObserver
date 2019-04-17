@@ -6,7 +6,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PaidServices.Db;
-using PaidServices.Dto.Models;
+using PaidServices.Db.Dto.Models;
 
 namespace PaidServices.API.Controllers
 {

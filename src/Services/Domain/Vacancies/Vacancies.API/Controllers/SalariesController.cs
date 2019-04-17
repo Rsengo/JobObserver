@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Vacancies.Db;
 using Vacancies.Db.Models.Salaries;
-using Vacancies.Dto.Models.Salaries;
+using Vacancies.Db.Dto.Models.Salaries;
 
 namespace Vacancies.API.Controllers
 {

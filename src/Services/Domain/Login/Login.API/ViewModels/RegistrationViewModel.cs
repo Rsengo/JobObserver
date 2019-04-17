@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using Login.Dto.Models.Attributes;
-using Login.Dto.Models.Contacts;
+using Login.Db.Dto.Models.Attributes;
+using Login.Db.Dto.Models.Contacts;
 using Newtonsoft.Json;
 
 namespace Login.API.ViewModels

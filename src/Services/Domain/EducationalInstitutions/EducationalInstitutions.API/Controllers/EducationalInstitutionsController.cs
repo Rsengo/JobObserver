@@ -7,9 +7,9 @@ using BuildingBlocks.EventBus.Abstractions;
 using EducationalInstitutions.Db;
 using EducationalInstitutions.Db.Models;
 using EducationalInstitutions.Db.Models.Synonyms;
-using EducationalInstitutions.Dto.Models;
-using EducationalInstitutions.Dto.Models.Synonyms;
-using EducationalInstitutions.Synchronization.Events;
+using EducationalInstitutions.Db.Dto.Models;
+using EducationalInstitutions.Db.Dto.Models.Synonyms;
+using EducationalInstitutions.Db.Synchronization.Events;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

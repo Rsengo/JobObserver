@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Vacancies.Db;
 using Vacancies.Db.Models.Tests;
-using Vacancies.Dto.Models.Tests;
+using Vacancies.Db.Dto.Models.Tests;
 
 namespace Vacancies.API.Controllers
 {

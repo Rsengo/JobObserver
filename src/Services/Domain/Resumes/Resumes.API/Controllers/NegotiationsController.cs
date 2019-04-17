@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Resumes.Db;
 using Resumes.Db.Models.Negotiations;
-using Resumes.Dto.Models.Negotiations;
+using Resumes.Db.Dto.Models.Negotiations;
 
 namespace Resumes.API.Controllers
 {

@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PaidServices.Db;
-using PaidServices.Dto.Models;
+using PaidServices.Db.Dto.Models;
 using System.Linq;
 using System.Threading.Tasks;
 

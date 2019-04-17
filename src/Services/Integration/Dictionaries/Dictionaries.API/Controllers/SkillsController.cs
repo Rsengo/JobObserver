@@ -6,8 +6,8 @@ using AutoMapper;
 using BuildingBlocks.EventBus.Abstractions;
 using Dictionaries.Db;
 using Dictionaries.Db.Models.Skills;
-using Dictionaries.Dto.Models.Skills;
-using Dictionaries.EventBus.Events.Skills;
+using Dictionaries.Db.Dto.Models.Skills;
+using Dictionaries.Db.Synchronization.Events.Skills;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

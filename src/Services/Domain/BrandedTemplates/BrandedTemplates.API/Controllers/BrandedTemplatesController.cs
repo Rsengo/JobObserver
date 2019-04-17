@@ -9,7 +9,7 @@ namespace BrandedTemplates.API.Controllers
 
     using AutoMapper;
 
-    using BrandedTemplates.Dto.Models;
+    using BrandedTemplates.Db.Dto.Models;
 
     using Microsoft.EntityFrameworkCore;
 

@@ -6,8 +6,8 @@ using AutoMapper;
 using BuildingBlocks.EventBus.Abstractions;
 using Dictionaries.Db;
 using Dictionaries.Db.Models.Geographic;
-using Dictionaries.Dto.Models.Geographic;
-using Dictionaries.EventBus.Events.Geographic;
+using Dictionaries.Db.Dto.Models.Geographic;
+using Dictionaries.Db.Synchronization.Events.Geographic;
 using Dictionaries.API.Infrastructure.Initialization.Attributes;
 
 namespace Dictionaries.API.Infrastructure.Initialization.Initializers

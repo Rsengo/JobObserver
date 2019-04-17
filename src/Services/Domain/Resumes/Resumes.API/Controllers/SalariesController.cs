@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Resumes.Db;
 using Resumes.Db.Models.Salaries;
-using Resumes.Dto.Models.Salaries;
+using Resumes.Db.Dto.Models.Salaries;
 
 namespace Resumes.API.Controllers
 {

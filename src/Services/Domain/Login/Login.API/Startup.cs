@@ -8,19 +8,19 @@ using System.Reflection;
 using BuildingBlocks.Extensions.AutoMapper;
 using BuildingBlocks.Extensions.EventBus.RabbitMQ;
 using Login.Db;
-using Login.Synchronization.EventHandlers.Contacts;
-using Login.Synchronization.EventHandlers.Genders;
-using Login.Synchronization.EventHandlers.Geographic;
-using Login.Synchronization.Events.Contacts;
-using Login.Synchronization.Events.Genders;
-using Login.Synchronization.Events.Geographic;
+using Login.Db.Synchronization.EventHandlers.Contacts;
+using Login.Db.Synchronization.EventHandlers.Genders;
+using Login.Db.Synchronization.EventHandlers.Geographic;
+using Login.Db.Synchronization.Events.Contacts;
+using Login.Db.Synchronization.Events.Genders;
+using Login.Db.Synchronization.Events.Geographic;
 using Microsoft.EntityFrameworkCore;
 using Swashbuckle.AspNetCore.Swagger;
 using IdentityServer4.AspNetIdentity;
 using IdentityServer4.Services;
 using Login.API.Services;
 using Login.Db.Models;
-using Login.Dto;
+using Login.Db.Dto;
 using Microsoft.AspNetCore.Identity;
 
 namespace Login.API

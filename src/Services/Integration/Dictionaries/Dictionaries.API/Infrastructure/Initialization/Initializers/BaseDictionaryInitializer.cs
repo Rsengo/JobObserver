@@ -11,7 +11,7 @@ using BuildingBlocks.EventBus.Events;
 using BuildingBlocks.EventBus.Synchronization.Events;
 using Dictionaries.Db;
 using Dictionaries.Db.Models.Geographic;
-using Dictionaries.Dto.Models.Geographic;
+using Dictionaries.Db.Dto.Models.Geographic;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 

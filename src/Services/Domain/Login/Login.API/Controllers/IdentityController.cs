@@ -14,7 +14,7 @@ using Login.Db;
 using Login.Db.Models;
 using Login.Db.Models.Attributes;
 using Login.Db.Models.Contacts;
-using Login.Dto.Models;
+using Login.Db.Dto.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;

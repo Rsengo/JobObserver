@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Dictionaries.Db;
-using Dictionaries.Dto.Models.Geographic;
+using Dictionaries.Db.Dto.Models.Geographic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

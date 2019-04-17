@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Vacancies.Db;
 using Vacancies.Db.Models.Negotiations;
-using Vacancies.Dto.Models.Negotiations;
+using Vacancies.Db.Dto.Models.Negotiations;
 
 namespace Vacancies.API.Controllers
 {

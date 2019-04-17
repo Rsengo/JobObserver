@@ -9,7 +9,7 @@ COPY ["src/BuildingBlocks/AutoMapper/BuildingBlocks.Extensions.AutoMapper/Buildi
 COPY ["src/BuildingBlocks/AutoMapper/BuildingBlocks.AutoMapper/BuildingBlocks.AutoMapper.csproj", "src/BuildingBlocks/AutoMapper/BuildingBlocks.AutoMapper/"]
 COPY ["src/BuildingBlocks/Assemblies/JobObserver.Extensions.Assembly/BuildingBlocks.Extensions.Assemblies.csproj", "src/BuildingBlocks/Assemblies/JobObserver.Extensions.Assembly/"]
 COPY ["src/Services/Domain/Notifications/Notifications.API/Notifications.API.csproj", "src/Services/Domain/Notifications/Notifications.API/"]
-COPY ["src/Services/Domain/PaidServices/PaidServices.Dto/PaidServices.Dto.csproj", "src/Services/Domain/PaidServices/PaidServices.Dto/"]
+COPY ["src/Services/Domain/PaidServices/PaidServices.Db.Dto/PaidServices.Db.Dto.csproj", "src/Services/Domain/PaidServices/PaidServices.Db.Dto/"]
 COPY ["src/BuildingBlocks/DataTransfer/BuildingBlocks.DataTransfer/BuildingBlocks.DataTransfer.csproj", "src/BuildingBlocks/DataTransfer/BuildingBlocks.DataTransfer/"]
 COPY ["src/Services/Domain/PaidServices/PaidServices.Db/PaidServices.Db.csproj", "src/Services/Domain/PaidServices/PaidServices.Db/"]
 COPY ["src/BuildingBlocks/Database/EntityFramework/BuildingBlocks.EntityFramework/BuildingBlocks.EntityFramework.csproj", "src/BuildingBlocks/Database/EntityFramework/BuildingBlocks.EntityFramework/"]

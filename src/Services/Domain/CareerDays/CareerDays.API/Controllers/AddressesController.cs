@@ -4,8 +4,8 @@ using AutoMapper;
 using CareerDays.Db;
 using CareerDays.Db.Models;
 using CareerDays.Db.Models.Geographic;
-using CareerDays.Dto.Models;
-using CareerDays.Dto.Models.Geographic;
+using CareerDays.Db.Dto.Models;
+using CareerDays.Db.Dto.Models.Geographic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

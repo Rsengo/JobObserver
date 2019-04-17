@@ -5,8 +5,8 @@ using AutoMapper;
 using BuildingBlocks.EventBus.Abstractions;
 using Dictionaries.Db;
 using Dictionaries.Db.Models.Travel.Relocation;
-using Dictionaries.Dto.Models.Travel.Relocation;
-using Dictionaries.EventBus.Events.Travel.Relocation;
+using Dictionaries.Db.Dto.Models.Travel.Relocation;
+using Dictionaries.Db.Synchronization.Events.Travel.Relocation;
 using Dictionaries.API.Infrastructure.Initialization.Attributes;
 
 namespace Dictionaries.API.Infrastructure.Initialization.Initializers

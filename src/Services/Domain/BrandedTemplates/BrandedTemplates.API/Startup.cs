@@ -8,7 +8,7 @@ using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using BuildingBlocks.Extensions.AutoMapper;
 using BrandedTemplates.Db;
-using BrandedTemplates.Dto;
+using BrandedTemplates.Db.Dto;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace BrandedTemplates.API

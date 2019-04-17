@@ -4,8 +4,8 @@ using AutoMapper;
 using BuildingBlocks.EventBus.Abstractions;
 using Dictionaries.Db;
 using Dictionaries.Db.Models.Negotiations;
-using Dictionaries.Dto.Models.Negotiations;
-using Dictionaries.EventBus.Events.Negotiations;
+using Dictionaries.Db.Dto.Models.Negotiations;
+using Dictionaries.Db.Synchronization.Events.Negotiations;
 using Dictionaries.API.Infrastructure.Initialization.Attributes;
 
 namespace Dictionaries.API.Infrastructure.Initialization.Initializers

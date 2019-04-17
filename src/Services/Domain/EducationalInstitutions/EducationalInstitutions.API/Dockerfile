@@ -14,9 +14,9 @@ COPY ["src/BuildingBlocks/Database/EntityFramework/BuildingBlocks.Extensions.Ent
 COPY ["src/BuildingBlocks/EventBus/BuildingBlocks.Extensions.EventBus.RabbitMQ/BuildingBlocks.Extensions.EventBus.RabbitMQ.csproj", "src/BuildingBlocks/EventBus/BuildingBlocks.Extensions.EventBus.RabbitMQ/"]
 COPY ["src/BuildingBlocks/EventBus/BuildingBlocks.EventBus.RabbitMQ/BuildingBlocks.EventBus.RabbitMQ.csproj", "src/BuildingBlocks/EventBus/BuildingBlocks.EventBus.RabbitMQ/"]
 COPY ["src/BuildingBlocks/EventBus/BuildingBlocks.EventBus/BuildingBlocks.EventBus.csproj", "src/BuildingBlocks/EventBus/BuildingBlocks.EventBus/"]
-COPY ["src/Services/Domain/EducationalInstitutions/EducationalInstitutions.Synchronization/EducationalInstitutions.Synchronization.csproj", "src/Services/Domain/EducationalInstitutions/EducationalInstitutions.Synchronization/"]
+COPY ["src/Services/Domain/EducationalInstitutions/EducationalInstitutions.Db.Synchronization/EducationalInstitutions.Db.Synchronization.csproj", "src/Services/Domain/EducationalInstitutions/EducationalInstitutions.Db.Synchronization/"]
 COPY ["src/BuildingBlocks/EventBus/BuildingBlocks.EventBus.Synchronization/BuildingBlocks.EventBus.Synchronization.csproj", "src/BuildingBlocks/EventBus/BuildingBlocks.EventBus.Synchronization/"]
-COPY ["src/Services/Domain/EducationalInstitutions/EducationalInstitutions.Dto/EducationalInstitutions.Dto.csproj", "src/Services/Domain/EducationalInstitutions/EducationalInstitutions.Dto/"]
+COPY ["src/Services/Domain/EducationalInstitutions/EducationalInstitutions.Db.Dto/EducationalInstitutions.Db.Dto.csproj", "src/Services/Domain/EducationalInstitutions/EducationalInstitutions.Db.Dto/"]
 COPY ["src/BuildingBlocks/DataTransfer/BuildingBlocks.DataTransfer/BuildingBlocks.DataTransfer.csproj", "src/BuildingBlocks/DataTransfer/BuildingBlocks.DataTransfer/"]
 RUN dotnet restore "src/Services/Domain/EducationalInstitutions/EducationalInstitutions.API/EducationalInstitutions.API.csproj"
 COPY . .

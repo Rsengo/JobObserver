@@ -43,3 +43,7 @@ D:\Repos\JobObserver\src\Services\Domain\EducationalInstitutions\EducationalInst
 D:\Repos\JobObserver\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\obj\Debug\netcoreapp2.1\EducationalInstitutions.Db.csproj.CopyComplete
 D:\Repos\JobObserver\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\obj\Debug\netcoreapp2.1\EducationalInstitutions.Db.dll
 D:\Repos\JobObserver\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\obj\Debug\netcoreapp2.1\EducationalInstitutions.Db.pdb
+D:\Repos\JobObserver\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.dll
+D:\Repos\JobObserver\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.Synchronization.dll
+D:\Repos\JobObserver\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.Synchronization.pdb
+D:\Repos\JobObserver\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.pdb

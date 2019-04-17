@@ -31,3 +31,9 @@ D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Db\obj\D
 D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Db\obj\Debug\netcoreapp2.1\Dictionaries.Db.csproj.CopyComplete
 D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Db\obj\Debug\netcoreapp2.1\Dictionaries.Db.dll
 D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Db\obj\Debug\netcoreapp2.1\Dictionaries.Db.pdb
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.DataTransfer.dll
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.dll
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.Synchronization.dll
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.DataTransfer.pdb
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.Synchronization.pdb
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.pdb

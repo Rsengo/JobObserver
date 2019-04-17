@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Dictionaries.Db;
-using Dictionaries.Dto.Models.Industries;
+using Dictionaries.Db.Dto.Models.Industries;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

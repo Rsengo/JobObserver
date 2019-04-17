@@ -27,7 +27,6 @@
     <ProjectReference Include="..\..\..\..\BuildingBlocks\AutoMapper\BuildingBlocks.Extensions.AutoMapper\BuildingBlocks.Extensions.AutoMapper.csproj" />
     <ProjectReference Include="..\..\..\..\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Extensions.EntityFramework\BuildingBlocks.Extensions.EntityFramework.csproj" />
     <ProjectReference Include="..\BrandedTemplates.Db\BrandedTemplates.Db.csproj" />
-    <ProjectReference Include="..\BrandedTemplates.Dto\BrandedTemplates.Dto.csproj" />
   </ItemGroup>
 
 </Project>

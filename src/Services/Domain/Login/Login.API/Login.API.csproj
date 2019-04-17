@@ -31,7 +31,6 @@
     <ProjectReference Include="..\..\..\..\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Extensions.EntityFramework\BuildingBlocks.Extensions.EntityFramework.csproj" />
     <ProjectReference Include="..\..\..\..\BuildingBlocks\EventBus\BuildingBlocks.Extensions.EventBus.RabbitMQ\BuildingBlocks.Extensions.EventBus.RabbitMQ.csproj" />
     <ProjectReference Include="..\Login.Db\Login.Db.csproj" />
-    <ProjectReference Include="..\Login.Synchronization\Login.Synchronization.csproj" />
   </ItemGroup>
 
 </Project>

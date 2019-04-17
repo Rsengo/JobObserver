@@ -7,8 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Vacancies.Db;
 using Vacancies.Db.Models.Geographic;
-using Vacancies.Dto.Models;
-using Vacancies.Dto.Models.Geographic;
+using Vacancies.Db.Dto.Models;
+using Vacancies.Db.Dto.Models.Geographic;
 
 namespace Vacancies.API.Controllers
 {

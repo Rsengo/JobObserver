@@ -10,7 +10,7 @@ using BuildingBlocks.Extensions.EventBus.RabbitMQ;
 using Dictionaries.API.Infrastructure.Initialization;
 using Dictionaries.API.Infrastructure.Initialization.Factories;
 using Dictionaries.Db;
-using Dictionaries.Dto;
+using Dictionaries.Db.Dto;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;

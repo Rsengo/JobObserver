@@ -5,8 +5,8 @@ using AutoMapper;
 using BuildingBlocks.EventBus.Abstractions;
 using Dictionaries.Db;
 using Dictionaries.Db.Models.Users;
-using Dictionaries.Dto.Models.Users;
-using Dictionaries.EventBus.Events.Users;
+using Dictionaries.Db.Dto.Models.Users;
+using Dictionaries.Db.Synchronization.Events.Users;
 using Dictionaries.API.Infrastructure.Initialization.Attributes;
 
 namespace Dictionaries.API.Infrastructure.Initialization.Initializers

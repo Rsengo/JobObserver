@@ -7,9 +7,9 @@ using BuildingBlocks.EventBus.Abstractions;
 using Employers.Db;
 using Employers.Db.Models;
 using Employers.Db.Models.Synonyms;
-using Employers.Dto.Models;
-using Employers.Dto.Models.Synonyms;
-using Employers.Synchronization.Events;
+using Employers.Db.Dto.Models;
+using Employers.Db.Dto.Models.Synonyms;
+using Employers.Db.Synchronization.Events;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
