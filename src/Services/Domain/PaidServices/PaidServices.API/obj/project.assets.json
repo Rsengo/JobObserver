@@ -5124,6 +5124,7 @@
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
           "BuildingBlocks.Extensions.EventBus.RabbitMQ": "1.0.0",
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.0.1916590",
           "Serilog": "2.8.0",
           "Serilog.AspNetCore": "2.1.1",
           "Serilog.Extensions.Hosting": "2.0.0",
@@ -5146,6 +5147,7 @@
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "AutoMapper": "8.0.0",
+          "BuildingBlocks.AutoMapper": "1.0.0",
           "BuildingBlocks.EntityFramework": "1.0.0",
           "Microsoft.EntityFrameworkCore": "2.2.2",
           "Microsoft.EntityFrameworkCore.AutoHistory": "2.1.0",

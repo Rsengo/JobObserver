@@ -5140,6 +5140,7 @@
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "AutoMapper": "8.0.0",
+          "BuildingBlocks.AutoMapper": "1.0.0",
           "BuildingBlocks.EntityFramework": "1.0.0",
           "BuildingBlocks.EventBus": "1.0.0",
           "BuildingBlocks.EventBus.Synchronization": "1.0.0",

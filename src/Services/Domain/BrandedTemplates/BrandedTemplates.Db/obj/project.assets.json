@@ -1256,6 +1256,21 @@
           "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.dll": {}
         }
       },
+      "BuildingBlocks.AutoMapper/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "AutoMapper": "8.0.0",
+          "BuildingBlocks.Extensions.Assemblies": "1.0.0",
+          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
+        },
+        "compile": {
+          "bin/placeholder/BuildingBlocks.AutoMapper.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BuildingBlocks.AutoMapper.dll": {}
+        }
+      },
       "BuildingBlocks.EntityFramework/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
@@ -1267,6 +1282,19 @@
         },
         "runtime": {
           "bin/placeholder/BuildingBlocks.EntityFramework.dll": {}
+        }
+      },
+      "BuildingBlocks.Extensions.Assemblies/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
+        },
+        "compile": {
+          "bin/placeholder/BuildingBlocks.Extensions.Assemblies.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BuildingBlocks.Extensions.Assemblies.dll": {}
         }
       }
     }
@@ -4558,15 +4586,26 @@
         "z.entityframework.extensions.efcore.nuspec"
       ]
     },
+    "BuildingBlocks.AutoMapper/1.0.0": {
+      "type": "project",
+      "path": "../../../../BuildingBlocks/AutoMapper/BuildingBlocks.AutoMapper/BuildingBlocks.AutoMapper.csproj",
+      "msbuildProject": "../../../../BuildingBlocks/AutoMapper/BuildingBlocks.AutoMapper/BuildingBlocks.AutoMapper.csproj"
+    },
     "BuildingBlocks.EntityFramework/1.0.0": {
       "type": "project",
       "path": "../../../../BuildingBlocks/Database/EntityFramework/BuildingBlocks.EntityFramework/BuildingBlocks.EntityFramework.csproj",
       "msbuildProject": "../../../../BuildingBlocks/Database/EntityFramework/BuildingBlocks.EntityFramework/BuildingBlocks.EntityFramework.csproj"
+    },
+    "BuildingBlocks.Extensions.Assemblies/1.0.0": {
+      "type": "project",
+      "path": "../../../../BuildingBlocks/Assemblies/JobObserver.Extensions.Assembly/BuildingBlocks.Extensions.Assemblies.csproj",
+      "msbuildProject": "../../../../BuildingBlocks/Assemblies/JobObserver.Extensions.Assembly/BuildingBlocks.Extensions.Assemblies.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "AutoMapper >= 8.0.0",
+      "BuildingBlocks.AutoMapper >= 1.0.0",
       "BuildingBlocks.EntityFramework >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 2.2.2",
       "Microsoft.EntityFrameworkCore.AutoHistory >= 2.1.0",
@@ -4606,6 +4645,9 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
+            "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\AutoMapper\\BuildingBlocks.AutoMapper\\BuildingBlocks.AutoMapper.csproj": {
+              "projectPath": "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\AutoMapper\\BuildingBlocks.AutoMapper\\BuildingBlocks.AutoMapper.csproj"
+            },
             "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.EntityFramework\\BuildingBlocks.EntityFramework.csproj": {
               "projectPath": "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.EntityFramework\\BuildingBlocks.EntityFramework.csproj"
             }

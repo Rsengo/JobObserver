@@ -1,13 +1,16 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "ffbea434c9403fb21d22c2fdd4fabc961df1c4e5"
+    "signature": "e9babad00a45dd91344b6f36f66bd3626ad5ce4c"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.1": {
       "Login.Db/1.0.0": {
         "dependencies": {
+          "AutoMapper": "8.0.0",
+          "BuildingBlocks.AutoMapper": "1.0.0",
+          "BuildingBlocks.DataTransfer": "1.0.0",
           "BuildingBlocks.EntityFramework": "1.0.0",
           "BuildingBlocks.EventBus": "1.0.0",
           "BuildingBlocks.EventBus.Synchronization": "1.0.0",
@@ -20,6 +23,18 @@
         },
         "runtime": {
           "Login.Db.dll": {}
+        }
+      },
+      "AutoMapper/8.0.0": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.0.0"
+          }
         }
       },
       "Microsoft.AspNetCore.Authentication/2.2.0": {
@@ -974,6 +989,25 @@
           }
         }
       },
+      "BuildingBlocks.AutoMapper/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "8.0.0",
+          "BuildingBlocks.Extensions.Assemblies": "1.0.0",
+          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
+        },
+        "runtime": {
+          "BuildingBlocks.AutoMapper.dll": {}
+        }
+      },
+      "BuildingBlocks.DataTransfer/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.1",
+          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
+        },
+        "runtime": {
+          "BuildingBlocks.DataTransfer.dll": {}
+        }
+      },
       "BuildingBlocks.EntityFramework/1.0.0": {
         "dependencies": {
           "Z.EntityFramework.Extensions.EFCore": "2.2.3"
@@ -1001,6 +1035,14 @@
         "runtime": {
           "BuildingBlocks.EventBus.Synchronization.dll": {}
         }
+      },
+      "BuildingBlocks.Extensions.Assemblies/1.0.0": {
+        "dependencies": {
+          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
+        },
+        "runtime": {
+          "BuildingBlocks.Extensions.Assemblies.dll": {}
+        }
       }
     }
   },
@@ -1009,6 +1051,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AutoMapper/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kcbje0Y71XkvzPn8k6OROZGOn2SKaWimon3Bu1WUTVoV5GTJVym+k+zQuKApyyFVRfk7bisumj/qUX4xIIXS+Q==",
+      "path": "automapper/8.0.0",
+      "hashPath": "automapper.8.0.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication/2.2.0": {
       "type": "package",
@@ -1661,6 +1710,16 @@
       "path": "z.entityframework.extensions.efcore/2.2.3",
       "hashPath": "z.entityframework.extensions.efcore.2.2.3.nupkg.sha512"
     },
+    "BuildingBlocks.AutoMapper/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BuildingBlocks.DataTransfer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "BuildingBlocks.EntityFramework/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -1672,6 +1731,11 @@
       "sha512": ""
     },
     "BuildingBlocks.EventBus.Synchronization/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BuildingBlocks.Extensions.Assemblies/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

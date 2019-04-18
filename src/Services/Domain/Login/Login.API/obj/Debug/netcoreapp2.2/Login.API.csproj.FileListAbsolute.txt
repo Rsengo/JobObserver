@@ -37,8 +37,6 @@ D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2
 D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EntityFramework.dll
 D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EventBus.RabbitMQ.dll
 D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\Login.Db.dll
-D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\Login.Dto.dll
-D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\Login.Synchronization.dll
 D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\BuildingBlocks.AutoMapper.pdb
 D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EntityFramework.pdb
 D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.Assemblies.pdb
@@ -87,10 +85,8 @@ D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2
 D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EntityFramework.pdb
 D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EventBus.RabbitMQ.pdb
 D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\Login.Db.pdb
-D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\Login.Synchronization.pdb
 D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\BuildingBlocks.DataTransfer.pdb
 D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.pdb
 D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.RabbitMQ.pdb
 D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.Synchronization.pdb
-D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\Login.Dto.pdb
 D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.csproj.CopyComplete

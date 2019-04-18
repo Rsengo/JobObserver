@@ -11,8 +11,6 @@ COPY ["src/BuildingBlocks/Assemblies/JobObserver.Extensions.Assembly/BuildingBlo
 COPY ["src/Services/Domain/BrandedTemplates/BrandedTemplates.Db/BrandedTemplates.Db.csproj", "src/Services/Domain/BrandedTemplates/BrandedTemplates.Db/"]
 COPY ["src/BuildingBlocks/Database/EntityFramework/BuildingBlocks.EntityFramework/BuildingBlocks.EntityFramework.csproj", "src/BuildingBlocks/Database/EntityFramework/BuildingBlocks.EntityFramework/"]
 COPY ["src/BuildingBlocks/Database/EntityFramework/BuildingBlocks.Extensions.EntityFramework/BuildingBlocks.Extensions.EntityFramework.csproj", "src/BuildingBlocks/Database/EntityFramework/BuildingBlocks.Extensions.EntityFramework/"]
-COPY ["src/Services/Domain/BrandedTemplates/BrandedTemplates.Db.Dto/BrandedTemplates.Db.Dto.csproj", "src/Services/Domain/BrandedTemplates/BrandedTemplates.Db.Dto/"]
-COPY ["src/BuildingBlocks/DataTransfer/BuildingBlocks.DataTransfer/BuildingBlocks.DataTransfer.csproj", "src/BuildingBlocks/DataTransfer/BuildingBlocks.DataTransfer/"]
 RUN dotnet restore "src/Services/Domain/BrandedTemplates/BrandedTemplates.API/BrandedTemplates.API.csproj"
 COPY . .
 WORKDIR "/src/src/Services/Domain/BrandedTemplates/BrandedTemplates.API"
