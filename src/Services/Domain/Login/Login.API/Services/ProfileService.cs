@@ -110,46 +110,25 @@ namespace Login.API.Services
         {
             var claims = new List<Claim>();
 
+            var roles = await _userManager.GetRolesAsync(user);
+
+            foreach (var role in roles)
+            {
+                claims.Add(new Claim(JwtClaimTypes.Role, role));
+            }
+
             if (await _userManager.IsInRoleAsync(user, IdentityConfig.DefaultRoles.EMPLOYER_MANAGER))
             {
                 var attrs = _context.EmployerManagerAttributes.SingleOrDefault(x =>
                     x.Id == user.EmployerManagerAttributesId);
-                claims.Add(new Claim("is_employer_manager", "true"));
-                claims.Add(new Claim("employer_id", attrs?.OrganizationId.ToString()));
-            }
-            else
-            {
-                claims.Add(new Claim("is_employer_manager", "false"));
+                claims.Add(new Claim(IdentityConfig.JobObserverJwtClaimTypes.OrganizationId, attrs?.OrganizationId.ToString()));
             }
 
             if (await _userManager.IsInRoleAsync(user, IdentityConfig.DefaultRoles.EDUCATIONAL_INSTITUTION_MANAGER))
             {
                 var attrs = _context.EmployerManagerAttributes.SingleOrDefault(x =>
                     x.Id == user.EmployerManagerAttributesId);
-                claims.Add(new Claim("educational_institution_id", attrs?.OrganizationId.ToString()));
-                claims.Add(new Claim("is_educational_institution_manager", "true"));
-            }
-            else
-            {
-                claims.Add(new Claim("is_educational_institution_manager", "false"));
-            }
-
-            if (await _userManager.IsInRoleAsync(user, IdentityConfig.DefaultRoles.APPLICANT))
-            {
-                claims.Add(new Claim("is_applicant", "true"));
-            }
-            else
-            {
-                claims.Add(new Claim("is_applicant", "false"));
-            }
-
-            if (await _userManager.IsInRoleAsync(user, IdentityConfig.DefaultRoles.ADMIN))
-            {
-                claims.Add(new Claim("is_admin", "true"));
-            }
-            else
-            {
-                claims.Add(new Claim("is_admin", "false"));
+                claims.Add(new Claim(IdentityConfig.JobObserverJwtClaimTypes.OrganizationId, attrs?.OrganizationId.ToString()));
             }
 
             return claims;

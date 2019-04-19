@@ -5135,6 +5135,16 @@
           "bin/placeholder/BuildingBlocks.Extensions.EventBus.RabbitMQ.dll": {}
         }
       },
+      "BuildingBlocks.Security.Access/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/BuildingBlocks.Security.Access.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BuildingBlocks.Security.Access.dll": {}
+        }
+      },
       "Resumes.Db/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
@@ -13595,6 +13605,11 @@
       "path": "../../../../BuildingBlocks/EventBus/BuildingBlocks.Extensions.EventBus.RabbitMQ/BuildingBlocks.Extensions.EventBus.RabbitMQ.csproj",
       "msbuildProject": "../../../../BuildingBlocks/EventBus/BuildingBlocks.Extensions.EventBus.RabbitMQ/BuildingBlocks.Extensions.EventBus.RabbitMQ.csproj"
     },
+    "BuildingBlocks.Security.Access/1.0.0": {
+      "type": "project",
+      "path": "../../../../BuildingBlocks/Security/BuildingBlocks.Security.Access/BuildingBlocks.Security.Access.csproj",
+      "msbuildProject": "../../../../BuildingBlocks/Security/BuildingBlocks.Security.Access/BuildingBlocks.Security.Access.csproj"
+    },
     "Resumes.Db/1.0.0": {
       "type": "project",
       "path": "../Resumes.Db/Resumes.Db.csproj",
@@ -13606,6 +13621,7 @@
       "BuildingBlocks.Extensions.AutoMapper >= 1.0.0",
       "BuildingBlocks.Extensions.EntityFramework >= 1.0.0",
       "BuildingBlocks.Extensions.EventBus.RabbitMQ >= 1.0.0",
+      "BuildingBlocks.Security.Access >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
@@ -13660,6 +13676,9 @@
             },
             "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\EventBus\\BuildingBlocks.Extensions.EventBus.RabbitMQ\\BuildingBlocks.Extensions.EventBus.RabbitMQ.csproj": {
               "projectPath": "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\EventBus\\BuildingBlocks.Extensions.EventBus.RabbitMQ\\BuildingBlocks.Extensions.EventBus.RabbitMQ.csproj"
+            },
+            "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\Security\\BuildingBlocks.Security.Access\\BuildingBlocks.Security.Access.csproj": {
+              "projectPath": "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\Security\\BuildingBlocks.Security.Access\\BuildingBlocks.Security.Access.csproj"
             },
             "D:\\Repos\\JobObserver\\src\\Services\\Domain\\Resumes\\Resumes.Db\\Resumes.Db.csproj": {
               "projectPath": "D:\\Repos\\JobObserver\\src\\Services\\Domain\\Resumes\\Resumes.Db\\Resumes.Db.csproj"
