@@ -8,6 +8,7 @@ using Login.API.Configuration;
 using Login.Db;
 using Login.Db.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Polly;
 
@@ -41,7 +42,9 @@ namespace Login.API.Data
 
                 if (!context.UserRoles.Any())
                 {
-                    var adminRoles = GetAdminRoles(user, roles);
+                    var adminRoles = GetAdminRoles(
+                        await context.Users.Where(x => x.UserName == "rsengo42@gmail.com").SingleOrDefaultAsync(), 
+                        await context.Roles.ToListAsync());
                     context.UserRoles.AddRange(adminRoles);
                     await context.SaveChangesAsync();
                 }
@@ -55,11 +58,13 @@ namespace Login.API.Data
 
         private static IEnumerable<IdentityUserRole<string>> GetAdminRoles(User admin, IEnumerable<IdentityRole> roles)
         {
-            var userRoles = roles.Select(x => new IdentityUserRole<string>()
-            {
-                RoleId = x.Id,
-                UserId = admin.Id
-            });
+            var userRoles = roles
+                .Where(x => x.Name == IdentityConfig.DefaultRoles.ADMIN)
+                .Select(x => new IdentityUserRole<string>()
+                {
+                    RoleId = x.Id,
+                    UserId = admin.Id
+                });
 
             return userRoles;
         }

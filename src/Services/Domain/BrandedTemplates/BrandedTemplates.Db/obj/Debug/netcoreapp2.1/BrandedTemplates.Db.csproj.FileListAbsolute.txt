@@ -34,3 +34,9 @@ C:\JobObserver2\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\obj\Deb
 C:\JobObserver2\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BrandedTemplates.Db.pdb
 C:\JobObserver2\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\obj\Debug\netcoreapp2.1\BrandedTemplates.Db.dll
 C:\JobObserver2\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\obj\Debug\netcoreapp2.1\BrandedTemplates.Db.pdb
+C:\JobObserver2\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.dll
+C:\JobObserver2\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.DataTransfer.dll
+C:\JobObserver2\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.dll
+C:\JobObserver2\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.pdb
+C:\JobObserver2\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.DataTransfer.pdb
+C:\JobObserver2\src\Services\Domain\BrandedTemplates\BrandedTemplates.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.pdb

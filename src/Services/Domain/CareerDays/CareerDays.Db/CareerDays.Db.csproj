@@ -15,6 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\BuildingBlocks\AutoMapper\BuildingBlocks.AutoMapper\BuildingBlocks.AutoMapper.csproj" />
     <ProjectReference Include="..\..\..\..\BuildingBlocks\Database\EntityFramework\BuildingBlocks.EntityFramework\BuildingBlocks.EntityFramework.csproj" />
+    <ProjectReference Include="..\..\..\..\BuildingBlocks\DataTransfer\BuildingBlocks.DataTransfer\BuildingBlocks.DataTransfer.csproj" />
     <ProjectReference Include="..\..\..\..\BuildingBlocks\EventBus\BuildingBlocks.EventBus.Synchronization\BuildingBlocks.EventBus.Synchronization.csproj" />
     <ProjectReference Include="..\..\..\..\BuildingBlocks\EventBus\BuildingBlocks.EventBus\BuildingBlocks.EventBus.csproj" />
   </ItemGroup>

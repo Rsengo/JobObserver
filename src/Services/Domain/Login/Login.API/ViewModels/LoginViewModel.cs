@@ -17,5 +17,8 @@ namespace Login.API.ViewModels
         [Required]
         [JsonProperty("remember_me")]
         public bool RememberMe { get; set; }
+
+        [JsonProperty("return_url")]
+        public string ReturnUrl { get; set; }
     }
 }

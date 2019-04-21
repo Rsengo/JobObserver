@@ -64,16 +64,16 @@ services:
   #     - seq
   # #     - elk
 
-  # login.api:
-  #   image: jobobserver/login.api:${TAG:-latest}
-  #   build:
-  #     context: .
-  #     dockerfile: src/Services/Domain/Login/Login.API/Dockerfile    
-  #   depends_on:
-  #     - sql.data
-  #     - rabbitmq
-  #     - seq
-  # #     - elk
+  login.api:
+    image: jobobserver/login.api:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: src/Services/Domain/Login/Login.API/Dockerfile    
+    depends_on:
+      - sql.data
+      - rabbitmq
+      - seq
+  #     - elk
 
   # paidservices.api:
   #   image: jobobserver/paidservices.api:${TAG:-latest}
@@ -107,16 +107,16 @@ services:
   #     - seq
   # #     - elk
 
-  dictionaries.api:
-    image: jobobserver/dictionaries.api:${TAG:-latest}
-    build:
-      context: .
-      dockerfile: src/Services/Integration/Dictionaries/Dictionaries.API/Dockerfile    
-    depends_on:
-      - sql.data
-      - rabbitmq
-      - seq
-      # - elk
+  # dictionaries.api:
+  #   image: jobobserver/dictionaries.api:${TAG:-latest}
+  #   build:
+  #     context: .
+  #     dockerfile: src/Services/Integration/Dictionaries/Dictionaries.API/Dockerfile    
+  #   depends_on:
+  #     - sql.data
+  #     - rabbitmq
+  #     - seq
+  #     # - elk
 
   #   moodle.api:
   #   image: jobobserver/moodle.api:${TAG:-latest}

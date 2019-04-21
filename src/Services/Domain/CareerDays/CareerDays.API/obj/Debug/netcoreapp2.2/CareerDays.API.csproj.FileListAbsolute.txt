@@ -36,8 +36,6 @@ C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcorea
 C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EntityFramework.dll
 C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EventBus.RabbitMQ.dll
 C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\CareerDays.Db.dll
-C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\CareerDays.Dto.dll
-C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\CareerDays.Synchronization.dll
 C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\CareerDays.Db.pdb
 C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\BuildingBlocks.AutoMapper.pdb
 C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EntityFramework.pdb
@@ -49,8 +47,6 @@ C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcorea
 C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.AutoMapper.pdb
 C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EntityFramework.pdb
 C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EventBus.RabbitMQ.pdb
-C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\CareerDays.Synchronization.pdb
-C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\CareerDays.Dto.pdb
 C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.API\obj\Debug\netcoreapp2.2\CareerDays.API.csproj.CopyComplete
 D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\CareerDays.API.deps.json
 D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\CareerDays.API.runtimeconfig.json

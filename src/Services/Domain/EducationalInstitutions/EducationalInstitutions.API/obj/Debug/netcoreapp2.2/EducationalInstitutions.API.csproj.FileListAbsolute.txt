@@ -37,8 +37,6 @@ C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstituti
 C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EntityFramework.dll
 C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EventBus.RabbitMQ.dll
 C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\bin\Debug\netcoreapp2.2\EducationalInstitutions.Db.dll
-C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\bin\Debug\netcoreapp2.2\EducationalInstitutions.Dto.dll
-C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\bin\Debug\netcoreapp2.2\EducationalInstitutions.Synchronization.dll
 C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\bin\Debug\netcoreapp2.2\EducationalInstitutions.Db.pdb
 C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\bin\Debug\netcoreapp2.2\BuildingBlocks.AutoMapper.pdb
 C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EntityFramework.pdb
@@ -50,8 +48,6 @@ C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstituti
 C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.AutoMapper.pdb
 C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EntityFramework.pdb
 C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EventBus.RabbitMQ.pdb
-C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\bin\Debug\netcoreapp2.2\EducationalInstitutions.Synchronization.pdb
-C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\bin\Debug\netcoreapp2.2\EducationalInstitutions.Dto.pdb
 C:\JobObserver2\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\obj\Debug\netcoreapp2.2\EducationalInstitutions.API.csproj.CopyComplete
 D:\Repos\JobObserver\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\bin\Debug\netcoreapp2.2\EducationalInstitutions.API.deps.json
 D:\Repos\JobObserver\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.API\bin\Debug\netcoreapp2.2\EducationalInstitutions.API.runtimeconfig.json

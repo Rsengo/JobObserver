@@ -37,8 +37,6 @@ C:\JobObserver2\src\Services\Domain\Employers\Employers.API\bin\Debug\netcoreapp
 C:\JobObserver2\src\Services\Domain\Employers\Employers.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EntityFramework.dll
 C:\JobObserver2\src\Services\Domain\Employers\Employers.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EventBus.RabbitMQ.dll
 C:\JobObserver2\src\Services\Domain\Employers\Employers.API\bin\Debug\netcoreapp2.2\Employers.Db.dll
-C:\JobObserver2\src\Services\Domain\Employers\Employers.API\bin\Debug\netcoreapp2.2\Employers.Dto.dll
-C:\JobObserver2\src\Services\Domain\Employers\Employers.API\bin\Debug\netcoreapp2.2\Employers.Synchronization.dll
 C:\JobObserver2\src\Services\Domain\Employers\Employers.API\bin\Debug\netcoreapp2.2\Employers.Db.pdb
 C:\JobObserver2\src\Services\Domain\Employers\Employers.API\bin\Debug\netcoreapp2.2\BuildingBlocks.AutoMapper.pdb
 C:\JobObserver2\src\Services\Domain\Employers\Employers.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EntityFramework.pdb
@@ -50,8 +48,6 @@ C:\JobObserver2\src\Services\Domain\Employers\Employers.API\bin\Debug\netcoreapp
 C:\JobObserver2\src\Services\Domain\Employers\Employers.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.AutoMapper.pdb
 C:\JobObserver2\src\Services\Domain\Employers\Employers.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EntityFramework.pdb
 C:\JobObserver2\src\Services\Domain\Employers\Employers.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EventBus.RabbitMQ.pdb
-C:\JobObserver2\src\Services\Domain\Employers\Employers.API\bin\Debug\netcoreapp2.2\Employers.Synchronization.pdb
-C:\JobObserver2\src\Services\Domain\Employers\Employers.API\bin\Debug\netcoreapp2.2\Employers.Dto.pdb
 C:\JobObserver2\src\Services\Domain\Employers\Employers.API\obj\Debug\netcoreapp2.2\Employers.API.csproj.CopyComplete
 D:\Repos\JobObserver\src\Services\Domain\Employers\Employers.API\bin\Debug\netcoreapp2.2\Employers.API.deps.json
 D:\Repos\JobObserver\src\Services\Domain\Employers\Employers.API\bin\Debug\netcoreapp2.2\Employers.API.runtimeconfig.json

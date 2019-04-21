@@ -54,3 +54,11 @@ D:\Repos\JobObserver\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcor
 D:\Repos\JobObserver\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.Synchronization.dll
 D:\Repos\JobObserver\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.Synchronization.pdb
 D:\Repos\JobObserver\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.pdb
+C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.dll
+C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.dll
+C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.Synchronization.dll
+C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.dll
+C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.pdb
+C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.Synchronization.pdb
+C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.pdb
+C:\JobObserver2\src\Services\Domain\Vacancies\Vacancies.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.pdb

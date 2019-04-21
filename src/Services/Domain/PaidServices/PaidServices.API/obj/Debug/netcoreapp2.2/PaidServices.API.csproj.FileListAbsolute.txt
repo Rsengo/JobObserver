@@ -34,7 +34,6 @@ C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netc
 C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EntityFramework.dll
 C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\Notifications.API.dll
 C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\PaidServices.Db.dll
-C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\PaidServices.Dto.dll
 C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\Notifications.API.pdb
 C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\PaidServices.Db.pdb
 C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\BuildingBlocks.AutoMapper.pdb
@@ -43,7 +42,6 @@ C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netc
 C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\BuildingBlocks.DataTransfer.pdb
 C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.AutoMapper.pdb
 C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EntityFramework.pdb
-C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\PaidServices.Dto.pdb
 C:\JobObserver2\src\Services\Domain\PaidServices\PaidServices.API\obj\Debug\netcoreapp2.2\PaidServices.API.csproj.CopyComplete
 D:\Repos\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\BuildingBlocks.AutoMapper.dll
 D:\Repos\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\BuildingBlocks.DataTransfer.dll

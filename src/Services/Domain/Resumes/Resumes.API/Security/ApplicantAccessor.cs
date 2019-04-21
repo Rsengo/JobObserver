@@ -14,10 +14,11 @@ namespace Resumes.API.Security
     {
         protected override IImmutableDictionary<Type, AccessOperation> GetAccessLevels()
         {
-            var dict = new Dictionary<Type, AccessOperation>
-            {
-                {typeof(Resume),  }
-            }.ToImmutableDictionary();
+            //var dict = new Dictionary<Type, AccessOperation>
+            //{
+            //    {typeof(Resume),  }
+            //}.ToImmutableDictionary();
+            return null;
         }
     }
 }
