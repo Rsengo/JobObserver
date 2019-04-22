@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Login.Db;
 using Login.Db.Dto.Models;
 using Login.Db.Models;
+using Login.Db.Models.Contacts;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,22 +17,64 @@ namespace Login.API.Controllers
     {
         private readonly UserManager<User> _userManager;
 
-        public UserController(UserManager<User> userManager)
+        private readonly LoginDbContext _context;
+
+        public UserController(
+            UserManager<User> userManager,
+            LoginDbContext context)
         {
             _userManager = userManager;
+            _context = context;
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> ChangeUserInformation(DtoUser dto, string id)
         {
+            var contactsId = dto.ContactsId;
+            if (dto.Contacts != null)
+            {
+                contactsId = await UpdateContacts(dto, id);
+            }
+
             var newUser = Mapper.Map<User>(dto);
             newUser.Id = id;
+            newUser.ContactsId = contactsId;
 
             await _userManager.UpdateAsync(newUser);
 
             var response = Mapper.Map<DtoUser>(newUser);
 
             return Ok(response);
+        }
+
+        private async Task<long> UpdateContacts(DtoUser dto, string id)
+        {
+            var contacts = Mapper.Map<Contact>(dto);
+
+            if (dto.ContactsId != null)
+            {
+                contacts.Id = dto.ContactsId.Value;
+            }
+
+            await _context.BulkMergeAsync(new[] { contacts });
+
+            var phones = contacts.Phones;
+            var sites = contacts.Sites;
+
+            foreach (var phone in phones)
+            {
+                phone.ContactId = contacts.Id;
+            }
+
+            foreach (var site in sites)
+            {
+                site.ContactId = contacts.Id;
+            }
+
+            await _context.BulkMergeAsync(new[] { phones });
+            await _context.BulkMergeAsync(new[] { sites });
+
+            return contacts.Id;
         }
     }
 }
