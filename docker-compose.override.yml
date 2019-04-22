@@ -16,10 +16,10 @@ services:
     # volumes: 
       # - ./database/mssql:/var/opt/mssql
 
-  # rabbitmq:
-  #   ports:
-  #     - "15672:15672"  # Important: In a production environment your should remove the external port
-  #     - "5672:5672"    # Important: In a production environment your should remove the external port
+  rabbitmq:
+    ports:
+      - "15672:15672"  # Important: In a production environment your should remove the external port
+      - "5672:5672"    # Important: In a production environment your should remove the external port
 
   # mariadb:
   #   environment:
@@ -71,11 +71,56 @@ services:
     ports:
       - "5101:80"   
 
-  # careerdays.api:
+  careerdays.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=Server=sql.data;Database=CAREER_DAYS;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - ElasticSearch=elk:9200
+      - Seq=http://seq
+    ports:
+      - "5102:80" 
+
+  educationalinstitutions.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=Server=sql.data;Database=EDUCATIONAL_INSTITUTIONS;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - ElasticSearch=elk:9200
+      - Seq=http://seq
+    ports:
+      - "5103:80"  
+
+  employers.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=Server=sql.data;Database=EMPLOYERS;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - ElasticSearch=elk:9200
+      - Seq=http://seq
+    ports:
+      - "5104:80"  
+
+  # login.api:
   #   environment:
   #     - ASPNETCORE_ENVIRONMENT=Development
   #     - ASPNETCORE_URLS=http://0.0.0.0:80
-  #     - ConnectionString=Server=sql.data;Database=CAREER_DAYS;User Id=sa;Password=Pass@word
+  #     - ConnectionString=Server=sql.data;Database=LOGIN;User Id=sa;Password=Pass@word
   #     - CorsPolicy=${CORS_POLICY}
   #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
   #     - EventBusConnection=rabbitmq
@@ -84,110 +129,65 @@ services:
   #     - ElasticSearch=elk:9200
   #     - Seq=http://seq
   #   ports:
-  #     - "5102:80" 
+  #     - "5105:80"  
 
-  # educationalinstitutions.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=http://0.0.0.0:80
-  #     - ConnectionString=Server=sql.data;Database=EDUCATIONAL_INSTITUTIONS;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - ElasticSearch=elk:9200
-  #     - Seq=http://seq
-  #   ports:
-  #     - "5103:80"  
+  paidservices.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=Server=sql.data;Database=PAID_SERVICES;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - ElasticSearch=elk:9200
+      - Seq=http://seq
+    ports:
+      - "5106:80"  
 
-  # employers.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=http://0.0.0.0:80
-  #     - ConnectionString=Server=sql.data;Database=EMPLOYERS;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - ElasticSearch=elk:9200
-  #     - Seq=http://seq
-  #   ports:
-  #     - "5104:80"  
+  resumes.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=Server=sql.data;Database=RESUMES;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - ElasticSearch=elk:9200
+      - Seq=http://seq
+    ports:
+      - "5107:80" 
 
-  # # login.api:
-  # #   environment:
-  # #     - ASPNETCORE_ENVIRONMENT=Development
-  # #     - ASPNETCORE_URLS=http://0.0.0.0:80
-  # #     - ConnectionString=Server=sql.data;Database=LOGIN;User Id=sa;Password=Pass@word
-  # #     - CorsPolicy=${CORS_POLICY}
-  # #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  # #     - EventBusConnection=rabbitmq
-  # #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  # #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  # #     - ElasticSearch=elk:9200
-  # #     - Seq=http://seq
-  # #   ports:
-  # #     - "5105:80"  
+  vacancies.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=Server=sql.data;Database=VACANCIES;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - ElasticSearch=elk:9200
+      - Seq=http://seq
+    ports:
+      - "5108:80" 
 
-  # paidservices.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=http://0.0.0.0:80
-  #     - ConnectionString=Server=sql.data;Database=PAID_SERVICES;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - ElasticSearch=elk:9200
-  #     - Seq=http://seq
-  #   ports:
-  #     - "5106:80"  
-
-  # resumes.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=http://0.0.0.0:80
-  #     - ConnectionString=Server=sql.data;Database=RESUMES;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - ElasticSearch=elk:9200
-  #     - Seq=http://seq
-  #   ports:
-  #     - "5107:80" 
-
-  # vacancies.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=http://0.0.0.0:80
-  #     - ConnectionString=Server=sql.data;Database=VACANCIES;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - ElasticSearch=elk:9200
-  #     - Seq=http://seq
-  #   ports:
-  #     - "5108:80" 
-
-  # dictionaries.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=http://0.0.0.0:80
-  #     - ConnectionString=Server=sql.data;Database=DICTIONARIES;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - ElasticSearch=elk:9200
-  #     - Seq=http://seq
-  #   ports:
-  #     - "5109:80" 
-  #   volumes:
-  #     - ./src/Services/Integration/Dictionaries/Dictionaries.API/Sources:/app/Sources 
+  dictionaries.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=Server=sql.data;Database=DICTIONARIES;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - ElasticSearch=elk:9200
+      - Seq=http://seq
+    ports:
+      - "5109:80" 
+    volumes:
+      - ./src/Services/Integration/Dictionaries/Dictionaries.API/Sources:/app/Sources 
 
   # moodle.api:
   #   environment:
@@ -206,27 +206,27 @@ services:
   #   ports:
   #     - "5111:80" 
 
-  # emailnotifications.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=http://0.0.0.0:80
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - ElasticSearch=elk:9200
-  #     - Seq=http://seq
-  #   ports:
-  #     - "5110:80" 
+  emailnotifications.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - CorsPolicy=${CORS_POLICY}
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - ElasticSearch=elk:9200
+      - Seq=http://seq
+    ports:
+      - "5110:80" 
 
-  # apigw:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development   
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - ElasticSearch=elk:9200
-  #     - Seq=http://seq
-  #   ports:
-  #     - "5200:80"   
-  #   volumes:
-  #     - ./src/ApiGateways/WebApp.Bff/apigw:${OCELOT_VOLUME_SPEC:-/app/configuration}
+  apigw:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development   
+      - CorsPolicy=${CORS_POLICY}
+      - ElasticSearch=elk:9200
+      - Seq=http://seq
+    ports:
+      - "5200:80"   
+    volumes:
+      - ./src/ApiGateways/WebApp.Bff/apigw:${OCELOT_VOLUME_SPEC:-/app/configuration}
