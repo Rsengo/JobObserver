@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Linq;
 using System.Security.Claims;
+using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using AutoMapper;
 using IdentityModel;
 using IdentityServer4;
+using IdentityServer4.Models;
 using IdentityServer4.Services;
 using IdentityServer4.Stores;
 using Login.API.Configuration;
@@ -23,8 +25,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Login.API.Controllers
 {
-    [Route("api/v1/[controller]")]
-    public class IdentityController : ControllerBase
+    public class AccountController : ControllerBase
     {
         private readonly UserManager<User> _userManager;
 
@@ -32,86 +33,43 @@ namespace Login.API.Controllers
 
         private readonly IIdentityServerInteractionService _interaction;
 
-        private readonly ILogger<IdentityController> _logger;
+        private readonly ILogger<AccountController> _logger;
 
-        private readonly IRegistrationService _registrationService;
-
-        public IdentityController(
+        public AccountController(
             UserManager<User> userManager, 
             SignInManager<User> signInManager,
             IIdentityServerInteractionService interaction,
-            ILogger<IdentityController> logger,
-            IRegistrationService registrationService)
+            ILogger<AccountController> logger)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _interaction = interaction;
             _logger = logger;
-            _registrationService = registrationService;
-
-            _registrationService.OnErrorsOccured += AddErrors;
         }
 
-        [HttpPost("registration/applicant")]
+        /// <summary>
+        /// Show login page
+        /// </summary>
+        [HttpGet("login")]
         [AllowAnonymous]
-        public async Task<IActionResult> RegisterApplicant(RegistrationViewModel model)
+        public async Task<IActionResult> Login(string returnUrl)
         {
-            if (!ModelState.IsValid)
-                return BadRequest("Неверный формат данных");
+            var context = await _interaction.GetAuthorizationContextAsync(returnUrl);
+            if (context?.IdP != null)
+            {
+                //if IdP is passed, then bypass showing the login screen
+                return ExternalLogin(context.IdP, returnUrl);
+            }
 
-            await _registrationService.RegisterAsync(model, IdentityConfig.DefaultRoles.APPLICANT);
-
-            if (ModelState.ErrorCount <= 0)
-                return Ok();
-
-            var errors = ModelState.Values
-                .SelectMany(x => x.Errors)
-                .Select(x => x.ErrorMessage);
-
-            return BadRequest(errors);
-        }
-
-        [HttpPost("registration/employermanager")]
-        [AllowAnonymous]
-        public async Task<IActionResult> RegisterEmployerManager(RegistrationViewModel model)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest("Неверный формат данных");
-
-            await _registrationService.RegisterAsync(model, IdentityConfig.DefaultRoles.EMPLOYER_MANAGER);
-
-            if (ModelState.ErrorCount <= 0)
-                return Ok();
-
-            var errors = ModelState.Values
-                .SelectMany(x => x.Errors)
-                .Select(x => x.ErrorMessage);
-
-            return BadRequest(errors);
-        }
-
-        [HttpPost("registration/educationalinstitutionmanager")]
-        [AllowAnonymous]
-        public async Task<IActionResult> RegisterEducationalInstitutionManager(RegistrationViewModel model)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest("Неверный формат данных");
-
-            await _registrationService.RegisterAsync(model, IdentityConfig.DefaultRoles.EDUCATIONAL_INSTITUTION_MANAGER);
-
-            if (ModelState.ErrorCount <= 0)
-                return Ok();
-
-            var errors = ModelState.Values
-                .SelectMany(x => x.Errors)
-                .Select(x => x.ErrorMessage);
-
-            return BadRequest(errors);
+            //Todo redirect to login page
+            return Redirect("");
         }
 
         [HttpPost("login")]
+        [AllowAnonymous]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
+            //TODO обработка ошибок
             if (!ModelState.IsValid)
                 return BadRequest("Неверный формат данных");
 
@@ -135,13 +93,42 @@ namespace Login.API.Controllers
 
             await _signInManager.SignInAsync(user, props);
 
-            var dtoUser = Mapper.Map<DtoUser>(user);
+            return Redirect(model.ReturnUrl);
+        }
 
-            return Ok(dtoUser);
+        /// <summary>
+        /// Show logout page
+        /// </summary>
+        [HttpGet("logout")]
+        public async Task<IActionResult> Logout(string logoutId)
+        {
+            if (User.Identity.IsAuthenticated == false)
+            {
+                // if the user is not authenticated, then just show logged out page
+                return await Logout(new LogoutViewModel { LogoutId = logoutId });
+            }
+
+            //Test for Xamarin. 
+            var context = await _interaction.GetLogoutContextAsync(logoutId);
+            if (context?.ShowSignoutPrompt == false)
+            {
+                //it's safe to automatically sign-out
+                return await Logout(new LogoutViewModel { LogoutId = logoutId });
+            }
+
+            // show the logout prompt. this prevents attacks where the user
+            // is automatically signed out by another malicious web page.
+            var vm = new LogoutViewModel
+            {
+                LogoutId = logoutId
+            };
+
+            //todo
+            return Redirect("");
         }
 
         [HttpPost("logout")]
-        public async Task<IActionResult> LogOut(LogOutViewModel model)
+        public async Task<IActionResult> Logout(LogoutViewModel model)
         {
             var idp = User?.FindFirst(JwtClaimTypes.IdentityProvider)?.Value;
 
@@ -174,28 +161,41 @@ namespace Login.API.Controllers
             // set this so UI rendering sees an anonymous user
             HttpContext.User = new ClaimsPrincipal(new ClaimsIdentity());
 
-            return Ok();
+            // get context information (client name, post logout redirect URI and iframe for federated signout)
+            var logout = await _interaction.GetLogoutContextAsync(model.LogoutId);
+
+            return Redirect(logout?.PostLogoutRedirectUri);
         }
 
-        [HttpPut("changeUserInformation/{id}")]
-        public async Task<IActionResult> ChangeUserInformation(DtoUser dto, string id)
+        public async Task<IActionResult> DeviceLogOut(string redirectUrl)
         {
-            var newUser = Mapper.Map<User>(dto);
-            newUser.Id = id;
+            // delete authentication cookie
+            await HttpContext.SignOutAsync();
 
-            await _userManager.UpdateAsync(newUser);
+            // set this so UI rendering sees an anonymous user
+            HttpContext.User = new ClaimsPrincipal(new ClaimsIdentity());
 
-            var response = Mapper.Map<DtoUser>(newUser);
-
-            return Ok(response);
+            return Redirect(redirectUrl);
         }
-
-        private void AddErrors(IdentityResult result)
+        
+        /// <summary>
+        /// initiate roundtrip to external authentication provider
+        /// </summary>
+        public IActionResult ExternalLogin(string provider, string returnUrl)
         {
-            foreach (var error in result.Errors)
+            if (returnUrl != null)
             {
-                ModelState.AddModelError(string.Empty, error.Description);
+                returnUrl = UrlEncoder.Default.Encode(returnUrl);
             }
+            returnUrl = "/account/externallogincallback?returnUrl=" + returnUrl;
+
+            // start challenge and roundtrip the return URL
+            var props = new AuthenticationProperties
+            {
+                RedirectUri = returnUrl,
+                Items = { { "scheme", provider } }
+            };
+            return new ChallengeResult(provider, props);
         }
     }
 }

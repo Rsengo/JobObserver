@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "51a5888056c9b0ae62e7697c52a414ccc3661e4e"
+    "signature": "d0e870c40d95a229a49fb4bff40a2eab5097fbf7"
   },
   "compilationOptions": {
     "defines": [
@@ -32,13 +32,13 @@
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.0.1916590",
           "Notifications.API": "1.0.0",
           "PaidServices.Db": "1.0.0",
-          "PaidServices.Dto": "1.0.0",
           "Serilog": "2.8.0",
           "Serilog.AspNetCore": "2.1.1",
           "Serilog.Extensions.Hosting": "2.0.0",
           "Serilog.Extensions.Logging": "2.0.2",
           "Serilog.Sinks.ColoredConsole": "3.0.1",
           "Serilog.Sinks.Elasticsearch": "7.1.0",
+          "Serilog.Sinks.Seq": "4.0.0",
           "Swashbuckle.AspNetCore": "4.0.1",
           "Z.EntityFramework.Extensions.EFCore": "2.2.3"
         },
@@ -609,6 +609,25 @@
           "lib/netstandard1.2/Serilog.Sinks.PeriodicBatching.dll": {}
         }
       },
+      "Serilog.Sinks.Seq/4.0.0": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "Serilog": "2.8.0",
+          "Serilog.Formatting.Compact": "1.0.0",
+          "Serilog.Sinks.File": "4.0.0",
+          "Serilog.Sinks.PeriodicBatching": "2.1.1",
+          "System.Net.Http": "4.3.2"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Serilog.Sinks.Seq.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.3/Serilog.Sinks.Seq.dll": {}
+        }
+      },
       "Swashbuckle.AspNetCore/4.0.1": {
         "dependencies": {
           "Swashbuckle.AspNetCore.Swagger": "4.0.1",
@@ -744,6 +763,46 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "System.Net.Http/4.3.2": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.2.0",
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Diagnostics.DiagnosticSource": "4.5.0",
+          "System.Diagnostics.Tracing": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.Globalization.Extensions": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.IO.FileSystem": "4.3.0",
+          "System.Net.Primitives": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Runtime.Handles": "4.3.0",
+          "System.Runtime.InteropServices": "4.3.0",
+          "System.Security.Cryptography.Algorithms": "4.3.0",
+          "System.Security.Cryptography.Encoding": "4.3.0",
+          "System.Security.Cryptography.OpenSsl": "4.3.0",
+          "System.Security.Cryptography.Primitives": "4.3.0",
+          "System.Security.Cryptography.X509Certificates": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Tasks": "4.3.0",
+          "runtime.native.System": "4.3.0",
+          "runtime.native.System.Net.Http": "4.3.0",
+          "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0"
+        },
+        "runtimeTargets": {
+          "runtime/unix/lib/_._": {
+            "rid": "unix",
+            "assetType": "runtime"
+          },
+          "runtime/win/lib/_._": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      },
       "System.Net.NameResolution/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.2.0",
@@ -770,6 +829,14 @@
             "rid": "win",
             "assetType": "runtime"
           }
+        }
+      },
+      "System.Net.Primitives/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.2.0",
+          "Microsoft.NETCore.Targets": "2.0.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Handles": "4.3.0"
         }
       },
       "System.Net.Security/4.3.0": {
@@ -994,12 +1061,14 @@
       "Notifications.API/1.0.0": {
         "dependencies": {
           "BuildingBlocks.Extensions.EventBus.RabbitMQ": "1.0.0",
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.0.1916590",
           "Serilog": "2.8.0",
           "Serilog.AspNetCore": "2.1.1",
           "Serilog.Extensions.Hosting": "2.0.0",
           "Serilog.Extensions.Logging": "2.0.2",
           "Serilog.Sinks.ColoredConsole": "3.0.1",
           "Serilog.Sinks.Elasticsearch": "7.1.0",
+          "Serilog.Sinks.Seq": "4.0.0",
           "Swashbuckle.AspNetCore": "4.0.1",
           "Z.EntityFramework.Extensions.EFCore": "2.2.3"
         },
@@ -1012,6 +1081,9 @@
       },
       "PaidServices.Db/1.0.0": {
         "dependencies": {
+          "AutoMapper": "8.0.0",
+          "BuildingBlocks.AutoMapper": "1.0.0",
+          "BuildingBlocks.DataTransfer": "1.0.0",
           "BuildingBlocks.EntityFramework": "1.0.0",
           "Microsoft.EntityFrameworkCore": "2.2.2",
           "Microsoft.EntityFrameworkCore.AutoHistory": "2.1.0",
@@ -1023,21 +1095,6 @@
         },
         "compile": {
           "PaidServices.Db.dll": {}
-        }
-      },
-      "PaidServices.Dto/1.0.0": {
-        "dependencies": {
-          "BuildingBlocks.AutoMapper": "1.0.0",
-          "BuildingBlocks.DataTransfer": "1.0.0",
-          "Newtonsoft.Json": "12.0.1",
-          "PaidServices.Db": "1.0.0",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
-        },
-        "runtime": {
-          "PaidServices.Dto.dll": {}
-        },
-        "compile": {
-          "PaidServices.Dto.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -2868,7 +2925,7 @@
           "Microsoft.IdentityModel.Tokens": "5.3.0",
           "System.Collections.Specialized": "4.3.0",
           "System.Diagnostics.Contracts": "4.3.0",
-          "System.Net.Http": "4.3.0"
+          "System.Net.Http": "4.3.2"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll": {}
@@ -3345,46 +3402,6 @@
         "compileOnly": true
       },
       "System.Memory/4.5.1": {
-        "compileOnly": true
-      },
-      "System.Net.Http/4.3.0": {
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "2.2.0",
-          "System.Collections": "4.3.0",
-          "System.Diagnostics.Debug": "4.3.0",
-          "System.Diagnostics.DiagnosticSource": "4.5.0",
-          "System.Diagnostics.Tracing": "4.3.0",
-          "System.Globalization": "4.3.0",
-          "System.Globalization.Extensions": "4.3.0",
-          "System.IO": "4.3.0",
-          "System.IO.FileSystem": "4.3.0",
-          "System.Net.Primitives": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Runtime.Handles": "4.3.0",
-          "System.Runtime.InteropServices": "4.3.0",
-          "System.Security.Cryptography.Algorithms": "4.3.0",
-          "System.Security.Cryptography.Encoding": "4.3.0",
-          "System.Security.Cryptography.OpenSsl": "4.3.0",
-          "System.Security.Cryptography.Primitives": "4.3.0",
-          "System.Security.Cryptography.X509Certificates": "4.3.0",
-          "System.Text.Encoding": "4.3.0",
-          "System.Threading": "4.3.0",
-          "System.Threading.Tasks": "4.3.0",
-          "runtime.native.System": "4.3.0",
-          "runtime.native.System.Net.Http": "4.3.0",
-          "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0"
-        },
-        "compileOnly": true
-      },
-      "System.Net.Primitives/4.3.0": {
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "2.2.0",
-          "Microsoft.NETCore.Targets": "2.0.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Handles": "4.3.0"
-        },
         "compileOnly": true
       },
       "System.Net.WebSockets.WebSocketProtocol/4.5.1": {
@@ -4192,6 +4209,13 @@
       "path": "serilog.sinks.periodicbatching/2.1.1",
       "hashPath": "serilog.sinks.periodicbatching.2.1.1.nupkg.sha512"
     },
+    "Serilog.Sinks.Seq/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EGoR4dlqRm+0wgHX13VBlxvjF3pttBwIrUhENewzdREhjxATaSTkBSA+3urFmOmMEmSr60RAknBJghn10w1SJA==",
+      "path": "serilog.sinks.seq/4.0.0",
+      "hashPath": "serilog.sinks.seq.4.0.0.nupkg.sha512"
+    },
     "Swashbuckle.AspNetCore/4.0.1": {
       "type": "package",
       "serviceable": true,
@@ -4269,12 +4293,26 @@
       "path": "system.linq.queryable/4.0.1",
       "hashPath": "system.linq.queryable.4.0.1.nupkg.sha512"
     },
+    "System.Net.Http/4.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4HYUu8WuiSCNZifYY2wDn27dESG43gGNOSv0Eg1vdu/wSsRs5Gg90IdWjA+yAaGBGBBKneziNPeVd8mhEz82vg==",
+      "path": "system.net.http/4.3.2",
+      "hashPath": "system.net.http.4.3.2.nupkg.sha512"
+    },
     "System.Net.NameResolution/4.3.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-DPvMSdd32CbEOCTtOpO4nY9UvbP6LJe375F1yEQjy667WT5LEh1Ek2T4DSVw1STR0K3LSawWfBFwoeSG0TXFeA==",
       "path": "system.net.nameresolution/4.3.0",
       "hashPath": "system.net.nameresolution.4.3.0.nupkg.sha512"
+    },
+    "System.Net.Primitives/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-n3/ezjMKgfMxLqfIBJJ4UkE77iySnzBmtzaZOAPfR8wGkvvKI2wiK/GdyPWbQvVPKkwA2ppNYk5FjaWHTRJ85g==",
+      "path": "system.net.primitives/4.3.0",
+      "hashPath": "system.net.primitives.4.3.0.nupkg.sha512"
     },
     "System.Net.Security/4.3.0": {
       "type": "package",
@@ -4376,11 +4414,6 @@
       "sha512": ""
     },
     "PaidServices.Db/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "PaidServices.Dto/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -5854,20 +5887,6 @@
       "sha512": "sha512-vcG3/MbfpxznMkkkaAblJi7RHOmuP7kawQMhDgLSuA1tRpRQYsFSCTxRSINDUgn2QNn2jWeLxv8er5BXbyACkw==",
       "path": "system.memory/4.5.1",
       "hashPath": "system.memory.4.5.1.nupkg.sha512"
-    },
-    "System.Net.Http/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-6BBc6BUa7pWFL7KUI/c8wb18IobTZHTtcQKksxJI5F9DRDShdtOvBEJzg5jJbFdTll7gRE+5yXUlq72ciLE+QQ==",
-      "path": "system.net.http/4.3.0",
-      "hashPath": "system.net.http.4.3.0.nupkg.sha512"
-    },
-    "System.Net.Primitives/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-n3/ezjMKgfMxLqfIBJJ4UkE77iySnzBmtzaZOAPfR8wGkvvKI2wiK/GdyPWbQvVPKkwA2ppNYk5FjaWHTRJ85g==",
-      "path": "system.net.primitives/4.3.0",
-      "hashPath": "system.net.primitives.4.3.0.nupkg.sha512"
     },
     "System.Net.WebSockets.WebSocketProtocol/4.5.1": {
       "type": "package",

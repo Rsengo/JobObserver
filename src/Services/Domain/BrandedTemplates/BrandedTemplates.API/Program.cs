@@ -49,6 +49,7 @@ namespace BrandedTemplates.API
                         //.WriteTo.Elasticsearch(url)
                         .WriteTo.Seq(seqUrl);
                 })
+                .UseKestrel(x => x.ListenAnyIP(80))
                 .Build();
     }
 }

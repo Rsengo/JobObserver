@@ -17,10 +17,15 @@ namespace Login.API.Configuration
 
         public static class DefaultRoles
         {
-            public static string APPLICANT = "Applicant";
-            public static string EMPLOYER_MANAGER = "Employer Manager";
-            public static string EDUCATIONAL_INSTITUTION_MANAGER = "Educational Institution Manager";
-            public static string ADMIN = "Admin";
+            public const string APPLICANT = "Applicant";
+            public const string EMPLOYER_MANAGER = "Employer Manager";
+            public const string EDUCATIONAL_INSTITUTION_MANAGER = "Educational Institution Manager";
+            public const string ADMIN = "Admin";
+        }
+
+        public static class JobObserverJwtClaimTypes
+        {
+            public const string OrganizationId = "organization_id";
         }
     }
 }

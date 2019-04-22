@@ -59,6 +59,34 @@ namespace Login.API.Configuration
                     "moodle"
                 }
             };
+
+            yield return new Client
+            {
+                ClientId = "postman",
+                ClientName = "Postman Client",
+                AllowedGrantTypes = GrantTypes.Code,
+                AllowAccessTokensViaBrowser = true,
+                RedirectUris = {"https://www.getpostman.com/oauth2/callback/"},
+                RequireConsent = false,
+                PostLogoutRedirectUris = {"https://www.getpostman.com/oauth2/callback/"},
+                AllowedCorsOrigins = {"https://www.getpostman.com/oauth2/callback/"},
+                AllowedScopes =
+                {
+                    IdentityServerConstants.StandardScopes.OpenId,
+                    IdentityServerConstants.StandardScopes.Profile,
+                    "brandedtemplates",
+                    "careerdays",
+                    "educationalinstitutions",
+                    "employers",
+                    "paidservices",
+                    "resumes",
+                    "vacancies",
+                    "dictionaries",
+                    "moodle"
+                },
+                ClientSecrets = new List<Secret> {new Secret("Secret".Sha256())},
+                RequireClientSecret = false
+            };
         }
     }
 }

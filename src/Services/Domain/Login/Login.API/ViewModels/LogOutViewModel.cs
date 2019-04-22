@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace Login.API.ViewModels
 {
-    public class LogOutViewModel
+    public class LogoutViewModel
     {
         [Required]
         [JsonProperty("logout_id")]
