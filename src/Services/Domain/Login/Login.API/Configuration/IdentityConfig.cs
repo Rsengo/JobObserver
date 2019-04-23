@@ -7,6 +7,10 @@ namespace Login.API.Configuration
 {
     public static class IdentityConfig
     {
+        public const string ADMIN_EMAIL = "rsengo42@gmail.com";
+
+        public const string ADMIN_PASSWORD = "admin";
+
         public static IEnumerable<string> GetRoleNames()
         {
             yield return DefaultRoles.APPLICANT;

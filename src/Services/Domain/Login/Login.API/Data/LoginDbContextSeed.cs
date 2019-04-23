@@ -76,15 +76,15 @@ namespace Login.API.Data
                 Id = Guid.NewGuid().ToString("D"),
                 BirthDate = new DateTime(1998, 1, 5),
                 FirstName = "admin",
-                Email = "rsengo42@gmail.com",
-                NormalizedEmail = "RSENGO42@GMAIL.COM",
-                UserName = "rsengo42@gmail.com",
-                NormalizedUserName = "RSENGO42@GMAIL.COM",
+                Email = IdentityConfig.ADMIN_EMAIL,
+                NormalizedEmail = IdentityConfig.ADMIN_EMAIL.ToUpper(),
+                UserName = IdentityConfig.ADMIN_EMAIL,
+                NormalizedUserName = IdentityConfig.ADMIN_EMAIL.ToUpper(),
                 PhoneNumber = "89505831265",
                 SecurityStamp = Guid.NewGuid().ToString("D")
             };
 
-            admin.PasswordHash = hasher.HashPassword(admin, "admin");
+            admin.PasswordHash = hasher.HashPassword(admin, IdentityConfig.ADMIN_PASSWORD);
 
             return admin;
         }

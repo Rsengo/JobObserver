@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using BuildingBlocks.EventBus.Abstractions;
+using Login.API.Configuration;
 using Login.Db.Dto.Models;
 using Login.Db.Models;
+using Login.Db.Synchronization.Events.Users;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,9 +18,14 @@ namespace Login.API.Controllers
     {
         private readonly UserManager<User> _userManager;
 
-        public UserController(UserManager<User> userManager)
+        private readonly IEventBus _eventBus;
+
+        public UserController(
+            UserManager<User> userManager,
+             IEventBus eventBus)
         {
             _userManager = userManager;
+            _eventBus = eventBus;
         }
 
         [HttpPut("{id}")]
@@ -31,6 +39,22 @@ namespace Login.API.Controllers
             var response = Mapper.Map<DtoUser>(newUser);
 
             return Ok(response);
+        }
+
+        [HttpPost("restoreadmin")]
+        public async Task<IActionResult> RestoreAdmin()
+        {
+            var user = await _userManager.FindByEmailAsync(IdentityConfig.ADMIN_EMAIL);
+            var dto = Mapper.Map<DtoUser>(user);
+
+            var @event = new UsersChanged
+            {
+                Created = new [] { dto }
+            };
+
+            _eventBus.Publish(@event);
+
+            return Ok();
         }
     }
 }

@@ -122,20 +122,20 @@ services:
     ports:
       - "5104:80"  
 
-  # login.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=http://0.0.0.0:80
-  #     - ConnectionString=Server=sql.data;Database=LOGIN;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - ElasticSearch=elk:9200
-  #     - Seq=http://seq
-  #   ports:
-  #     - "5105:80"  
+  login.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=Server=sql.data;Database=LOGIN;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - ElasticSearch=elk:9200
+      - Seq=http://seq
+    ports:
+      - "5105:80"  
 
   paidservices.api:
     environment:

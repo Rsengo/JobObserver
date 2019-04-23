@@ -1,0 +1,3726 @@
+﻿[
+    {
+       "id":1,
+       "name":"Информационные технологии, интернет, телеком",
+       "specializations":[
+          {
+             "id":2,
+             "name":"Банковское ПО",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":3,
+             "name":"Оптимизация сайта (SEO)",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":4,
+             "name":"Администратор баз данных",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":5,
+             "name":"Стартапы",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":6,
+             "name":"Игровое ПО",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":7,
+             "name":"CRM системы",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":8,
+             "name":"CTO, CIO, Директор по IT",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":9,
+             "name":"Web инженер",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":10,
+             "name":"Web мастер",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":11,
+             "name":"Аналитик",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":12,
+             "name":"Арт-директор",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":13,
+             "name":"Системы управления предприятием (ERP)",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":14,
+             "name":"Инженер",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":15,
+             "name":"Интернет",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":16,
+             "name":"Компьютерная безопасность",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":17,
+             "name":"Консалтинг, Аутсорсинг",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":18,
+             "name":"Контент",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":19,
+             "name":"Тестирование",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":20,
+             "name":"Маркетинг",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":21,
+             "name":"Мультимедиа",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":22,
+             "name":"Начальный уровень, Мало опыта",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":23,
+             "name":"Передача данных и доступ в интернет",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":24,
+             "name":"Поддержка, Helpdesk",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":25,
+             "name":"Программирование, Разработка",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":26,
+             "name":"Продажи",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":27,
+             "name":"Продюсер",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":28,
+             "name":"Развитие бизнеса",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":29,
+             "name":"Сетевые технологии",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":30,
+             "name":"Системная интеграция",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":31,
+             "name":"Системный администратор",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":32,
+             "name":"Системы автоматизированного проектирования",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":33,
+             "name":"Сотовые, Беспроводные технологии",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":34,
+             "name":"Телекоммуникации",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":35,
+             "name":"Технический писатель",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":36,
+             "name":"Управление проектами",
+             "laboring":false,
+             "parent_id":1
+          },
+          {
+             "id":37,
+             "name":"Электронная коммерция",
+             "laboring":false,
+             "parent_id":1
+          }
+       ],
+       "parent_id":null
+    },
+    {
+       "id":38,
+       "name":"Строительство, недвижимость",
+       "specializations":[
+          {
+             "id":39,
+             "name":"Эксплуатация",
+             "laboring":false,
+             "parent_id":38
+          },
+          {
+             "id":40,
+             "name":"ЖКХ",
+             "laboring":false,
+             "parent_id":38
+          },
+          {
+             "id":41,
+             "name":"Геодезия и картография",
+             "laboring":false,
+             "parent_id":38
+          },
+          {
+             "id":42,
+             "name":"Рабочие строительных специальностей",
+             "laboring":true,
+             "parent_id":38
+          },
+          {
+             "id":43,
+             "name":"Землеустройство",
+             "laboring":false,
+             "parent_id":38
+          },
+          {
+             "id":44,
+             "name":"Оценка",
+             "laboring":false,
+             "parent_id":38
+          },
+          {
+             "id":45,
+             "name":"Отопление, вентиляция и кондиционирование",
+             "laboring":false,
+             "parent_id":38
+          },
+          {
+             "id":46,
+             "name":"Водоснабжение и канализация",
+             "laboring":false,
+             "parent_id":38
+          },
+          {
+             "id":47,
+             "name":"Тендеры",
+             "laboring":false,
+             "parent_id":38
+          },
+          {
+             "id":48,
+             "name":"Агент",
+             "laboring":false,
+             "parent_id":38
+          },
+          {
+             "id":49,
+             "name":"Гостиницы, Магазины",
+             "laboring":false,
+             "parent_id":38
+          },
+          {
+             "id":50,
+             "name":"Дизайн/Оформление",
+             "laboring":false,
+             "parent_id":38
+          },
+          {
+             "id":51,
+             "name":"Жилье",
+             "laboring":false,
+             "parent_id":38
+          },
+          {
+             "id":52,
+             "name":"Инженер",
+             "laboring":false,
+             "parent_id":38
+          },
+          {
+             "id":53,
+             "name":"Начальный уровень/Мало опыта",
+             "laboring":false,
+             "parent_id":38
+          },
+          {
+             "id":54,
+             "name":"Нежилые помещения",
+             "laboring":false,
+             "parent_id":38
+          },
+          {
+             "id":55,
+             "name":"Проектирование, Архитектура",
+             "laboring":false,
+             "parent_id":38
+          },
+          {
+             "id":56,
+             "name":"Строительство",
+             "laboring":false,
+             "parent_id":38
+          },
+          {
+             "id":57,
+             "name":"Управление проектами",
+             "laboring":false,
+             "parent_id":38
+          },
+          {
+             "id":58,
+             "name":"Девелопер",
+             "laboring":false,
+             "parent_id":38
+          },
+          {
+             "id":59,
+             "name":"Прораб",
+             "laboring":false,
+             "parent_id":38
+          }
+       ],
+       "parent_id":null
+    },
+    {
+       "id":60,
+       "name":"Продажи",
+       "specializations":[
+          {
+             "id":61,
+             "name":"Электротехническое оборудование, Светотехника",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":62,
+             "name":"Химическая продукция",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":63,
+             "name":"Сертификация",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":64,
+             "name":"Строительные материалы",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":65,
+             "name":"Сельское хозяйство",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":66,
+             "name":"Текстиль, Одежда, Обувь",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":67,
+             "name":"Франчайзинг",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":68,
+             "name":"Мебель",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":69,
+             "name":"Системы безопасности",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":70,
+             "name":"Сантехника",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":71,
+             "name":"Бытовая техника",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":72,
+             "name":"Продавец в магазине",
+             "laboring":true,
+             "parent_id":60
+          },
+          {
+             "id":73,
+             "name":"Торговые сети",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":74,
+             "name":"Продажи по телефону, Телемаркетинг",
+             "laboring":true,
+             "parent_id":60
+          },
+          {
+             "id":75,
+             "name":"Тендеры",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":76,
+             "name":"Клининговые услуги",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":77,
+             "name":"Финансовые услуги",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":78,
+             "name":"Решения по автоматизации процессов",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":79,
+             "name":"Автомобили, Запчасти",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":80,
+             "name":"Алкоголь",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":81,
+             "name":"ГСМ, нефть, бензин",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":82,
+             "name":"Дилерские сети",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":83,
+             "name":"Дистрибуция",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":84,
+             "name":"Компьютерная техника",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":85,
+             "name":"Компьютерные программы",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":86,
+             "name":"Медицина, Фармацевтика",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":87,
+             "name":"Менеджер по работе с клиентами",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":88,
+             "name":"Металлопрокат",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":89,
+             "name":"Многоуровневый маркетинг",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":90,
+             "name":"Начальный уровень, Мало опыта",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":91,
+             "name":"Оптовая торговля",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":92,
+             "name":"Продукты питания",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":93,
+             "name":"Прямые продажи",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":94,
+             "name":"Розничная торговля",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":95,
+             "name":"Телекоммуникации, Сетевые решения",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":96,
+             "name":"Станки, тяжелое оборудование",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":97,
+             "name":"Товары для бизнеса",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":98,
+             "name":"FMCG, Товары народного потребления",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":99,
+             "name":"Торговля биржевыми товарами",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":100,
+             "name":"Торговый представитель",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":101,
+             "name":"Управление продажами",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":102,
+             "name":"Услуги для бизнеса",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":103,
+             "name":"Услуги для населения",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":104,
+             "name":"Цветные металлы",
+             "laboring":false,
+             "parent_id":60
+          },
+          {
+             "id":105,
+             "name":"Электроника, фото, видео",
+             "laboring":false,
+             "parent_id":60
+          }
+       ],
+       "parent_id":null
+    },
+    {
+       "id":106,
+       "name":"Медицина, фармацевтика",
+       "specializations":[
+          {
+             "id":107,
+             "name":"Клинические исследования",
+             "laboring":false,
+             "parent_id":106
+          },
+          {
+             "id":108,
+             "name":"Производство",
+             "laboring":false,
+             "parent_id":106
+          },
+          {
+             "id":109,
+             "name":"Регистратура",
+             "laboring":false,
+             "parent_id":106
+          },
+          {
+             "id":110,
+             "name":"Оптика",
+             "laboring":false,
+             "parent_id":106
+          },
+          {
+             "id":111,
+             "name":"Психология",
+             "laboring":false,
+             "parent_id":106
+          },
+          {
+             "id":112,
+             "name":"Медицинский представитель",
+             "laboring":false,
+             "parent_id":106
+          },
+          {
+             "id":113,
+             "name":"Медицинский советник",
+             "laboring":false,
+             "parent_id":106
+          },
+          {
+             "id":114,
+             "name":"Дефектолог, Логопед",
+             "laboring":false,
+             "parent_id":106
+          },
+          {
+             "id":115,
+             "name":"Фармацевт",
+             "laboring":false,
+             "parent_id":106
+          },
+          {
+             "id":116,
+             "name":"Врач-эксперт",
+             "laboring":false,
+             "parent_id":106
+          },
+          {
+             "id":117,
+             "name":"Ветеринария",
+             "laboring":false,
+             "parent_id":106
+          },
+          {
+             "id":118,
+             "name":"Лаборант",
+             "laboring":false,
+             "parent_id":106
+          },
+          {
+             "id":119,
+             "name":"Лечащий врач",
+             "laboring":false,
+             "parent_id":106
+          },
+          {
+             "id":120,
+             "name":"Маркетинг",
+             "laboring":false,
+             "parent_id":106
+          },
+          {
+             "id":121,
+             "name":"Младший и средний медперсонал",
+             "laboring":true,
+             "parent_id":106
+          },
+          {
+             "id":122,
+             "name":"Начальный уровень, Мало опыта",
+             "laboring":false,
+             "parent_id":106
+          },
+          {
+             "id":123,
+             "name":"Провизор",
+             "laboring":false,
+             "parent_id":106
+          },
+          {
+             "id":124,
+             "name":"Продажи",
+             "laboring":false,
+             "parent_id":106
+          },
+          {
+             "id":125,
+             "name":"Лекарственные препараты",
+             "laboring":false,
+             "parent_id":106
+          },
+          {
+             "id":126,
+             "name":"Медицинское оборудование",
+             "laboring":false,
+             "parent_id":106
+          },
+          {
+             "id":127,
+             "name":"Сертификация",
+             "laboring":false,
+             "parent_id":106
+          }
+       ],
+       "parent_id":null
+    },
+    {
+       "id":128,
+       "name":"Банки, инвестиции, лизинг",
+       "specializations":[
+          {
+             "id":129,
+             "name":"Ипотека, Ипотечное кредитование",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":130,
+             "name":"Паевые фонды",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":131,
+             "name":"Экономист",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":132,
+             "name":"Финансовый мониторинг",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":133,
+             "name":"Кредитование малого и среднего бизнеса",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":134,
+             "name":"Риски: операционные",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":135,
+             "name":"Риски: финансовые",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":136,
+             "name":"Риски: рыночные",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":137,
+             "name":"Автокредитование",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":138,
+             "name":"Факторинг",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":139,
+             "name":"Работа с проблемными заемщиками",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":140,
+             "name":"Private Banking",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":141,
+             "name":"Forex",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":142,
+             "name":"Акции, Ценные бумаги",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":143,
+             "name":"Аналитик",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":144,
+             "name":"Аудит, Внутренний контроль",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":145,
+             "name":"Бумаги с фиксированной доходностью (fixed Income)",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":146,
+             "name":"Бухгалтер",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":147,
+             "name":"Валютный контроль",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":148,
+             "name":"Внутренние операции (Back Office)",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":149,
+             "name":"Денежный рынок (money market)",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":150,
+             "name":"Инвестиционная компания",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":151,
+             "name":"Трейдинг, Дилинг",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":152,
+             "name":"Кассовое обслуживание, инкассация",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":153,
+             "name":"Коммерческий банк",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":154,
+             "name":"Корпоративное финансирование",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":155,
+             "name":"Корреспондентские, Международные отношения",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":156,
+             "name":"Риски: кредитные",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":157,
+             "name":"Кредиты",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":158,
+             "name":"Лизинг",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":159,
+             "name":"Риски: лизинговые",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":160,
+             "name":"Налоги",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":161,
+             "name":"Начальный уровень, Мало опыта",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":162,
+             "name":"Обменные пункты, Банкоматы",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":163,
+             "name":"ОПЕРУ",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":164,
+             "name":"Пластиковые карты",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":165,
+             "name":"Портфельные инвестиции",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":166,
+             "name":"Привлечение клиентов",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":167,
+             "name":"Продажа финансовых продуктов",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":168,
+             "name":"Проектное финансирование",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":169,
+             "name":"Прямые инвестиции",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":170,
+             "name":"Расчеты",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":171,
+             "name":"Розничный бизнес",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":172,
+             "name":"Руководство бухгалтерией",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":173,
+             "name":"Торговое финансирование",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":174,
+             "name":"Филиалы",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":175,
+             "name":"Оценка залога, Стоимости имущества",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":176,
+             "name":"Риски: прочие",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":177,
+             "name":"Методология, Банковские технологии",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":178,
+             "name":"Разработка новых продуктов, Маркетинг",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":179,
+             "name":"Отчетность",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":180,
+             "name":"Казначейство, Управление ликвидностью",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":181,
+             "name":"Кредиты: розничные",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":182,
+             "name":"Бюджетирование",
+             "laboring":false,
+             "parent_id":128
+          },
+          {
+             "id":183,
+             "name":"Эмиссии",
+             "laboring":false,
+             "parent_id":128
+          }
+       ],
+       "parent_id":null
+    },
+    {
+       "id":184,
+       "name":"Транспорт, логистика",
+       "specializations":[
+          {
+             "id":185,
+             "name":"Гражданская авиация",
+             "laboring":false,
+             "parent_id":184
+          },
+          {
+             "id":186,
+             "name":"Бизнес-авиация",
+             "laboring":false,
+             "parent_id":184
+          },
+          {
+             "id":187,
+             "name":"Контейнерные перевозки",
+             "laboring":false,
+             "parent_id":184
+          },
+          {
+             "id":188,
+             "name":"Диспетчер",
+             "laboring":false,
+             "parent_id":184
+          },
+          {
+             "id":189,
+             "name":"Водитель",
+             "laboring":true,
+             "parent_id":184
+          },
+          {
+             "id":190,
+             "name":"Экспедитор",
+             "laboring":true,
+             "parent_id":184
+          },
+          {
+             "id":191,
+             "name":"Кладовщик",
+             "laboring":true,
+             "parent_id":184
+          },
+          {
+             "id":192,
+             "name":"Рабочий склада",
+             "laboring":true,
+             "parent_id":184
+          },
+          {
+             "id":193,
+             "name":"Авиаперевозки",
+             "laboring":false,
+             "parent_id":184
+          },
+          {
+             "id":194,
+             "name":"Автоперевозки",
+             "laboring":true,
+             "parent_id":184
+          },
+          {
+             "id":195,
+             "name":"ВЭД",
+             "laboring":false,
+             "parent_id":184
+          },
+          {
+             "id":196,
+             "name":"Железнодорожные перевозки",
+             "laboring":false,
+             "parent_id":184
+          },
+          {
+             "id":197,
+             "name":"Закупки, Снабжение",
+             "laboring":false,
+             "parent_id":184
+          },
+          {
+             "id":198,
+             "name":"Логистика",
+             "laboring":false,
+             "parent_id":184
+          },
+          {
+             "id":199,
+             "name":"Морские/Речные перевозки",
+             "laboring":false,
+             "parent_id":184
+          },
+          {
+             "id":200,
+             "name":"Начальный уровень, Мало опыта",
+             "laboring":false,
+             "parent_id":184
+          },
+          {
+             "id":201,
+             "name":"Складское хозяйство",
+             "laboring":false,
+             "parent_id":184
+          },
+          {
+             "id":202,
+             "name":"Таможенное оформление",
+             "laboring":false,
+             "parent_id":184
+          },
+          {
+             "id":203,
+             "name":"Трубопроводы",
+             "laboring":false,
+             "parent_id":184
+          }
+       ],
+       "parent_id":null
+    },
+    {
+       "id":204,
+       "name":"Производство",
+       "specializations":[
+          {
+             "id":205,
+             "name":"Сертификация",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":206,
+             "name":"Главный механик",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":207,
+             "name":"Управление проектами",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":208,
+             "name":"Ювелирная промышленность",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":209,
+             "name":"Метролог",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":210,
+             "name":"Конструктор",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":211,
+             "name":"Атомная энергетика",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":212,
+             "name":"Авиационная промышленность",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":213,
+             "name":"Автомобильная промышленность",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":214,
+             "name":"Главный агроном",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":215,
+             "name":"Главный инженер",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":216,
+             "name":"Закупки и снабжение",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":217,
+             "name":"Зоотехник",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":218,
+             "name":"Инженер",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":219,
+             "name":"Инженер, Мясо- и птицепереработка",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":220,
+             "name":"Инженер, Производство и переработка зерновых",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":221,
+             "name":"Инженер, Производство сахара",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":222,
+             "name":"Контроль качества",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":223,
+             "name":"Легкая промышленность",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":224,
+             "name":"Деревообработка, Лесная промышленность",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":225,
+             "name":"Машиностроение",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":226,
+             "name":"Мебельное производство",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":227,
+             "name":"Металлургия",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":228,
+             "name":"Начальный уровень, Мало опыта",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":229,
+             "name":"Нефтепереработка",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":230,
+             "name":"Охрана труда",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":231,
+             "name":"Пищевая промышленность",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":232,
+             "name":"Полиграфия",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":233,
+             "name":"Радиоэлектронная промышленность",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":234,
+             "name":"Руководство предприятием",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":235,
+             "name":"Сельхозпроизводство",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":236,
+             "name":"Стройматериалы",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":237,
+             "name":"Табачная промышленность",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":238,
+             "name":"Технолог",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":239,
+             "name":"Технолог, Мясо- и птицепереработка",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":240,
+             "name":"Технолог, Производство и переработка зерновых",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":241,
+             "name":"Технолог, Производство сахара",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":242,
+             "name":"Управление цехом",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":243,
+             "name":"Фармацевтическая промышленность",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":244,
+             "name":"Химическая промышленность",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":245,
+             "name":"Эколог",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":246,
+             "name":"Электроэнергетика",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":247,
+             "name":"Энергетик производства",
+             "laboring":false,
+             "parent_id":204
+          },
+          {
+             "id":248,
+             "name":"Судостроение",
+             "laboring":false,
+             "parent_id":204
+          }
+       ],
+       "parent_id":null
+    },
+    {
+       "id":249,
+       "name":"Закупки",
+       "specializations":[
+          {
+             "id":250,
+             "name":"Сертификация",
+             "laboring":false,
+             "parent_id":249
+          },
+          {
+             "id":251,
+             "name":"Автомобили, Запчасти",
+             "laboring":false,
+             "parent_id":249
+          },
+          {
+             "id":252,
+             "name":"Алкоголь",
+             "laboring":false,
+             "parent_id":249
+          },
+          {
+             "id":253,
+             "name":"ГСМ, нефть, бензин",
+             "laboring":false,
+             "parent_id":249
+          },
+          {
+             "id":254,
+             "name":"Компьютерная техника",
+             "laboring":false,
+             "parent_id":249
+          },
+          {
+             "id":255,
+             "name":"Фармацевтика",
+             "laboring":false,
+             "parent_id":249
+          },
+          {
+             "id":256,
+             "name":"Продукты питания",
+             "laboring":false,
+             "parent_id":249
+          },
+          {
+             "id":257,
+             "name":"Товары для бизнеса",
+             "laboring":false,
+             "parent_id":249
+          },
+          {
+             "id":258,
+             "name":"Электроника, фото, видео",
+             "laboring":false,
+             "parent_id":249
+          },
+          {
+             "id":259,
+             "name":"Химическая продукция",
+             "laboring":false,
+             "parent_id":249
+          },
+          {
+             "id":260,
+             "name":"FMCG, Товары народного потребления",
+             "laboring":false,
+             "parent_id":249
+          },
+          {
+             "id":261,
+             "name":"Начальный уровень, Мало опыта",
+             "laboring":false,
+             "parent_id":249
+          },
+          {
+             "id":262,
+             "name":"Металлопрокат",
+             "laboring":false,
+             "parent_id":249
+          },
+          {
+             "id":263,
+             "name":"Управление закупками",
+             "laboring":false,
+             "parent_id":249
+          },
+          {
+             "id":264,
+             "name":"Строительные материалы",
+             "laboring":false,
+             "parent_id":249
+          },
+          {
+             "id":265,
+             "name":"Электротехническое оборудование/светотехника",
+             "laboring":false,
+             "parent_id":249
+          },
+          {
+             "id":266,
+             "name":"Станки, Тяжелое оборудование",
+             "laboring":false,
+             "parent_id":249
+          },
+          {
+             "id":267,
+             "name":"Тендеры",
+             "laboring":false,
+             "parent_id":249
+          }
+       ],
+       "parent_id":null
+    },
+    {
+       "id":268,
+       "name":"Страхование",
+       "specializations":[
+          {
+             "id":269,
+             "name":"Актуарий",
+             "laboring":false,
+             "parent_id":268
+          },
+          {
+             "id":270,
+             "name":"Урегулирование убытков",
+             "laboring":false,
+             "parent_id":268
+          },
+          {
+             "id":271,
+             "name":"Перестрахование",
+             "laboring":false,
+             "parent_id":268
+          },
+          {
+             "id":272,
+             "name":"Врач-эксперт",
+             "laboring":false,
+             "parent_id":268
+          },
+          {
+             "id":273,
+             "name":"Автострахование",
+             "laboring":false,
+             "parent_id":268
+          },
+          {
+             "id":274,
+             "name":"Агент",
+             "laboring":false,
+             "parent_id":268
+          },
+          {
+             "id":275,
+             "name":"Андеррайтер",
+             "laboring":false,
+             "parent_id":268
+          },
+          {
+             "id":276,
+             "name":"Комплексное страхование физических лиц",
+             "laboring":false,
+             "parent_id":268
+          },
+          {
+             "id":277,
+             "name":"Комплексное страхование юридических лиц",
+             "laboring":false,
+             "parent_id":268
+          },
+          {
+             "id":278,
+             "name":"Медицинское страхование",
+             "laboring":false,
+             "parent_id":268
+          },
+          {
+             "id":279,
+             "name":"Начальный уровень, Мало опыта",
+             "laboring":false,
+             "parent_id":268
+          },
+          {
+             "id":280,
+             "name":"Руководитель направления",
+             "laboring":false,
+             "parent_id":268
+          },
+          {
+             "id":281,
+             "name":"Страхование бизнеса",
+             "laboring":false,
+             "parent_id":268
+          },
+          {
+             "id":282,
+             "name":"Страхование жизни",
+             "laboring":false,
+             "parent_id":268
+          },
+          {
+             "id":283,
+             "name":"Страхование недвижимости",
+             "laboring":false,
+             "parent_id":268
+          },
+          {
+             "id":284,
+             "name":"Страхование ответственности",
+             "laboring":false,
+             "parent_id":268
+          },
+          {
+             "id":285,
+             "name":"Эксперт-оценщик",
+             "laboring":false,
+             "parent_id":268
+          }
+       ],
+       "parent_id":null
+    },
+    {
+       "id":286,
+       "name":"Юристы",
+       "specializations":[
+          {
+             "id":287,
+             "name":"Авторское право",
+             "laboring":false,
+             "parent_id":286
+          },
+          {
+             "id":288,
+             "name":"Международное право",
+             "laboring":false,
+             "parent_id":286
+          },
+          {
+             "id":289,
+             "name":"Земельное право",
+             "laboring":false,
+             "parent_id":286
+          },
+          {
+             "id":290,
+             "name":"Договорное право",
+             "laboring":false,
+             "parent_id":286
+          },
+          {
+             "id":291,
+             "name":"Регистрация юридических лиц",
+             "laboring":false,
+             "parent_id":286
+          },
+          {
+             "id":292,
+             "name":"Взыскание задолженности, Коллекторская деятельность",
+             "laboring":false,
+             "parent_id":286
+          },
+          {
+             "id":293,
+             "name":"Антимонопольное право",
+             "laboring":false,
+             "parent_id":286
+          },
+          {
+             "id":294,
+             "name":"Compliance",
+             "laboring":false,
+             "parent_id":286
+          },
+          {
+             "id":295,
+             "name":"Адвокат",
+             "laboring":false,
+             "parent_id":286
+          },
+          {
+             "id":296,
+             "name":"Арбитраж",
+             "laboring":false,
+             "parent_id":286
+          },
+          {
+             "id":297,
+             "name":"Банковское право",
+             "laboring":false,
+             "parent_id":286
+          },
+          {
+             "id":298,
+             "name":"Законотворчество",
+             "laboring":false,
+             "parent_id":286
+          },
+          {
+             "id":299,
+             "name":"Интеллектуальная собственность",
+             "laboring":false,
+             "parent_id":286
+          },
+          {
+             "id":300,
+             "name":"Корпоративное право",
+             "laboring":false,
+             "parent_id":286
+          },
+          {
+             "id":301,
+             "name":"Морское право",
+             "laboring":false,
+             "parent_id":286
+          },
+          {
+             "id":302,
+             "name":"Налоговое право",
+             "laboring":false,
+             "parent_id":286
+          },
+          {
+             "id":303,
+             "name":"Начальный уровень, Мало опыта",
+             "laboring":false,
+             "parent_id":286
+          },
+          {
+             "id":304,
+             "name":"Недвижимость",
+             "laboring":false,
+             "parent_id":286
+          },
+          {
+             "id":305,
+             "name":"Недропользование",
+             "laboring":false,
+             "parent_id":286
+          },
+          {
+             "id":306,
+             "name":"Помощник",
+             "laboring":false,
+             "parent_id":286
+          },
+          {
+             "id":307,
+             "name":"Семейное право",
+             "laboring":false,
+             "parent_id":286
+          },
+          {
+             "id":308,
+             "name":"Слияния и поглощения",
+             "laboring":false,
+             "parent_id":286
+          },
+          {
+             "id":309,
+             "name":"Страховое право",
+             "laboring":false,
+             "parent_id":286
+          },
+          {
+             "id":310,
+             "name":"Трудовое право",
+             "laboring":false,
+             "parent_id":286
+          },
+          {
+             "id":311,
+             "name":"Уголовное право",
+             "laboring":false,
+             "parent_id":286
+          },
+          {
+             "id":312,
+             "name":"Ценные бумаги, Рынки капитала",
+             "laboring":false,
+             "parent_id":286
+          },
+          {
+             "id":313,
+             "name":"Юрисконсульт",
+             "laboring":false,
+             "parent_id":286
+          }
+       ],
+       "parent_id":null
+    },
+    {
+       "id":314,
+       "name":"Маркетинг, реклама, PR",
+       "specializations":[
+          {
+             "id":315,
+             "name":"Ассистент",
+             "laboring":false,
+             "parent_id":314
+          },
+          {
+             "id":316,
+             "name":"Тайный покупатель",
+             "laboring":true,
+             "parent_id":314
+          },
+          {
+             "id":317,
+             "name":"Проведение опросов, Интервьюер",
+             "laboring":true,
+             "parent_id":314
+          },
+          {
+             "id":318,
+             "name":"Промоутер",
+             "laboring":true,
+             "parent_id":314
+          },
+          {
+             "id":319,
+             "name":"Below The Line (BTL)",
+             "laboring":false,
+             "parent_id":314
+          },
+          {
+             "id":320,
+             "name":"PR, Маркетинговые коммуникации",
+             "laboring":false,
+             "parent_id":314
+          },
+          {
+             "id":321,
+             "name":"Аналитик",
+             "laboring":false,
+             "parent_id":314
+          },
+          {
+             "id":322,
+             "name":"Арт директор",
+             "laboring":false,
+             "parent_id":314
+          },
+          {
+             "id":323,
+             "name":"Бренд-менеджмент",
+             "laboring":false,
+             "parent_id":314
+          },
+          {
+             "id":324,
+             "name":"Верстальщик",
+             "laboring":false,
+             "parent_id":314
+          },
+          {
+             "id":325,
+             "name":"Дизайнер",
+             "laboring":false,
+             "parent_id":314
+          },
+          {
+             "id":326,
+             "name":"Интернет-маркетинг",
+             "laboring":false,
+             "parent_id":314
+          },
+          {
+             "id":327,
+             "name":"Исследования рынка",
+             "laboring":false,
+             "parent_id":314
+          },
+          {
+             "id":328,
+             "name":"Консультант",
+             "laboring":false,
+             "parent_id":314
+          },
+          {
+             "id":329,
+             "name":"Копирайтер",
+             "laboring":false,
+             "parent_id":314
+          },
+          {
+             "id":330,
+             "name":"Менеджер по работе с клиентами",
+             "laboring":false,
+             "parent_id":314
+          },
+          {
+             "id":331,
+             "name":"Менеджмент продукта (Product manager)",
+             "laboring":false,
+             "parent_id":314
+          },
+          {
+             "id":332,
+             "name":"Мерчендайзинг",
+             "laboring":false,
+             "parent_id":314
+          },
+          {
+             "id":333,
+             "name":"Наружная реклама",
+             "laboring":false,
+             "parent_id":314
+          },
+          {
+             "id":334,
+             "name":"Начальный уровень/Мало опыта",
+             "laboring":false,
+             "parent_id":314
+          },
+          {
+             "id":335,
+             "name":"Печатная реклама",
+             "laboring":false,
+             "parent_id":314
+          },
+          {
+             "id":336,
+             "name":"Планирование, Размещение рекламы",
+             "laboring":false,
+             "parent_id":314
+          },
+          {
+             "id":337,
+             "name":"Политический PR",
+             "laboring":false,
+             "parent_id":314
+          },
+          {
+             "id":338,
+             "name":"Продвижение, Специальные мероприятия",
+             "laboring":false,
+             "parent_id":314
+          },
+          {
+             "id":339,
+             "name":"Производство рекламы",
+             "laboring":false,
+             "parent_id":314
+          },
+          {
+             "id":340,
+             "name":"Радио реклама",
+             "laboring":false,
+             "parent_id":314
+          },
+          {
+             "id":341,
+             "name":"Рекламный агент",
+             "laboring":false,
+             "parent_id":314
+          },
+          {
+             "id":342,
+             "name":"Телевизионная реклама",
+             "laboring":false,
+             "parent_id":314
+          },
+          {
+             "id":343,
+             "name":"Торговый маркетинг(Trade marketing)",
+             "laboring":false,
+             "parent_id":314
+          },
+          {
+             "id":344,
+             "name":"Управление маркетингом",
+             "laboring":false,
+             "parent_id":314
+          },
+          {
+             "id":345,
+             "name":"Управление проектами",
+             "laboring":false,
+             "parent_id":314
+          }
+       ],
+       "parent_id":null
+    },
+    {
+       "id":346,
+       "name":"Бухгалтерия, управленческий учет, финансы предприятия",
+       "specializations":[
+          {
+             "id":347,
+             "name":"Экономист",
+             "laboring":false,
+             "parent_id":346
+          },
+          {
+             "id":348,
+             "name":"Планово-экономическое управление",
+             "laboring":false,
+             "parent_id":346
+          },
+          {
+             "id":349,
+             "name":"МСФО, IFRS",
+             "laboring":false,
+             "parent_id":346
+          },
+          {
+             "id":350,
+             "name":"Бухгалтер-калькулятор",
+             "laboring":false,
+             "parent_id":346
+          },
+          {
+             "id":351,
+             "name":"Основные средства",
+             "laboring":false,
+             "parent_id":346
+          },
+          {
+             "id":352,
+             "name":"GAAP",
+             "laboring":false,
+             "parent_id":346
+          },
+          {
+             "id":353,
+             "name":"ACCA",
+             "laboring":false,
+             "parent_id":346
+          },
+          {
+             "id":354,
+             "name":"ТМЦ",
+             "laboring":false,
+             "parent_id":346
+          },
+          {
+             "id":355,
+             "name":"Первичная документация",
+             "laboring":false,
+             "parent_id":346
+          },
+          {
+             "id":356,
+             "name":"CIPA",
+             "laboring":false,
+             "parent_id":346
+          },
+          {
+             "id":357,
+             "name":"Аудит",
+             "laboring":false,
+             "parent_id":346
+          },
+          {
+             "id":358,
+             "name":"Бухгалтер",
+             "laboring":false,
+             "parent_id":346
+          },
+          {
+             "id":359,
+             "name":"Бюджетирование и планирование",
+             "laboring":false,
+             "parent_id":346
+          },
+          {
+             "id":360,
+             "name":"Валютный контроль",
+             "laboring":false,
+             "parent_id":346
+          },
+          {
+             "id":361,
+             "name":"Казначейство",
+             "laboring":false,
+             "parent_id":346
+          },
+          {
+             "id":362,
+             "name":"Кассир, Инкассатор",
+             "laboring":false,
+             "parent_id":346
+          },
+          {
+             "id":363,
+             "name":"Кредитный контроль",
+             "laboring":false,
+             "parent_id":346
+          },
+          {
+             "id":364,
+             "name":"Налоги",
+             "laboring":false,
+             "parent_id":346
+          },
+          {
+             "id":365,
+             "name":"Начальный уровень, Мало опыта",
+             "laboring":false,
+             "parent_id":346
+          },
+          {
+             "id":366,
+             "name":"Оффшоры",
+             "laboring":false,
+             "parent_id":346
+          },
+          {
+             "id":367,
+             "name":"Расчет себестоимости",
+             "laboring":false,
+             "parent_id":346
+          },
+          {
+             "id":368,
+             "name":"Руководство бухгалтерией",
+             "laboring":false,
+             "parent_id":346
+          },
+          {
+             "id":369,
+             "name":"Учет заработной платы",
+             "laboring":false,
+             "parent_id":346
+          },
+          {
+             "id":370,
+             "name":"Учет счетов и платежей",
+             "laboring":false,
+             "parent_id":346
+          },
+          {
+             "id":371,
+             "name":"Финансовый анализ",
+             "laboring":false,
+             "parent_id":346
+          },
+          {
+             "id":372,
+             "name":"Финансовый контроль",
+             "laboring":false,
+             "parent_id":346
+          },
+          {
+             "id":373,
+             "name":"Финансовый менеджмент",
+             "laboring":false,
+             "parent_id":346
+          },
+          {
+             "id":374,
+             "name":"Ценные бумаги",
+             "laboring":false,
+             "parent_id":346
+          }
+       ],
+       "parent_id":null
+    },
+    {
+       "id":375,
+       "name":"Административный персонал",
+       "specializations":[
+          {
+             "id":376,
+             "name":"Последовательный перевод",
+             "laboring":false,
+             "parent_id":375
+          },
+          {
+             "id":377,
+             "name":"Делопроизводство",
+             "laboring":false,
+             "parent_id":375
+          },
+          {
+             "id":378,
+             "name":"Вечерний секретарь",
+             "laboring":false,
+             "parent_id":375
+          },
+          {
+             "id":379,
+             "name":"Уборщица",
+             "laboring":true,
+             "parent_id":375
+          },
+          {
+             "id":380,
+             "name":"Архивист",
+             "laboring":false,
+             "parent_id":375
+          },
+          {
+             "id":381,
+             "name":"Ввод данных",
+             "laboring":false,
+             "parent_id":375
+          },
+          {
+             "id":382,
+             "name":"Водитель",
+             "laboring":true,
+             "parent_id":375
+          },
+          {
+             "id":383,
+             "name":"Курьер",
+             "laboring":true,
+             "parent_id":375
+          },
+          {
+             "id":384,
+             "name":"Начальный уровень, Мало опыта",
+             "laboring":false,
+             "parent_id":375
+          },
+          {
+             "id":385,
+             "name":"Персональный ассистент",
+             "laboring":false,
+             "parent_id":375
+          },
+          {
+             "id":386,
+             "name":"Письменный перевод",
+             "laboring":false,
+             "parent_id":375
+          },
+          {
+             "id":387,
+             "name":"Ресепшен",
+             "laboring":false,
+             "parent_id":375
+          },
+          {
+             "id":388,
+             "name":"Секретарь",
+             "laboring":false,
+             "parent_id":375
+          },
+          {
+             "id":389,
+             "name":"Синхронный перевод",
+             "laboring":false,
+             "parent_id":375
+          },
+          {
+             "id":390,
+             "name":"Сотрудник call-центра",
+             "laboring":true,
+             "parent_id":375
+          },
+          {
+             "id":391,
+             "name":"Управляющий офисом(Оffice manager)",
+             "laboring":false,
+             "parent_id":375
+          },
+          {
+             "id":392,
+             "name":"Учет товарооборота",
+             "laboring":false,
+             "parent_id":375
+          },
+          {
+             "id":393,
+             "name":"АХО",
+             "laboring":false,
+             "parent_id":375
+          }
+       ],
+       "parent_id":null
+    },
+    {
+       "id":394,
+       "name":"Государственная служба, некоммерческие организации",
+       "specializations":[
+          {
+             "id":395,
+             "name":"НИИ",
+             "laboring":false,
+             "parent_id":394
+          },
+          {
+             "id":396,
+             "name":"Архивариус",
+             "laboring":false,
+             "parent_id":394
+          },
+          {
+             "id":397,
+             "name":"Атташе",
+             "laboring":false,
+             "parent_id":394
+          },
+          {
+             "id":398,
+             "name":"Библиотекарь",
+             "laboring":false,
+             "parent_id":394
+          },
+          {
+             "id":399,
+             "name":"Муниципалитет",
+             "laboring":false,
+             "parent_id":394
+          },
+          {
+             "id":400,
+             "name":"Благотворительность",
+             "laboring":false,
+             "parent_id":394
+          },
+          {
+             "id":401,
+             "name":"Общественные организации",
+             "laboring":false,
+             "parent_id":394
+          },
+          {
+             "id":402,
+             "name":"Правительство",
+             "laboring":false,
+             "parent_id":394
+          }
+       ],
+       "parent_id":null
+    },
+    {
+       "id":403,
+       "name":"Искусство, развлечения, масс-медиа",
+       "specializations":[
+          {
+             "id":404,
+             "name":"Кино",
+             "laboring":false,
+             "parent_id":403
+          },
+          {
+             "id":405,
+             "name":"Дизайн, графика, живопись",
+             "laboring":false,
+             "parent_id":403
+          },
+          {
+             "id":406,
+             "name":"Журналистика",
+             "laboring":false,
+             "parent_id":403
+          },
+          {
+             "id":407,
+             "name":"Издательская деятельность",
+             "laboring":false,
+             "parent_id":403
+          },
+          {
+             "id":408,
+             "name":"Казино и игорный бизнес",
+             "laboring":false,
+             "parent_id":403
+          },
+          {
+             "id":409,
+             "name":"Литературная, Редакторская деятельность",
+             "laboring":false,
+             "parent_id":403
+          },
+          {
+             "id":410,
+             "name":"Мода",
+             "laboring":false,
+             "parent_id":403
+          },
+          {
+             "id":411,
+             "name":"Музыка",
+             "laboring":false,
+             "parent_id":403
+          },
+          {
+             "id":412,
+             "name":"Начальный уровень, Мало опыта",
+             "laboring":false,
+             "parent_id":403
+          },
+          {
+             "id":413,
+             "name":"Пресса",
+             "laboring":false,
+             "parent_id":403
+          },
+          {
+             "id":414,
+             "name":"Прочее",
+             "laboring":false,
+             "parent_id":403
+          },
+          {
+             "id":415,
+             "name":"Радио",
+             "laboring":false,
+             "parent_id":403
+          },
+          {
+             "id":416,
+             "name":"Телевидение",
+             "laboring":false,
+             "parent_id":403
+          },
+          {
+             "id":417,
+             "name":"Фотография",
+             "laboring":false,
+             "parent_id":403
+          }
+       ],
+       "parent_id":null
+    },
+    {
+       "id":418,
+       "name":"Высший менеджмент",
+       "specializations":[
+          {
+             "id":419,
+             "name":"Юриспруденция",
+             "laboring":false,
+             "parent_id":418
+          },
+          {
+             "id":420,
+             "name":"Страхование",
+             "laboring":false,
+             "parent_id":418
+          },
+          {
+             "id":421,
+             "name":"Спортивные клубы, Фитнес, Салоны красоты",
+             "laboring":false,
+             "parent_id":418
+          },
+          {
+             "id":422,
+             "name":"Управление закупками",
+             "laboring":false,
+             "parent_id":418
+          },
+          {
+             "id":423,
+             "name":"Антикризисное управление",
+             "laboring":false,
+             "parent_id":418
+          },
+          {
+             "id":424,
+             "name":"Администрирование",
+             "laboring":false,
+             "parent_id":418
+          },
+          {
+             "id":425,
+             "name":"Добыча cырья",
+             "laboring":false,
+             "parent_id":418
+          },
+          {
+             "id":426,
+             "name":"Инвестиции",
+             "laboring":false,
+             "parent_id":418
+          },
+          {
+             "id":427,
+             "name":"Информационные технологии, Интернет, Мультимедиа",
+             "laboring":false,
+             "parent_id":418
+          },
+          {
+             "id":428,
+             "name":"Искусство, Развлечения, Масс-медиа",
+             "laboring":false,
+             "parent_id":418
+          },
+          {
+             "id":429,
+             "name":"Коммерческий Банк",
+             "laboring":false,
+             "parent_id":418
+          },
+          {
+             "id":430,
+             "name":"Консультирование",
+             "laboring":false,
+             "parent_id":418
+          },
+          {
+             "id":431,
+             "name":"Маркетинг, Реклама, PR",
+             "laboring":false,
+             "parent_id":418
+          },
+          {
+             "id":432,
+             "name":"Медицина, Фармацевтика",
+             "laboring":false,
+             "parent_id":418
+          },
+          {
+             "id":433,
+             "name":"Наука, Образование",
+             "laboring":false,
+             "parent_id":418
+          },
+          {
+             "id":434,
+             "name":"Продажи",
+             "laboring":false,
+             "parent_id":418
+          },
+          {
+             "id":435,
+             "name":"Производство, Технология",
+             "laboring":false,
+             "parent_id":418
+          },
+          {
+             "id":436,
+             "name":"Строительство, Недвижимость",
+             "laboring":false,
+             "parent_id":418
+          },
+          {
+             "id":437,
+             "name":"Транспорт, Логистика",
+             "laboring":false,
+             "parent_id":418
+          },
+          {
+             "id":438,
+             "name":"Туризм, Гостиницы, Рестораны",
+             "laboring":false,
+             "parent_id":418
+          },
+          {
+             "id":439,
+             "name":"Управление малым бизнесом",
+             "laboring":false,
+             "parent_id":418
+          },
+          {
+             "id":440,
+             "name":"Управление персоналом, Тренинги",
+             "laboring":false,
+             "parent_id":418
+          },
+          {
+             "id":441,
+             "name":"Финансы",
+             "laboring":false,
+             "parent_id":418
+          }
+       ],
+       "parent_id":null
+    },
+    {
+       "id":442,
+       "name":"Автомобильный бизнес",
+       "specializations":[
+          {
+             "id":443,
+             "name":"Шины, Диски",
+             "laboring":false,
+             "parent_id":442
+          },
+          {
+             "id":444,
+             "name":"Тонировщик",
+             "laboring":true,
+             "parent_id":442
+          },
+          {
+             "id":445,
+             "name":"Автослесарь",
+             "laboring":true,
+             "parent_id":442
+          },
+          {
+             "id":446,
+             "name":"Автожестянщик",
+             "laboring":true,
+             "parent_id":442
+          },
+          {
+             "id":447,
+             "name":"Автомойщик",
+             "laboring":true,
+             "parent_id":442
+          },
+          {
+             "id":448,
+             "name":"Автозапчасти",
+             "laboring":false,
+             "parent_id":442
+          },
+          {
+             "id":449,
+             "name":"Продажа",
+             "laboring":false,
+             "parent_id":442
+          },
+          {
+             "id":450,
+             "name":"Производство",
+             "laboring":false,
+             "parent_id":442
+          },
+          {
+             "id":451,
+             "name":"Прокат, лизинг",
+             "laboring":false,
+             "parent_id":442
+          },
+          {
+             "id":452,
+             "name":"Сервисное обслуживание",
+             "laboring":false,
+             "parent_id":442
+          },
+          {
+             "id":453,
+             "name":"Начальный уровень /Мало опыта ",
+             "laboring":false,
+             "parent_id":442
+          }
+       ],
+       "parent_id":null
+    },
+    {
+       "id":454,
+       "name":"Безопасность",
+       "specializations":[
+          {
+             "id":455,
+             "name":"Системы видеонаблюдения",
+             "laboring":false,
+             "parent_id":454
+          },
+          {
+             "id":456,
+             "name":"Взыскание задолженности, Коллекторская деятельность",
+             "laboring":false,
+             "parent_id":454
+          },
+          {
+             "id":457,
+             "name":"Инкассатор",
+             "laboring":true,
+             "parent_id":454
+          },
+          {
+             "id":458,
+             "name":"Пожарная безопасность",
+             "laboring":false,
+             "parent_id":454
+          },
+          {
+             "id":459,
+             "name":"Имущественная безопасность",
+             "laboring":false,
+             "parent_id":454
+          },
+          {
+             "id":460,
+             "name":"Личная безопасность",
+             "laboring":false,
+             "parent_id":454
+          },
+          {
+             "id":461,
+             "name":"Охранник",
+             "laboring":true,
+             "parent_id":454
+          },
+          {
+             "id":462,
+             "name":"Руководитель СБ",
+             "laboring":false,
+             "parent_id":454
+          },
+          {
+             "id":463,
+             "name":"Экономическая и информационная безопасность",
+             "laboring":false,
+             "parent_id":454
+          }
+       ],
+       "parent_id":null
+    },
+    {
+       "id":464,
+       "name":"Добыча сырья",
+       "specializations":[
+          {
+             "id":465,
+             "name":"Бурение",
+             "laboring":false,
+             "parent_id":464
+          },
+          {
+             "id":466,
+             "name":"Маркшейдер",
+             "laboring":false,
+             "parent_id":464
+          },
+          {
+             "id":467,
+             "name":"Газ",
+             "laboring":false,
+             "parent_id":464
+          },
+          {
+             "id":468,
+             "name":"Геологоразведка",
+             "laboring":false,
+             "parent_id":464
+          },
+          {
+             "id":469,
+             "name":"Инженер",
+             "laboring":false,
+             "parent_id":464
+          },
+          {
+             "id":470,
+             "name":"Нефть",
+             "laboring":false,
+             "parent_id":464
+          },
+          {
+             "id":471,
+             "name":"Руда",
+             "laboring":false,
+             "parent_id":464
+          },
+          {
+             "id":472,
+             "name":"Уголь",
+             "laboring":false,
+             "parent_id":464
+          },
+          {
+             "id":473,
+             "name":"Управление предприятием",
+             "laboring":false,
+             "parent_id":464
+          },
+          {
+             "id":474,
+             "name":"Начальный уровень, Мало опыта",
+             "laboring":false,
+             "parent_id":464
+          }
+       ],
+       "parent_id":null
+    },
+    {
+       "id":475,
+       "name":"Туризм, гостиницы, рестораны",
+       "specializations":[
+          {
+             "id":476,
+             "name":"Повар",
+             "laboring":true,
+             "parent_id":475
+          },
+          {
+             "id":477,
+             "name":"Хостес",
+             "laboring":true,
+             "parent_id":475
+          },
+          {
+             "id":478,
+             "name":"Швейцар",
+             "laboring":true,
+             "parent_id":475
+          },
+          {
+             "id":479,
+             "name":"Сомелье",
+             "laboring":true,
+             "parent_id":475
+          },
+          {
+             "id":480,
+             "name":"Анимация",
+             "laboring":true,
+             "parent_id":475
+          },
+          {
+             "id":481,
+             "name":"Оформление виз",
+             "laboring":false,
+             "parent_id":475
+          },
+          {
+             "id":482,
+             "name":"Управление туристическим бизнесом",
+             "laboring":false,
+             "parent_id":475
+          },
+          {
+             "id":483,
+             "name":"Авиабилеты",
+             "laboring":false,
+             "parent_id":475
+          },
+          {
+             "id":484,
+             "name":"Банкеты",
+             "laboring":false,
+             "parent_id":475
+          },
+          {
+             "id":485,
+             "name":"Бронирование",
+             "laboring":false,
+             "parent_id":475
+          },
+          {
+             "id":486,
+             "name":"Гид, Экскурсовод",
+             "laboring":false,
+             "parent_id":475
+          },
+          {
+             "id":487,
+             "name":"Кейтеринг",
+             "laboring":false,
+             "parent_id":475
+          },
+          {
+             "id":488,
+             "name":"Начальный уровень, Мало опыта",
+             "laboring":false,
+             "parent_id":475
+          },
+          {
+             "id":489,
+             "name":"Официант, Бармен",
+             "laboring":true,
+             "parent_id":475
+          },
+          {
+             "id":490,
+             "name":"Организация встреч, Конференций",
+             "laboring":false,
+             "parent_id":475
+          },
+          {
+             "id":491,
+             "name":"Организация туристических продуктов",
+             "laboring":false,
+             "parent_id":475
+          },
+          {
+             "id":492,
+             "name":"Персонал кухни",
+             "laboring":true,
+             "parent_id":475
+          },
+          {
+             "id":493,
+             "name":"Продажа туристических услуг",
+             "laboring":false,
+             "parent_id":475
+          },
+          {
+             "id":494,
+             "name":"Размещение, Обслуживание гостей",
+             "laboring":false,
+             "parent_id":475
+          },
+          {
+             "id":495,
+             "name":"Управление гостиницами",
+             "laboring":false,
+             "parent_id":475
+          },
+          {
+             "id":496,
+             "name":"Управление ресторанами, Барами",
+             "laboring":false,
+             "parent_id":475
+          },
+          {
+             "id":497,
+             "name":"Шеф-повар",
+             "laboring":false,
+             "parent_id":475
+          }
+       ],
+       "parent_id":null
+    },
+    {
+       "id":498,
+       "name":"Спортивные клубы, фитнес, салоны красоты",
+       "specializations":[
+          {
+             "id":499,
+             "name":"Массажист",
+             "laboring":true,
+             "parent_id":498
+          },
+          {
+             "id":500,
+             "name":"Парикмахер",
+             "laboring":true,
+             "parent_id":498
+          },
+          {
+             "id":501,
+             "name":"Ногтевой сервис",
+             "laboring":true,
+             "parent_id":498
+          },
+          {
+             "id":502,
+             "name":"Косметология",
+             "laboring":true,
+             "parent_id":498
+          },
+          {
+             "id":503,
+             "name":"Тренерский состав",
+             "laboring":false,
+             "parent_id":498
+          },
+          {
+             "id":504,
+             "name":"Администрация",
+             "laboring":false,
+             "parent_id":498
+          },
+          {
+             "id":505,
+             "name":"Продажи",
+             "laboring":false,
+             "parent_id":498
+          }
+       ],
+       "parent_id":null
+    },
+    {
+       "id":506,
+       "name":"Рабочий персонал",
+       "specializations":[
+          {
+             "id":507,
+             "name":"Грузчик",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":508,
+             "name":"Слесарь",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":509,
+             "name":"Токарь, Фрезеровщик",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":510,
+             "name":"Фасовщик",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":511,
+             "name":"Столяр",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":512,
+             "name":"Сварщик",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":513,
+             "name":"Электрик",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":514,
+             "name":"Швея",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":515,
+             "name":"Сборщик",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":516,
+             "name":"Гардеробщик",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":517,
+             "name":"Дворник, Уборщик",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":518,
+             "name":"Дорожные рабочие",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":519,
+             "name":"Жестянщик",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":520,
+             "name":"Заправщик картриджей",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":521,
+             "name":"Комплектовщик, Укладчик-упаковщик",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":522,
+             "name":"Краснодеревщик",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":523,
+             "name":"Кузнец",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":524,
+             "name":"Лифтер",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":525,
+             "name":"Машинист производства",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":526,
+             "name":"Машинист сцены",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":527,
+             "name":"Машинист экскаватора",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":528,
+             "name":"Механик",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":529,
+             "name":"Оператор станков",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":530,
+             "name":"Пастух, Чабан",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":531,
+             "name":"Перемотчик",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":532,
+             "name":"Разнорабочий",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":533,
+             "name":"Сантехник",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":534,
+             "name":"Шлифовщик",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":535,
+             "name":"Штукатур",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":536,
+             "name":"Электромонтер, Кабельщик",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":537,
+             "name":"Ювелир",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":538,
+             "name":"Монтажник",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":539,
+             "name":"Проводник",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":540,
+             "name":"Маляр",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":541,
+             "name":"Другое",
+             "laboring":true,
+             "parent_id":506
+          },
+          {
+             "id":542,
+             "name":"Наладчик",
+             "laboring":true,
+             "parent_id":506
+          }
+       ],
+       "parent_id":null
+    },
+    {
+       "id":543,
+       "name":"Домашний персонал",
+       "specializations":[
+          {
+             "id":544,
+             "name":"Воспитатель, Гувернантка, Няня",
+             "laboring":true,
+             "parent_id":543
+          },
+          {
+             "id":545,
+             "name":"домработница/домработник, Горничная",
+             "laboring":true,
+             "parent_id":543
+          },
+          {
+             "id":546,
+             "name":"Персональный водитель",
+             "laboring":true,
+             "parent_id":543
+          },
+          {
+             "id":547,
+             "name":"Садовник",
+             "laboring":true,
+             "parent_id":543
+          },
+          {
+             "id":548,
+             "name":"Повар",
+             "laboring":true,
+             "parent_id":543
+          },
+          {
+             "id":549,
+             "name":"Сиделка",
+             "laboring":true,
+             "parent_id":543
+          },
+          {
+             "id":550,
+             "name":"Помощник по хозяйству, Управляющий",
+             "laboring":true,
+             "parent_id":543
+          },
+          {
+             "id":551,
+             "name":"Репетитор",
+             "laboring":true,
+             "parent_id":543
+          }
+       ],
+       "parent_id":null
+    },
+    {
+       "id":552,
+       "name":"Начало карьеры, студенты",
+       "specializations":[
+          {
+             "id":553,
+             "name":"Бухгалтерия",
+             "laboring":false,
+             "parent_id":552
+          },
+          {
+             "id":554,
+             "name":"Закупки",
+             "laboring":false,
+             "parent_id":552
+          },
+          {
+             "id":555,
+             "name":"Добыча сырья",
+             "laboring":false,
+             "parent_id":552
+          },
+          {
+             "id":556,
+             "name":"Информационные технологии, Интернет, Мультимедиа",
+             "laboring":false,
+             "parent_id":552
+          },
+          {
+             "id":557,
+             "name":"Искусство, Развлечения, Масс-медиа",
+             "laboring":false,
+             "parent_id":552
+          },
+          {
+             "id":558,
+             "name":"Маркетинг, Реклама, PR",
+             "laboring":false,
+             "parent_id":552
+          },
+          {
+             "id":559,
+             "name":"Медицина, Фармацевтика",
+             "laboring":false,
+             "parent_id":552
+          },
+          {
+             "id":560,
+             "name":"Наука, Образование",
+             "laboring":false,
+             "parent_id":552
+          },
+          {
+             "id":561,
+             "name":"Производство, Технологии",
+             "laboring":false,
+             "parent_id":552
+          },
+          {
+             "id":562,
+             "name":"Страхование",
+             "laboring":false,
+             "parent_id":552
+          },
+          {
+             "id":563,
+             "name":"Строительство, Архитектура",
+             "laboring":false,
+             "parent_id":552
+          },
+          {
+             "id":564,
+             "name":"Транспорт, Логистика",
+             "laboring":false,
+             "parent_id":552
+          },
+          {
+             "id":565,
+             "name":"Туризм, Гостиницы, Рестораны",
+             "laboring":false,
+             "parent_id":552
+          },
+          {
+             "id":566,
+             "name":"Управление персоналом",
+             "laboring":false,
+             "parent_id":552
+          },
+          {
+             "id":567,
+             "name":"Финансы, Банки, Инвестиции",
+             "laboring":false,
+             "parent_id":552
+          },
+          {
+             "id":568,
+             "name":"Юристы",
+             "laboring":false,
+             "parent_id":552
+          },
+          {
+             "id":569,
+             "name":"Административный персонал",
+             "laboring":false,
+             "parent_id":552
+          },
+          {
+             "id":570,
+             "name":"Продажи",
+             "laboring":false,
+             "parent_id":552
+          },
+          {
+             "id":571,
+             "name":"Автомобильный бизнес",
+             "laboring":false,
+             "parent_id":552
+          },
+          {
+             "id":572,
+             "name":"Консультирование",
+             "laboring":false,
+             "parent_id":552
+          }
+       ],
+       "parent_id":null
+    },
+    {
+       "id":573,
+       "name":"Консультирование",
+       "specializations":[
+          {
+             "id":574,
+             "name":"Internet, E-Commerce",
+             "laboring":false,
+             "parent_id":573
+          },
+          {
+             "id":575,
+             "name":"Knowledge management",
+             "laboring":false,
+             "parent_id":573
+          },
+          {
+             "id":576,
+             "name":"PR Consulting",
+             "laboring":false,
+             "parent_id":573
+          },
+          {
+             "id":577,
+             "name":"Информационные технологии",
+             "laboring":false,
+             "parent_id":573
+          },
+          {
+             "id":578,
+             "name":"Исследования рынка",
+             "laboring":false,
+             "parent_id":573
+          },
+          {
+             "id":579,
+             "name":"Корпоративные финансы",
+             "laboring":false,
+             "parent_id":573
+          },
+          {
+             "id":580,
+             "name":"Начальный уровень, Мало опыта",
+             "laboring":false,
+             "parent_id":573
+          },
+          {
+             "id":581,
+             "name":"Организационное консультирование",
+             "laboring":false,
+             "parent_id":573
+          },
+          {
+             "id":582,
+             "name":"Реинжиниринг бизнес процессов",
+             "laboring":false,
+             "parent_id":573
+          },
+          {
+             "id":583,
+             "name":"Реинжиниринг, Аутсорсинг финансовой функции",
+             "laboring":false,
+             "parent_id":573
+          },
+          {
+             "id":584,
+             "name":"Стратегия",
+             "laboring":false,
+             "parent_id":573
+          },
+          {
+             "id":585,
+             "name":"Управление практикой",
+             "laboring":false,
+             "parent_id":573
+          },
+          {
+             "id":586,
+             "name":"Управление проектами",
+             "laboring":false,
+             "parent_id":573
+          },
+          {
+             "id":587,
+             "name":"Управленческое консультирование",
+             "laboring":false,
+             "parent_id":573
+          },
+          {
+             "id":588,
+             "name":"Недвижимость",
+             "laboring":false,
+             "parent_id":573
+          }
+       ],
+       "parent_id":null
+    },
+    {
+       "id":589,
+       "name":"Наука, образование",
+       "specializations":[
+          {
+             "id":590,
+             "name":"Биотехнологии",
+             "laboring":false,
+             "parent_id":589
+          },
+          {
+             "id":591,
+             "name":"Гуманитарные науки",
+             "laboring":false,
+             "parent_id":589
+          },
+          {
+             "id":592,
+             "name":"Инженерные науки",
+             "laboring":false,
+             "parent_id":589
+          },
+          {
+             "id":593,
+             "name":"Информатика, Информационные системы",
+             "laboring":false,
+             "parent_id":589
+          },
+          {
+             "id":594,
+             "name":"Математика",
+             "laboring":false,
+             "parent_id":589
+          },
+          {
+             "id":595,
+             "name":"Науки о Земле",
+             "laboring":false,
+             "parent_id":589
+          },
+          {
+             "id":596,
+             "name":"Начальный уровень, Мало опыта",
+             "laboring":false,
+             "parent_id":589
+          },
+          {
+             "id":597,
+             "name":"Преподавание",
+             "laboring":false,
+             "parent_id":589
+          },
+          {
+             "id":598,
+             "name":"Физика",
+             "laboring":false,
+             "parent_id":589
+          },
+          {
+             "id":599,
+             "name":"Химия",
+             "laboring":false,
+             "parent_id":589
+          },
+          {
+             "id":600,
+             "name":"Экономика, Менеджмент",
+             "laboring":false,
+             "parent_id":589
+          },
+          {
+             "id":601,
+             "name":"Языки",
+             "laboring":false,
+             "parent_id":589
+          }
+       ],
+       "parent_id":null
+    },
+    {
+       "id":602,
+       "name":"Управление персоналом, тренинги",
+       "specializations":[
+          {
+             "id":603,
+             "name":"Компенсации и льготы",
+             "laboring":false,
+             "parent_id":602
+          },
+          {
+             "id":604,
+             "name":"Начальный уровень, Мало опыта",
+             "laboring":false,
+             "parent_id":602
+          },
+          {
+             "id":605,
+             "name":"Развитие персонала",
+             "laboring":false,
+             "parent_id":602
+          },
+          {
+             "id":606,
+             "name":"Рекрутмент",
+             "laboring":false,
+             "parent_id":602
+          },
+          {
+             "id":607,
+             "name":"Тренинги",
+             "laboring":false,
+             "parent_id":602
+          },
+          {
+             "id":608,
+             "name":"Управление персоналом",
+             "laboring":false,
+             "parent_id":602
+          },
+          {
+             "id":609,
+             "name":"Учет кадров",
+             "laboring":false,
+             "parent_id":602
+          }
+       ],
+       "parent_id":null
+    },
+    {
+       "id":610,
+       "name":"Инсталляция и сервис",
+       "specializations":[
+          {
+             "id":611,
+             "name":"Сервисный инженер",
+             "laboring":false,
+             "parent_id":610
+          },
+          {
+             "id":612,
+             "name":"Руководитель сервисного центра",
+             "laboring":false,
+             "parent_id":610
+          },
+          {
+             "id":613,
+             "name":"Менеджер по сервису - сетевые и телекоммуникационные технологии",
+             "laboring":false,
+             "parent_id":610
+          },
+          {
+             "id":614,
+             "name":"Менеджер по сервису - промышленное оборудование",
+             "laboring":false,
+             "parent_id":610
+          },
+          {
+             "id":615,
+             "name":"Менеджер по сервису - транспорт",
+             "laboring":false,
+             "parent_id":610
+          },
+          {
+             "id":616,
+             "name":"Инсталляция и настройка оборудования",
+             "laboring":false,
+             "parent_id":610
+          }
+       ],
+       "parent_id":null
+    }
+ ]

@@ -13,19 +13,13 @@ namespace Dictionaries.API.Infrastructure.Initialization
 {
     public class DictionariesInitializationService
     {
-        private readonly string _zip;
-        private readonly string _folder;
         private readonly IInitializersFactory _factory;
         private readonly ILogger<DictionariesInitializationService> _logger;
 
         public DictionariesInitializationService(
-            string folder, 
-            string zip, 
             IInitializersFactory factory,
             ILogger<DictionariesInitializationService> logger)
         {
-            _zip = zip;
-            _folder = folder;
             _factory = factory;
             _logger = logger;
         }
@@ -56,8 +50,6 @@ namespace Dictionaries.API.Infrastructure.Initialization
 
         private async Task InitializeAsync(IEnumerable<IInitializer> initializers)
         {
-            ZipFile.ExtractToDirectory(_zip, _folder);
-
             foreach (var initializer in initializers)
             {
                 try
@@ -72,14 +64,6 @@ namespace Dictionaries.API.Infrastructure.Initialization
                         initializer.EntityType.ToString(),
                         ex.Message);
                 }
-            }
-
-            var directory = new DirectoryInfo(_folder);
-            var files = directory.GetFiles().Where(x => x.FullName != _zip);
-
-            foreach (var file in files)
-            {
-                file.Delete();;
             }
         }
     }

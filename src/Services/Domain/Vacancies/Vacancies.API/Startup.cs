@@ -22,6 +22,7 @@ using Vacancies.Db.Synchronization.EventHandlers.Negotiations;
 using Vacancies.Db.Synchronization.EventHandlers.Salaries;
 using Vacancies.Db.Synchronization.EventHandlers.Schedules;
 using Vacancies.Db.Synchronization.EventHandlers.Skills;
+using Vacancies.Db.Synchronization.EventHandlers.Specializations;
 using Vacancies.Db.Synchronization.EventHandlers.Statuses;
 using Vacancies.Db.Synchronization.Events.Driving;
 using Vacancies.Db.Synchronization.Events.Employers;
@@ -34,6 +35,7 @@ using Vacancies.Db.Synchronization.Events.Negotiations;
 using Vacancies.Db.Synchronization.Events.Salaries;
 using Vacancies.Db.Synchronization.Events.Schedules;
 using Vacancies.Db.Synchronization.Events.Skills;
+using Vacancies.Db.Synchronization.Events.Specializations;
 using Vacancies.Db.Synchronization.Events.Statuses;
 
 namespace Vacancies.API
@@ -102,6 +104,7 @@ namespace Vacancies.API
                 builder.RegisterEventHandler<SchedulesChangedHandler>();
                 builder.RegisterEventHandler<SkillsChangedHandler>();
                 builder.RegisterEventHandler<VacancyStatusesChangedHandler>();
+                builder.RegisterEventHandler<SpecializationsChangedHandler>();
             });
 
             services.AddSwaggerGen(c =>
@@ -169,6 +172,7 @@ namespace Vacancies.API
                 eventBus.Subscribe<SchedulesChanged, SchedulesChangedHandler>();
                 eventBus.Subscribe<SkillsChanged, SkillsChangedHandler>();
                 eventBus.Subscribe<VacancyStatusesChanged, VacancyStatusesChangedHandler>();
+                eventBus.Subscribe<SpecializationsChanged, SpecializationsChangedHandler>();
             });
         }
     }

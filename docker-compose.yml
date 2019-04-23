@@ -69,16 +69,17 @@ services:
       - seq
   #     - elk
 
-  # login.api:
-  #   image: jobobserver/login.api:${TAG:-latest}
-  #   build:
-  #     context: .
-  #     dockerfile: src/Services/Domain/Login/Login.API/Dockerfile    
-  #   depends_on:
-  #     - sql.data
-  #     - rabbitmq
-  #     - seq
-  # #     - elk
+  login.api:
+    image: jobobserver/login.api:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: src/Services/Domain/Login/Login.API/Dockerfile    
+    depends_on:
+      - sql.data
+      - rabbitmq
+      - seq
+      - resumes.api
+  #     - elk
 
   paidservices.api:
     image: jobobserver/paidservices.api:${TAG:-latest}
@@ -155,11 +156,11 @@ services:
       - careerdays.api
       - educationalinstitutions.api
       - employers.api
-      # - login.api
+      - login.api
       - paidservices.api
       - resumes.api
       - vacancies.api
       - dictionaries.api
-      - moodle.api
+      # - moodle.api
       - seq
   #     - elk
