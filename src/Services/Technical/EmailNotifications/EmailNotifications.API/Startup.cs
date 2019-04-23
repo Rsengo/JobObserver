@@ -108,6 +108,7 @@ namespace EmailNotifications.API
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
+                c.RoutePrefix = Configuration["SwaggerUIUrl"];
                 c.SwaggerEndpoint(
                     Configuration["SwaggerEndpointUrl"],
                     Configuration["SwaggerEndpointName"]);
