@@ -60,6 +60,12 @@ services:
     ports:
       - "5340:80"
 
+  proxy:
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+
   brandedtemplates.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
