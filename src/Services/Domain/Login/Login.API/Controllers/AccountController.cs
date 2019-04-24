@@ -25,7 +25,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Login.API.Controllers
 {
-    public class AccountController : ControllerBase
+    public class AccountController : Controller
     {
         private readonly UserManager<User> _userManager;
 
@@ -61,8 +61,8 @@ namespace Login.API.Controllers
                 return ExternalLogin(context.IdP, returnUrl);
             }
 
-            //Todo redirect to login page
-            return Redirect("");
+            ViewData["RETURN_URL"] = returnUrl;
+            return View();
         }
 
         [HttpPost("login")]
@@ -122,9 +122,7 @@ namespace Login.API.Controllers
             {
                 LogoutId = logoutId
             };
-
-            //todo
-            return Redirect("");
+            return View(vm);
         }
 
         [HttpPost("logout")]
