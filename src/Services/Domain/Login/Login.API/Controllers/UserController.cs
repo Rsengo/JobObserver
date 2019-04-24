@@ -3,18 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-<<<<<<< HEAD
 using BuildingBlocks.EventBus.Abstractions;
 using Login.API.Configuration;
 using Login.Db.Dto.Models;
 using Login.Db.Models;
 using Login.Db.Synchronization.Events.Users;
-=======
 using Login.Db;
-using Login.Db.Dto.Models;
-using Login.Db.Models;
 using Login.Db.Models.Contacts;
->>>>>>> Security
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -25,16 +20,16 @@ namespace Login.API.Controllers
     {
         private readonly UserManager<User> _userManager;
 
-<<<<<<< HEAD
         private readonly IEventBus _eventBus;
 
         public UserController(
             UserManager<User> userManager,
-             IEventBus eventBus)
+            IEventBus eventBus)
         {
             _userManager = userManager;
             _eventBus = eventBus;
-=======
+        }
+
         private readonly LoginDbContext _context;
 
         public UserController(
@@ -43,7 +38,6 @@ namespace Login.API.Controllers
         {
             _userManager = userManager;
             _context = context;
->>>>>>> Security
         }
 
         [HttpPut("{id}")]
@@ -66,7 +60,6 @@ namespace Login.API.Controllers
             return Ok(response);
         }
 
-<<<<<<< HEAD
         [HttpPost("restoreadmin")]
         public async Task<IActionResult> RestoreAdmin()
         {
@@ -75,13 +68,14 @@ namespace Login.API.Controllers
 
             var @event = new UsersChanged
             {
-                Created = new [] { dto }
+                Created = new[] {dto}
             };
 
             _eventBus.Publish(@event);
 
             return Ok();
-=======
+        }
+
         private async Task<long> UpdateContacts(DtoUser dto, string id)
         {
             var contacts = Mapper.Map<Contact>(dto);
@@ -110,7 +104,6 @@ namespace Login.API.Controllers
             await _context.BulkMergeAsync(new[] { sites });
 
             return contacts.Id;
->>>>>>> Security
         }
     }
 }
