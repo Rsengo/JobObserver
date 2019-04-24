@@ -12,7 +12,7 @@ namespace Login.Db.Dto.Profiles.Contacts
         {
             CreateMap<Contact, DtoContact>()
                 .ForMember(
-                    d => d.Phone,
+                    d => d.Phones,
                     o => o.MapFrom(
                         s => s.Phones.Select(Mapper.Map<DtoPhone>)))
                 .ForMember(
@@ -26,10 +26,12 @@ namespace Login.Db.Dto.Profiles.Contacts
             CreateMap<DtoContact, Contact>()
                 .ForMember(
                     d => d.Phones,
-                    o => o.Ignore())
+                    o => o.MapFrom(
+                        s => s.Phones.Select(Mapper.Map<Phone>)))
                 .ForMember(
                     d => d.Sites,
-                    o => o.Ignore())
+                    o => o.MapFrom(
+                        s => s.Sites.Select(Mapper.Map<Site>)))
                 .ForMember(
                     d => d.User,
                     o => o.Ignore());

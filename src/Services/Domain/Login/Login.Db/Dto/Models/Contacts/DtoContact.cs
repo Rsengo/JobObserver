@@ -13,7 +13,7 @@ namespace Login.Db.Dto.Models.Contacts
         ///     Телефон
         /// </summary>
         [JsonProperty("phones")]
-        public virtual ICollection<DtoPhone> Phone { get; set; }
+        public virtual ICollection<DtoPhone> Phones { get; set; }
 
         /// <summary>
         ///     Другие контакты

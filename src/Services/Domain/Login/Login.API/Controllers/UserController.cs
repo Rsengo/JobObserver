@@ -3,11 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+<<<<<<< HEAD
 using BuildingBlocks.EventBus.Abstractions;
 using Login.API.Configuration;
 using Login.Db.Dto.Models;
 using Login.Db.Models;
 using Login.Db.Synchronization.Events.Users;
+=======
+using Login.Db;
+using Login.Db.Dto.Models;
+using Login.Db.Models;
+using Login.Db.Models.Contacts;
+>>>>>>> Security
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,6 +25,7 @@ namespace Login.API.Controllers
     {
         private readonly UserManager<User> _userManager;
 
+<<<<<<< HEAD
         private readonly IEventBus _eventBus;
 
         public UserController(
@@ -26,13 +34,30 @@ namespace Login.API.Controllers
         {
             _userManager = userManager;
             _eventBus = eventBus;
+=======
+        private readonly LoginDbContext _context;
+
+        public UserController(
+            UserManager<User> userManager,
+            LoginDbContext context)
+        {
+            _userManager = userManager;
+            _context = context;
+>>>>>>> Security
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> ChangeUserInformation(DtoUser dto, string id)
         {
+            var contactsId = dto.ContactsId;
+            if (dto.Contacts != null)
+            {
+                contactsId = await UpdateContacts(dto, id);
+            }
+
             var newUser = Mapper.Map<User>(dto);
             newUser.Id = id;
+            newUser.ContactsId = contactsId;
 
             await _userManager.UpdateAsync(newUser);
 
@@ -41,6 +66,7 @@ namespace Login.API.Controllers
             return Ok(response);
         }
 
+<<<<<<< HEAD
         [HttpPost("restoreadmin")]
         public async Task<IActionResult> RestoreAdmin()
         {
@@ -55,6 +81,36 @@ namespace Login.API.Controllers
             _eventBus.Publish(@event);
 
             return Ok();
+=======
+        private async Task<long> UpdateContacts(DtoUser dto, string id)
+        {
+            var contacts = Mapper.Map<Contact>(dto);
+
+            if (dto.ContactsId != null)
+            {
+                contacts.Id = dto.ContactsId.Value;
+            }
+
+            await _context.BulkMergeAsync(new[] { contacts });
+
+            var phones = contacts.Phones;
+            var sites = contacts.Sites;
+
+            foreach (var phone in phones)
+            {
+                phone.ContactId = contacts.Id;
+            }
+
+            foreach (var site in sites)
+            {
+                site.ContactId = contacts.Id;
+            }
+
+            await _context.BulkMergeAsync(new[] { phones });
+            await _context.BulkMergeAsync(new[] { sites });
+
+            return contacts.Id;
+>>>>>>> Security
         }
     }
 }

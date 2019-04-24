@@ -69,10 +69,16 @@ namespace Login.API.ViewModels
         [JsonProperty("email")]
         public virtual string Email { get; set; }
 
-        [JsonProperty("educational_institution_manager_attributes")]
-        public virtual DtoEducationalInstitutionManagerAttributes EducationalInstitutionManagerAttributes { get; set; }
+        /// <summary>
+        ///     Должность
+        /// </summary>
+        [JsonProperty("position")]
+        public virtual string Position { get; set; }
 
-        [JsonProperty("employer_manager_attributes")]
-        public virtual DtoEmployerManagerAttributes EmployerManagerAttributes { get; set; }
+        /// <summary>
+        ///     Id Организации
+        /// </summary>
+        [JsonProperty("organization_id")]
+        public virtual long? OrganizationId { get; set; }
     }
 }
