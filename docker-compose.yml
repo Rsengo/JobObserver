@@ -7,13 +7,13 @@ services:
   rabbitmq:
     image: rabbitmq:3-management-alpine
 
-  # mariadb:
-  #   image: 'bitnami/mariadb:latest'
+  mariadb:
+    image: 'bitnami/mariadb:latest'
 
-  # moodle:
-  #   image: 'bitnami/moodle:latest'
-  #   depends_on:
-  #     - mariadb
+  moodle:
+    image: 'bitnami/moodle:latest'
+    depends_on:
+      - mariadb
 
   # elk:
   #   image: sebp/elk
@@ -78,7 +78,6 @@ services:
       - sql.data
       - rabbitmq
       - seq
-      - resumes.api
   #     - elk
 
   paidservices.api:
@@ -124,15 +123,15 @@ services:
       - seq
       # - elk
 
-  # moodle.api:
-  #   image: jobobserver/moodle.api:${TAG:-latest}
-  #   build:
-  #     context: .
-  #     dockerfile: src/Services/Integration/Moodle/Moodle.API/Dockerfile    
-  #   depends_on:
-  #     - rabbitmq
-  #     - seq
-  #     # - elk
+  moodle.api:
+    image: jobobserver/moodle.api:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: src/Services/Integration/Moodle/Moodle.API/Dockerfile    
+    depends_on:
+      - rabbitmq
+      - seq
+      # - elk
 
   emailnotifications.api:
     image: jobobserver/emailnotifications.api:${TAG:-latest}
@@ -161,6 +160,6 @@ services:
       - resumes.api
       - vacancies.api
       - dictionaries.api
-      # - moodle.api
+      - moodle.api
       - seq
   #     - elk
