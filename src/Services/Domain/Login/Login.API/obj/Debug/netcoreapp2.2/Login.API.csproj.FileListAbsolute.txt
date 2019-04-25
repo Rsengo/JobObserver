@@ -86,3 +86,16 @@ D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2
 D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.RabbitMQ.pdb
 D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.Synchronization.pdb
 D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.csproj.CopyComplete
+D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\Login.API.Views.dll
+D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\Login.API.Views.pdb
+D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.TagHelpers.input.cache
+D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.TagHelpers.output.cache
+D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.RazorCoreGenerate.cache
+D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.cshtml.g.cs
+D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.RazorTargetAssemblyInfo.cs
+D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.Views.pdb
+D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.cshtml.g.cs
+D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.cshtml.g.cs
+D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.cshtml.g.cs
+D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Razor\Views\Account\Logout.cshtml.g.cs
