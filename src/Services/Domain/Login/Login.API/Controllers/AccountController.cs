@@ -61,7 +61,7 @@ namespace Login.API.Controllers
                 return ExternalLogin(context.IdP, returnUrl);
             }
 
-            ViewData["RETURN_URL"] = returnUrl;
+            ViewData["ReturnUrl"] = returnUrl;
             return View();
         }
 
@@ -116,13 +116,8 @@ namespace Login.API.Controllers
                 return await Logout(new LogoutViewModel { LogoutId = logoutId });
             }
 
-            // show the logout prompt. this prevents attacks where the user
-            // is automatically signed out by another malicious web page.
-            var vm = new LogoutViewModel
-            {
-                LogoutId = logoutId
-            };
-            return View(vm);
+            ViewData["LogoutId"] = logoutId;
+            return View();
         }
 
         [HttpPost("logout")]
