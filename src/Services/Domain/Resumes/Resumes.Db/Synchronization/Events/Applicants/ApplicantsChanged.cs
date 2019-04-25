@@ -6,7 +6,7 @@ using Resumes.Db.Dto.Models.Applicants;
 
 namespace Resumes.Db.Synchronization.Events.Applicants
 {
-    public class UsersChanged : 
+    public class ApplicantsChanged : 
         EntityChangedIntegrationEvent<DtoApplicant, Guid>
     {
     }

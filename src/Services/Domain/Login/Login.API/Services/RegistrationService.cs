@@ -22,21 +22,17 @@ namespace Login.API.Services
 
         private readonly UserManager<User> _userManager;
 
-        private readonly IEventBus _eventBus;
-
         public event Action<IdentityResult> OnErrorsOccured;
 
         public RegistrationService(
             LoginDbContext context,
-            UserManager<User> userManager,
-            IEventBus eventBus)
+            UserManager<User> userManager)
         {
             _context = context;
             _userManager = userManager;
-            _eventBus = eventBus;
         }
 
-        public async Task RegisterAsync(RegistrationViewModel model, string role)
+        public async Task<User> RegisterAsync(RegistrationViewModel model, string role)
         {
             Contact contacts = null;
             EducationalInstitutionManagerAttributes eduInstAttributes = null;
@@ -86,12 +82,7 @@ namespace Login.API.Services
                 await AddEmployerManagerProperties(model, user.Id);
             }
 
-            var @event = new UsersChanged
-            {
-                Created = new[] { Mapper.Map<DtoUser>(user) }
-            };
-
-            _eventBus.Publish(@event);
+            return user;
         }
 
         private async Task<long> AddContacts(RegistrationViewModel model, string userId)

@@ -10,17 +10,17 @@ using Resumes.Db.Synchronization.Events.Applicants;
 
 namespace Resumes.Db.Synchronization.EventHandlers.Applicants
 {
-    public class UsersChangedHandler : 
-        IIntegrationEventHandler<UsersChanged>
+    public class ApplicantsChangedHandler : 
+        IIntegrationEventHandler<ApplicantsChanged>
     {
         private readonly ResumesDbContext _context;
 
-        public UsersChangedHandler(ResumesDbContext context)
+        public ApplicantsChangedHandler(ResumesDbContext context)
         {
             _context = context;
         }
 
-        public async Task Handle(UsersChanged @event)
+        public async Task Handle(ApplicantsChanged @event)
         {
             var deleted = @event.Deleted;
 

@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Login.API.Configuration;
 using Login.API.ViewModels;
+using Login.Db.Models;
 using Microsoft.AspNetCore.Identity;
 
 namespace Login.API.Services
@@ -10,6 +11,6 @@ namespace Login.API.Services
     {
         event Action<IdentityResult> OnErrorsOccured;
 
-        Task RegisterAsync(RegistrationViewModel model, string role);
+        Task<User> RegisterAsync(RegistrationViewModel model, string role);
     }
 }

@@ -66,7 +66,7 @@ namespace Login.API.Controllers
             var user = await _userManager.FindByEmailAsync(IdentityConfig.ADMIN_EMAIL);
             var dto = Mapper.Map<DtoUser>(user);
 
-            var @event = new UsersChanged
+            var @event = new ApplicantsChanged
             {
                 Created = new[] {dto}
             };
