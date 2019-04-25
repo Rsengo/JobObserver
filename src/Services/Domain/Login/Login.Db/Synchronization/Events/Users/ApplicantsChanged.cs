@@ -3,7 +3,7 @@ using Login.Db.Dto.Models;
 
 namespace Login.Db.Synchronization.Events.Users
 {
-    public class UsersChanged : 
+    public class ApplicantsChanged : 
         EntityChangedIntegrationEvent<DtoUser>
     {
     }

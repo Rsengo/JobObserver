@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using BuildingBlocks.EventBus.Abstractions;
 using Login.API.Configuration;
 using Login.API.Services;
 using Login.API.ViewModels;
+using Login.Db.Dto.Models;
+using Login.Db.Synchronization.Events.Users;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -15,9 +19,14 @@ namespace Login.API.Controllers
     {
         private readonly IRegistrationService _registrationService;
 
-        public RegistrationController(IRegistrationService registrationService)
+        private readonly IEventBus _eventBus;
+
+        public RegistrationController(
+            IRegistrationService registrationService,
+            IEventBus eventBus)
         {
             _registrationService = registrationService;
+            _eventBus = eventBus;
 
             _registrationService.OnErrorsOccured += AddErrors;
         }
@@ -29,10 +38,18 @@ namespace Login.API.Controllers
             if (!ModelState.IsValid)
                 return BadRequest("Неверный формат данных");
 
-            await _registrationService.RegisterAsync(model, IdentityConfig.DefaultRoles.APPLICANT);
+            var user = await _registrationService.RegisterAsync(model, IdentityConfig.DefaultRoles.APPLICANT);
 
             if (ModelState.ErrorCount <= 0)
+            {
+                var @event = new ApplicantsChanged
+                {
+                    Created = new[] { Mapper.Map<DtoUser>(user) }
+                };
+                _eventBus.Publish(@event);
+
                 return Ok();
+            }
 
             var errors = ModelState.Values
                 .SelectMany(x => x.Errors)
