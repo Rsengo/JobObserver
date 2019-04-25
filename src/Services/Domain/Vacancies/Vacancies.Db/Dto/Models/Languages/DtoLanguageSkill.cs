@@ -23,7 +23,7 @@ namespace Vacancies.Db.Dto.Models.Languages
         /// <summary>
         ///     Уровень
         /// </summary>
-        [JsonProperty("language")]
+        [JsonProperty("level")]
         public virtual DtoLanguageLevel Level { get; set; }
 
         /// <summary>

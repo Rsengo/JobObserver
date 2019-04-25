@@ -23,6 +23,7 @@
 **/Bin/
 **/obj/
 **/Obj/
+**/netcoreapp*/**
 
 # Visual Studio 2015 cache/options directory
 .vs/
