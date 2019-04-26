@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
@@ -32,6 +32,12 @@
     <ProjectReference Include="..\..\..\..\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Extensions.EntityFramework\BuildingBlocks.Extensions.EntityFramework.csproj" />
     <ProjectReference Include="..\..\..\..\BuildingBlocks\EventBus\BuildingBlocks.Extensions.EventBus.RabbitMQ\BuildingBlocks.Extensions.EventBus.RabbitMQ.csproj" />
     <ProjectReference Include="..\Login.Db\Login.Db.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\bundle.c69e6f8f155e540f9749.js" />
+    <None Include="wwwroot\main.bundle.js" />
+    <None Include="wwwroot\vendors~main.bundle.js" />
   </ItemGroup>
 
   <ItemGroup>
