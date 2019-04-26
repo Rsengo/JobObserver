@@ -15,7 +15,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Login.API.Controllers
 {
-    public class RegistrationController : ControllerBase
+    [Route("[controller]")]
+    public class RegistrationController : Controller
     {
         private readonly IRegistrationService _registrationService;
 
@@ -29,6 +30,13 @@ namespace Login.API.Controllers
             _eventBus = eventBus;
 
             _registrationService.OnErrorsOccured += AddErrors;
+        }
+
+        [HttpGet]
+        public IActionResult Register(string returnUrl)
+        {
+            ViewData["ReturnUrl"] = returnUrl;
+            return View("Register");
         }
 
         [HttpPost("applicant")]

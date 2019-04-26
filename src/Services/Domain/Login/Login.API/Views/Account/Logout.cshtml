@@ -1,7 +1,13 @@
-﻿
+﻿@model string
+
 @{
     ViewData["Title"] = "Logout";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@*TODO подключить скрипт + модель в js*@
+<script>
+    var viewModel = JSON.parse(@Model);
+    var logoutId = @ViewData["LogoutId"];
+</script>
+
+@*TODO подключить react*@

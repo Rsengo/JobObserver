@@ -34,4 +34,8 @@
     <ProjectReference Include="..\Login.Db\Login.Db.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ClientApp\" />
+  </ItemGroup>
+
 </Project>

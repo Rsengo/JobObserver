@@ -1,7 +1,15 @@
-﻿
+﻿@using Login.API.ViewModels
+
+@model LoginViewModel
+
 @{
     ViewData["Title"] = "Login";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@*TODO подключить скрипт + модель в js*@
+<script>
+    var returnUrl = @ViewData["ReturnUrl"];
+    var viewModel = JSON.parse(@Model);
+</script>
+
+@*TODO подключить react*@

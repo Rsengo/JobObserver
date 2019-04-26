@@ -59,7 +59,7 @@ namespace Login.API.Controllers
         /// Handles the consent screen postback
         /// </summary>
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Index(ConsentInputViewModel model)
         {
             // parse the return URL back to an AuthorizeRequest object
