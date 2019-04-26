@@ -1,7 +1,6 @@
 D:\Repos\JobObserver\src\BuildingBlocks\Assemblies\JobObserver.Extensions.Assembly\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.deps.json
 D:\Repos\JobObserver\src\BuildingBlocks\Assemblies\JobObserver.Extensions.Assembly\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.dll
 D:\Repos\JobObserver\src\BuildingBlocks\Assemblies\JobObserver.Extensions.Assembly\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.pdb
-D:\Repos\JobObserver\src\BuildingBlocks\Assemblies\JobObserver.Extensions.Assembly\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.csprojAssemblyReference.cache
 D:\Repos\JobObserver\src\BuildingBlocks\Assemblies\JobObserver.Extensions.Assembly\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.csproj.CoreCompileInputs.cache
 D:\Repos\JobObserver\src\BuildingBlocks\Assemblies\JobObserver.Extensions.Assembly\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.AssemblyInfoInputs.cache
 D:\Repos\JobObserver\src\BuildingBlocks\Assemblies\JobObserver.Extensions.Assembly\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.AssemblyInfo.cs
@@ -16,3 +15,4 @@ C:\JobObserver2\src\BuildingBlocks\Assemblies\JobObserver.Extensions.Assembly\ob
 C:\JobObserver2\src\BuildingBlocks\Assemblies\JobObserver.Extensions.Assembly\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.dll
 C:\JobObserver2\src\BuildingBlocks\Assemblies\JobObserver.Extensions.Assembly\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.pdb
 C:\JobObserver2\src\BuildingBlocks\Assemblies\JobObserver.Extensions.Assembly\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.csprojAssemblyReference.cache
+D:\Repos\JobObserver\src\BuildingBlocks\Assemblies\JobObserver.Extensions.Assembly\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.csprojAssemblyReference.cache

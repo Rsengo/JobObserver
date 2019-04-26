@@ -38,7 +38,5 @@ namespace Login.Db
         public DbSet<EducationalInstitutionManagerAttributes> EducationalInstitutionManagerAttributes { get; set; }
 
         public DbSet<EmployerManagerAttributes> EmployerManagerAttributes { get; set; }
-
-        public DbSet<Permission> Permissions { get; set; }
     }
 }

@@ -47,3 +47,7 @@ C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.Db\bin\Debug\
 C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.Synchronization.pdb
 C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.pdb
 C:\JobObserver2\src\Services\Integration\Dictionaries\Dictionaries.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.pdb
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.dll
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.dll
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.pdb
+D:\Repos\JobObserver\src\Services\Integration\Dictionaries\Dictionaries.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.pdb

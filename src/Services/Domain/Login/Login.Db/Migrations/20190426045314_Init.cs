@@ -74,21 +74,6 @@ namespace Login.Db.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "PERMISSIONS",
-                columns: table => new
-                {
-                    Id = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Value = table.Column<string>(nullable: false),
-                    Type = table.Column<string>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_PERMISSIONS", x => x.Id);
-                    table.UniqueConstraint("AK_PERMISSIONS_Type_Value", x => new { x.Type, x.Value });
-                });
-
-            migrationBuilder.CreateTable(
                 name: "SITE_TYPES",
                 columns: table => new
                 {
@@ -146,11 +131,8 @@ namespace Login.Db.Migrations
                     FirstName = table.Column<string>(nullable: false),
                     MiddleName = table.Column<string>(nullable: true),
                     BirthDate = table.Column<DateTime>(nullable: false),
-                    ContactsId = table.Column<long>(nullable: true),
                     GenderId = table.Column<long>(nullable: true),
-                    AreaId = table.Column<long>(nullable: true),
-                    EducationalInstitutionManagerAttributesId = table.Column<long>(nullable: true),
-                    EmployerManagerAttributesId = table.Column<long>(nullable: true)
+                    AreaId = table.Column<long>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -477,9 +459,6 @@ namespace Login.Db.Migrations
 
             migrationBuilder.DropTable(
                 name: "EMPLOYER_MANAGER_ATTRIBUTES");
-
-            migrationBuilder.DropTable(
-                name: "PERMISSIONS");
 
             migrationBuilder.DropTable(
                 name: "PHONES");

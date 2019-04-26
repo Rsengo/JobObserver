@@ -64,13 +64,10 @@ D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\net
 D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EntityFramework.dll
 D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EventBus.RabbitMQ.dll
 D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\CareerDays.Db.dll
-D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\CareerDays.Dto.dll
-D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\CareerDays.Synchronization.dll
 D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.AutoMapper.pdb
 D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EntityFramework.pdb
 D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EventBus.RabbitMQ.pdb
 D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\CareerDays.Db.pdb
-D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\CareerDays.Synchronization.pdb
 D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\BuildingBlocks.AutoMapper.pdb
 D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\BuildingBlocks.DataTransfer.pdb
 D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EntityFramework.pdb
@@ -78,7 +75,6 @@ D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\net
 D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.RabbitMQ.pdb
 D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.Synchronization.pdb
 D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.Assemblies.pdb
-D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\bin\Debug\netcoreapp2.2\CareerDays.Dto.pdb
 D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\obj\Debug\netcoreapp2.2\CareerDays.API.csprojAssemblyReference.cache
 D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\obj\Debug\netcoreapp2.2\CareerDays.API.csproj.CoreCompileInputs.cache
 D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.API\obj\Debug\netcoreapp2.2\CareerDays.API.RazorAssemblyInfo.cache

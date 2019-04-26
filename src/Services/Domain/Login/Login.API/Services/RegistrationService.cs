@@ -15,6 +15,7 @@ using Login.Db.Synchronization.Events.Users;
 namespace Login.API.Services
 {
     using Login.Db.Dto.Models;
+    using Login.Db.Dto.Models.Contacts;
 
     public class RegistrationService: IRegistrationService
     {
@@ -34,10 +35,6 @@ namespace Login.API.Services
 
         public async Task<User> RegisterAsync(RegistrationViewModel model, string role)
         {
-            Contact contacts = null;
-            EducationalInstitutionManagerAttributes eduInstAttributes = null;
-            EmployerManagerAttributes empAttributes = null;
-
             await _context.SaveChangesAsync();
 
             var user = new User
@@ -46,13 +43,10 @@ namespace Login.API.Services
                 LastName = model.LastName,
                 MiddleName = model.MiddleName,
                 BirthDate = model.BirthDate,
-                ContactsId = contacts?.Id,
                 GenderId = model.GenderId,
                 AreaId = model.AreaId,
                 Email = model.Email,
-                UserName = model.Email,
-                EducationalInstitutionManagerAttributesId = eduInstAttributes?.Id,
-                EmployerManagerAttributesId = empAttributes?.Id
+                UserName = model.Email
             };
 
             var result = await _userManager.CreateAsync(user, model.Password);
@@ -66,10 +60,7 @@ namespace Login.API.Services
             
             if (model.Contacts != null)
             {
-                contacts = Mapper.Map<Contact>(model.Contacts);
-                _context.Contacts.Add(contacts);
-
-                await AddContacts(model, user.Id);
+                await AddContacts(model.Contacts, user.Id);
             }
 
             if (role == IdentityConfig.DefaultRoles.EDUCATIONAL_INSTITUTION_MANAGER)
@@ -85,7 +76,7 @@ namespace Login.API.Services
             return user;
         }
 
-        private async Task<long> AddContacts(RegistrationViewModel model, string userId)
+        private async Task AddContacts(DtoContact model, string userId)
         {
             var contacts = Mapper.Map<Contact>(model);
             contacts.UserId = userId;
@@ -110,8 +101,6 @@ namespace Login.API.Services
             _context.Sites.AddRange(sites);
 
             await _context.SaveChangesAsync();
-
-            return contacts.Id;
         }
 
         private async Task AddEducationalInstitutionManagerProperties(RegistrationViewModel model, string userId)

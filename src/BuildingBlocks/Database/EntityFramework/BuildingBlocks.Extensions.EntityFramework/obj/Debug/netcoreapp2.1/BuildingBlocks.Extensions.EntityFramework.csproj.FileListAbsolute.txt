@@ -15,7 +15,6 @@ C:\JobObserver2\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Exten
 D:\Repos\JobObserver\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Extensions.EntityFramework\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.EntityFramework.deps.json
 D:\Repos\JobObserver\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Extensions.EntityFramework\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.EntityFramework.dll
 D:\Repos\JobObserver\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Extensions.EntityFramework\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.EntityFramework.pdb
-D:\Repos\JobObserver\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Extensions.EntityFramework\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.EntityFramework.csprojAssemblyReference.cache
 D:\Repos\JobObserver\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Extensions.EntityFramework\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.EntityFramework.csproj.CoreCompileInputs.cache
 D:\Repos\JobObserver\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Extensions.EntityFramework\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.EntityFramework.AssemblyInfoInputs.cache
 D:\Repos\JobObserver\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Extensions.EntityFramework\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.EntityFramework.AssemblyInfo.cs

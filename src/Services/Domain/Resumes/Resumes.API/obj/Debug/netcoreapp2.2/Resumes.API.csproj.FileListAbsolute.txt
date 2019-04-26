@@ -70,13 +70,10 @@ D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreap
 D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EntityFramework.dll
 D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EventBus.RabbitMQ.dll
 D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\Resumes.Db.dll
-D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\Resumes.Dto.dll
-D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\Resumes.Synchronization.dll
 D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.AutoMapper.pdb
 D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EntityFramework.pdb
 D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EventBus.RabbitMQ.pdb
 D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\Resumes.Db.pdb
-D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\Resumes.Synchronization.pdb
 D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\BuildingBlocks.AutoMapper.pdb
 D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\BuildingBlocks.DataTransfer.pdb
 D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EntityFramework.pdb
@@ -84,7 +81,6 @@ D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreap
 D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.RabbitMQ.pdb
 D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.Synchronization.pdb
 D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.Assemblies.pdb
-D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\Resumes.Dto.pdb
 D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.csprojAssemblyReference.cache
 D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.RazorAssemblyInfo.cache
 D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.RazorAssemblyInfo.cs
@@ -92,3 +88,5 @@ D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreap
 D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.csproj.CopyComplete
 C:\JobObserver2\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Security.Access.dll
 C:\JobObserver2\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Security.Access.pdb
+D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Security.Access.dll
+D:\Repos\JobObserver\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Security.Access.pdb
