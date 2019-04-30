@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using IdentityModel;
 using IdentityServer4;
 using IdentityServer4.Services;
+using Login.API.Services;
 using Login.API.ViewModels;
 using Login.Db.Models;
 using Microsoft.AspNetCore.Authentication;
@@ -12,6 +13,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 
 namespace Login.API.Controllers
 {
@@ -25,16 +27,24 @@ namespace Login.API.Controllers
 
         private readonly ILogger<AccountController> _logger;
 
+        private readonly IOptions<RedirectSettings> _redirectSettings;
+
+        private readonly ICryptoService _cryptoService;
+
         public AccountController(
             UserManager<User> userManager, 
             SignInManager<User> signInManager,
             IIdentityServerInteractionService interaction,
-            ILogger<AccountController> logger)
+            ILogger<AccountController> logger,
+            IOptions<RedirectSettings> redirectSettings,
+            ICryptoService cryptoService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _interaction = interaction;
             _logger = logger;
+            _redirectSettings = redirectSettings;
+            _cryptoService = cryptoService;
         }
 
         /// <summary>
@@ -51,8 +61,8 @@ namespace Login.API.Controllers
                 return ExternalLogin(context.IdP, returnUrl);
             }
 
-            ViewData["ReturnUrl"] = returnUrl;
-            return View();
+            var encodedUrl = _cryptoService.Encrypt(returnUrl);
+            return Redirect(_redirectSettings.Value.FullLoginPageUrl + encodedUrl);
         }
 
         [HttpPost("login")]
@@ -83,7 +93,10 @@ namespace Login.API.Controllers
 
             await _signInManager.SignInAsync(user, props);
 
-            return Redirect(model.ReturnUrl);
+            var encodedUrl = model.ReturnUrl;
+            var decodedUrl = _cryptoService.Decrypt(encodedUrl);
+
+            return Ok(decodedUrl);
         }
 
         /// <summary>
@@ -106,23 +119,31 @@ namespace Login.API.Controllers
                 return await Logout(new LogoutViewModel { LogoutId = logoutId });
             }
 
-            ViewData["LogoutId"] = logoutId;
-            return View();
+            var encodedLogoutId = _cryptoService.Encrypt(logoutId);
+            return Redirect(_redirectSettings.Value.FullLogoutPageUrl + encodedLogoutId);
         }
 
         [HttpPost("logout")]
         public async Task<IActionResult> Logout(LogoutViewModel model)
         {
+            string logoutId = null;
+
+            if (model.LogoutId != null)
+            {
+                var logoutIdEncrypt = model.LogoutId;
+                logoutId = _cryptoService.Decrypt(logoutIdEncrypt);
+            }
+
             var idp = User?.FindFirst(JwtClaimTypes.IdentityProvider)?.Value;
 
             if (idp != null && idp != IdentityServerConstants.LocalIdentityProvider)
             {
-                if (model.LogoutId == null)
+                if (logoutId == null)
                 {
                     // if there's no current logout context, we need to create one
                     // this captures necessary info from the current logged in user
                     // before we signout and redirect away to the external IdP for signout
-                    model.LogoutId = await _interaction.CreateLogoutContextAsync();
+                    logoutId = await _interaction.CreateLogoutContextAsync();
                 }
 
                 try
@@ -145,9 +166,12 @@ namespace Login.API.Controllers
             HttpContext.User = new ClaimsPrincipal(new ClaimsIdentity());
 
             // get context information (client name, post logout redirect URI and iframe for federated signout)
-            var logout = await _interaction.GetLogoutContextAsync(model.LogoutId);
+            var logout = await _interaction.GetLogoutContextAsync(logoutId);
 
-            return Redirect(logout?.PostLogoutRedirectUri);
+            var encodedUrl = logout?.PostLogoutRedirectUri;
+            var decodedUrl = _cryptoService.Decrypt(encodedUrl);
+
+            return Redirect(decodedUrl);
         }
 
         public async Task<IActionResult> DeviceLogOut(string redirectUrl)

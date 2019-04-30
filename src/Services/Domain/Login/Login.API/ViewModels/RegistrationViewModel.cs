@@ -17,6 +17,10 @@ namespace Login.API.ViewModels
         [JsonProperty("confirm_password")]
         public string ConfirmPassword { get; set; }
 
+        [Required]
+        [JsonProperty("return_url")]
+        public string ReturnUrl { get; set; }
+
         /// <summary>
         ///     Фамилия
         /// </summary>

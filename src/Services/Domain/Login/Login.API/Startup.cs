@@ -22,6 +22,7 @@ using Login.API.Services;
 using Login.Db.Models;
 using Login.Db.Dto;
 using Microsoft.AspNetCore.Identity;
+using System.Security.Cryptography;
 
 namespace Login.API
 {
@@ -146,6 +147,19 @@ namespace Login.API
 
             services.AddScoped<IRegistrationService, RegistrationService>();
 
+            services.AddTransient<ICryptoService>(sp =>
+            {
+                var hash = new MD5CryptoServiceProvider();
+                var symmetricAlgorithm = new TripleDESCryptoServiceProvider();
+                var key = Configuration["SymmetricKey"];
+                var cryptoService = new CryptoService(symmetricAlgorithm, hash, key);
+
+                return cryptoService;
+            });
+
+            services.Configure<RedirectSettings>(Configuration);
+            services.AddOptions();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -189,12 +203,12 @@ namespace Login.API
                     Configuration["SwaggerEndpointName"]);
             });
 
-            //app.UseEventBusRabbitMQ(eventBus =>
-            //{
-            //    eventBus.Subscribe<SiteTypesChanged, SiteTypesChangedHandler>();
-            //    eventBus.Subscribe<GendersChanged, GendersChangedHandler>();
-            //    eventBus.Subscribe<AreasChanged, AreasChangedHandler>();
-            //});
+            app.UseEventBusRabbitMQ(eventBus =>
+            {
+                eventBus.Subscribe<SiteTypesChanged, SiteTypesChangedHandler>();
+                eventBus.Subscribe<GendersChanged, GendersChangedHandler>();
+                eventBus.Subscribe<AreasChanged, AreasChangedHandler>();
+            });
         }
     }
 }

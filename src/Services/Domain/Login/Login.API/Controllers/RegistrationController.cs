@@ -12,6 +12,7 @@ using Login.Db.Synchronization.Events.Users;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 
 namespace Login.API.Controllers
 {
@@ -22,12 +23,20 @@ namespace Login.API.Controllers
 
         private readonly IEventBus _eventBus;
 
+        private readonly IOptions<RedirectSettings> _redirectSettings;
+
+        private readonly ICryptoService _cryptoService;
+
         public RegistrationController(
             IRegistrationService registrationService,
-            IEventBus eventBus)
+            IEventBus eventBus,
+            IOptions<RedirectSettings> redirectSettings,
+            ICryptoService cryptoService)
         {
             _registrationService = registrationService;
             _eventBus = eventBus;
+            _redirectSettings = redirectSettings;
+            _cryptoService = cryptoService;
 
             _registrationService.OnErrorsOccured += AddErrors;
         }
@@ -35,8 +44,8 @@ namespace Login.API.Controllers
         [HttpGet]
         public IActionResult Register(string returnUrl)
         {
-            ViewData["ReturnUrl"] = returnUrl;
-            return View("Register");
+            var url = _cryptoService.Encrypt(returnUrl);
+            return Redirect(_redirectSettings.Value.FullRegistrationPageUrl + url);
         }
 
         [HttpPost("applicant")]
@@ -56,6 +65,8 @@ namespace Login.API.Controllers
                 };
                 _eventBus.Publish(@event);
 
+                var url = _cryptoService.Decrypt(model.ReturnUrl);
+                
                 return Ok();
             }
 

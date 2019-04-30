@@ -37,7 +37,7 @@ namespace BuildingBlocks.EventBus.RabbitMQ
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _subsManager = subsManager ?? new InMemoryEventBusSubscriptionsManager();
             _queueName = queueName;
-            //_consumerChannel = CreateConsumerChannel();
+            _consumerChannel = CreateConsumerChannel();
             _serviceProvider = provider;
             _retryCount = retryCount;
             _subsManager.OnEventRemoved += SubsManager_OnEventRemoved;
