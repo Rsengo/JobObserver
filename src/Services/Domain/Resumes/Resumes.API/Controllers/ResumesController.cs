@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Resumes.Db;
 using Resumes.Db.Models;
 using Resumes.Db.Dto.Models;
+using BuildingBlocks.Security.Access;
 
 namespace Resumes.API.Controllers
 {
@@ -16,9 +17,14 @@ namespace Resumes.API.Controllers
     {
         private readonly ResumesDbContext _context;
 
-        public ResumesController(ResumesDbContext context)
+        private readonly IAccessorFactory _accessorFactory;
+
+        public ResumesController(
+            ResumesDbContext context,
+            IAccessorFactory accessorFactory)
         {
             _context = context;
+            _accessorFactory = accessorFactory;
         }
 
         [HttpGet("{id}")]
@@ -72,6 +78,12 @@ namespace Resumes.API.Controllers
             await _context.EducationalLevels.LoadAsync();
             await _context.Specializations.LoadAsync();
 
+            var accessor = _accessorFactory.Create(HttpContext.User);
+            var operationEnabled = accessor.HasPermission(result, AccessOperation.READ);
+
+            if (!operationEnabled)
+                return Forbid();
+
             var dto = Mapper.Map<DtoResume>(result);
 
             return Ok(dto);
@@ -81,6 +93,13 @@ namespace Resumes.API.Controllers
         public async Task<IActionResult> Post(DtoResume dto)
         {
             var entity = Mapper.Map<Resume>(dto);
+
+            var accessor = _accessorFactory.Create(HttpContext.User);
+            var operationEnabled = accessor.HasPermission(entity, AccessOperation.CREATE);
+
+            if (!operationEnabled)
+                return Forbid();
+
             entity.CreatedAt = DateTime.UtcNow;
 
             _context.Resumes.Add(entity);
@@ -100,6 +119,12 @@ namespace Resumes.API.Controllers
 
             template.Id = id;
 
+            var accessor = _accessorFactory.Create(HttpContext.User);
+            var operationEnabled = accessor.HasPermission(template, AccessOperation.UPDATE);
+
+            if (!operationEnabled)
+                return Forbid();
+
             await _context.Resumes
                 .Where(x => x.Id == id)
                 .UpdateFromQueryAsync(_ => template)
@@ -111,6 +136,16 @@ namespace Resumes.API.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(long id)
         {
+            var result = _context.Resumes
+                .Select(x => new Resume { ApplicantId = x.ApplicantId })
+                .SingleOrDefault(x => x.Id == id);
+
+            var accessor = _accessorFactory.Create(HttpContext.User);
+            var operationEnabled = accessor.HasPermission(result, AccessOperation.DELETE);
+
+            if (!operationEnabled)
+                return Forbid();
+
             await _context.Resumes
                 .Where(x => x.Id == id)
                 .DeleteFromQueryAsync()

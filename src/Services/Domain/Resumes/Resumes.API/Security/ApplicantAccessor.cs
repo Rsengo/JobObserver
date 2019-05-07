@@ -7,18 +7,29 @@ using BuildingBlocks.Security.Access;
 namespace Resumes.API.Security
 {
     using System.Collections.Immutable;
-
+    using BuildingBlocks.EntityFramework.Models;
     using Resumes.Db.Models;
 
-    public class ApplicantAccessor : BaseAccessor
+    public class ApplicantAccessor : IAccessor
     {
-        protected override IImmutableDictionary<Type, AccessOperation> GetAccessLevels()
+        private readonly string _applicantId;
+
+        public ApplicantAccessor(string applicantId)
         {
-            //var dict = new Dictionary<Type, AccessOperation>
-            //{
-            //    {typeof(Resume),  }
-            //}.ToImmutableDictionary();
-            return null;
+            _applicantId = applicantId;
+        }
+
+        public bool HasPermission<TEntity>(TEntity entity, AccessOperation operation) 
+            where TEntity : RelationalEntity
+        {
+            if (entity is Resume casted)
+            {
+                return casted.ApplicantId.ToString("D") == _applicantId
+                    ? true
+                    : false;
+            }
+
+            return true;
         }
     }
 }

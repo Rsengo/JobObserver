@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using BuildingBlocks.Extensions.AutoMapper;
 using BuildingBlocks.Extensions.EventBus.RabbitMQ;
+using BuildingBlocks.Security.Access;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -14,6 +15,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Resumes.API.Security;
 using Resumes.Db;
 using Resumes.Db.Dto;
 using Resumes.Db.Synchronization.EventHandlers.Applicants;
@@ -141,6 +143,8 @@ namespace Resumes.API
                         .AllowAnyHeader()
                         .AllowCredentials());
             });
+
+            services.AddTransient<IAccessorFactory, AccessorFactoryMock>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

@@ -5152,6 +5152,9 @@
       "BuildingBlocks.Security.Access/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "BuildingBlocks.EntityFramework": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/BuildingBlocks.Security.Access.dll": {}
         },
