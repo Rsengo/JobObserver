@@ -23,9 +23,13 @@ namespace CareerDays.Db.Dto.Profiles
                             .Select(x => x.EducationalInstitution)
                             .Select(Mapper.Map<DtoEducationalInstitution>)))
                 .ForMember(
-                    dest => dest.Address, 
+                    dest => dest.Address,
                     opt => opt.MapFrom(
                         src => Mapper.Map<DtoAddress>(src.Address)))
+                .ForMember(
+                    dest => dest.BrandedDescription,
+                    opt => opt.MapFrom(
+                        src => Mapper.Map<DtoBrandedTemplate>(src.BrandedDescription)))
                 .ForMember(
                     dest => dest.Employer, 
                     opt => opt.MapFrom(
@@ -42,6 +46,9 @@ namespace CareerDays.Db.Dto.Profiles
                     opt => opt.Ignore())
                 .ForMember(
                     dest => dest.Address,
+                    opt => opt.Ignore())
+                .ForMember(
+                    dest => dest.BrandedDescription,
                     opt => opt.Ignore())
                 .ForMember(
                     dest => dest.Employers,

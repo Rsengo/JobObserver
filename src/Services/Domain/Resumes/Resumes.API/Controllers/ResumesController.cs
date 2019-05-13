@@ -137,7 +137,7 @@ namespace Resumes.API.Controllers
         public async Task<IActionResult> Delete(long id)
         {
             var result = _context.Resumes
-                .Select(x => new Resume { ApplicantId = x.ApplicantId })
+                .Select(x => new Resume { Id = x.Id, ApplicantId = x.ApplicantId })
                 .SingleOrDefault(x => x.Id == id);
 
             var accessor = _accessorFactory.Create(HttpContext.User);

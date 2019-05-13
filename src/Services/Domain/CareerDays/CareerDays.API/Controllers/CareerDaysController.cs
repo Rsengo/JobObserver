@@ -36,6 +36,7 @@ namespace CareerDays.API.Controllers
                     .ThenInclude(x => x.Employer)
                 .Include(x => x.EducationalInstitutions)
                     .ThenInclude(x => x.EducationalInstitution)
+                .Include(x => x.BrandedDescription)
                 .SingleOrDefaultAsync(x => x.Id == id)
                 .ConfigureAwait(false);
 
@@ -59,6 +60,7 @@ namespace CareerDays.API.Controllers
                     .ThenInclude(x => x.Employer)
                 .Include(x => x.EducationalInstitutions)
                     .ThenInclude(x => x.EducationalInstitution)
+                .Include(x => x.BrandedDescription)
                 .SingleOrDefaultAsync(x => x.EmployerId == employerId)
                 .ConfigureAwait(false);
 
@@ -81,6 +83,7 @@ namespace CareerDays.API.Controllers
                     .ThenInclude(x => x.Employer)
                 .Include(x => x.EducationalInstitutions)
                     .ThenInclude(x => x.EducationalInstitution)
+                .Include(x => x.BrandedDescription)
                 .SingleOrDefaultAsync(x => x.EducationalInstitutionId == educationalInstitutionId)
                 .ConfigureAwait(false);
 
@@ -103,6 +106,7 @@ namespace CareerDays.API.Controllers
                     .ThenInclude(x => x.Employer)
                 .Include(x => x.EducationalInstitutions)
                     .ThenInclude(x => x.EducationalInstitution)
+                .Include(x => x.BrandedDescription)
                 .SingleOrDefaultAsync(x => x.Address.AreaId == areaId)
                 .ConfigureAwait(false);
 
@@ -121,6 +125,15 @@ namespace CareerDays.API.Controllers
                 : StringComparison.InvariantCultureIgnoreCase;
 
             var filtered = await _context.CareerDays
+                .Include(x => x.Address)
+                    .ThenInclude(x => x.Station)
+                        .ThenInclude(x => x.Line)
+                            .ThenInclude(x => x.Metro)
+                .Include(x => x.Employers)
+                    .ThenInclude(x => x.Employer)
+                .Include(x => x.EducationalInstitutions)
+                    .ThenInclude(x => x.EducationalInstitution)
+                .Include(x => x.BrandedDescription)
                 .Where(x => x.Name.Contains(filter.Template, comprassionMethod))
                 .ToListAsync();
 

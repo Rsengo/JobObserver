@@ -33,6 +33,11 @@ namespace CareerDays.Db.Maps
                 .OnDelete(DeleteBehavior.Cascade)
                 .IsRequired();
 
+            builder
+                .HasOne(x => x.BrandedDescription)
+                .WithOne(x => x.CareerDay)
+                .OnDelete(DeleteBehavior.Cascade);
+
             builder.ToTable(TableNames.CAREER_DAYS);
         }
     }

@@ -80,7 +80,7 @@ namespace Login.API.Data
                 NormalizedEmail = IdentityConfig.ADMIN_EMAIL.ToUpper(),
                 UserName = IdentityConfig.ADMIN_EMAIL,
                 NormalizedUserName = IdentityConfig.ADMIN_EMAIL.ToUpper(),
-                PhoneNumber = "89505831265",
+                PhoneNumber = "+79996195928",
                 SecurityStamp = Guid.NewGuid().ToString("D")
             };
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using BuildingBlocks.Security.Access;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Resumes.Db;
@@ -15,11 +16,16 @@ namespace Resumes.API.Controllers
     [Route("api/v1/[controller]")]
     public class LanguageSkillsController : ControllerBase
     {
-                private readonly ResumesDbContext _context;
+        private readonly ResumesDbContext _context;
 
-        public LanguageSkillsController(ResumesDbContext context)
+        private readonly IAccessorFactory _accessorFactory;
+
+        public LanguageSkillsController(
+            ResumesDbContext context,
+            IAccessorFactory accessorFactory)
         {
             _context = context;
+            _accessorFactory = accessorFactory;
         }
 
         [HttpGet("{id}")]

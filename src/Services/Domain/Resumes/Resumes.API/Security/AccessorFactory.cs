@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.VisualBasic;
+using Resumes.Db;
 
 namespace Resumes.API.Security
 {
@@ -14,31 +16,43 @@ namespace Resumes.API.Security
     {
         private ILogger<AccessorFactory> _logger;
 
-        public AccessorFactory(ILogger<AccessorFactory> logger)
+        private ResumesDbContext _context;
+
+        public AccessorFactory(
+            ResumesDbContext context,
+            ILogger<AccessorFactory> logger)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IAccessor Create(ClaimsPrincipal user)
         {
-            if (user.IsInRole(Roles.ADMIN))
+            if (user.IsInRole(Config.DefaultRoles.ADMIN))
                 return new AdminAccessor();
 
-            if (user.IsInRole(Roles.APPLICANT))
+            if (user.IsInRole(Config.DefaultRoles.APPLICANT))
             {
                 var id = user.Claims
                     .First(x => x.Type == JwtClaimTypes.Subject)
                     .Value;
-                return new ApplicantAccessor(id);
+                return new ApplicantAccessor(Guid.Parse(id), _context);
             }
 
-            if (user.IsInRole(Roles.EDUCATIONAL_INSTITUTION_MANAGER) ||
-                user.IsInRole(Roles.EMPLOYER_MANAGER))
+            if (user.IsInRole(Config.DefaultRoles.EMPLOYER_MANAGER))
             {
-                return new ManagerAccessor();
+                var organizationId = user.Claims
+                    .First(x => x.Type == Config.JobObserverJwtClaimTypes.OrganizationId)
+                    .Value;
+                return new EmployerManagerAccessor(long.Parse(organizationId));
             }
 
-            var role = user.Claims.SingleOrDefault(x => x.Type == JwtClaimTypes.Role).Value;
+            if (user.IsInRole(Config.DefaultRoles.EDUCATIONAL_INSTITUTION_MANAGER))
+            {
+                return new EducationalInstitutionManagerAccessor();
+            }
+
+            var role = user.Claims.SingleOrDefault(x => x.Type == JwtClaimTypes.Role)?.Value ?? "роль не задана";
 
             throw new ArgumentException($"Не найден пользователь с указанной ролью: {role}");
         }

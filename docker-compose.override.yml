@@ -72,6 +72,7 @@ services:
       - ASPNETCORE_URLS=http://0.0.0.0:80
       - ConnectionString=Server=sql.data;Database=BRANDED_TEMPLATES;User Id=sa;Password=Pass@word
       - CorsPolicy=${CORS_POLICY}
+      - IdentityUrl=http://login.api
       - ElasticSearch=elk:9200
       - Seq=http://seq
     ports:
@@ -83,6 +84,7 @@ services:
       - ASPNETCORE_URLS=http://0.0.0.0:80
       - ConnectionString=Server=sql.data;Database=CAREER_DAYS;User Id=sa;Password=Pass@word
       - CorsPolicy=${CORS_POLICY}
+      - IdentityUrl=http://login.api
       - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
       - EventBusConnection=rabbitmq
       - EventBusUserName=${EVENT_BUS_USER_NAME}
@@ -98,6 +100,7 @@ services:
       - ASPNETCORE_URLS=http://0.0.0.0:80
       - ConnectionString=Server=sql.data;Database=EDUCATIONAL_INSTITUTIONS;User Id=sa;Password=Pass@word
       - CorsPolicy=${CORS_POLICY}
+      - IdentityUrl=http://login.api
       - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
       - EventBusConnection=rabbitmq
       - EventBusUserName=${EVENT_BUS_USER_NAME}
@@ -113,6 +116,7 @@ services:
       - ASPNETCORE_URLS=http://0.0.0.0:80
       - ConnectionString=Server=sql.data;Database=EMPLOYERS;User Id=sa;Password=Pass@word
       - CorsPolicy=${CORS_POLICY}
+      - IdentityUrl=http://login.api
       - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
       - EventBusConnection=rabbitmq
       - EventBusUserName=${EVENT_BUS_USER_NAME}
@@ -143,6 +147,7 @@ services:
       - ASPNETCORE_URLS=http://0.0.0.0:80
       - ConnectionString=Server=sql.data;Database=PAID_SERVICES;User Id=sa;Password=Pass@word
       - CorsPolicy=${CORS_POLICY}
+      - IdentityUrl=http://login.api
       - ElasticSearch=elk:9200
       - Seq=http://seq
     ports:
@@ -154,6 +159,7 @@ services:
       - ASPNETCORE_URLS=http://0.0.0.0:80
       - ConnectionString=Server=sql.data;Database=RESUMES;User Id=sa;Password=Pass@word
       - CorsPolicy=${CORS_POLICY}
+      - IdentityUrl=http://login.api
       - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
       - EventBusConnection=rabbitmq
       - EventBusUserName=${EVENT_BUS_USER_NAME}
@@ -169,6 +175,7 @@ services:
       - ASPNETCORE_URLS=http://0.0.0.0:80
       - ConnectionString=Server=sql.data;Database=VACANCIES;User Id=sa;Password=Pass@word
       - CorsPolicy=${CORS_POLICY}
+      - IdentityUrl=http://login.api
       - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
       - EventBusConnection=rabbitmq
       - EventBusUserName=${EVENT_BUS_USER_NAME}
@@ -184,6 +191,7 @@ services:
       - ASPNETCORE_URLS=http://0.0.0.0:80
       - ConnectionString=Server=sql.data;Database=DICTIONARIES;User Id=sa;Password=Pass@word
       - CorsPolicy=${CORS_POLICY}
+      - IdentityUrl=http://login.api
       - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
       - EventBusConnection=rabbitmq
       - EventBusUserName=${EVENT_BUS_USER_NAME}
@@ -200,6 +208,7 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
       - CorsPolicy=${CORS_POLICY}
+      - IdentityUrl=http://login.api
       - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
       - EventBusConnection=rabbitmq
       - EventBusUserName=${EVENT_BUS_USER_NAME}
@@ -230,6 +239,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development   
       - CorsPolicy=${CORS_POLICY}
+      - IdentityUrl=http://login.api
       - ElasticSearch=elk:9200
       - Seq=http://seq
     ports:

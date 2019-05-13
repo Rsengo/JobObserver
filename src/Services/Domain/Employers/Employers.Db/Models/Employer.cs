@@ -35,7 +35,7 @@ namespace Employers.Db.Models
         /// <summary>
         ///     Id Брендированного описания
         /// </summary>
-        public virtual long? BrandedDescriptionId { get; set; }
+        public virtual BrandedTemplate BrandedDescription { get; set; }
 
         /// <summary>
         ///     Логотип

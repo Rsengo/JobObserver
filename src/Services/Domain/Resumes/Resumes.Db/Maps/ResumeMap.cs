@@ -41,12 +41,6 @@ namespace Resumes.Db.Maps
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder
-                .HasOne(x => x.Salary)
-                .WithOne()
-                .HasForeignKey<Resume>(x => x.SalaryId)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            builder
                 .HasOne(x => x.TravelTime)
                 .WithMany()
                 .HasForeignKey(x => x.TravelTimeId)

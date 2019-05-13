@@ -31,6 +31,12 @@ namespace EducationalInstitutions.Db.Maps
                 .HasForeignKey(x => x.FacultyId)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            builder
+                .HasOne(x => x.BrandedDescription)
+                .WithOne()
+                .HasForeignKey<Faculty>(x => x.BrandedDescriptionId)
+                .OnDelete(DeleteBehavior.Cascade);
+
             builder.ToTable(TableNames.FACULTIES);
         }
     }

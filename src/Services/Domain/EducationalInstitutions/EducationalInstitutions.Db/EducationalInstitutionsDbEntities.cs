@@ -31,5 +31,7 @@ namespace EducationalInstitutions.Db
         public DbSet<Faculty> Faculties { get; set; }
 
         public DbSet<Partners> Partners { get; set; }
+
+        public DbSet<BrandedTemplate> BrandedTemplates { get; set; }
     }
 }

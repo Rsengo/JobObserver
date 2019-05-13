@@ -20,7 +20,11 @@ namespace Employers.Db.Dto.Profiles
                 .ForMember(
                     d => d.Area,
                     o => o.MapFrom(
-                        s => Mapper.Map<DtoEmployerType>(s.Area)));
+                        s => Mapper.Map<DtoEmployerType>(s.Area)))
+                .ForMember(
+                    d => d.BrandedDescription,
+                    o => o.MapFrom(
+                        s => Mapper.Map<DtoBrandedTemplate>(s.BrandedDescription)));
         }
 
         public override void Dto2Entity()
@@ -40,6 +44,9 @@ namespace Employers.Db.Dto.Profiles
                     o => o.Ignore())
                 .ForMember(
                     d => d.Area,
+                    o => o.Ignore())
+                .ForMember(
+                    d => d.BrandedDescription,
                     o => o.Ignore());
         }
     }

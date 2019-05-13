@@ -100,3 +100,17 @@ D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2
 D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.cshtml.g.cs
 D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Razor\Views\Account\Logout.cshtml.g.cs
 D:\Repos\JobObserver\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Razor\Views\Account\Register.cshtml.g.cs
+C:\JobObserver2\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\Login.API.Views.dll
+C:\JobObserver2\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\Login.API.Views.pdb
+C:\JobObserver2\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.TagHelpers.input.cache
+C:\JobObserver2\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.TagHelpers.output.cache
+C:\JobObserver2\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.RazorCoreGenerate.cache
+C:\JobObserver2\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.g.cshtml.cs
+C:\JobObserver2\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Razor\Views\Account\Logout.g.cshtml.cs
+C:\JobObserver2\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Razor\Views\Account\Register.g.cshtml.cs
+C:\JobObserver2\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.g.cshtml.cs
+C:\JobObserver2\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\JobObserver2\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.cs
+C:\JobObserver2\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
+C:\JobObserver2\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.RazorTargetAssemblyInfo.cs
+C:\JobObserver2\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.Views.pdb

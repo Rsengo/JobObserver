@@ -17,5 +17,7 @@ namespace Employers.Db.Constants
         public const string EMPLOYER_TYPES = "EMPLOYER_TYPES";
 
         public const string PARTNERS = "PARTNERS";
+
+        public const string BRANDED_TEMPLATES = "BRANDED_TEMPLATES";
     }
 }

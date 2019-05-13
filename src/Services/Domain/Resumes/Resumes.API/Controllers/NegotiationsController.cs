@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using BuildingBlocks.Security.Access;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Resumes.Db;
@@ -16,9 +17,14 @@ namespace Resumes.API.Controllers
     {
         private readonly ResumesDbContext _context;
 
-        public NegotiationsController(ResumesDbContext context)
+        private readonly IAccessorFactory _accessorFactory;
+
+        public NegotiationsController(
+            ResumesDbContext context,
+            IAccessorFactory accessorFactory)
         {
             _context = context;
+            _accessorFactory = accessorFactory;
         }
 
         [HttpGet("{id}")]

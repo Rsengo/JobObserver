@@ -20,6 +20,10 @@ namespace EducationalInstitutions.Db.Dto.Profiles
                     o => o.MapFrom(
                         s => Mapper.Map<DtoArea>(s.Area)))
                 .ForMember(
+                    d => d.BrandedDescription,
+                    o => o.MapFrom(
+                        s => Mapper.Map<DtoBrandedTemplate>(s.BrandedDescription)))
+                .ForMember(
                     d => d.Faculties,
                     o => o.Ignore());
         }
@@ -35,6 +39,9 @@ namespace EducationalInstitutions.Db.Dto.Profiles
                     o => o.Ignore())
                 .ForMember(
                     d => d.Synonyms,
+                    o => o.Ignore())
+                .ForMember(
+                    d => d.BrandedDescription,
                     o => o.Ignore());
         }
     }

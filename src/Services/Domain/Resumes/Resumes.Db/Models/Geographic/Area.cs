@@ -32,10 +32,5 @@ namespace Resumes.Db.Models.Geographic
         ///     Метро
         /// </summary>
         public virtual Metro.Metro Metro { get; set; }
-
-        /// <summary>
-        ///     Id метро
-        /// </summary>
-        public virtual long? MetroId { get; set; }
     }
 }

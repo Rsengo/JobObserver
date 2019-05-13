@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using BuildingBlocks.EventBus.Abstractions;
 using Login.API.Configuration;
+using Login.API.HttpFilters;
 using Login.API.Services;
 using Login.API.ViewModels;
 using Login.Db.Dto.Models;
@@ -52,9 +53,6 @@ namespace Login.API.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> RegisterApplicant(RegistrationViewModel model)
         {
-            if (!ModelState.IsValid)
-                return BadRequest("Неверный формат данных");
-
             var user = await _registrationService.RegisterAsync(model, IdentityConfig.DefaultRoles.APPLICANT);
 
             if (ModelState.ErrorCount <= 0)
@@ -67,12 +65,17 @@ namespace Login.API.Controllers
 
                 var url = _cryptoService.Decrypt(model.ReturnUrl);
                 
-                return Ok();
+                return Ok(url);
             }
 
-            var errors = ModelState.Values
-                .SelectMany(x => x.Errors)
-                .Select(x => x.ErrorMessage);
+            var errorsJson = new JsonErrorResponse
+            {
+                Messages = ModelState.Values
+                    .SelectMany(x => x.Errors)
+                    .Select(x => x.ErrorMessage)
+                    .ToArray()
+            };
+            var errors = new BadRequestObjectResult(errorsJson);
 
             return BadRequest(errors);
         }
@@ -81,17 +84,23 @@ namespace Login.API.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> RegisterEmployerManager(RegistrationViewModel model)
         {
-            if (!ModelState.IsValid)
-                return BadRequest("Неверный формат данных");
-
             await _registrationService.RegisterAsync(model, IdentityConfig.DefaultRoles.EMPLOYER_MANAGER);
 
             if (ModelState.ErrorCount <= 0)
-                return Ok();
+            {
+                var url = _cryptoService.Decrypt(model.ReturnUrl);
 
-            var errors = ModelState.Values
-                .SelectMany(x => x.Errors)
-                .Select(x => x.ErrorMessage);
+                return Ok(url);
+            }
+
+            var errorsJson = new JsonErrorResponse
+            {
+                Messages = ModelState.Values
+                    .SelectMany(x => x.Errors)
+                    .Select(x => x.ErrorMessage)
+                    .ToArray()
+            };
+            var errors = new BadRequestObjectResult(errorsJson);
 
             return BadRequest(errors);
         }
@@ -100,17 +109,23 @@ namespace Login.API.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> RegisterEducationalInstitutionManager(RegistrationViewModel model)
         {
-            if (!ModelState.IsValid)
-                return BadRequest("Неверный формат данных");
-
             await _registrationService.RegisterAsync(model, IdentityConfig.DefaultRoles.EDUCATIONAL_INSTITUTION_MANAGER);
 
             if (ModelState.ErrorCount <= 0)
-                return Ok();
+            {
+                var url = _cryptoService.Decrypt(model.ReturnUrl);
 
-            var errors = ModelState.Values
-                .SelectMany(x => x.Errors)
-                .Select(x => x.ErrorMessage);
+                return Ok(url);
+            }
+
+            var errorsJson = new JsonErrorResponse
+            {
+                Messages = ModelState.Values
+                    .SelectMany(x => x.Errors)
+                    .Select(x => x.ErrorMessage)
+                    .ToArray()
+            };
+            var errors = new BadRequestObjectResult(errorsJson);
 
             return BadRequest(errors);
         }

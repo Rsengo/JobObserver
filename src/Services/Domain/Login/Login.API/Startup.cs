@@ -23,6 +23,7 @@ using Login.Db.Models;
 using Login.Db.Dto;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Cryptography;
+using Login.API.HttpFilters;
 
 namespace Login.API
 {
@@ -160,7 +161,11 @@ namespace Login.API
             services.Configure<RedirectSettings>(Configuration);
             services.AddOptions();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc(opt =>
+            {
+                opt.Filters.Add<HttpGlobalExceptionFilter>();
+                opt.Filters.Add<ValidateModelStateFilter>();
+            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

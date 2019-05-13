@@ -16,10 +16,7 @@ namespace CareerDays.Db.Models
         /// </summary>
         public virtual string Description { get; set; }
 
-        /// <summary>
-        ///     Id Брендированного шаблона
-        /// </summary>
-        public virtual long? BrandedDescriptionId { get; set; }
+        public virtual BrandedTemplate BrandedDescription { get; set; }
 
         /// <summary>
         ///     Дата начала

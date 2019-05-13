@@ -98,11 +98,6 @@ namespace Resumes.Db.Models
         public virtual Salary Salary { get; set; }
 
         /// <summary>
-        ///     Id желаемой заработной платы
-        /// </summary>
-        public virtual long? SalaryId { get; set; }
-
-        /// <summary>
         ///     Тип занятости
         /// </summary>
         public virtual ICollection<ResumeEmployment> Employments { get; set; }

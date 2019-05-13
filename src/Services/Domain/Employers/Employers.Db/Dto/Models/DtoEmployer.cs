@@ -32,8 +32,8 @@ namespace Employers.Db.Dto.Models
         /// <summary>
         ///     Id Брендированного описания
         /// </summary>
-        [JsonProperty("branded_description_id")]
-        public virtual long? BrandedDescriptionId { get; set; }
+        [JsonProperty("branded_description")]
+        public virtual DtoBrandedTemplate BrandedDescription { get; set; }
 
         /// <summary>
         ///     Логотип

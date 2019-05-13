@@ -16,7 +16,11 @@ namespace EducationalInstitutions.Db.Dto.Profiles
                 .ForMember(
                     d => d.EducationalInstitution,
                     o => o.MapFrom(
-                        s => Mapper.Map<DtoEducationalInstitution>(s.EducationalInstitution)));
+                        s => Mapper.Map<DtoEducationalInstitution>(s.EducationalInstitution)))
+                .ForMember(
+                    d => d.BrandedDescription,
+                    o => o.MapFrom(
+                        s => Mapper.Map<DtoBrandedTemplate>(s.BrandedDescription)));
         }
 
         public override void Dto2Entity()
@@ -24,6 +28,9 @@ namespace EducationalInstitutions.Db.Dto.Profiles
             CreateMap<DtoFaculty, Faculty>()
                 .ForMember(
                     d => d.EducationalInstitution,
+                    o => o.Ignore())
+                .ForMember(
+                    d => d.BrandedDescription,
                     o => o.Ignore());
         }
     }
