@@ -13,7 +13,8 @@ namespace CareerDays.Db.Dto.Profiles
 
         public override void Dto2Entity()
         {
-            CreateMap<DtoBrandedTemplate, BrandedTemplate>();
+            CreateMap<DtoBrandedTemplate, BrandedTemplate>()
+                .ForMember(d => d.CareerDay, o => o.Ignore());
         }
     }
 }

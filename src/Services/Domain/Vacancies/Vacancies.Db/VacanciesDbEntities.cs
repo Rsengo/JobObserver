@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Vacancies.Db.Models;
+using Vacancies.Db.Models.BrandedTemplates;
 using Vacancies.Db.Models.Driving;
 using Vacancies.Db.Models.Employers;
 using Vacancies.Db.Models.Employments;
@@ -83,5 +84,7 @@ namespace Vacancies.Db
         public DbSet<VacancySpecialization> VacancySpecializations { get; set; }
 
         public DbSet<Specialization> Specializations { get; set; }
+
+        public DbSet<BrandedTemplate> BrandedTemplates { get; set; }
     }
 }

@@ -10,7 +10,7 @@ using Vacancies.Db;
 namespace Vacancies.Db.Migrations
 {
     [DbContext(typeof(VacanciesDbContext))]
-    [Migration("20190413180849_Init")]
+    [Migration("20190514053912_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,6 +44,28 @@ namespace Vacancies.Db.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("AutoHistory");
+                });
+
+            modelBuilder.Entity("Vacancies.Db.Models.BrandedTemplates.BrandedTemplate", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .IsRequired();
+
+                    b.Property<string>("Text")
+                        .IsRequired();
+
+                    b.Property<long>("VacancyId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("VacancyId")
+                        .IsUnique();
+
+                    b.ToTable("BRANDED_TEMPLATES");
                 });
 
             modelBuilder.Entity("Vacancies.Db.Models.Driving.DrivingLicenseType", b =>
@@ -551,8 +573,6 @@ namespace Vacancies.Db.Migrations
 
                     b.Property<bool>("AllowMessages");
 
-                    b.Property<long?>("BrandedDescriptionId");
-
                     b.Property<long?>("DepartmentId");
 
                     b.Property<string>("Description")
@@ -604,6 +624,14 @@ namespace Vacancies.Db.Migrations
                     b.HasIndex("VacancyStatusId");
 
                     b.ToTable("VACANCIES");
+                });
+
+            modelBuilder.Entity("Vacancies.Db.Models.BrandedTemplates.BrandedTemplate", b =>
+                {
+                    b.HasOne("Vacancies.Db.Models.Vacancy", "Vacancy")
+                        .WithOne("BrandedDescription")
+                        .HasForeignKey("Vacancies.Db.Models.BrandedTemplates.BrandedTemplate", "VacancyId")
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("Vacancies.Db.Models.Driving.VacancyDrivingLicenseType", b =>

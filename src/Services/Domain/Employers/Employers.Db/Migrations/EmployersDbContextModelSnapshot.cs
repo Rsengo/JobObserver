@@ -19,6 +19,28 @@ namespace Employers.Db.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("Employers.Db.Models.BrandedTemplate", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<long>("EmployerId");
+
+                    b.Property<string>("Name")
+                        .IsRequired();
+
+                    b.Property<string>("Text")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EmployerId")
+                        .IsUnique();
+
+                    b.ToTable("BRANDED_TEMPLATES");
+                });
+
             modelBuilder.Entity("Employers.Db.Models.Department", b =>
                 {
                     b.Property<long>("Id")
@@ -53,8 +75,6 @@ namespace Employers.Db.Migrations
 
                     b.Property<long?>("AreaId")
                         .IsRequired();
-
-                    b.Property<long?>("BrandedDescriptionId");
 
                     b.Property<string>("Description");
 
@@ -173,6 +193,14 @@ namespace Employers.Db.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("AutoHistory");
+                });
+
+            modelBuilder.Entity("Employers.Db.Models.BrandedTemplate", b =>
+                {
+                    b.HasOne("Employers.Db.Models.Employer", "Employer")
+                        .WithOne("BrandedDescription")
+                        .HasForeignKey("Employers.Db.Models.BrandedTemplate", "EmployerId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Employers.Db.Models.Department", b =>

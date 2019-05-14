@@ -359,7 +359,6 @@ namespace Vacancies.Db.Migrations
                     Id = table.Column<long>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Description = table.Column<string>(nullable: false),
-                    BrandedDescriptionId = table.Column<long>(nullable: true),
                     ScheduleId = table.Column<long>(nullable: true),
                     AcceptHandicapped = table.Column<bool>(nullable: false),
                     AddressId = table.Column<long>(nullable: true),
@@ -422,6 +421,27 @@ namespace Vacancies.Db.Migrations
                         name: "FK_VACANCIES_VACANCY_STATUSES_VacancyStatusId",
                         column: x => x.VacancyStatusId,
                         principalTable: "VACANCY_STATUSES",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "BRANDED_TEMPLATES",
+                columns: table => new
+                {
+                    Id = table.Column<long>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(nullable: false),
+                    Text = table.Column<string>(nullable: false),
+                    VacancyId = table.Column<long>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BRANDED_TEMPLATES", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_BRANDED_TEMPLATES_VACANCIES_VacancyId",
+                        column: x => x.VacancyId,
+                        principalTable: "VACANCIES",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -631,6 +651,12 @@ namespace Vacancies.Db.Migrations
                 column: "ParentId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_BRANDED_TEMPLATES_VacancyId",
+                table: "BRANDED_TEMPLATES",
+                column: "VacancyId",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_DEPARTMENTS_OrganizationId",
                 table: "DEPARTMENTS",
                 column: "OrganizationId");
@@ -777,6 +803,9 @@ namespace Vacancies.Db.Migrations
         {
             migrationBuilder.DropTable(
                 name: "AutoHistory");
+
+            migrationBuilder.DropTable(
+                name: "BRANDED_TEMPLATES");
 
             migrationBuilder.DropTable(
                 name: "LANGUAGE_SKILLS");

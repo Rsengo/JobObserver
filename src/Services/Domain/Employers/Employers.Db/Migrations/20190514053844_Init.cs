@@ -69,7 +69,6 @@ namespace Employers.Db.Migrations
                     AreaId = table.Column<long>(nullable: false),
                     Acronym = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true),
-                    BrandedDescriptionId = table.Column<long>(nullable: true),
                     LogoUrl = table.Column<string>(nullable: true),
                     SiteUrl = table.Column<string>(nullable: true),
                     TypeId = table.Column<long>(nullable: false)
@@ -90,6 +89,27 @@ namespace Employers.Db.Migrations
                         principalTable: "EMPLOYER_TYPES",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "BRANDED_TEMPLATES",
+                columns: table => new
+                {
+                    Id = table.Column<long>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(nullable: false),
+                    Text = table.Column<string>(nullable: false),
+                    EmployerId = table.Column<long>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BRANDED_TEMPLATES", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_BRANDED_TEMPLATES_EMPLOYERS_EmployerId",
+                        column: x => x.EmployerId,
+                        principalTable: "EMPLOYERS",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -167,6 +187,12 @@ namespace Employers.Db.Migrations
                 column: "ParentId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_BRANDED_TEMPLATES_EmployerId",
+                table: "BRANDED_TEMPLATES",
+                column: "EmployerId",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_DEPARTMENTS_OrganizationId",
                 table: "DEPARTMENTS",
                 column: "OrganizationId");
@@ -201,6 +227,9 @@ namespace Employers.Db.Migrations
         {
             migrationBuilder.DropTable(
                 name: "AutoHistory");
+
+            migrationBuilder.DropTable(
+                name: "BRANDED_TEMPLATES");
 
             migrationBuilder.DropTable(
                 name: "DEPARTMENTS");

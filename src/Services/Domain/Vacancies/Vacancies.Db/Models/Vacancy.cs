@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using BuildingBlocks.EntityFramework.Models;
+using Vacancies.Db.Models.BrandedTemplates;
 using Vacancies.Db.Models.Driving;
 using Vacancies.Db.Models.Employers;
 using Vacancies.Db.Models.Employments;
@@ -27,7 +28,7 @@ namespace Vacancies.Db.Models
         /// <summary>
         ///     Id Брендированного описания
         /// </summary>
-        public virtual long? BrandedDescriptionId { get; set; }
+        public virtual BrandedTemplate BrandedDescription { get; set; }
 
         /// <summary>
         ///     Навыки

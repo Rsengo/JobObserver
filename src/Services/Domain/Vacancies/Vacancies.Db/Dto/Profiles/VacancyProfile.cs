@@ -14,6 +14,7 @@ using Vacancies.Db.Dto.Models.Schedules;
 using Vacancies.Db.Dto.Models.Skills;
 using Vacancies.Db.Dto.Models.Statuses;
 using Vacancies.Db.Dto.Models.Tests;
+using Vacancies.Db.Dto.Models.BrandedTemplates;
 
 namespace Vacancies.Db.Dto.Profiles
 {
@@ -54,6 +55,10 @@ namespace Vacancies.Db.Dto.Profiles
                     d => d.Industry,
                     o => o.MapFrom(
                         s => Mapper.Map<DtoIndustry>(s.Industry)))
+                 .ForMember(
+                    d => d.BrandedDescription,
+                    o => o.MapFrom(
+                        s => Mapper.Map<DtoBrandedTemplate>(s.BrandedDescription)))
 
                 .ForMember(
                     d => d.DrivingLicenseTypes, 
@@ -100,6 +105,9 @@ namespace Vacancies.Db.Dto.Profiles
                     o => o.Ignore())
                 .ForMember(
                     d => d.VacancyStatus,
+                    o => o.Ignore())
+                .ForMember(
+                    d => d.BrandedDescription,
                     o => o.Ignore())
 
                 .ForMember(

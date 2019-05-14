@@ -6,6 +6,8 @@ namespace Vacancies.Db.Constants
 {
     internal static class TableNames
     {
+        public const string BRANDED_TEMPLATES = "BRANDED_TEMPLATES";
+
         public const string VACANCIES = "VACANCIES";
 
         public const string DRIVING_LICENSE_TYPES = "DRIVING_LICENSE_TYPES";
