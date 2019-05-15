@@ -12,7 +12,7 @@ using Resumes.Db.Models.ResumeAreas;
 
 namespace Resumes.API.Security
 {
-    public class EmployerManagerAccessor : IAccessor
+    public class EmployerManagerAccessor : IAccessor<RelationalEntity>
     {
         private readonly long _companyId;
 
@@ -21,8 +21,7 @@ namespace Resumes.API.Security
             _companyId = companyId;
         }
 
-        public bool HasPermission<TEntity>(TEntity entity, AccessOperation operation)
-            where TEntity : RelationalEntity
+        public Task<bool> HasPermissionAsync<TEntity>(TEntity entity, AccessOperation operation) where TEntity : RelationalEntity
         {
             if (entity is ResumeNegotiation casted)
             {
@@ -31,6 +30,16 @@ namespace Resumes.API.Security
             }
 
             return AccessOperation.READ == operation;
+        }
+
+        public Task<bool> HasPermissionAsync<TEntity>(IEnumerable<TEntity> entity, AccessOperation operation) where TEntity : RelationalEntity
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> HasPermissionAsync<TEntity>(IQueryable<TEntity> entity, AccessOperation operation) where TEntity : RelationalEntity
+        {
+            throw new NotImplementedException();
         }
     }
 }

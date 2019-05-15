@@ -7,12 +7,24 @@ using System.Threading.Tasks;
 
 namespace Resumes.API.Security
 {
-    public class AdminAccessor : IAccessor
+    public class AdminAccessor : IAccessor<RelationalEntity>
     {
-        public bool HasPermission<TEntity>(TEntity entity, AccessOperation operation) 
+        public Task<bool> HasPermissionAsync<TEntity>(TEntity entity, AccessOperation operation) 
             where TEntity : RelationalEntity
         {
-            return true;
+            return Task.FromResult(true);
+        }
+
+        public Task<bool> HasPermissionAsync<TEntity>(IEnumerable<TEntity> entity, AccessOperation operation) 
+            where TEntity : RelationalEntity
+        {
+            return Task.FromResult(true);
+        }
+
+        public Task<bool> HasPermissionAsync<TEntity>(IQueryable<TEntity> entity, AccessOperation operation) 
+            where TEntity : RelationalEntity
+        {
+            return Task.FromResult(true);
         }
     }
 }

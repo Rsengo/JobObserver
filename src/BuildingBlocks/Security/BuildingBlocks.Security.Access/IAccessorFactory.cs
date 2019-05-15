@@ -5,8 +5,9 @@ using System.Text;
 
 namespace BuildingBlocks.Security.Access
 {
-    public interface IAccessorFactory
+    public interface IAccessorFactory<TBaseEntity> 
+        where TBaseEntity: class
     {
-        IAccessor Create(ClaimsPrincipal user);
+        IAccessor<TBaseEntity> Create(ClaimsPrincipal user);
     }
 }

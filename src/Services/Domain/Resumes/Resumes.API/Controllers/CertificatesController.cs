@@ -33,6 +33,10 @@ namespace Resumes.API.Controllers
             var result = await _context.Certificates
                 .SingleOrDefaultAsync(x => x.Id == id)
                 .ConfigureAwait(false);
+
+            var accessor = _accessorFactory.Create(HttpContext.User);
+            var allowed = accessor.HasPermission(result, AccessOperation.READ);
+
             var dto = Mapper.Map<DtoCertificate>(result);
 
             return Ok(dto);

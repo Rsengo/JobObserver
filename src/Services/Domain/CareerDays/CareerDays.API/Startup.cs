@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using BuildingBlocks.Extensions.AutoMapper;
 using BuildingBlocks.Extensions.EventBus.RabbitMQ;
 using CareerDays.API.HttpFilters;
-using CareerDays.API.Swagger;
 using CareerDays.Db;
 using CareerDays.Db.Dto;
 using CareerDays.Db.Synchronization.EventHandlers;
@@ -95,7 +94,6 @@ namespace CareerDays.API
                         Title = Configuration["SwaggerDocTitle"],
                         Version = Configuration["SwaggerDocVersion"]
                     });
-                c.SchemaFilter<SwaggerReadonlyFilter>();
             });
 
             services.AddCors(options =>
@@ -155,15 +153,15 @@ namespace CareerDays.API
                     Configuration["SwaggerEndpointName"]);
             });
 
-            //app.UseEventBusRabbitMQ(eventBus =>
-            //{
-            //    eventBus.Subscribe<LinesChanged, LinesChangedHandler>();
-            //    eventBus.Subscribe<MetroChanged, MetroChangedHandler>();
-            //    eventBus.Subscribe<StationsChanged, StationsChangedHandler>();
-            //    eventBus.Subscribe<AreasChanged, AreasChangedHandler>();
-            //    eventBus.Subscribe<EducationalInstitutionsChanged, EducationalInstitutionsChangedHandler>();
-            //    eventBus.Subscribe<EmployersChanged, EmployersChangedHandler>();
-            //});
+            app.UseEventBusRabbitMQ(eventBus =>
+            {
+                eventBus.Subscribe<LinesChanged, LinesChangedHandler>();
+                eventBus.Subscribe<MetroChanged, MetroChangedHandler>();
+                eventBus.Subscribe<StationsChanged, StationsChangedHandler>();
+                eventBus.Subscribe<AreasChanged, AreasChangedHandler>();
+                eventBus.Subscribe<EducationalInstitutionsChanged, EducationalInstitutionsChangedHandler>();
+                eventBus.Subscribe<EmployersChanged, EmployersChangedHandler>();
+            });
         }
     }
 }

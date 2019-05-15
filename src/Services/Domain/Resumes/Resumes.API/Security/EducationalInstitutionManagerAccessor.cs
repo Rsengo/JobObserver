@@ -8,12 +8,24 @@ using Resumes.Db.Models;
 
 namespace Resumes.API.Security
 {
-    public class EducationalInstitutionManagerAccessor : IAccessor
+    public class EducationalInstitutionManagerAccessor : IAccessor<RelationalEntity>
     {
-        public bool HasPermission<TEntity>(TEntity entity, AccessOperation operation)
+        public Task<bool> HasPermissionAsync<TEntity>(TEntity entity, AccessOperation operation) 
             where TEntity : RelationalEntity
         {
-            return AccessOperation.READ == operation;
+            return Task.FromResult(AccessOperation.READ == operation);
+        }
+
+        public Task<bool> HasPermissionAsync<TEntity>(IEnumerable<TEntity> entity, AccessOperation operation) 
+            where TEntity : RelationalEntity
+        {
+            return Task.FromResult(AccessOperation.READ == operation);
+        }
+
+        public Task<bool> HasPermissionAsync<TEntity>(IQueryable<TEntity> entity, AccessOperation operation) 
+            where TEntity : RelationalEntity
+        {
+            return Task.FromResult(AccessOperation.READ == operation);
         }
     }
 }

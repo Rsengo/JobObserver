@@ -9,10 +9,11 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic;
 using Resumes.Db;
+using BuildingBlocks.EntityFramework.Models;
 
 namespace Resumes.API.Security
 {
-    public class AccessorFactory : IAccessorFactory
+    public class AccessorFactory : IAccessorFactory<RelationalEntity>
     {
         private ILogger<AccessorFactory> _logger;
 
@@ -26,7 +27,7 @@ namespace Resumes.API.Security
             _context = context;
         }
 
-        public IAccessor Create(ClaimsPrincipal user)
+        public IAccessor<RelationalDictionary> Create(ClaimsPrincipal user)
         {
             if (user.IsInRole(Config.DefaultRoles.ADMIN))
                 return new AdminAccessor();

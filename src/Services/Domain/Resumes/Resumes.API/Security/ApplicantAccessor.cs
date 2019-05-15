@@ -26,7 +26,7 @@ namespace Resumes.API.Security
     using BuildingBlocks.EntityFramework.Models;
     using Resumes.Db.Models;
 
-    public class ApplicantAccessor : IAccessor
+    public class ApplicantAccessor : IAccessor<RelationalEntity>
     {
         private readonly Guid _applicantId;
 
@@ -143,6 +143,16 @@ namespace Resumes.API.Security
             }
 
             return operation == AccessOperation.READ;
+        }
+
+        public bool HasPermission<TEntity>(IEnumerable<TEntity> entity, AccessOperation operation) 
+            where TEntity : RelationalEntity
+        {
+            var declined = entity
+                .Select(x => HasPermission(x, operation))
+                .Any(x => x == false);
+
+            return !declined;
         }
 
         private bool GetOwnerPermission(long resumeId)
