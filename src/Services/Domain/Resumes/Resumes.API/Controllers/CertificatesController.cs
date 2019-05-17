@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using BuildingBlocks.Security.Access;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Resumes.Db;
 using Resumes.Db.Models.Certificates;
 using Resumes.Db.Dto.Models.Certificates;
+using BuildingBlocks.Security.Abstract;
+using BuildingBlocks.Security;
 
 namespace Resumes.API.Controllers
 {
@@ -17,25 +18,26 @@ namespace Resumes.API.Controllers
     {
         private readonly ResumesDbContext _context;
 
-        private readonly IAccessorFactory _accessorFactory;
+        private readonly ISecurityManager _securityManager;
 
         public CertificatesController(
             ResumesDbContext context,
-            IAccessorFactory accessorFactory)
+            ISecurityManager securityManager)
         {
             _context = context;
-            _accessorFactory = accessorFactory;
+            _securityManager = securityManager;
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(long id)
         {
             var result = await _context.Certificates
-                .SingleOrDefaultAsync(x => x.Id == id)
-                .ConfigureAwait(false);
+                .SingleOrDefaultAsync(x => x.Id == id);
 
-            var accessor = _accessorFactory.Create(HttpContext.User);
-            var allowed = accessor.HasPermission(result, AccessOperation.READ);
+            var allowed = await _securityManager.HasPermissionAsync(result, AccessOperation.READ);
+
+            if (!allowed)
+                return Forbid();
 
             var dto = Mapper.Map<DtoCertificate>(result);
 
@@ -45,10 +47,16 @@ namespace Resumes.API.Controllers
         [HttpGet("byResume/{id}")]
         public async Task<IActionResult> GetByResume(long id)
         {
-            var result = await _context.Certificates
-                .Where(x => x.ResumeId == id)
-                .ToListAsync()
-                .ConfigureAwait(false);
+            var query = _context.Certificates
+                .Where(x => x.ResumeId == id);
+
+            var allowed = await _securityManager.HasPermissionAsync(query, AccessOperation.READ);
+
+            if (!allowed)
+                return Forbid();
+
+            var result = await query.ToListAsync();
+
             var dto = Mapper.Map<DtoCertificate>(result);
 
             return Ok(dto);
@@ -58,6 +66,12 @@ namespace Resumes.API.Controllers
         public async Task<IActionResult> Post(DtoCertificate dto)
         {
             var entity = Mapper.Map<Certificate>(dto);
+
+            var allowed = await _securityManager.HasPermissionAsync(entity, AccessOperation.CREATE);
+
+            if (!allowed)
+                return Forbid();
+
             _context.Certificates.Add(entity);
 
             await _context
@@ -74,6 +88,11 @@ namespace Resumes.API.Controllers
 
             template.Id = id;
 
+            var allowed = await _securityManager.HasPermissionAsync(template, AccessOperation.UPDATE);
+
+            if (!allowed)
+                return Forbid();
+
             await _context.Certificates
                 .Where(x => x.Id == id)
                 .UpdateFromQueryAsync(_ => template)
@@ -85,8 +104,15 @@ namespace Resumes.API.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(long id)
         {
-            await _context.Certificates
-                .Where(x => x.Id == id)
+            var query = _context.Certificates
+                .Where(x => x.Id == id);
+
+            var allowed = await _securityManager.HasPermissionAsync(query, AccessOperation.UPDATE);
+
+            if (!allowed)
+                return Forbid();
+
+            await query
                 .DeleteFromQueryAsync()
                 .ConfigureAwait(false);
             await _context.SaveChangesAsync()

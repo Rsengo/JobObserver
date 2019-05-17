@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BuildingBlocks.Security.Access
+namespace BuildingBlocks.Security
 {
     public enum AccessOperation
     {

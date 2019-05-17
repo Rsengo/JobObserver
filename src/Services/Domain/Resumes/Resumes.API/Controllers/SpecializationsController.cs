@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using BuildingBlocks.Security.Access;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Resumes.Db;
 using Resumes.Db.Models.Specializations;
 using Resumes.Db.Dto.Models.Specializations;
+using BuildingBlocks.Security.Abstract;
 
 namespace Resumes.API.Controllers
 {
@@ -17,14 +17,14 @@ namespace Resumes.API.Controllers
     {
         private readonly ResumesDbContext _context;
 
-        private readonly IAccessorFactory _accessorFactory;
+        private readonly ISecurityManager _securityManager;
 
         public SpecializationsController(
             ResumesDbContext context,
-            IAccessorFactory accessorFactory)
+            ISecurityManager securityManager)
         {
             _context = context;
-            _accessorFactory = accessorFactory;
+            _securityManager = securityManager;
         }
 
         [HttpGet("specializations/{id}")]

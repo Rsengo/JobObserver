@@ -1,5 +1,7 @@
-﻿using BuildingBlocks.Security.Access;
+﻿using BuildingBlocks.EntityFramework.Models;
+using BuildingBlocks.Security.Abstract;
 using Microsoft.Extensions.Logging;
+using Resumes.API.Security.Accessors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,17 +12,45 @@ namespace Resumes.API.Security
 {
     public class AccessorFactoryMock : IAccessorFactory
     {
-        private ILogger<AccessorFactoryMock> _logger;
+        private readonly ILogger<AccessorFactoryMock> _logger;
 
-        public AccessorFactoryMock(ILogger<AccessorFactoryMock> logger)
+        private readonly IServiceProvider _serviceProvider;
+
+        public AccessorFactoryMock(
+            ILogger<AccessorFactoryMock> logger, 
+            IServiceProvider serviceProvider)
         {
             _logger = logger;
+            _serviceProvider = serviceProvider;
         }
 
-        public IAccessor Create(ClaimsPrincipal user)
+        public AbstractAccessor Create(ClaimsPrincipal user)
         {
             _logger.LogWarning("Использован мок прав доступа");
-            return new AdminAccessor();
+            var accessor = _serviceProvider.GetService(typeof(AdminAccessor)) as AbstractAccessor;
+
+            if (accessor == null)
+            {
+                throw new NullReferenceException("Не найден сервис авторизации для админа");
+            }
+
+            return accessor;
+        }
+
+        public bool TryCreate(ClaimsPrincipal user, out AbstractAccessor accessor)
+        {
+            try
+            {
+                accessor = Create(user);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogCritical(ex.Message);
+
+                accessor = null;
+                return false;
+            }
         }
     }
 }

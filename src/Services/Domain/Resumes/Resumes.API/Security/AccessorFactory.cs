@@ -1,4 +1,4 @@
-﻿using BuildingBlocks.Security.Access;
+﻿using BuildingBlocks.Security.Abstract;
 using IdentityModel;
 using Microsoft.Extensions.Logging;
 using Resumes.API.Configuration;
@@ -10,34 +10,51 @@ using System.Threading.Tasks;
 using Microsoft.VisualBasic;
 using Resumes.Db;
 using BuildingBlocks.EntityFramework.Models;
+using Resumes.API.Security.Accessors;
 
 namespace Resumes.API.Security
 {
-    public class AccessorFactory : IAccessorFactory<RelationalEntity>
-    {
-        private ILogger<AccessorFactory> _logger;
+    public class AccessorFactory : IAccessorFactory
+    { 
+        private readonly ILogger<AccessorFactory> _logger;
 
-        private ResumesDbContext _context;
+        private readonly IServiceProvider _serviceProvider;
 
         public AccessorFactory(
-            ResumesDbContext context,
-            ILogger<AccessorFactory> logger)
+            ILogger<AccessorFactory> logger,
+            IServiceProvider serviceProvider)
         {
             _logger = logger;
-            _context = context;
+            _serviceProvider = serviceProvider;
         }
 
-        public IAccessor<RelationalDictionary> Create(ClaimsPrincipal user)
+        public AbstractAccessor Create(ClaimsPrincipal user)
         {
             if (user.IsInRole(Config.DefaultRoles.ADMIN))
-                return new AdminAccessor();
+            {
+                var accessor = _serviceProvider.GetService(typeof(AdminAccessor)) as AbstractAccessor;
+
+                if (accessor == null)
+                {
+                    throw new NullReferenceException("Не найден сервис авторизации для админа");
+                }
+
+                return accessor;
+            }
 
             if (user.IsInRole(Config.DefaultRoles.APPLICANT))
             {
                 var id = user.Claims
                     .First(x => x.Type == JwtClaimTypes.Subject)
                     .Value;
-                return new ApplicantAccessor(Guid.Parse(id), _context);
+                var accessor = _serviceProvider.GetService(typeof(ApplicantAccessor)) as AbstractAccessor;
+
+                if (accessor == null)
+                {
+                    throw new NullReferenceException("Не найден сервис авторизации для соискателя");
+                }
+
+                return accessor;
             }
 
             if (user.IsInRole(Config.DefaultRoles.EMPLOYER_MANAGER))
@@ -45,12 +62,26 @@ namespace Resumes.API.Security
                 var organizationId = user.Claims
                     .First(x => x.Type == Config.JobObserverJwtClaimTypes.OrganizationId)
                     .Value;
-                return new EmployerManagerAccessor(long.Parse(organizationId));
+                var accessor = _serviceProvider.GetService(typeof(EmployerManagerAccessor)) as AbstractAccessor;
+
+                if (accessor == null)
+                {
+                    throw new NullReferenceException("Не найден сервис авторизации для менеджера компании");
+                }
+
+                return accessor;
             }
 
             if (user.IsInRole(Config.DefaultRoles.EDUCATIONAL_INSTITUTION_MANAGER))
             {
-                return new EducationalInstitutionManagerAccessor();
+                var accessor = _serviceProvider.GetService(typeof(EducationalInstitutionManagerAccessor)) as AbstractAccessor;
+
+                if (accessor == null)
+                {
+                    throw new NullReferenceException("Не найден сервис авторизации для менеджера учебного заведения");
+                }
+
+                return accessor;
             }
 
             var role = user.Claims.SingleOrDefault(x => x.Type == JwtClaimTypes.Role)?.Value ?? "роль не задана";
@@ -58,7 +89,7 @@ namespace Resumes.API.Security
             throw new ArgumentException($"Не найден пользователь с указанной ролью: {role}");
         }
 
-        public bool TryCreate(ClaimsPrincipal user, out IAccessor accessor)
+        public bool TryCreate(ClaimsPrincipal user, out AbstractAccessor accessor)
         {
             try
             {

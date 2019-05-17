@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using BuildingBlocks.Extensions.AutoMapper;
 using BuildingBlocks.Extensions.EventBus.RabbitMQ;
-using BuildingBlocks.Security.Access;
+using BuildingBlocks.Extensions.Security;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -147,13 +147,13 @@ namespace Resumes.API
                         .AllowCredentials());
             });
 
-            services.AddTransient<IAccessorFactory, AccessorFactoryMock>();
-
             services.AddMvc(opt =>
             {
                 opt.Filters.Add<HttpGlobalExceptionFilter>();
                 opt.Filters.Add<ValidateModelStateFilter>();
             }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddHttpContextAccessor();
 
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
             services.AddAuthentication(options =>
