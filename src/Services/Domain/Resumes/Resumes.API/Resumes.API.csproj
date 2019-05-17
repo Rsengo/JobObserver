@@ -28,6 +28,7 @@
     <ProjectReference Include="..\..\..\..\BuildingBlocks\AutoMapper\BuildingBlocks.Extensions.AutoMapper\BuildingBlocks.Extensions.AutoMapper.csproj" />
     <ProjectReference Include="..\..\..\..\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Extensions.EntityFramework\BuildingBlocks.Extensions.EntityFramework.csproj" />
     <ProjectReference Include="..\..\..\..\BuildingBlocks\EventBus\BuildingBlocks.Extensions.EventBus.RabbitMQ\BuildingBlocks.Extensions.EventBus.RabbitMQ.csproj" />
+    <ProjectReference Include="..\..\..\..\BuildingBlocks\Security\BuildingBlocks.Extensions.Security\BuildingBlocks.Extensions.Security.csproj" />
     <ProjectReference Include="..\..\..\..\BuildingBlocks\Security\BuildingBlocks.Security\BuildingBlocks.Security.csproj" />
     <ProjectReference Include="..\Resumes.Db\Resumes.Db.csproj" />
   </ItemGroup>

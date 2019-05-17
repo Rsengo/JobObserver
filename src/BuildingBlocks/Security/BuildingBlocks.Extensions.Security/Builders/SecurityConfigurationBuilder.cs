@@ -1,38 +1,37 @@
-﻿using BuildingBlocks.Security.Abstract;
+﻿using BuildingBlocks.Security;
+using BuildingBlocks.Security.Abstract;
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Text;
 
 namespace BuildingBlocks.Extensions.Security.Builders
 {
     public class SecurityConfigurationBuilder
     {
-        internal Type EventFactory { get; private set; }
+        private readonly IDictionary<Type, Type> _eventHandlersDictionary;
 
-        internal Type AccessorFactory { get; private set; }
-
-        internal IDictionary<Type, Func<IServiceProvider, Func<SecurityAccessorBuilder, AbstractAccessor>>> AccessorBuilders { get; }
-
-        public SecurityConfigurationBuilder UseAccessorFactory<TAccessorFactory>()
-            where TAccessorFactory : IAccessorFactory
+        public SecurityConfigurationBuilder()
         {
-            AccessorFactory = typeof(TAccessorFactory);
+            _eventHandlersDictionary = new Dictionary<Type, Type>();
+        }
+
+        public SecurityConfigurationBuilder RegisterHandler<TEvent, THandler, TEntity>()
+            where TEvent : AccessEvent<TEntity>
+            where THandler : IAccessHandler<TEvent, TEntity>
+            where TEntity : class
+        {
+            var eventType = typeof(TEvent);
+            var handlerType = typeof(THandler);
+
+            _eventHandlersDictionary.Add(eventType, handlerType);
+
             return this;
         }
 
-        public SecurityConfigurationBuilder UseAccessEventFactory<TAccessEventFactory>()
-            where TAccessEventFactory : IAccessEventFactory
+        public IImmutableDictionary<Type, Type> Build()
         {
-            EventFactory = typeof(TAccessEventFactory);
-            return this;
-        }
-
-        public SecurityConfigurationBuilder AddAccessor<TAccessor>(
-            Func<IServiceProvider, Func<SecurityAccessorBuilder, AbstractAccessor>> builder)
-            where TAccessor : AbstractAccessor
-        {
-            AccessorBuilders.Add(typeof(TAccessor), builder);
-            return this;
+            return _eventHandlersDictionary.ToImmutableDictionary();
         }
     }
 }

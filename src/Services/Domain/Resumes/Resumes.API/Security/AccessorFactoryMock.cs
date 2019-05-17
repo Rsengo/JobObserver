@@ -27,7 +27,7 @@ namespace Resumes.API.Security
         public AbstractAccessor Create(ClaimsPrincipal user)
         {
             _logger.LogWarning("Использован мок прав доступа");
-            var accessor = _serviceProvider.GetService(typeof(AdminAccessor)) as AbstractAccessor;
+            var accessor = _serviceProvider.GetService(typeof(ApplicantAccessor)) as AbstractAccessor;
 
             if (accessor == null)
             {

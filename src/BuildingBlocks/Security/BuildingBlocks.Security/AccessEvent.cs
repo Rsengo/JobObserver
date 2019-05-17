@@ -12,6 +12,12 @@ namespace BuildingBlocks.Security
 
         public AccessOperation Operation { get; set; }
 
+        public TEntity Entity { get; set; }
+
+        public IEnumerable<TEntity> EnumerableEntities { get; set; }
+
+        public IQueryable<TEntity> QueriableEntities { get; set; }
+
         public AccessEvent(AccessOperation operation)
         {
             Id = Guid.NewGuid();

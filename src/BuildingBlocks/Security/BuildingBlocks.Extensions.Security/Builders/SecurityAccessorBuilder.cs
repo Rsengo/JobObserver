@@ -1,5 +1,4 @@
-﻿using BuildingBlocks.Security;
-using BuildingBlocks.Security.Abstract;
+﻿using BuildingBlocks.Security.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
@@ -9,32 +8,70 @@ namespace BuildingBlocks.Extensions.Security.Builders
 {
     public class SecurityAccessorBuilder
     {
-        private readonly IDictionary<Type, Type> _eventHandlersDictionary;
+        internal Type EventFactory { get; private set; }
 
-        internal IEnumerable<Type> HandlerTypes { get; }
+        internal Type AccessorFactory { get; private set; }
+
+        internal ICollection<AccessorBuilder> AccessorBuilders { get; }
 
         public SecurityAccessorBuilder()
         {
-            _eventHandlersDictionary = new Dictionary<Type, Type>();
-            HandlerTypes = new List<Type>();
+            AccessorBuilders = new List<AccessorBuilder>();
         }
 
-        public SecurityAccessorBuilder RegisterHandler<TEvent, THandler, TEntity>()
-            where TEvent : AccessEvent<TEntity>
-            where THandler : IAccessHandler<TEvent, TEntity>
-            where TEntity : class
+        public SecurityAccessorBuilder UseAccessorFactory<TAccessorFactory>()
+            where TAccessorFactory : IAccessorFactory
         {
-            var eventType = typeof(TEvent);
-            var handlerType = typeof(THandler);
+            AccessorFactory = typeof(TAccessorFactory);
+            return this;
+        }
 
-            _eventHandlersDictionary.Add(eventType, handlerType);
+        public SecurityAccessorBuilder UseAccessEventFactory<TAccessEventFactory>()
+            where TAccessEventFactory : IAccessEventFactory
+        {
+            EventFactory = typeof(TAccessEventFactory);
+            return this;
+        }
+
+        public SecurityAccessorBuilder AddAccessor<TAccessor>(
+            Action<SecurityConfigurationBuilder> accessorConfigBuilder, 
+            Func<IServiceProvider, IImmutableDictionary<Type, Type>, AbstractAccessor> accessorBuilder)
+            where TAccessor : AbstractAccessor
+        {
+            var type = typeof(TAccessor);
+
+            var configuration = new SecurityConfigurationBuilder();
+            accessorConfigBuilder(configuration);
+
+            var handlers = configuration.Build();
+
+            var accessorInfo = new AccessorBuilder
+            {
+                AccessorType = type,
+                HandlersDictionary = handlers,
+                BuildFunction = accessorBuilder
+            };
+
+            AccessorBuilders.Add(accessorInfo);
 
             return this;
         }
 
-        public IImmutableDictionary<Type, Type> Build()
+
+        internal class AccessorBuilder
         {
-            return _eventHandlersDictionary.ToImmutableDictionary();
+            public Type AccessorType { get; set; }
+
+            public IImmutableDictionary<Type, Type> HandlersDictionary { get; set; }
+
+            public IEnumerable<Type> HandlerTypes => HandlersDictionary.Values;
+
+            public Func<IServiceProvider, IImmutableDictionary<Type, Type>, AbstractAccessor> BuildFunction { get; set; }
+
+            public AbstractAccessor BuildAccessor(IServiceProvider serviceProvider)
+            {
+                return BuildFunction(serviceProvider, HandlersDictionary);
+            }
         }
     }
 }

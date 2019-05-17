@@ -34,7 +34,10 @@ namespace BuildingBlocks.Security.Abstract
             if (!hasHandler)
                 await OnHandlerNotFound(@event, operation);
 
-            var handler = _serviceProvider.GetService(handlerType);
+            //TODO Реализовать хэндлеры через контейнеры
+            //var handler = _serviceProvider.GetService(handlerType);
+
+            var handler = Activator.CreateInstance(handlerType);
 
             if (handler == null)
                 await OnHandlerNotFound(@event, operation);

@@ -12,10 +12,10 @@ namespace BuildingBlocks.Extensions.Security
     {
         public static IServiceCollection AddAccessControl<TSecurityManager>(
             this IServiceCollection services,
-            Action<SecurityConfigurationBuilder> builder)
+            Action<SecurityAccessorBuilder> builder)
             where TSecurityManager : class, ISecurityManager
         {
-            var configuration = new SecurityConfigurationBuilder();
+            var configuration = new SecurityAccessorBuilder();
             builder(configuration);
 
             if (configuration.AccessorFactory == null)
@@ -35,18 +35,11 @@ namespace BuildingBlocks.Extensions.Security
 
             var accessorBuilders = configuration.AccessorBuilders;
 
+            //TODO Реализовать хэндлеры через контейнеры
+
             foreach (var accessorBuilder in accessorBuilders)
             {
-                var type = accessorBuilder.Key;
-
-                services.AddTransient(type, sp =>
-                {
-                    var configBuilder = accessorBuilder.Value(sp);
-                    var accessorConfig = new SecurityAccessorBuilder();
-                    var accessor = configBuilder(accessorConfig);
-
-                    return accessor;
-                });
+                services.AddTransient(accessorBuilder.AccessorType, accessorBuilder.BuildAccessor);
             }
 
             return services;
@@ -54,7 +47,7 @@ namespace BuildingBlocks.Extensions.Security
 
         public static IServiceCollection AddAccessControl(
             this IServiceCollection services,
-            Action<SecurityConfigurationBuilder> builder)
+            Action<SecurityAccessorBuilder> builder)
         {
             return services.AddAccessControl<SecurityManager>(builder);
         }

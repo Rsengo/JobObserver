@@ -10,31 +10,29 @@ namespace BuildingBlocks.Security
 {
     public class SecurityManager : ISecurityManager
     {
-        public IHttpContextAccessor HttpContextAccessor { get; }
+        public HttpContext HttpContext { get; set; }
 
         public IAccessorFactory AccessorFactory { get; }
 
         public IAccessEventFactory EventFactory { get; }
 
         public SecurityManager(
-            IHttpContextAccessor contextAccessor,
             IAccessorFactory accessorFactory,
             IAccessEventFactory eventFactory)
         {
-            HttpContextAccessor = contextAccessor;
             AccessorFactory = accessorFactory;
             EventFactory = eventFactory;
         }
 
         public AbstractAccessor CreateAccessor()
         {
-            return AccessorFactory.Create(HttpContextAccessor.HttpContext.User);
+            return AccessorFactory.Create(HttpContext.User);
         }
 
         public AccessEvent<TEntity> CreateEvent<TEntity>(AccessOperation operation) 
             where TEntity : class
         {
-            return EventFactory.Create<TEntity>(HttpContextAccessor.HttpContext.User, operation);
+            return EventFactory.Create<TEntity>(HttpContext.User, operation);
         }
 
         public AccessEvent<TEntity> CreateEvent<TEntity>(TEntity entity, AccessOperation operation) 

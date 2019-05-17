@@ -1,5 +1,6 @@
 ﻿using BuildingBlocks.Security;
 using BuildingBlocks.Security.Abstract;
+using Resumes.API.Security.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace Resumes.API.Security
         public AccessEvent<TEntity> Create<TEntity>(ClaimsPrincipal user, AccessOperation operation) 
             where TEntity : class
         {
-            return new AccessEvent<TEntity>(operation);
+            return new ApplicantAccessEvent<TEntity>(Guid.Empty, operation);
         }
     }
 }

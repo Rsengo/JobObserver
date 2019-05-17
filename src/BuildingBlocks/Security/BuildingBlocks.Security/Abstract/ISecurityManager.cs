@@ -10,7 +10,7 @@ namespace BuildingBlocks.Security.Abstract
 {
     public interface ISecurityManager
     {
-        IHttpContextAccessor HttpContextAccessor { get; }
+        HttpContext HttpContext { get; set; }
 
         IAccessorFactory AccessorFactory { get; }
 

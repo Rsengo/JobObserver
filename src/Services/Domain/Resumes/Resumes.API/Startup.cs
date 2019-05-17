@@ -19,8 +19,12 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Resumes.API.HttpFilters;
 using Resumes.API.Security;
+using Resumes.API.Security.Accessors;
+using Resumes.API.Security.Events;
+using Resumes.API.Security.Handlers.Applicant;
 using Resumes.Db;
 using Resumes.Db.Dto;
+using Resumes.Db.Models;
 using Resumes.Db.Synchronization.EventHandlers.Applicants;
 using Resumes.Db.Synchronization.EventHandlers.Driving;
 using Resumes.Db.Synchronization.EventHandlers.Educations;
@@ -153,7 +157,41 @@ namespace Resumes.API
                 opt.Filters.Add<ValidateModelStateFilter>();
             }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddHttpContextAccessor();
+            services.AddAccessControl(builder =>
+            {
+                builder.UseAccessEventFactory<AccessEventFactoryMock>();
+                builder.UseAccessorFactory<AccessorFactoryMock>();
+
+                builder.AddAccessor<ApplicantAccessor>(paramsBuilder => sp =>
+                {
+                    paramsBuilder.RegisterHandler<ApplicantAccessEvent<Resume>, ApplicantResumeAccessHandler, Resume>();
+
+                    var dict = paramsBuilder.Build();
+                    var accessor = new ApplicantAccessor(sp, dict);
+                    return accessor;
+                });
+
+                builder.AddAccessor<AdminAccessor>(paramsBuilder => sp => 
+                {
+                    var dict = paramsBuilder.Build();
+                    var accessor = new AdminAccessor(sp, dict);
+                    return accessor;
+                });
+
+                builder.AddAccessor<EmployerManagerAccessor>(paramsBuilder => sp =>
+                {
+                    var dict = paramsBuilder.Build();
+                    var accessor = new EmployerManagerAccessor(sp, dict);
+                    return accessor;
+                });
+
+                builder.AddAccessor<EducationalInstitutionManagerAccessor>(paramsBuilder => sp =>
+                {
+                    var dict = paramsBuilder.Build();
+                    var accessor = new EducationalInstitutionManagerAccessor(sp, dict);
+                    return accessor;
+                });
+            });
 
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
             services.AddAuthentication(options =>
@@ -185,6 +223,7 @@ namespace Resumes.API
             app.UseCors(Configuration["CorsPolicy"]);
 
             app.UseAuthentication();
+            app.UseAccessControl();
 
             app.UseHttpsRedirection();
             app.UseMvc();
@@ -197,29 +236,29 @@ namespace Resumes.API
                     Configuration["SwaggerEndpointName"]);
             });
 
-            app.UseEventBusRabbitMQ(eventBus =>
-            {
-                 eventBus.Subscribe<ApplicantsChanged, ApplicantsChangedHandler>();
-                 eventBus.Subscribe<GendersChanged, GendersChangedHandler>();
-                 eventBus.Subscribe<DrivingLicenseTypesChanged, DrivingLicenseTypesChangedHandler>();
-                 eventBus.Subscribe<EducationalLevelsChanged, EducationalLevelsChangedHandler>();
-                 eventBus.Subscribe<EmploymentsChanged, EmploymentsChangedHandler>();
-                 eventBus.Subscribe<LinesChanged, LinesChangedHandler>();
-                 eventBus.Subscribe<MetroChanged, MetroChangedHandler>();
-                 eventBus.Subscribe<StationsChanged, StationsChangedHandler>();
-                 eventBus.Subscribe<AreasChanged, AreasChangedHandler>();
-                 eventBus.Subscribe<IndustriesChanged, IndustriesChangedHandler>();
-                 eventBus.Subscribe<LanguageLevelsChanged, LanguageLevelsChangedHandler>();
-                 eventBus.Subscribe<LanguagesChanged, LanguagesChangedHandler>();
-                 eventBus.Subscribe<ResponsesChanged, ResponsesChangedHandler>();
-                 eventBus.Subscribe<CurrenciesChanged, CurrenciesChangedHandler>();
-                 eventBus.Subscribe<SkillsChanged, SkillsChangedHandler>();
-                 eventBus.Subscribe<SpecializationsChanged, SpecializationsChangedHandler>();
-                 eventBus.Subscribe<ResumeStatusesChanged, ResumeStatusesChangedHandler>();
-                 eventBus.Subscribe<RelocationTypesChanged, RelocationTypesChangedHandler>();
-                 eventBus.Subscribe<BusinessTripReadinessChanged, BusinessTripReadinessChangedHandler>();
-                 eventBus.Subscribe<TravelTimesChanged, TravelTimesChangedHandler>();
-            });
+            //app.UseEventBusRabbitMQ(eventBus =>
+            //{
+            //     eventBus.Subscribe<ApplicantsChanged, ApplicantsChangedHandler>();
+            //     eventBus.Subscribe<GendersChanged, GendersChangedHandler>();
+            //     eventBus.Subscribe<DrivingLicenseTypesChanged, DrivingLicenseTypesChangedHandler>();
+            //     eventBus.Subscribe<EducationalLevelsChanged, EducationalLevelsChangedHandler>();
+            //     eventBus.Subscribe<EmploymentsChanged, EmploymentsChangedHandler>();
+            //     eventBus.Subscribe<LinesChanged, LinesChangedHandler>();
+            //     eventBus.Subscribe<MetroChanged, MetroChangedHandler>();
+            //     eventBus.Subscribe<StationsChanged, StationsChangedHandler>();
+            //     eventBus.Subscribe<AreasChanged, AreasChangedHandler>();
+            //     eventBus.Subscribe<IndustriesChanged, IndustriesChangedHandler>();
+            //     eventBus.Subscribe<LanguageLevelsChanged, LanguageLevelsChangedHandler>();
+            //     eventBus.Subscribe<LanguagesChanged, LanguagesChangedHandler>();
+            //     eventBus.Subscribe<ResponsesChanged, ResponsesChangedHandler>();
+            //     eventBus.Subscribe<CurrenciesChanged, CurrenciesChangedHandler>();
+            //     eventBus.Subscribe<SkillsChanged, SkillsChangedHandler>();
+            //     eventBus.Subscribe<SpecializationsChanged, SpecializationsChangedHandler>();
+            //     eventBus.Subscribe<ResumeStatusesChanged, ResumeStatusesChangedHandler>();
+            //     eventBus.Subscribe<RelocationTypesChanged, RelocationTypesChangedHandler>();
+            //     eventBus.Subscribe<BusinessTripReadinessChanged, BusinessTripReadinessChangedHandler>();
+            //     eventBus.Subscribe<TravelTimesChanged, TravelTimesChangedHandler>();
+            //});
         }
     }
 }
