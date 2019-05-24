@@ -236,29 +236,29 @@ namespace Resumes.API
                     Configuration["SwaggerEndpointName"]);
             });
 
-            //app.UseEventBusRabbitMQ(eventBus =>
-            //{
-            //     eventBus.Subscribe<ApplicantsChanged, ApplicantsChangedHandler>();
-            //     eventBus.Subscribe<GendersChanged, GendersChangedHandler>();
-            //     eventBus.Subscribe<DrivingLicenseTypesChanged, DrivingLicenseTypesChangedHandler>();
-            //     eventBus.Subscribe<EducationalLevelsChanged, EducationalLevelsChangedHandler>();
-            //     eventBus.Subscribe<EmploymentsChanged, EmploymentsChangedHandler>();
-            //     eventBus.Subscribe<LinesChanged, LinesChangedHandler>();
-            //     eventBus.Subscribe<MetroChanged, MetroChangedHandler>();
-            //     eventBus.Subscribe<StationsChanged, StationsChangedHandler>();
-            //     eventBus.Subscribe<AreasChanged, AreasChangedHandler>();
-            //     eventBus.Subscribe<IndustriesChanged, IndustriesChangedHandler>();
-            //     eventBus.Subscribe<LanguageLevelsChanged, LanguageLevelsChangedHandler>();
-            //     eventBus.Subscribe<LanguagesChanged, LanguagesChangedHandler>();
-            //     eventBus.Subscribe<ResponsesChanged, ResponsesChangedHandler>();
-            //     eventBus.Subscribe<CurrenciesChanged, CurrenciesChangedHandler>();
-            //     eventBus.Subscribe<SkillsChanged, SkillsChangedHandler>();
-            //     eventBus.Subscribe<SpecializationsChanged, SpecializationsChangedHandler>();
-            //     eventBus.Subscribe<ResumeStatusesChanged, ResumeStatusesChangedHandler>();
-            //     eventBus.Subscribe<RelocationTypesChanged, RelocationTypesChangedHandler>();
-            //     eventBus.Subscribe<BusinessTripReadinessChanged, BusinessTripReadinessChangedHandler>();
-            //     eventBus.Subscribe<TravelTimesChanged, TravelTimesChangedHandler>();
-            //});
+            app.UseEventBusRabbitMQ(eventBus =>
+            {
+                eventBus.Subscribe<ApplicantsChanged, ApplicantsChangedHandler>();
+                eventBus.Subscribe<GendersChanged, GendersChangedHandler>();
+                eventBus.Subscribe<DrivingLicenseTypesChanged, DrivingLicenseTypesChangedHandler>();
+                eventBus.Subscribe<EducationalLevelsChanged, EducationalLevelsChangedHandler>();
+                eventBus.Subscribe<EmploymentsChanged, EmploymentsChangedHandler>();
+                eventBus.Subscribe<LinesChanged, LinesChangedHandler>();
+                eventBus.Subscribe<MetroChanged, MetroChangedHandler>();
+                eventBus.Subscribe<StationsChanged, StationsChangedHandler>();
+                eventBus.Subscribe<AreasChanged, AreasChangedHandler>();
+                eventBus.Subscribe<IndustriesChanged, IndustriesChangedHandler>();
+                eventBus.Subscribe<LanguageLevelsChanged, LanguageLevelsChangedHandler>();
+                eventBus.Subscribe<LanguagesChanged, LanguagesChangedHandler>();
+                eventBus.Subscribe<ResponsesChanged, ResponsesChangedHandler>();
+                eventBus.Subscribe<CurrenciesChanged, CurrenciesChangedHandler>();
+                eventBus.Subscribe<SkillsChanged, SkillsChangedHandler>();
+                eventBus.Subscribe<SpecializationsChanged, SpecializationsChangedHandler>();
+                eventBus.Subscribe<ResumeStatusesChanged, ResumeStatusesChangedHandler>();
+                eventBus.Subscribe<RelocationTypesChanged, RelocationTypesChangedHandler>();
+                eventBus.Subscribe<BusinessTripReadinessChanged, BusinessTripReadinessChangedHandler>();
+                eventBus.Subscribe<TravelTimesChanged, TravelTimesChangedHandler>();
+            });
         }
     }
 }

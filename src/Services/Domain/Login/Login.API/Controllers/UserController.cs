@@ -49,10 +49,10 @@ namespace Login.API.Controllers
 
             await _userManager.UpdateAsync(newUser);
 
-            if (dto.Contacts != null)
-            {
-                await UpdateContacts(dto.Contacts, id);
-            }
+            //if (dto.Contacts != null)
+            //{
+            //    await UpdateContacts(dto.Contacts, id);
+            //}
 
             var response = Mapper.Map<DtoUser>(newUser);
 
