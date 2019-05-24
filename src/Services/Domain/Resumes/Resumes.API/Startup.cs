@@ -162,32 +162,32 @@ namespace Resumes.API
                 builder.UseAccessEventFactory<AccessEventFactoryMock>();
                 builder.UseAccessorFactory<AccessorFactoryMock>();
 
-                builder.AddAccessor<ApplicantAccessor>(paramsBuilder => sp =>
+                builder.AddAccessor<AdminAccessor>(paramsBuilder =>
+                { }, (sp, dict) =>
                 {
-                    paramsBuilder.RegisterHandler<ApplicantAccessEvent<Resume>, ApplicantResumeAccessHandler, Resume>();
-
-                    var dict = paramsBuilder.Build();
-                    var accessor = new ApplicantAccessor(sp, dict);
-                    return accessor;
-                });
-
-                builder.AddAccessor<AdminAccessor>(paramsBuilder => sp => 
-                {
-                    var dict = paramsBuilder.Build();
                     var accessor = new AdminAccessor(sp, dict);
                     return accessor;
                 });
 
-                builder.AddAccessor<EmployerManagerAccessor>(paramsBuilder => sp =>
+                builder.AddAccessor<ApplicantAccessor>(paramsBuilder =>
                 {
-                    var dict = paramsBuilder.Build();
+                    paramsBuilder.RegisterHandler<ApplicantAccessEvent<Resume>, ApplicantResumeAccessHandler, Resume>();
+                }, (sp, dict) =>
+                {
+                    var accessor = new ApplicantAccessor(sp, dict);
+                    return accessor;
+                });
+
+                builder.AddAccessor<EmployerManagerAccessor>(paramsBuilder =>
+                { }, (sp, dict) =>
+                {
                     var accessor = new EmployerManagerAccessor(sp, dict);
                     return accessor;
                 });
 
-                builder.AddAccessor<EducationalInstitutionManagerAccessor>(paramsBuilder => sp =>
+                builder.AddAccessor<EducationalInstitutionManagerAccessor>(paramsBuilder =>
+                { }, (sp, dict) =>
                 {
-                    var dict = paramsBuilder.Build();
                     var accessor = new EducationalInstitutionManagerAccessor(sp, dict);
                     return accessor;
                 });

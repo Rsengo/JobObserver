@@ -36,7 +36,6 @@ D:\Repos\JobObserver\src\Services\Domain\EducationalInstitutions\EducationalInst
 D:\Repos\JobObserver\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\bin\Debug\netcoreapp2.1\EducationalInstitutions.Db.pdb
 D:\Repos\JobObserver\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.dll
 D:\Repos\JobObserver\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.pdb
-D:\Repos\JobObserver\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\obj\Debug\netcoreapp2.1\EducationalInstitutions.Db.csprojAssemblyReference.cache
 D:\Repos\JobObserver\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\obj\Debug\netcoreapp2.1\EducationalInstitutions.Db.csproj.CoreCompileInputs.cache
 D:\Repos\JobObserver\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\obj\Debug\netcoreapp2.1\EducationalInstitutions.Db.AssemblyInfoInputs.cache
 D:\Repos\JobObserver\src\Services\Domain\EducationalInstitutions\EducationalInstitutions.Db\obj\Debug\netcoreapp2.1\EducationalInstitutions.Db.AssemblyInfo.cs

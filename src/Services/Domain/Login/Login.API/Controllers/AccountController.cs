@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Security.Claims;
+using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using IdentityModel;
@@ -17,6 +18,7 @@ using Microsoft.Extensions.Options;
 
 namespace Login.API.Controllers
 {
+    [Route("[controller]")]
     public class AccountController : Controller
     {
         private readonly UserManager<User> _userManager;
@@ -52,23 +54,26 @@ namespace Login.API.Controllers
         /// </summary>
         [HttpGet("login")]
         [AllowAnonymous]
-        public async Task<IActionResult> Login(string returnUrl)
+        public async Task<IActionResult> Login([FromQuery]string ReturnUrl)
         {
-            var context = await _interaction.GetAuthorizationContextAsync(returnUrl);
+            var context = await _interaction.GetAuthorizationContextAsync(ReturnUrl);
             if (context?.IdP != null)
             {
                 //if IdP is passed, then bypass showing the login screen
-                return ExternalLogin(context.IdP, returnUrl);
+                return ExternalLogin(context.IdP, ReturnUrl);
             }
 
-            var encodedUrl = _cryptoService.Encrypt(returnUrl);
-            return Redirect(_redirectSettings.Value.FullLoginPageUrl + encodedUrl);
+            var bytes = Encoding.UTF8.GetBytes(ReturnUrl);
+            var base64 = Convert.ToBase64String(bytes);
+
+            return Redirect(_redirectSettings.Value.FullLoginPageUrl + base64);
         }
 
         [HttpPost("login")]
         [AllowAnonymous]
-        public async Task<IActionResult> Login(LoginViewModel model)
+        public async Task<IActionResult> Login([FromForm]LoginViewModel model)
         {
+            _logger.LogCritical($"{model.Email}+\n+{model.Password}+\n+{model.RememberMe}+\n+{model.ReturnUrl}");
             //TODO обработка ошибок
             if (!ModelState.IsValid)
                 return BadRequest("Неверный формат данных");
@@ -93,10 +98,10 @@ namespace Login.API.Controllers
 
             await _signInManager.SignInAsync(user, props);
 
-            var encodedUrl = model.ReturnUrl;
-            var decodedUrl = _cryptoService.Decrypt(encodedUrl);
+            //var bytes = Convert.FromBase64String(model.ReturnUrl);
+            var returnUrl = model.ReturnUrl;
 
-            return Ok(decodedUrl);
+            return LocalRedirect(returnUrl);
         }
 
         /// <summary>

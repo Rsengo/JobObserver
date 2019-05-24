@@ -36,16 +36,16 @@ services:
   #     - seq
   # #     - elk
 
-  careerdays.api:
-    image: jobobserver/careerdays.api:${TAG:-latest}
-    build:
-      context: .
-      dockerfile: src/Services/Domain/CareerDays/CareerDays.API/Dockerfile    
-    depends_on:
-      - sql.data
-      - rabbitmq
-      - seq
-  #     - elk
+  # careerdays.api:
+  #   image: jobobserver/careerdays.api:${TAG:-latest}
+  #   build:
+  #     context: .
+  #     dockerfile: src/Services/Domain/CareerDays/CareerDays.API/Dockerfile    
+  #   depends_on:
+  #     - sql.data
+  #     - rabbitmq
+  #     - seq
+  # #     - elk
 
   # educationalinstitutions.api:
   #   image: jobobserver/educationalinstitutions.api:${TAG:-latest}
@@ -69,16 +69,16 @@ services:
   #     - seq
   # #     - elk
 
-  # login.api:
-  #   image: jobobserver/login.api:${TAG:-latest}
-  #   build:
-  #     context: .
-  #     dockerfile: src/Services/Domain/Login/Login.API/Dockerfile    
-  #   depends_on:
-  #     - sql.data
-  #     - rabbitmq
-  #     - seq
-  # #     - elk
+  login.api:
+    image: jobobserver/login.api:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: src/Services/Domain/Login/Login.API/Dockerfile    
+    depends_on:
+      - sql.data
+      - rabbitmq
+      - seq
+  #     - elk
 
   # paidservices.api:
   #   image: jobobserver/paidservices.api:${TAG:-latest}

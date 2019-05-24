@@ -14,7 +14,7 @@ namespace Resumes.API.Security
         public AccessEvent<TEntity> Create<TEntity>(ClaimsPrincipal user, AccessOperation operation) 
             where TEntity : class
         {
-            return new ApplicantAccessEvent<TEntity>(Guid.Empty, operation);
+            return new AccessEvent<TEntity>(Guid.Empty, operation);
         }
     }
 }

@@ -23,8 +23,15 @@ namespace Resumes.API.Security.Handlers.Applicant
             var enumerableAllowed = @event.EnumerableEntities?.All(x => x.ApplicantId == applicantId);
             allowedArray[1] = enumerableAllowed;
 
-            var queriableAllowed = await @event.QueriableEntities?.AllAsync(x => x.ApplicantId == applicantId);
-            allowedArray[2] = queriableAllowed;
+            if (@event.QueriableEntities != null)
+            {
+                var queriableAllowed = await @event.QueriableEntities?.AllAsync(x => x.ApplicantId == applicantId);
+                allowedArray[2] = queriableAllowed;
+            }
+            else
+            {
+                allowedArray[2] = true;
+            }
 
             var allowed = allowedArray.All(x => x != false);
 

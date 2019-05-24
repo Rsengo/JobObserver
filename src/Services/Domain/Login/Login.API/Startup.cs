@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -24,6 +24,8 @@ using Login.Db.Dto;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Cryptography;
 using Login.API.HttpFilters;
+using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 
 namespace Login.API
 {
@@ -62,10 +64,10 @@ namespace Login.API
                 .AddDefaultTokenProviders();
 
             services.AddIdentityServer(x =>
-                {
-                    x.IssuerUri = "null";
-                    x.Authentication.CookieLifetime = TimeSpan.FromHours(2);
-                })
+            {
+                x.IssuerUri = "null";
+                x.Authentication.CookieLifetime = TimeSpan.FromHours(2);
+            })
                 .AddAspNetIdentity<User>()
                 .AddConfigurationStore(opt =>
                 {
@@ -164,8 +166,15 @@ namespace Login.API
             services.AddMvc(opt =>
             {
                 opt.Filters.Add<HttpGlobalExceptionFilter>();
-                opt.Filters.Add<ValidateModelStateFilter>();
+                //opt.Filters.Add<ValidateModelStateFilter>();
+                opt.Filters.Add<ResponseFilter>();
             }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            // In production, the React files will be served from this directory
+            services.AddSpaStaticFiles(configuration =>
+            {
+                configuration.RootPath = "ClientApp/build";
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -183,8 +192,6 @@ namespace Login.API
 
             app.UseCors(Configuration["CorsPolicy"]);
 
-            app.UseStaticFiles();
-
 
             // Make work identity server redirections in Edge and lastest versions of browers. WARN: Not valid in a production environment.
             //app.Use(async (context, next) =>
@@ -194,11 +201,29 @@ namespace Login.API
             //});
 
             app.UseForwardedHeaders();
- 
+
             app.UseIdentityServer();
 
-            app.UseHttpsRedirection();
-            app.UseMvc();
+            //app.UseHttpsRedirection();
+            app.UseStaticFiles();
+            app.UseSpaStaticFiles();
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller}/{action=Index}/{id?}");
+            });
+
+            app.UseSpa(spa =>
+            {
+                spa.Options.SourcePath = "ClientApp";
+
+                if (env.IsDevelopment())
+                {
+                    spa.UseReactDevelopmentServer(npmScript: "start");
+                }
+            });
 
             app.UseSwagger();
             app.UseSwaggerUI(c =>

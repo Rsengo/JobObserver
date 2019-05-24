@@ -14,9 +14,6 @@ using Login.Db.Synchronization.Events.Users;
 
 namespace Login.API.Services
 {
-    using Login.Db.Dto.Models;
-    using Login.Db.Dto.Models.Contacts;
-
     public class RegistrationService: IRegistrationService
     {
         private readonly LoginDbContext _context;
@@ -41,7 +38,6 @@ namespace Login.API.Services
             {
                 FirstName = model.FirstName,
                 LastName = model.LastName,
-                MiddleName = model.MiddleName,
                 BirthDate = model.BirthDate,
                 GenderId = model.GenderId,
                 AreaId = model.AreaId,
@@ -57,11 +53,6 @@ namespace Login.API.Services
             {
                 OnErrorsOccured?.Invoke(roleResult);
             }
-            
-            if (model.Contacts != null)
-            {
-                await AddContacts(model.Contacts, user.Id);
-            }
 
             if (role == IdentityConfig.DefaultRoles.EDUCATIONAL_INSTITUTION_MANAGER)
             {
@@ -74,33 +65,6 @@ namespace Login.API.Services
             }
 
             return user;
-        }
-
-        private async Task AddContacts(DtoContact model, string userId)
-        {
-            var contacts = Mapper.Map<Contact>(model);
-            contacts.UserId = userId;
-
-            _context.Contacts.Add(contacts);
-            await _context.SaveChangesAsync();
-
-            var phones = contacts.Phones;
-            var sites = contacts.Sites;
-
-            foreach (var phone in phones)
-            {
-                phone.ContactId = contacts.Id;
-            }
-
-            foreach (var site in sites)
-            {
-                site.ContactId = contacts.Id;
-            }
-
-            _context.Phones.AddRange(phones);
-            _context.Sites.AddRange(sites);
-
-            await _context.SaveChangesAsync();
         }
 
         private async Task AddEducationalInstitutionManagerProperties(RegistrationViewModel model, string userId)
