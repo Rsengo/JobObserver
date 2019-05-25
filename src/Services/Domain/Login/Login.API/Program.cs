@@ -17,22 +17,22 @@ namespace Login.API
         public static void Main(string[] args)
         {
             BuildWebHost(args)
-                //.MigrateDbContext<LoginDbContext>((context, services) =>
-                //{
-                //    var logger = services.GetRequiredService<ILogger<LoginDbContextSeed>>();
+                .MigrateDbContext<LoginDbContext>((context, services) =>
+                {
+                   var logger = services.GetRequiredService<ILogger<LoginDbContextSeed>>();
 
-                //    new LoginDbContextSeed()
-                //        .SeedAsync(context, logger)
-                //        .Wait();
-                //})
-                //.MigrateDbContext<ConfigurationDbContext>((context, services) =>
-                //{
-                //    var configuration = services.GetService<IConfiguration>();
+                   new LoginDbContextSeed()
+                       .SeedAsync(context, logger)
+                       .Wait();
+                })
+                .MigrateDbContext<ConfigurationDbContext>((context, services) =>
+                {
+                   var configuration = services.GetService<IConfiguration>();
 
-                //    new ConfigurationDbContextSeed()
-                //        .SeedAsync(context, configuration)
-                //        .Wait();
-                //})
+                   new ConfigurationDbContextSeed()
+                       .SeedAsync(context, configuration)
+                       .Wait();
+                })
                 .Run();
         }
 
