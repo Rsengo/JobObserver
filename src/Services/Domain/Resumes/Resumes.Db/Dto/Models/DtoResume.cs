@@ -111,12 +111,6 @@ namespace Resumes.Db.Dto.Models
         public virtual DtoSalary Salary { get; set; }
 
         /// <summary>
-        ///     Id желаемой заработной платы
-        /// </summary>
-        [JsonProperty("salary_id")]
-        public virtual long? SalaryId { get; set; }
-
-        /// <summary>
         ///     Тип занятости
         /// </summary>
         [JsonProperty("employments")]

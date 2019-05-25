@@ -1,0 +1,13 @@
+﻿@model string
+
+@{
+    ViewData["Title"] = "Logout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    var viewModel = JSON.parse(@Model);
+    var logoutId = @ViewData["LogoutId"];
+</script>
+
+@*<script src="~/ClientApp/build/logout/bundle.js"></script>*@

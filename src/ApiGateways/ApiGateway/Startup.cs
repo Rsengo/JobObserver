@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using ApiGateway.Configuration;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Configuration;
@@ -28,6 +29,17 @@ namespace ApiGateway
                     .AllowAnyHeader()
                     .AllowCredentials());
             });
+
+            services.AddAuthentication()
+                .AddJwtBearer("IdentityApiKey", x =>
+                {
+                    x.Authority = Configuration["IdentityUrl"];
+                    x.RequireHttpsMetadata = false;
+                    x.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+                    {
+                        ValidAudiences = Config.GetValidAudience()
+                    };
+                });
 
             services.AddOcelot(Configuration);
         }

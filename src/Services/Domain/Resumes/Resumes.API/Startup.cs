@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using BuildingBlocks.Extensions.AutoMapper;
 using BuildingBlocks.Extensions.EventBus.RabbitMQ;
+using BuildingBlocks.Extensions.Security;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -14,8 +17,14 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Resumes.API.HttpFilters;
+using Resumes.API.Security;
+using Resumes.API.Security.Accessors;
+using Resumes.API.Security.Events;
+using Resumes.API.Security.Handlers.Applicant;
 using Resumes.Db;
 using Resumes.Db.Dto;
+using Resumes.Db.Models;
 using Resumes.Db.Synchronization.EventHandlers.Applicants;
 using Resumes.Db.Synchronization.EventHandlers.Driving;
 using Resumes.Db.Synchronization.EventHandlers.Educations;
@@ -142,7 +151,60 @@ namespace Resumes.API
                         .AllowCredentials());
             });
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc(opt =>
+            {
+                opt.Filters.Add<HttpGlobalExceptionFilter>();
+                opt.Filters.Add<ValidateModelStateFilter>();
+            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddAccessControl(builder =>
+            {
+                builder.UseAccessEventFactory<AccessEventFactoryMock>();
+                builder.UseAccessorFactory<AccessorFactoryMock>();
+
+                builder.AddAccessor<AdminAccessor>(paramsBuilder =>
+                { }, (sp, dict) =>
+                {
+                    var accessor = new AdminAccessor(sp, dict);
+                    return accessor;
+                });
+
+                builder.AddAccessor<ApplicantAccessor>(paramsBuilder =>
+                {
+                    paramsBuilder.RegisterHandler<ApplicantAccessEvent<Resume>, ApplicantResumeAccessHandler, Resume>();
+                }, (sp, dict) =>
+                {
+                    var accessor = new ApplicantAccessor(sp, dict);
+                    return accessor;
+                });
+
+                builder.AddAccessor<EmployerManagerAccessor>(paramsBuilder =>
+                { }, (sp, dict) =>
+                {
+                    var accessor = new EmployerManagerAccessor(sp, dict);
+                    return accessor;
+                });
+
+                builder.AddAccessor<EducationalInstitutionManagerAccessor>(paramsBuilder =>
+                { }, (sp, dict) =>
+                {
+                    var accessor = new EducationalInstitutionManagerAccessor(sp, dict);
+                    return accessor;
+                });
+            });
+
+            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
+            }).AddJwtBearer(options =>
+            {
+                options.Authority = Configuration["IdentityUrl"];
+                options.Audience = "resumes";
+                options.RequireHttpsMetadata = false;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -160,6 +222,9 @@ namespace Resumes.API
 
             app.UseCors(Configuration["CorsPolicy"]);
 
+            app.UseAuthentication();
+            app.UseAccessControl();
+
             app.UseHttpsRedirection();
             app.UseMvc();
 
@@ -173,26 +238,26 @@ namespace Resumes.API
 
             app.UseEventBusRabbitMQ(eventBus =>
             {
-                 eventBus.Subscribe<ApplicantsChanged, ApplicantsChangedHandler>();
-                 eventBus.Subscribe<GendersChanged, GendersChangedHandler>();
-                 eventBus.Subscribe<DrivingLicenseTypesChanged, DrivingLicenseTypesChangedHandler>();
-                 eventBus.Subscribe<EducationalLevelsChanged, EducationalLevelsChangedHandler>();
-                 eventBus.Subscribe<EmploymentsChanged, EmploymentsChangedHandler>();
-                 eventBus.Subscribe<LinesChanged, LinesChangedHandler>();
-                 eventBus.Subscribe<MetroChanged, MetroChangedHandler>();
-                 eventBus.Subscribe<StationsChanged, StationsChangedHandler>();
-                 eventBus.Subscribe<AreasChanged, AreasChangedHandler>();
-                 eventBus.Subscribe<IndustriesChanged, IndustriesChangedHandler>();
-                 eventBus.Subscribe<LanguageLevelsChanged, LanguageLevelsChangedHandler>();
-                 eventBus.Subscribe<LanguagesChanged, LanguagesChangedHandler>();
-                 eventBus.Subscribe<ResponsesChanged, ResponsesChangedHandler>();
-                 eventBus.Subscribe<CurrenciesChanged, CurrenciesChangedHandler>();
-                 eventBus.Subscribe<SkillsChanged, SkillsChangedHandler>();
-                 eventBus.Subscribe<SpecializationsChanged, SpecializationsChangedHandler>();
-                 eventBus.Subscribe<ResumeStatusesChanged, ResumeStatusesChangedHandler>();
-                 eventBus.Subscribe<RelocationTypesChanged, RelocationTypesChangedHandler>();
-                 eventBus.Subscribe<BusinessTripReadinessChanged, BusinessTripReadinessChangedHandler>();
-                 eventBus.Subscribe<TravelTimesChanged, TravelTimesChangedHandler>();
+                eventBus.Subscribe<ApplicantsChanged, ApplicantsChangedHandler>();
+                eventBus.Subscribe<GendersChanged, GendersChangedHandler>();
+                eventBus.Subscribe<DrivingLicenseTypesChanged, DrivingLicenseTypesChangedHandler>();
+                eventBus.Subscribe<EducationalLevelsChanged, EducationalLevelsChangedHandler>();
+                eventBus.Subscribe<EmploymentsChanged, EmploymentsChangedHandler>();
+                eventBus.Subscribe<LinesChanged, LinesChangedHandler>();
+                eventBus.Subscribe<MetroChanged, MetroChangedHandler>();
+                eventBus.Subscribe<StationsChanged, StationsChangedHandler>();
+                eventBus.Subscribe<AreasChanged, AreasChangedHandler>();
+                eventBus.Subscribe<IndustriesChanged, IndustriesChangedHandler>();
+                eventBus.Subscribe<LanguageLevelsChanged, LanguageLevelsChangedHandler>();
+                eventBus.Subscribe<LanguagesChanged, LanguagesChangedHandler>();
+                eventBus.Subscribe<ResponsesChanged, ResponsesChangedHandler>();
+                eventBus.Subscribe<CurrenciesChanged, CurrenciesChangedHandler>();
+                eventBus.Subscribe<SkillsChanged, SkillsChangedHandler>();
+                eventBus.Subscribe<SpecializationsChanged, SpecializationsChangedHandler>();
+                eventBus.Subscribe<ResumeStatusesChanged, ResumeStatusesChangedHandler>();
+                eventBus.Subscribe<RelocationTypesChanged, RelocationTypesChangedHandler>();
+                eventBus.Subscribe<BusinessTripReadinessChanged, BusinessTripReadinessChangedHandler>();
+                eventBus.Subscribe<TravelTimesChanged, TravelTimesChangedHandler>();
             });
         }
     }

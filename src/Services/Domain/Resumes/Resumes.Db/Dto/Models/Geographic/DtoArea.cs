@@ -20,11 +20,5 @@ namespace Resumes.Db.Dto.Models.Geographic
         /// </summary>
         [JsonProperty("parent_id")]
         public virtual long? ParentId { get; set; }
-
-        /// <summary>
-        ///     Id метро
-        /// </summary>
-        [JsonProperty("metro_id")]
-        public virtual long? MetroId { get; set; }
     }
 }

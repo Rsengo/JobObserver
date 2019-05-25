@@ -52,8 +52,6 @@ namespace Resumes.Db
 
         public DbSet<Station> Stations { get; set; }
 
-        public DbSet<Address> Addresses { get; set; }
-
         public DbSet<Area> Areas { get; set; }
 
         public DbSet<Industry> Industries { get; set; }

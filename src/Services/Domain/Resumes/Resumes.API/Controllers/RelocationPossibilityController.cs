@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Resumes.Db;
 using Resumes.Db.Models.Travel.Relocation;
 using Resumes.Db.Dto.Models.Travel.Relocation;
+using BuildingBlocks.Security.Abstract;
 
 namespace Resumes.API.Controllers
 {
@@ -16,9 +17,14 @@ namespace Resumes.API.Controllers
     {
         private readonly ResumesDbContext _context;
 
-        public RelocationPossibilityController(ResumesDbContext context)
+        private readonly ISecurityManager _securityManager;
+
+        public RelocationPossibilityController(
+            ResumesDbContext context,
+            ISecurityManager securityManager)
         {
             _context = context;
+            _securityManager = securityManager;
         }
 
         [HttpGet("{id}")]

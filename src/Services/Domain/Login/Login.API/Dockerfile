@@ -4,6 +4,8 @@ EXPOSE 80
 
 FROM microsoft/dotnet:2.2-sdk AS build
 WORKDIR /src
+RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
+RUN apt-get install -y nodejs
 COPY ["src/Services/Domain/Login/Login.API/Login.API.csproj", "src/Services/Domain/Login/Login.API/"]
 COPY ["src/BuildingBlocks/AutoMapper/BuildingBlocks.Extensions.AutoMapper/BuildingBlocks.Extensions.AutoMapper.csproj", "src/BuildingBlocks/AutoMapper/BuildingBlocks.Extensions.AutoMapper/"]
 COPY ["src/BuildingBlocks/AutoMapper/BuildingBlocks.AutoMapper/BuildingBlocks.AutoMapper.csproj", "src/BuildingBlocks/AutoMapper/BuildingBlocks.AutoMapper/"]
@@ -19,10 +21,10 @@ COPY ["src/BuildingBlocks/EventBus/BuildingBlocks.EventBus.RabbitMQ/BuildingBloc
 RUN dotnet restore "src/Services/Domain/Login/Login.API/Login.API.csproj"
 COPY . .
 WORKDIR "/src/src/Services/Domain/Login/Login.API"
-RUN dotnet build "Login.API.csproj" -c Release -o /app
+RUN dotnet build "Login.API.csproj" -c Debug -o /app
 
 FROM build AS publish
-RUN dotnet publish "Login.API.csproj" -c Release -o /app
+RUN dotnet publish "Login.API.csproj" -c Debug -o /app
 
 FROM base AS final
 WORKDIR /app

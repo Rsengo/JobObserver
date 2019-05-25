@@ -51,7 +51,6 @@ D:\Repos\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug
 D:\Repos\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EntityFramework.dll
 D:\Repos\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\Notifications.API.dll
 D:\Repos\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\PaidServices.Db.dll
-D:\Repos\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\PaidServices.Dto.dll
 D:\Repos\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\Notifications.API.pdb
 D:\Repos\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\PaidServices.Db.pdb
 D:\Repos\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\BuildingBlocks.AutoMapper.pdb
@@ -76,7 +75,6 @@ D:\Repos\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug
 D:\Repos\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EventBus.RabbitMQ.dll
 D:\Repos\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.AutoMapper.pdb
 D:\Repos\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.EntityFramework.pdb
-D:\Repos\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\PaidServices.Dto.pdb
 D:\Repos\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\BuildingBlocks.DataTransfer.pdb
 D:\Repos\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.pdb
 D:\Repos\JobObserver\src\Services\Domain\PaidServices\PaidServices.API\bin\Debug\netcoreapp2.2\BuildingBlocks.EventBus.RabbitMQ.pdb

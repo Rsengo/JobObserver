@@ -25,5 +25,7 @@ namespace CareerDays.Db.Constants
         public const string CAREER_DAY_EMPLOYERS = "CAREER_DAY_EMPLOYERS";
 
         public const string CAREER_DAY_EDUCATIONAL_INSTITUTIONS = "CAREER_DAY_EDUCATIONAL_INSTITUTIONS";
+
+        public const string BRANDED_TEMPLATES = "BRANDED_TEMPLATES";
     }
 }

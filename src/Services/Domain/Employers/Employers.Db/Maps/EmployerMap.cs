@@ -52,6 +52,11 @@ namespace Employers.Db.Maps
                 .OnDelete(DeleteBehavior.Cascade)
                 .IsRequired();
 
+            builder
+                .HasOne(x => x.BrandedDescription)
+                .WithOne(x => x.Employer)
+                .OnDelete(DeleteBehavior.Cascade);
+
             builder.ToTable(TableNames.EMPLOYERS);
         }
     }

@@ -39,11 +39,6 @@ namespace Login.Db.Models
         public virtual Contact Contacts { get; set; }
 
         /// <summary>
-        ///     Id Контактов
-        /// </summary>
-        public virtual long? ContactsId { get; set; }
-
-        /// <summary>
         ///     Пол
         /// </summary>
         public virtual Gender Gender { get; set; }
@@ -70,10 +65,6 @@ namespace Login.Db.Models
 
         public virtual EducationalInstitutionManagerAttributes EducationalInstitutionManagerAttributes { get; set; }
 
-        public virtual long? EducationalInstitutionManagerAttributesId { get; set; }
-
         public virtual EmployerManagerAttributes EmployerManagerAttributes { get; set; }
-
-        public virtual long? EmployerManagerAttributesId { get; set; }
     }
 }

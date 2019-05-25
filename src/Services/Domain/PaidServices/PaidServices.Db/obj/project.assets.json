@@ -1252,6 +1252,8 @@
       "type": "package",
       "path": "microsoft.entityframeworkcore.autohistory/2.1.0",
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.AutoHistory.dll",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.AutoHistory.xml",
         "microsoft.entityframeworkcore.autohistory.2.1.0.nupkg.sha512",
@@ -2051,6 +2053,7 @@
       "path": "remotion.linq/2.2.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "lib/net35/Remotion.Linq.XML",
         "lib/net35/Remotion.Linq.dll",
         "lib/net40/Remotion.Linq.XML",

@@ -1,7 +1,9 @@
 ﻿using System;
+using System.IdentityModel.Tokens.Jwt;
 using System.Reflection;
 using BuildingBlocks.Extensions.AutoMapper;
 using BuildingBlocks.Extensions.EventBus.RabbitMQ;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -9,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
+using Vacancies.API.HttpFilters;
 using Vacancies.Db;
 using Vacancies.Db.Dto;
 using Vacancies.Db.Synchronization.EventHandlers.Driving;
@@ -126,7 +129,24 @@ namespace Vacancies.API
                         .AllowCredentials());
             });
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc(opt =>
+            {
+                opt.Filters.Add<HttpGlobalExceptionFilter>();
+                opt.Filters.Add<ValidateModelStateFilter>();
+            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
+            }).AddJwtBearer(options =>
+            {
+                options.Authority = Configuration["IdentityUrl"];
+                options.Audience = "vacancies";
+                options.RequireHttpsMetadata = false;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -143,6 +163,8 @@ namespace Vacancies.API
             }
 
             app.UseCors(Configuration["CorsPolicy"]);
+
+            app.UseAuthentication();
 
             app.UseHttpsRedirection();
             app.UseMvc();

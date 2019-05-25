@@ -5,6 +5,7 @@ using BuildingBlocks.EntityFramework.Models;
 using Newtonsoft.Json;
 using Vacancies.Db.Models.Geographic;
 using Vacancies.Db.Dto.Models.Driving;
+using Vacancies.Db.Dto.Models.BrandedTemplates;
 using Vacancies.Db.Dto.Models.Employers;
 using Vacancies.Db.Dto.Models.Employments;
 using Vacancies.Db.Dto.Models.Geographic;
@@ -31,8 +32,8 @@ namespace Vacancies.Db.Dto.Models
         /// <summary>
         ///     Id Брендированного описания
         /// </summary>
-        [JsonProperty("branded_description_id")]
-        public virtual long? BrandedDescriptionId { get; set; }
+        [JsonProperty("branded_description")]
+        public virtual DtoBrandedTemplate BrandedDescription { get; set; }
 
         /// <summary>
         ///     Навыки

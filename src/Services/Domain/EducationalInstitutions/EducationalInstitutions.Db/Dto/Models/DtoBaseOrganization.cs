@@ -28,6 +28,12 @@ namespace EducationalInstitutions.Db.Dto.Models
         public virtual long? BrandedDescriptionId { get; set; }
 
         /// <summary>
+        ///     Id Брендированного описания
+        /// </summary>
+        [JsonProperty("branded_description")]
+        public virtual DtoBrandedTemplate BrandedDescription { get; set; }
+
+        /// <summary>
         ///     Логотип
         /// </summary>
         [JsonProperty("logo_url")]

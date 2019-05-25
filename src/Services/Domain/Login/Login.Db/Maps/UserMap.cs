@@ -29,19 +29,16 @@ namespace Login.Db.Maps
             builder
                 .HasOne(x => x.EducationalInstitutionManagerAttributes)
                 .WithOne(x => x.User)
-                .HasForeignKey<User>(x => x.EducationalInstitutionManagerAttributesId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder
                 .HasOne(x => x.EmployerManagerAttributes)
                 .WithOne(x => x.User)
-                .HasForeignKey<User>(x => x.EmployerManagerAttributesId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder
                 .HasOne(x => x.Contacts)
                 .WithOne(x => x.User)
-                .HasForeignKey<User>(x => x.ContactsId)
                 .OnDelete(DeleteBehavior.Cascade);
         }
     }

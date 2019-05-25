@@ -18,11 +18,9 @@ D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\b
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BrandedTemplates.API.dll
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BrandedTemplates.API.pdb
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BrandedTemplates.Db.dll
-D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BrandedTemplates.Dto.dll
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BuildingBlocks.AutoMapper.dll
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.Assemblies.dll
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BrandedTemplates.Db.pdb
-D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BrandedTemplates.Dto.pdb
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BuildingBlocks.AutoMapper.pdb
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\bin\Debug\netcoreapp2.2\BuildingBlocks.Extensions.Assemblies.pdb
 D:\Repos\JobObserver\src\Services\Domain\BrandedTemplates\BrandedTemplates.API\obj\Debug\netcoreapp2.2\BrandedTemplates.API.csprojAssemblyReference.cache

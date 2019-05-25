@@ -46,12 +46,6 @@ namespace Login.Db.Dto.Models
         public virtual DtoContact Contacts { get; set; }
 
         /// <summary>
-        ///     Id Контактов
-        /// </summary>
-        [JsonProperty("contacts_id")]
-        public virtual long? ContactsId { get; set; }
-
-        /// <summary>
         ///     Пол
         /// </summary>
         [JsonProperty("gender")]
@@ -90,13 +84,7 @@ namespace Login.Db.Dto.Models
         [JsonProperty("educational_institution_manager_attributes")]
         public virtual DtoEducationalInstitutionManagerAttributes EducationalInstitutionManagerAttributes { get; set; }
 
-        [JsonProperty("educational_institution_manager_attributes_id")]
-        public virtual long? EducationalInstitutionManagerAttributesId { get; set; }
-
         [JsonProperty("employer_manager_attributes")]
         public virtual DtoEmployerManagerAttributes EmployerManagerAttributes { get; set; }
-
-        [JsonProperty("employer_manager_attributes_id")]
-        public virtual long? EmployerManagerAttributesId { get; set; }
     }
 }

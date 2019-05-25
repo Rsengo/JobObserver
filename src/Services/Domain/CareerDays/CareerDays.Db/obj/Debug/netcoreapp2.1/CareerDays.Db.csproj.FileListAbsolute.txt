@@ -36,7 +36,6 @@ D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.Db\bin\Debug\netc
 D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.Db\bin\Debug\netcoreapp2.1\CareerDays.Db.pdb
 D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.dll
 D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.pdb
-D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.Db\obj\Debug\netcoreapp2.1\CareerDays.Db.csprojAssemblyReference.cache
 D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.Db\obj\Debug\netcoreapp2.1\CareerDays.Db.csproj.CoreCompileInputs.cache
 D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.Db\obj\Debug\netcoreapp2.1\CareerDays.Db.AssemblyInfoInputs.cache
 D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.Db\obj\Debug\netcoreapp2.1\CareerDays.Db.AssemblyInfo.cs
@@ -57,3 +56,9 @@ C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.Db\bin\Debug\netcoreap
 C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.Synchronization.pdb
 C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.pdb
 C:\JobObserver2\src\Services\Domain\CareerDays\CareerDays.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.pdb
+D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.dll
+D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.DataTransfer.dll
+D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.dll
+D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.AutoMapper.pdb
+D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.DataTransfer.pdb
+D:\Repos\JobObserver\src\Services\Domain\CareerDays\CareerDays.Db\bin\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.pdb

@@ -20,5 +20,8 @@ namespace Login.Db.Dto.Models.Contacts
         /// </summary>
         [JsonProperty("sites")]
         public virtual ICollection<DtoSite> Sites { get; set; }
+
+        [JsonProperty("user_id")]
+        public virtual string UserId { get; set; }
     }
 }

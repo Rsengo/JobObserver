@@ -4,6 +4,7 @@ using IdentityServer4.Stores;
 using Login.API.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,10 +44,12 @@ namespace Login.API.Controllers
         public async Task<IActionResult> Index(string returnUrl)
         {
             var vm = await BuildViewModelAsync(returnUrl);
+
             ViewData["ReturnUrl"] = returnUrl;
             if (vm != null)
             {
-                return View("Index", vm);
+                var serializedVm = JsonConvert.SerializeObject(vm);
+                return View("Index", serializedVm);
             }
 
             return View("Error");
@@ -56,7 +59,7 @@ namespace Login.API.Controllers
         /// Handles the consent screen postback
         /// </summary>
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Index(ConsentInputViewModel model)
         {
             // parse the return URL back to an AuthorizeRequest object
@@ -102,7 +105,8 @@ namespace Login.API.Controllers
             var vm = await BuildViewModelAsync(model.ReturnUrl, model);
             if (vm != null)
             {
-                return View("Index", vm);
+                var serializedVm = JsonConvert.SerializeObject(vm);
+                return View("Index", serializedVm);
             }
 
             return View("Error");

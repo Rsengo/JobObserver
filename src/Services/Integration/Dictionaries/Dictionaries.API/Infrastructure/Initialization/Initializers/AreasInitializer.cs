@@ -14,7 +14,7 @@ namespace Dictionaries.API.Infrastructure.Initialization.Initializers
 {
     [JsonFileName("areas.json")]
     public class AreasInitializer :
-        BaseDictionaryInitializer<DtoArea, Area>
+        BaseDictionaryInitializer<DtoAreaSync, Area>
     {
         public AreasInitializer(
             string jsonPath,

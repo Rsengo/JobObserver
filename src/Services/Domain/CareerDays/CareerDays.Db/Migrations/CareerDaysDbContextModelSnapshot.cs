@@ -19,6 +19,28 @@ namespace CareerDays.Db.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("CareerDays.Db.Models.BrandedTemplate", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<long>("CareerDayId");
+
+                    b.Property<string>("Name")
+                        .IsRequired();
+
+                    b.Property<string>("Text")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CareerDayId")
+                        .IsUnique();
+
+                    b.ToTable("BRANDED_TEMPLATES");
+                });
+
             modelBuilder.Entity("CareerDays.Db.Models.CareerDay", b =>
                 {
                     b.Property<long>("Id")
@@ -26,8 +48,6 @@ namespace CareerDays.Db.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<long>("AddressId");
-
-                    b.Property<long?>("BrandedDescriptionId");
 
                     b.Property<string>("Description")
                         .IsRequired();
@@ -260,6 +280,14 @@ namespace CareerDays.Db.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("AutoHistory");
+                });
+
+            modelBuilder.Entity("CareerDays.Db.Models.BrandedTemplate", b =>
+                {
+                    b.HasOne("CareerDays.Db.Models.CareerDay", "CareerDay")
+                        .WithOne("BrandedDescription")
+                        .HasForeignKey("CareerDays.Db.Models.BrandedTemplate", "CareerDayId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("CareerDays.Db.Models.CareerDay", b =>

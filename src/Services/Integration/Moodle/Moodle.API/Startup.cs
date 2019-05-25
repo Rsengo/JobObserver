@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Threading.Tasks;
 using BuildingBlocks.Extensions.EventBus.RabbitMQ;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -11,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Moodle.API.HttpFilters;
 using Moodle.Extensions.Integration;
 using Moodle.Integration;
 using Moodle.Integration.Factories;
@@ -76,7 +79,24 @@ namespace Moodle.API
                 builder.Token = Configuration["MoodleToken"];
             });
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc(opt =>
+            {
+                opt.Filters.Add<HttpGlobalExceptionFilter>();
+                opt.Filters.Add<ValidateModelStateFilter>();
+            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
+            }).AddJwtBearer(options =>
+            {
+                options.Authority = Configuration["IdentityUrl"];
+                options.Audience = "moodle";
+                options.RequireHttpsMetadata = false;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -93,6 +113,8 @@ namespace Moodle.API
             }
 
             app.UseCors(Configuration["CorsPolicy"]);
+
+            app.UseAuthentication();
 
             app.UseHttpsRedirection();
             app.UseMvc();

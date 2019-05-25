@@ -31,5 +31,7 @@ namespace Employers.Db
         public DbSet<EmployerType> EmployerTypes { get; set; }
 
         public DbSet<Partners> Partners { get; set; }
+        
+        public DbSet<BrandedTemplate> BrandedTemplates { get; set; }
     }
 }

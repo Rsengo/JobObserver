@@ -23,6 +23,8 @@ namespace EducationalInstitutions.Db.Models
         /// </summary>
         public virtual long? BrandedDescriptionId { get; set; }
 
+        public virtual BrandedTemplate BrandedDescription { get; set; }
+
         /// <summary>
         ///     Логотип
         /// </summary>

@@ -17,6 +17,10 @@ namespace Login.API.ViewModels
         [JsonProperty("confirm_password")]
         public string ConfirmPassword { get; set; }
 
+        [Required]
+        [JsonProperty("return_url")]
+        public string ReturnUrl { get; set; }
+
         /// <summary>
         ///     Фамилия
         /// </summary>
@@ -31,23 +35,11 @@ namespace Login.API.ViewModels
         public virtual string FirstName { get; set; }
 
         /// <summary>
-        ///     Отчество
-        /// </summary>
-        [JsonProperty("middleName")]
-        public virtual string MiddleName { get; set; }
-
-        /// <summary>
         ///     Дата рождения
         /// </summary>
         [Required]
         [JsonProperty("birth_date")]
         public virtual DateTime BirthDate { get; set; }
-
-        /// <summary>
-        ///     Контакты
-        /// </summary>
-        [JsonProperty("contacts")]
-        public virtual DtoContact Contacts { get; set; }
 
         /// <summary>
         ///     Id Пола

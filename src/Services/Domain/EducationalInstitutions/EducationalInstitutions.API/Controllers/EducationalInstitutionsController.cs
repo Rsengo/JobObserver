@@ -37,6 +37,7 @@ namespace EducationalInstitutions.API.Controllers
         {
             var result = await _context.EducationalInstitutions
                 .Include(x => x.Synonyms)
+                .Include(x => x.BrandedDescription)
                 .SingleOrDefaultAsync(x => x.Id == id)
                 .ConfigureAwait(false);
 
@@ -61,6 +62,8 @@ namespace EducationalInstitutions.API.Controllers
                 .ToListAsync();
 
             var filtered = await _context.EducationalInstitutions
+                .Include(x => x.Synonyms)
+                .Include(x => x.BrandedDescription)
                 .Where(x => 
                     filteredIds.Contains(x.Id) || 
                     x.Name.Contains(filter.Template, comprassionMethod) || 

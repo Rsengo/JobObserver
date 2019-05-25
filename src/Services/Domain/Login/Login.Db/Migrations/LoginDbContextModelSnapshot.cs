@@ -175,25 +175,6 @@ namespace Login.Db.Migrations
                     b.ToTable("AREAS");
                 });
 
-            modelBuilder.Entity("Login.Db.Models.Permission", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Type")
-                        .IsRequired();
-
-                    b.Property<string>("Value")
-                        .IsRequired();
-
-                    b.HasKey("Id");
-
-                    b.HasAlternateKey("Type", "Value");
-
-                    b.ToTable("PERMISSIONS");
-                });
-
             modelBuilder.Entity("Login.Db.Models.User", b =>
                 {
                     b.Property<string>("Id")
@@ -208,16 +189,10 @@ namespace Login.Db.Migrations
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
 
-                    b.Property<long?>("ContactsId");
-
-                    b.Property<long?>("EducationalInstitutionManagerAttributesId");
-
                     b.Property<string>("Email")
                         .HasMaxLength(256);
 
                     b.Property<bool>("EmailConfirmed");
-
-                    b.Property<long?>("EmployerManagerAttributesId");
 
                     b.Property<string>("FirstName")
                         .IsRequired();

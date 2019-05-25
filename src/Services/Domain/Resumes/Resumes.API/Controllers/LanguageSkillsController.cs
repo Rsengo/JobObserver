@@ -9,17 +9,23 @@ using Resumes.Db;
 using Resumes.Db.Models.Languages;
 using Resumes.Db.Dto.Models;
 using Resumes.Db.Dto.Models.Languages;
+using BuildingBlocks.Security.Abstract;
 
 namespace Resumes.API.Controllers
 {
     [Route("api/v1/[controller]")]
     public class LanguageSkillsController : ControllerBase
     {
-                private readonly ResumesDbContext _context;
+        private readonly ResumesDbContext _context;
 
-        public LanguageSkillsController(ResumesDbContext context)
+        private readonly ISecurityManager _securityManager;
+
+        public LanguageSkillsController(
+            ResumesDbContext context,
+            ISecurityManager securityManager)
         {
             _context = context;
+            _securityManager = securityManager;
         }
 
         [HttpGet("{id}")]

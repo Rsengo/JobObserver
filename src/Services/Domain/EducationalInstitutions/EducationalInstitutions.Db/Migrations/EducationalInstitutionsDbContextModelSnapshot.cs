@@ -19,6 +19,23 @@ namespace EducationalInstitutions.Db.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("EducationalInstitutions.Db.Models.BrandedTemplate", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .IsRequired();
+
+                    b.Property<string>("Text")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.ToTable("BRANDED_TEMPLATES");
+                });
+
             modelBuilder.Entity("EducationalInstitutions.Db.Models.EducationalInstitution", b =>
                 {
                     b.Property<long>("Id")
@@ -45,6 +62,10 @@ namespace EducationalInstitutions.Db.Migrations
 
                     b.HasIndex("AreaId");
 
+                    b.HasIndex("BrandedDescriptionId")
+                        .IsUnique()
+                        .HasFilter("[BrandedDescriptionId] IS NOT NULL");
+
                     b.ToTable("EDUCATIONAL_INSTITUTIONS");
                 });
 
@@ -70,6 +91,10 @@ namespace EducationalInstitutions.Db.Migrations
                     b.Property<string>("SiteUrl");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("BrandedDescriptionId")
+                        .IsUnique()
+                        .HasFilter("[BrandedDescriptionId] IS NOT NULL");
 
                     b.HasIndex("EducationalInstitutionId");
 
@@ -182,10 +207,20 @@ namespace EducationalInstitutions.Db.Migrations
                         .WithMany()
                         .HasForeignKey("AreaId")
                         .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("EducationalInstitutions.Db.Models.BrandedTemplate", "BrandedDescription")
+                        .WithOne()
+                        .HasForeignKey("EducationalInstitutions.Db.Models.EducationalInstitution", "BrandedDescriptionId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("EducationalInstitutions.Db.Models.Faculty", b =>
                 {
+                    b.HasOne("EducationalInstitutions.Db.Models.BrandedTemplate", "BrandedDescription")
+                        .WithOne()
+                        .HasForeignKey("EducationalInstitutions.Db.Models.Faculty", "BrandedDescriptionId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
                     b.HasOne("EducationalInstitutions.Db.Models.EducationalInstitution", "EducationalInstitution")
                         .WithMany("Faculties")
                         .HasForeignKey("EducationalInstitutionId")

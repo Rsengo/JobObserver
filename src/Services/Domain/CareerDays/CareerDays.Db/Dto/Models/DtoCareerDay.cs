@@ -15,10 +15,10 @@ namespace CareerDays.Db.Dto.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// Id Брендированного шаблона
+        /// Брендированный шаблон
         /// </summary>
-        [JsonProperty("branded_description_id")]
-        public long? BrandedDescriptionId { get; set; }
+        [JsonProperty("branded_description")]
+        public DtoBrandedTemplate BrandedDescription { get; set; }
 
         /// <summary>
         /// Дата начала

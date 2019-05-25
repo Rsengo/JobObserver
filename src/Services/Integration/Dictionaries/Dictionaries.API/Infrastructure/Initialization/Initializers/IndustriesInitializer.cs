@@ -14,7 +14,7 @@ namespace Dictionaries.API.Infrastructure.Initialization.Initializers
 {
     [JsonFileName("industries.json")]
     public class IndustriesInitializer :
-        BaseDictionaryInitializer<DtoIndustry, Industry>
+        BaseDictionaryInitializer<DtoIndustrySync, Industry>
     {
         public IndustriesInitializer(
             string jsonPath,

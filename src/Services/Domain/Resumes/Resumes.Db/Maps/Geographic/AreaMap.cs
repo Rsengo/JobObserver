@@ -28,7 +28,6 @@ namespace Resumes.Db.Maps.Geographic
                 .IsRequired(false);
             builder.HasOne(x => x.Metro)
                 .WithOne(x => x.Area)
-                .HasForeignKey<Area>(x => x.MetroId)
                 .OnDelete(DeleteBehavior.Cascade)
                 .IsRequired(false);
 

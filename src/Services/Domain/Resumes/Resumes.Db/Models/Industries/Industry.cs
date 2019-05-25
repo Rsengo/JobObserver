@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using BuildingBlocks.EntityFramework.Models;
-using BuildingBlocks.EntityFramework.Models;
 
 namespace Resumes.Db.Models.Industries
 {

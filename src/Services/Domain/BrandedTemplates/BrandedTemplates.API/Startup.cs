@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IdentityModel.Tokens.Jwt;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -9,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using BuildingBlocks.Extensions.AutoMapper;
 using BrandedTemplates.Db;
 using BrandedTemplates.Db.Dto;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace BrandedTemplates.API
@@ -68,6 +70,19 @@ namespace BrandedTemplates.API
             });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
+            }).AddJwtBearer(options =>
+            {
+                options.Authority = Configuration["IdentityUrl"];
+                options.Audience = "brandedtemplates";
+                options.RequireHttpsMetadata = false;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -84,6 +99,8 @@ namespace BrandedTemplates.API
             }
 
             app.UseCors(Configuration["CorsPolicy"]);
+
+            app.UseAuthentication();
 
             app.UseHttpsRedirection();
             app.UseMvc();

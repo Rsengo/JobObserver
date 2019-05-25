@@ -106,6 +106,11 @@ namespace Vacancies.Db.Maps
                 .WithOne(x => x.Vacancy)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            builder
+                .HasOne(x => x.BrandedDescription)
+                .WithOne(x => x.Vacancy)
+                .OnDelete(DeleteBehavior.Cascade);
+
             builder.ToTable(TableNames.VACANCIES);
         }
     }

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DD818734-A8F1-482F-9F52-793B9B9C1D5F}"
 EndProject
@@ -139,7 +139,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Moodle.Extensions.Integrati
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Security", "Security", "{067A2036-1AD2-4B0D-9D97-573681D29044}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.Security.Access", "src\BuildingBlocks\Security\BuildingBlocks.Security.Access\BuildingBlocks.Security.Access.csproj", "{5E01D259-01A5-4E0C-B6ED-A3E04CD28C60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.Security", "src\BuildingBlocks\Security\BuildingBlocks.Security\BuildingBlocks.Security.csproj", "{9EE6C170-2F48-464E-B09F-08BA81E989FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.Extensions.Security", "src\BuildingBlocks\Security\BuildingBlocks.Extensions.Security\BuildingBlocks.Extensions.Security.csproj", "{E2440F3F-4E19-47C9-A468-9B99B206CC61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -307,10 +309,14 @@ Global
 		{6DDA19F3-62F1-40E4-B27A-C85E6DB48321}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DDA19F3-62F1-40E4-B27A-C85E6DB48321}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DDA19F3-62F1-40E4-B27A-C85E6DB48321}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5E01D259-01A5-4E0C-B6ED-A3E04CD28C60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5E01D259-01A5-4E0C-B6ED-A3E04CD28C60}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5E01D259-01A5-4E0C-B6ED-A3E04CD28C60}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5E01D259-01A5-4E0C-B6ED-A3E04CD28C60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EE6C170-2F48-464E-B09F-08BA81E989FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EE6C170-2F48-464E-B09F-08BA81E989FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EE6C170-2F48-464E-B09F-08BA81E989FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EE6C170-2F48-464E-B09F-08BA81E989FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2440F3F-4E19-47C9-A468-9B99B206CC61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2440F3F-4E19-47C9-A468-9B99B206CC61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2440F3F-4E19-47C9-A468-9B99B206CC61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2440F3F-4E19-47C9-A468-9B99B206CC61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -383,7 +389,8 @@ Global
 		{0D93925C-A4E4-4501-A955-C808F26125FF} = {36FF32DE-CDD6-4CB3-BEB5-835F118BF585}
 		{6DDA19F3-62F1-40E4-B27A-C85E6DB48321} = {36FF32DE-CDD6-4CB3-BEB5-835F118BF585}
 		{067A2036-1AD2-4B0D-9D97-573681D29044} = {5A4D0324-09EE-4104-814B-9FA4D11E321B}
-		{5E01D259-01A5-4E0C-B6ED-A3E04CD28C60} = {067A2036-1AD2-4B0D-9D97-573681D29044}
+		{9EE6C170-2F48-464E-B09F-08BA81E989FD} = {067A2036-1AD2-4B0D-9D97-573681D29044}
+		{E2440F3F-4E19-47C9-A468-9B99B206CC61} = {067A2036-1AD2-4B0D-9D97-573681D29044}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EFC2B589-7633-4F4E-A0D8-0509C36A83A5}

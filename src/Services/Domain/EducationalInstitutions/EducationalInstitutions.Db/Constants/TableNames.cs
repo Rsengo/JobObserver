@@ -6,6 +6,8 @@ namespace EducationalInstitutions.Db.Constants
 {
     internal static class TableNames
     {
+        public const string BRANDED_TEMPLATES = "BRANDED_TEMPLATES";
+
         public const string AREAS = "AREAS";
 
         public const string EDUCATIONAL_INSTITUTION_SYNONYMS = "EDUCATIONAL_iNSTITUTION_SYNONYMS";

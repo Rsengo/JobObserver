@@ -282,44 +282,11 @@ namespace Resumes.Db.Migrations
                     b.ToTable("EXPERIENCES");
                 });
 
-            modelBuilder.Entity("Resumes.Db.Models.Geographic.Address", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<long>("AreaId");
-
-                    b.Property<string>("Building")
-                        .IsRequired();
-
-                    b.Property<string>("Description");
-
-                    b.Property<double>("Latitude");
-
-                    b.Property<double>("Longitude");
-
-                    b.Property<long?>("StationId");
-
-                    b.Property<string>("Street")
-                        .IsRequired();
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AreaId");
-
-                    b.HasIndex("StationId");
-
-                    b.ToTable("ADDRESSES");
-                });
-
             modelBuilder.Entity("Resumes.Db.Models.Geographic.Area", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<long?>("MetroId");
 
                     b.Property<string>("Name")
                         .IsRequired();
@@ -536,8 +503,6 @@ namespace Resumes.Db.Migrations
                     b.Property<long?>("ResumeLocaleId");
 
                     b.Property<long?>("ResumeStatusId");
-
-                    b.Property<long?>("SalaryId");
 
                     b.Property<string>("Title")
                         .IsRequired();
@@ -940,19 +905,6 @@ namespace Resumes.Db.Migrations
                     b.HasOne("Resumes.Db.Models.Specializations.Specialization", "Specialization")
                         .WithMany()
                         .HasForeignKey("SpecializationId")
-                        .OnDelete(DeleteBehavior.Restrict);
-                });
-
-            modelBuilder.Entity("Resumes.Db.Models.Geographic.Address", b =>
-                {
-                    b.HasOne("Resumes.Db.Models.Geographic.Area", "Area")
-                        .WithMany()
-                        .HasForeignKey("AreaId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Resumes.Db.Models.Geographic.Metro.Station", "Station")
-                        .WithMany()
-                        .HasForeignKey("StationId")
                         .OnDelete(DeleteBehavior.Restrict);
                 });
 

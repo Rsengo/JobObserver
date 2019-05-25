@@ -1,16 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using BuildingBlocks.Extensions.AutoMapper;
 using BuildingBlocks.Extensions.EventBus.RabbitMQ;
+using EducationalInstitutions.API.HttpFilters;
 using EducationalInstitutions.Db;
 using EducationalInstitutions.Db.Dto;
 using EducationalInstitutions.Db.Synchronization.EventHandlers;
 using EducationalInstitutions.Db.Synchronization.EventHandlers.Geographic;
 using EducationalInstitutions.Db.Synchronization.Events;
 using EducationalInstitutions.Db.Synchronization.Events.Geographic;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -97,7 +100,24 @@ namespace EducationalInstitutions.API
                         .AllowCredentials());
             });
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc(opt =>
+            {
+                opt.Filters.Add<HttpGlobalExceptionFilter>();
+                opt.Filters.Add<ValidateModelStateFilter>();
+            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
+            }).AddJwtBearer(options =>
+            {
+                options.Authority = Configuration["IdentityUrl"];
+                options.Audience = "educationalinstitutions";
+                options.RequireHttpsMetadata = false;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -114,6 +134,8 @@ namespace EducationalInstitutions.API
             }
 
             app.UseCors(Configuration["CorsPolicy"]);
+
+            app.UseAuthentication();
 
             app.UseHttpsRedirection();
             app.UseMvc();

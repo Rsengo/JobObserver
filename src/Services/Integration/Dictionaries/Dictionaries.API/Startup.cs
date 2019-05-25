@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -7,10 +8,12 @@ using System.Threading.Tasks;
 using BuildingBlocks.EventBus.Abstractions;
 using BuildingBlocks.Extensions.AutoMapper;
 using BuildingBlocks.Extensions.EventBus.RabbitMQ;
+using Dictionaries.API.Infrastructure.HttpFilters;
 using Dictionaries.API.Infrastructure.Initialization;
 using Dictionaries.API.Infrastructure.Initialization.Factories;
 using Dictionaries.Db;
 using Dictionaries.Db.Dto;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -106,7 +109,24 @@ namespace Dictionaries.API
 
             services.AddTransient<DictionariesInitializationService>();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc(opt =>
+            {
+                opt.Filters.Add<HttpGlobalExceptionFilter>();
+                opt.Filters.Add<ValidateModelStateFilter>();
+            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
+            }).AddJwtBearer(options =>
+            {
+                options.Authority = Configuration["IdentityUrl"];
+                options.Audience = "dictionaries";
+                options.RequireHttpsMetadata = false;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -123,6 +143,8 @@ namespace Dictionaries.API
             }
 
             app.UseCors(Configuration["CorsPolicy"]);
+
+            app.UseAuthentication();
 
             app.UseHttpsRedirection();
             app.UseMvc();

@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Resumes.Db;
 using Resumes.Db.Models.Schedules;
 using Resumes.Db.Dto.Models.Schedules;
+using BuildingBlocks.Security.Abstract;
 
 namespace Resumes.API.Controllers
 {
@@ -16,9 +17,14 @@ namespace Resumes.API.Controllers
     {
         private readonly ResumesDbContext _context;
 
-        public SchedulesController(ResumesDbContext context)
+        private readonly ISecurityManager _securityManager;
+
+        public SchedulesController(
+            ResumesDbContext context,
+            ISecurityManager securityManager)
         {
             _context = context;
+            _securityManager = securityManager;
         }
 
         [HttpGet("schedules/{id}")]

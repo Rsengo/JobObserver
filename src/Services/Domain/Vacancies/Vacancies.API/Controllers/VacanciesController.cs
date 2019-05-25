@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Vacancies.Db;
 using Vacancies.Db.Models;
 using Vacancies.Db.Dto.Models;
+using Vacancies.API.Filters;
 
 namespace Vacancies.API.Controllers
 {
@@ -39,10 +40,10 @@ namespace Vacancies.API.Controllers
                 .Include(x => x.KeySkills)
                     .ThenInclude(x => x.Skill)
                 .Include(x => x.Languages)
-                    //.AlsoInclude(x => x.Language)
-                    //.AlsoInclude(x => x.Level)
+                //.AlsoInclude(x => x.Language)
+                //.AlsoInclude(x => x.Level)
                 .Include(x => x.Specializations)
-                    //.ThenInclude(x => x.Specialization)
+                //.ThenInclude(x => x.Specialization)
                 .Include(x => x.Salary)
                     .ThenInclude(x => x.Currency)
                 .Include(x => x.Schedule)
@@ -58,6 +59,91 @@ namespace Vacancies.API.Controllers
             await _context.Industries.LoadAsync();
 
             var dto = Mapper.Map<DtoVacancy>(result);
+
+            return Ok(dto);
+        }
+
+        [HttpGet("byEmployer/{id}")]
+        public async Task<IActionResult> GetByCompany(long id)
+        {
+            var result = await _context.Vacancies
+    .Include(x => x.Address)
+        //.AlsoInclude(x => x.Area)
+        .ThenInclude(x => x.Station)
+            .ThenInclude(x => x.Line)
+                .ThenInclude(x => x.Metro)
+    .Include(x => x.Department)
+    .Include(x => x.DrivingLicenseTypes)
+        .ThenInclude(x => x.DrivingLicenseType)
+    .Include(x => x.Employer)
+    .Include(x => x.Employment)
+    //.Include(x => x.Industry)
+    .Include(x => x.KeySkills)
+        .ThenInclude(x => x.Skill)
+    .Include(x => x.Languages)
+    //.AlsoInclude(x => x.Language)
+    //.AlsoInclude(x => x.Level)
+    .Include(x => x.Specializations)
+    //.ThenInclude(x => x.Specialization)
+    .Include(x => x.Salary)
+        .ThenInclude(x => x.Currency)
+    .Include(x => x.Schedule)
+    .Include(x => x.Tests)
+    .Include(x => x.VacancyStatus)
+    .Where(x => x.EmployerId == id)
+    .ToListAsync()
+    .ConfigureAwait(false);
+
+            await _context.Areas.LoadAsync();
+            await _context.Languages.LoadAsync();
+            await _context.LanguageLevels.LoadAsync();
+            await _context.Specializations.LoadAsync();
+            await _context.Industries.LoadAsync();
+
+            var dto = result.Select(Mapper.Map<DtoVacancy>).ToList();
+
+            return Ok(dto);
+        }
+
+        [HttpPost("pagination")]
+        public async Task<IActionResult> Pagination(PaginationFilter filter)
+        {
+            var result = await _context.Vacancies
+.Include(x => x.Address)
+//.AlsoInclude(x => x.Area)
+.ThenInclude(x => x.Station)
+.ThenInclude(x => x.Line)
+    .ThenInclude(x => x.Metro)
+.Include(x => x.Department)
+.Include(x => x.DrivingLicenseTypes)
+.ThenInclude(x => x.DrivingLicenseType)
+.Include(x => x.Employer)
+.Include(x => x.Employment)
+//.Include(x => x.Industry)
+.Include(x => x.KeySkills)
+.ThenInclude(x => x.Skill)
+.Include(x => x.Languages)
+//.AlsoInclude(x => x.Language)
+//.AlsoInclude(x => x.Level)
+.Include(x => x.Specializations)
+//.ThenInclude(x => x.Specialization)
+.Include(x => x.Salary)
+.ThenInclude(x => x.Currency)
+.Include(x => x.Schedule)
+.Include(x => x.Tests)
+.Include(x => x.VacancyStatus)
+.Skip(filter.Offset)
+.Take(filter.Count)
+.ToListAsync()
+.ConfigureAwait(false);
+
+            await _context.Areas.LoadAsync();
+            await _context.Languages.LoadAsync();
+            await _context.LanguageLevels.LoadAsync();
+            await _context.Specializations.LoadAsync();
+            await _context.Industries.LoadAsync();
+
+            var dto = result.Select(Mapper.Map<DtoVacancy>).ToList();
 
             return Ok(dto);
         }
