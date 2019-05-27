@@ -1,6 +1,7 @@
 import React from 'react';
 import { Component } from 'react'
-import MaterialReactSelect from '../../../../elements/autocomplete/AutoComplete'
+import AsyncMaterialSelect from '../../../../elements/autocomplete/AsyncMaterialSelect'
+import MaterialSelect from '../../../../elements/autocomplete/MaterialSelect'
 import { block } from 'bem-cn'
 import { bind } from 'decko'
 import { Visibility, VisibilityOff } from '@material-ui/icons'
@@ -9,9 +10,16 @@ import {
     InputAdornment, 
     IconButton
 } from '@material-ui/core'
-
+import roles from '../../../../settings/roles'
 
 import './RegistrationContent.styl'
+
+const rolesOptions = Object.values(roles).map(role => { 
+  return {
+    label: role.name, 
+    value: role.id
+  }
+});
 
 class RegistrationContent extends Component {
     constructor(props) {
@@ -19,7 +27,8 @@ class RegistrationContent extends Component {
 
         this.state = {
             showPassword: false,
-            showPasswordConfirm: false
+            showPasswordConfirm: false,
+            role: roles.APPLICANT.id
         };
     }
 
@@ -34,6 +43,17 @@ class RegistrationContent extends Component {
         var b = block('registration_content')
         return (
             <div className={b()}>
+                <MaterialSelect
+                    options={rolesOptions}
+                    label='Роль'
+                    name='role'
+                    placeholder='Выберите роль'
+                    value={rolesOptions[0]}
+                    InputLabelProps={{
+                      shrink: true,
+                    }}
+                    onChange={callback} />
+
                 <TextField
                     id='email-input'
                     label='Email'
@@ -130,12 +150,15 @@ class RegistrationContent extends Component {
                     InputLabelProps={{
                       shrink: true,
                     }}/>
-                    {/* <MaterialReactSelect 
+
+                    <AsyncMaterialSelect 
                       label='Место проживания'
+                      name='area_id'
                       placeholder='Выберите город'
                       InputLabelProps={{
                         shrink: true,
-                      }}/> */}
+                      }}
+                      onChange={callback}/>
             </div>
         )
     }

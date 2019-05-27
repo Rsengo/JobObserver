@@ -4980,12 +4980,12 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
-      "Z.EntityFramework.Extensions.EFCore/2.2.3": {
+      "Z.EntityFramework.Extensions.EFCore/2.2.9": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.5.0",
           "Microsoft.EntityFrameworkCore.Relational": "2.0.0",
-          "Microsoft.Extensions.Configuration.Json": "2.2.0",
+          "Newtonsoft.Json": "11.0.2",
           "System.Configuration.ConfigurationManager": "4.5.0",
           "System.Data.SqlClient": "4.5.0",
           "System.Reflection.Emit": "4.3.0",
@@ -5004,7 +5004,7 @@
         "dependencies": {
           "AutoMapper": "8.0.0",
           "BuildingBlocks.Extensions.Assemblies": "1.0.0",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
+          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.AutoMapper.dll": {}
@@ -5018,7 +5018,7 @@
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "Newtonsoft.Json": "12.0.1",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
+          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.DataTransfer.dll": {}
@@ -5031,7 +5031,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
-          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
+          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.EntityFramework.dll": {}
@@ -5045,7 +5045,7 @@
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "Newtonsoft.Json": "12.0.1",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
+          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.EventBus.dll": {}
@@ -5063,7 +5063,7 @@
           "Newtonsoft.Json": "12.0.1",
           "Polly": "7.0.2",
           "RabbitMQ.Client": "5.1.0",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
+          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.EventBus.RabbitMQ.dll": {}
@@ -5076,7 +5076,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
-          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
+          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.Extensions.Assemblies.dll": {}
@@ -5091,7 +5091,7 @@
         "dependencies": {
           "BuildingBlocks.AutoMapper": "1.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
+          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.Extensions.AutoMapper.dll": {}
@@ -5108,7 +5108,7 @@
           "Microsoft.EntityFrameworkCore": "2.2.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2",
           "Polly": "7.0.2",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
+          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.Extensions.EntityFramework.dll": {}
@@ -5124,7 +5124,7 @@
           "BuildingBlocks.EventBus.RabbitMQ": "1.0.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "RabbitMQ.Client": "5.1.0",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
+          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.Extensions.EventBus.RabbitMQ.dll": {}
@@ -5147,7 +5147,7 @@
           "Serilog.Sinks.Elasticsearch": "7.1.0",
           "Serilog.Sinks.Seq": "4.0.0",
           "Swashbuckle.AspNetCore": "4.0.1",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
+          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
         },
         "compile": {
           "bin/placeholder/Notifications.API.dll": {}
@@ -5167,7 +5167,7 @@
           "Microsoft.EntityFrameworkCore": "2.2.2",
           "Microsoft.EntityFrameworkCore.AutoHistory": "2.1.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
+          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
         },
         "compile": {
           "bin/placeholder/PaidServices.Db.dll": {}
@@ -13610,16 +13610,16 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
-    "Z.EntityFramework.Extensions.EFCore/2.2.3": {
-      "sha512": "tRIB7fMZ8nnqpLX787aDy9qA8ZpJDwQ688kRDQkcRuh08/XSXyhm/Q2aWQKqIyn65q1GNDkEmjOH+mGND47zhQ==",
+    "Z.EntityFramework.Extensions.EFCore/2.2.9": {
+      "sha512": "1d76ku4Hux7guY5JOZ4/KTLPDjjO8SpyJPj2tCgPgj+lznq1fqrFCgm9T/5pqYxZRNyaWU2omc1+hsqVpr6+Bw==",
       "type": "package",
-      "path": "z.entityframework.extensions.efcore/2.2.3",
+      "path": "z.entityframework.extensions.efcore/2.2.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.dll",
         "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.xml",
-        "z.entityframework.extensions.efcore.2.2.3.nupkg.sha512",
+        "z.entityframework.extensions.efcore.2.2.9.nupkg.sha512",
         "z.entityframework.extensions.efcore.nuspec"
       ]
     },
@@ -13697,7 +13697,7 @@
       "Serilog.Sinks.Elasticsearch >= 7.1.0",
       "Serilog.Sinks.Seq >= 4.0.0",
       "Swashbuckle.AspNetCore >= 4.0.1",
-      "Z.EntityFramework.Extensions.EFCore >= 2.2.3"
+      "Z.EntityFramework.Extensions.EFCore >= 2.2.9"
     ]
   },
   "packageFolders": {
@@ -13707,11 +13707,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repos\\JobObserver\\src\\Services\\Domain\\PaidServices\\PaidServices.API\\PaidServices.API.csproj",
+      "projectUniqueName": "D:\\Repos\\JobObserver1\\src\\Services\\Domain\\PaidServices\\PaidServices.API\\PaidServices.API.csproj",
       "projectName": "PaidServices.API",
-      "projectPath": "D:\\Repos\\JobObserver\\src\\Services\\Domain\\PaidServices\\PaidServices.API\\PaidServices.API.csproj",
+      "projectPath": "D:\\Repos\\JobObserver1\\src\\Services\\Domain\\PaidServices\\PaidServices.API\\PaidServices.API.csproj",
       "packagesPath": "C:\\Users\\RudencovDP\\.nuget\\packages\\",
-      "outputPath": "D:\\Repos\\JobObserver\\src\\Services\\Domain\\PaidServices\\PaidServices.API\\obj\\",
+      "outputPath": "D:\\Repos\\JobObserver1\\src\\Services\\Domain\\PaidServices\\PaidServices.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13736,17 +13736,17 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\AutoMapper\\BuildingBlocks.Extensions.AutoMapper\\BuildingBlocks.Extensions.AutoMapper.csproj": {
-              "projectPath": "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\AutoMapper\\BuildingBlocks.Extensions.AutoMapper\\BuildingBlocks.Extensions.AutoMapper.csproj"
+            "D:\\Repos\\JobObserver1\\src\\BuildingBlocks\\AutoMapper\\BuildingBlocks.Extensions.AutoMapper\\BuildingBlocks.Extensions.AutoMapper.csproj": {
+              "projectPath": "D:\\Repos\\JobObserver1\\src\\BuildingBlocks\\AutoMapper\\BuildingBlocks.Extensions.AutoMapper\\BuildingBlocks.Extensions.AutoMapper.csproj"
             },
-            "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.Extensions.EntityFramework\\BuildingBlocks.Extensions.EntityFramework.csproj": {
-              "projectPath": "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.Extensions.EntityFramework\\BuildingBlocks.Extensions.EntityFramework.csproj"
+            "D:\\Repos\\JobObserver1\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.Extensions.EntityFramework\\BuildingBlocks.Extensions.EntityFramework.csproj": {
+              "projectPath": "D:\\Repos\\JobObserver1\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.Extensions.EntityFramework\\BuildingBlocks.Extensions.EntityFramework.csproj"
             },
-            "D:\\Repos\\JobObserver\\src\\Services\\Domain\\Notifications\\Notifications.API\\Notifications.API.csproj": {
-              "projectPath": "D:\\Repos\\JobObserver\\src\\Services\\Domain\\Notifications\\Notifications.API\\Notifications.API.csproj"
+            "D:\\Repos\\JobObserver1\\src\\Services\\Domain\\Notifications\\Notifications.API\\Notifications.API.csproj": {
+              "projectPath": "D:\\Repos\\JobObserver1\\src\\Services\\Domain\\Notifications\\Notifications.API\\Notifications.API.csproj"
             },
-            "D:\\Repos\\JobObserver\\src\\Services\\Domain\\PaidServices\\PaidServices.Db\\PaidServices.Db.csproj": {
-              "projectPath": "D:\\Repos\\JobObserver\\src\\Services\\Domain\\PaidServices\\PaidServices.Db\\PaidServices.Db.csproj"
+            "D:\\Repos\\JobObserver1\\src\\Services\\Domain\\PaidServices\\PaidServices.Db\\PaidServices.Db.csproj": {
+              "projectPath": "D:\\Repos\\JobObserver1\\src\\Services\\Domain\\PaidServices\\PaidServices.Db\\PaidServices.Db.csproj"
             }
           }
         }
@@ -13815,7 +13815,7 @@
           },
           "Z.EntityFramework.Extensions.EFCore": {
             "target": "Package",
-            "version": "[2.2.3, )"
+            "version": "[2.2.9, )"
           }
         },
         "imports": [

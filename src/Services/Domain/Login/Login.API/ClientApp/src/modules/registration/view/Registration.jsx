@@ -10,7 +10,7 @@ import { Header } from '../../header'
 import RegistrationContent from './content/RegistrationContent'
 import WebApiService from '../../../services/webApiService'
 import roles from '../../../settings/roles'
-import { Snackbar } from '@material-ui/core'
+import { Snackbar, Paper } from '@material-ui/core'
 
 import './Registration.styl'
 
@@ -34,7 +34,7 @@ class Registration extends Component {
                 gender_id: null,
                 position: null,
                 organization_id: null,
-                role: roles.APPLICANT
+                role: roles.APPLICANT.id
             }
         }
     }
@@ -44,10 +44,11 @@ class Registration extends Component {
         const { user } = this.state;
         const { role, ...data } = user;
         var service = new WebApiService();
-        this.handleClick({message: 'Возникла ошибка при регистрации'})
-        // service.registration(role, data).then((response) => {
-        //     var a = 5;
-        // });
+        service.registration(role, data).then((response) => {
+            window.location.href = response.data;
+        }).catch(() => {
+            this.handleClick({message: 'Возникла ошибка при регистрации'})
+        });
     }
 
     // login() {
@@ -91,22 +92,28 @@ class Registration extends Component {
         const b = block('registration')
         const { snackbar } = this.state;
         return (
-            <div className={b()}>
-                <div className={b('header')}>
-                    <Header />
-                </div>
-                <div className={b('content')}>
-                    <RegistrationContent callback={this.changeState} />
-                </div>
-                <div className={b('controls')}>
-                    <RegistrationControls registrationCallback={this.registration} />
-                </div>
+            <div className={b("app")}>
+            <div className={b('content_container')}>
+                <Paper className='registration__app_content'>
+                    <div className={b()}>
+                        <div className={b('header')}>
+                            <Header />
+                        </div>
+                        <div className={b('content')}>
+                            <RegistrationContent callback={this.changeState} />
+                        </div>
+                        <div className={b('controls')}>
+                            <RegistrationControls registrationCallback={this.registration} />
+                        </div>
 
-                <Snackbar
-                    anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-                    open={snackbar.opened}
-                    onClose={this.handleClose}
-                    message={<span id={b('message-id')}>{snackbar.message}</span>} />
+                        <Snackbar
+                            anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+                            open={snackbar.opened}
+                            onClose={this.handleClose}
+                            message={<span id={b('message-id')}>{snackbar.message}</span>} />
+                    </div>
+                </Paper>
+            </div>
             </div>
         )
     }

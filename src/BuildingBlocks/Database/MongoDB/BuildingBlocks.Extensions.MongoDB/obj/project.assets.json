@@ -149,18 +149,6 @@
           "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration/2.2.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "2.2.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
-        }
-      },
       "Microsoft.Extensions.Configuration.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -171,33 +159,6 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
-        }
-      },
-      "Microsoft.Extensions.Configuration.FileExtensions/2.2.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Configuration": "2.2.0",
-          "Microsoft.Extensions.FileProviders.Physical": "2.2.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.dll": {}
-        }
-      },
-      "Microsoft.Extensions.Configuration.Json/2.2.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Configuration": "2.2.0",
-          "Microsoft.Extensions.Configuration.FileExtensions": "2.2.0",
-          "Newtonsoft.Json": "11.0.2"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.dll": {}
         }
       },
       "Microsoft.Extensions.DependencyInjection/2.0.0": {
@@ -231,28 +192,6 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {}
-        }
-      },
-      "Microsoft.Extensions.FileProviders.Physical/2.2.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.FileProviders.Abstractions": "2.2.0",
-          "Microsoft.Extensions.FileSystemGlobbing": "2.2.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.dll": {}
-        }
-      },
-      "Microsoft.Extensions.FileSystemGlobbing/2.2.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll": {}
         }
       },
       "Microsoft.Extensions.Hosting.Abstractions/2.2.0": {
@@ -2069,12 +2008,12 @@
           "lib/netstandard1.3/System.Threading.ThreadPool.dll": {}
         }
       },
-      "Z.EntityFramework.Extensions.EFCore/2.2.3": {
+      "Z.EntityFramework.Extensions.EFCore/2.2.9": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.5.0",
           "Microsoft.EntityFrameworkCore.Relational": "2.0.0",
-          "Microsoft.Extensions.Configuration.Json": "2.2.0",
+          "Newtonsoft.Json": "11.0.2",
           "System.Configuration.ConfigurationManager": "4.5.0",
           "System.Data.SqlClient": "4.5.0",
           "System.Reflection.Emit": "4.3.0",
@@ -2091,7 +2030,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
-          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
+          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.Extensions.Assemblies.dll": {}
@@ -2105,7 +2044,7 @@
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "MongoDB.Driver": "2.7.3",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
+          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.MongoDB.dll": {}
@@ -2120,7 +2059,7 @@
         "dependencies": {
           "BuildingBlocks.MongoDB": "1.0.0",
           "MongoDB.Driver": "2.7.3",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.3"
+          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.MongoDB.Migration.dll": {}
@@ -2319,19 +2258,6 @@
         "microsoft.extensions.caching.memory.nuspec"
       ]
     },
-    "Microsoft.Extensions.Configuration/2.2.0": {
-      "sha512": "nOP8R1mVb/6mZtm2qgAJXn/LFm/2kMjHDAg/QJLFG6CuWYJtaD3p1BwQhufBVvRzL9ceJ/xF0SQ0qsI2GkDQAA==",
-      "type": "package",
-      "path": "microsoft.extensions.configuration/2.2.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.Configuration.xml",
-        "microsoft.extensions.configuration.2.2.0.nupkg.sha512",
-        "microsoft.extensions.configuration.nuspec"
-      ]
-    },
     "Microsoft.Extensions.Configuration.Abstractions/2.2.0": {
       "sha512": "65MrmXCziWaQFrI0UHkQbesrX5wTwf9XPjY5yFm/VkgJKFJ5gqvXRoXjIZcf2wLi5ZlwGz/oMYfyURVCWbM5iw==",
       "type": "package",
@@ -2343,32 +2269,6 @@
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.xml",
         "microsoft.extensions.configuration.abstractions.2.2.0.nupkg.sha512",
         "microsoft.extensions.configuration.abstractions.nuspec"
-      ]
-    },
-    "Microsoft.Extensions.Configuration.FileExtensions/2.2.0": {
-      "sha512": "1cO9Ca+lLh7mRTbJYEXnGPqoVMt/71BM7zmcZx6VOFLEBAfpOej/isDtgqRYhDcMkLaS9vn9pXerp41fTO9y1w==",
-      "type": "package",
-      "path": "microsoft.extensions.configuration.fileextensions/2.2.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.xml",
-        "microsoft.extensions.configuration.fileextensions.2.2.0.nupkg.sha512",
-        "microsoft.extensions.configuration.fileextensions.nuspec"
-      ]
-    },
-    "Microsoft.Extensions.Configuration.Json/2.2.0": {
-      "sha512": "vqJEFHHDVTDhjTTdX8QZWF75Hw9bFLbmRcjRbXtmQLrFBvcTzuS9w1jJGWjrgR1UQ7YpuJdhcDXzhxorqkR1Ig==",
-      "type": "package",
-      "path": "microsoft.extensions.configuration.json/2.2.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.xml",
-        "microsoft.extensions.configuration.json.2.2.0.nupkg.sha512",
-        "microsoft.extensions.configuration.json.nuspec"
       ]
     },
     "Microsoft.Extensions.DependencyInjection/2.0.0": {
@@ -2408,32 +2308,6 @@
         "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.xml",
         "microsoft.extensions.fileproviders.abstractions.2.2.0.nupkg.sha512",
         "microsoft.extensions.fileproviders.abstractions.nuspec"
-      ]
-    },
-    "Microsoft.Extensions.FileProviders.Physical/2.2.0": {
-      "sha512": "Qt6sUa56/XbLxYshrCzwJYhHO9TkVa9Adch1qVqr7PGuLCxRs3K7nGMv3I6msUvAJqiJE33Oexz6KrT4hcUHgA==",
-      "type": "package",
-      "path": "microsoft.extensions.fileproviders.physical/2.2.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.xml",
-        "microsoft.extensions.fileproviders.physical.2.2.0.nupkg.sha512",
-        "microsoft.extensions.fileproviders.physical.nuspec"
-      ]
-    },
-    "Microsoft.Extensions.FileSystemGlobbing/2.2.0": {
-      "sha512": "LcDxBQvSCyvYZqAncoXJmbueO7DbHyMzu/kwGwC8oyghBXkzHG69iT4IEO63EO3R5mylbhTyydAIyQC4rt/weQ==",
-      "type": "package",
-      "path": "microsoft.extensions.filesystemglobbing/2.2.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
-        "microsoft.extensions.filesystemglobbing.2.2.0.nupkg.sha512",
-        "microsoft.extensions.filesystemglobbing.nuspec"
       ]
     },
     "Microsoft.Extensions.Hosting.Abstractions/2.2.0": {
@@ -6945,16 +6819,16 @@
         "system.threading.threadpool.nuspec"
       ]
     },
-    "Z.EntityFramework.Extensions.EFCore/2.2.3": {
-      "sha512": "tRIB7fMZ8nnqpLX787aDy9qA8ZpJDwQ688kRDQkcRuh08/XSXyhm/Q2aWQKqIyn65q1GNDkEmjOH+mGND47zhQ==",
+    "Z.EntityFramework.Extensions.EFCore/2.2.9": {
+      "sha512": "1d76ku4Hux7guY5JOZ4/KTLPDjjO8SpyJPj2tCgPgj+lznq1fqrFCgm9T/5pqYxZRNyaWU2omc1+hsqVpr6+Bw==",
       "type": "package",
-      "path": "z.entityframework.extensions.efcore/2.2.3",
+      "path": "z.entityframework.extensions.efcore/2.2.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.dll",
         "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.xml",
-        "z.entityframework.extensions.efcore.2.2.3.nupkg.sha512",
+        "z.entityframework.extensions.efcore.2.2.9.nupkg.sha512",
         "z.entityframework.extensions.efcore.nuspec"
       ]
     },
@@ -6983,7 +6857,7 @@
       "Microsoft.Extensions.Logging.Abstractions >= 2.2.0",
       "Microsoft.NETCore.App >= 2.1.0",
       "Polly >= 7.0.2",
-      "Z.EntityFramework.Extensions.EFCore >= 2.2.3"
+      "Z.EntityFramework.Extensions.EFCore >= 2.2.9"
     ]
   },
   "packageFolders": {
@@ -6993,11 +6867,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.Extensions.MongoDB\\BuildingBlocks.Extensions.MongoDB.csproj",
+      "projectUniqueName": "D:\\Repos\\JobObserver1\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.Extensions.MongoDB\\BuildingBlocks.Extensions.MongoDB.csproj",
       "projectName": "BuildingBlocks.Extensions.MongoDB",
-      "projectPath": "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.Extensions.MongoDB\\BuildingBlocks.Extensions.MongoDB.csproj",
+      "projectPath": "D:\\Repos\\JobObserver1\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.Extensions.MongoDB\\BuildingBlocks.Extensions.MongoDB.csproj",
       "packagesPath": "C:\\Users\\RudencovDP\\.nuget\\packages\\",
-      "outputPath": "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.Extensions.MongoDB\\obj\\",
+      "outputPath": "D:\\Repos\\JobObserver1\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.Extensions.MongoDB\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -7022,14 +6896,14 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\Assemblies\\JobObserver.Extensions.Assembly\\BuildingBlocks.Extensions.Assemblies.csproj": {
-              "projectPath": "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\Assemblies\\JobObserver.Extensions.Assembly\\BuildingBlocks.Extensions.Assemblies.csproj"
+            "D:\\Repos\\JobObserver1\\src\\BuildingBlocks\\Assemblies\\JobObserver.Extensions.Assembly\\BuildingBlocks.Extensions.Assemblies.csproj": {
+              "projectPath": "D:\\Repos\\JobObserver1\\src\\BuildingBlocks\\Assemblies\\JobObserver.Extensions.Assembly\\BuildingBlocks.Extensions.Assemblies.csproj"
             },
-            "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.MongoDB.Migration\\BuildingBlocks.MongoDB.Migration.csproj": {
-              "projectPath": "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.MongoDB.Migration\\BuildingBlocks.MongoDB.Migration.csproj"
+            "D:\\Repos\\JobObserver1\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.MongoDB.Migration\\BuildingBlocks.MongoDB.Migration.csproj": {
+              "projectPath": "D:\\Repos\\JobObserver1\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.MongoDB.Migration\\BuildingBlocks.MongoDB.Migration.csproj"
             },
-            "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.MongoDB\\BuildingBlocks.MongoDB.csproj": {
-              "projectPath": "D:\\Repos\\JobObserver\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.MongoDB\\BuildingBlocks.MongoDB.csproj"
+            "D:\\Repos\\JobObserver1\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.MongoDB\\BuildingBlocks.MongoDB.csproj": {
+              "projectPath": "D:\\Repos\\JobObserver1\\src\\BuildingBlocks\\Database\\MongoDB\\BuildingBlocks.MongoDB\\BuildingBlocks.MongoDB.csproj"
             }
           }
         }
@@ -7063,7 +6937,7 @@
           },
           "Z.EntityFramework.Extensions.EFCore": {
             "target": "Package",
-            "version": "[2.2.3, )"
+            "version": "[2.2.9, )"
           }
         },
         "imports": [

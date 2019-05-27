@@ -19,3 +19,12 @@ C:\JobObserver2\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB\obj\D
 C:\JobObserver2\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.dll
 C:\JobObserver2\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.pdb
 D:\Repos\JobObserver\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.csprojAssemblyReference.cache
+D:\Repos\JobObserver1\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB\bin\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.deps.json
+D:\Repos\JobObserver1\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB\bin\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.dll
+D:\Repos\JobObserver1\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB\bin\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.pdb
+D:\Repos\JobObserver1\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.csprojAssemblyReference.cache
+D:\Repos\JobObserver1\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.csproj.CoreCompileInputs.cache
+D:\Repos\JobObserver1\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.AssemblyInfoInputs.cache
+D:\Repos\JobObserver1\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.AssemblyInfo.cs
+D:\Repos\JobObserver1\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.dll
+D:\Repos\JobObserver1\src\BuildingBlocks\Database\MongoDB\BuildingBlocks.MongoDB\obj\Debug\netcoreapp2.1\BuildingBlocks.MongoDB.pdb

@@ -27,3 +27,15 @@ D:\Repos\JobObserver\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus.RabbitM
 D:\Repos\JobObserver\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus.RabbitMQ\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.RabbitMQ.csproj.CopyComplete
 D:\Repos\JobObserver\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus.RabbitMQ\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.RabbitMQ.dll
 D:\Repos\JobObserver\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus.RabbitMQ\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.RabbitMQ.pdb
+D:\Repos\JobObserver1\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus.RabbitMQ\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.RabbitMQ.deps.json
+D:\Repos\JobObserver1\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus.RabbitMQ\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.RabbitMQ.dll
+D:\Repos\JobObserver1\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus.RabbitMQ\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.RabbitMQ.pdb
+D:\Repos\JobObserver1\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus.RabbitMQ\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.dll
+D:\Repos\JobObserver1\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus.RabbitMQ\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.pdb
+D:\Repos\JobObserver1\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus.RabbitMQ\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.RabbitMQ.csprojAssemblyReference.cache
+D:\Repos\JobObserver1\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus.RabbitMQ\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.RabbitMQ.csproj.CoreCompileInputs.cache
+D:\Repos\JobObserver1\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus.RabbitMQ\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.RabbitMQ.AssemblyInfoInputs.cache
+D:\Repos\JobObserver1\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus.RabbitMQ\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.RabbitMQ.AssemblyInfo.cs
+D:\Repos\JobObserver1\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus.RabbitMQ\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.RabbitMQ.csproj.CopyComplete
+D:\Repos\JobObserver1\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus.RabbitMQ\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.RabbitMQ.dll
+D:\Repos\JobObserver1\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus.RabbitMQ\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.RabbitMQ.pdb

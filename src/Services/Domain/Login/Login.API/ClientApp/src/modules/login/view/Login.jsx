@@ -9,6 +9,7 @@ import LoginControls  from './controls/LoginControls'
 import { Header } from '../../header'
 import LoginContent from './content/LoginContent'
 import WebApiService from '../../../services/webApiService'
+import { Paper } from '@material-ui/core'
 
 import './Login.styl'
 
@@ -48,17 +49,23 @@ class Login extends Component {
     render() {
         var b = block('login')
         return (
-            <div className={b()}>
-                <div className={b('header')}>
-                    <Header />
-                </div>
-                <div className={b('content')}>
-                    {/* <LoginContent callback={this.changeState} returnUrl={this.props.match.params.returnUrl}/> */}
-                    <LoginContent callback={this.changeState}/>
-                </div>
-                <div className={b('controls')}>
-                    <LoginControls loginCallback={this.login}/>
-                </div>
+            <div className={b("app")}>
+            <div className={b('content_container')}>
+                <Paper className='login__app_content'>
+                    <div className={b()}>
+                        <div className={b('header')}>
+                            <Header />
+                        </div>
+                        <div className={b('content')}>
+                            {/* <LoginContent callback={this.changeState} returnUrl={this.props.match.params.returnUrl}/> */}
+                            <LoginContent callback={this.changeState}/>
+                        </div>
+                        <div className={b('controls')}>
+                            <LoginControls loginCallback={this.login}/>
+                        </div>
+                    </div>
+                </Paper>
+            </div>
             </div>
         )
     }

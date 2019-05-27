@@ -13,51 +13,11 @@ import Chip from '@material-ui/core/Chip';
 import MenuItem from '@material-ui/core/MenuItem';
 import CancelIcon from '@material-ui/icons/Cancel';
 import { emphasize } from '@material-ui/core/styles/colorManipulator';
+import { bind } from 'decko';
 
-const suggestions = [
-    { label: 'Afghanistan' },
-    { label: 'Aland Islands' },
-    { label: 'Albania' },
-    { label: 'Algeria' },
-    { label: 'American Samoa' },
-    { label: 'Andorra' },
-    { label: 'Angola' },
-    { label: 'Anguilla' },
-    { label: 'Antarctica' },
-    { label: 'Antigua and Barbuda' },
-    { label: 'Argentina' },
-    { label: 'Armenia' },
-    { label: 'Aruba' },
-    { label: 'Australia' },
-    { label: 'Austria' },
-    { label: 'Azerbaijan' },
-    { label: 'Bahamas' },
-    { label: 'Bahrain' },
-    { label: 'Bangladesh' },
-    { label: 'Barbados' },
-    { label: 'Belarus' },
-    { label: 'Belgium' },
-    { label: 'Belize' },
-    { label: 'Benin' },
-    { label: 'Bermuda' },
-    { label: 'Bhutan' },
-    { label: 'Bolivia, Plurinational State of' },
-    { label: 'Bonaire, Sint Eustatius and Saba' },
-    { label: 'Bosnia and Herzegovina' },
-    { label: 'Botswana' },
-    { label: 'Bouvet Island' },
-    { label: 'Brazil' },
-    { label: 'British Indian Ocean Territory' },
-    { label: 'Brunei Darussalam' },
-  ].map(suggestion => ({
-    value: suggestion.label,
-    label: suggestion.label,
-  }));
-  
   const styles = theme => ({
     root: {
       flexGrow: 1,
-      height: 250,
     },
     input: {
       display: 'flex',
@@ -217,27 +177,46 @@ const suggestions = [
     ValueContainer,
   };
   
-  class MaterialReactSelect extends React.Component {
-    state = {
-      single: null,
-      multi: null,
-    };
-  
-    handleChange = name => value => {
-      this.setState({
-        [name]: value,
-      });
-    };
-  
+  class AsyncMaterialSelect extends React.Component {
+    constructor(props) {
+      super(props);
+
+      this.state = {
+          name: null,
+          value: null
+      }
+    }
+
+    @bind
+    onSelectValueChange(callback) {
+      return (value) => {
+          this.setState({ ...this.state, value })
+          callback({
+              currentTarget: {
+                  name: this.state.name,
+                  value
+              }
+          });
+      }
+    }
+
+    componentDidMount() {
+      const { name, value } = this.props;
+      this.setState({ ...this.state, value, name })
+    }
+
     render() {
       const { 
           classes, 
           theme, 
           label, 
           isMulti, 
+          isClearable,
           placeholder, 
           InputLabelProps, 
-          loadDataCallback } = this.props;
+          loadDataCallback,
+          onChange 
+        } = this.props;
   
       const selectStyles = {
         input: base => ({
@@ -252,46 +231,30 @@ const suggestions = [
       return (
         <div className={classes.root}>
           <NoSsr>
-            { !isMulti 
-                ? (<AsyncSelect 
-                    classes={classes}
-                    styles={selectStyles}
-                    textFieldProps={{
-                        label: label || '',
-                        InputLabelProps: {
-                          shrink: true,
-                        },
-                      }}
-                    loadOptions={loadDataCallback}
-                    components={components}
-                    value={this.state.single}
-                    onChange={this.handleChange('single')}
-                    placeholder={placeholder || ''}
-                    isClearable
-                  />)
-                : (<AsyncSelect 
-                    classes={classes}
-                    styles={selectStyles}
-                    textFieldProps={{
-                      label: label || '',
-                      InputLabelProps: InputLabelProps || {}
-                    }}
-                    loadOptions={loadDataCallback}
-                    components={components}
-                    value={this.state.multi}
-                    onChange={this.handleChange('multi')}
-                    placeholder={placeholder || ''}
-                    isMulti
-                  />)}
+              <AsyncSelect 
+                  classes={classes}
+                  styles={selectStyles}
+                  textFieldProps={{
+                    label: label || '',
+                    InputLabelProps: InputLabelProps || {}
+                  }}
+                  loadOptions={loadDataCallback}
+                  components={components}
+                  value={this.state.value}
+                  onChange={this.onSelectValueChange(onChange)}
+                  placeholder={placeholder || ''}
+                  isMulti={isMulti}
+                  isClearable={isClearable}
+                />
           </NoSsr>
         </div>
       );
     }
   }
   
-  MaterialReactSelect.propTypes = {
+  AsyncMaterialSelect.propTypes = {
     classes: PropTypes.object.isRequired,
     theme: PropTypes.object.isRequired,
   };
   
-  export default withStyles(styles, { withTheme: true })(MaterialReactSelect);
+  export default withStyles(styles, { withTheme: true })(AsyncMaterialSelect);

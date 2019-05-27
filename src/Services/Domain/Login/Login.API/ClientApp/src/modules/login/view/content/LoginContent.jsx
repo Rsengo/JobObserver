@@ -8,8 +8,7 @@ import { Visibility, VisibilityOff } from '@material-ui/icons'
 import { 
     TextField, 
     InputAdornment, 
-    IconButton,
-    MuiThemeProvider
+    IconButton
 } from '@material-ui/core'
 import { textFieldsTheme } from '../../../../styles'
 
@@ -37,7 +36,6 @@ class LoginContent extends Component {
         return (
             <div className={b()}>
             {/* <form action='http://localhost:5105/account/login' method="post"> */}
-              <MuiThemeProvider theme={textFieldsTheme}>
                 <TextField
                     id='email-input'
                     label='Email'
@@ -73,7 +71,6 @@ class LoginContent extends Component {
                     <input name='returnurl' value={atob(returnUrl)}/>
                     <button type='submit'>zazazaz</button>
             </form> */}
-              </MuiThemeProvider>
             </div>
         )
     }

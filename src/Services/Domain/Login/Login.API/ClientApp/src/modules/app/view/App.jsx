@@ -12,18 +12,11 @@ import { Registration } from '../../registration'
 import './App.styl'
 
 const App = () => {
-    var b = block('app')
         return (
-            <div className={b()}>
-                <div className={b('content_container')}>
-                    <Paper className='app__content'>
-                        <Switch>
-                            <Route path='/login/:returnUrl' component={ Login }/>
-                            <Route path='/registration/:returnUrl' component={ Registration }/>
-                        </Switch>
-                    </Paper>
-                </div>
-            </div>
+                <Switch>
+                    <Route path='/login/:returnUrl' component={ Login }/>
+                    <Route path='/registration/:returnUrl' component={ Registration }/>
+                </Switch>
 )}
 
 export default App
