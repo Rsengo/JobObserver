@@ -21,8 +21,7 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
           "Microsoft.EntityFrameworkCore": "2.2.2",
           "Microsoft.EntityFrameworkCore.AutoHistory": "2.1.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2"
         },
         "runtime": {
           "Login.Db.dll": {}
@@ -888,18 +887,6 @@
         }
       },
       "System.ComponentModel.Annotations/4.5.0": {},
-      "System.Configuration.ConfigurationManager/4.5.0": {
-        "dependencies": {
-          "System.Security.Cryptography.ProtectedData": "4.5.0",
-          "System.Security.Permissions": "4.5.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {
-            "assemblyVersion": "4.0.1.0",
-            "fileVersion": "4.6.26515.6"
-          }
-        }
-      },
       "System.Data.SqlClient/4.6.0": {
         "dependencies": {
           "Microsoft.Win32.Registry": "4.5.0",
@@ -960,7 +947,7 @@
           "System.Reflection.Emit": "4.3.0",
           "System.Reflection.Emit.ILGeneration": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.5.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
@@ -1053,7 +1040,7 @@
           "System.Reflection.Emit.Lightweight": "4.3.0",
           "System.Reflection.Extensions": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.5.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
@@ -1130,7 +1117,7 @@
           "System.Reflection.Emit.Lightweight": "4.3.0",
           "System.Reflection.Extensions": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.5.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
@@ -1188,7 +1175,12 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Reflection.TypeExtensions/4.5.0": {},
+      "System.Reflection.TypeExtensions/4.3.0": {
+        "dependencies": {
+          "System.Reflection": "4.3.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
       "System.Resources.ResourceManager/4.3.0": {
         "dependencies": {
           "System.Globalization": "4.3.0",
@@ -1370,22 +1362,6 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
-      "System.Security.Cryptography.ProtectedData/4.5.0": {
-        "runtime": {
-          "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
-            "assemblyVersion": "4.0.3.0",
-            "fileVersion": "4.6.26515.6"
-          }
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
-            "rid": "win",
-            "assetType": "runtime",
-            "assemblyVersion": "4.0.3.0",
-            "fileVersion": "4.6.26515.6"
-          }
-        }
-      },
       "System.Security.Cryptography.X509Certificates/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -1564,7 +1540,7 @@
           "System.Reflection.Emit.ILGeneration": "4.3.0",
           "System.Reflection.Extensions": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.5.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
@@ -1574,28 +1550,10 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
-      "Z.EntityFramework.Extensions.EFCore/2.2.9": {
-        "dependencies": {
-          "Microsoft.CSharp": "4.5.0",
-          "Microsoft.EntityFrameworkCore.Relational": "2.2.2",
-          "Newtonsoft.Json": "12.0.1",
-          "System.Configuration.ConfigurationManager": "4.5.0",
-          "System.Data.SqlClient": "4.6.0",
-          "System.Reflection.Emit": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.5.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.dll": {
-            "assemblyVersion": "2.2.9.0",
-            "fileVersion": "2.2.9.0"
-          }
-        }
-      },
       "BuildingBlocks.AutoMapper/1.0.0": {
         "dependencies": {
           "AutoMapper": "8.0.0",
-          "BuildingBlocks.Extensions.Assemblies": "1.0.0",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
+          "BuildingBlocks.Extensions.Assemblies": "1.0.0"
         },
         "runtime": {
           "BuildingBlocks.AutoMapper.dll": {}
@@ -1603,25 +1561,20 @@
       },
       "BuildingBlocks.DataTransfer/1.0.0": {
         "dependencies": {
-          "Newtonsoft.Json": "12.0.1",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
+          "Newtonsoft.Json": "12.0.1"
         },
         "runtime": {
           "BuildingBlocks.DataTransfer.dll": {}
         }
       },
       "BuildingBlocks.EntityFramework/1.0.0": {
-        "dependencies": {
-          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
-        },
         "runtime": {
           "BuildingBlocks.EntityFramework.dll": {}
         }
       },
       "BuildingBlocks.EventBus/1.0.0": {
         "dependencies": {
-          "Newtonsoft.Json": "12.0.1",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
+          "Newtonsoft.Json": "12.0.1"
         },
         "runtime": {
           "BuildingBlocks.EventBus.dll": {}
@@ -1631,17 +1584,13 @@
         "dependencies": {
           "BuildingBlocks.EventBus": "1.0.0",
           "Microsoft.EntityFrameworkCore": "2.2.2",
-          "Newtonsoft.Json": "12.0.1",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
+          "Newtonsoft.Json": "12.0.1"
         },
         "runtime": {
           "BuildingBlocks.EventBus.Synchronization.dll": {}
         }
       },
       "BuildingBlocks.Extensions.Assemblies/1.0.0": {
-        "dependencies": {
-          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
-        },
         "runtime": {
           "BuildingBlocks.Extensions.Assemblies.dll": {}
         }
@@ -2263,13 +2212,6 @@
       "path": "system.componentmodel.annotations/4.5.0",
       "hashPath": "system.componentmodel.annotations.4.5.0.nupkg.sha512"
     },
-    "System.Configuration.ConfigurationManager/4.5.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-UIFvaFfuKhLr9u5tWMxmVoDPkFeD+Qv8gUuap4aZgVGYSYMdERck4OhLN/2gulAc0nYTEigWXSJNNWshrmxnng==",
-      "path": "system.configuration.configurationmanager/4.5.0",
-      "hashPath": "system.configuration.configurationmanager.4.5.0.nupkg.sha512"
-    },
     "System.Data.SqlClient/4.6.0": {
       "type": "package",
       "serviceable": true,
@@ -2473,12 +2415,12 @@
       "path": "system.reflection.primitives/4.3.0",
       "hashPath": "system.reflection.primitives.4.3.0.nupkg.sha512"
     },
-    "System.Reflection.TypeExtensions/4.5.0": {
+    "System.Reflection.TypeExtensions/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-dYSKm+jBVh/I9RQP6AaBiyd92Y6Ml9vEEcTSougcAMSt9X9QQHTGJo0p/uH4uSgODZe+5cuOkgg8wg02NuM0VQ==",
-      "path": "system.reflection.typeextensions/4.5.0",
-      "hashPath": "system.reflection.typeextensions.4.5.0.nupkg.sha512"
+      "sha512": "sha512-7u6ulLcZbyxB5Gq0nMkQttcdBTx57ibzw+4IOXEfR+sXYQoHvjW5LTLyNr8O22UIMrqYbchJQJnos4eooYzYJA==",
+      "path": "system.reflection.typeextensions/4.3.0",
+      "hashPath": "system.reflection.typeextensions.4.3.0.nupkg.sha512"
     },
     "System.Resources.ResourceManager/4.3.0": {
       "type": "package",
@@ -2613,13 +2555,6 @@
       "path": "system.security.cryptography.primitives/4.3.0",
       "hashPath": "system.security.cryptography.primitives.4.3.0.nupkg.sha512"
     },
-    "System.Security.Cryptography.ProtectedData/4.5.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-wLBKzFnDCxP12VL9ANydSYhk59fC4cvOr9ypYQLPnAj48NQIhqnjdD2yhP8yEKyBJEjERWS9DisKL7rX5eU25Q==",
-      "path": "system.security.cryptography.protecteddata/4.5.0",
-      "hashPath": "system.security.cryptography.protecteddata.4.5.0.nupkg.sha512"
-    },
     "System.Security.Cryptography.X509Certificates/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -2738,13 +2673,6 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
-    },
-    "Z.EntityFramework.Extensions.EFCore/2.2.9": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-1d76ku4Hux7guY5JOZ4/KTLPDjjO8SpyJPj2tCgPgj+lznq1fqrFCgm9T/5pqYxZRNyaWU2omc1+hsqVpr6+Bw==",
-      "path": "z.entityframework.extensions.efcore/2.2.9",
-      "hashPath": "z.entityframework.extensions.efcore.2.2.9.nupkg.sha512"
     },
     "BuildingBlocks.AutoMapper/1.0.0": {
       "type": "project",
