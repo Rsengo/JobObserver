@@ -987,7 +987,7 @@
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       },
-      "Z.EntityFramework.Extensions.EFCore/2.3.0": {
+      "Z.EntityFramework.Extensions.EFCore/2.2.8": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.5.0",
@@ -1011,7 +1011,7 @@
         "dependencies": {
           "AutoMapper": "8.0.0",
           "BuildingBlocks.Extensions.Assemblies": "1.0.0",
-          "Z.EntityFramework.Extensions.EFCore": "2.3.0"
+          "Z.EntityFramework.Extensions.EFCore": "2.2.8"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.AutoMapper.dll": {}
@@ -1025,7 +1025,7 @@
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "Newtonsoft.Json": "12.0.1",
-          "Z.EntityFramework.Extensions.EFCore": "2.3.0"
+          "Z.EntityFramework.Extensions.EFCore": "2.2.8"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.DataTransfer.dll": {}
@@ -1038,7 +1038,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
-          "Z.EntityFramework.Extensions.EFCore": "2.3.0"
+          "Z.EntityFramework.Extensions.EFCore": "2.2.8"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.EntityFramework.dll": {}
@@ -1052,7 +1052,7 @@
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "Newtonsoft.Json": "12.0.1",
-          "Z.EntityFramework.Extensions.EFCore": "2.3.0"
+          "Z.EntityFramework.Extensions.EFCore": "2.2.8"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.EventBus.dll": {}
@@ -1081,7 +1081,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
-          "Z.EntityFramework.Extensions.EFCore": "2.3.0"
+          "Z.EntityFramework.Extensions.EFCore": "2.2.8"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.Extensions.Assemblies.dll": {}
@@ -3893,16 +3893,16 @@
         "system.threading.tasks.nuspec"
       ]
     },
-    "Z.EntityFramework.Extensions.EFCore/2.3.0": {
-      "sha512": "u9eW79PdeXsvO4BY3W/YT+ElfFzD6qMApXpLVU4itdUIgWCP0LqgYv0hxtmhMT9unocUFAm3ZvnxOb672SkkBQ==",
+    "Z.EntityFramework.Extensions.EFCore/2.2.8": {
+      "sha512": "e55q89lmKam32Y4Lcityb4OEwJ8iS6+GbEZ9LwcPEnEhlPXz1AOezuxMzrqdEuS1I1nWSo3wgLufBbkeM++H1Q==",
       "type": "package",
-      "path": "z.entityframework.extensions.efcore/2.3.0",
+      "path": "z.entityframework.extensions.efcore/2.2.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.dll",
         "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.xml",
-        "z.entityframework.extensions.efcore.2.3.0.nupkg.sha512",
+        "z.entityframework.extensions.efcore.2.2.8.nupkg.sha512",
         "z.entityframework.extensions.efcore.nuspec"
       ]
     },
@@ -3949,7 +3949,7 @@
       "Microsoft.EntityFrameworkCore.AutoHistory >= 2.1.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.2.2",
       "Microsoft.NETCore.App >= 2.1.0",
-      "Z.EntityFramework.Extensions.EFCore >= 2.3.0"
+      "Z.EntityFramework.Extensions.EFCore >= 2.2.8"
     ]
   },
   "packageFolders": {
@@ -4039,7 +4039,7 @@
           },
           "Z.EntityFramework.Extensions.EFCore": {
             "target": "Package",
-            "version": "[2.3.0, )"
+            "version": "[2.2.8, )"
           }
         },
         "imports": [
@@ -4049,5 +4049,16 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Обнаружено понижение версии пакета Z.EntityFramework.Extensions.EFCore с 2.2.9 на 2.2.8. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n EducationalInstitutions.Db -> BuildingBlocks.EventBus.Synchronization -> Z.EntityFramework.Extensions.EFCore (>= 2.2.9) \r\n EducationalInstitutions.Db -> Z.EntityFramework.Extensions.EFCore (>= 2.2.8)",
+      "libraryId": "Z.EntityFramework.Extensions.EFCore",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    }
+  ]
 }

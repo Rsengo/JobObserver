@@ -4867,7 +4867,7 @@
         "dependencies": {
           "AutoMapper": "8.0.0",
           "BuildingBlocks.Extensions.Assemblies": "1.0.0",
-          "Z.EntityFramework.Extensions.EFCore": "2.3.0"
+          "Z.EntityFramework.Extensions.EFCore": "2.2.8"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.AutoMapper.dll": {}
@@ -4881,7 +4881,7 @@
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "Newtonsoft.Json": "12.0.1",
-          "Z.EntityFramework.Extensions.EFCore": "2.3.0"
+          "Z.EntityFramework.Extensions.EFCore": "2.2.8"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.DataTransfer.dll": {}
@@ -4894,7 +4894,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
-          "Z.EntityFramework.Extensions.EFCore": "2.3.0"
+          "Z.EntityFramework.Extensions.EFCore": "2.2.8"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.EntityFramework.dll": {}
@@ -4907,7 +4907,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
-          "Z.EntityFramework.Extensions.EFCore": "2.3.0"
+          "Z.EntityFramework.Extensions.EFCore": "2.2.8"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.Extensions.Assemblies.dll": {}
@@ -4922,7 +4922,7 @@
         "dependencies": {
           "BuildingBlocks.AutoMapper": "1.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
+          "Z.EntityFramework.Extensions.EFCore": "2.2.8"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.Extensions.AutoMapper.dll": {}
@@ -4939,7 +4939,7 @@
           "Microsoft.EntityFrameworkCore": "2.2.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2",
           "Polly": "7.0.2",
-          "Z.EntityFramework.Extensions.EFCore": "2.3.0"
+          "Z.EntityFramework.Extensions.EFCore": "2.2.8"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.Extensions.EntityFramework.dll": {}
@@ -13350,52 +13350,5 @@
         "warn": true
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Обнаружено понижение версии пакета Z.EntityFramework.Extensions.EFCore с 2.3.0 на 2.2.9. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n BrandedTemplates.API -> BuildingBlocks.Extensions.EntityFramework -> Z.EntityFramework.Extensions.EFCore (>= 2.3.0) \r\n BrandedTemplates.API -> Z.EntityFramework.Extensions.EFCore (>= 2.2.9)",
-      "libraryId": "Z.EntityFramework.Extensions.EFCore",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.2"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Обнаружено понижение версии пакета Z.EntityFramework.Extensions.EFCore с 2.3.0 на 2.2.9. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n BrandedTemplates.API -> BrandedTemplates.Db -> BuildingBlocks.EntityFramework -> Z.EntityFramework.Extensions.EFCore (>= 2.3.0) \r\n BrandedTemplates.API -> Z.EntityFramework.Extensions.EFCore (>= 2.2.9)",
-      "libraryId": "Z.EntityFramework.Extensions.EFCore",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.2"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Обнаружено понижение версии пакета Z.EntityFramework.Extensions.EFCore с 2.3.0 на 2.2.9. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n BrandedTemplates.API -> BrandedTemplates.Db -> BuildingBlocks.AutoMapper -> Z.EntityFramework.Extensions.EFCore (>= 2.3.0) \r\n BrandedTemplates.API -> Z.EntityFramework.Extensions.EFCore (>= 2.2.9)",
-      "libraryId": "Z.EntityFramework.Extensions.EFCore",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.2"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Обнаружено понижение версии пакета Z.EntityFramework.Extensions.EFCore с 2.3.0 на 2.2.9. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n BrandedTemplates.API -> BrandedTemplates.Db -> BuildingBlocks.DataTransfer -> Z.EntityFramework.Extensions.EFCore (>= 2.3.0) \r\n BrandedTemplates.API -> Z.EntityFramework.Extensions.EFCore (>= 2.2.9)",
-      "libraryId": "Z.EntityFramework.Extensions.EFCore",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.2"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Обнаружено понижение версии пакета Z.EntityFramework.Extensions.EFCore с 2.3.0 на 2.2.9. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n BrandedTemplates.API -> BuildingBlocks.Extensions.AutoMapper -> BuildingBlocks.AutoMapper -> Z.EntityFramework.Extensions.EFCore (>= 2.3.0) \r\n BrandedTemplates.API -> Z.EntityFramework.Extensions.EFCore (>= 2.2.9)",
-      "libraryId": "Z.EntityFramework.Extensions.EFCore",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.2"
-      ]
-    }
-  ]
+  }
 }

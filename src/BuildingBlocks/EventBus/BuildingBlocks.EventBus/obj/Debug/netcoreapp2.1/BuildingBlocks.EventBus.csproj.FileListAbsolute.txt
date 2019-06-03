@@ -22,9 +22,9 @@ D:\Repos\JobObserver\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus\obj\Deb
 D:\Repos\JobObserver1\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.deps.json
 D:\Repos\JobObserver1\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.dll
 D:\Repos\JobObserver1\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus\bin\Debug\netcoreapp2.1\BuildingBlocks.EventBus.pdb
-D:\Repos\JobObserver1\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.csprojAssemblyReference.cache
 D:\Repos\JobObserver1\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.csproj.CoreCompileInputs.cache
 D:\Repos\JobObserver1\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.AssemblyInfoInputs.cache
 D:\Repos\JobObserver1\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.AssemblyInfo.cs
 D:\Repos\JobObserver1\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.dll
 D:\Repos\JobObserver1\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.pdb
+D:\Repos\JobObserver1\src\BuildingBlocks\EventBus\BuildingBlocks.EventBus\obj\Debug\netcoreapp2.1\BuildingBlocks.EventBus.csprojAssemblyReference.cache
