@@ -10,7 +10,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.AutoHistory" Version="2.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.2" />
     <PackageReference Include="Serilog.Sinks.ColoredConsole" Version="3.0.1" />
-    <PackageReference Include="Z.EntityFramework.Extensions.EFCore" Version="2.2.8" />
+    <PackageReference Include="Z.EntityFramework.Extensions.EFCore" Version="2.3.6" />
   </ItemGroup>
 
   <ItemGroup>

@@ -987,7 +987,7 @@
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       },
-      "Z.EntityFramework.Extensions.EFCore/2.2.8": {
+      "Z.EntityFramework.Extensions.EFCore/2.3.6": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.5.0",
@@ -1011,7 +1011,7 @@
         "dependencies": {
           "AutoMapper": "8.0.0",
           "BuildingBlocks.Extensions.Assemblies": "1.0.0",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.8"
+          "Z.EntityFramework.Extensions.EFCore": "2.3.6"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.AutoMapper.dll": {}
@@ -1025,7 +1025,7 @@
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "Newtonsoft.Json": "12.0.1",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.8"
+          "Z.EntityFramework.Extensions.EFCore": "2.3.6"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.DataTransfer.dll": {}
@@ -1038,7 +1038,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
-          "Z.EntityFramework.Extensions.EFCore": "2.2.8"
+          "Z.EntityFramework.Extensions.EFCore": "2.3.6"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.EntityFramework.dll": {}
@@ -1051,7 +1051,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
-          "Z.EntityFramework.Extensions.EFCore": "2.2.8"
+          "Z.EntityFramework.Extensions.EFCore": "2.3.6"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.Extensions.Assemblies.dll": {}
@@ -3863,16 +3863,16 @@
         "system.threading.tasks.nuspec"
       ]
     },
-    "Z.EntityFramework.Extensions.EFCore/2.2.8": {
-      "sha512": "e55q89lmKam32Y4Lcityb4OEwJ8iS6+GbEZ9LwcPEnEhlPXz1AOezuxMzrqdEuS1I1nWSo3wgLufBbkeM++H1Q==",
+    "Z.EntityFramework.Extensions.EFCore/2.3.6": {
+      "sha512": "GEHRtCyok7SOpZHfPE5jnfcs1emtIkL0WB3Bnve53Zb/FevtN3jmy4kxpOvHvZkdtn8ld0b6Kx6lOzHYgQUW8g==",
       "type": "package",
-      "path": "z.entityframework.extensions.efcore/2.2.8",
+      "path": "z.entityframework.extensions.efcore/2.3.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.dll",
         "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.xml",
-        "z.entityframework.extensions.efcore.2.2.8.nupkg.sha512",
+        "z.entityframework.extensions.efcore.2.3.6.nupkg.sha512",
         "z.entityframework.extensions.efcore.nuspec"
       ]
     },
@@ -3907,7 +3907,7 @@
       "Microsoft.EntityFrameworkCore.AutoHistory >= 2.1.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.2.2",
       "Microsoft.NETCore.App >= 2.1.0",
-      "Z.EntityFramework.Extensions.EFCore >= 2.2.8"
+      "Z.EntityFramework.Extensions.EFCore >= 2.3.6"
     ]
   },
   "packageFolders": {
@@ -3991,7 +3991,7 @@
           },
           "Z.EntityFramework.Extensions.EFCore": {
             "target": "Package",
-            "version": "[2.2.8, )"
+            "version": "[2.3.6, )"
           }
         },
         "imports": [
