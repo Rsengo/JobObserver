@@ -4980,7 +4980,7 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
-      "Z.EntityFramework.Extensions.EFCore/2.2.9": {
+      "Z.EntityFramework.Extensions.EFCore/2.3.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.5.0",
@@ -5004,7 +5004,7 @@
         "dependencies": {
           "AutoMapper": "8.0.0",
           "BuildingBlocks.Extensions.Assemblies": "1.0.0",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
+          "Z.EntityFramework.Extensions.EFCore": "2.3.0"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.AutoMapper.dll": {}
@@ -5018,7 +5018,7 @@
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "Newtonsoft.Json": "12.0.1",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
+          "Z.EntityFramework.Extensions.EFCore": "2.3.0"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.DataTransfer.dll": {}
@@ -5031,7 +5031,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
-          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
+          "Z.EntityFramework.Extensions.EFCore": "2.3.0"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.EntityFramework.dll": {}
@@ -5045,7 +5045,7 @@
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "Newtonsoft.Json": "12.0.1",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
+          "Z.EntityFramework.Extensions.EFCore": "2.3.0"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.EventBus.dll": {}
@@ -5063,7 +5063,7 @@
           "Newtonsoft.Json": "12.0.1",
           "Polly": "7.0.2",
           "RabbitMQ.Client": "5.1.0",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
+          "Z.EntityFramework.Extensions.EFCore": "2.3.0"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.EventBus.RabbitMQ.dll": {}
@@ -5092,7 +5092,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
-          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
+          "Z.EntityFramework.Extensions.EFCore": "2.3.0"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.Extensions.Assemblies.dll": {}
@@ -5124,7 +5124,7 @@
           "Microsoft.EntityFrameworkCore": "2.2.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2",
           "Polly": "7.0.2",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
+          "Z.EntityFramework.Extensions.EFCore": "2.3.0"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.Extensions.EntityFramework.dll": {}
@@ -5140,7 +5140,7 @@
           "BuildingBlocks.EventBus.RabbitMQ": "1.0.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "RabbitMQ.Client": "5.1.0",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
+          "Z.EntityFramework.Extensions.EFCore": "2.3.0"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.Extensions.EventBus.RabbitMQ.dll": {}
@@ -5162,7 +5162,7 @@
           "Microsoft.EntityFrameworkCore": "2.2.2",
           "Microsoft.EntityFrameworkCore.AutoHistory": "2.1.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
+          "Z.EntityFramework.Extensions.EFCore": "2.3.0"
         },
         "compile": {
           "bin/placeholder/CareerDays.Db.dll": {}
@@ -13605,16 +13605,16 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
-    "Z.EntityFramework.Extensions.EFCore/2.2.9": {
-      "sha512": "1d76ku4Hux7guY5JOZ4/KTLPDjjO8SpyJPj2tCgPgj+lznq1fqrFCgm9T/5pqYxZRNyaWU2omc1+hsqVpr6+Bw==",
+    "Z.EntityFramework.Extensions.EFCore/2.3.0": {
+      "sha512": "u9eW79PdeXsvO4BY3W/YT+ElfFzD6qMApXpLVU4itdUIgWCP0LqgYv0hxtmhMT9unocUFAm3ZvnxOb672SkkBQ==",
       "type": "package",
-      "path": "z.entityframework.extensions.efcore/2.2.9",
+      "path": "z.entityframework.extensions.efcore/2.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.dll",
         "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.xml",
-        "z.entityframework.extensions.efcore.2.2.9.nupkg.sha512",
+        "z.entityframework.extensions.efcore.2.3.0.nupkg.sha512",
         "z.entityframework.extensions.efcore.nuspec"
       ]
     },
@@ -13692,7 +13692,7 @@
       "Serilog.Sinks.Elasticsearch >= 7.1.0",
       "Serilog.Sinks.Seq >= 4.0.0",
       "Swashbuckle.AspNetCore >= 4.0.1",
-      "Z.EntityFramework.Extensions.EFCore >= 2.2.9"
+      "Z.EntityFramework.Extensions.EFCore >= 2.3.0"
     ]
   },
   "packageFolders": {
@@ -13810,7 +13810,7 @@
           },
           "Z.EntityFramework.Extensions.EFCore": {
             "target": "Package",
-            "version": "[2.2.9, )"
+            "version": "[2.3.0, )"
           }
         },
         "imports": [

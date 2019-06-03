@@ -2531,7 +2531,7 @@
         "dependencies": {
           "AutoMapper": "8.0.0",
           "BuildingBlocks.Extensions.Assemblies": "1.0.0",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
+          "Z.EntityFramework.Extensions.EFCore": "2.3.0"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.AutoMapper.dll": {}
@@ -2545,7 +2545,7 @@
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "Newtonsoft.Json": "12.0.1",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
+          "Z.EntityFramework.Extensions.EFCore": "2.3.0"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.DataTransfer.dll": {}
@@ -2558,7 +2558,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
-          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
+          "Z.EntityFramework.Extensions.EFCore": "2.3.0"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.EntityFramework.dll": {}
@@ -2572,7 +2572,7 @@
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "Newtonsoft.Json": "12.0.1",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
+          "Z.EntityFramework.Extensions.EFCore": "2.3.0"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.EventBus.dll": {}
@@ -2601,7 +2601,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
-          "Z.EntityFramework.Extensions.EFCore": "2.2.9"
+          "Z.EntityFramework.Extensions.EFCore": "2.3.0"
         },
         "compile": {
           "bin/placeholder/BuildingBlocks.Extensions.Assemblies.dll": {}
@@ -8361,5 +8361,43 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Обнаружено понижение версии пакета Z.EntityFramework.Extensions.EFCore с 2.3.0 на 2.2.9. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n Login.Db -> BuildingBlocks.EntityFramework -> Z.EntityFramework.Extensions.EFCore (>= 2.3.0) \r\n Login.Db -> Z.EntityFramework.Extensions.EFCore (>= 2.2.9)",
+      "libraryId": "Z.EntityFramework.Extensions.EFCore",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Обнаружено понижение версии пакета Z.EntityFramework.Extensions.EFCore с 2.3.0 на 2.2.9. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n Login.Db -> BuildingBlocks.AutoMapper -> Z.EntityFramework.Extensions.EFCore (>= 2.3.0) \r\n Login.Db -> Z.EntityFramework.Extensions.EFCore (>= 2.2.9)",
+      "libraryId": "Z.EntityFramework.Extensions.EFCore",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Обнаружено понижение версии пакета Z.EntityFramework.Extensions.EFCore с 2.3.0 на 2.2.9. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n Login.Db -> BuildingBlocks.DataTransfer -> Z.EntityFramework.Extensions.EFCore (>= 2.3.0) \r\n Login.Db -> Z.EntityFramework.Extensions.EFCore (>= 2.2.9)",
+      "libraryId": "Z.EntityFramework.Extensions.EFCore",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Обнаружено понижение версии пакета Z.EntityFramework.Extensions.EFCore с 2.3.0 на 2.2.9. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n Login.Db -> BuildingBlocks.EventBus -> Z.EntityFramework.Extensions.EFCore (>= 2.3.0) \r\n Login.Db -> Z.EntityFramework.Extensions.EFCore (>= 2.2.9)",
+      "libraryId": "Z.EntityFramework.Extensions.EFCore",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    }
+  ]
 }
