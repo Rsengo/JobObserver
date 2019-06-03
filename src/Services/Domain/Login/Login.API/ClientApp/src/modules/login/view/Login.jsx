@@ -9,7 +9,7 @@ import LoginControls  from './controls/LoginControls'
 import { Header } from '../../header'
 import LoginContent from './content/LoginContent'
 import WebApiService from '../../../services/webApiService'
-import { Paper } from '@material-ui/core'
+import { Snackbar, Paper } from '@material-ui/core'
 
 import './Login.styl'
 
@@ -18,54 +18,79 @@ class Login extends Component {
         super(props);
 
         this.state = {
-            email: '',
-            password: ''
+            snackbar: {
+                opened: false,
+                message: ''
+            },
+            user: {
+                email: '',
+                password: ''
+            }
         }
     }
 
     @bind
     login() {
         const { match } = this.props;
-        const { email, password } = this.state;
+        const { user } = this.state;
+        const { email, password } = user;
         
         var loginInfo = {
             email,
             password,
             remember_me: false,
-            // return_url: atob(match.params.returnUrl)
+            return_url: match.params.returnUrl
         }
 
         var service = new WebApiService();
         service.login(loginInfo).then((response) => {
             window.location.href = response.data;
+        }).catch(() => {
+            this.handleClick({message: 'Неверный логин или пароль!'});
         });
     }
 
     @bind
     changeState(e) {
-        this.setState({...this.state, [e.currentTarget.name]: e.currentTarget.value});
+        this.setState({ ...this.state, user: {...this.state.user, [e.currentTarget.name]: e.currentTarget.value} });
     }
 
+    @bind
+    handleClick(state) {
+        this.setState({ ...this.state, snackbar: {opened: true, ...state} });
+    };
+    
+    @bind
+    handleClose() {
+        this.setState({ ...this.state, snackbar: {...this.state.snackbar, opened: false} });
+    };
+
     render() {
-        var b = block('login')
+        var b = block('login');
+        const { snackbar } = this.state;
         return (
             <div className={b("app")}>
-            <div className={b('content_container')}>
-                <Paper className='login__app_content'>
-                    <div className={b()}>
-                        <div className={b('header')}>
-                            <Header />
+                <div className={b('content_container')}>
+                    <Paper className='login__app_content'>
+                        <div className={b()}>
+                            <div className={b('header')}>
+                                    <Header />
+                            </div>
+                            <div className={b('content')}>
+                                <LoginContent callback={this.changeState}/>
+                            </div>
+                            <div className={b('controls')}>
+                                <LoginControls loginCallback={this.login}/>
+                            </div>
+
+                            <Snackbar
+                                anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+                                open={snackbar.opened}
+                                onClose={this.handleClose}
+                                message={<span id={b('message-id')}>{snackbar.message}</span>} />
                         </div>
-                        <div className={b('content')}>
-                            {/* <LoginContent callback={this.changeState} returnUrl={this.props.match.params.returnUrl}/> */}
-                            <LoginContent callback={this.changeState}/>
-                        </div>
-                        <div className={b('controls')}>
-                            <LoginControls loginCallback={this.login}/>
-                        </div>
-                    </div>
-                </Paper>
-            </div>
+                    </Paper>
+                </div>
             </div>
         )
     }

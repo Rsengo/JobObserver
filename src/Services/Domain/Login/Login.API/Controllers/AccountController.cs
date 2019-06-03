@@ -71,10 +71,10 @@ namespace Login.API.Controllers
 
         [HttpPost("login")]
         [AllowAnonymous]
-        public async Task<IActionResult> Login([FromForm]LoginViewModel model)
+        public async Task<IActionResult> Login([FromBody]LoginViewModel model)
         {
             _logger.LogCritical($"{model.Email}+\n+{model.Password}+\n+{model.RememberMe}+\n+{model.ReturnUrl}");
-            //TODO обработка ошибок
+            
             if (!ModelState.IsValid)
                 return BadRequest("Неверный формат данных");
 
@@ -98,10 +98,10 @@ namespace Login.API.Controllers
 
             await _signInManager.SignInAsync(user, props);
 
-            //var bytes = Convert.FromBase64String(model.ReturnUrl);
-            var returnUrl = model.ReturnUrl;
+            var bytes = Convert.FromBase64String(model.ReturnUrl);
+            var returnUrl = Encoding.UTF8.GetString(bytes);
 
-            return LocalRedirect(returnUrl);
+            return Ok(returnUrl);
         }
 
         /// <summary>

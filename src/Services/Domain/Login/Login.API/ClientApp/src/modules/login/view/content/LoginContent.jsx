@@ -1,16 +1,15 @@
 import React from 'react';
 import { Component } from 'react'
-import PropTypes from 'prop-types'
-import { withRouter } from 'react-router-dom'
 import { block } from 'bem-cn'
 import { bind } from 'decko'
 import { Visibility, VisibilityOff } from '@material-ui/icons'
 import { 
     TextField, 
     InputAdornment, 
-    IconButton
+    IconButton,
+    FormControlLabel,
+    Checkbox
 } from '@material-ui/core'
-import { textFieldsTheme } from '../../../../styles'
 
 
 import './LoginContent.styl'
@@ -21,6 +20,7 @@ class LoginContent extends Component {
 
         this.state = {
             showPassword: false,
+            rememberMe: false
         };
     }
 
@@ -30,12 +30,11 @@ class LoginContent extends Component {
     };
 
     render() {
-        const { callback, returnUrl } = this.props
+        const { callback } = this.props
 
         var b = block('login_content')
         return (
             <div className={b()}>
-            {/* <form action='http://localhost:5105/account/login' method="post"> */}
                 <TextField
                     id='email-input'
                     label='Email'
@@ -67,10 +66,18 @@ class LoginContent extends Component {
                         )
                       }}
                     variant='outlined'/>
-                    {/* <input name='rememberme' value='true'/>
-                    <input name='returnurl' value={atob(returnUrl)}/>
-                    <button type='submit'>zazazaz</button>
-            </form> */}
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      inputProps={{name: 'remember_me'}}
+                      onChange={callback}
+                      value={this.state.rememberMe}
+                      color="primary"
+                    />
+                  }
+                  label="Remember me"
+                  labelPlacement="start"
+                />
             </div>
         )
     }

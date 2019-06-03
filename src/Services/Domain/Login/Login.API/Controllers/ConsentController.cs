@@ -4,6 +4,7 @@ using IdentityServer4.Stores;
 using Login.API.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -21,18 +22,21 @@ namespace Login.API.Controllers
         private readonly IClientStore _clientStore;
         private readonly IResourceStore _resourceStore;
         private readonly IIdentityServerInteractionService _interaction;
+        private readonly IOptions<RedirectSettings> _redirectSettings;
 
 
         public ConsentController(
             ILogger<ConsentController> logger,
             IIdentityServerInteractionService interaction,
             IClientStore clientStore,
-            IResourceStore resourceStore)
+            IResourceStore resourceStore,
+            IOptions<RedirectSettings> redirectSettings)
         {
             _logger = logger;
             _interaction = interaction;
             _clientStore = clientStore;
             _resourceStore = resourceStore;
+            _redirectSettings = redirectSettings;
         }
 
         /// <summary>
@@ -45,11 +49,10 @@ namespace Login.API.Controllers
         {
             var vm = await BuildViewModelAsync(returnUrl);
 
-            ViewData["ReturnUrl"] = returnUrl;
             if (vm != null)
             {
                 var serializedVm = JsonConvert.SerializeObject(vm);
-                return View("Index", serializedVm);
+                return Redirect($"{_redirectSettings.Value.FullRegistrationPageUrl}/consent_url");
             }
 
             return View("Error");

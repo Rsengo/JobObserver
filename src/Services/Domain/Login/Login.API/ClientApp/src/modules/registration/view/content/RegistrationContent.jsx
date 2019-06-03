@@ -11,6 +11,7 @@ import {
     IconButton
 } from '@material-ui/core'
 import roles from '../../../../settings/roles'
+import dictionariesService from '../../../../services/dictionariesService'
 
 import './RegistrationContent.styl'
 
@@ -20,6 +21,80 @@ const rolesOptions = Object.values(roles).map(role => {
     value: role.id
   }
 });
+
+const makePromiseResolving = requestDelegate => {
+  const result = inputValue => {
+    return new Promise(resolve => {
+      const promise = requestDelegate(inputValue);
+      promise.then(response => {
+        const data = response.data.map(x => {
+          return { label: x.name, value: x.id }
+        });
+        resolve(data);
+      });
+    });
+  }
+  return result;
+}
+
+const EmployerManagerContent = ({callback}) =>  {
+  const b = block('employer_manager_content')
+  return (
+    <div className={b()}>
+      <TextField
+        id='position-input'
+        label='Должность'
+        type='text'
+        name='position'
+        required={true}
+        margin='normal'
+        onChange={callback}
+        InputLabelProps={{
+          shrink: true,
+        }}/>
+
+      <AsyncMaterialSelect 
+        label='Организация'
+        name='organization_id'
+        required={true}
+        placeholder='Выберите организацию'
+        loadDataCallback={makePromiseResolving(dictionariesService.searchEmployers)}
+        InputLabelProps={{
+          shrink: true,
+        }}
+        onChange={callback}/>
+    </div>
+  )
+}
+const EducationalInstitutionManagerContent = ({callback}) =>  {
+  const b = block('educational_institution_manager_content')
+  return (
+    <div className={b()}>
+      <TextField
+        id='position-input'
+        label='Должность'
+        type='text'
+        name='position'
+        required={true}
+        margin='normal'
+        onChange={callback}
+        InputLabelProps={{
+          shrink: true,
+        }}/>
+
+      <AsyncMaterialSelect 
+        label='Образовательное учреждение'
+        name='organization_id'
+        required={true}
+        placeholder='Выберите образовательное учреждение'
+        loadDataCallback={makePromiseResolving(dictionariesService.searchEducationalInstitutions)}
+        InputLabelProps={{
+          shrink: true,
+        }}
+        onChange={callback}/>
+    </div>
+  )
+}
 
 class RegistrationContent extends Component {
     constructor(props) {
@@ -37,8 +112,16 @@ class RegistrationContent extends Component {
       this.setState({ ...this.state, showPassword: !this.state.showPassword });
     };
 
+    @bind
+    handleChangeRole(e) {
+      const { callback } = this.props;
+      this.setState({ ...this.state, role: e.currentTarget.value });
+      callback(e);
+    }
+
     render() {
-        const { callback } = this.props
+        const { callback } = this.props;
+        const { role } = this.state;
 
         var b = block('registration_content')
         return (
@@ -52,7 +135,7 @@ class RegistrationContent extends Component {
                     InputLabelProps={{
                       shrink: true,
                     }}
-                    onChange={callback} />
+                    onChange={this.handleChangeRole} />
 
                 <TextField
                     id='email-input'
@@ -140,7 +223,7 @@ class RegistrationContent extends Component {
                     }}/>
 
                   <TextField
-                    id='birth-date-name-input'
+                    id='birth-date-input'
                     label='Дата рождения'
                     type='date'
                     name='birth_date'
@@ -151,14 +234,26 @@ class RegistrationContent extends Component {
                       shrink: true,
                     }}/>
 
-                    <AsyncMaterialSelect 
-                      label='Место проживания'
-                      name='area_id'
-                      placeholder='Выберите город'
-                      InputLabelProps={{
-                        shrink: true,
-                      }}
-                      onChange={callback}/>
+                  <AsyncMaterialSelect 
+                    label='Место проживания'
+                    name='area_id'
+                    loadDataCallback={makePromiseResolving(dictionariesService.searchCities)}
+                    placeholder='Выберите город'
+                    InputLabelProps={{
+                      shrink: true,
+                    }}
+                    onChange={callback}/>
+
+                    
+                  {
+                    role === roles.EMPLOYER_MANAGER.id && 
+                    <EmployerManagerContent callback={callback}/>
+                  }
+
+                  {
+                    role === roles.EDUCATIONAL_INSTITUTION_MANAGER.id && 
+                    <EducationalInstitutionManagerContent callback={callback}/>
+                  }
             </div>
         )
     }

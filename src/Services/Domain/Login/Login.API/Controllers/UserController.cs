@@ -13,6 +13,7 @@ using Login.Db.Models.Contacts;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Login.Db.Dto.Models.Contacts;
+using Login.API.Data;
 
 namespace Login.API.Controllers
 {
@@ -23,22 +24,16 @@ namespace Login.API.Controllers
 
         private readonly IEventBus _eventBus;
 
+        private readonly LoginDbContextSeed _seeder;
+
         public UserController(
             UserManager<User> userManager,
-            IEventBus eventBus)
+            IEventBus eventBus,
+            LoginDbContextSeed seeder)
         {
             _userManager = userManager;
             _eventBus = eventBus;
-        }
-
-        private readonly LoginDbContext _context;
-
-        public UserController(
-            UserManager<User> userManager,
-            LoginDbContext context)
-        {
-            _userManager = userManager;
-            _context = context;
+            _seeder = seeder;
         }
 
         [HttpPut("{id}")]
@@ -49,20 +44,15 @@ namespace Login.API.Controllers
 
             await _userManager.UpdateAsync(newUser);
 
-            //if (dto.Contacts != null)
-            //{
-            //    await UpdateContacts(dto.Contacts, id);
-            //}
-
             var response = Mapper.Map<DtoUser>(newUser);
 
             return Ok(response);
         }
 
-        [HttpPost("restoreadmin")]
+        [HttpPost("_restoreadmin")]
         public async Task<IActionResult> RestoreAdmin()
         {
-            var user = await _userManager.FindByEmailAsync(IdentityConfig.ADMIN_EMAIL);
+            var user = await _seeder.SeedAsync();
             var dto = Mapper.Map<DtoUser>(user);
 
             var @event = new ApplicantsChanged
@@ -73,29 +63,6 @@ namespace Login.API.Controllers
             _eventBus.Publish(@event);
 
             return Ok();
-        }
-
-        private async Task UpdateContacts(DtoContact dto, string id)
-        {
-            var contacts = Mapper.Map<Contact>(dto);
-
-            await _context.BulkMergeAsync(new[] { contacts });
-
-            var phones = contacts.Phones;
-            var sites = contacts.Sites;
-
-            foreach (var phone in phones)
-            {
-                phone.ContactId = contacts.Id;
-            }
-
-            foreach (var site in sites)
-            {
-                site.ContactId = contacts.Id;
-            }
-
-            await _context.BulkMergeAsync(new[] { phones });
-            await _context.BulkMergeAsync(new[] { sites });
         }
     }
 }

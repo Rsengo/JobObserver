@@ -47,7 +47,7 @@ class Registration extends Component {
         service.registration(role, data).then((response) => {
             window.location.href = response.data;
         }).catch(() => {
-            this.handleClick({message: 'Возникла ошибка при регистрации'})
+            this.handleClick({message: 'Возникла ошибка при регистрации!'});
         });
     }
 
@@ -80,12 +80,12 @@ class Registration extends Component {
 
     @bind
     handleClick(state) {
-        this.setState({ snackbar: {opened: true, ...state} });
+        this.setState({ ...this.state, snackbar: {opened: true, ...state} });
     };
     
     @bind
     handleClose() {
-        this.setState({ snackbar: {...this.state.snackbar, opened: false} });
+        this.setState({ ...this.state, snackbar: {...this.state.snackbar, opened: false} });
     };
 
     render() {

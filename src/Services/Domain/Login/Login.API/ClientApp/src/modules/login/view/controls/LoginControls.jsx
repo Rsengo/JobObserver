@@ -16,7 +16,11 @@ const LoginControls = ({ loginCallback }) => {
             <div className={b()}>
                 <div className={b('registration_button_block')}>
                     <Button color="secondary" >
-                        <Link to={registrationUrl}>Регистрация</Link>
+                        <Link 
+                            className={b('registration_link')} 
+                            to={registrationUrl}>
+                                Регистрация
+                        </Link>
                     </Button>
                 </div>
                 <div className={b('login_button_block')}>

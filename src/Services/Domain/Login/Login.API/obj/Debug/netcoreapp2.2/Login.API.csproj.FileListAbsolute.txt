@@ -104,3 +104,4 @@ D:\Repos\JobObserver1\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.
 D:\Repos\JobObserver1\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.csproj.CopyComplete
 D:\Repos\JobObserver1\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.dll
 D:\Repos\JobObserver1\src\Services\Domain\Login\Login.API\obj\Debug\netcoreapp2.2\Login.API.pdb
+D:\Repos\JobObserver1\src\Services\Domain\Login\Login.API\bin\Debug\netcoreapp2.2\Certificates\cert.pfx

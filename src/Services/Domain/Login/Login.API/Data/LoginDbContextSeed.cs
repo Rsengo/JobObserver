@@ -18,40 +18,48 @@ namespace Login.API.Data
     {
         private readonly IPasswordHasher<User> _passwordHasher;
 
-        public LoginDbContextSeed()
-        {
-            _passwordHasher = new PasswordHasher<User>();
-        }
+        private readonly LoginDbContext _context;
 
-        public async Task SeedAsync(
+        private readonly ILogger<LoginDbContextSeed> _logger;
+
+        public LoginDbContextSeed(
             LoginDbContext context,
             ILogger<LoginDbContextSeed> logger)
+        {
+            _passwordHasher = new PasswordHasher<User>();
+            _logger = logger;
+            _context = context;
+        }
+
+        public async Task<User> SeedAsync()
         {
             try
             {
                 var roles = GetDefaultRoles();
-                var user = GetAdminUser(_passwordHasher);
+                var user = await GetAdminUserAsync(_passwordHasher, _context);
 
-                if (!context.Roles.Any())
-                    context.Roles.AddRange(roles);
+                if (!_context.Roles.Any())
+                    _context.Roles.AddRange(roles);
 
-                if (!context.Users.Any())
-                    context.Users.Add(user);
+                if (!_context.Users.Any())
+                    _context.Users.Add(user);
 
-                await context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
 
-                if (!context.UserRoles.Any())
+                if (!_context.UserRoles.Any())
                 {
                     var adminRoles = GetAdminRoles(
-                        await context.Users.Where(x => x.UserName == "rsengo42@gmail.com").SingleOrDefaultAsync(), 
-                        await context.Roles.ToListAsync());
-                    context.UserRoles.AddRange(adminRoles);
-                    await context.SaveChangesAsync();
+                        await _context.Users.Where(x => x.UserName == "rsengo42@gmail.com").SingleOrDefaultAsync(), 
+                        await _context.Roles.ToListAsync());
+                    _context.UserRoles.AddRange(adminRoles);
+                    await _context.SaveChangesAsync();
                 }
+
+                return user;
             }
             catch (SqlException ex)
             {
-                logger.LogError("Error when try to add admin user: {@ex}", ex);
+                _logger.LogError("Error when try to add admin user: {@ex}", ex);
                 throw;
             }
         }
@@ -69,8 +77,11 @@ namespace Login.API.Data
             return userRoles;
         }
 
-        private static User GetAdminUser(IPasswordHasher<User> hasher)
+        private static async Task<User> GetAdminUserAsync(IPasswordHasher<User> hasher, LoginDbContext context)
         {
+            var areaId = await context.Areas.Select(x => x.Id).FirstOrDefaultAsync();
+            var genderId = await context.Genders.Select(x => x.Id).FirstOrDefaultAsync();
+
             var admin = new User
             {
                 Id = Guid.NewGuid().ToString("D"),
@@ -81,7 +92,9 @@ namespace Login.API.Data
                 UserName = IdentityConfig.ADMIN_EMAIL,
                 NormalizedUserName = IdentityConfig.ADMIN_EMAIL.ToUpper(),
                 PhoneNumber = "+79996195928",
-                SecurityStamp = Guid.NewGuid().ToString("D")
+                SecurityStamp = Guid.NewGuid().ToString("D"),
+                AreaId = areaId,
+                GenderId = genderId
             };
 
             admin.PasswordHash = hasher.HashPassword(admin, IdentityConfig.ADMIN_PASSWORD);

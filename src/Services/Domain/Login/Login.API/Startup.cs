@@ -26,6 +26,8 @@ using System.Security.Cryptography;
 using Login.API.HttpFilters;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
+using Login.API.Data;
+using Login.API.Certificates;
 
 namespace Login.API
 {
@@ -67,7 +69,10 @@ namespace Login.API
             {
                 x.IssuerUri = "null";
                 x.Authentication.CookieLifetime = TimeSpan.FromHours(2);
+                x.Cors.CorsPolicyName = Configuration["CorsPolicy"];
             })
+                //.AddSigningCredential(Certificate.Get())
+                .AddDeveloperSigningCredential(persistKey: true)
                 .AddAspNetIdentity<User>()
                 .AddConfigurationStore(opt =>
                 {
@@ -150,7 +155,7 @@ namespace Login.API
 
             services.AddScoped<IRegistrationService, RegistrationService>();
 
-            services.AddTransient<ICryptoService>(sp =>
+            services.AddSingleton<ICryptoService>(sp =>
             {
                 var hash = new MD5CryptoServiceProvider();
                 var symmetricAlgorithm = new TripleDESCryptoServiceProvider();
@@ -163,11 +168,12 @@ namespace Login.API
             services.Configure<RedirectSettings>(Configuration);
             services.AddOptions();
 
+            services.AddTransient<LoginDbContextSeed>();
+
             services.AddMvc(opt =>
             {
                 opt.Filters.Add<HttpGlobalExceptionFilter>();
                 //opt.Filters.Add<ValidateModelStateFilter>();
-                opt.Filters.Add<ResponseFilter>();
             }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             // In production, the React files will be served from this directory
@@ -187,24 +193,24 @@ namespace Login.API
             else
             {
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
+                //app.UseHsts();
             }
 
             app.UseCors(Configuration["CorsPolicy"]);
 
 
-            // Make work identity server redirections in Edge and lastest versions of browers. WARN: Not valid in a production environment.
-            //app.Use(async (context, next) =>
-            //{
-            //    context.Response.Headers.Add("Content-Security-Policy", "script-src 'unsafe-inline'");
-            //    await next();
-            //});
+            //Make work identity server redirections in Edge and lastest versions of browers. WARN: Not valid in a production environment.
+           //app.Use(async (context, next) =>
+           //{
+           //    context.Response.Headers.Add("Content-Security-Policy", "script-src 'unsafe-inline'");
+           //    await next();
+           //});
 
             app.UseForwardedHeaders();
 
             app.UseIdentityServer();
 
-            //app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
 
