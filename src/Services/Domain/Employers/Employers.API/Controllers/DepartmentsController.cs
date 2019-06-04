@@ -31,7 +31,7 @@ namespace Employers.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(long id)
+        public async Task<IActionResult> Get([FromQuery]long id)
         {
             var result = await _context.Departments
                 .SingleOrDefaultAsync(x => x.Id == id)
@@ -42,7 +42,7 @@ namespace Employers.API.Controllers
         }
 
         [HttpPost("search")]
-        public async Task<IActionResult> Search(DepartmentSearchFilter filter)
+        public async Task<IActionResult> Search([FromBody]DepartmentSearchFilter filter)
         {
             var comprassionMethod = filter.CaseSensitive
                 ? StringComparison.InvariantCulture
@@ -64,7 +64,7 @@ namespace Employers.API.Controllers
         }
 
         [HttpGet("byEmployer/{id}")]
-        public async Task<IActionResult> GetByEmployer(long id)
+        public async Task<IActionResult> GetByEmployer([FromQuery]long id)
         {
             var result = await _context.Departments
                 .SingleOrDefaultAsync(x => x.OrganizationId == id)
@@ -75,7 +75,7 @@ namespace Employers.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(DtoDepartment dto)
+        public async Task<IActionResult> Post([FromBody]DtoDepartment dto)
         {
             var entity = Mapper.Map<Department>(dto);
             _context.Departments.Add(entity);
@@ -95,7 +95,7 @@ namespace Employers.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(DtoDepartment dto, long id)
+        public async Task<IActionResult> Update([FromBody]DtoDepartment dto, [FromQuery]long id)
         {
             var template = Mapper.Map<Department>(dto);
 
@@ -117,7 +117,7 @@ namespace Employers.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(long id)
+        public async Task<IActionResult> Delete([FromQuery]long id)
         {
             await _context.Departments
                 .Where(x => x.Id == id)

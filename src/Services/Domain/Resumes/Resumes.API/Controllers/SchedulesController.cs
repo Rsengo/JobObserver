@@ -28,7 +28,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("schedules/{id}")]
-        public async Task<IActionResult> Get(long id)
+        public async Task<IActionResult> Get([FromQuery]long id)
         {
             var result = await _context.ResumeSchedules
                 .Include(x => x.Schedule)
@@ -40,7 +40,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("{id}/schedules")]
-        public async Task<IActionResult> GetByResume(long id)
+        public async Task<IActionResult> GetByResume([FromQuery]long id)
         {
             var result = await _context.ResumeSchedules
                 .Where(x => x.ResumeId == id)
@@ -53,7 +53,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpPost("Schedules")]
-        public async Task<IActionResult> Post(DtoResumeSchedule dto)
+        public async Task<IActionResult> Post([FromBody]DtoResumeSchedule dto)
         {
             var entity = Mapper.Map<ResumeSchedule>(dto);
             _context.ResumeSchedules.Add(entity);
@@ -66,7 +66,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpPut("schedules/{id}")]
-        public async Task<IActionResult> Update(DtoResumeSchedule dto, long id)
+        public async Task<IActionResult> Update([FromBody]DtoResumeSchedule dto, [FromQuery]long id)
         {
             var template = Mapper.Map<ResumeSchedule>(dto);
 
@@ -81,7 +81,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpDelete("schedules/{id}")]
-        public async Task<IActionResult> Delete(long id)
+        public async Task<IActionResult> Delete([FromQuery]long id)
         {
             await _context.ResumeSchedules
                 .Where(x => x.Id == id)

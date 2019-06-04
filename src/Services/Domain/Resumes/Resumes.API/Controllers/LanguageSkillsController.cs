@@ -29,7 +29,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(long id)
+        public async Task<IActionResult> Get([FromQuery]long id)
         {
             var result = await _context.LanguageSkills
                 .Include(x => x.Level)
@@ -42,7 +42,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Save(DtoLanguageSkill dto)
+        public async Task<IActionResult> Save([FromBody]DtoLanguageSkill dto)
         {
             var template = Mapper.Map<LanguageSkill>(dto);
 
@@ -54,7 +54,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(DtoLanguageSkill dto, long id)
+        public async Task<IActionResult> Update([FromBody]DtoLanguageSkill dto, [FromQuery]long id)
         {
             var template = Mapper.Map<LanguageSkill>(dto);
 
@@ -69,7 +69,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(long id)
+        public async Task<IActionResult> Delete([FromQuery]long id)
         {
             await _context.LanguageSkills
                 .Where(x => x.Id == id)

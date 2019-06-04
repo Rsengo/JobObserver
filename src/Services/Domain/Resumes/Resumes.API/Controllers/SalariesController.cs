@@ -28,7 +28,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(long id)
+        public async Task<IActionResult> Get([FromQuery]long id)
         {
             var result = await _context.Salaries
                 .Include(x => x.Currency)
@@ -40,7 +40,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Save(DtoSalary dto)
+        public async Task<IActionResult> Save([FromBody]DtoSalary dto)
         {
             var template = Mapper.Map<Salary>(dto);
 
@@ -52,7 +52,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(DtoSalary dto, long id)
+        public async Task<IActionResult> Update([FromBody]DtoSalary dto, [FromQuery]long id)
         {
             var template = Mapper.Map<Salary>(dto);
 
@@ -67,7 +67,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(long id)
+        public async Task<IActionResult> Delete([FromQuery]long id)
         {
             await _context.Salaries
                 .Where(x => x.Id == id)

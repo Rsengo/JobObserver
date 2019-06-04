@@ -189,8 +189,9 @@ import { bind } from 'decko';
 
     @bind
     onSelectValueChange(callback) {
-      return (value) => {
-          this.setState({ ...this.state, value })
+      return (item) => {
+          const { value } = item;
+          this.setState({ ...this.state, value });
           callback({
               currentTarget: {
                   name: this.state.name,

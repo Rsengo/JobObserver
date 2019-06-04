@@ -22,7 +22,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpGet("skills/{id}")]
-        public async Task<IActionResult> Get(long id)
+        public async Task<IActionResult> Get([FromQuery]long id)
         {
             var result = await _context.VacancySkills
                 .Include(x => x.Skill)
@@ -34,7 +34,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpGet("{id}/skills")]
-        public async Task<IActionResult> GetByVacancy(long id)
+        public async Task<IActionResult> GetByVacancy([FromQuery]long id)
         {
             var result = await _context.VacancySkills
                 .Where(x => x.VacancyId == id)
@@ -47,7 +47,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpPost("skills")]
-        public async Task<IActionResult> Post(DtoVacancySkill dto)
+        public async Task<IActionResult> Post([FromBody]DtoVacancySkill dto)
         {
             var entity = Mapper.Map<VacancySkill>(dto);
             _context.VacancySkills.Add(entity);
@@ -60,7 +60,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpPut("skills/{id}")]
-        public async Task<IActionResult> Update(DtoVacancySkill dto, long id)
+        public async Task<IActionResult> Update([FromBody]DtoVacancySkill dto, [FromQuery]long id)
         {
             var template = Mapper.Map<VacancySkill>(dto);
 
@@ -75,7 +75,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpDelete("skills/{id}")]
-        public async Task<IActionResult> Delete(long id)
+        public async Task<IActionResult> Delete([FromQuery]long id)
         {
             await _context.VacancySkills
                 .Where(x => x.Id == id)

@@ -108,7 +108,7 @@ namespace Login.API.Controllers
         /// Show logout page
         /// </summary>
         [HttpGet("logout")]
-        public async Task<IActionResult> Logout(string logoutId)
+        public async Task<IActionResult> Logout([FromQuery]string logoutId)
         {
             if (User.Identity.IsAuthenticated == false)
             {
@@ -129,7 +129,7 @@ namespace Login.API.Controllers
         }
 
         [HttpPost("logout")]
-        public async Task<IActionResult> Logout(LogoutViewModel model)
+        public async Task<IActionResult> Logout([FromBody]LogoutViewModel model)
         {
             string logoutId = null;
 
@@ -179,7 +179,8 @@ namespace Login.API.Controllers
             return Redirect(decodedUrl);
         }
 
-        public async Task<IActionResult> DeviceLogOut(string redirectUrl)
+        [HttpGet("devicelogout")]
+        public async Task<IActionResult> DeviceLogOut([FromQuery]string redirectUrl)
         {
             // delete authentication cookie
             await HttpContext.SignOutAsync();
@@ -189,11 +190,12 @@ namespace Login.API.Controllers
 
             return Redirect(redirectUrl);
         }
-        
+
         /// <summary>
         /// initiate roundtrip to external authentication provider
         /// </summary>
-        public IActionResult ExternalLogin(string provider, string returnUrl)
+        [HttpGet("externallogin")]
+        public IActionResult ExternalLogin([FromQuery]string provider, [FromQuery]string returnUrl)
         {
             if (returnUrl != null)
             {

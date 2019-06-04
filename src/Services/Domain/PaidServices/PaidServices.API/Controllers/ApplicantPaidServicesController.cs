@@ -36,7 +36,7 @@ namespace PaidServices.API.Controllers
         }
 
         [HttpGet("applicant/{id}")]
-        public async Task<IActionResult> Get(long id)
+        public async Task<IActionResult> Get([FromQuery]long id)
         {
             var result = await _context.ApplicantPaidServices
                 .SingleOrDefaultAsync(x => x.Id == id)
@@ -47,7 +47,7 @@ namespace PaidServices.API.Controllers
         }
 
         [HttpPost("applicant/search")]
-        public async Task<IActionResult> Search(SearchFilter filter)
+        public async Task<IActionResult> Search([FromBody]SearchFilter filter)
         {
             var comprassionMethod = filter.CaseSensitive
                 ? StringComparison.InvariantCulture

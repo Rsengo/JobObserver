@@ -33,7 +33,7 @@ namespace Employers.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(long id)
+        public async Task<IActionResult> Get([FromQuery]long id)
         {
             var result = await _context.Employers
                 .Include(x => x.Type)
@@ -49,7 +49,7 @@ namespace Employers.API.Controllers
         }
 
         [HttpPost("search")]
-        public async Task<IActionResult> Search(SearchFilter filter)
+        public async Task<IActionResult> Search([FromBody]SearchFilter filter)
         {
             var comprassionMethod = filter.CaseSensitive
                 ? StringComparison.InvariantCulture
@@ -79,7 +79,7 @@ namespace Employers.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(DtoEmployer dto)
+        public async Task<IActionResult> Post([FromBody]DtoEmployer dto)
         {
             var entity = Mapper.Map<Employer>(dto);
             _context.Employers.Add(entity);
@@ -99,7 +99,7 @@ namespace Employers.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(DtoEmployer dto, long id)
+        public async Task<IActionResult> Update([FromBody]DtoEmployer dto, [FromQuery]long id)
         {
             var template = Mapper.Map<Employer>(dto);
 
@@ -121,7 +121,7 @@ namespace Employers.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(long id)
+        public async Task<IActionResult> Delete([FromQuery]long id)
         {
             await _context.Employers
                 .Where(x => x.Id == id)
@@ -140,7 +140,7 @@ namespace Employers.API.Controllers
         }
 
         [HttpGet("{EmployerId}/synonyms")]
-        public async Task<IActionResult> GetSynonyms(long EmployerId)
+        public async Task<IActionResult> GetSynonyms([FromQuery]long EmployerId)
         {
             var result = await _context.EmployerSynonyms
                 .SingleOrDefaultAsync(x => x.EmployerId == EmployerId)
@@ -151,7 +151,7 @@ namespace Employers.API.Controllers
         }
 
         [HttpPost("synonyms")]
-        public async Task<IActionResult> PostSynonym(DtoEmployerSynonyms dto)
+        public async Task<IActionResult> PostSynonym([FromBody]DtoEmployerSynonyms dto)
         {
             var entity = Mapper.Map<EmployerSynonyms>(dto);
             _context.EmployerSynonyms.Add(entity);
@@ -165,8 +165,8 @@ namespace Employers.API.Controllers
 
         [HttpPut("synonyms/{id}")]
         public async Task<IActionResult> UpdateSynonym(
-            DtoEmployerSynonyms dto,
-            long id)
+            [FromBody]DtoEmployerSynonyms dto,
+            [FromQuery]long id)
         {
             var template = Mapper.Map<EmployerSynonyms>(dto);
 
@@ -181,7 +181,7 @@ namespace Employers.API.Controllers
         }
 
         [HttpDelete("synonyms/{id}")]
-        public async Task<IActionResult> DeleteSynonym(long id)
+        public async Task<IActionResult> DeleteSynonym([FromQuery]long id)
         {
             await _context.EmployerSynonyms
                 .Where(x => x.Id == id)
@@ -194,7 +194,7 @@ namespace Employers.API.Controllers
         }
 
         [HttpGet("{partnersId}/partners")]
-        public async Task<IActionResult> GetPartners(long partnersId)
+        public async Task<IActionResult> GetPartners([FromQuery]long partnersId)
         {
             var result = await _context.Partners
                 .SingleOrDefaultAsync(x => x.EmployerId == partnersId)
@@ -205,7 +205,7 @@ namespace Employers.API.Controllers
         }
 
         [HttpPost("partners/{id}")]
-        public async Task<IActionResult> PostPartner(DtoPartners dto)
+        public async Task<IActionResult> PostPartner([FromBody]DtoPartners dto)
         {
             var entity = Mapper.Map<Partners>(dto);
             _context.Partners.Add(entity);
@@ -225,7 +225,7 @@ namespace Employers.API.Controllers
         }
 
         [HttpPut("partners/{id}")]
-        public async Task<IActionResult> UpdatePartner(DtoPartners dto, long id)
+        public async Task<IActionResult> UpdatePartner([FromBody]DtoPartners dto, [FromQuery]long id)
         {
             var template = Mapper.Map<Partners>(dto);
 
@@ -247,7 +247,7 @@ namespace Employers.API.Controllers
         }
 
         [HttpDelete("partners/{id}")]
-        public async Task<IActionResult> DeletePartner(long id)
+        public async Task<IActionResult> DeletePartner([FromQuery]long id)
         {
             await _context.Partners
                 .Where(x => x.Id == id)

@@ -23,7 +23,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(long id)
+        public async Task<IActionResult> Get([FromQuery]long id)
         {
             var result = await _context.Vacancies
                 .Include(x => x.Address)
@@ -64,7 +64,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpGet("byEmployer/{id}")]
-        public async Task<IActionResult> GetByCompany(long id)
+        public async Task<IActionResult> GetByCompany([FromQuery]long id)
         {
             var result = await _context.Vacancies
     .Include(x => x.Address)
@@ -106,7 +106,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpPost("pagination")]
-        public async Task<IActionResult> Pagination(PaginationFilter filter)
+        public async Task<IActionResult> Pagination([FromBody]PaginationFilter filter)
         {
             var result = await _context.Vacancies
 .Include(x => x.Address)
@@ -149,7 +149,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(DtoVacancy dto)
+        public async Task<IActionResult> Post([FromBody]DtoVacancy dto)
         {
             var entity = Mapper.Map<Vacancy>(dto);
             entity.PublishedAt = DateTime.UtcNow;
@@ -164,7 +164,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(DtoVacancy dto, long id)
+        public async Task<IActionResult> Update([FromBody]DtoVacancy dto, [FromQuery]long id)
         {
             var template = Mapper.Map<Vacancy>(dto);
 
@@ -179,7 +179,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(long id)
+        public async Task<IActionResult> Delete([FromQuery]long id)
         {
             await _context.Vacancies
                 .Where(x => x.Id == id)

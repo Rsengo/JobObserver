@@ -22,7 +22,7 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(long id)
+        public async Task<IActionResult> Get([FromQuery]long id)
         {
             var result = await _context.Addresses
                 .Include(x => x.Station)
@@ -39,7 +39,7 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Save(DtoAddress dto)
+        public async Task<IActionResult> Save([FromBody]DtoAddress dto)
         {
             var template = Mapper.Map<Address>(dto);
 
@@ -51,7 +51,7 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(DtoAddress dto, long id)
+        public async Task<IActionResult> Update([FromBody]DtoAddress dto, [FromQuery]long id)
         {
             var template = Mapper.Map<Address>(dto);
 
@@ -66,7 +66,7 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(long id)
+        public async Task<IActionResult> Delete([FromQuery]long id)
         {
             await _context.Addresses
                 .Where(x => x.Id == id)

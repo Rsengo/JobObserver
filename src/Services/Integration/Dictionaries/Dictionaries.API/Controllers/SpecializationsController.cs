@@ -32,7 +32,7 @@ namespace Dictionaries.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(long id)
+        public async Task<IActionResult> Get([FromQuery]long id)
         {
             await _context.Specializations.LoadAsync();
             var result = await _context.Specializations.SingleOrDefaultAsync(x => x.Id == id);
@@ -42,7 +42,7 @@ namespace Dictionaries.API.Controllers
         }
 
         [HttpPost("search")]
-        public async Task<IActionResult> Search(SearchFilter filter)
+        public async Task<IActionResult> Search([FromBody]SearchFilter filter)
         {
             var entities = await _context.Specializations.ToListAsync();
 

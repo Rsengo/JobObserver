@@ -37,7 +37,7 @@ namespace Login.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> ChangeUserInformation(DtoUser dto, string id)
+        public async Task<IActionResult> ChangeUserInformation([FromBody]DtoUser dto, [FromQuery]string id)
         {
             var newUser = Mapper.Map<User>(dto);
             newUser.Id = id;

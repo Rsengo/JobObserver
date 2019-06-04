@@ -25,7 +25,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(long id)
+        public async Task<IActionResult> Get([FromQuery]long id)
         {
             var result = await _context.Faculties
                 .Include(x => x.Synonyms)
@@ -38,7 +38,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpPost("search")]
-        public async Task<IActionResult> Search(FacultySearchFilter filter)
+        public async Task<IActionResult> Search([FromBody]FacultySearchFilter filter)
         {
             var comprassionMethod = filter.CaseSensitive
                 ? StringComparison.InvariantCulture
@@ -71,7 +71,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(DtoFaculty dto)
+        public async Task<IActionResult> Post([FromBody]DtoFaculty dto)
         {
             var entity = Mapper.Map<Faculty>(dto);
             _context.Faculties.Add(entity);
@@ -84,7 +84,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(DtoFaculty dto, long id)
+        public async Task<IActionResult> Update([FromBody]DtoFaculty dto, [FromQuery]long id)
         {
             var template = Mapper.Map<Faculty>(dto);
 
@@ -99,7 +99,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(long id)
+        public async Task<IActionResult> Delete([FromQuery]long id)
         {
             await _context.Faculties
                 .Where(x => x.Id == id)
@@ -112,7 +112,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpGet("{facultyId}/synonyms")]
-        public async Task<IActionResult> GetSynonyms(long facultyId)
+        public async Task<IActionResult> GetSynonyms([FromQuery]long facultyId)
         {
             var result = await _context.FacultySynonyms
                 .SingleOrDefaultAsync(x => x.FacultyId == facultyId)
@@ -123,7 +123,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpPost("synonyms")]
-        public async Task<IActionResult> PostSynonym(DtoFacultySynonyms dto)
+        public async Task<IActionResult> PostSynonym([FromBody]DtoFacultySynonyms dto)
         {
             var entity = Mapper.Map<FacultySynonyms>(dto);
             _context.FacultySynonyms.Add(entity);
@@ -137,8 +137,8 @@ namespace EducationalInstitutions.API.Controllers
 
         [HttpPut("synonyms/{id}")]
         public async Task<IActionResult> UpdateSynonym(
-            DtoFacultySynonyms dto,
-            long id)
+            [FromBody]DtoFacultySynonyms dto,
+            [FromQuery]long id)
         {
             var template = Mapper.Map<FacultySynonyms>(dto);
 
@@ -153,7 +153,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpDelete("synonyms/{id}")]
-        public async Task<IActionResult> DeleteSynonym(long id)
+        public async Task<IActionResult> DeleteSynonym([FromQuery]long id)
         {
             await _context.FacultySynonyms
                 .Where(x => x.Id == id)

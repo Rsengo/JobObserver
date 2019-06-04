@@ -28,7 +28,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(long id)
+        public async Task<IActionResult> Get([FromQuery]long id)
         {
             var result = await _context.Educations
                 .Include(x => x.EducationalLevel)
@@ -42,7 +42,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("byResume/{id}")]
-        public async Task<IActionResult> GetByResume(long id)
+        public async Task<IActionResult> GetByResume([FromQuery]long id)
         {
             var result = await _context.Educations
                 .Where(x => x.ResumeId == id)
@@ -57,7 +57,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(DtoEducation dto)
+        public async Task<IActionResult> Post([FromBody]DtoEducation dto)
         {
             var entity = Mapper.Map<Education>(dto);
             _context.Educations.Add(entity);
@@ -70,7 +70,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(DtoEducation dto, long id)
+        public async Task<IActionResult> Update([FromBody]DtoEducation dto, [FromQuery]long id)
         {
             var template = Mapper.Map<Education>(dto);
 
@@ -85,7 +85,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(long id)
+        public async Task<IActionResult> Delete([FromQuery]long id)
         {
             await _context.Educations
                 .Where(x => x.Id == id)
@@ -98,7 +98,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("{id}/specializations/")]
-        public async Task<IActionResult> GetSpecializations(long id)
+        public async Task<IActionResult> GetSpecializations([FromQuery]long id)
         {
             var result = await _context.EducationSpecializations
                 .Include(x => x.Specialization)
@@ -110,7 +110,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpPost("specializations")]
-        public async Task<IActionResult> PostSpecialization(DtoEducationSpecialization dto)
+        public async Task<IActionResult> PostSpecialization([FromBody]DtoEducationSpecialization dto)
         {
             var entity = Mapper.Map<EducationSpecialization>(dto);
             _context.EducationSpecializations.Add(entity);
@@ -124,8 +124,8 @@ namespace Resumes.API.Controllers
 
         [HttpPut("specializations/{id}")]
         public async Task<IActionResult> UpdateSpecialization(
-            DtoEducationSpecialization dto, 
-            long id)
+            [FromBody]DtoEducationSpecialization dto,
+            [FromQuery]long id)
         {
             var template = Mapper.Map<EducationSpecialization>(dto);
 
@@ -140,7 +140,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpDelete("specializations/{id}")]
-        public async Task<IActionResult> DeleteSpecialization(long id)
+        public async Task<IActionResult> DeleteSpecialization([FromQuery]long id)
         {
             await _context.EducationSpecializations
                 .Where(x => x.Id == id)

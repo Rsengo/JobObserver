@@ -33,7 +33,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(long id)
+        public async Task<IActionResult> Get([FromQuery]long id)
         {
             var result = await _context.EducationalInstitutions
                 .Include(x => x.Synonyms)
@@ -49,7 +49,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpPost("search")]
-        public async Task<IActionResult> Search(SearchFilter filter)
+        public async Task<IActionResult> Search([FromBody]SearchFilter filter)
         {
             var comprassionMethod = filter.CaseSensitive
                 ? StringComparison.InvariantCulture
@@ -81,7 +81,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(DtoEducationalInstitution dto)
+        public async Task<IActionResult> Post([FromBody]DtoEducationalInstitution dto)
         {
             var entity = Mapper.Map<EducationalInstitution>(dto);
             _context.EducationalInstitutions.Add(entity);
@@ -101,7 +101,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(DtoEducationalInstitution dto, long id)
+        public async Task<IActionResult> Update([FromBody]DtoEducationalInstitution dto, [FromQuery]long id)
         {
             var template = Mapper.Map<EducationalInstitution>(dto);
 
@@ -123,7 +123,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(long id)
+        public async Task<IActionResult> Delete([FromQuery]long id)
         {
             await _context.EducationalInstitutions
                 .Where(x => x.Id == id)
@@ -142,7 +142,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpGet("{educationalInstitutionId}/synonyms")]
-        public async Task<IActionResult> GetSynonyms(long educationalInstitutionId)
+        public async Task<IActionResult> GetSynonyms([FromQuery]long educationalInstitutionId)
         {
             var result = await _context.EducationalInstitutionSynonyms
                 .SingleOrDefaultAsync(x => x.EducationalInstitutionId == educationalInstitutionId)
@@ -153,7 +153,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpPost("synonyms")]
-        public async Task<IActionResult> PostSynonym(DtoEducationalInstitutionSynonyms dto)
+        public async Task<IActionResult> PostSynonym([FromBody]DtoEducationalInstitutionSynonyms dto)
         {
             var entity = Mapper.Map<EducationalInstitutionSynonyms>(dto);
             _context.EducationalInstitutionSynonyms.Add(entity);
@@ -167,8 +167,8 @@ namespace EducationalInstitutions.API.Controllers
 
         [HttpPut("synonyms/{id}")]
         public async Task<IActionResult> UpdateSynonym(
-            DtoEducationalInstitutionSynonyms dto, 
-            long id)
+            [FromBody]DtoEducationalInstitutionSynonyms dto, 
+            [FromQuery]long id)
         {
             var template = Mapper.Map<EducationalInstitutionSynonyms>(dto);
 
@@ -183,7 +183,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpDelete("synonyms/{id}")]
-        public async Task<IActionResult> DeleteSynonym(long id)
+        public async Task<IActionResult> DeleteSynonym([FromQuery]long id)
         {
             await _context.EducationalInstitutionSynonyms
                 .Where(x => x.Id == id)
@@ -196,7 +196,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpGet("{partnersId}/partners")]
-        public async Task<IActionResult> GetPartners(long partnersId)
+        public async Task<IActionResult> GetPartners([FromQuery]long partnersId)
         {
             var result = await _context.Partners
                 .SingleOrDefaultAsync(x => x.EducationalInstitutionId == partnersId)
@@ -207,7 +207,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpPost("partners/{id}")]
-        public async Task<IActionResult> PostPartner(DtoPartners dto)
+        public async Task<IActionResult> PostPartner([FromBody]DtoPartners dto)
         {
             var entity = Mapper.Map<Partners>(dto);
             _context.Partners.Add(entity);
@@ -227,7 +227,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpPut("partners/{id}")]
-        public async Task<IActionResult> UpdatePartner(DtoPartners dto, long id)
+        public async Task<IActionResult> UpdatePartner([FromBody]DtoPartners dto, [FromQuery]long id)
         {
             var template = Mapper.Map<Partners>(dto);
 
@@ -249,7 +249,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpDelete("partners/{id}")]
-        public async Task<IActionResult> DeletePartner(long id)
+        public async Task<IActionResult> DeletePartner([FromQuery]long id)
         {
             await _context.Partners
                 .Where(x => x.Id == id)

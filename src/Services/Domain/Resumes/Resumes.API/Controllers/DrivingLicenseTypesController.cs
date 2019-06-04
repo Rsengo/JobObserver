@@ -28,7 +28,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("drivingLicenseTypes/{id}")]
-        public async Task<IActionResult> Get(long id)
+        public async Task<IActionResult> Get([FromQuery]long id)
         {
             var result = await _context.ResumeDrivingLicenseTypes
                 .Include(x => x.DrivingLicenseType)
@@ -40,7 +40,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("{id}/drivingLicenseTypes")]
-        public async Task<IActionResult> GetByResume(long id)
+        public async Task<IActionResult> GetByResume([FromQuery]long id)
         {
             var result = await _context.ResumeDrivingLicenseTypes
                 .Where(x => x.ResumeId == id)
@@ -53,7 +53,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpPost("drivingLicenseTypes")]
-        public async Task<IActionResult> Post(DtoResumeDrivingLicenseType dto)
+        public async Task<IActionResult> Post([FromBody]DtoResumeDrivingLicenseType dto)
         {
             var entity = Mapper.Map<ResumeDrivingLicenseType>(dto);
             _context.ResumeDrivingLicenseTypes.Add(entity);
@@ -66,7 +66,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpPut("drivingLicenseTypes/{id}")]
-        public async Task<IActionResult> Update(DtoResumeDrivingLicenseType dto, long id)
+        public async Task<IActionResult> Update([FromBody]DtoResumeDrivingLicenseType dto, [FromQuery]long id)
         {
             var template = Mapper.Map<ResumeDrivingLicenseType>(dto);
 
@@ -81,7 +81,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpDelete("drivingLicenseTypes/{id}")]
-        public async Task<IActionResult> Delete(long id)
+        public async Task<IActionResult> Delete([FromQuery]long id)
         {
             await _context.ResumeDrivingLicenseTypes
                 .Where(x => x.Id == id)

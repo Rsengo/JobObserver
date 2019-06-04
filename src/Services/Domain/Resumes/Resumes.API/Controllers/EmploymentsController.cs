@@ -28,7 +28,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("employments/{id}")]
-        public async Task<IActionResult> Get(long id)
+        public async Task<IActionResult> Get([FromQuery]long id)
         {
             var result = await _context.ResumeEmployments
                 .Include(x => x.Employment)
@@ -40,7 +40,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("{id}/employments")]
-        public async Task<IActionResult> GetByResume(long id)
+        public async Task<IActionResult> GetByResume([FromQuery]long id)
         {
             var result = await _context.ResumeEmployments
                 .Where(x => x.ResumeId == id)
@@ -53,7 +53,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpPost("employments")]
-        public async Task<IActionResult> Post(DtoResumeEmployment dto)
+        public async Task<IActionResult> Post([FromBody]DtoResumeEmployment dto)
         {
             var entity = Mapper.Map<ResumeEmployment>(dto);
             _context.ResumeEmployments.Add(entity);
@@ -66,7 +66,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpPut("employments/{id}")]
-        public async Task<IActionResult> Update(DtoResumeEmployment dto, long id)
+        public async Task<IActionResult> Update([FromBody]DtoResumeEmployment dto, [FromQuery]long id)
         {
             var template = Mapper.Map<ResumeEmployment>(dto);
 
@@ -81,7 +81,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpDelete("employments/{id}")]
-        public async Task<IActionResult> Delete(long id)
+        public async Task<IActionResult> Delete([FromQuery]long id)
         {
             await _context.ResumeEmployments
                 .Where(x => x.Id == id)

@@ -43,7 +43,7 @@ namespace Login.API.Controllers
         }
 
         [HttpGet]
-        public IActionResult Register(string returnUrl)
+        public IActionResult Register([FromQuery]string returnUrl)
         {
             var url = _cryptoService.Encrypt(returnUrl);
             return Redirect(_redirectSettings.Value.FullRegistrationPageUrl + url);
@@ -51,7 +51,7 @@ namespace Login.API.Controllers
 
         [HttpPost("applicant")]
         [AllowAnonymous]
-        public async Task<IActionResult> RegisterApplicant(RegistrationViewModel model)
+        public async Task<IActionResult> RegisterApplicant([FromBody]RegistrationViewModel model)
         {
             var user = await _registrationService.RegisterAsync(model, IdentityConfig.DefaultRoles.APPLICANT);
 
@@ -82,7 +82,7 @@ namespace Login.API.Controllers
 
         [HttpPost("employermanager")]
         [AllowAnonymous]
-        public async Task<IActionResult> RegisterEmployerManager(RegistrationViewModel model)
+        public async Task<IActionResult> RegisterEmployerManager([FromBody]RegistrationViewModel model)
         {
             await _registrationService.RegisterAsync(model, IdentityConfig.DefaultRoles.EMPLOYER_MANAGER);
 
@@ -107,7 +107,7 @@ namespace Login.API.Controllers
 
         [HttpPost("educationalinstitutionmanager")]
         [AllowAnonymous]
-        public async Task<IActionResult> RegisterEducationalInstitutionManager(RegistrationViewModel model)
+        public async Task<IActionResult> RegisterEducationalInstitutionManager([FromBody]RegistrationViewModel model)
         {
             await _registrationService.RegisterAsync(model, IdentityConfig.DefaultRoles.EDUCATIONAL_INSTITUTION_MANAGER);
 

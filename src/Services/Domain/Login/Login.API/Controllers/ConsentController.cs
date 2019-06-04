@@ -16,6 +16,7 @@ namespace Login.API.Controllers
     /// <summary>
     /// This controller implements the consent logic
     /// </summary>
+    [Route("[controller]")]
     public class ConsentController : Controller
     {
         private readonly ILogger<ConsentController> _logger;
@@ -45,7 +46,7 @@ namespace Login.API.Controllers
         /// <param name="returnUrl"></param>
         /// <returns></returns>
         [HttpGet]
-        public async Task<IActionResult> Index(string returnUrl)
+        public async Task<IActionResult> Index([FromQuery]string returnUrl)
         {
             var vm = await BuildViewModelAsync(returnUrl);
 
@@ -62,8 +63,7 @@ namespace Login.API.Controllers
         /// Handles the consent screen postback
         /// </summary>
         [HttpPost]
-        //[ValidateAntiForgeryToken]
-        public async Task<IActionResult> Index(ConsentInputViewModel model)
+        public async Task<IActionResult> Index([FromBody]ConsentInputViewModel model)
         {
             // parse the return URL back to an AuthorizeRequest object
             var request = await _interaction.GetAuthorizationContextAsync(model.ReturnUrl);
@@ -115,7 +115,7 @@ namespace Login.API.Controllers
             return View("Error");
         }
 
-        async Task<ConsentViewModel> BuildViewModelAsync(string returnUrl, ConsentInputViewModel model = null)
+        private async Task<ConsentViewModel> BuildViewModelAsync(string returnUrl, ConsentInputViewModel model = null)
         {
             var request = await _interaction.GetAuthorizationContextAsync(returnUrl);
             if (request != null)

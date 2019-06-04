@@ -25,7 +25,7 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(long id)
+        public async Task<IActionResult> Get([FromQuery]long id)
         {
             var result = await _context.CareerDays
                 .Include(x => x.Address)
@@ -49,7 +49,7 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpGet("byEmployer/{employerId}")]
-        public async Task<IActionResult> GetByEmployer(long employerId)
+        public async Task<IActionResult> GetByEmployer([FromQuery]long employerId)
         {
             var result = await _context.CareerDays
                 .Include(x => x.Address)
@@ -72,7 +72,7 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpGet("byEducationalInstitution/{educationalInstitutionId}")]
-        public async Task<IActionResult> GetByEducationalInstitution(long educationalInstitutionId)
+        public async Task<IActionResult> GetByEducationalInstitution([FromQuery]long educationalInstitutionId)
         {
             var result = await _context.CareerDays
                 .Include(x => x.Address)
@@ -95,7 +95,7 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpGet("byArea/{areaId}")]
-        public async Task<IActionResult> GetByArea(long areaId)
+        public async Task<IActionResult> GetByArea([FromQuery]long areaId)
         {
             var result = await _context.CareerDays
                 .Include(x => x.Address)
@@ -118,7 +118,7 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpPost("search")]
-        public async Task<IActionResult> Search(SearchFilter filter)
+        public async Task<IActionResult> Search([FromBody]SearchFilter filter)
         {
             var comprassionMethod = filter.CaseSensitive
                 ? StringComparison.InvariantCulture
@@ -148,7 +148,7 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Save(DtoCareerDay dto)
+        public async Task<IActionResult> Save([FromBody]DtoCareerDay dto)
         {
             var template = Mapper.Map<CareerDay>(dto);
 
@@ -160,7 +160,7 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(DtoCareerDay dto, long id)
+        public async Task<IActionResult> Update([FromBody]DtoCareerDay dto, [FromQuery]long id)
         {
             var template = Mapper.Map<CareerDay>(dto);
 
@@ -175,7 +175,7 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(long id)
+        public async Task<IActionResult> Delete([FromQuery]long id)
         {
             await _context.CareerDays
                 .Where(x => x.Id == id)
@@ -188,7 +188,7 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpPost("educationalInstitution")]
-        public async Task<IActionResult> AddEducationalInstitution(DtoCareerDayEducationalInstitution dto)
+        public async Task<IActionResult> AddEducationalInstitution([FromBody]DtoCareerDayEducationalInstitution dto)
         {
             var model = Mapper.Map<CareerDayEducationalInstitution>(dto);
             _context.CareerDayEducationalInstitutions.Add(model);
@@ -200,7 +200,9 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpPut("educationalInstitution/{id}")]
-        public async Task<IActionResult> EditEducationalInstitution(DtoCareerDayEducationalInstitution dto, long id)
+        public async Task<IActionResult> EditEducationalInstitution(
+            [FromBody]DtoCareerDayEducationalInstitution dto, 
+            [FromQuery]long id)
         {
             var model = Mapper.Map<CareerDayEducationalInstitution>(dto);
             model.Id = id;
@@ -215,7 +217,7 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpDelete("educationalInstitution/{id}")]
-        public async Task<IActionResult> RemoveEducationalInstitution(long id)
+        public async Task<IActionResult> RemoveEducationalInstitution([FromQuery]long id)
         {
             await _context.CareerDayEducationalInstitutions
                 .Where(x => x.Id == id)
@@ -225,7 +227,7 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpPost("employer")]
-        public async Task<IActionResult> AddEmployer(DtoCareerDayEmployer dto)
+        public async Task<IActionResult> AddEmployer([FromBody]DtoCareerDayEmployer dto)
         {
             var model = Mapper.Map<CareerDayEmployer>(dto);
             _context.CareerDayEmployers.Add(model);
@@ -237,7 +239,7 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpPut("employer/{id}")]
-        public async Task<IActionResult> EditEmployer(DtoCareerDayEmployer dto, long id)
+        public async Task<IActionResult> EditEmployer([FromBody]DtoCareerDayEmployer dto, [FromQuery]long id)
         {
             var model = Mapper.Map<CareerDayEmployer>(dto);
             model.Id = id;
@@ -252,7 +254,7 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpDelete("employer/{id}")]
-        public async Task<IActionResult> RemoveEmployer(long id)
+        public async Task<IActionResult> RemoveEmployer([FromQuery]long id)
         {
             await _context.CareerDayEmployers
                 .Where(x => x.Id == id)

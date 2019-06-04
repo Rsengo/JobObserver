@@ -31,9 +31,11 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(long id)
+        public async Task<IActionResult> Get([FromQuery]long id)
         {
-            var allowed = await _securityManager.HasPermissionAsync(new Resume() { ApplicantId = Guid.Empty }, BuildingBlocks.Security.AccessOperation.READ);
+            var allowed = await _securityManager.HasPermissionAsync(
+                new Resume() { ApplicantId = Guid.Empty }, 
+                AccessOperation.READ);
             var result = await _context.Resumes
                 //.Include(x => x.Area)
                 .Include(x => x.Applicant)
@@ -88,7 +90,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("byApplicant/{applicantId}")]
-        public async Task<IActionResult> GetByApplicant(Guid applicantId)
+        public async Task<IActionResult> GetByApplicant([FromQuery]Guid applicantId)
         {
             var query = _context.Resumes
                 //.Include(x => x.Area)
@@ -150,7 +152,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpPost("pagination")]
-        public async Task<IActionResult> Pagination(PaginationFilter filter)
+        public async Task<IActionResult> Pagination([FromBody]PaginationFilter filter)
         {
             var query = _context.Resumes
             //.Include(x => x.Area)
@@ -213,7 +215,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(DtoResume dto)
+        public async Task<IActionResult> Post([FromBody]DtoResume dto)
         {
             var entity = Mapper.Map<Resume>(dto);
 
@@ -229,7 +231,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(DtoResume dto, long id)
+        public async Task<IActionResult> Update([FromBody]DtoResume dto, [FromQuery]long id)
         {
             var template = Mapper.Map<Resume>(dto);
             template.UpdatedAt = DateTime.UtcNow;
@@ -247,7 +249,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(long id)
+        public async Task<IActionResult> Delete([FromQuery]long id)
         {
             var result = _context.Resumes
                 .Select(x => new Resume { Id = x.Id, ApplicantId = x.ApplicantId })
