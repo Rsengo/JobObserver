@@ -9,7 +9,9 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.DependencyInjection;
 using Serilog;
+using Employers.API.Data;
 
 namespace Employers.API
 {
@@ -18,7 +20,13 @@ namespace Employers.API
         public static void Main(string[] args)
         {
             BuildWebHost(args)
-                .MigrateDbContext<EmployersDbContext>()
+                .MigrateDbContext<EmployersDbContext>((context, sp) =>
+                {
+                    var logger = sp.GetService<ILogger<EmployersDbContextSeed>>();
+                    new EmployersDbContextSeed()
+                        .SeedAsync(context, logger)
+                        .Wait();
+                })
                 .Run();
         }
 

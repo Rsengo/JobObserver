@@ -4,11 +4,13 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using BuildingBlocks.Extensions.EntityFramework;
+using EducationalInstitutions.API.Data;
 using EducationalInstitutions.Db;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 
 namespace EducationalInstitutions.API
@@ -18,7 +20,13 @@ namespace EducationalInstitutions.API
         public static void Main(string[] args)
         {
             BuildWebHost(args)
-                .MigrateDbContext<EducationalInstitutionsDbContext>()
+                .MigrateDbContext<EducationalInstitutionsDbContext>((context, sp) => 
+                {
+                    var logger = sp.GetService<ILogger<EducationalInstituionsDbContextSeed>>();
+                    new EducationalInstituionsDbContextSeed()
+                        .SeedAsync(context, logger)
+                        .Wait();
+                })
                 .Run();
         }
 

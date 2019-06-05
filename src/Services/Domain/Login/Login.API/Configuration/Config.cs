@@ -42,7 +42,12 @@ namespace Login.API.Configuration
                 AllowAccessTokensViaBrowser = true,
                 RedirectUris = {$"{clientsUrl["WebApp"]}/"},
                 RequireConsent = false,
-                PostLogoutRedirectUris = {$"{clientsUrl["WebApp"]}/"},
+                PostLogoutRedirectUris =
+                {
+                    $"{clientsUrl["WebApp"]}/",
+                    //TODO тестовая фича
+                    "http://localhost:8000/"
+                },
                 AllowedCorsOrigins = {$"{clientsUrl["WebApp"]}"},
                 AllowedScopes =
                 {

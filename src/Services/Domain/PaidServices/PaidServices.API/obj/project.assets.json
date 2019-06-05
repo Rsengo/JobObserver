@@ -5072,6 +5072,22 @@
           "bin/placeholder/BuildingBlocks.EventBus.RabbitMQ.dll": {}
         }
       },
+      "BuildingBlocks.EventBus.Synchronization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "BuildingBlocks.EventBus": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.2.2",
+          "Newtonsoft.Json": "12.0.1",
+          "Z.EntityFramework.Extensions.EFCore": "2.3.6"
+        },
+        "compile": {
+          "bin/placeholder/BuildingBlocks.EventBus.Synchronization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BuildingBlocks.EventBus.Synchronization.dll": {}
+        }
+      },
       "BuildingBlocks.Extensions.Assemblies/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
@@ -5139,6 +5155,7 @@
         "dependencies": {
           "BuildingBlocks.Extensions.EventBus.RabbitMQ": "1.0.0",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.0.1916590",
+          "Notifications.EventBus": "1.0.0",
           "Serilog": "2.8.0",
           "Serilog.AspNetCore": "2.1.1",
           "Serilog.Extensions.Hosting": "2.0.0",
@@ -5154,6 +5171,21 @@
         },
         "runtime": {
           "bin/placeholder/Notifications.API.dll": {}
+        }
+      },
+      "Notifications.EventBus/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "BuildingBlocks.EventBus": "1.0.0",
+          "BuildingBlocks.EventBus.Synchronization": "1.0.0",
+          "Z.EntityFramework.Extensions.EFCore": "2.3.6"
+        },
+        "compile": {
+          "bin/placeholder/Notifications.EventBus.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Notifications.EventBus.dll": {}
         }
       },
       "PaidServices.Db/1.0.0": {
@@ -13648,6 +13680,11 @@
       "path": "../../../../BuildingBlocks/EventBus/BuildingBlocks.EventBus.RabbitMQ/BuildingBlocks.EventBus.RabbitMQ.csproj",
       "msbuildProject": "../../../../BuildingBlocks/EventBus/BuildingBlocks.EventBus.RabbitMQ/BuildingBlocks.EventBus.RabbitMQ.csproj"
     },
+    "BuildingBlocks.EventBus.Synchronization/1.0.0": {
+      "type": "project",
+      "path": "../../../../BuildingBlocks/EventBus/BuildingBlocks.EventBus.Synchronization/BuildingBlocks.EventBus.Synchronization.csproj",
+      "msbuildProject": "../../../../BuildingBlocks/EventBus/BuildingBlocks.EventBus.Synchronization/BuildingBlocks.EventBus.Synchronization.csproj"
+    },
     "BuildingBlocks.Extensions.Assemblies/1.0.0": {
       "type": "project",
       "path": "../../../../BuildingBlocks/Assemblies/JobObserver.Extensions.Assembly/BuildingBlocks.Extensions.Assemblies.csproj",
@@ -13672,6 +13709,11 @@
       "type": "project",
       "path": "../../Notifications/Notifications.API/Notifications.API.csproj",
       "msbuildProject": "../../Notifications/Notifications.API/Notifications.API.csproj"
+    },
+    "Notifications.EventBus/1.0.0": {
+      "type": "project",
+      "path": "../../Notifications/Notifications.EventBus/Notifications.EventBus.csproj",
+      "msbuildProject": "../../Notifications/Notifications.EventBus/Notifications.EventBus.csproj"
     },
     "PaidServices.Db/1.0.0": {
       "type": "project",

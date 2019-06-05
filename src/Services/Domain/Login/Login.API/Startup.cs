@@ -155,15 +155,17 @@ namespace Login.API
 
             services.AddScoped<IRegistrationService, RegistrationService>();
 
-            services.AddSingleton<ICryptoService>(sp =>
-            {
-                var hash = new MD5CryptoServiceProvider();
-                var symmetricAlgorithm = new TripleDESCryptoServiceProvider();
-                var key = Configuration["SymmetricKey"];
-                var cryptoService = new CryptoService(symmetricAlgorithm, hash, key);
+            //services.AddSingleton<ICryptoService>(sp =>
+            //{
+            //    var hash = new MD5CryptoServiceProvider();
+            //    var symmetricAlgorithm = new TripleDESCryptoServiceProvider();
+            //    var key = Configuration["SymmetricKey"];
+            //    var cryptoService = new CryptoService(symmetricAlgorithm, hash, key);
 
-                return cryptoService;
-            });
+            //    return cryptoService;
+            //});
+
+            services.AddTransient<ICryptoService, Base64CryptoService>();
 
             services.Configure<RedirectSettings>(Configuration);
             services.AddOptions();

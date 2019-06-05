@@ -63,10 +63,9 @@ namespace Login.API.Controllers
                 return ExternalLogin(context.IdP, ReturnUrl);
             }
 
-            var bytes = Encoding.UTF8.GetBytes(ReturnUrl);
-            var base64 = Convert.ToBase64String(bytes);
+            var encoded = _cryptoService.Encrypt(ReturnUrl);
 
-            return Redirect(_redirectSettings.Value.FullLoginPageUrl + base64);
+            return Redirect(_redirectSettings.Value.FullLoginPageUrl + encoded);
         }
 
         [HttpPost("login")]
@@ -98,8 +97,7 @@ namespace Login.API.Controllers
 
             await _signInManager.SignInAsync(user, props);
 
-            var bytes = Convert.FromBase64String(model.ReturnUrl);
-            var returnUrl = Encoding.UTF8.GetString(bytes);
+            var returnUrl = _cryptoService.Decrypt(model.ReturnUrl);
 
             return Ok(returnUrl);
         }

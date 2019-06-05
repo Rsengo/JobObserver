@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Login.API.Services
 {
-    public class CryptoService : ICryptoService
+    public class CryptoService : ICryptoService, IDisposable
     {
         private readonly HashAlgorithm _hashAlgorithm;
         private readonly SymmetricAlgorithm _symmetricAlgorithm;

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Login.API.Services
 {
-    public interface ICryptoService: IDisposable
+    public interface ICryptoService
     {
         string Encrypt(string str);
 

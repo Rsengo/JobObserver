@@ -57,11 +57,13 @@ namespace Login.API.Controllers
 
             if (ModelState.ErrorCount <= 0)
             {
-                var @event = new ApplicantsChanged
+                var @applicantEvent = new ApplicantsChanged
                 {
                     Created = new[] { Mapper.Map<DtoUser>(user) }
                 };
-                _eventBus.Publish(@event);
+                var @userEvent = new UsersChanged(applicantEvent);
+                _eventBus.Publish(@applicantEvent);
+                _eventBus.Publish(@userEvent);
 
                 var url = _cryptoService.Decrypt(model.ReturnUrl);
                 
@@ -89,6 +91,8 @@ namespace Login.API.Controllers
             if (ModelState.ErrorCount <= 0)
             {
                 var url = _cryptoService.Decrypt(model.ReturnUrl);
+
+
 
                 return Ok(url);
             }

@@ -14,6 +14,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Login.Db.Dto.Models.Contacts;
 using Login.API.Data;
+using IdentityModel;
+using Microsoft.EntityFrameworkCore;
 
 namespace Login.API.Controllers
 {
@@ -26,13 +28,17 @@ namespace Login.API.Controllers
 
         private readonly LoginDbContextSeed _seeder;
 
+        private readonly LoginDbContext _context;
+
         public UserController(
             UserManager<User> userManager,
             IEventBus eventBus,
+            LoginDbContext context,
             LoginDbContextSeed seeder)
         {
             _userManager = userManager;
             _eventBus = eventBus;
+            _context = context;
             _seeder = seeder;
         }
 
@@ -47,6 +53,34 @@ namespace Login.API.Controllers
             var response = Mapper.Map<DtoUser>(newUser);
 
             return Ok(response);
+        }
+
+        [HttpGet("getFullUserInfo")]
+        public async Task<IActionResult> GetFullUserInfo()
+        {
+            var id = HttpContext.User.Claims
+                .First(x => x.Type == JwtClaimTypes.Subject)
+                .Value;
+
+            var user = await _context.Users
+                .Include(x => x.Gender)
+                .Include(x => x.Contacts)
+                    .ThenInclude(x => x.Phones)
+                .Include(x => x.EducationalInstitutionManagerAttributes)
+                .Include(x => x.EmployerManagerAttributes)
+                .SingleAsync(x => x.Id == id);
+
+            await _context.Areas.LoadAsync();
+
+            var contactId = user.Contacts.Id;
+            await _context.Sites
+                .Where(x => x.ContactId == contactId)
+                .Include(x => x.Type)
+                .LoadAsync();
+
+            var dtoUser = Mapper.Map<DtoUser>(user);
+
+            return Ok(dtoUser);
         }
 
         [HttpPost("_restoreadmin")]

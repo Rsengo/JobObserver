@@ -14,6 +14,7 @@ namespace Employers.Db.Maps
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
+
             builder.HasAlternateKey(x => x.Name);
             builder.Property(x => x.Name).IsRequired();
 
@@ -21,36 +22,31 @@ namespace Employers.Db.Maps
                 .HasOne(x => x.Area)
                 .WithMany()
                 .HasForeignKey(x => x.AreaId)
-                .OnDelete(DeleteBehavior.Restrict)
-                .IsRequired();
+                .OnDelete(DeleteBehavior.Restrict);
 
             builder
                 .HasOne(x => x.Type)
                 .WithMany()
                 .HasForeignKey(x => x.TypeId)
-                .OnDelete(DeleteBehavior.Restrict)
-                .IsRequired();
+                .OnDelete(DeleteBehavior.Restrict);
 
             builder
                 .HasMany(x => x.Partners)
                 .WithOne()
                 .HasForeignKey(x => x.EmployerId)
-                .OnDelete(DeleteBehavior.Cascade)
-                .IsRequired();
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder
                 .HasMany(x => x.Departments)
                 .WithOne()
                 .HasForeignKey(x => x.OrganizationId)
-                .OnDelete(DeleteBehavior.Cascade)
-                .IsRequired();
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder
                 .HasMany(x => x.Synonyms)
                 .WithOne()
                 .HasForeignKey(x => x.EmployerId)
-                .OnDelete(DeleteBehavior.Cascade)
-                .IsRequired();
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder
                 .HasOne(x => x.BrandedDescription)

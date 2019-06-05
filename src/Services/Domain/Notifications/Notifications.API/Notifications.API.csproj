@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\BuildingBlocks\EventBus\BuildingBlocks.Extensions.EventBus.RabbitMQ\BuildingBlocks.Extensions.EventBus.RabbitMQ.csproj" />
+    <ProjectReference Include="..\Notifications.EventBus\Notifications.EventBus.csproj" />
   </ItemGroup>
 
 </Project>

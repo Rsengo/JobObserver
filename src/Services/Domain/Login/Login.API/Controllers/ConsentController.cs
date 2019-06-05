@@ -1,6 +1,7 @@
 ﻿using IdentityServer4.Models;
 using IdentityServer4.Services;
 using IdentityServer4.Stores;
+using Login.API.HttpFilters;
 using Login.API.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -102,7 +103,7 @@ namespace Login.API.Controllers
                 await _interaction.GrantConsentAsync(request, response);
 
                 // redirect back to authorization endpoint
-                return Redirect(model.ReturnUrl);
+                return Ok(model.ReturnUrl);
             }
 
             var vm = await BuildViewModelAsync(model.ReturnUrl, model);
@@ -112,7 +113,16 @@ namespace Login.API.Controllers
                 return View("Index", serializedVm);
             }
 
-            return View("Error");
+            var errorsJson = new JsonErrorResponse
+            {
+                Messages = ModelState.Values
+                    .SelectMany(x => x.Errors)
+                    .Select(x => x.ErrorMessage)
+                    .ToArray()
+            };
+            var errors = new BadRequestObjectResult(errorsJson);
+
+            return BadRequest(errors);
         }
 
         private async Task<ConsentViewModel> BuildViewModelAsync(string returnUrl, ConsentInputViewModel model = null)
