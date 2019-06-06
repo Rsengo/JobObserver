@@ -129,7 +129,10 @@ services:
   login.api:
     environment:
       # - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ASPNETCORE_URLS=http://0.0.0.0:80;https://0.0.0.0:443
+      - ASPNETCORE_HTTPS_PORT=5112
+      - Kestrel__Certificates__Default__Path=/root/.dotnet/https/cert.pfx
+      - Kestrel__Certificates__Default__Password=ufo
       - ConnectionString=Server=sql.data;Database=LOGIN;User Id=sa;Password=Pass@word
       - CorsPolicy=${CORS_POLICY}
       - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
@@ -144,6 +147,9 @@ services:
     ports:
       - "5105:80"  
       - "5112:443"
+    volumes: 
+      # - ./src/Services/Domain/Login/Login.API/Certificates:/app/Certificates
+      - ./src/Services/Domain/Login/Login.API/Certificates:/root/.dotnet/https
 
   paidservices.api:
     environment:

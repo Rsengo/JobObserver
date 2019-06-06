@@ -37,7 +37,7 @@ namespace Dictionaries.API.Controllers
             _context = context;
         }
 
-        [HttpPost("initialize")]
+        [HttpGet("_restore")]
         public async Task<IActionResult> InitializeAll()
         {
             await _initializationService.InitializeAsync();

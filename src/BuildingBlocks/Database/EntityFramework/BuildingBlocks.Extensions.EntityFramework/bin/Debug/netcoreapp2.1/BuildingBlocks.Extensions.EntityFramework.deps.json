@@ -12,7 +12,7 @@
           "Microsoft.EntityFrameworkCore": "2.2.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2",
           "Polly": "7.0.2",
-          "Z.EntityFramework.Extensions.EFCore": "2.2.8"
+          "Z.EntityFramework.Extensions.EFCore": "2.3.6"
         },
         "runtime": {
           "BuildingBlocks.Extensions.EntityFramework.dll": {}
@@ -609,7 +609,7 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "Z.EntityFramework.Extensions.EFCore/2.2.8": {
+      "Z.EntityFramework.Extensions.EFCore/2.3.6": {
         "dependencies": {
           "Microsoft.CSharp": "4.5.0",
           "Microsoft.EntityFrameworkCore.Relational": "2.2.2",
@@ -621,8 +621,8 @@
         },
         "runtime": {
           "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.dll": {
-            "assemblyVersion": "2.2.8.0",
-            "fileVersion": "2.2.8.0"
+            "assemblyVersion": "2.3.6.0",
+            "fileVersion": "2.3.6.0"
           }
         }
       }
@@ -1096,12 +1096,12 @@
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
-    "Z.EntityFramework.Extensions.EFCore/2.2.8": {
+    "Z.EntityFramework.Extensions.EFCore/2.3.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-e55q89lmKam32Y4Lcityb4OEwJ8iS6+GbEZ9LwcPEnEhlPXz1AOezuxMzrqdEuS1I1nWSo3wgLufBbkeM++H1Q==",
-      "path": "z.entityframework.extensions.efcore/2.2.8",
-      "hashPath": "z.entityframework.extensions.efcore.2.2.8.nupkg.sha512"
+      "sha512": "sha512-GEHRtCyok7SOpZHfPE5jnfcs1emtIkL0WB3Bnve53Zb/FevtN3jmy4kxpOvHvZkdtn8ld0b6Kx6lOzHYgQUW8g==",
+      "path": "z.entityframework.extensions.efcore/2.3.6",
+      "hashPath": "z.entityframework.extensions.efcore.2.3.6.nupkg.sha512"
     }
   }
 }

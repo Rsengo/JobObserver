@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using BuildingBlocks.Extensions.AutoMapper;
 using BuildingBlocks.Extensions.EventBus.RabbitMQ;
+using EducationalInstitutions.API.Data;
 using EducationalInstitutions.API.HttpFilters;
 using EducationalInstitutions.Db;
 using EducationalInstitutions.Db.Dto;
@@ -118,6 +119,8 @@ namespace EducationalInstitutions.API
                 options.Audience = "educationalinstitutions";
                 options.RequireHttpsMetadata = false;
             });
+
+            services.AddTransient<EducationalInstituionsDbContextSeed>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

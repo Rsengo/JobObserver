@@ -15,6 +15,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Employers.API.Controllers
 {
+    using Employers.API.Data;
     using Employers.API.Filters;
 
     [Route("api/v1/[controller]")]
@@ -24,12 +25,16 @@ namespace Employers.API.Controllers
 
         private readonly IEventBus _eventBus;
 
+        private readonly EmployersDbContextSeed _seeder;
+
         public EmployersController(
             EmployersDbContext context, 
-            IEventBus eventBus)
+            IEventBus eventBus,
+            EmployersDbContextSeed seeder)
         {
             _context = context;
             _eventBus = eventBus;
+            _seeder = seeder;
         }
 
         [HttpGet("{id}")]
@@ -262,6 +267,13 @@ namespace Employers.API.Controllers
             };
             _eventBus.Publish(@event);
 
+            return Ok();
+        }
+
+        [HttpGet("_restore")]
+        public async Task<IActionResult> Restore()
+        {
+            await _seeder.SeedAsync();
             return Ok();
         }
     }

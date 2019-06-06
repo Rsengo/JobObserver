@@ -25,6 +25,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.Swagger;
+using Employers.API.Data;
 
 namespace Employers.API
 {
@@ -120,6 +121,8 @@ namespace Employers.API
                 options.Audience = "employers";
                 options.RequireHttpsMetadata = false;
             });
+
+            services.AddTransient<EmployersDbContextSeed>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -83,7 +83,7 @@ namespace Login.API.Controllers
             return Ok(dtoUser);
         }
 
-        [HttpPost("_restoreadmin")]
+        [HttpGet("_restore")]
         public async Task<IActionResult> RestoreAdmin()
         {
             var user = await _seeder.SeedAsync();

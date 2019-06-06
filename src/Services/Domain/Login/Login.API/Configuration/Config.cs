@@ -46,7 +46,8 @@ namespace Login.API.Configuration
                 {
                     $"{clientsUrl["WebApp"]}/",
                     //TODO тестовая фича
-                    "http://localhost:8000/"
+                    "http://localhost:8000/",
+                    "http://localhost:8000/auth/"
                 },
                 AllowedCorsOrigins = {$"{clientsUrl["WebApp"]}"},
                 AllowedScopes =

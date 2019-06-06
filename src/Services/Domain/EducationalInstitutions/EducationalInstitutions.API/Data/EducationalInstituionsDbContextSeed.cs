@@ -11,25 +11,35 @@ namespace EducationalInstitutions.API.Data
 {
     public class EducationalInstituionsDbContextSeed
     {
-        public async Task SeedAsync(
-            EducationalInstitutionsDbContext context, 
+        private readonly EducationalInstitutionsDbContext _context;
+
+        private readonly ILogger<EducationalInstituionsDbContextSeed> _logger;
+
+        public EducationalInstituionsDbContextSeed(
+            EducationalInstitutionsDbContext context,
             ILogger<EducationalInstituionsDbContextSeed> logger)
+        {
+            _context = context;
+            _logger = logger;
+        }
+
+        public async Task SeedAsync()
         {
             try
             {
-                var institutionId = await AddUniversity(context);
-                await AddUniversitySynonyms(institutionId, context);
-                var fucultyId = await AddFaculty(context, institutionId);
-                await AddFacultySynonyms(fucultyId, context);
+                var institutionId = await AddUniversity(_context);
+                await AddUniversitySynonyms(institutionId, _context);
+                var fucultyId = await AddFaculty(_context, institutionId);
+                await AddFacultySynonyms(fucultyId, _context);
             }
             catch (Exception ex)
             {
-                logger.LogError("Educational Instituions seed error: {@ex}", ex);
+                _logger.LogError("Educational Instituions seed error: {@ex}", ex);
                 throw;
             }
         }
 
-        private async Task<long> AddUniversity(EducationalInstitutionsDbContext context)
+        private static async Task<long> AddUniversity(EducationalInstitutionsDbContext context)
         {
             var institution = new EducationalInstitution
             {
@@ -45,7 +55,7 @@ namespace EducationalInstitutions.API.Data
             return institution.Id;
         }
 
-        private async Task AddUniversitySynonyms(long universityId, EducationalInstitutionsDbContext context)
+        private static async Task AddUniversitySynonyms(long universityId, EducationalInstitutionsDbContext context)
         {
             var institutionSynonyms = new[]
             {
@@ -59,7 +69,7 @@ namespace EducationalInstitutions.API.Data
             await context.SaveChangesAsync();
         }
 
-        private async Task<long> AddFaculty(EducationalInstitutionsDbContext context, long universityId)
+        private static async Task<long> AddFaculty(EducationalInstitutionsDbContext context, long universityId)
         {
             var faculty = new Faculty()
             {
@@ -75,7 +85,7 @@ namespace EducationalInstitutions.API.Data
             return faculty.Id;
         }
 
-        private async Task AddFacultySynonyms(long facultyId, EducationalInstitutionsDbContext context)
+        private static async Task AddFacultySynonyms(long facultyId, EducationalInstitutionsDbContext context)
         {
             var facultySynonyms = new[]
             {

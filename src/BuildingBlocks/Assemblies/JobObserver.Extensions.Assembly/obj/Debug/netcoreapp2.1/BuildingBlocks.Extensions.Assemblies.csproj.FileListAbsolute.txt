@@ -24,3 +24,4 @@ D:\Repos\JobObserver1\src\BuildingBlocks\Assemblies\JobObserver.Extensions.Assem
 D:\Repos\JobObserver1\src\BuildingBlocks\Assemblies\JobObserver.Extensions.Assembly\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.AssemblyInfo.cs
 D:\Repos\JobObserver1\src\BuildingBlocks\Assemblies\JobObserver.Extensions.Assembly\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.dll
 D:\Repos\JobObserver1\src\BuildingBlocks\Assemblies\JobObserver.Extensions.Assembly\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.pdb
+D:\Repos\JobObserver1\src\BuildingBlocks\Assemblies\JobObserver.Extensions.Assembly\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.Assemblies.csprojAssemblyReference.cache

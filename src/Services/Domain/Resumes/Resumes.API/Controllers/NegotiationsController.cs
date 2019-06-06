@@ -52,6 +52,19 @@ namespace Resumes.API.Controllers
             return Ok(dto);
         }
 
+        [HttpGet("byEmployer/{id}")]
+        public async Task<IActionResult> GetByEmployer([FromQuery]long id)
+        {
+            var result = await _context.ResumeNegotiations
+                .Where(x => x.CompanyId == id)
+                .Include(x => x.Response)
+                .ToListAsync()
+                .ConfigureAwait(false);
+            var dto = Mapper.Map<DtoResumeNegotiation>(result);
+
+            return Ok(dto);
+        }
+
         [HttpPost]
         public async Task<IActionResult> Post([FromBody]DtoResumeNegotiation dto)
         {

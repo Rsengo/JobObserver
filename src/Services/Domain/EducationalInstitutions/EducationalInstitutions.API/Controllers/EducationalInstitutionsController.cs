@@ -12,11 +12,11 @@ using EducationalInstitutions.Db.Dto.Models.Synonyms;
 using EducationalInstitutions.Db.Synchronization.Events;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using EducationalInstitutions.API.Data;
+using EducationalInstitutions.API.Filters;
 
 namespace EducationalInstitutions.API.Controllers
 {
-    using EducationalInstitutions.API.Filters;
-
     [Route("api/v1/[controller]")]
     public class EducationalInstitutionsController : ControllerBase
     {
@@ -24,12 +24,16 @@ namespace EducationalInstitutions.API.Controllers
 
         private readonly IEventBus _eventBus;
 
+        private readonly EducationalInstituionsDbContextSeed _seeder;
+
         public EducationalInstitutionsController(
             EducationalInstitutionsDbContext context, 
-            IEventBus eventBus)
+            IEventBus eventBus,
+            EducationalInstituionsDbContextSeed seeder)
         {
             _context = context;
             _eventBus = eventBus;
+            _seeder = seeder;
         }
 
         [HttpGet("{id}")]
@@ -264,6 +268,13 @@ namespace EducationalInstitutions.API.Controllers
             };
             _eventBus.Publish(@event);
 
+            return Ok();
+        }
+
+        [HttpGet("_restore")]
+        public async Task<IActionResult> Restore()
+        {
+            await _seeder.SeedAsync();
             return Ok();
         }
     }

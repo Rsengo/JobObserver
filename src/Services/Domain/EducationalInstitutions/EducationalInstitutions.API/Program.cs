@@ -20,13 +20,7 @@ namespace EducationalInstitutions.API
         public static void Main(string[] args)
         {
             BuildWebHost(args)
-                .MigrateDbContext<EducationalInstitutionsDbContext>((context, sp) => 
-                {
-                    var logger = sp.GetService<ILogger<EducationalInstituionsDbContextSeed>>();
-                    new EducationalInstituionsDbContextSeed()
-                        .SeedAsync(context, logger)
-                        .Wait();
-                })
+                .MigrateDbContext<EducationalInstitutionsDbContext>()
                 .Run();
         }
 

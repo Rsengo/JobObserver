@@ -71,8 +71,8 @@ namespace Login.API
                 x.Authentication.CookieLifetime = TimeSpan.FromHours(2);
                 x.Cors.CorsPolicyName = Configuration["CorsPolicy"];
             })
-                //.AddSigningCredential(Certificate.Get())
-                .AddDeveloperSigningCredential(persistKey: true)
+                .AddSigningCredential(Certificate.Get())
+                //.AddDeveloperSigningCredential(persistKey: true)
                 .AddAspNetIdentity<User>()
                 .AddConfigurationStore(opt =>
                 {

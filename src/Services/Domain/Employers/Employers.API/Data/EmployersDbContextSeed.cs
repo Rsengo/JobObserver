@@ -11,24 +11,34 @@ namespace Employers.API.Data
 {
     public class EmployersDbContextSeed
     {
-        public async Task SeedAsync(
-            EmployersDbContext context, 
+        private readonly EmployersDbContext _context;
+
+        private readonly ILogger<EmployersDbContextSeed> _logger;
+
+        public EmployersDbContextSeed(
+            EmployersDbContext context,
             ILogger<EmployersDbContextSeed> logger)
+        {
+            _context = context;
+            _logger = logger;
+        }
+
+        public async Task SeedAsync()
         {
             try
             {
-                var id = await AddEmployer(context);
-                await AddEmployerSynonyms(context, id);
-                await AddDepartments(context, id);
+                var id = await AddEmployer(_context);
+                await AddEmployerSynonyms(_context, id);
+                await AddDepartments(_context, id);
             }
             catch (Exception ex)
             {
-                logger.LogError("Employers seed error: {@ex}", ex);
+                _logger.LogError("Employers seed error: {@ex}", ex);
                 throw;
             }
         }
 
-        private async Task<long> AddEmployer(EmployersDbContext context)
+        private static async Task<long> AddEmployer(EmployersDbContext context)
         {
             var employer = new Employer
             {
@@ -44,7 +54,7 @@ namespace Employers.API.Data
             return employer.Id;
         }
 
-        private async Task AddEmployerSynonyms(EmployersDbContext context, long employerId)
+        private static async Task AddEmployerSynonyms(EmployersDbContext context, long employerId)
         {
             var synonyms = new[]
             {
@@ -55,7 +65,7 @@ namespace Employers.API.Data
             await context.SaveChangesAsync();
         }
 
-        private async Task AddDepartments(EmployersDbContext context, long employerId)
+        private static async Task AddDepartments(EmployersDbContext context, long employerId)
         {
             var department = new Department
             {

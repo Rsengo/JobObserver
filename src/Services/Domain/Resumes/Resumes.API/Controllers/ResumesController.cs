@@ -12,6 +12,8 @@ using BuildingBlocks.Security.Abstract;
 using BuildingBlocks.Security;
 using Resumes.API.Filters;
 using Microsoft.EntityFrameworkCore.Query;
+using LinqKit;
+using System.Linq.Dynamic.Core;
 
 namespace Resumes.API.Controllers
 {

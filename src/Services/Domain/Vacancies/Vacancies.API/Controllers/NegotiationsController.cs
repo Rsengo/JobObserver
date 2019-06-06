@@ -46,6 +46,19 @@ namespace Vacancies.API.Controllers
             return Ok(dto);
         }
 
+        [HttpGet("byApplicant/{id}")]
+        public async Task<IActionResult> GetByApplicant([FromQuery]Guid id)
+        {
+            var result = await _context.VacancyNegotiations
+                .Where(x => x.ApplicantId == id)
+                .Include(x => x.Response)
+                .ToListAsync()
+                .ConfigureAwait(false);
+            var dto = Mapper.Map<DtoVacancyNegotiation>(result);
+
+            return Ok(dto);
+        }
+
         [HttpPost]
         public async Task<IActionResult> Post([FromBody]DtoVacancyNegotiation dto)
         {
