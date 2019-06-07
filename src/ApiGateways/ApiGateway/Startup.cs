@@ -63,6 +63,7 @@ namespace ApiGateway
             }
 
             app.UseCors(Configuration["CorsPolicy"]);
+            app.UseHttpsRedirection();
 
             app.UseOcelot().Wait();
         }
