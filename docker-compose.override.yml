@@ -68,20 +68,26 @@ services:
 
   brandedtemplates.api:
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ASPNETCORE_URLS=https://0.0.0.0:80
+      - ASPNETCORE_HTTPS_PORT=5101
+      - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
+      - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
       - ConnectionString=Server=sql.data;Database=BRANDED_TEMPLATES;User Id=sa;Password=Pass@word
       - CorsPolicy=${CORS_POLICY}
       - IdentityUrl=http://login.api
       - ElasticSearch=elk:9200
       - Seq=http://seq
     ports:
-      - "5101:80"   
+      - "5101:80"  
+    volumes: 
+      - ./ssl:${SSL_PATH} 
 
   careerdays.api:
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ASPNETCORE_URLS=https://0.0.0.0:80
+      - ASPNETCORE_HTTPS_PORT=5102
+      - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
+      - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
       - ConnectionString=Server=sql.data;Database=CAREER_DAYS;User Id=sa;Password=Pass@word
       - CorsPolicy=${CORS_POLICY}
       - IdentityUrl=http://login.api
@@ -93,11 +99,15 @@ services:
       - Seq=http://seq
     ports:
       - "5102:80" 
+    volumes: 
+      - ./ssl:${SSL_PATH}
 
   educationalinstitutions.api:
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ASPNETCORE_URLS=https://0.0.0.0:80
+      - ASPNETCORE_HTTPS_PORT=5103
+      - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
+      - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
       - ConnectionString=Server=sql.data;Database=EDUCATIONAL_INSTITUTIONS;User Id=sa;Password=Pass@word
       - CorsPolicy=${CORS_POLICY}
       - IdentityUrl=http://login.api
@@ -109,11 +119,15 @@ services:
       - Seq=http://seq
     ports:
       - "5103:80"  
+    volumes: 
+      - ./ssl:${SSL_PATH}
 
   employers.api:
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ASPNETCORE_URLS=https://0.0.0.0:80
+      - ASPNETCORE_HTTPS_PORT=5104
+      - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
+      - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
       - ConnectionString=Server=sql.data;Database=EMPLOYERS;User Id=sa;Password=Pass@word
       - CorsPolicy=${CORS_POLICY}
       - IdentityUrl=http://login.api
@@ -125,14 +139,16 @@ services:
       - Seq=http://seq
     ports:
       - "5104:80"  
+    volumes: 
+      - ./ssl:${SSL_PATH}
 
   login.api:
     environment:
       # - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://0.0.0.0:80;https://0.0.0.0:443
-      - ASPNETCORE_HTTPS_PORT=5112
-      - Kestrel__Certificates__Default__Path=/root/.dotnet/https/cert.pfx
-      - Kestrel__Certificates__Default__Password=ufo
+      - ASPNETCORE_URLS=https://0.0.0.0:80
+      - ASPNETCORE_HTTPS_PORT=5105
+      - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
+      - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
       - ConnectionString=Server=sql.data;Database=LOGIN;User Id=sa;Password=Pass@word
       - CorsPolicy=${CORS_POLICY}
       - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
@@ -146,15 +162,17 @@ services:
       - WebAppClient=http://localhost:5105
     ports:
       - "5105:80"  
-      - "5112:443"
     volumes: 
       # - ./src/Services/Domain/Login/Login.API/Certificates:/app/Certificates
-      - ./src/Services/Domain/Login/Login.API/Certificates:/root/.dotnet/https
+      - ./ssl:${SSL_PATH}
 
   paidservices.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ASPNETCORE_URLS=https://0.0.0.0:80
+      - ASPNETCORE_HTTPS_PORT=5106
+      - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
+      - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
       - ConnectionString=Server=sql.data;Database=PAID_SERVICES;User Id=sa;Password=Pass@word
       - CorsPolicy=${CORS_POLICY}
       - IdentityUrl=http://login.api
@@ -162,11 +180,16 @@ services:
       - Seq=http://seq
     ports:
       - "5106:80"  
+    volumes: 
+      - ./ssl:${SSL_PATH}
 
   resumes.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ASPNETCORE_URLS=https://0.0.0.0:80
+      - ASPNETCORE_HTTPS_PORT=5107
+      - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
+      - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
       - ConnectionString=Server=sql.data;Database=RESUMES;User Id=sa;Password=Pass@word
       - CorsPolicy=${CORS_POLICY}
       - IdentityUrl=http://login.api
@@ -178,11 +201,16 @@ services:
       - Seq=http://seq
     ports:
       - "5107:80" 
+    volumes: 
+      - ./ssl:${SSL_PATH}
 
   vacancies.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ASPNETCORE_URLS=https://0.0.0.0:80
+      - ASPNETCORE_HTTPS_PORT=5108
+      - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
+      - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
       - ConnectionString=Server=sql.data;Database=VACANCIES;User Id=sa;Password=Pass@word
       - CorsPolicy=${CORS_POLICY}
       - IdentityUrl=http://login.api
@@ -194,11 +222,16 @@ services:
       - Seq=http://seq
     ports:
       - "5108:80" 
+    volumes: 
+      - ./ssl:${SSL_PATH}
 
   dictionaries.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ASPNETCORE_URLS=https://0.0.0.0:80
+      - ASPNETCORE_HTTPS_PORT=5109
+      - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
+      - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
       - ConnectionString=Server=sql.data;Database=DICTIONARIES;User Id=sa;Password=Pass@word
       - CorsPolicy=${CORS_POLICY}
       - IdentityUrl=http://login.api
@@ -212,11 +245,15 @@ services:
       - "5109:80" 
     volumes:
       - ./src/Services/Integration/Dictionaries/Dictionaries.API/Sources:/app/Sources 
+      - ./ssl:${SSL_PATH}
 
   moodle.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ASPNETCORE_URLS=https://0.0.0.0:80
+      - ASPNETCORE_HTTPS_PORT=5111
+      - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
+      - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
       - CorsPolicy=${CORS_POLICY}
       - IdentityUrl=http://login.api
       - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
@@ -230,11 +267,16 @@ services:
       - Seq=http://seq
     ports:
       - "5111:80" 
+    volumes: 
+      - ./ssl:${SSL_PATH}
 
   emailnotifications.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ASPNETCORE_URLS=https://0.0.0.0:80
+      - ASPNETCORE_HTTPS_PORT=5110
+      - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
+      - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
       - CorsPolicy=${CORS_POLICY}
       - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
       - EventBusConnection=rabbitmq
@@ -244,10 +286,16 @@ services:
       - Seq=http://seq
     ports:
       - "5110:80" 
+    volumes: 
+      - ./ssl:${SSL_PATH}
 
   apigw:
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development   
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://0.0.0.0:80
+      - ASPNETCORE_HTTPS_PORT=5200
+      - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
+      - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
       - CorsPolicy=${CORS_POLICY}
       - IdentityUrl=http://login.api
       - ElasticSearch=elk:9200
@@ -256,3 +304,4 @@ services:
       - "5200:80"   
     volumes:
       - ./src/ApiGateways/WebApp.Bff/apigw:${OCELOT_VOLUME_SPEC:-/app/configuration}
+      - ./ssl:${SSL_PATH}

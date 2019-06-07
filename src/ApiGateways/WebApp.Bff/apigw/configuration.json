@@ -1,123 +1,123 @@
 ﻿{
   "ReRoutes": [
     {
-      "DownstreamPathTemplate": "/api/{version}/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "brandedtemplates.api",
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/{version}/bt/{everything}",
+      "UpstreamPathTemplate": "/bt/{everything}",
       "UpstreamHttpMethod": []
     },
     {
-      "DownstreamPathTemplate": "/api/{version}/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "careerdays.api",
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/{version}/cd/{everything}",
+      "UpstreamPathTemplate": "/cd/{everything}",
       "UpstreamHttpMethod": []
     },
     {
-      "DownstreamPathTemplate": "/api/{version}/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "educationalinstitutions.api",
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/{version}/ei/{everything}",
+      "UpstreamPathTemplate": "/ei/{everything}",
       "UpstreamHttpMethod": []
     },
     {
-      "DownstreamPathTemplate": "/api/{version}/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "employers.api",
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/{version}/e/{everything}",
+      "UpstreamPathTemplate": "/e/{everything}",
       "UpstreamHttpMethod": []
     },
     {
-      "DownstreamPathTemplate": "/api/{version}/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "login.api",
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/{version}/l/{everything}",
+      "UpstreamPathTemplate": "/l/{everything}",
       "UpstreamHttpMethod": []
     },
     {
-      "DownstreamPathTemplate": "/api/{version}/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "paidservices.api",
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/{version}/ps/{everything}",
+      "UpstreamPathTemplate": "/ps/{everything}",
       "UpstreamHttpMethod": []
     },
     {
-      "DownstreamPathTemplate": "/api/{version}/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "resumes.api",
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/{version}/r/{everything}",
+      "UpstreamPathTemplate": "/r/{everything}",
       "UpstreamHttpMethod": []
     },
     {
-      "DownstreamPathTemplate": "/api/{version}/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vacancies.api",
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/{version}/v/{everything}",
+      "UpstreamPathTemplate": "/v/{everything}",
       "UpstreamHttpMethod": []
     },
     {
-      "DownstreamPathTemplate": "/api/{version}/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "dictionaries.api",
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/{version}/d/{everything}",
+      "UpstreamPathTemplate": "/d/{everything}",
       "UpstreamHttpMethod": []
     },
     {
-      "DownstreamPathTemplate": "/api/{version}/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "moodle.api",
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/{version}/m/{everything}",
+      "UpstreamPathTemplate": "/m/{everything}",
       "UpstreamHttpMethod": []
     }
   ],

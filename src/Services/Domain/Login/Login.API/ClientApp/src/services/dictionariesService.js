@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const APIGW_URL = 'http://31.211.116.12/api/v1/';
-const SEARCH_CITIES_POSTFIX = 'd/areas/search/';
-const SEARCH_EMPLOYERS_POSTFIX = 'e/employers/search';
-const SEARCH_EDUCATIONAL_INSTITUTIONS_POSTFIX = 'ei/educationalinstitutions/search'
+const APIGW_URL = 'https://31.211.116.12/';
+const SEARCH_CITIES_POSTFIX = 'd/api/v1/areas/search/';
+const SEARCH_EMPLOYERS_POSTFIX = 'e/api/v1/employers/search';
+const SEARCH_EDUCATIONAL_INSTITUTIONS_POSTFIX = 'ei/api/v1/educationalinstitutions/search'
 
 const searchCities = inputValue => {
     const url = APIGW_URL + SEARCH_CITIES_POSTFIX;

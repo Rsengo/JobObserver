@@ -140,9 +140,9 @@ namespace CareerDays.API
 
             app.UseCors(Configuration["CorsPolicy"]);
 
-            //app.UseAuthentication();
+            app.UseAuthentication();
 
-            //app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
             app.UseMvc();
 
             app.UseSwagger();

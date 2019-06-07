@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const IDENTITY_URL = 'https://31.211.116.12:5112/';
+const IDENTITY_URL = 'https://31.211.116.12:5105/';
 
 const USER_INFO_POSTFIX = 'connect/userInfo/';
 
