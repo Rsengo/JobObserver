@@ -44,7 +44,7 @@ namespace Login.API.Configuration
                 RequireConsent = false,
                 PostLogoutRedirectUris =
                 {
-                    $"{clientsUrl["WebApp"]}/",
+                    clientsUrl["WebApp"],
                     //TODO тестовая фича
                     "http://localhost:8000/",
                     "http://localhost:8000/auth/"

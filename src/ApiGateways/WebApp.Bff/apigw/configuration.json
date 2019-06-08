@@ -1,123 +1,133 @@
 ﻿{
   "ReRoutes": [
     {
-      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamPathTemplate": "/{url}",
       "DownstreamScheme": "https",
+      "DangerousAcceptAnyServerCertificateValidator": true,
       "DownstreamHostAndPorts": [
         {
           "Host": "brandedtemplates.api",
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/bt/{everything}",
+      "UpstreamPathTemplate": "/{url}",
       "UpstreamHttpMethod": []
     },
     {
-      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamPathTemplate": "/{url}",
       "DownstreamScheme": "https",
+      "DangerousAcceptAnyServerCertificateValidator": true,
       "DownstreamHostAndPorts": [
         {
           "Host": "careerdays.api",
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/cd/{everything}",
+      "UpstreamPathTemplate": "/cd/{url}",
       "UpstreamHttpMethod": []
     },
     {
-      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamPathTemplate": "/{url}",
       "DownstreamScheme": "https",
+      "DangerousAcceptAnyServerCertificateValidator": true,
       "DownstreamHostAndPorts": [
         {
           "Host": "educationalinstitutions.api",
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/ei/{everything}",
+      "UpstreamPathTemplate": "/ei/{url}",
       "UpstreamHttpMethod": []
     },
     {
-      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamPathTemplate": "/{url}",
       "DownstreamScheme": "https",
+      "DangerousAcceptAnyServerCertificateValidator": true,
       "DownstreamHostAndPorts": [
         {
           "Host": "employers.api",
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/e/{everything}",
+      "UpstreamPathTemplate": "/e/{url}",
       "UpstreamHttpMethod": []
     },
     {
-      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamPathTemplate": "/{url}",
       "DownstreamScheme": "https",
+      "DangerousAcceptAnyServerCertificateValidator": true,
       "DownstreamHostAndPorts": [
         {
           "Host": "login.api",
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/l/{everything}",
+      "UpstreamPathTemplate": "/l/{url}",
       "UpstreamHttpMethod": []
     },
     {
-      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamPathTemplate": "/{url}",
       "DownstreamScheme": "https",
+      "DangerousAcceptAnyServerCertificateValidator": true,
       "DownstreamHostAndPorts": [
         {
           "Host": "paidservices.api",
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/ps/{everything}",
+      "UpstreamPathTemplate": "/ps/{url}",
       "UpstreamHttpMethod": []
     },
     {
-      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamPathTemplate": "/{url}",
       "DownstreamScheme": "https",
+      "DangerousAcceptAnyServerCertificateValidator": true,
       "DownstreamHostAndPorts": [
         {
           "Host": "resumes.api",
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/r/{everything}",
+      "UpstreamPathTemplate": "/r/{url}",
       "UpstreamHttpMethod": []
     },
     {
-      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamPathTemplate": "/{url}",
       "DownstreamScheme": "https",
+      "DangerousAcceptAnyServerCertificateValidator": true,
       "DownstreamHostAndPorts": [
         {
           "Host": "vacancies.api",
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/v/{everything}",
+      "UpstreamPathTemplate": "/v/{url}",
       "UpstreamHttpMethod": []
     },
     {
-      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamPathTemplate": "/{url}",
       "DownstreamScheme": "https",
+      "DangerousAcceptAnyServerCertificateValidator": true,
       "DownstreamHostAndPorts": [
         {
           "Host": "dictionaries.api",
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/d/{everything}",
+      "UpstreamPathTemplate": "/d/{url}",
       "UpstreamHttpMethod": []
     },
     {
-      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamPathTemplate": "/{url}",
       "DownstreamScheme": "https",
+      "DangerousAcceptAnyServerCertificateValidator": true,
       "DownstreamHostAndPorts": [
         {
           "Host": "moodle.api",
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/m/{everything}",
+      "UpstreamPathTemplate": "/m/{url}",
       "UpstreamHttpMethod": []
     }
   ],

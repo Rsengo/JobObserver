@@ -162,4 +162,12 @@ services:
       - dictionaries.api
       - moodle.api
       - seq
-  #     - elk
+      # - elk
+
+  front:
+    image: jobobserver/front:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: src/WebApp/Dockerfile  
+    depends_on:
+      - apigw

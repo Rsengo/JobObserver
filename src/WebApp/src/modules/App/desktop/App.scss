@@ -1,0 +1,44 @@
+.app {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+
+  &__test {
+    width: 32%;
+    height: 30rem;
+  }
+
+  &__main {
+    flex-grow: 2;
+    width: 100%;
+  }
+  &__main-wrapper {
+    box-sizing: border-box;
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  &__main-left {
+    flex-shrink: 0;
+    width: 18.75rem;
+  }
+  &__main-center {
+    flex-grow: 2;
+    margin: 0 1.25rem;
+    max-width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__main-right {
+    flex-shrink: 0;
+    width: 18.75rem;
+  }
+}

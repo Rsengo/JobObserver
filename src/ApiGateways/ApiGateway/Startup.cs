@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using System.Net;
 
 namespace ApiGateway
 {
@@ -34,7 +35,7 @@ namespace ApiGateway
                 .AddJwtBearer("IdentityApiKey", x =>
                 {
                     x.Authority = Configuration["IdentityUrl"];
-                    x.RequireHttpsMetadata = false;
+                    x.RequireHttpsMetadata = true;
                     x.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
                     {
                         ValidAudiences = Config.GetValidAudience()

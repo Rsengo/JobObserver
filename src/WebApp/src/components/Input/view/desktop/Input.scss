@@ -1,0 +1,29 @@
+.input {
+  background: #FFF;
+  border-radius: 10px;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  min-height: 2rem;
+  outline: none;
+  padding-left: 1rem;
+
+  &__label {
+    margin-bottom: 0.5rem;
+  }
+
+  &_sizable {
+    &_default {
+      height: 100%;
+    }
+    &_low {
+      height: 2rem;
+      width: 10rem;
+    }
+    &_high {
+      height: 3rem;
+      width: 15rem;
+    }
+  }
+}

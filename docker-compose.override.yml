@@ -159,7 +159,7 @@ services:
       - Seq=http://seq
       - SymmetricKey=kAkoYto_yeb!chesk!y_k1uch
       - IdentityServiceUrl=http://localhost:5105/
-      - WebAppClient=http://localhost:5105
+      - WebAppClient=http://${EXTERNAL_DNS_NAME_OR_IP}:5115/auth/
     ports:
       - "5105:80"  
     volumes: 
@@ -305,3 +305,7 @@ services:
     volumes:
       - ./src/ApiGateways/WebApp.Bff/apigw:${OCELOT_VOLUME_SPEC:-/app/configuration}
       - ./ssl:${SSL_PATH}
+
+  front:
+    ports:
+      - "5115:8000"
