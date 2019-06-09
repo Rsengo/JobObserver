@@ -163,11 +163,3 @@ services:
       - moodle.api
       - seq
       # - elk
-
-  front:
-    image: jobobserver/front:${TAG:-latest}
-    build:
-      context: .
-      dockerfile: src/WebApp/Dockerfile  
-    depends_on:
-      - apigw

@@ -21,10 +21,13 @@ using Resumes.API.HttpFilters;
 using Resumes.API.Security;
 using Resumes.API.Security.Accessors;
 using Resumes.API.Security.Events;
+using Resumes.API.Security.Extensions;
 using Resumes.API.Security.Handlers.Applicant;
+using Resumes.API.Security.Handlers.Employer;
 using Resumes.Db;
 using Resumes.Db.Dto;
 using Resumes.Db.Models;
+using Resumes.Db.Models.Negotiations;
 using Resumes.Db.Synchronization.EventHandlers.Applicants;
 using Resumes.Db.Synchronization.EventHandlers.Driving;
 using Resumes.Db.Synchronization.EventHandlers.Educations;
@@ -157,41 +160,7 @@ namespace Resumes.API
                 opt.Filters.Add<ValidateModelStateFilter>();
             }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddAccessControl(builder =>
-            {
-                builder.UseAccessEventFactory<AccessEventFactoryMock>();
-                builder.UseAccessorFactory<AccessorFactoryMock>();
-
-                builder.AddAccessor<AdminAccessor>(paramsBuilder =>
-                { }, (sp, dict) =>
-                {
-                    var accessor = new AdminAccessor(sp, dict);
-                    return accessor;
-                });
-
-                builder.AddAccessor<ApplicantAccessor>(paramsBuilder =>
-                {
-                    paramsBuilder.RegisterHandler<ApplicantAccessEvent<Resume>, ApplicantResumeAccessHandler, Resume>();
-                }, (sp, dict) =>
-                {
-                    var accessor = new ApplicantAccessor(sp, dict);
-                    return accessor;
-                });
-
-                builder.AddAccessor<EmployerManagerAccessor>(paramsBuilder =>
-                { }, (sp, dict) =>
-                {
-                    var accessor = new EmployerManagerAccessor(sp, dict);
-                    return accessor;
-                });
-
-                builder.AddAccessor<EducationalInstitutionManagerAccessor>(paramsBuilder =>
-                { }, (sp, dict) =>
-                {
-                    var accessor = new EducationalInstitutionManagerAccessor(sp, dict);
-                    return accessor;
-                });
-            });
+            services.AddAccessControl();
 
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
             services.AddAuthentication(options =>

@@ -40,7 +40,7 @@ namespace BuildingBlocks.Security.Abstract
             var handler = Activator.CreateInstance(handlerType);
 
             if (handler == null)
-                await OnHandlerNotFound(@event, operation);
+                return await OnHandlerNotFound(@event, operation);
 
             var concreteType = typeof(IAccessHandler<,>).MakeGenericType(eventType, typeof(TEntity));
             var methodParams = new object[] { @event, operation };
