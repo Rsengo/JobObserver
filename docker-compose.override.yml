@@ -13,8 +13,8 @@ services:
       - ACCEPT_EULA=Y
     ports:
       - "5433:1433"    # Important: In a production environment your should remove the external port
-    # volumes: 
-      # - ./database/mssql:/var/opt/mssql
+    volumes: 
+      - ./mssql:/var/opt/mssql
 
   rabbitmq:
     ports:
@@ -28,8 +28,8 @@ services:
       - ALLOW_EMPTY_PASSWORD=yes
     ports:
      - '3306:3306'
-    # volumes:
-    #   - ./database/mariadb_data:/bitnami
+    volumes:
+      - ./moodle/data:/bitnami
 
   moodle:
     environment:
@@ -41,8 +41,8 @@ services:
     ports:
       - '5150:80'
       - '443:443'
-    # volumes:
-    #   - ./database/moodle_data:/bitnami
+    volumes:
+      - ./moodle/bitnami:/bitnami
 
   # elk:
   #   environment:
@@ -69,7 +69,6 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./ssl:/etc/ssl
-    command: [nginx-debug, '-g', 'daemon off;']
 
   brandedtemplates.api:
     environment:
