@@ -36,6 +36,7 @@ namespace Login.API.Services
 
             var user = new User
             {
+                Id = Guid.NewGuid().ToString("D"),
                 FirstName = model.FirstName,
                 LastName = model.LastName,
                 BirthDate = model.BirthDate,

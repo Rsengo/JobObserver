@@ -36,4 +36,4 @@ const _doSearchRequest = (url, inputValue) => {
     return axios.post(url, searchObj);
 }
 
-export default { searchCities, searchEmployers, searchEducationalInstitutions }
+export default { searchCities, searchEmployers, searchEducationalInstitutions, getAll }

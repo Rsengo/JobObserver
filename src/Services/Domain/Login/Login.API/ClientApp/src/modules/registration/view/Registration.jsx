@@ -43,6 +43,7 @@ class Registration extends Component {
     registration() {
         const { user } = this.state;
         const { role, ...data } = user;
+        data.birth_date = new Date(data.birth_date);
         var service = new WebApiService();
         service.registration(role, data).then((response) => {
             window.location.href = response.data;

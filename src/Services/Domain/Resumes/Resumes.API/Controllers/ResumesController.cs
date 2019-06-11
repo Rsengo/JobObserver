@@ -268,7 +268,7 @@ namespace Resumes.API.Controllers
             return Ok();
         }
 
-        [HttpGet("search")]
+        [HttpPost("search")]
         public async Task<IActionResult> Search([FromBody] ResumeSearchFilter filter)
         {
             var builder = new ResumeSearchBuilder(_context);

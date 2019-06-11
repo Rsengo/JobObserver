@@ -21,28 +21,28 @@ services:
       - "15672:15672"  # Important: In a production environment your should remove the external port
       - "5672:5672"    # Important: In a production environment your should remove the external port
 
-  # mariadb:
-  #   environment:
-  #     - MARIADB_USER=bn_moodle
-  #     - MARIADB_DATABASE=bitnami_moodle
-  #     - ALLOW_EMPTY_PASSWORD=yes
-  #   ports:
-  #    - '3306:3306'
-  #   volumes:
-  #     - ./moodle/data:/bitnami
+  mariadb:
+    environment:
+      - MARIADB_USER=bn_moodle
+      - MARIADB_DATABASE=bitnami_moodle
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+     - '3306:3306'
+    volumes:
+      - ./moodle/data:/bitnami
 
-  # moodle:
-  #   environment:
-  #     - MARIADB_HOST=mariadb
-  #     - MARIADB_PORT_NUMBER=3306
-  #     - MOODLE_DATABASE_USER=bn_moodle
-  #     - MOODLE_DATABASE_NAME=bitnami_moodle
-  #     - ALLOW_EMPTY_PASSWORD=yes
-  #   ports:
-  #     - '5150:80'
-  #     - '443:443'
-  #   volumes:
-  #     - ./moodle/bitnami:/bitnami
+  moodle:
+    environment:
+      - MARIADB_HOST=mariadb
+      - MARIADB_PORT_NUMBER=3306
+      - MOODLE_DATABASE_USER=bn_moodle
+      - MOODLE_DATABASE_NAME=bitnami_moodle
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - '5150:80'
+      - '443:443'
+    volumes:
+      - ./moodle/bitnami:/bitnami
 
   # elk:
   #   environment:
@@ -70,104 +70,104 @@ services:
       - ./nginx/nginx_ssl.conf:/etc/nginx/nginx.conf
       - ./ssl:/etc/ssl
 
-  # brandedtemplates.api:
-  #   environment:
-  #     - ASPNETCORE_URLS=https://0.0.0.0:80
-  #     - ASPNETCORE_HTTPS_PORT=5101
-  #     - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
-  #     - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
-  #     - ConnectionString=Server=sql.data;Database=BRANDED_TEMPLATES;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - IdentityUrl=http://login.api
-  #     - ElasticSearch=elk:9200
-  #     - Seq=http://seq
-  #   ports:
-  #     - "5101:80"  
-  #   volumes: 
-  #     - ./ssl:${SSL_PATH} 
+  brandedtemplates.api:
+    environment:
+      - ASPNETCORE_URLS=https://0.0.0.0:80
+      - ASPNETCORE_HTTPS_PORT=5101
+      - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
+      - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
+      - ConnectionString=Server=sql.data;Database=BRANDED_TEMPLATES;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - IdentityUrl=http://login.api
+      - ElasticSearch=elk:9200
+      - Seq=http://seq
+    ports:
+      - "5101:80"  
+    volumes: 
+      - ./ssl:${SSL_PATH} 
 
-  # careerdays.api:
-  #   environment:
-  #     - ASPNETCORE_URLS=https://0.0.0.0:80
-  #     - ASPNETCORE_HTTPS_PORT=5102
-  #     - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
-  #     - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
-  #     - ConnectionString=Server=sql.data;Database=CAREER_DAYS;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - IdentityUrl=http://login.api
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - ElasticSearch=elk:9200
-  #     - Seq=http://seq
-  #   ports:
-  #     - "5102:80" 
-  #   volumes: 
-  #     - ./ssl:${SSL_PATH}
+  careerdays.api:
+    environment:
+      - ASPNETCORE_URLS=https://0.0.0.0:80
+      - ASPNETCORE_HTTPS_PORT=5102
+      - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
+      - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
+      - ConnectionString=Server=sql.data;Database=CAREER_DAYS;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - IdentityUrl=http://login.api
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - ElasticSearch=elk:9200
+      - Seq=http://seq
+    ports:
+      - "5102:80" 
+    volumes: 
+      - ./ssl:${SSL_PATH}
 
-  # educationalinstitutions.api:
-  #   environment:
-  #     - ASPNETCORE_URLS=https://0.0.0.0:80
-  #     - ASPNETCORE_HTTPS_PORT=5103
-  #     - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
-  #     - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
-  #     - ConnectionString=Server=sql.data;Database=EDUCATIONAL_INSTITUTIONS;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - IdentityUrl=http://login.api
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - ElasticSearch=elk:9200
-  #     - Seq=http://seq
-  #   ports:
-  #     - "5103:80"  
-  #   volumes: 
-  #     - ./ssl:${SSL_PATH}
+  educationalinstitutions.api:
+    environment:
+      - ASPNETCORE_URLS=https://0.0.0.0:80
+      - ASPNETCORE_HTTPS_PORT=5103
+      - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
+      - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
+      - ConnectionString=Server=sql.data;Database=EDUCATIONAL_INSTITUTIONS;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - IdentityUrl=http://login.api
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - ElasticSearch=elk:9200
+      - Seq=http://seq
+    ports:
+      - "5103:80"  
+    volumes: 
+      - ./ssl:${SSL_PATH}
 
-  # employers.api:
-  #   environment:
-  #     - ASPNETCORE_URLS=https://0.0.0.0:80
-  #     - ASPNETCORE_HTTPS_PORT=5104
-  #     - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
-  #     - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
-  #     - ConnectionString=Server=sql.data;Database=EMPLOYERS;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - IdentityUrl=http://login.api
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - ElasticSearch=elk:9200
-  #     - Seq=http://seq
-  #   ports:
-  #     - "5104:80"  
-  #   volumes: 
-  #     - ./ssl:${SSL_PATH}
+  employers.api:
+    environment:
+      - ASPNETCORE_URLS=https://0.0.0.0:80
+      - ASPNETCORE_HTTPS_PORT=5104
+      - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
+      - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
+      - ConnectionString=Server=sql.data;Database=EMPLOYERS;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - IdentityUrl=http://login.api
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - ElasticSearch=elk:9200
+      - Seq=http://seq
+    ports:
+      - "5104:80"  
+    volumes: 
+      - ./ssl:${SSL_PATH}
 
-  # login.api:
-  #   environment:
-  #     - ASPNETCORE_URLS=https://0.0.0.0:80
-  #     - ASPNETCORE_HTTPS_PORT=5105
-  #     - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
-  #     - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
-  #     - ConnectionString=Server=sql.data;Database=LOGIN;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - ElasticSearch=elk:9200
-  #     - Seq=http://seq
-  #     - SymmetricKey=kAkoYto_yeb!chesk!y_k1uch
-  #     - IdentityServiceUrl=https://${EXTERNAL_DNS_NAME_OR_IP}:5105/
-  #     - WebAppClient=http://${EXTERNAL_DNS_NAME_OR_IP}:${FRONTEND_PORT}/auth/
-  #   ports:
-  #     - "5105:80"  
-  #   volumes: 
-  #     # - ./src/Services/Domain/Login/Login.API/Certificates:/app/Certificates
-  #     - ./ssl:${SSL_PATH}
+  login.api:
+    environment:
+      - ASPNETCORE_URLS=https://0.0.0.0:80
+      - ASPNETCORE_HTTPS_PORT=5105
+      - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
+      - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
+      - ConnectionString=Server=sql.data;Database=LOGIN;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - ElasticSearch=elk:9200
+      - Seq=http://seq
+      - SymmetricKey=kAkoYto_yeb!chesk!y_k1uch
+      - IdentityServiceUrl=https://${EXTERNAL_DNS_NAME_OR_IP}:5105/
+      - WebAppClient=http://${EXTERNAL_DNS_NAME_OR_IP}:${FRONTEND_PORT}/auth/
+    ports:
+      - "5105:80"  
+    volumes: 
+      # - ./src/Services/Domain/Login/Login.API/Certificates:/app/Certificates
+      - ./ssl:${SSL_PATH}
 
   paidservices.api:
     environment:
@@ -186,111 +186,111 @@ services:
     volumes: 
       - ./ssl:${SSL_PATH}
 
-  # resumes.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=https://0.0.0.0:80
-  #     - ASPNETCORE_HTTPS_PORT=5107
-  #     - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
-  #     - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
-  #     - ConnectionString=Server=sql.data;Database=RESUMES;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - IdentityUrl=http://login.api
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - ElasticSearch=elk:9200
-  #     - Seq=http://seq
-  #   ports:
-  #     - "5107:80" 
-  #   volumes: 
-  #     - ./ssl:${SSL_PATH}
+  resumes.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://0.0.0.0:80
+      - ASPNETCORE_HTTPS_PORT=5107
+      - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
+      - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
+      - ConnectionString=Server=sql.data;Database=RESUMES;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - IdentityUrl=http://login.api
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - ElasticSearch=elk:9200
+      - Seq=http://seq
+    ports:
+      - "5107:80" 
+    volumes: 
+      - ./ssl:${SSL_PATH}
 
-  # vacancies.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=https://0.0.0.0:80
-  #     - ASPNETCORE_HTTPS_PORT=5108
-  #     - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
-  #     - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
-  #     - ConnectionString=Server=sql.data;Database=VACANCIES;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - IdentityUrl=http://login.api
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - ElasticSearch=elk:9200
-  #     - Seq=http://seq
-  #   ports:
-  #     - "5108:80" 
-  #   volumes: 
-  #     - ./ssl:${SSL_PATH}
+  vacancies.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://0.0.0.0:80
+      - ASPNETCORE_HTTPS_PORT=5108
+      - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
+      - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
+      - ConnectionString=Server=sql.data;Database=VACANCIES;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - IdentityUrl=http://login.api
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - ElasticSearch=elk:9200
+      - Seq=http://seq
+    ports:
+      - "5108:80" 
+    volumes: 
+      - ./ssl:${SSL_PATH}
 
-  # dictionaries.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=https://0.0.0.0:80
-  #     - ASPNETCORE_HTTPS_PORT=5109
-  #     - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
-  #     - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
-  #     - ConnectionString=Server=sql.data;Database=DICTIONARIES;User Id=sa;Password=Pass@word
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - IdentityUrl=http://login.api
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - ElasticSearch=elk:9200
-  #     - Seq=http://seq
-  #   ports:
-  #     - "5109:80" 
-  #   volumes:
-  #     - ./src/Services/Integration/Dictionaries/Dictionaries.API/Sources:/app/Sources 
-  #     - ./ssl:${SSL_PATH}
+  dictionaries.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://0.0.0.0:80
+      - ASPNETCORE_HTTPS_PORT=5109
+      - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
+      - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
+      - ConnectionString=Server=sql.data;Database=DICTIONARIES;User Id=sa;Password=Pass@word
+      - CorsPolicy=${CORS_POLICY}
+      - IdentityUrl=http://login.api
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - ElasticSearch=elk:9200
+      - Seq=http://seq
+    ports:
+      - "5109:80" 
+    volumes:
+      - ./src/Services/Integration/Dictionaries/Dictionaries.API/Sources:/app/Sources 
+      - ./ssl:${SSL_PATH}
 
-  # moodle.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=https://0.0.0.0:80
-  #     - ASPNETCORE_HTTPS_PORT=5111
-  #     - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
-  #     - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - IdentityUrl=http://login.api
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - ElasticSearch=elk:9200
-  #     - MoodleRestUrl=moodle/webservice/rest/server.php
-  #     - MoodleToken=f3f5be086fd0b9cf4ed3d09a3fdf1da0
-  #     - MoodleRestFormat=json
-  #     - Seq=http://seq
-  #   ports:
-  #     - "5111:80" 
-  #   volumes: 
-  #     - ./ssl:${SSL_PATH}
+  moodle.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://0.0.0.0:80
+      - ASPNETCORE_HTTPS_PORT=5111
+      - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
+      - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
+      - CorsPolicy=${CORS_POLICY}
+      - IdentityUrl=http://login.api
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - ElasticSearch=elk:9200
+      - MoodleRestUrl=moodle/webservice/rest/server.php
+      - MoodleToken=f3f5be086fd0b9cf4ed3d09a3fdf1da0
+      - MoodleRestFormat=json
+      - Seq=http://seq
+    ports:
+      - "5111:80" 
+    volumes: 
+      - ./ssl:${SSL_PATH}
 
-  # emailnotifications.api:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_URLS=https://0.0.0.0:80
-  #     - ASPNETCORE_HTTPS_PORT=5110
-  #     - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
-  #     - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
-  #     - CorsPolicy=${CORS_POLICY}
-  #     - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
-  #     - EventBusConnection=rabbitmq
-  #     - EventBusUserName=${EVENT_BUS_USER_NAME}
-  #     - EventBusPassword=${EVENT_BUS_PASSWORD}
-  #     - ElasticSearch=elk:9200
-  #     - Seq=http://seq
-  #   ports:
-  #     - "5110:80" 
-  #   volumes: 
-  #     - ./ssl:${SSL_PATH}
+  emailnotifications.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://0.0.0.0:80
+      - ASPNETCORE_HTTPS_PORT=5110
+      - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
+      - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
+      - CorsPolicy=${CORS_POLICY}
+      - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=${EVENT_BUS_USER_NAME}
+      - EventBusPassword=${EVENT_BUS_PASSWORD}
+      - ElasticSearch=elk:9200
+      - Seq=http://seq
+    ports:
+      - "5110:80" 
+    volumes: 
+      - ./ssl:${SSL_PATH}
 
   apigw:
     environment:

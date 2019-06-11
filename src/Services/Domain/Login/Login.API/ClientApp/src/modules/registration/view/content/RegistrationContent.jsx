@@ -103,8 +103,23 @@ class RegistrationContent extends Component {
         this.state = {
             showPassword: false,
             showPasswordConfirm: false,
-            role: roles.APPLICANT.id
+            role: roles.APPLICANT.id,
+            genderOptions: []
         };
+    }
+
+    componentDidMount() {
+      dictionariesService.getAll().then(response => {
+        const { data } = response;
+        const { genders } = data;
+        const genderOptions = genders.map(gender => {
+          return {
+            label: gender.name,
+            value: gender.id
+          }
+        });
+        this.setState({ ...this.state, genderOptions})
+      });
     }
 
     @bind
@@ -121,7 +136,7 @@ class RegistrationContent extends Component {
 
     render() {
         const { callback } = this.props;
-        const { role } = this.state;
+        const { role, genderOptions } = this.state;
 
         var b = block('registration_content')
         return (
@@ -234,6 +249,17 @@ class RegistrationContent extends Component {
                       shrink: true,
                     }}/>
 
+                  <MaterialSelect 
+                    label='Пол'
+                    name='gender_id'
+                    isClearable
+                    placeholder='Выберите пол'
+                    InputLabelProps={{
+                      shrink: true,
+                    }}
+                    onChange={callback}
+                    options={genderOptions} />
+
                   <AsyncMaterialSelect 
                     label='Место проживания'
                     name='area_id'
@@ -242,7 +268,8 @@ class RegistrationContent extends Component {
                     InputLabelProps={{
                       shrink: true,
                     }}
-                    onChange={callback}/>
+                    onChange={callback} 
+                    isClearable />
 
                     
                   {

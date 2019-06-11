@@ -39,7 +39,8 @@
           "Serilog.Sinks.Elasticsearch": "7.1.0",
           "Serilog.Sinks.Seq": "4.0.0",
           "Swashbuckle.AspNetCore": "4.0.1",
-          "Vacancies.Db": "1.0.0"
+          "Vacancies.Db": "1.0.0",
+          "Z.EntityFramework.Extensions.EFCore": "2.3.6"
         },
         "runtime": {
           "Vacancies.API.dll": {}
@@ -70,7 +71,7 @@
           "System.Collections.Specialized": "4.3.0",
           "System.ComponentModel.TypeConverter": "4.3.0",
           "System.Dynamic.Runtime": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.5.0",
           "System.Runtime.Serialization.Primitives": "4.3.0"
         },
         "runtime": {
@@ -205,7 +206,7 @@
           "System.Net.Security": "4.3.0",
           "System.Net.Sockets": "4.3.0",
           "System.Reflection.Extensions": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.5.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
           "System.Text.RegularExpressions": "4.3.0",
@@ -546,11 +547,26 @@
           "System.Reflection": "4.3.0",
           "System.Reflection.Extensions": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.5.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
           "System.Threading": "4.3.0"
+        }
+      },
+      "System.Configuration.ConfigurationManager/4.5.0": {
+        "dependencies": {
+          "System.Security.Cryptography.ProtectedData": "4.5.0",
+          "System.Security.Permissions": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
         }
       },
       "System.Interactive.Async/3.2.0": {
@@ -674,6 +690,23 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
+      "System.Reflection.TypeExtensions/4.5.0": {},
+      "System.Security.Cryptography.ProtectedData/4.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
       "System.Threading.ThreadPool/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0",
@@ -687,10 +720,31 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "Z.EntityFramework.Extensions.EFCore/2.3.6": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "Microsoft.EntityFrameworkCore.Relational": "2.2.2",
+          "Newtonsoft.Json": "12.0.1",
+          "System.Configuration.ConfigurationManager": "4.5.0",
+          "System.Data.SqlClient": "4.6.0",
+          "System.Reflection.Emit": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.dll": {
+            "assemblyVersion": "2.3.6.0",
+            "fileVersion": "2.3.6.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Z.EntityFramework.Extensions.EFCore.dll": {}
+        }
+      },
       "BuildingBlocks.AutoMapper/1.0.0": {
         "dependencies": {
           "AutoMapper": "8.0.0",
-          "BuildingBlocks.Extensions.Assemblies": "1.0.0"
+          "BuildingBlocks.Extensions.Assemblies": "1.0.0",
+          "Z.EntityFramework.Extensions.EFCore": "2.3.6"
         },
         "runtime": {
           "BuildingBlocks.AutoMapper.dll": {}
@@ -701,7 +755,8 @@
       },
       "BuildingBlocks.DataTransfer/1.0.0": {
         "dependencies": {
-          "Newtonsoft.Json": "12.0.1"
+          "Newtonsoft.Json": "12.0.1",
+          "Z.EntityFramework.Extensions.EFCore": "2.3.6"
         },
         "runtime": {
           "BuildingBlocks.DataTransfer.dll": {}
@@ -711,6 +766,9 @@
         }
       },
       "BuildingBlocks.EntityFramework/1.0.0": {
+        "dependencies": {
+          "Z.EntityFramework.Extensions.EFCore": "2.3.6"
+        },
         "runtime": {
           "BuildingBlocks.EntityFramework.dll": {}
         },
@@ -720,7 +778,8 @@
       },
       "BuildingBlocks.EventBus/1.0.0": {
         "dependencies": {
-          "Newtonsoft.Json": "12.0.1"
+          "Newtonsoft.Json": "12.0.1",
+          "Z.EntityFramework.Extensions.EFCore": "2.3.6"
         },
         "runtime": {
           "BuildingBlocks.EventBus.dll": {}
@@ -735,7 +794,8 @@
           "Microsoft.Extensions.Logging": "2.2.0",
           "Newtonsoft.Json": "12.0.1",
           "Polly": "7.0.2",
-          "RabbitMQ.Client": "5.1.0"
+          "RabbitMQ.Client": "5.1.0",
+          "Z.EntityFramework.Extensions.EFCore": "2.3.6"
         },
         "runtime": {
           "BuildingBlocks.EventBus.RabbitMQ.dll": {}
@@ -748,7 +808,8 @@
         "dependencies": {
           "BuildingBlocks.EventBus": "1.0.0",
           "Microsoft.EntityFrameworkCore": "2.2.2",
-          "Newtonsoft.Json": "12.0.1"
+          "Newtonsoft.Json": "12.0.1",
+          "Z.EntityFramework.Extensions.EFCore": "2.3.6"
         },
         "runtime": {
           "BuildingBlocks.EventBus.Synchronization.dll": {}
@@ -758,6 +819,9 @@
         }
       },
       "BuildingBlocks.Extensions.Assemblies/1.0.0": {
+        "dependencies": {
+          "Z.EntityFramework.Extensions.EFCore": "2.3.6"
+        },
         "runtime": {
           "BuildingBlocks.Extensions.Assemblies.dll": {}
         },
@@ -768,7 +832,8 @@
       "BuildingBlocks.Extensions.AutoMapper/1.0.0": {
         "dependencies": {
           "BuildingBlocks.AutoMapper": "1.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0",
+          "Z.EntityFramework.Extensions.EFCore": "2.3.6"
         },
         "runtime": {
           "BuildingBlocks.Extensions.AutoMapper.dll": {}
@@ -782,7 +847,8 @@
           "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
           "Microsoft.EntityFrameworkCore": "2.2.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2",
-          "Polly": "7.0.2"
+          "Polly": "7.0.2",
+          "Z.EntityFramework.Extensions.EFCore": "2.3.6"
         },
         "runtime": {
           "BuildingBlocks.Extensions.EntityFramework.dll": {}
@@ -795,7 +861,8 @@
         "dependencies": {
           "BuildingBlocks.EventBus.RabbitMQ": "1.0.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
-          "RabbitMQ.Client": "5.1.0"
+          "RabbitMQ.Client": "5.1.0",
+          "Z.EntityFramework.Extensions.EFCore": "2.3.6"
         },
         "runtime": {
           "BuildingBlocks.Extensions.EventBus.RabbitMQ.dll": {}
@@ -814,7 +881,8 @@
           "BuildingBlocks.EventBus.Synchronization": "1.0.0",
           "Microsoft.EntityFrameworkCore": "2.2.2",
           "Microsoft.EntityFrameworkCore.AutoHistory": "2.1.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2"
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2",
+          "Z.EntityFramework.Extensions.EFCore": "2.3.6"
         },
         "runtime": {
           "Vacancies.Db.dll": {}
@@ -2149,7 +2217,7 @@
           "System.Collections": "4.3.0",
           "System.IO": "4.3.0",
           "System.IO.FileSystem": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.5.0",
           "System.Runtime.Extensions": "4.3.0",
           "System.Runtime.InteropServices": "4.3.0",
           "System.Runtime.InteropServices.RuntimeInformation": "4.3.0"
@@ -3174,7 +3242,7 @@
           "System.Reflection.Emit": "4.3.0",
           "System.Reflection.Emit.ILGeneration": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.5.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
@@ -3300,7 +3368,7 @@
           "System.Reflection.Emit.Lightweight": "4.3.0",
           "System.Reflection.Extensions": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.5.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
@@ -3343,7 +3411,7 @@
           "System.Reflection.Emit.Lightweight": "4.3.0",
           "System.Reflection.Extensions": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.5.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
@@ -3413,13 +3481,6 @@
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.2.0",
           "Microsoft.NETCore.Targets": "2.0.0",
-          "System.Runtime": "4.3.0"
-        },
-        "compileOnly": true
-      },
-      "System.Reflection.TypeExtensions/4.3.0": {
-        "dependencies": {
-          "System.Reflection": "4.3.0",
           "System.Runtime": "4.3.0"
         },
         "compileOnly": true
@@ -3845,7 +3906,7 @@
           "System.Reflection.Emit.ILGeneration": "4.3.0",
           "System.Reflection.Extensions": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.5.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
@@ -4137,6 +4198,13 @@
       "path": "system.componentmodel.typeconverter/4.3.0",
       "hashPath": "system.componentmodel.typeconverter.4.3.0.nupkg.sha512"
     },
+    "System.Configuration.ConfigurationManager/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UIFvaFfuKhLr9u5tWMxmVoDPkFeD+Qv8gUuap4aZgVGYSYMdERck4OhLN/2gulAc0nYTEigWXSJNNWshrmxnng==",
+      "path": "system.configuration.configurationmanager/4.5.0",
+      "hashPath": "system.configuration.configurationmanager.4.5.0.nupkg.sha512"
+    },
     "System.Interactive.Async/3.2.0": {
       "type": "package",
       "serviceable": true,
@@ -4186,6 +4254,20 @@
       "path": "system.net.sockets/4.3.0",
       "hashPath": "system.net.sockets.4.3.0.nupkg.sha512"
     },
+    "System.Reflection.TypeExtensions/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dYSKm+jBVh/I9RQP6AaBiyd92Y6Ml9vEEcTSougcAMSt9X9QQHTGJo0p/uH4uSgODZe+5cuOkgg8wg02NuM0VQ==",
+      "path": "system.reflection.typeextensions/4.5.0",
+      "hashPath": "system.reflection.typeextensions.4.5.0.nupkg.sha512"
+    },
+    "System.Security.Cryptography.ProtectedData/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wLBKzFnDCxP12VL9ANydSYhk59fC4cvOr9ypYQLPnAj48NQIhqnjdD2yhP8yEKyBJEjERWS9DisKL7rX5eU25Q==",
+      "path": "system.security.cryptography.protecteddata/4.5.0",
+      "hashPath": "system.security.cryptography.protecteddata.4.5.0.nupkg.sha512"
+    },
     "System.Threading.ThreadPool/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -4199,6 +4281,13 @@
       "sha512": "sha512-Z6YfyYTCg7lOZjJzBjONJTFKGN9/NIYKSxhU5GRd+DTwHSZyvWp1xuI5aR+dLg+ayyC5Xv57KiY4oJ0tMO89fQ==",
       "path": "system.threading.timer/4.3.0",
       "hashPath": "system.threading.timer.4.3.0.nupkg.sha512"
+    },
+    "Z.EntityFramework.Extensions.EFCore/2.3.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GEHRtCyok7SOpZHfPE5jnfcs1emtIkL0WB3Bnve53Zb/FevtN3jmy4kxpOvHvZkdtn8ld0b6Kx6lOzHYgQUW8g==",
+      "path": "z.entityframework.extensions.efcore/2.3.6",
+      "hashPath": "z.entityframework.extensions.efcore.2.3.6.nupkg.sha512"
     },
     "BuildingBlocks.AutoMapper/1.0.0": {
       "type": "project",
@@ -5850,13 +5939,6 @@
       "sha512": "sha512-5RXItQz5As4xN2/YUDxdpsEkMhvw3e6aNveFXUn4Hl/udNTCNhnKp8lT9fnc3MhvGKh1baak5CovpuQUXHAlIA==",
       "path": "system.reflection.primitives/4.3.0",
       "hashPath": "system.reflection.primitives.4.3.0.nupkg.sha512"
-    },
-    "System.Reflection.TypeExtensions/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-7u6ulLcZbyxB5Gq0nMkQttcdBTx57ibzw+4IOXEfR+sXYQoHvjW5LTLyNr8O22UIMrqYbchJQJnos4eooYzYJA==",
-      "path": "system.reflection.typeextensions/4.3.0",
-      "hashPath": "system.reflection.typeextensions.4.3.0.nupkg.sha512"
     },
     "System.Resources.ResourceManager/4.3.0": {
       "type": "package",

@@ -24,7 +24,7 @@ namespace Resumes.API.Filters.Builders
 
         public IQueryable<Resume> BuildQuery(ResumeSearchFilter filter)
         {
-            var query = _context.Resumes;
+            IQueryable<Resume> query = _context.Resumes;
 
             AddApplicantCondition(query, filter.ApplicantId);
             AddAreasCondition(query, filter.AreaIds);
@@ -45,6 +45,10 @@ namespace Resumes.API.Filters.Builders
             AddUpdatedCondition(query, filter.UpdatedAtMin, filter.UpdatedAtMax);
             AddVehicleCondition(query, filter.HasVehicle);
             AddTitleCondition(query, filter.Title);
+
+            query = query
+                .Skip(filter.Offset)
+                .Take(filter.Count);
 
             return query;
         }

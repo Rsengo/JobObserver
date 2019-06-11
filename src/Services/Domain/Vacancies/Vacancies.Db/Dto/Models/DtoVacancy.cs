@@ -75,7 +75,7 @@ namespace Vacancies.Db.Dto.Models
         ///     Адрес.
         /// </summary>
         [JsonProperty("address")]
-        public virtual Address Address { get; set; }
+        public virtual DtoAddress Address { get; set; }
 
         /// <summary>
         ///     Id Отделения
