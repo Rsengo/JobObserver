@@ -87,7 +87,7 @@ namespace Dictionaries.API.Controllers
                 ? StringComparison.InvariantCulture
                 : StringComparison.InvariantCultureIgnoreCase;
             var filtered = entities
-                .Where(x => !x.Areas.Any())
+                .Where(x => x.Areas?.Any() != true)
                 .Where(x => x.Name.Contains(filter.Template, comprassionMethod))
                 .Select(x => new Area { Id = x.Id, Name = getCityNameDelegate(x) });
 
@@ -97,8 +97,7 @@ namespace Dictionaries.API.Controllers
             if (filter.Count != null)
                 filtered = filtered.Take(filter.Count.Value);
 
-            var result = filtered.Select(Mapper.Map<DtoArea>).ToList();
-            return Ok(result);
+            return Ok(filtered);
         }
 
         [HttpPost("search/countries")]

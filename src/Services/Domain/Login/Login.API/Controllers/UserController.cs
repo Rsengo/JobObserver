@@ -72,11 +72,19 @@ namespace Login.API.Controllers
 
             await _context.Areas.LoadAsync();
 
-            var contactId = user.Contacts.Id;
-            await _context.Sites
-                .Where(x => x.ContactId == contactId)
-                .Include(x => x.Type)
-                .LoadAsync();
+            var contactId = user.Contacts?.Id;
+
+            if (contactId != null)
+            {
+                await _context.Sites
+                    .Where(x => x.ContactId == contactId)
+                    .Include(x => x.Type)
+                    .LoadAsync();
+
+                await _context.Phones
+                    .Where(x => x.ContactId == contactId)
+                    .LoadAsync();
+            }
 
             var dtoUser = Mapper.Map<DtoUser>(user);
 

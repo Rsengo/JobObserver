@@ -1,6 +1,10 @@
-﻿using Employers.Db;
+﻿using AutoMapper;
+using BuildingBlocks.EventBus.Abstractions;
+using Employers.Db;
+using Employers.Db.Dto.Models;
 using Employers.Db.Models;
 using Employers.Db.Models.Synonyms;
+using Employers.Db.Synchronization.Events;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -15,21 +19,25 @@ namespace Employers.API.Data
 
         private readonly ILogger<EmployersDbContextSeed> _logger;
 
+        private readonly IEventBus _eventBus;
+
         public EmployersDbContextSeed(
             EmployersDbContext context,
-            ILogger<EmployersDbContextSeed> logger)
+            ILogger<EmployersDbContextSeed> logger,
+            IEventBus eventBus)
         {
             _context = context;
             _logger = logger;
+            _eventBus = eventBus;
         }
 
         public async Task SeedAsync()
         {
             try
             {
-                var id = await AddEmployer(_context);
-                await AddEmployerSynonyms(_context, id);
-                await AddDepartments(_context, id);
+                var id = await AddEmployer();
+                await AddEmployerSynonyms(id);
+                await AddDepartments(id);
             }
             catch (Exception ex)
             {
@@ -38,7 +46,7 @@ namespace Employers.API.Data
             }
         }
 
-        private static async Task<long> AddEmployer(EmployersDbContext context)
+        private async Task<long> AddEmployer()
         {
             var employer = new Employer
             {
@@ -48,24 +56,31 @@ namespace Employers.API.Data
                 SiteUrl = "http://company.com/"
             };
 
-            await context.Employers.AddAsync(employer);
-            await context.SaveChangesAsync();
+            _context.Employers.Add(employer);
+            await _context.SaveChangesAsync();
+
+            var @event = new EmployersChanged
+            {
+                Created = new[] { Mapper.Map<DtoEmployer>(employer) }
+            };
+
+            _eventBus.Publish(@event);
 
             return employer.Id;
         }
 
-        private static async Task AddEmployerSynonyms(EmployersDbContext context, long employerId)
+        private async Task AddEmployerSynonyms(long employerId)
         {
             var synonyms = new[]
             {
                 new EmployerSynonyms { EmployerId = employerId, Name = "Company" }
             };
 
-            await context.EmployerSynonyms.AddRangeAsync(synonyms);
-            await context.SaveChangesAsync();
+            _context.EmployerSynonyms.AddRange(synonyms);
+            await _context.SaveChangesAsync();
         }
 
-        private static async Task AddDepartments(EmployersDbContext context, long employerId)
+        private async Task AddDepartments(long employerId)
         {
             var department = new Department
             {
@@ -74,8 +89,15 @@ namespace Employers.API.Data
                 Description = "Отдел компании"
             };
 
-            await context.Departments.AddAsync(department);
-            await context.SaveChangesAsync();
+            _context.Departments.Add(department);
+            await _context.SaveChangesAsync();
+
+            var @event = new DepartmentsChanged
+            {
+                Created = new[] { Mapper.Map<DtoDepartment>(department) }
+            };
+
+            _eventBus.Publish(@event);
         }
     }
 }

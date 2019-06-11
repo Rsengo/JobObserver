@@ -1,6 +1,11 @@
-﻿using EducationalInstitutions.Db;
+﻿using AutoMapper;
+using BuildingBlocks.EventBus.Abstractions;
+using EducationalInstitutions.Db;
+using EducationalInstitutions.Db.Dto.Models;
 using EducationalInstitutions.Db.Models;
 using EducationalInstitutions.Db.Models.Synonyms;
+using EducationalInstitutions.Db.Synchronization.Events;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -15,22 +20,26 @@ namespace EducationalInstitutions.API.Data
 
         private readonly ILogger<EducationalInstituionsDbContextSeed> _logger;
 
+        private readonly IEventBus _eventBus;
+
         public EducationalInstituionsDbContextSeed(
             EducationalInstitutionsDbContext context,
-            ILogger<EducationalInstituionsDbContextSeed> logger)
+            ILogger<EducationalInstituionsDbContextSeed> logger,
+            IEventBus eventBus)
         {
             _context = context;
             _logger = logger;
+            _eventBus = eventBus;
         }
 
         public async Task SeedAsync()
         {
             try
             {
-                var institutionId = await AddUniversity(_context);
-                await AddUniversitySynonyms(institutionId, _context);
-                var fucultyId = await AddFaculty(_context, institutionId);
-                await AddFacultySynonyms(fucultyId, _context);
+                var institutionId = await AddUniversity();
+                await AddUniversitySynonyms(institutionId);
+                var fucultyId = await AddFaculty(institutionId);
+                await AddFacultySynonyms(fucultyId);
             }
             catch (Exception ex)
             {
@@ -39,23 +48,31 @@ namespace EducationalInstitutions.API.Data
             }
         }
 
-        private static async Task<long> AddUniversity(EducationalInstitutionsDbContext context)
+        private async Task<long> AddUniversity()
         {
             var institution = new EducationalInstitution
             {
                 Name = "Томский Политехнический Университет",
                 SiteUrl = "http://tpu.ru/",
                 Acronym = "НИ ТПУ",
-                Description = "Политех"
+                Description = "Политех",
+                AreaId = await _context.Areas.Select(x => x.Id).FirstAsync()
             };
 
-            await context.EducationalInstitutions.AddAsync(institution);
-            await context.SaveChangesAsync();
+            _context.EducationalInstitutions.Add(institution);
+            await _context.SaveChangesAsync();
+
+            var @event = new EducationalInstitutionsChanged
+            {
+                Created = new[] { Mapper.Map<DtoEducationalInstitution>(institution) }
+            };
+
+            _eventBus.Publish(@event);
 
             return institution.Id;
         }
 
-        private static async Task AddUniversitySynonyms(long universityId, EducationalInstitutionsDbContext context)
+        private async Task AddUniversitySynonyms(long universityId)
         {
             var institutionSynonyms = new[]
             {
@@ -65,11 +82,11 @@ namespace EducationalInstitutions.API.Data
                 new EducationalInstitutionSynonyms() { EducationalInstitutionId = universityId, Name = "ТПУ"},
             };
 
-            await context.EducationalInstitutionSynonyms.AddRangeAsync(institutionSynonyms);
-            await context.SaveChangesAsync();
+            await _context.EducationalInstitutionSynonyms.AddRangeAsync(institutionSynonyms);
+            await _context.SaveChangesAsync();
         }
 
-        private static async Task<long> AddFaculty(EducationalInstitutionsDbContext context, long universityId)
+        private async Task<long> AddFaculty(long universityId)
         {
             var faculty = new Faculty()
             {
@@ -79,13 +96,13 @@ namespace EducationalInstitutions.API.Data
                 Description = "Институт кибернетики (школа)"
             };
 
-            await context.Faculties.AddAsync(faculty);
-            await context.SaveChangesAsync();
+            _context.Faculties.Add(faculty);
+            await _context.SaveChangesAsync();
 
             return faculty.Id;
         }
 
-        private static async Task AddFacultySynonyms(long facultyId, EducationalInstitutionsDbContext context)
+        private async Task AddFacultySynonyms(long facultyId)
         {
             var facultySynonyms = new[]
             {
@@ -93,8 +110,8 @@ namespace EducationalInstitutions.API.Data
                 new FacultySynonyms { FacultyId = facultyId, Name = "Институт Кибернетики" },
             };
 
-            await context.FacultySynonyms.AddRangeAsync(facultySynonyms);
-            await context.SaveChangesAsync();
+            _context.FacultySynonyms.AddRange(facultySynonyms);
+            await _context.SaveChangesAsync();
         }
     }
 }

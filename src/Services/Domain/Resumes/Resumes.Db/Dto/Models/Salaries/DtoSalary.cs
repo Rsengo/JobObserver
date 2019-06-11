@@ -24,13 +24,13 @@ namespace Resumes.Db.Dto.Models.Salaries
         ///     Нижняя граница
         /// </summary>
         [JsonProperty("from")]
-        public virtual decimal From { get; set; }
+        public virtual decimal? From { get; set; }
 
         /// <summary>
         ///     Верхняя граница
         /// </summary>
         [JsonProperty("to")]
-        public virtual decimal To { get; set; }
+        public virtual decimal? To { get; set; }
 
         [JsonProperty("resume_id")]
         public virtual long ResumeId { get; set; }

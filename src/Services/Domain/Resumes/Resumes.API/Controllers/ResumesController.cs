@@ -14,6 +14,7 @@ using Resumes.API.Filters;
 using Microsoft.EntityFrameworkCore.Query;
 using LinqKit;
 using System.Linq.Dynamic.Core;
+using Resumes.API.Filters.Builders;
 
 namespace Resumes.API.Controllers
 {
@@ -265,6 +266,70 @@ namespace Resumes.API.Controllers
                 .ConfigureAwait(false);
 
             return Ok();
+        }
+
+        [HttpGet("search")]
+        public async Task<IActionResult> Search([FromBody] ResumeSearchFilter filter)
+        {
+            var builder = new ResumeSearchBuilder(_context);
+            var query = builder.BuildQuery(filter);
+
+            var includableQuery = query
+            //.Include(x => x.Area)
+            .Include(x => x.Applicant)
+                .ThenInclude(x => x.Gender)
+            .Include(x => x.BusinessTripReadiness)
+            .Include(x => x.Certificates)
+            .Include(x => x.Citizenship)
+                .ThenInclude(x => x.Area)
+            .Include(x => x.DrivingLicenseTypes)
+                .ThenInclude(x => x.DrivingLicenseType)
+            .Include(x => x.Education)
+                //.AlsoInclude(x => x.EducationalLevel)
+                .ThenInclude(x => x.Specializations)
+                    .ThenInclude(x => x.Specialization)
+            .Include(x => x.Employments)
+                .ThenInclude(x => x.Employment)
+            .Include(x => x.Experience)
+                .ThenInclude(x => x.Specialization)
+            .Include(x => x.Languages)
+            //.AlsoInclude(x => x.Level)
+            //.AlsoInclude(x => x.Language)
+            .Include(x => x.MetroStation)
+                .ThenInclude(x => x.Line)
+                    .ThenInclude(x => x.Metro)
+            .Include(x => x.RelocationPossibility)
+                .ThenInclude(x => x.RelocationType)
+            .Include(x => x.ResumeLocale)
+            .Include(x => x.Specializations)
+            //.ThenInclude(x => x.Specialization)
+            .Include(x => x.Salary)
+                .ThenInclude(x => x.Currency)
+            .Include(x => x.Schedules)
+                .ThenInclude(x => x.Schedule)
+            .Include(x => x.Skills)
+                .ThenInclude(x => x.Skill)
+            .Include(x => x.TravelTime)
+            .Include(x => x.WorkTicket)
+                .ThenInclude(x => x.Area)
+            .Include(x => x.ResumeStatus);
+
+            var allowed = await _securityManager.HasPermissionAsync(includableQuery, AccessOperation.READ);
+
+            if (!allowed)
+                return Forbid();
+
+            var result = await includableQuery.ToListAsync();
+
+            await _context.Areas.LoadAsync();
+            await _context.Languages.LoadAsync();
+            await _context.LanguageLevels.LoadAsync();
+            await _context.EducationalLevels.LoadAsync();
+            await _context.Specializations.LoadAsync();
+
+            var dto = result.Select(Mapper.Map<DtoResume>).ToList();
+
+            return Ok(dto);
         }
     }
 }

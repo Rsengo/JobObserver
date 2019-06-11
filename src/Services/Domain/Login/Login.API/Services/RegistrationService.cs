@@ -42,7 +42,10 @@ namespace Login.API.Services
                 GenderId = model.GenderId,
                 AreaId = model.AreaId,
                 Email = model.Email,
-                UserName = model.Email
+                UserName = model.Email,
+                SecurityStamp = Guid.NewGuid().ToString("D"),
+                NormalizedEmail = model.Email.ToUpper(),
+                NormalizedUserName = model.Email.ToUpper()
             };
 
             var result = await _userManager.CreateAsync(user, model.Password);

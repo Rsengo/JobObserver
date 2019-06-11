@@ -23,6 +23,14 @@ namespace Resumes.Db.Dto.Profiles.Salaries
         {
             CreateMap<DtoSalary, Salary>()
                 .ForMember(
+                    d => d.From,
+                    o => o.MapFrom(
+                        s => s.From.Value))
+                                .ForMember(
+                    d => d.To,
+                    o => o.MapFrom(
+                        s => s.To.Value))
+                .ForMember(
                     d => d.Resume,
                     o => o.Ignore())
                 .ForMember(
