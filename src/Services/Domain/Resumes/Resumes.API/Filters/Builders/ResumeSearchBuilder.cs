@@ -1,4 +1,5 @@
-﻿using Resumes.Db;
+﻿using Microsoft.EntityFrameworkCore;
+using Resumes.Db;
 using Resumes.Db.Dto.Models.Languages;
 using Resumes.Db.Dto.Models.Salaries;
 using Resumes.Db.Dto.Models.Travel.Relocation;
@@ -41,6 +42,7 @@ namespace Resumes.API.Filters.Builders
             AddSalaryCondition(query, filter.Salary);
             AddUpdatedCondition(query, filter.UpdatedAtMin, filter.UpdatedAtMax);
             AddVehicleCondition(query, filter.HasVehicle);
+            AddTitleCondition(query, filter.Title);
 
             return query;
         }
@@ -245,6 +247,16 @@ namespace Resumes.API.Filters.Builders
         {
             if (hasVehicle != null)
                 query = query.Where(x => x.HasVehicle == hasVehicle);
+
+            return query;
+        }
+
+        private static IQueryable<Resume> AddTitleCondition(
+            IQueryable<Resume> query,
+            string title)
+        {
+            if (title != null)
+                query = query.Where(x => EF.Functions.Contains(x.Title.ToLower(), title.ToLower()));
 
             return query;
         }
