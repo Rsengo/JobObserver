@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using LinqKit;
+using Microsoft.EntityFrameworkCore;
 using Resumes.Db;
 using Resumes.Db.Dto.Models.Languages;
 using Resumes.Db.Dto.Models.Salaries;
@@ -7,6 +8,7 @@ using Resumes.Db.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace Resumes.API.Filters.Builders
@@ -193,6 +195,9 @@ namespace Resumes.API.Filters.Builders
             IQueryable<Resume> query, 
             ICollection<DtoRelocationPossibility> relocations)
         {
+            if (relocations?.Any() != true)
+                return query;
+
             var relocationsStr = relocations?.Select(x => $"{x.RelocationTypeId}_{x.AreaId}");
             if (relocations?.Any() == true)
                 query = query
@@ -223,7 +228,21 @@ namespace Resumes.API.Filters.Builders
             IQueryable<Resume> query,
             ICollection<DtoSalary> objs)
         {
-            //TODO
+            if (objs?.Any() != true)
+                return query;
+
+            var predicate = PredicateBuilder.New<Resume>();
+
+            foreach (var salary in objs)
+            {
+                predicate = predicate.Or(x => 
+                    x.Salary.From == salary.From && 
+                    x.Salary.To == salary.To && 
+                    x.Salary.CurrencyId == salary.CurrencyId);
+            }
+
+            query = query.Where(predicate);
+
             return query;
         }
 
