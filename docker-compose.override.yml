@@ -65,9 +65,9 @@ services:
       - ENABLE_SSL=true
     ports:
       - 80:80
-      - 443:443
+      # - 443:443
     volumes:
-      - ./nginx/nginx_ssl.conf:/etc/nginx/nginx.conf
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./ssl:/etc/ssl
 
   brandedtemplates.api:
@@ -162,7 +162,7 @@ services:
       - Seq=http://seq
       - SymmetricKey=kAkoYto_yeb!chesk!y_k1uch
       - IdentityServiceUrl=https://${EXTERNAL_DNS_NAME_OR_IP}:5105/
-      - WebAppClient=http://${EXTERNAL_DNS_NAME_OR_IP}:${FRONTEND_PORT}/auth/
+      - WebAppClient=http://${EXTERNAL_DNS_NAME_OR_IP}:${FRONTEND_PORT}/
     ports:
       - "5105:80"  
     volumes: 

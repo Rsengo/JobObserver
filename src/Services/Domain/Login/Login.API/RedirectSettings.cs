@@ -11,13 +11,11 @@ namespace Login.API
 
         public string LoginPageUrl { get; set; }
 
-        public string LogoutPageUrl { get; set; }
-
         public string RegistrationPageUrl { get; set; }
 
-        public string FullLoginPageUrl => IdentityServiceUrl + LoginPageUrl;
+        public string WebAppClient { get; set; }
 
-        public string FullLogoutPageUrl => IdentityServiceUrl + LogoutPageUrl;
+        public string FullLoginPageUrl => IdentityServiceUrl + LoginPageUrl;
 
         public string FullRegistrationPageUrl => IdentityServiceUrl + RegistrationPageUrl;
     }

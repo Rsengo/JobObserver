@@ -108,35 +108,6 @@ namespace Login.API.Controllers
         [HttpGet("logout")]
         public async Task<IActionResult> Logout([FromQuery]string logoutId)
         {
-            if (User.Identity.IsAuthenticated == false)
-            {
-                // if the user is not authenticated, then just show logged out page
-                return await Logout(new LogoutViewModel { LogoutId = logoutId });
-            }
-
-            //Test for Xamarin. 
-            var context = await _interaction.GetLogoutContextAsync(logoutId);
-            if (context?.ShowSignoutPrompt == false)
-            {
-                //it's safe to automatically sign-out
-                return await Logout(new LogoutViewModel { LogoutId = logoutId });
-            }
-
-            var encodedLogoutId = _cryptoService.Encrypt(logoutId);
-            return Redirect(_redirectSettings.Value.FullLogoutPageUrl + encodedLogoutId);
-        }
-
-        [HttpPost("logout")]
-        public async Task<IActionResult> Logout([FromBody]LogoutViewModel model)
-        {
-            string logoutId = null;
-
-            if (model.LogoutId != null)
-            {
-                var logoutIdEncrypt = model.LogoutId;
-                logoutId = _cryptoService.Decrypt(logoutIdEncrypt);
-            }
-
             var idp = User?.FindFirst(JwtClaimTypes.IdentityProvider)?.Value;
 
             if (idp != null && idp != IdentityServerConstants.LocalIdentityProvider)
@@ -171,10 +142,12 @@ namespace Login.API.Controllers
             // get context information (client name, post logout redirect URI and iframe for federated signout)
             var logout = await _interaction.GetLogoutContextAsync(logoutId);
 
-            var encodedUrl = logout?.PostLogoutRedirectUri;
-            var decodedUrl = _cryptoService.Decrypt(encodedUrl);
+            var postLogoutUrl = logout?.PostLogoutRedirectUri;
 
-            return Redirect(decodedUrl);
+            if (postLogoutUrl != null)
+                return Redirect(postLogoutUrl);
+
+            return Redirect($"{_redirectSettings.Value.WebAppClient}/");
         }
 
         [HttpGet("devicelogout")]

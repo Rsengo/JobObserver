@@ -1,10 +1,12 @@
 import axios from 'axios';
 
-const IDENTITY_URL = 'https://31.211.116.12:5105/';
+const IDENTITY_URL = 'https://31.211.113.168:5105/';
 
 const USER_INFO_POSTFIX = 'connect/userInfo/';
 
 const AUTHORIZE_POSTFIX = 'connect/authorize';
+
+const LOGOUT_POSTFIX = 'connect/endsession'
 
 const SCOPES = [
     'openid',
@@ -50,5 +52,14 @@ const getUserInfo = access_token => {
     return axios.get(url, { headers })
 };
 
-export default { authorize, getUserInfo }
+const logout = (id_token_hint, post_logout_redirect_uri) => {
+    const url =
+        IDENTITY_URL + LOGOUT_POSTFIX + '?' +
+        'id_token_hint=' + encodeURI(id_token_hint) + '&' +
+        'post_logout_redirect_uri=' + encodeURI(post_logout_redirect_uri);
+
+    window.location.href = url;
+}
+
+export default { authorize, getUserInfo, logout }
 
