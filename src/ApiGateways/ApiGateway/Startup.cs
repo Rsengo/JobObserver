@@ -31,16 +31,16 @@ namespace ApiGateway
                     .AllowCredentials());
             });
 
-            services.AddAuthentication()
-                .AddJwtBearer("IdentityApiKey", x =>
-                {
-                    x.Authority = Configuration["IdentityUrl"];
-                    x.RequireHttpsMetadata = true;
-                    x.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
-                    {
-                        ValidAudiences = Config.GetValidAudience()
-                    };
-                });
+            //services.AddAuthentication()
+            //    .AddJwtBearer("IdentityApiKey", x =>
+            //    {
+            //        x.Authority = Configuration["IdentityUrl"];
+            //        x.RequireHttpsMetadata = true;
+            //        x.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+            //        {
+            //            ValidAudiences = Config.GetValidAudience()
+            //        };
+            //    });
 
             services.AddOcelot(Configuration);
         }
