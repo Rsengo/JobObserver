@@ -97,14 +97,7 @@ namespace Login.API.Controllers
             var user = await _seeder.SeedAsync();
             var dto = Mapper.Map<DtoUser>(user);
 
-            var @event = new ApplicantsChanged
-            {
-                Created = new[] {dto}
-            };
-
-            _eventBus.Publish(@event);
-
-            return Ok();
+            return Ok(dto);
         }
     }
 }

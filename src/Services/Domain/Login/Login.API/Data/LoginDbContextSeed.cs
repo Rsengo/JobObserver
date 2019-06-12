@@ -4,9 +4,13 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using AutoMapper;
+using BuildingBlocks.EventBus.Abstractions;
 using Login.API.Configuration;
 using Login.Db;
+using Login.Db.Dto.Models;
 using Login.Db.Models;
+using Login.Db.Synchronization.Events.Users;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -20,15 +24,19 @@ namespace Login.API.Data
 
         private readonly LoginDbContext _context;
 
+        private readonly IEventBus _eventBus;
+
         private readonly ILogger<LoginDbContextSeed> _logger;
 
         public LoginDbContextSeed(
             LoginDbContext context,
+            IEventBus eventBus,
             ILogger<LoginDbContextSeed> logger)
         {
             _passwordHasher = new PasswordHasher<User>();
             _logger = logger;
             _context = context;
+            _eventBus = eventBus;
         }
 
         public async Task<User> SeedAsync()
@@ -54,6 +62,15 @@ namespace Login.API.Data
                     _context.UserRoles.AddRange(adminRoles);
                     await _context.SaveChangesAsync();
                 }
+
+                var dto = Mapper.Map<DtoUser>(user);
+
+                var @event = new ApplicantsChanged
+                {
+                    Created = new[] { dto }
+                };
+
+                _eventBus.Publish(@event);
 
                 return user;
             }

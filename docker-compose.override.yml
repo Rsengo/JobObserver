@@ -40,7 +40,7 @@ services:
       - ALLOW_EMPTY_PASSWORD=yes
     ports:
       - '5150:80'
-      - '443:443'
+      - '5151:443'
     volumes:
       - ./moodle/bitnami:/bitnami
 
@@ -78,7 +78,7 @@ services:
       - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
       - ConnectionString=Server=sql.data;Database=BRANDED_TEMPLATES;User Id=sa;Password=Pass@word
       - CorsPolicy=${CORS_POLICY}
-      - IdentityUrl=http://login.api
+      - IdentityUrl=https://login.api
       - ElasticSearch=elk:9200
       - Seq=http://seq
     ports:
@@ -94,7 +94,7 @@ services:
       - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
       - ConnectionString=Server=sql.data;Database=CAREER_DAYS;User Id=sa;Password=Pass@word
       - CorsPolicy=${CORS_POLICY}
-      - IdentityUrl=http://login.api
+      - IdentityUrl=https://login.api
       - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
       - EventBusConnection=rabbitmq
       - EventBusUserName=${EVENT_BUS_USER_NAME}
@@ -114,7 +114,7 @@ services:
       - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
       - ConnectionString=Server=sql.data;Database=EDUCATIONAL_INSTITUTIONS;User Id=sa;Password=Pass@word
       - CorsPolicy=${CORS_POLICY}
-      - IdentityUrl=http://login.api
+      - IdentityUrl=https://login.api
       - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
       - EventBusConnection=rabbitmq
       - EventBusUserName=${EVENT_BUS_USER_NAME}
@@ -134,7 +134,7 @@ services:
       - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
       - ConnectionString=Server=sql.data;Database=EMPLOYERS;User Id=sa;Password=Pass@word
       - CorsPolicy=${CORS_POLICY}
-      - IdentityUrl=http://login.api
+      - IdentityUrl=https://login.api
       - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
       - EventBusConnection=rabbitmq
       - EventBusUserName=${EVENT_BUS_USER_NAME}
@@ -178,7 +178,7 @@ services:
       - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
       - ConnectionString=Server=sql.data;Database=PAID_SERVICES;User Id=sa;Password=Pass@word
       - CorsPolicy=${CORS_POLICY}
-      - IdentityUrl=http://login.api
+      - IdentityUrl=https://login.api
       - ElasticSearch=elk:9200
       - Seq=http://seq
     ports:
@@ -195,7 +195,7 @@ services:
       - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
       - ConnectionString=Server=sql.data;Database=RESUMES;User Id=sa;Password=Pass@word
       - CorsPolicy=${CORS_POLICY}
-      - IdentityUrl=http://login.api
+      - IdentityUrl=https://login.api
       - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
       - EventBusConnection=rabbitmq
       - EventBusUserName=${EVENT_BUS_USER_NAME}
@@ -216,7 +216,7 @@ services:
       - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
       - ConnectionString=Server=sql.data;Database=VACANCIES;User Id=sa;Password=Pass@word
       - CorsPolicy=${CORS_POLICY}
-      - IdentityUrl=http://login.api
+      - IdentityUrl=https://login.api
       - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
       - EventBusConnection=rabbitmq
       - EventBusUserName=${EVENT_BUS_USER_NAME}
@@ -237,7 +237,7 @@ services:
       - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
       - ConnectionString=Server=sql.data;Database=DICTIONARIES;User Id=sa;Password=Pass@word
       - CorsPolicy=${CORS_POLICY}
-      - IdentityUrl=http://login.api
+      - IdentityUrl=https://login.api
       - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
       - EventBusConnection=rabbitmq
       - EventBusUserName=${EVENT_BUS_USER_NAME}
@@ -258,7 +258,7 @@ services:
       - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
       - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
       - CorsPolicy=${CORS_POLICY}
-      - IdentityUrl=http://login.api
+      - IdentityUrl=https://login.api
       - EventBusRetryCount=${EVENT_BUS_RETRY_COUNT}
       - EventBusConnection=rabbitmq
       - EventBusUserName=${EVENT_BUS_USER_NAME}
@@ -300,7 +300,7 @@ services:
       - Kestrel__Certificates__Default__Path=${SSL_PATH}/${SSL_CERT_NAME}
       - Kestrel__Certificates__Default__Password=${SSL_CERT_PASSWORD}
       - CorsPolicy=${CORS_POLICY}
-      - IdentityUrl=http://login.api
+      - IdentityUrl=https://login.api
       - ElasticSearch=elk:9200
       - Seq=http://seq
     ports:
