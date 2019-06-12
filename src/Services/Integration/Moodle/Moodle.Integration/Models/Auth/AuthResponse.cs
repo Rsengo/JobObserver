@@ -1,4 +1,4 @@
-﻿using Moodle.Integration.Models.GetUserById;
+﻿using Moodle.Integration.Models.GetUser;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
