@@ -59,6 +59,8 @@ namespace Moodle.Integration.Models.SubUserToCourse
         [JsonProperty("enrolments")]
         public ICollection<Enrolment> Enrolments { get; set; }
 
+        public override string Function => "enrol_manual_enrol_users";
+
         public void AddSingleEnrolment(Enrolment enrolment)
         {
             if (Enrolments == null)

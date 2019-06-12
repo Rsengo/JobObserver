@@ -12,7 +12,7 @@ namespace Moodle.Integration.Models
         public string Token { get; set; }
 
         [JsonProperty("wsfunction")]
-        public string Function { get; set; }
+        public abstract string Function { get; }
 
         [JsonProperty("moodlewsrestformat")]
         public string RestFormat { get; set; }

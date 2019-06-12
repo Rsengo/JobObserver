@@ -51,6 +51,8 @@ namespace Moodle.Integration.Models.GrantRights
         [JsonProperty("assignments")]
         public ICollection<Assignment> Assignments { get; set; }
 
+        public override string Function => "core_role_assign_roles";
+
         public void AddSingleAssignment(Assignment assignment)
         {
             if (Assignments == null)

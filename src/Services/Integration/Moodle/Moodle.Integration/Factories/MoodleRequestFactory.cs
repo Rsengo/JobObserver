@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Moodle.Integration.Configuration;
 using Moodle.Integration.Models;
 
 namespace Moodle.Integration.Factories
@@ -11,10 +12,10 @@ namespace Moodle.Integration.Factories
 
         private readonly string _restFormat;
 
-        public MoodleRequestFactory(string token, string restFormat)
+        public MoodleRequestFactory(MoodleRequestFactoryConfiguration config)
         {
-            _token = token;
-            _restFormat = restFormat;
+            _token = config.Token;
+            _restFormat = config.RestFormat;
         }
 
         public T Create<T>() where T : MoodleRequest, new()

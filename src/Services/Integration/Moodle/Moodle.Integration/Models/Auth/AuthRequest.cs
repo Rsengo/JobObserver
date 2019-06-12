@@ -23,5 +23,7 @@ namespace Moodle.Integration.Models.Auth
         [Required]
         [JsonProperty("secret")]
         public string Secret { get; set; }
+
+        public override string Function => "core_auth_confirm_user";
     }
 }

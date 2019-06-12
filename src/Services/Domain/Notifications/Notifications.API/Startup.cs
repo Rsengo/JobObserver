@@ -43,6 +43,7 @@ namespace Notifications.API
                 builder.RetryCount = retryCount;
 
                 builder.RegisterEventHandler<UsersChangedHandler>();
+                builder.RegisterEventHandler<MoodleEmployerRegisteredEventHandler>();
             });
         }
 
@@ -52,6 +53,7 @@ namespace Notifications.API
             app.UseEventBusRabbitMQ(eventBus =>
             {
                 eventBus.Subscribe<UsersChanged, UsersChangedHandler>();
+                eventBus.Subscribe<MoodleEmployerRegisteredEvent, MoodleEmployerRegisteredEventHandler>();
             });
         }
     }

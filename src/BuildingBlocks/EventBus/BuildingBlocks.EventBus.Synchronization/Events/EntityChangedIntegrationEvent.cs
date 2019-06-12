@@ -12,13 +12,13 @@ namespace BuildingBlocks.EventBus.Synchronization.Events
     public class EntityChangedIntegrationEvent<TEntity, TKey> : IntegrationEvent
         where TEntity : class, new()
     {
-        [JsonProperty("created")]
+        [JsonProperty]
         public IEnumerable<TEntity> Created { get; set; }
 
-        [JsonProperty("updated")]
+        [JsonProperty]
         public IEnumerable<TEntity> Updated { get; set; }
 
-        [JsonProperty("deleted")]
+        [JsonProperty]
         public IEnumerable<TKey> Deleted { get; set; }
 
         public EntityChangedIntegrationEvent(

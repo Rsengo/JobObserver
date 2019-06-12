@@ -202,6 +202,8 @@ namespace Moodle.Integration.Models.CreateCourse
         [JsonProperty("courses")]
         public ICollection<Course> Courses { get; set; }
 
+        public override string Function => "core_course_create_courses";
+
         public void AddSingleCourse(Course course)
         {
             if (Courses == null)

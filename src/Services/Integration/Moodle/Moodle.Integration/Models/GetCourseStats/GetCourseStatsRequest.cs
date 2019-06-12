@@ -6,5 +6,6 @@ namespace Moodle.Integration.Models.GetCourseStats
 {
     public class GetCourseStatsRequest : MoodleRequest
     {
+        public override string Function => throw new NotImplementedException();
     }
 }

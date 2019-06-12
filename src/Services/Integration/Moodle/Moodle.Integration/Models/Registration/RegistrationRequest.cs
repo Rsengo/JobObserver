@@ -10,10 +10,8 @@ namespace Moodle.Integration.Models.Registration
     //auth_email_signup_user
     public class RegistrationRequest : MoodleRequest
     {
-        public RegistrationRequest()
-        {
-            CustomFields = new List<ProfileField>();
-        }
+        public override string Function => "auth_email_signup_user";
+
         /// <summary>
         /// <param name="UserName"> User Name.</param> 
         /// </summary>
@@ -85,5 +83,10 @@ namespace Moodle.Integration.Models.Registration
         /// </summary>
         [JsonProperty("redirect")]
         public string Redirect { get; set; }
+
+        public RegistrationRequest()
+        {
+            CustomFields = new List<ProfileField>();
+        }
     }
 }

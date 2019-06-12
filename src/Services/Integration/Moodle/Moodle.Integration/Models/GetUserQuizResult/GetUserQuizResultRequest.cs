@@ -6,5 +6,6 @@ namespace Moodle.Integration.Models.GetUserQuizResult
 {
     public class GetUserQuizResultRequest : MoodleRequest
     {
+        public override string Function => throw new NotImplementedException();
     }
 }

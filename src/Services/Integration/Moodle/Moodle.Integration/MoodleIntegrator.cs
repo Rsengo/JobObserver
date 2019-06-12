@@ -18,21 +18,16 @@ namespace Moodle.Integration
 
         public string MoodleRestUrl { get; }
 
-        public IMoodleRequestFactory RequestFactory { get; }
-
         public MoodleIntegrator(
-            IMoodleRequestFactory requestFactory, 
             ILogger<IMoodleIntegrator> logger, 
             string moodleRestUrl)
         {
             _httpClient = CreateHttpClient(moodleRestUrl);
             _logger = logger;
             MoodleRestUrl = moodleRestUrl;
-            RequestFactory = requestFactory;
         }
 
-        public async Task<MoodleResponse<TResponse>> SendRequestAsync<TRequest, TResponse>(TRequest request) 
-            where TRequest : MoodleRequest 
+        public async Task<MoodleResponseContext<TResponse>> SendRequestAsync<TResponse>(MoodleRequest request) 
             where TResponse : class
         {
             var httpResponse = await SendRequestAndGetResponseAsync(request);
@@ -57,7 +52,7 @@ namespace Moodle.Integration
             return _httpClient.PostAsync(string.Empty, data);
         }
 
-        private MoodleResponse<TResponse> DeserializeError<TResponse>(string responseString)
+        private MoodleResponseContext<TResponse> DeserializeError<TResponse>(string responseString)
             where TResponse : class
         {
             try
@@ -66,30 +61,29 @@ namespace Moodle.Integration
 
                 _logger.LogError("Moodle Web Service Call Failed; {@moodleEx}", moodleEx);
 
-                var result = new MoodleResponse<TResponse>(false)
+                var result = new MoodleResponseContext<TResponse>(false)
                 {
-                    MoodleException = moodleEx,
-                    ErrorMessage = moodleEx.Message
+                    Exception = moodleEx,
                 };
 
                 return result;
             }
-            catch (JsonException)
+            catch (JsonException ex)
             {
                 const string errorMessage = "Moodle Web Service Call Failed; " +
                                             "MoodleIntegrator::GetMoodleData - couldn't deserialize response";
                 _logger.LogError(errorMessage);
 
-                var result = new MoodleResponse<TResponse>(false)
+                var result = new MoodleResponseContext<TResponse>(false)
                 {
-                    ErrorMessage = errorMessage
+                    Exception = ex
                 };
 
                 return result;
             }
         }
 
-        private MoodleResponse<TResponse> DeserializeResponse<TResponse>(string responseString)
+        private MoodleResponseContext<TResponse> DeserializeResponse<TResponse>(string responseString)
             where TResponse : class
         {
             var settings = new JsonSerializerSettings
@@ -99,7 +93,7 @@ namespace Moodle.Integration
 
             var response = JsonConvert.DeserializeObject<TResponse>(responseString, settings);
 
-            var result = new MoodleResponse<TResponse>(true)
+            var result = new MoodleResponseContext<TResponse>(true)
             {
                 ResponseData = response
             };

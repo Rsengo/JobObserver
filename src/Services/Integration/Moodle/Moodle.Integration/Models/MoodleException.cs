@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 
 namespace Moodle.Integration.Models
 {
-    public class MoodleException
+    public class MoodleException: Exception
     {
         [JsonProperty("exception")]
         public string Exception { get; set; }
@@ -14,6 +14,6 @@ namespace Moodle.Integration.Models
         public string ErrorCode { get; set; }
 
         [JsonProperty("message")]
-        public string Message { get; set; }
+        public override string Message { get; }
     }
 }

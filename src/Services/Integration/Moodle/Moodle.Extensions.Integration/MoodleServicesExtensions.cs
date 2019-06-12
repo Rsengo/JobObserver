@@ -5,36 +5,48 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Moodle.Extensions.Integration.Builders;
 using Moodle.Integration;
+using Moodle.Integration.Configuration;
 using Moodle.Integration.Factories;
 
 namespace Moodle.Extensions.Integration
 {
     public static class MoodleServicesExtensions
     {
-        public static IServiceCollection AddMoodleIntegration(
-            this IServiceCollection services, 
+        public static IServiceCollection AddMoodleIntegration<TIntegrator, TFactory>(
+            this IServiceCollection services,
             Action<MoodleIntegrationBuilder> builder)
+            where TIntegrator : class, IMoodleIntegrator
+            where TFactory : class, IMoodleRequestFactory
         {
             var configuration = new MoodleIntegrationBuilder();
             builder(configuration);
 
-            services.AddScoped<IMoodleRequestFactory>(_ =>
+            var moodleRequestFactoryConfig = new MoodleRequestFactoryConfiguration
             {
-                var factory = new MoodleRequestFactory(configuration.Token, configuration.RestFormat);
-                return factory;
-            });
+                RestFormat = configuration.RestFormat,
+                Token = configuration.Token
+            };
 
-            
-            services.AddScoped<IMoodleIntegrator>(sp =>
+            var moodleIntegratorConfig = new MoodleIntegratorConfiguration
             {
-                var factory = sp.GetRequiredService<IMoodleRequestFactory>();
-                var logger = sp.GetRequiredService<ILogger<IMoodleIntegrator>>();
-                var integrator = new MoodleIntegrator(factory, logger, configuration.RestUrl);
+                MoodleRestUrl = configuration.RestUrl
+            };
 
-                return integrator;
-            });
+            services.AddScoped(_ => moodleRequestFactoryConfig);
+            services.AddScoped<IMoodleRequestFactory, TFactory>();
+
+            services.AddScoped(_ => moodleIntegratorConfig);
+            services.AddScoped<IMoodleIntegrator, MoodleIntegrator>();
 
             return services;
+        }
+        public static IServiceCollection AddMoodleIntegration(
+            this IServiceCollection services,
+            Action<MoodleIntegrationBuilder> builder)
+        {
+            return services.AddMoodleIntegration<
+                MoodleIntegrator, 
+                MoodleRequestFactory>(builder);
         }
     }
 }

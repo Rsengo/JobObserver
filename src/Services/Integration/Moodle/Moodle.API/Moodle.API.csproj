@@ -24,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\BuildingBlocks\DataTransfer\BuildingBlocks.DataTransfer\BuildingBlocks.DataTransfer.csproj" />
     <ProjectReference Include="..\..\..\..\BuildingBlocks\EventBus\BuildingBlocks.Extensions.EventBus.RabbitMQ\BuildingBlocks.Extensions.EventBus.RabbitMQ.csproj" />
     <ProjectReference Include="..\Moodle.Extensions.Integration\Moodle.Extensions.Integration.csproj" />
     <ProjectReference Include="..\Moodle.Integration\Moodle.Integration.csproj" />

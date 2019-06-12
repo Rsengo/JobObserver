@@ -9,10 +9,7 @@ namespace Moodle.Integration
 {
     public interface IMoodleIntegrator
     {
-        IMoodleRequestFactory RequestFactory { get; }
-
-        Task<MoodleResponse<TResponse>> SendRequestAsync<TRequest, TResponse>(TRequest request)
-            where TRequest : MoodleRequest
+        Task<MoodleResponseContext<TResponse>> SendRequestAsync<TResponse>(MoodleRequest request)
             where TResponse : class;
     }
 }
