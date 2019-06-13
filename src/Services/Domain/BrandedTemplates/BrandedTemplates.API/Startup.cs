@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IdentityModel.Tokens.Jwt;
+using System.Net.Http;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -82,6 +83,7 @@ namespace BrandedTemplates.API
                 options.Authority = Configuration["IdentityUrl"];
                 options.Audience = "brandedtemplates";
                 options.RequireHttpsMetadata = false;
+                options.BackchannelHttpHandler = new HttpClientHandler { ServerCertificateCustomValidationCallback = delegate { return true; } };
             });
         }
 

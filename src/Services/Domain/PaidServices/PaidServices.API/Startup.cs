@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Net.Http;
 using System.Reflection;
 using System.Threading.Tasks;
 using BuildingBlocks.Extensions.AutoMapper;
@@ -83,19 +84,20 @@ namespace PaidServices.API
                 opt.Filters.Add<ValidateModelStateFilter>();
             }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            //JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
-            //services.AddAuthentication(options =>
-            //{
-            //    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-            //    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 
-            //})
-            //.AddJwtBearer(options =>
-            //{
-            //    options.Authority = Configuration["IdentityUrl"];
-            //    options.Audience = "paidservices";
-            //    options.RequireHttpsMetadata = false;
-            //});
+            })
+            .AddJwtBearer(options =>
+            {
+                options.Authority = Configuration["IdentityUrl"];
+                options.Audience = "paidservices";
+                options.RequireHttpsMetadata = false;
+                options.BackchannelHttpHandler = new HttpClientHandler { ServerCertificateCustomValidationCallback = delegate { return true; } };
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -113,7 +115,7 @@ namespace PaidServices.API
 
             app.UseCors(Configuration["CorsPolicy"]);
 
-            //app.UseAuthentication();
+            app.UseAuthentication();
 
             app.UseHttpsRedirection();
             app.UseMvc();

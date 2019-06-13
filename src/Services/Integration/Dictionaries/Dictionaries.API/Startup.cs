@@ -4,6 +4,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Reflection;
 using System.Threading.Tasks;
 using BuildingBlocks.EventBus.Abstractions;
@@ -120,18 +121,19 @@ namespace Dictionaries.API
                     .ServerCertificateValidationCallback +=
                 (sender, cert, chain, sslPolicyErrors) => true;
 
-            //JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
-            //services.AddAuthentication(options =>
-            //{
-            //    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-            //    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 
-            //}).AddJwtBearer(options =>
-            //{
-            //    options.Authority = Configuration["IdentityUrl"];
-            //    options.Audience = "dictionaries";
-            //    options.RequireHttpsMetadata = false;
-            //});
+            }).AddJwtBearer(options =>
+            {
+                options.Authority = Configuration["IdentityUrl"];
+                options.Audience = "dictionaries";
+                options.RequireHttpsMetadata = false;
+                options.BackchannelHttpHandler = new HttpClientHandler { ServerCertificateCustomValidationCallback = delegate { return true; } };
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -149,7 +151,7 @@ namespace Dictionaries.API
 
             app.UseCors(Configuration["CorsPolicy"]);
 
-            //app.UseAuthentication();
+            app.UseAuthentication();
 
             app.UseHttpsRedirection();
             app.UseMvc();
