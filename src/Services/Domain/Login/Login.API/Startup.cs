@@ -241,12 +241,12 @@ namespace Login.API
                     Configuration["SwaggerEndpointName"]);
             });
 
-            app.UseEventBusRabbitMQ(eventBus =>
-            {
-                eventBus.Subscribe<SiteTypesChanged, SiteTypesChangedHandler>();
-                eventBus.Subscribe<GendersChanged, GendersChangedHandler>();
-                eventBus.Subscribe<AreasChanged, AreasChangedHandler>();
-            });
+            //app.UseEventBusRabbitMQ(eventBus =>
+            //{
+            //    eventBus.Subscribe<SiteTypesChanged, SiteTypesChangedHandler>();
+            //    eventBus.Subscribe<GendersChanged, GendersChangedHandler>();
+            //    eventBus.Subscribe<AreasChanged, AreasChangedHandler>();
+            //});
         }
     }
 }

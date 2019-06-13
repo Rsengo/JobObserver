@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const APIGW_URL = 'https://31.211.116.12:5200/';
+const APIGW_URL = 'https://31.211.113.168:5200/';
 const SEARCH_CITIES_POSTFIX = 'd/api/v1/areas/search/cities';
 const SEARCH_EMPLOYERS_POSTFIX = 'e/api/v1/employers/search';
 const SEARCH_EDUCATIONAL_INSTITUTIONS_POSTFIX = 'ei/api/v1/educationalinstitutions/search'

@@ -56,7 +56,7 @@ namespace Login.API.Controllers
         }
 
         [HttpGet("getFullUserInfo/{id}")]
-        public async Task<IActionResult> GetFullUserInfo([FromQuery] string id)
+        public async Task<IActionResult> GetFullUserInfo([FromRoute] string id)
         {
             //TODO
             //var id = HttpContext.User.Claims
