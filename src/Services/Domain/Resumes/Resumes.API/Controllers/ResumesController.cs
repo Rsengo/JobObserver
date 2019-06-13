@@ -36,9 +36,10 @@ namespace Resumes.API.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get([FromQuery]long id)
         {
-            var allowed = await _securityManager.HasPermissionAsync(
-                new Resume() { ApplicantId = Guid.Empty }, 
-                AccessOperation.READ);
+            //var allowed = await _securityManager.HasPermissionAsync(
+            //    new Resume() { ApplicantId = Guid.Empty }, 
+            //    AccessOperation.READ);
+
             var result = await _context.Resumes
                 //.Include(x => x.Area)
                 .Include(x => x.Applicant)
