@@ -111,18 +111,18 @@ namespace CareerDays.API
                 opt.Filters.Add<ValidateModelStateFilter>();
             }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
-            services.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            //JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+            //services.AddAuthentication(options =>
+            //{
+            //    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            //    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 
-            }).AddJwtBearer(options =>
-            {
-                options.Authority = Configuration["IdentityUrl"];
-                options.Audience = "careerdays";
-                options.RequireHttpsMetadata = false;
-            });
+            //}).AddJwtBearer(options =>
+            //{
+            //    options.Authority = Configuration["IdentityUrl"];
+            //    options.Audience = "careerdays";
+            //    options.RequireHttpsMetadata = false;
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -140,7 +140,7 @@ namespace CareerDays.API
 
             app.UseCors(Configuration["CorsPolicy"]);
 
-            app.UseAuthentication();
+            //app.UseAuthentication();
 
             app.UseHttpsRedirection();
             app.UseMvc();

@@ -55,12 +55,13 @@ namespace Login.API.Controllers
             return Ok(response);
         }
 
-        [HttpGet("getFullUserInfo")]
-        public async Task<IActionResult> GetFullUserInfo()
+        [HttpGet("getFullUserInfo/{id}")]
+        public async Task<IActionResult> GetFullUserInfo([FromQuery] string id)
         {
-            var id = HttpContext.User.Claims
-                .First(x => x.Type == JwtClaimTypes.Subject)
-                .Value;
+            //TODO
+            //var id = HttpContext.User.Claims
+            //    .First(x => x.Type == JwtClaimTypes.Subject)
+            //    .Value;
 
             var user = await _context.Users
                 .Include(x => x.Gender)

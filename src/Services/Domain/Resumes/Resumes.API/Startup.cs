@@ -162,18 +162,18 @@ namespace Resumes.API
 
             services.AddAccessControl();
 
-            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
-            services.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            //JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+            //services.AddAuthentication(options =>
+            //{
+            //    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            //    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 
-            }).AddJwtBearer(options =>
-            {
-                options.Authority = Configuration["IdentityUrl"];
-                options.Audience = "resumes";
-                options.RequireHttpsMetadata = false;
-            });
+            //}).AddJwtBearer(options =>
+            //{
+            //    options.Authority = Configuration["IdentityUrl"];
+            //    options.Audience = "resumes";
+            //    options.RequireHttpsMetadata = false;
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -191,7 +191,7 @@ namespace Resumes.API
 
             app.UseCors(Configuration["CorsPolicy"]);
 
-            app.UseAuthentication();
+            //app.UseAuthentication();
             app.UseAccessControl();
 
             app.UseHttpsRedirection();

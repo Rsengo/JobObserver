@@ -86,14 +86,13 @@ namespace Moodle.API
                 opt.Filters.Add<ValidateModelStateFilter>();
             }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
-            services.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            //JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+            //services.AddAuthentication(options =>
+            //{
+            //    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            //    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 
-            });
-            //    .AddJwtBearer(options =>
+            //}).AddJwtBearer(options =>
             //{
             //    options.Authority = Configuration["IdentityUrl"];
             //    options.Audience = "moodle";
@@ -118,7 +117,7 @@ namespace Moodle.API
 
             app.UseCors(Configuration["CorsPolicy"]);
 
-            app.UseAuthentication();
+            //app.UseAuthentication();
 
             app.UseHttpsRedirection();
             app.UseMvc();

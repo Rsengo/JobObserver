@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Reflection;
 using System.Threading.Tasks;
 using BuildingBlocks.EventBus.Abstractions;
@@ -115,18 +116,22 @@ namespace Dictionaries.API
                 opt.Filters.Add<ValidateModelStateFilter>();
             }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
-            services.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            ServicePointManager
+                    .ServerCertificateValidationCallback +=
+                (sender, cert, chain, sslPolicyErrors) => true;
 
-            }).AddJwtBearer(options =>
-            {
-                options.Authority = Configuration["IdentityUrl"];
-                options.Audience = "dictionaries";
-                options.RequireHttpsMetadata = false;
-            });
+            //JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+            //services.AddAuthentication(options =>
+            //{
+            //    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            //    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
+            //}).AddJwtBearer(options =>
+            //{
+            //    options.Authority = Configuration["IdentityUrl"];
+            //    options.Audience = "dictionaries";
+            //    options.RequireHttpsMetadata = false;
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -144,7 +149,7 @@ namespace Dictionaries.API
 
             app.UseCors(Configuration["CorsPolicy"]);
 
-            app.UseAuthentication();
+            //app.UseAuthentication();
 
             app.UseHttpsRedirection();
             app.UseMvc();

@@ -223,6 +223,7 @@ namespace Resumes.API.Controllers
             var entity = Mapper.Map<Resume>(dto);
 
             entity.CreatedAt = DateTime.UtcNow;
+            entity.IsPremium = false;
 
             _context.Resumes.Add(entity);
 

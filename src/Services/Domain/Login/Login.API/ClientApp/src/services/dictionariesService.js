@@ -13,7 +13,7 @@ const searchCities = inputValue => {
 
 const getAll = () => {
     const url = APIGW_URL + GET_ALL_POSTFIX;
-    axios.get(url);
+    return axios.get(url);
 }
 
 const searchEmployers = inputValue => {

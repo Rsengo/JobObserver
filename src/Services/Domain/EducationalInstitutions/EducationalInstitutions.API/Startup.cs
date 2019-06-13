@@ -107,18 +107,18 @@ namespace EducationalInstitutions.API
                 opt.Filters.Add<ValidateModelStateFilter>();
             }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
-            services.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            //JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+            //services.AddAuthentication(options =>
+            //{
+            //    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            //    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 
-            }).AddJwtBearer(options =>
-            {
-                options.Authority = Configuration["IdentityUrl"];
-                options.Audience = "educationalinstitutions";
-                options.RequireHttpsMetadata = false;
-            });
+            //}).AddJwtBearer(options =>
+            //{
+            //    options.Authority = Configuration["IdentityUrl"];
+            //    options.Audience = "educationalinstitutions";
+            //    options.RequireHttpsMetadata = false;
+            //});
 
             services.AddTransient<EducationalInstituionsDbContextSeed>();
         }
@@ -138,7 +138,7 @@ namespace EducationalInstitutions.API
 
             app.UseCors(Configuration["CorsPolicy"]);
 
-            app.UseAuthentication();
+            //app.UseAuthentication();
 
             app.UseHttpsRedirection();
             app.UseMvc();
