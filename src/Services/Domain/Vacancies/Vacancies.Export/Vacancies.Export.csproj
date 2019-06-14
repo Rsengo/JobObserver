@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="jsreport.AspNetCore" Version="2.0.1" />
+    <PackageReference Include="jsreport.MVC" Version="2.1.1" />
+    <PackageReference Include="RazorLight" Version="2.0.0-beta1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\BuildingBlocks\BackgroundTask\BuildingBlocks.BackgroundTask\BuildingBlocks.BackgroundTask.csproj" />
+    <ProjectReference Include="..\Vacancies.Db\Vacancies.Db.csproj" />
+  </ItemGroup>
+
+</Project>

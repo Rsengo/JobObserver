@@ -1,8 +1,13 @@
 ﻿using System;
 using System.IdentityModel.Tokens.Jwt;
+using System.IO;
 using System.Reflection;
 using BuildingBlocks.Extensions.AutoMapper;
 using BuildingBlocks.Extensions.EventBus.RabbitMQ;
+using jsreport.AspNetCore;
+using jsreport.Binary;
+using jsreport.Client;
+using jsreport.Local;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -10,8 +15,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using RazorLight;
 using Swashbuckle.AspNetCore.Swagger;
 using Vacancies.API.HttpFilters;
+using Vacancies.API.Services;
 using Vacancies.Db;
 using Vacancies.Db.Dto;
 using Vacancies.Db.Synchronization.EventHandlers.Driving;
@@ -40,6 +47,8 @@ using Vacancies.Db.Synchronization.Events.Schedules;
 using Vacancies.Db.Synchronization.Events.Skills;
 using Vacancies.Db.Synchronization.Events.Specializations;
 using Vacancies.Db.Synchronization.Events.Statuses;
+using Vacancies.Export;
+using Vacancies.Export.ModelBuilders;
 
 namespace Vacancies.API
 {
@@ -147,6 +156,29 @@ namespace Vacancies.API
                 options.Audience = "vacancies";
                 options.RequireHttpsMetadata = false;
             });
+
+            services.AddScoped<VacancyService>();
+
+            services.AddJsReport(new ReportingService(Configuration["JsReport"]));
+
+            services.AddTransient<IVacancyExportModelBuilder, VacancyExportModelBuilder>();
+
+            services.AddSingleton<IVacancyExporter, VacancyExporter>(sp => {
+                var env = sp.GetService<IHostingEnvironment>();
+                var path = Path.Combine(env.ContentRootPath, Configuration["ExportTemplatesPath"]);
+                var engine = new RazorLightEngineBuilder()
+                    .UseFilesystemProject(path)
+                    .UseMemoryCachingProvider()
+                    .Build();
+                var exportView = Configuration["ExportTemplate"];
+                var reporter = sp.GetService<IJsReportMVCService>();
+                var modelBuilder = sp.GetService<IVacancyExportModelBuilder>();
+                var exporter = new VacancyExporter(reporter, engine, modelBuilder, exportView);
+
+                return exporter;
+            });
+
+            services.AddSingleton<VacancyExportTaskStorage>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

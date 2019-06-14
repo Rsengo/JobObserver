@@ -54,13 +54,9 @@ namespace Employers.Db.Migrations
 
                     b.Property<long>("OrganizationId");
 
-                    b.Property<long?>("OrganizationId1");
-
                     b.HasKey("Id");
 
                     b.HasIndex("OrganizationId");
-
-                    b.HasIndex("OrganizationId1");
 
                     b.ToTable("DEPARTMENTS");
                 });
@@ -209,10 +205,6 @@ namespace Employers.Db.Migrations
                         .WithMany("Departments")
                         .HasForeignKey("OrganizationId")
                         .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Employers.Db.Models.Employer", "Organization")
-                        .WithMany()
-                        .HasForeignKey("OrganizationId1");
                 });
 
             modelBuilder.Entity("Employers.Db.Models.Employer", b =>

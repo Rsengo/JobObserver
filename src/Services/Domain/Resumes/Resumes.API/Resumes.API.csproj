@@ -9,11 +9,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Templates\Resume.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Templates\Resume.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="IdentityModel" Version="2.0.1" />
+    <PackageReference Include="jsreport.AspNetCore" Version="2.0.1" />
+    <PackageReference Include="jsreport.Binary" Version="2.5.0" />
+    <PackageReference Include="jsreport.Client" Version="3.0.1" />
+    <PackageReference Include="jsreport.Local" Version="2.1.0" />
+    <PackageReference Include="jsreport.MVC" Version="2.1.1" />
     <PackageReference Include="LinqKit.Microsoft.EntityFrameworkCore" Version="1.1.16" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.0.1916590" />
+    <PackageReference Include="RazorLight" Version="2.0.0-beta1" />
     <PackageReference Include="Serilog" Version="2.8.0" />
     <PackageReference Include="Serilog.AspNetCore" Version="2.1.1" />
     <PackageReference Include="Serilog.Extensions.Hosting" Version="2.0.0" />
@@ -28,11 +44,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\BuildingBlocks\AutoMapper\BuildingBlocks.Extensions.AutoMapper\BuildingBlocks.Extensions.AutoMapper.csproj" />
+    <ProjectReference Include="..\..\..\..\BuildingBlocks\BackgroundTask\BuildingBlocks.BackgroundTask\BuildingBlocks.BackgroundTask.csproj" />
     <ProjectReference Include="..\..\..\..\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Extensions.EntityFramework\BuildingBlocks.Extensions.EntityFramework.csproj" />
     <ProjectReference Include="..\..\..\..\BuildingBlocks\EventBus\BuildingBlocks.Extensions.EventBus.RabbitMQ\BuildingBlocks.Extensions.EventBus.RabbitMQ.csproj" />
     <ProjectReference Include="..\..\..\..\BuildingBlocks\Security\BuildingBlocks.Extensions.Security\BuildingBlocks.Extensions.Security.csproj" />
     <ProjectReference Include="..\..\..\..\BuildingBlocks\Security\BuildingBlocks.Security\BuildingBlocks.Security.csproj" />
     <ProjectReference Include="..\Resumes.Db\Resumes.Db.csproj" />
+    <ProjectReference Include="..\Resumes.Export\Resumes.Export.csproj" />
   </ItemGroup>
 
 </Project>

@@ -49,6 +49,101 @@
           "lib/netstandard1.3/IdentityModel.dll": {}
         }
       },
+      "jsreport.AspNetCore/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http": "2.0.1",
+          "Microsoft.AspNetCore.Mvc": "2.0.1",
+          "jsreport.Shared": "2.0.1",
+          "jsreport.Types": "2.2.7"
+        },
+        "compile": {
+          "lib/netstandard2.0/jsreport.AspNetCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/jsreport.AspNetCore.dll": {}
+        }
+      },
+      "jsreport.Binary/2.5.0": {
+        "type": "package",
+        "dependencies": {
+          "jsreport.Shared": "1.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/jsreport.Binary.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/jsreport.Binary.dll": {}
+        }
+      },
+      "jsreport.Client/3.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.4.0",
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "10.0.3",
+          "System.Net.Http": "4.3.2",
+          "jsreport.Shared": "2.0.1",
+          "jsreport.Types": "2.2.7"
+        },
+        "compile": {
+          "lib/netstandard1.6/jsreport.Client.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/jsreport.Client.dll": {}
+        }
+      },
+      "jsreport.Local/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.3",
+          "jsreport.Client": "3.0.1",
+          "jsreport.Shared": "2.0.1",
+          "jsreport.Types": "2.2.7"
+        },
+        "compile": {
+          "lib/netstandard2.0/jsreport.Local.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/jsreport.Local.dll": {}
+        }
+      },
+      "jsreport.MVC/2.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net46/jsreport.MVC.dll": {}
+        },
+        "runtime": {
+          "lib/net46/jsreport.MVC.dll": {}
+        }
+      },
+      "jsreport.Shared/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "10.0.3",
+          "jsreport.Types": "2.2.7"
+        },
+        "compile": {
+          "lib/netstandard1.6/jsreport.Shared.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/jsreport.Shared.dll": {}
+        }
+      },
+      "jsreport.Types/2.2.7": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "compile": {
+          "lib/netstandard1.6/jsreport.Types.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/jsreport.Types.dll": {}
+        }
+      },
       "LinqKit.Microsoft.EntityFrameworkCore/1.1.16": {
         "type": "package",
         "dependencies": {
@@ -2874,6 +2969,30 @@
           "lib/netstandard1.5/RabbitMQ.Client.dll": {}
         }
       },
+      "RazorLight/2.0.0-beta1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.0.0",
+          "Microsoft.AspNetCore.Html.Abstractions": "2.0.0",
+          "Microsoft.AspNetCore.Mvc.Razor.Extensions": "2.0.0",
+          "Microsoft.AspNetCore.Razor.Language": "2.0.0",
+          "Microsoft.AspNetCore.Razor.Runtime": "2.0.0",
+          "Microsoft.CodeAnalysis.Razor": "2.0.0",
+          "Microsoft.Extensions.Caching.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Caching.Memory": "2.0.0",
+          "Microsoft.Extensions.DependencyInjection": "2.0.0",
+          "Microsoft.Extensions.DependencyModel": "2.0.3",
+          "Microsoft.Extensions.FileProviders.Physical": "2.0.0",
+          "Microsoft.Extensions.Primitives": "2.0.0",
+          "System.Buffers": "4.4.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/RazorLight.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/RazorLight.dll": {}
+        }
+      },
       "Remotion.Linq/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -5050,6 +5169,16 @@
           "bin/placeholder/BuildingBlocks.AutoMapper.dll": {}
         }
       },
+      "BuildingBlocks.BackgroundTask/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/BuildingBlocks.BackgroundTask.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BuildingBlocks.BackgroundTask.dll": {}
+        }
+      },
       "BuildingBlocks.DataTransfer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
@@ -5236,6 +5365,23 @@
         "runtime": {
           "bin/placeholder/Resumes.Db.dll": {}
         }
+      },
+      "Resumes.Export/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "BuildingBlocks.BackgroundTask": "1.0.0",
+          "RazorLight": "2.0.0-beta1",
+          "Resumes.Db": "1.0.0",
+          "jsreport.AspNetCore": "2.0.1",
+          "jsreport.MVC": "2.1.1"
+        },
+        "compile": {
+          "bin/placeholder/Resumes.Export.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Resumes.Export.dll": {}
+        }
       }
     }
   },
@@ -5285,6 +5431,102 @@
         "identitymodel.nuspec",
         "lib/net45/IdentityModel.dll",
         "lib/netstandard1.3/IdentityModel.dll"
+      ]
+    },
+    "jsreport.AspNetCore/2.0.1": {
+      "sha512": "FZDhjLQcsuvw/Hd1oPSo1MKRYLv1I5L9qcEVWgH5UanOLpNBu6bJparsnLe2mnLW3DpeQaZRiFDrlsxUGSHhHg==",
+      "type": "package",
+      "path": "jsreport.aspnetcore/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "jsreport.aspnetcore.2.0.1.nupkg.sha512",
+        "jsreport.aspnetcore.nuspec",
+        "lib/netstandard2.0/jsreport.AspNetCore.dll",
+        "lib/netstandard2.0/jsreport.AspNetCore.xml"
+      ]
+    },
+    "jsreport.Binary/2.5.0": {
+      "sha512": "YkGPUkIDzIzEF3so0ZjOSUNAIxYTm1ww3znCF7aZPP0iRmu0LLfd/3XsFgMU8yHYFDjeAlKvZ5s/NXH2So6Jrw==",
+      "type": "package",
+      "path": "jsreport.binary/2.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "jsreport.binary.2.5.0.nupkg.sha512",
+        "jsreport.binary.nuspec",
+        "lib/net45/jsreport.Binary.dll",
+        "lib/netstandard2.0/jsreport.Binary.dll"
+      ]
+    },
+    "jsreport.Client/3.0.1": {
+      "sha512": "2rA+HKGChyjktjseDs3S5dC/B3WqxoSjrqPB6VhgS2HVQJO73LVmXVrjplj27ghTdbEUMcUTOAiBwPl9IDF78Q==",
+      "type": "package",
+      "path": "jsreport.client/3.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "jsreport.client.3.0.1.nupkg.sha512",
+        "jsreport.client.nuspec",
+        "lib/net45/jsreport.Client.dll",
+        "lib/netstandard1.6/jsreport.Client.dll"
+      ]
+    },
+    "jsreport.Local/2.1.0": {
+      "sha512": "FtGg1SvspN2xNoN64kvMXzk3tk2Ivxt1NaO4JlBLB5bkbEdr7KhCqdwqnM6HdQWcFEsVxj7YOfs0Gk26kDKd8Q==",
+      "type": "package",
+      "path": "jsreport.local/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "jsreport.local.2.1.0.nupkg.sha512",
+        "jsreport.local.nuspec",
+        "lib/net45/jsreport.Local.dll",
+        "lib/net45/jsreport.Local.xml",
+        "lib/netstandard2.0/jsreport.Local.dll",
+        "lib/netstandard2.0/jsreport.Local.xml"
+      ]
+    },
+    "jsreport.MVC/2.1.1": {
+      "sha512": "giXq5YTKDGzjVe8o/s+aByUHyAuar4mygEZ8s+xo6rVHIh573GSUfpItDEkTie4Q5+not0BcZKRTBQk9/litJw==",
+      "type": "package",
+      "path": "jsreport.mvc/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "jsreport.mvc.2.1.1.nupkg.sha512",
+        "jsreport.mvc.nuspec",
+        "lib/net46/jsreport.MVC.dll"
+      ]
+    },
+    "jsreport.Shared/2.0.1": {
+      "sha512": "2BDmAeGX/GAtLM8tuWGZeXR5kPrx79zxvWvGL9a8xv4kkVsDJRA/8UNAfs46yiJvt1+TW5wSDdyj9layRqAJrA==",
+      "type": "package",
+      "path": "jsreport.shared/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "jsreport.shared.2.0.1.nupkg.sha512",
+        "jsreport.shared.nuspec",
+        "lib/net45/jsreport.Shared.dll",
+        "lib/net45/jsreport.Shared.xml",
+        "lib/netstandard1.6/jsreport.Shared.dll",
+        "lib/netstandard1.6/jsreport.Shared.xml"
+      ]
+    },
+    "jsreport.Types/2.2.7": {
+      "sha512": "XGk6cHEO0rv7gk6R636xMgpzCfvWslNuubjC3R9RYQg0mQZeuuVNGGtJH1X6rAKPhKVFxQ6sFopwMffiV+OD8g==",
+      "type": "package",
+      "path": "jsreport.types/2.2.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "jsreport.types.2.2.7.nupkg.sha512",
+        "jsreport.types.nuspec",
+        "lib/net45/jsreport.Types.dll",
+        "lib/net45/jsreport.Types.xml",
+        "lib/netstandard1.6/jsreport.Types.dll",
+        "lib/netstandard1.6/jsreport.Types.xml"
       ]
     },
     "LinqKit.Microsoft.EntityFrameworkCore/1.1.16": {
@@ -8364,6 +8606,18 @@
         "lib/netstandard1.5/RabbitMQ.Client.xml",
         "rabbitmq.client.5.1.0.nupkg.sha512",
         "rabbitmq.client.nuspec"
+      ]
+    },
+    "RazorLight/2.0.0-beta1": {
+      "sha512": "daRhgPoFHUmmnEiUNTGDi2EuKbvpe5tVGkxwuYSuM0+k3uhSdzceJKuEq6FbbZn6aoS9nKGp2rr2cjhO1JvZEQ==",
+      "type": "package",
+      "path": "razorlight/2.0.0-beta1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/RazorLight.dll",
+        "razorlight.2.0.0-beta1.nupkg.sha512",
+        "razorlight.nuspec"
       ]
     },
     "Remotion.Linq/2.2.0": {
@@ -13755,6 +14009,11 @@
       "path": "../../../../BuildingBlocks/AutoMapper/BuildingBlocks.AutoMapper/BuildingBlocks.AutoMapper.csproj",
       "msbuildProject": "../../../../BuildingBlocks/AutoMapper/BuildingBlocks.AutoMapper/BuildingBlocks.AutoMapper.csproj"
     },
+    "BuildingBlocks.BackgroundTask/1.0.0": {
+      "type": "project",
+      "path": "../../../../BuildingBlocks/BackgroundTask/BuildingBlocks.BackgroundTask/BuildingBlocks.BackgroundTask.csproj",
+      "msbuildProject": "../../../../BuildingBlocks/BackgroundTask/BuildingBlocks.BackgroundTask/BuildingBlocks.BackgroundTask.csproj"
+    },
     "BuildingBlocks.DataTransfer/1.0.0": {
       "type": "project",
       "path": "../../../../BuildingBlocks/DataTransfer/BuildingBlocks.DataTransfer/BuildingBlocks.DataTransfer.csproj",
@@ -13814,10 +14073,16 @@
       "type": "project",
       "path": "../Resumes.Db/Resumes.Db.csproj",
       "msbuildProject": "../Resumes.Db/Resumes.Db.csproj"
+    },
+    "Resumes.Export/1.0.0": {
+      "type": "project",
+      "path": "../Resumes.Export/Resumes.Export.csproj",
+      "msbuildProject": "../Resumes.Export/Resumes.Export.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "BuildingBlocks.BackgroundTask >= 1.0.0",
       "BuildingBlocks.Extensions.AutoMapper >= 1.0.0",
       "BuildingBlocks.Extensions.EntityFramework >= 1.0.0",
       "BuildingBlocks.Extensions.EventBus.RabbitMQ >= 1.0.0",
@@ -13829,7 +14094,9 @@
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.0.1916590",
+      "RazorLight >= 2.0.0-beta1",
       "Resumes.Db >= 1.0.0",
+      "Resumes.Export >= 1.0.0",
       "Serilog >= 2.8.0",
       "Serilog.AspNetCore >= 2.1.1",
       "Serilog.Extensions.Hosting >= 2.0.0",
@@ -13839,7 +14106,12 @@
       "Serilog.Sinks.Seq >= 4.0.0",
       "Swashbuckle.AspNetCore >= 4.0.1",
       "System.Linq.Dynamic.Core >= 1.0.15",
-      "Z.EntityFramework.Extensions.EFCore >= 2.3.6"
+      "Z.EntityFramework.Extensions.EFCore >= 2.3.6",
+      "jsreport.AspNetCore >= 2.0.1",
+      "jsreport.Binary >= 2.5.0",
+      "jsreport.Client >= 3.0.1",
+      "jsreport.Local >= 2.1.0",
+      "jsreport.MVC >= 2.1.1"
     ]
   },
   "packageFolders": {
@@ -13881,6 +14153,9 @@
             "D:\\Repos\\JobObserver1\\src\\BuildingBlocks\\AutoMapper\\BuildingBlocks.Extensions.AutoMapper\\BuildingBlocks.Extensions.AutoMapper.csproj": {
               "projectPath": "D:\\Repos\\JobObserver1\\src\\BuildingBlocks\\AutoMapper\\BuildingBlocks.Extensions.AutoMapper\\BuildingBlocks.Extensions.AutoMapper.csproj"
             },
+            "D:\\Repos\\JobObserver1\\src\\BuildingBlocks\\BackgroundTask\\BuildingBlocks.BackgroundTask\\BuildingBlocks.BackgroundTask.csproj": {
+              "projectPath": "D:\\Repos\\JobObserver1\\src\\BuildingBlocks\\BackgroundTask\\BuildingBlocks.BackgroundTask\\BuildingBlocks.BackgroundTask.csproj"
+            },
             "D:\\Repos\\JobObserver1\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.Extensions.EntityFramework\\BuildingBlocks.Extensions.EntityFramework.csproj": {
               "projectPath": "D:\\Repos\\JobObserver1\\src\\BuildingBlocks\\Database\\EntityFramework\\BuildingBlocks.Extensions.EntityFramework\\BuildingBlocks.Extensions.EntityFramework.csproj"
             },
@@ -13895,6 +14170,9 @@
             },
             "D:\\Repos\\JobObserver1\\src\\Services\\Domain\\Resumes\\Resumes.Db\\Resumes.Db.csproj": {
               "projectPath": "D:\\Repos\\JobObserver1\\src\\Services\\Domain\\Resumes\\Resumes.Db\\Resumes.Db.csproj"
+            },
+            "D:\\Repos\\JobObserver1\\src\\Services\\Domain\\Resumes\\Resumes.Export\\Resumes.Export.csproj": {
+              "projectPath": "D:\\Repos\\JobObserver1\\src\\Services\\Domain\\Resumes\\Resumes.Export\\Resumes.Export.csproj"
             }
           }
         }
@@ -13937,6 +14215,10 @@
             "target": "Package",
             "version": "[1.0.1916590, )"
           },
+          "RazorLight": {
+            "target": "Package",
+            "version": "[2.0.0-beta1, )"
+          },
           "Serilog": {
             "target": "Package",
             "version": "[2.8.0, )"
@@ -13976,6 +14258,26 @@
           "Z.EntityFramework.Extensions.EFCore": {
             "target": "Package",
             "version": "[2.3.6, )"
+          },
+          "jsreport.AspNetCore": {
+            "target": "Package",
+            "version": "[2.0.1, )"
+          },
+          "jsreport.Binary": {
+            "target": "Package",
+            "version": "[2.5.0, )"
+          },
+          "jsreport.Client": {
+            "target": "Package",
+            "version": "[3.0.1, )"
+          },
+          "jsreport.Local": {
+            "target": "Package",
+            "version": "[2.1.0, )"
+          },
+          "jsreport.MVC": {
+            "target": "Package",
+            "version": "[2.1.1, )"
           }
         },
         "imports": [
@@ -13985,5 +14287,17 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"jsreport.MVC 2.1.1\" был восстановлен с помощью \".NETFramework,Version=v4.6.1\", а не целевой платформы проекта \".NETCoreApp,Version=v2.2\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "jsreport.MVC",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    }
+  ]
 }

@@ -1,0 +1,96 @@
+@using System.Collections.Generic
+@model IDictionary<string, string>
+
+@{ 
+    const string TITLE_KEY = "Должность";
+    const string EMPLOYER_KEY = "Работодатель";
+    var excludedFields = new[] { TITLE_KEY, EMPLOYER_KEY };
+}
+
+<style>
+    .content, .table {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .body {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .header, .applicant_info {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .applicant_info > span, .header {
+        padding-bottom: 15px
+    }
+
+    .row {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between
+    }
+
+    .row:nth-child(2n+1) {
+        background-color: lightgray;
+    }
+
+    .key {
+        display: flex;
+        width: 40%;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .value {
+        display: flex;
+        width: 60%;
+        border-left: 1px solid black;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .key > span, .value > span {
+        padding: 5px;
+    }
+
+</style>
+
+    <div class="content">
+        <div class="header">
+            <h1>
+                @Model[TITLE_KEY]
+            </h1>
+        </div>
+        <div class="body">
+            <div class="applicant_info">
+                <span>@Model[EMPLOYER_KEY]</span>
+            </div>
+            <div class="table">
+                @foreach (var pair in Model)
+                {
+                    @if (excludedFields.Contains(pair.Key))
+                    {
+                        continue;
+                    }
+                    <div class="row">
+                        <div class="key">
+                            <span>@pair.Key</span>
+                        </div>
+                        <div class="value">
+                            <span>@pair.Value</span>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>

@@ -15,6 +15,9 @@ services:
     depends_on:
       - mariadb
 
+  js_report:
+    image: 'jsreport/jsreport:latest'
+
   # elk:
   #   image: sebp/elk
 
@@ -99,6 +102,7 @@ services:
       - sql.data
       - rabbitmq
       - seq
+      - js_report
   #     - elk
 
   vacancies.api:
@@ -110,6 +114,7 @@ services:
       - sql.data
       - rabbitmq
       - seq
+      - js_report
   #     - elk
 
   dictionaries.api:

@@ -133,3 +133,8 @@ D:\Repos\JobObserver1\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcorea
 D:\Repos\JobObserver1\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.csproj.CopyComplete
 D:\Repos\JobObserver1\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.dll
 D:\Repos\JobObserver1\src\Services\Domain\Resumes\Resumes.API\obj\Debug\netcoreapp2.2\Resumes.API.pdb
+D:\Repos\JobObserver1\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\Resumes.Export.dll
+D:\Repos\JobObserver1\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\Templates\Resume.cshtml
+D:\Repos\JobObserver1\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\Resumes.Export.pdb
+D:\Repos\JobObserver1\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\BuildingBlocks.BackgroundTask.dll
+D:\Repos\JobObserver1\src\Services\Domain\Resumes\Resumes.API\bin\Debug\netcoreapp2.2\BuildingBlocks.BackgroundTask.pdb
