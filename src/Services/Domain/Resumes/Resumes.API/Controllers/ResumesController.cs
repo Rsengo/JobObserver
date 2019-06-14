@@ -15,6 +15,9 @@ using Microsoft.EntityFrameworkCore.Query;
 using LinqKit;
 using System.Linq.Dynamic.Core;
 using Resumes.API.Filters.Builders;
+using Resumes.API.Services;
+using Resumes.Export;
+using System.Reflection;
 
 namespace Resumes.API.Controllers
 {
@@ -25,20 +28,29 @@ namespace Resumes.API.Controllers
 
         private readonly ISecurityManager _securityManager;
 
+        private readonly ResumeService _resumeService;
+
+        private readonly IResumeExporter _exporter;
+
         public ResumesController(
             ResumesDbContext context,
-            ISecurityManager securityManager)
+            ISecurityManager securityManager,
+            ResumeService resumeService,
+            IResumeExporter exporter)
         {
             _context = context;
             _securityManager = securityManager;
+            _resumeService = resumeService;
+            _exporter = exporter;
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> Get([FromQuery]long id)
         {
-            var allowed = await _securityManager.HasPermissionAsync(
-                new Resume() { ApplicantId = Guid.Empty }, 
-                AccessOperation.READ);
+            //var allowed = await _securityManager.HasPermissionAsync(
+            //    new Resume() { ApplicantId = Guid.Empty }, 
+            //    AccessOperation.READ);
+
             var result = await _context.Resumes
                 //.Include(x => x.Area)
                 .Include(x => x.Applicant)

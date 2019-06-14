@@ -123,3 +123,8 @@ D:\Repos\JobObserver1\src\Services\Domain\Vacancies\Vacancies.API\obj\Debug\netc
 D:\Repos\JobObserver1\src\Services\Domain\Vacancies\Vacancies.API\obj\Debug\netcoreapp2.2\Vacancies.API.csproj.CopyComplete
 D:\Repos\JobObserver1\src\Services\Domain\Vacancies\Vacancies.API\obj\Debug\netcoreapp2.2\Vacancies.API.dll
 D:\Repos\JobObserver1\src\Services\Domain\Vacancies\Vacancies.API\obj\Debug\netcoreapp2.2\Vacancies.API.pdb
+D:\Repos\JobObserver1\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\Vacancies.Export.dll
+D:\Repos\JobObserver1\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\Templates\Vacancy.cshtml
+D:\Repos\JobObserver1\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\BuildingBlocks.BackgroundTask.dll
+D:\Repos\JobObserver1\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\Vacancies.Export.pdb
+D:\Repos\JobObserver1\src\Services\Domain\Vacancies\Vacancies.API\bin\Debug\netcoreapp2.2\BuildingBlocks.BackgroundTask.pdb

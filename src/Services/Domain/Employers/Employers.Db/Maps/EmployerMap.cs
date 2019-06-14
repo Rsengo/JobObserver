@@ -33,19 +33,16 @@ namespace Employers.Db.Maps
             builder
                 .HasMany(x => x.Partners)
                 .WithOne()
-                .HasForeignKey(x => x.EmployerId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder
                 .HasMany(x => x.Departments)
                 .WithOne()
-                .HasForeignKey(x => x.OrganizationId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder
                 .HasMany(x => x.Synonyms)
                 .WithOne()
-                .HasForeignKey(x => x.EmployerId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder

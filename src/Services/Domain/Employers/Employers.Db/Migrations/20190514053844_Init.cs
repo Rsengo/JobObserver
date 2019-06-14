@@ -119,7 +119,6 @@ namespace Employers.Db.Migrations
                     Id = table.Column<long>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(nullable: false),
-                    OrganizationId1 = table.Column<long>(nullable: true),
                     OrganizationId = table.Column<long>(nullable: false),
                     Description = table.Column<string>(nullable: true)
                 },
@@ -132,12 +131,6 @@ namespace Employers.Db.Migrations
                         principalTable: "EMPLOYERS",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_DEPARTMENTS_EMPLOYERS_OrganizationId1",
-                        column: x => x.OrganizationId1,
-                        principalTable: "EMPLOYERS",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(

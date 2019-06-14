@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Reflection;
@@ -8,6 +9,10 @@ using System.Threading.Tasks;
 using BuildingBlocks.Extensions.AutoMapper;
 using BuildingBlocks.Extensions.EventBus.RabbitMQ;
 using BuildingBlocks.Extensions.Security;
+using jsreport.AspNetCore;
+using jsreport.Binary;
+using jsreport.Client;
+using jsreport.Local;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -18,6 +23,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using RazorLight;
 using Resumes.API.HttpFilters;
 using Resumes.API.Security;
 using Resumes.API.Security.Accessors;
@@ -25,6 +31,7 @@ using Resumes.API.Security.Events;
 using Resumes.API.Security.Extensions;
 using Resumes.API.Security.Handlers.Applicant;
 using Resumes.API.Security.Handlers.Employer;
+using Resumes.API.Services;
 using Resumes.Db;
 using Resumes.Db.Dto;
 using Resumes.Db.Models;
@@ -60,6 +67,8 @@ using Resumes.Db.Synchronization.Events.Specializations;
 using Resumes.Db.Synchronization.Events.Statuses;
 using Resumes.Db.Synchronization.Events.Travel;
 using Resumes.Db.Synchronization.Events.Travel.Relocation;
+using Resumes.Export;
+using Resumes.Export.ModelBuilders;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace Resumes.API
@@ -176,6 +185,29 @@ namespace Resumes.API
                 options.RequireHttpsMetadata = false;
                 options.BackchannelHttpHandler = new HttpClientHandler { ServerCertificateCustomValidationCallback = delegate { return true; } };
             });
+
+            services.AddScoped<ResumeService>();
+
+            services.AddJsReport(new ReportingService(Configuration["JsReport"]));
+
+            services.AddTransient<IResumeExportModelBuilder, ResumeExportModelBuilder>();
+
+            services.AddSingleton<IResumeExporter, ResumeExporter>(sp => {
+                var env = sp.GetService<IHostingEnvironment>();
+                var path = Path.Combine(env.ContentRootPath, Configuration["ExportTemplatesPath"]);
+                var engine = new RazorLightEngineBuilder()
+                    .UseFilesystemProject(path)
+                    .UseMemoryCachingProvider()
+                    .Build();
+                var exportView = Configuration["ExportTemplate"];
+                var reporter = sp.GetService<IJsReportMVCService>();
+                var modelBuilder = sp.GetService<IResumeExportModelBuilder>();
+                var exporter = new ResumeExporter(reporter, engine, modelBuilder, exportView);
+
+                return exporter;
+            });
+
+            services.AddSingleton<ResumeExportTaskStorage>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

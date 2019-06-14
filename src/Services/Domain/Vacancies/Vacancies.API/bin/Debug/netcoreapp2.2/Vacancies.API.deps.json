@@ -27,10 +27,12 @@
           "BuildingBlocks.Extensions.AutoMapper": "1.0.0",
           "BuildingBlocks.Extensions.EntityFramework": "1.0.0",
           "BuildingBlocks.Extensions.EventBus.RabbitMQ": "1.0.0",
+          "LinqKit": "1.1.16",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.0.1916590",
+          "RazorLight": "2.0.0-beta1",
           "Serilog": "2.8.0",
           "Serilog.AspNetCore": "2.1.1",
           "Serilog.Extensions.Hosting": "2.0.0",
@@ -40,7 +42,13 @@
           "Serilog.Sinks.Seq": "4.0.0",
           "Swashbuckle.AspNetCore": "4.0.1",
           "Vacancies.Db": "1.0.0",
-          "Z.EntityFramework.Extensions.EFCore": "2.3.6"
+          "Vacancies.Export": "1.0.0",
+          "Z.EntityFramework.Extensions.EFCore": "2.3.6",
+          "jsreport.AspNetCore": "2.0.1",
+          "jsreport.Binary": "2.5.0",
+          "jsreport.Client": "3.0.1",
+          "jsreport.Local": "2.1.0",
+          "jsreport.MVC": "2.1.1"
         },
         "runtime": {
           "Vacancies.API.dll": {}
@@ -82,6 +90,126 @@
         },
         "compile": {
           "lib/netstandard1.3/Elasticsearch.Net.dll": {}
+        }
+      },
+      "jsreport.AspNetCore/2.0.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http": "2.2.0",
+          "Microsoft.AspNetCore.Mvc": "2.2.0",
+          "jsreport.Shared": "2.0.1",
+          "jsreport.Types": "2.2.7"
+        },
+        "runtime": {
+          "lib/netstandard2.0/jsreport.AspNetCore.dll": {
+            "assemblyVersion": "2.0.1.0",
+            "fileVersion": "2.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/jsreport.AspNetCore.dll": {}
+        }
+      },
+      "jsreport.Binary/2.5.0": {
+        "dependencies": {
+          "jsreport.Shared": "2.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/jsreport.Binary.dll": {
+            "assemblyVersion": "2.5.0.0",
+            "fileVersion": "2.5.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/jsreport.Binary.dll": {}
+        }
+      },
+      "jsreport.Client/3.0.1": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "NETStandard.Library": "2.0.3",
+          "Newtonsoft.Json": "12.0.1",
+          "System.Net.Http": "4.3.2",
+          "jsreport.Shared": "2.0.1",
+          "jsreport.Types": "2.2.7"
+        },
+        "runtime": {
+          "lib/netstandard1.6/jsreport.Client.dll": {
+            "assemblyVersion": "3.0.1.0",
+            "fileVersion": "3.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.6/jsreport.Client.dll": {}
+        }
+      },
+      "jsreport.Local/2.1.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.1",
+          "jsreport.Client": "3.0.1",
+          "jsreport.Shared": "2.0.1",
+          "jsreport.Types": "2.2.7"
+        },
+        "runtime": {
+          "lib/netstandard2.0/jsreport.Local.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/jsreport.Local.dll": {}
+        }
+      },
+      "jsreport.MVC/2.1.1": {
+        "runtime": {
+          "lib/net46/jsreport.MVC.dll": {
+            "assemblyVersion": "2.1.1.0",
+            "fileVersion": "2.1.1.0"
+          }
+        },
+        "compile": {
+          "lib/net46/jsreport.MVC.dll": {}
+        }
+      },
+      "jsreport.Shared/2.0.1": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "Newtonsoft.Json": "12.0.1",
+          "jsreport.Types": "2.2.7"
+        },
+        "runtime": {
+          "lib/netstandard1.6/jsreport.Shared.dll": {
+            "assemblyVersion": "2.0.1.0",
+            "fileVersion": "2.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.6/jsreport.Shared.dll": {}
+        }
+      },
+      "jsreport.Types/2.2.7": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "Newtonsoft.Json": "12.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.6/jsreport.Types.dll": {
+            "assemblyVersion": "2.2.7.0",
+            "fileVersion": "2.2.6.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.6/jsreport.Types.dll": {}
+        }
+      },
+      "LinqKit/1.1.16": {
+        "runtime": {
+          "lib/net45/LinqKit.dll": {
+            "assemblyVersion": "1.1.16.0",
+            "fileVersion": "1.1.16.0"
+          }
+        },
+        "compile": {
+          "lib/net45/LinqKit.dll": {}
         }
       },
       "Microsoft.EntityFrameworkCore/2.2.2": {
@@ -222,6 +350,32 @@
         },
         "compile": {
           "lib/netstandard1.5/RabbitMQ.Client.dll": {}
+        }
+      },
+      "RazorLight/2.0.0-beta1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Html.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Razor.Extensions": "2.2.0",
+          "Microsoft.AspNetCore.Razor.Language": "2.2.0",
+          "Microsoft.AspNetCore.Razor.Runtime": "2.2.0",
+          "Microsoft.CodeAnalysis.Razor": "2.2.0",
+          "Microsoft.Extensions.Caching.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Caching.Memory": "2.2.0",
+          "Microsoft.Extensions.DependencyInjection": "2.2.0",
+          "Microsoft.Extensions.DependencyModel": "2.1.0",
+          "Microsoft.Extensions.FileProviders.Physical": "2.2.0",
+          "Microsoft.Extensions.Primitives": "2.2.0",
+          "System.Buffers": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/RazorLight.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/RazorLight.dll": {}
         }
       },
       "Remotion.Linq/2.2.0": {
@@ -753,6 +907,14 @@
           "BuildingBlocks.AutoMapper.dll": {}
         }
       },
+      "BuildingBlocks.BackgroundTask/1.0.0": {
+        "runtime": {
+          "BuildingBlocks.BackgroundTask.dll": {}
+        },
+        "compile": {
+          "BuildingBlocks.BackgroundTask.dll": {}
+        }
+      },
       "BuildingBlocks.DataTransfer/1.0.0": {
         "dependencies": {
           "Newtonsoft.Json": "12.0.1",
@@ -889,6 +1051,21 @@
         },
         "compile": {
           "Vacancies.Db.dll": {}
+        }
+      },
+      "Vacancies.Export/1.0.0": {
+        "dependencies": {
+          "BuildingBlocks.BackgroundTask": "1.0.0",
+          "RazorLight": "2.0.0-beta1",
+          "Vacancies.Db": "1.0.0",
+          "jsreport.AspNetCore": "2.0.1",
+          "jsreport.MVC": "2.1.1"
+        },
+        "runtime": {
+          "Vacancies.Export.dll": {}
+        },
+        "compile": {
+          "Vacancies.Export.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3967,6 +4144,62 @@
       "path": "elasticsearch.net/6.0.0",
       "hashPath": "elasticsearch.net.6.0.0.nupkg.sha512"
     },
+    "jsreport.AspNetCore/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FZDhjLQcsuvw/Hd1oPSo1MKRYLv1I5L9qcEVWgH5UanOLpNBu6bJparsnLe2mnLW3DpeQaZRiFDrlsxUGSHhHg==",
+      "path": "jsreport.aspnetcore/2.0.1",
+      "hashPath": "jsreport.aspnetcore.2.0.1.nupkg.sha512"
+    },
+    "jsreport.Binary/2.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YkGPUkIDzIzEF3so0ZjOSUNAIxYTm1ww3znCF7aZPP0iRmu0LLfd/3XsFgMU8yHYFDjeAlKvZ5s/NXH2So6Jrw==",
+      "path": "jsreport.binary/2.5.0",
+      "hashPath": "jsreport.binary.2.5.0.nupkg.sha512"
+    },
+    "jsreport.Client/3.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2rA+HKGChyjktjseDs3S5dC/B3WqxoSjrqPB6VhgS2HVQJO73LVmXVrjplj27ghTdbEUMcUTOAiBwPl9IDF78Q==",
+      "path": "jsreport.client/3.0.1",
+      "hashPath": "jsreport.client.3.0.1.nupkg.sha512"
+    },
+    "jsreport.Local/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FtGg1SvspN2xNoN64kvMXzk3tk2Ivxt1NaO4JlBLB5bkbEdr7KhCqdwqnM6HdQWcFEsVxj7YOfs0Gk26kDKd8Q==",
+      "path": "jsreport.local/2.1.0",
+      "hashPath": "jsreport.local.2.1.0.nupkg.sha512"
+    },
+    "jsreport.MVC/2.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-giXq5YTKDGzjVe8o/s+aByUHyAuar4mygEZ8s+xo6rVHIh573GSUfpItDEkTie4Q5+not0BcZKRTBQk9/litJw==",
+      "path": "jsreport.mvc/2.1.1",
+      "hashPath": "jsreport.mvc.2.1.1.nupkg.sha512"
+    },
+    "jsreport.Shared/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2BDmAeGX/GAtLM8tuWGZeXR5kPrx79zxvWvGL9a8xv4kkVsDJRA/8UNAfs46yiJvt1+TW5wSDdyj9layRqAJrA==",
+      "path": "jsreport.shared/2.0.1",
+      "hashPath": "jsreport.shared.2.0.1.nupkg.sha512"
+    },
+    "jsreport.Types/2.2.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XGk6cHEO0rv7gk6R636xMgpzCfvWslNuubjC3R9RYQg0mQZeuuVNGGtJH1X6rAKPhKVFxQ6sFopwMffiV+OD8g==",
+      "path": "jsreport.types/2.2.7",
+      "hashPath": "jsreport.types.2.2.7.nupkg.sha512"
+    },
+    "LinqKit/1.1.16": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xRfUb2im8Fy04UPoCtdk/dN9t57ipa3KmBJRRvRbcXJr5zbZ//QQXRsGbLxCXwRSd1ZaWEhLP5TZzuelADb8kQ==",
+      "path": "linqkit/1.1.16",
+      "hashPath": "linqkit.1.1.16.nupkg.sha512"
+    },
     "Microsoft.EntityFrameworkCore/2.2.2": {
       "type": "package",
       "serviceable": true,
@@ -4043,6 +4276,13 @@
       "sha512": "sha512-oMXzDw2NLDHYlAYVJs5AHZDGkTsuzmaAPNfHjgkPqq3VfnxAXgsJ643ts6xsdXJftpwPbDAwN5YP65lHm+MiNg==",
       "path": "rabbitmq.client/5.1.0",
       "hashPath": "rabbitmq.client.5.1.0.nupkg.sha512"
+    },
+    "RazorLight/2.0.0-beta1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-daRhgPoFHUmmnEiUNTGDi2EuKbvpe5tVGkxwuYSuM0+k3uhSdzceJKuEq6FbbZn6aoS9nKGp2rr2cjhO1JvZEQ==",
+      "path": "razorlight/2.0.0-beta1",
+      "hashPath": "razorlight.2.0.0-beta1.nupkg.sha512"
     },
     "Remotion.Linq/2.2.0": {
       "type": "package",
@@ -4294,6 +4534,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "BuildingBlocks.BackgroundTask/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "BuildingBlocks.DataTransfer/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -4340,6 +4585,11 @@
       "sha512": ""
     },
     "Vacancies.Db/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Vacancies.Export/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

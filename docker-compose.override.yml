@@ -44,6 +44,10 @@ services:
     volumes:
       - ./moodle/bitnami:/bitnami
 
+  js_report:
+    ports:
+      - '5488:5488'
+
   # elk:
   #   environment:
   #     - MAX_MAP_COUNT=262144
@@ -202,6 +206,9 @@ services:
       - EventBusPassword=${EVENT_BUS_PASSWORD}
       - ElasticSearch=elk:9200
       - Seq=http://seq
+      - JsReport=http://js_report:5488
+      - ExportTemplate=Resume.cshtml
+      - ExportTemplatesPath=Templates
     ports:
       - "5107:80" 
     volumes: 
@@ -223,6 +230,9 @@ services:
       - EventBusPassword=${EVENT_BUS_PASSWORD}
       - ElasticSearch=elk:9200
       - Seq=http://seq
+      - JsReport=http://js_report:5488
+      - ExportTemplate=Vacancy.cshtml
+      - ExportTemplatesPath=Templates
     ports:
       - "5108:80" 
     volumes: 
