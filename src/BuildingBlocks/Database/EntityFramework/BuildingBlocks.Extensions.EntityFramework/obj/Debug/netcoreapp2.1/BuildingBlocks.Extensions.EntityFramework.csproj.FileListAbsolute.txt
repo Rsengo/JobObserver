@@ -30,4 +30,3 @@ D:\Repos\JobObserver1\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks
 D:\Repos\JobObserver1\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Extensions.EntityFramework\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.EntityFramework.AssemblyInfo.cs
 D:\Repos\JobObserver1\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Extensions.EntityFramework\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.EntityFramework.dll
 D:\Repos\JobObserver1\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Extensions.EntityFramework\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.EntityFramework.pdb
-D:\Repos\JobObserver1\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.Extensions.EntityFramework\obj\Debug\netcoreapp2.1\BuildingBlocks.Extensions.EntityFramework.csprojAssemblyReference.cache

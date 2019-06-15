@@ -36,4 +36,3 @@ D:\Repos\JobObserver1\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks
 D:\Repos\JobObserver1\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.EntityFramework\obj\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.AssemblyInfo.cs
 D:\Repos\JobObserver1\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.EntityFramework\obj\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.dll
 D:\Repos\JobObserver1\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.EntityFramework\obj\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.pdb
-D:\Repos\JobObserver1\src\BuildingBlocks\Database\EntityFramework\BuildingBlocks.EntityFramework\obj\Debug\netcoreapp2.1\BuildingBlocks.EntityFramework.csprojAssemblyReference.cache

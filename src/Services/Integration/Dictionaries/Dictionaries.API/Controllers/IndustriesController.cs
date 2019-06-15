@@ -32,7 +32,7 @@ namespace Dictionaries.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get([FromQuery]long id)
+        public async Task<IActionResult> Get([FromRoute]long id)
         {
             await _context.Industries.LoadAsync();
             var result = await _context.Industries.SingleOrDefaultAsync(x => x.Id == id);

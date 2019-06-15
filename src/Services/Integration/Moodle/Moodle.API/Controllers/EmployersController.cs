@@ -83,7 +83,7 @@ namespace Moodle.API.Controllers
         }
         
         [HttpGet("{id}/hasAccount")]
-        public async Task<IActionResult> HasAccount([FromQuery]long id)
+        public async Task<IActionResult> HasAccount([FromRoute]long id)
         {
             var username = _usernameFactory.CreateEmployerUsername(id);
             var request = new GetUserByUsernameRequest(username);
@@ -114,7 +114,7 @@ namespace Moodle.API.Controllers
         }
 
         [HttpGet("{id}/resetPassword")]
-        public async Task<IActionResult> ResetPassword([FromQuery]long id)
+        public async Task<IActionResult> ResetPassword([FromRoute]long id)
         {
             throw new NotImplementedException();
         }

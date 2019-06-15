@@ -40,7 +40,7 @@ namespace Dictionaries.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get([FromQuery]long id)
+        public async Task<IActionResult> Get([FromRoute]long id)
         {
             var result = await _context.Skills.SingleOrDefaultAsync(x => x.Id == id);
             var dto = Mapper.Map<DtoSkill>(result);
