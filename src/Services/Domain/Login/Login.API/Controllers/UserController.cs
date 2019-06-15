@@ -47,6 +47,7 @@ namespace Login.API.Controllers
         {
             var newUser = Mapper.Map<User>(dto);
             newUser.Id = id;
+            newUser.SecurityStamp = Guid.NewGuid().ToString("D");
 
             await _userManager.UpdateAsync(newUser);
 
