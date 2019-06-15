@@ -126,7 +126,7 @@ namespace Login.API.Services
 
             if (await _userManager.IsInRoleAsync(user, IdentityConfig.DefaultRoles.EDUCATIONAL_INSTITUTION_MANAGER))
             {
-                var attrs = _context.EmployerManagerAttributes.SingleOrDefault(x =>
+                var attrs = _context.EducationalInstitutionManagerAttributes.SingleOrDefault(x =>
                     x.UserId == user.Id);
                 claims.Add(new Claim(IdentityConfig.JobObserverJwtClaimTypes.OrganizationId, attrs?.OrganizationId.ToString()));
             }

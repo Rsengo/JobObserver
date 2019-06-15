@@ -28,7 +28,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get([FromQuery]long id)
+        public async Task<IActionResult> Get([FromRoute]long id)
         {
             var result = await _context.Educations
                 .Include(x => x.EducationalLevel)
@@ -42,7 +42,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("byResume/{id}")]
-        public async Task<IActionResult> GetByResume([FromQuery]long id)
+        public async Task<IActionResult> GetByResume([FromRoute]long id)
         {
             var result = await _context.Educations
                 .Where(x => x.ResumeId == id)
@@ -70,7 +70,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update([FromBody]DtoEducation dto, [FromQuery]long id)
+        public async Task<IActionResult> Update([FromBody]DtoEducation dto, [FromRoute]long id)
         {
             var template = Mapper.Map<Education>(dto);
 
@@ -85,7 +85,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete([FromQuery]long id)
+        public async Task<IActionResult> Delete([FromRoute]long id)
         {
             await _context.Educations
                 .Where(x => x.Id == id)
@@ -98,7 +98,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("{id}/specializations/")]
-        public async Task<IActionResult> GetSpecializations([FromQuery]long id)
+        public async Task<IActionResult> GetSpecializations([FromRoute]long id)
         {
             var result = await _context.EducationSpecializations
                 .Include(x => x.Specialization)
@@ -125,7 +125,7 @@ namespace Resumes.API.Controllers
         [HttpPut("specializations/{id}")]
         public async Task<IActionResult> UpdateSpecialization(
             [FromBody]DtoEducationSpecialization dto,
-            [FromQuery]long id)
+            [FromRoute]long id)
         {
             var template = Mapper.Map<EducationSpecialization>(dto);
 
@@ -140,7 +140,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpDelete("specializations/{id}")]
-        public async Task<IActionResult> DeleteSpecialization([FromQuery]long id)
+        public async Task<IActionResult> DeleteSpecialization([FromRoute]long id)
         {
             await _context.EducationSpecializations
                 .Where(x => x.Id == id)

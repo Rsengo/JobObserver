@@ -28,7 +28,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get([FromQuery]long id)
+        public async Task<IActionResult> Get([FromRoute]long id)
         {
             var result = await _context.WorkTickets
                 .Include(x => x.Area)
@@ -40,7 +40,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("byResume/{id}")]
-        public async Task<IActionResult> GetByResume([FromQuery]long id)
+        public async Task<IActionResult> GetByResume([FromRoute]long id)
         {
             var result = await _context.WorkTickets
                 .Where(x => x.ResumeId == id)
@@ -66,7 +66,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update([FromBody]DtoWorkTicket dto, [FromQuery]long id)
+        public async Task<IActionResult> Update([FromBody]DtoWorkTicket dto, [FromRoute]long id)
         {
             var template = Mapper.Map<WorkTicket>(dto);
 
@@ -81,7 +81,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete([FromQuery]long id)
+        public async Task<IActionResult> Delete([FromRoute]long id)
         {
             await _context.WorkTickets
                 .Where(x => x.Id == id)

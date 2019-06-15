@@ -28,7 +28,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get([FromQuery]long id)
+        public async Task<IActionResult> Get([FromRoute]long id)
         {
             var result = await _context.ResumeNegotiations
                 .Include(x => x.Response)
@@ -40,7 +40,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("byResume/{id}")]
-        public async Task<IActionResult> GetByResume([FromQuery]long id)
+        public async Task<IActionResult> GetByResume([FromRoute]long id)
         {
             var result = await _context.ResumeNegotiations
                 .Where(x => x.ResumeId == id)
@@ -53,7 +53,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("byEmployer/{id}")]
-        public async Task<IActionResult> GetByEmployer([FromQuery]long id)
+        public async Task<IActionResult> GetByEmployer([FromRoute]long id)
         {
             var result = await _context.ResumeNegotiations
                 .Where(x => x.CompanyId == id)
@@ -79,7 +79,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update([FromBody]DtoResumeNegotiation dto, [FromQuery]long id)
+        public async Task<IActionResult> Update([FromBody]DtoResumeNegotiation dto, [FromRoute]long id)
         {
             var template = Mapper.Map<ResumeNegotiation>(dto);
 
@@ -94,7 +94,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete([FromQuery]long id)
+        public async Task<IActionResult> Delete([FromRoute]long id)
         {
             await _context.ResumeNegotiations
                 .Where(x => x.Id == id)

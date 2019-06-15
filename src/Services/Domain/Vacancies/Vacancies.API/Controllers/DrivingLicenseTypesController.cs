@@ -22,7 +22,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpGet("drivingLicenseTypes/{id}")]
-        public async Task<IActionResult> Get([FromQuery]long id)
+        public async Task<IActionResult> Get([FromRoute]long id)
         {
             var result = await _context.VacancyDrivingLicenseTypes
                 .Include(x => x.DrivingLicenseType)
@@ -34,7 +34,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpGet("{id}/drivingLicenseTypes")]
-        public async Task<IActionResult> GetByVacancy([FromQuery]long id)
+        public async Task<IActionResult> GetByVacancy([FromRoute]long id)
         {
             var result = await _context.VacancyDrivingLicenseTypes
                 .Where(x => x.VacancyId == id)
@@ -60,7 +60,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpPut("drivingLicenseTypes/{id}")]
-        public async Task<IActionResult> Update([FromBody]DtoVacancyDrivingLicenseType dto, [FromQuery]long id)
+        public async Task<IActionResult> Update([FromBody]DtoVacancyDrivingLicenseType dto, [FromRoute]long id)
         {
             var template = Mapper.Map<VacancyDrivingLicenseType>(dto);
 
@@ -75,7 +75,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpDelete("drivingLicenseTypes/{id}")]
-        public async Task<IActionResult> Delete([FromQuery]long id)
+        public async Task<IActionResult> Delete([FromRoute]long id)
         {
             await _context.VacancyDrivingLicenseTypes
                 .Where(x => x.Id == id)

@@ -29,7 +29,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get([FromQuery]long id)
+        public async Task<IActionResult> Get([FromRoute]long id)
         {
             var result = await _context.Certificates
                 .SingleOrDefaultAsync(x => x.Id == id);
@@ -45,7 +45,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("byResume/{id}")]
-        public async Task<IActionResult> GetByResume([FromQuery]long id)
+        public async Task<IActionResult> GetByResume([FromRoute]long id)
         {
             var query = _context.Certificates
                 .Where(x => x.ResumeId == id);
@@ -82,7 +82,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update([FromBody]DtoCertificate dto, [FromQuery]long id)
+        public async Task<IActionResult> Update([FromBody]DtoCertificate dto, [FromRoute]long id)
         {
             var template = Mapper.Map<Certificate>(dto);
 
@@ -102,7 +102,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete([FromQuery]long id)
+        public async Task<IActionResult> Delete([FromRoute]long id)
         {
             var query = _context.Certificates
                 .Where(x => x.Id == id);

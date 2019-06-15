@@ -22,7 +22,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get([FromQuery]long id)
+        public async Task<IActionResult> Get([FromRoute]long id)
         {
             var result = await _context.VacancyNegotiations
                 .Include(x => x.Response)
@@ -34,7 +34,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpGet("byVacancy/{id}")]
-        public async Task<IActionResult> GetByVacancy([FromQuery]long id)
+        public async Task<IActionResult> GetByVacancy([FromRoute]long id)
         {
             var result = await _context.VacancyNegotiations
                 .Where(x => x.VacancyId == id)
@@ -47,7 +47,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpGet("byApplicant/{id}")]
-        public async Task<IActionResult> GetByApplicant([FromQuery]Guid id)
+        public async Task<IActionResult> GetByApplicant([FromRoute]Guid id)
         {
             var result = await _context.VacancyNegotiations
                 .Where(x => x.ApplicantId == id)
@@ -73,7 +73,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update([FromBody]DtoVacancyNegotiation dto, [FromQuery]long id)
+        public async Task<IActionResult> Update([FromBody]DtoVacancyNegotiation dto, [FromRoute]long id)
         {
             var template = Mapper.Map<VacancyNegotiation>(dto);
 
@@ -88,7 +88,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete([FromQuery]long id)
+        public async Task<IActionResult> Delete([FromRoute]long id)
         {
             await _context.VacancyNegotiations
                 .Where(x => x.Id == id)

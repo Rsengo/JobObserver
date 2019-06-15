@@ -28,7 +28,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get([FromQuery]long id)
+        public async Task<IActionResult> Get([FromRoute]long id)
         {
             var result = await _context.Experiences
                 //.Include(x => x.Industry)
@@ -44,7 +44,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("byResume/{id}")]
-        public async Task<IActionResult> GetByResume([FromQuery]long id)
+        public async Task<IActionResult> GetByResume([FromRoute]long id)
         {
             var result = await _context.Experiences
                 .Where(x => x.ResumeId == id)
@@ -74,7 +74,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update([FromBody]DtoExperience dto, [FromQuery]long id)
+        public async Task<IActionResult> Update([FromBody]DtoExperience dto, [FromRoute]long id)
         {
             var template = Mapper.Map<Experience>(dto);
 
@@ -89,7 +89,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete([FromQuery]long id)
+        public async Task<IActionResult> Delete([FromRoute]long id)
         {
             await _context.Experiences
                 .Where(x => x.Id == id)

@@ -24,7 +24,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get([FromQuery]long id)
+        public async Task<IActionResult> Get([FromRoute]long id)
         {
             var result = await _context.BrandedTemplates
                 .SingleOrDefaultAsync(x => x.Id == id)
@@ -46,7 +46,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update([FromBody]DtoBrandedTemplate dto, [FromQuery]long id)
+        public async Task<IActionResult> Update([FromBody]DtoBrandedTemplate dto, [FromRoute]long id)
         {
             var template = Mapper.Map<BrandedTemplate>(dto);
             template.Id = id;
@@ -60,7 +60,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete([FromQuery]long id)
+        public async Task<IActionResult> Delete([FromRoute]long id)
         {
             await _context.BrandedTemplates
                 .Where(x => x.Id == id)

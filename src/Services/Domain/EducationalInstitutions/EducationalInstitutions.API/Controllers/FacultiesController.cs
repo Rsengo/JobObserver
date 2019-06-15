@@ -25,7 +25,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get([FromQuery]long id)
+        public async Task<IActionResult> Get([FromRoute]long id)
         {
             var result = await _context.Faculties
                 .Include(x => x.Synonyms)
@@ -84,7 +84,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update([FromBody]DtoFaculty dto, [FromQuery]long id)
+        public async Task<IActionResult> Update([FromBody]DtoFaculty dto, [FromRoute]long id)
         {
             var template = Mapper.Map<Faculty>(dto);
 
@@ -99,7 +99,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete([FromQuery]long id)
+        public async Task<IActionResult> Delete([FromRoute]long id)
         {
             await _context.Faculties
                 .Where(x => x.Id == id)
@@ -112,7 +112,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpGet("{facultyId}/synonyms")]
-        public async Task<IActionResult> GetSynonyms([FromQuery]long facultyId)
+        public async Task<IActionResult> GetSynonyms([FromRoute]long facultyId)
         {
             var result = await _context.FacultySynonyms
                 .SingleOrDefaultAsync(x => x.FacultyId == facultyId)
@@ -138,7 +138,7 @@ namespace EducationalInstitutions.API.Controllers
         [HttpPut("synonyms/{id}")]
         public async Task<IActionResult> UpdateSynonym(
             [FromBody]DtoFacultySynonyms dto,
-            [FromQuery]long id)
+            [FromRoute]long id)
         {
             var template = Mapper.Map<FacultySynonyms>(dto);
 
@@ -153,7 +153,7 @@ namespace EducationalInstitutions.API.Controllers
         }
 
         [HttpDelete("synonyms/{id}")]
-        public async Task<IActionResult> DeleteSynonym([FromQuery]long id)
+        public async Task<IActionResult> DeleteSynonym([FromRoute]long id)
         {
             await _context.FacultySynonyms
                 .Where(x => x.Id == id)

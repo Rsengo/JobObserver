@@ -24,7 +24,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get([FromQuery]long id)
+        public async Task<IActionResult> Get([FromRoute]long id)
         {
             var result = await _context.Vacancies
                 .Include(x => x.Address)
@@ -65,7 +65,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpGet("byEmployer/{id}")]
-        public async Task<IActionResult> GetByCompany([FromQuery]long id)
+        public async Task<IActionResult> GetByCompany([FromRoute]long id)
         {
             var result = await _context.Vacancies
     .Include(x => x.Address)
@@ -165,7 +165,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update([FromBody]DtoVacancy dto, [FromQuery]long id)
+        public async Task<IActionResult> Update([FromBody]DtoVacancy dto, [FromRoute]long id)
         {
             var template = Mapper.Map<Vacancy>(dto);
 
@@ -180,7 +180,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete([FromQuery]long id)
+        public async Task<IActionResult> Delete([FromRoute]long id)
         {
             await _context.Vacancies
                 .Where(x => x.Id == id)

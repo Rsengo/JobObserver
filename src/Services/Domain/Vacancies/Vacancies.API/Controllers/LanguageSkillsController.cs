@@ -23,7 +23,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get([FromQuery]long id)
+        public async Task<IActionResult> Get([FromRoute]long id)
         {
             var result = await _context.LanguageSkills
                 .Include(x => x.Level)
@@ -48,7 +48,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update([FromBody]DtoLanguageSkill dto, [FromQuery]long id)
+        public async Task<IActionResult> Update([FromBody]DtoLanguageSkill dto, [FromRoute]long id)
         {
             var template = Mapper.Map<LanguageSkill>(dto);
 
@@ -63,7 +63,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete([FromQuery]long id)
+        public async Task<IActionResult> Delete([FromRoute]long id)
         {
             await _context.LanguageSkills
                 .Where(x => x.Id == id)

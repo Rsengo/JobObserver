@@ -45,7 +45,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get([FromQuery]long id)
+        public async Task<IActionResult> Get([FromRoute]long id)
         {
             //var allowed = await _securityManager.HasPermissionAsync(
             //    new Resume() { ApplicantId = Guid.Empty }, 
@@ -105,7 +105,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("byApplicant/{applicantId}")]
-        public async Task<IActionResult> GetByApplicant([FromQuery]Guid applicantId)
+        public async Task<IActionResult> GetByApplicant([FromRoute]Guid applicantId)
         {
             var query = _context.Resumes
                 //.Include(x => x.Area)
@@ -247,7 +247,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update([FromBody]DtoResume dto, [FromQuery]long id)
+        public async Task<IActionResult> Update([FromBody]DtoResume dto, [FromRoute]long id)
         {
             var template = Mapper.Map<Resume>(dto);
             template.UpdatedAt = DateTime.UtcNow;
@@ -265,7 +265,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete([FromQuery]long id)
+        public async Task<IActionResult> Delete([FromRoute]long id)
         {
             var result = _context.Resumes
                 .Select(x => new Resume { Id = x.Id, ApplicantId = x.ApplicantId })

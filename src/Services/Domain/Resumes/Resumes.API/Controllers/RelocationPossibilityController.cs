@@ -28,7 +28,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get([FromQuery]long id)
+        public async Task<IActionResult> Get([FromRoute]long id)
         {
             var result = await _context.RelocationPossibilities
                 .Include(x => x.RelocationType)
@@ -41,7 +41,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpGet("byResume/{id}")]
-        public async Task<IActionResult> GetByResume([FromQuery]long id)
+        public async Task<IActionResult> GetByResume([FromRoute]long id)
         {
             var result = await _context.RelocationPossibilities
                 .Where(x => x.ResumeId == id)
@@ -68,7 +68,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update([FromBody]DtoRelocationPossibility dto, [FromQuery]long id)
+        public async Task<IActionResult> Update([FromBody]DtoRelocationPossibility dto, [FromRoute]long id)
         {
             var template = Mapper.Map<RelocationPossibility>(dto);
 
@@ -83,7 +83,7 @@ namespace Resumes.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete([FromQuery]long id)
+        public async Task<IActionResult> Delete([FromRoute]long id)
         {
             await _context.RelocationPossibilities
                 .Where(x => x.Id == id)

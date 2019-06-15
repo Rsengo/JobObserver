@@ -23,7 +23,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get([FromQuery]long id)
+        public async Task<IActionResult> Get([FromRoute]long id)
         {
             var result = await _context.Addresses
                 .Include(x => x.Area)
@@ -50,7 +50,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update([FromBody]DtoAddress dto, [FromQuery]long id)
+        public async Task<IActionResult> Update([FromBody]DtoAddress dto, [FromRoute]long id)
         {
             var template = Mapper.Map<Address>(dto);
 
@@ -65,7 +65,7 @@ namespace Vacancies.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete([FromQuery]long id)
+        public async Task<IActionResult> Delete([FromRoute]long id)
         {
             await _context.Addresses
                 .Where(x => x.Id == id)

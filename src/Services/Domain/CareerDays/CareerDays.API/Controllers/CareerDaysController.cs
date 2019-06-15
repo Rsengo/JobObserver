@@ -25,7 +25,7 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get([FromQuery]long id)
+        public async Task<IActionResult> Get([FromRoute]long id)
         {
             var result = await _context.CareerDays
                 .Include(x => x.Address)
@@ -49,7 +49,7 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpGet("byEmployer/{employerId}")]
-        public async Task<IActionResult> GetByEmployer([FromQuery]long employerId)
+        public async Task<IActionResult> GetByEmployer([FromRoute]long employerId)
         {
             var result = await _context.CareerDays
                 .Include(x => x.Address)
@@ -72,7 +72,7 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpGet("byEducationalInstitution/{educationalInstitutionId}")]
-        public async Task<IActionResult> GetByEducationalInstitution([FromQuery]long educationalInstitutionId)
+        public async Task<IActionResult> GetByEducationalInstitution([FromRoute]long educationalInstitutionId)
         {
             var result = await _context.CareerDays
                 .Include(x => x.Address)
@@ -95,7 +95,7 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpGet("byArea/{areaId}")]
-        public async Task<IActionResult> GetByArea([FromQuery]long areaId)
+        public async Task<IActionResult> GetByArea([FromRoute]long areaId)
         {
             var result = await _context.CareerDays
                 .Include(x => x.Address)
@@ -160,7 +160,7 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update([FromBody]DtoCareerDay dto, [FromQuery]long id)
+        public async Task<IActionResult> Update([FromBody]DtoCareerDay dto, [FromRoute]long id)
         {
             var template = Mapper.Map<CareerDay>(dto);
 
@@ -175,7 +175,7 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete([FromQuery]long id)
+        public async Task<IActionResult> Delete([FromRoute]long id)
         {
             await _context.CareerDays
                 .Where(x => x.Id == id)
@@ -202,7 +202,7 @@ namespace CareerDays.API.Controllers
         [HttpPut("educationalInstitution/{id}")]
         public async Task<IActionResult> EditEducationalInstitution(
             [FromBody]DtoCareerDayEducationalInstitution dto, 
-            [FromQuery]long id)
+            [FromRoute]long id)
         {
             var model = Mapper.Map<CareerDayEducationalInstitution>(dto);
             model.Id = id;
@@ -217,7 +217,7 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpDelete("educationalInstitution/{id}")]
-        public async Task<IActionResult> RemoveEducationalInstitution([FromQuery]long id)
+        public async Task<IActionResult> RemoveEducationalInstitution([FromRoute]long id)
         {
             await _context.CareerDayEducationalInstitutions
                 .Where(x => x.Id == id)
@@ -239,7 +239,7 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpPut("employer/{id}")]
-        public async Task<IActionResult> EditEmployer([FromBody]DtoCareerDayEmployer dto, [FromQuery]long id)
+        public async Task<IActionResult> EditEmployer([FromBody]DtoCareerDayEmployer dto, [FromRoute]long id)
         {
             var model = Mapper.Map<CareerDayEmployer>(dto);
             model.Id = id;
@@ -254,7 +254,7 @@ namespace CareerDays.API.Controllers
         }
 
         [HttpDelete("employer/{id}")]
-        public async Task<IActionResult> RemoveEmployer([FromQuery]long id)
+        public async Task<IActionResult> RemoveEmployer([FromRoute]long id)
         {
             await _context.CareerDayEmployers
                 .Where(x => x.Id == id)

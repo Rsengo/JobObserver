@@ -36,7 +36,7 @@ namespace PaidServices.API.Controllers
         }
 
         [HttpGet("employer/{id}")]
-        public async Task<IActionResult> Get([FromQuery]long id)
+        public async Task<IActionResult> Get([FromRoute]long id)
         {
             var result = await _context.EmployerPaidServices
                 .SingleOrDefaultAsync(x => x.Id == id)

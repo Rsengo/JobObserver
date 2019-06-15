@@ -35,7 +35,7 @@ namespace PaidServices.API.Controllers
         }
 
         [HttpGet("educationalInstitution/{id}")]
-        public async Task<IActionResult> Get([FromQuery]long id)
+        public async Task<IActionResult> Get([FromRoute]long id)
         {
             var result = await _context.EducationalInstitutionPaidServices
                 .SingleOrDefaultAsync(x => x.Id == id)

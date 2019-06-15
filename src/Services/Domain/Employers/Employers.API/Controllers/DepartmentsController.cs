@@ -31,7 +31,7 @@ namespace Employers.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get([FromQuery]long id)
+        public async Task<IActionResult> Get([FromRoute]long id)
         {
             var result = await _context.Departments
                 .SingleOrDefaultAsync(x => x.Id == id)
@@ -64,7 +64,7 @@ namespace Employers.API.Controllers
         }
 
         [HttpGet("byEmployer/{id}")]
-        public async Task<IActionResult> GetByEmployer([FromQuery]long id)
+        public async Task<IActionResult> GetByEmployer([FromRoute]long id)
         {
             var result = await _context.Departments
                 .SingleOrDefaultAsync(x => x.OrganizationId == id)
@@ -95,7 +95,7 @@ namespace Employers.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update([FromBody]DtoDepartment dto, [FromQuery]long id)
+        public async Task<IActionResult> Update([FromBody]DtoDepartment dto, [FromRoute]long id)
         {
             var template = Mapper.Map<Department>(dto);
 
@@ -117,7 +117,7 @@ namespace Employers.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete([FromQuery]long id)
+        public async Task<IActionResult> Delete([FromRoute]long id)
         {
             await _context.Departments
                 .Where(x => x.Id == id)
