@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Dictionaries.API.Controllers
 {
     using Dictionaries.API.Infrastructure.Filters;
+    using Dictionaries.API.Infrastructure.Initialization;
     using Dictionaries.Db.Models.Geographic;
 
     [Route("api/v1/[controller]")]
@@ -18,9 +19,21 @@ namespace Dictionaries.API.Controllers
     {
         private readonly DictionariesDbContext _context;
 
-        public AreasController(DictionariesDbContext context)
+        private readonly DictionariesInitializationService _initializationService;
+
+        public AreasController(
+            DictionariesDbContext context,
+            DictionariesInitializationService initializationService)
         {
+            _initializationService = initializationService;
             _context = context;
+        }
+
+        [HttpGet("_restore")]
+        public async Task<IActionResult> Initialize()
+        {
+            await _initializationService.InitializeAsync<Area>();
+            return Ok();
         }
 
         [HttpGet]

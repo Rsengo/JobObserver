@@ -31,23 +31,23 @@ namespace Dictionaries.API.Infrastructure.Initialization.Factories
         public IEnumerable<IInitializer> Create()
         {
             yield return new AreasInitializer(GetJsonPath(typeof(AreasInitializer)), _context, _eventBus);
-            yield return new BusinessTripReadinessInitializer(GetJsonPath(typeof(BusinessTripReadinessInitializer)), _context, _eventBus);
-            yield return new CurrenciesInitializer(GetJsonPath(typeof(CurrenciesInitializer)), _context, _eventBus);
-            yield return new DrivingLicenseTypesInitializer(GetJsonPath(typeof(DrivingLicenseTypesInitializer)), _context, _eventBus);
-            yield return new EducationalLevelsInitializer(GetJsonPath(typeof(EducationalLevelsInitializer)), _context, _eventBus);
-            yield return new EmployerTypesInitializer(GetJsonPath(typeof(EmployerTypesInitializer)), _context, _eventBus);
-            yield return new EmploymentsInitializer(GetJsonPath(typeof(EmploymentsInitializer)), _context, _eventBus);
-            yield return new GendersInitializer(GetJsonPath(typeof(GendersInitializer)), _context, _eventBus);
+            //yield return new BusinessTripReadinessInitializer(GetJsonPath(typeof(BusinessTripReadinessInitializer)), _context, _eventBus);
+            //yield return new CurrenciesInitializer(GetJsonPath(typeof(CurrenciesInitializer)), _context, _eventBus);
+            //yield return new DrivingLicenseTypesInitializer(GetJsonPath(typeof(DrivingLicenseTypesInitializer)), _context, _eventBus);
+            //yield return new EducationalLevelsInitializer(GetJsonPath(typeof(EducationalLevelsInitializer)), _context, _eventBus);
+            //yield return new EmployerTypesInitializer(GetJsonPath(typeof(EmployerTypesInitializer)), _context, _eventBus);
+            //yield return new EmploymentsInitializer(GetJsonPath(typeof(EmploymentsInitializer)), _context, _eventBus);
+            //yield return new GendersInitializer(GetJsonPath(typeof(GendersInitializer)), _context, _eventBus);
             yield return new IndustriesInitializer(GetJsonPath(typeof(IndustriesInitializer)), _context, _eventBus);
-            yield return new LanguageLevelsInitializer(GetJsonPath(typeof(LanguageLevelsInitializer)), _context, _eventBus);
-            yield return new LanguagesInitializer(GetJsonPath(typeof(LanguagesInitializer)), _context, _eventBus);
-            yield return new RelocationTypesInitializer(GetJsonPath(typeof(RelocationTypesInitializer)), _context, _eventBus);
-            yield return new ResponsesInitializer(GetJsonPath(typeof(ResponsesInitializer)), _context, _eventBus);
-            yield return new ResumeStatusesInitializer(GetJsonPath(typeof(ResumeStatusesInitializer)), _context, _eventBus);
-            yield return new SchedulesInitializer(GetJsonPath(typeof(SchedulesInitializer)), _context, _eventBus);
+            //yield return new LanguageLevelsInitializer(GetJsonPath(typeof(LanguageLevelsInitializer)), _context, _eventBus);
+            //yield return new LanguagesInitializer(GetJsonPath(typeof(LanguagesInitializer)), _context, _eventBus);
+            //yield return new RelocationTypesInitializer(GetJsonPath(typeof(RelocationTypesInitializer)), _context, _eventBus);
+            //yield return new ResponsesInitializer(GetJsonPath(typeof(ResponsesInitializer)), _context, _eventBus);
+            //yield return new ResumeStatusesInitializer(GetJsonPath(typeof(ResumeStatusesInitializer)), _context, _eventBus);
+            //yield return new SchedulesInitializer(GetJsonPath(typeof(SchedulesInitializer)), _context, _eventBus);
             yield return new SpecializationsInitializer(GetJsonPath(typeof(SpecializationsInitializer)), _context, _eventBus);
-            yield return new TravelTimesInitializer(GetJsonPath(typeof(TravelTimesInitializer)), _context, _eventBus);
-            yield return new VacancyStatusesInitializer(GetJsonPath(typeof(VacancyStatusesInitializer)), _context, _eventBus);
+            //yield return new TravelTimesInitializer(GetJsonPath(typeof(TravelTimesInitializer)), _context, _eventBus);
+            //yield return new VacancyStatusesInitializer(GetJsonPath(typeof(VacancyStatusesInitializer)), _context, _eventBus);
         }
 
         private string GetJsonPath(Type initializerType)

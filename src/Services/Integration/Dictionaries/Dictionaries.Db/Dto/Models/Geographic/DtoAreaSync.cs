@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using BuildingBlocks.DataTransfer.Models;
+using Newtonsoft.Json;
 
 namespace Dictionaries.Db.Dto.Models.Geographic
 {
@@ -8,11 +9,13 @@ namespace Dictionaries.Db.Dto.Models.Geographic
         /// <summary>
         ///     Id Родителя
         /// </summary>
+        [JsonProperty("parent_id")]
         public virtual long? ParentId { get; set; }
 
         /// <summary>
         ///     Дочерние
         /// </summary>
+        [JsonProperty("areas")]
         public virtual ICollection<DtoAreaSync> Areas { get; set; }
     }
 }
