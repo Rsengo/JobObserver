@@ -28,8 +28,6 @@ services:
       - ALLOW_EMPTY_PASSWORD=yes
     ports:
      - '3306:3306'
-    volumes:
-      - ./moodle/data:/bitnami
 
   moodle:
     environment:
@@ -41,8 +39,6 @@ services:
     ports:
       - '5150:80'
       - '5151:443'
-    volumes:
-      - ./moodle/bitnami:/bitnami
 
   js_report:
     ports:
